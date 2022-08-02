@@ -1,0 +1,189 @@
+\documentclass[12pt,letter]{article}
+\usepackage{mathptmx} % added for time new roman font
+\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+
+% defines all example enviorment
+\usepackage[framemethod=tikz]{mdframed} % added for the box around examples
+\newtheorem{ex}{Example}
+\numberwithin{ex}{section} % allows for the use of example numbers that lign up with the section numbers
+\newenvironment{example}{\begin{mdframed}[middlelinewidth=0.5mm]\begin{ex}\normalfont}{\end{ex}\end{mdframed}}
+
+% defines all review enviorment
+\usepackage[framemethod=tikz]{mdframed} % added for the box around examples
+\newtheorem{re}{Review}
+\numberwithin{re}{section} % allows for the use of example numbers that lign up with the section numbers
+\newenvironment{review}{\begin{mdframed}[middlelinewidth=2mm,roundcorner=20pt]\begin{re}\normalfont}{\end{re}\end{mdframed}}
+
+% defines the quotation enviorment 
+\usepackage{xcolor}
+\newcommand{\quotebox}[2]{\begin{center}\fcolorbox{white}{blue!15!gray!15}{\begin{minipage}{0.9\linewidth}\vspace{10pt}\center\begin{minipage}{0.8\linewidth}{\space\Huge``}{#1}{\Huge''}{\break\null\hfill} {\small #2}  \end{minipage}\medbreak\end{minipage}}\end{center}}
+
+% defines the definition enviorment 
+\newcommand{\definitionbox}[2]{\begin{center}\fcolorbox{white}{blue!15!gray!15}{\begin{minipage}{0.9\linewidth}\vspace{10pt}\center\begin{minipage}{0.8\linewidth} {{\textbf{Definition} - }{#1}: {#2}}\end{minipage}\medbreak\end{minipage}}\end{center}}
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+%\usepackage{parskip} % remove all the paragraph indents
+
+\usepackage{setspace}
+%\usepackage[colorlinks=true]{hyperref}
+\usepackage{textcomp} 
+\usepackage{multicol} 
+
+
+%%%%%%%		define the symbols for positive directions		%%%%%%
+\makeatletter													%%	
+																%%					
+\newcommand*\curveplus{% positive counterclockwise				%%
+  \mathbin{\rotatebox[origin=c]{90}{$\m@th\curvearrowleft$}+}}	%%
+																%%
+\newcommand*\rightplus{% positive right							%%
+  \mathpalette\@rightplus\relax}								%%
+\newcommand*\@rightplus[1]{%									%%
+  \mathbin{\vcenter{\hbox{$\m@th\overset{#1+}{\to}$}}}}			%%
+																%%	
+\newcommand*\upplus{% positive up								%%
+  \mathbin{+\mathord\uparrow}}									%%
+																%%			
+\newcommand*\downplus{% positive down							%%		
+  \mathbin{+\mathord\downarrow}}								%%
+  																%%		
+\newcommand*\downrightplus{% positive down and right			%%	
+  \mathbin{+ \rotatebox[origin=c]{-30}{$\m@th\rightarrow$}}}	%%
+\makeatother 													%%	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage{mathtools}          %loads amsmath as well added for the piece wise function
+\DeclarePairedDelimiter\Floor\lfloor\rfloor
+\DeclarePairedDelimiter\Ceil\lceil\rceil
+
+ 
+\newcounter{NumberInTable}
+\newcommand{\LTNUM}{\stepcounter{NumberInTable}{(\theNumberInTable)}}
+
+\newcommand{\Laplace}[1]{\ensuremath{\mathcal{L}{\left[#1\right]}}}
+\newcommand{\InvLap}[1]{\ensuremath{\mathcal{L}^{-1}{\left[#1\right]}}}
+\renewcommand{\textuparrow}{$\uparrow$}
+
+
+\begin{document}
+	\large{}
+	
+	
+			\pagestyle{empty}
+			\newgeometry{top=0.5in, bottom=0.5in,left=0.5in, right=0.5in}
+			\vspace{-25ex}
+			\begin{center}
+			{\large{}\textbf{Table of Laplace Transforms for Vibrations}} \\
+			\normalsize{} This is a partial lists of important Laplace transforms for vibrations that assumes \\ zero initial conditions, $0 < t$, and $\zeta < 1$.
+			\end{center}
+			
+			\vspace{0ex}
+			{\small
+			\renewcommand{\arraystretch}{1.5}
+			\begin{multicols}{2}
+			\begin{center}
+			\begin{tabbing}
+			\hspace*{1.5 in}\=\hspace{1.5in}\= \kill
+				$f(t)$ \> $\Laplace{f(t)}=F(s)$ \> \\ \noindent\rule{8.0cm}{0.4pt} \\
+				$\delta(t)$	\> 1 \> \LTNUM \\ \\
+				$\delta(t-t_0)$ \> $e^{-st_0}$ \>\LTNUM \\ \\
+				$1$       			 \> $\dfrac{1}{s}$           \>\LTNUM \\ \\
+				$e^{at}$ 	\> $\dfrac{1}{s-a}$ 	\>\LTNUM \\ \\
+				$\sin (\omega t) $ 	\> $\dfrac{\omega}{s^2+\omega^2}$ \>\LTNUM \\ \\
+				$\cos (\omega t) $ 	\> $\dfrac{s}{s^2+\omega^2}$ \>\LTNUM \\ \\
+				
+				$\sinh (\omega t) $	\> $\dfrac{\omega}{s^2-\omega^2}$ \>\LTNUM \\ \\
+				$\cosh (\omega t) $	\> $\dfrac{s}{s^2-\omega^2}$ \>\LTNUM \\ \\
+				$\dfrac{1}{\omega^2}\big(1-\cos(\omega t)\big)$ \> $\dfrac{1}{s(s^2+\omega^2)}$ \>\LTNUM \\ \\
+				$\dfrac{1}{\omega_d}e^{-\zeta \omega t}\sin(\omega_d t)$ \> $\dfrac{1}{s^2+2\zeta \omega s+\omega^2}$ \>\LTNUM \\ \\
+				$1-\dfrac{\omega}{\omega_d}e^{-\zeta \omega t}\sin(\omega_d t + \phi)$, $\phi =\cos^{-1}(\zeta) \dots $ \\ \> $\dfrac{\omega^2}{s(s^2+2\zeta \omega s+\omega^2)}$ \>\LTNUM \\ \\
+				$\dfrac{t^{n-1}}{(n-1)!}$, $ n=1,2,\dots $ \> $\dfrac{1}{s^n}$ \>\LTNUM \\ \\
+				$t^n $, $n=1,2,\dots$     \> $\dfrac{n!}{s^{n+1}}$    \>\LTNUM \\ \\
+				$t^ne^{\omega t}$, $ n=1,2,\dots $	\> $\dfrac{n!}{(s-\omega)^{n+1}}$	\>\LTNUM \\ \\
+				$\dfrac{1}{\omega}(1-e^{-\omega t}) $	\> $\dfrac{1}{s(s+\omega)}$	\>\LTNUM \\ \\
+				$\dfrac{1}{\omega^2}(e^{-\omega t}+\omega t - 1) $	\> $\dfrac{1}{s^2(s+\omega)}$	\>\LTNUM \\ \\
+			\end{tabbing}
+			\end{center}
+			
+			\columnbreak
+			
+			\begin{center}
+			\begin{tabbing}
+			\hspace*{1.5in}\=\hspace{1.5in}\= \kill
+				$f(t)$ \> $\Laplace{f(t)}=F(s)$ \> \\ \noindent\rule{8.0cm}{0.4pt} \\
+				$\dfrac{1}{\omega^3}\big(\omega t - \sin(\omega t)\big) $	\> $\dfrac{1}{s^2(s^2+\omega^2)}$	\>\LTNUM \\ \\
+				$\dfrac{1}{2\omega^3}\big(\sin(\omega t) - \omega t \cos(\omega t)\big) \dots $	\\ \> $\dfrac{1}{(s^2+\omega^2)^2}$	\>\LTNUM \\ \\
+				$\dfrac{t}{2\omega} \sin(\omega t)$	 \> $\dfrac{s}{(s^2+\omega^2)^2}$	\>\LTNUM \\ \\
+				$t\sin (\omega t) $  	\> $\dfrac{2\omega s}{(s^2+\omega^2)^2}$ \>\LTNUM \\ \\
+				$t\cos (\omega t) $  	\> $\dfrac{s^2-\omega^2}{(s^2+\omega^2)^2}$ \>\LTNUM \\ \\
+				$e^{at}\sin (\omega t) $	\> $\dfrac{\omega}{(s-a)^2+\omega^2}$  \>\LTNUM \\ \\
+				$e^{at}\cos (\omega t) $	\> $\dfrac{s-a}{(s-a)^2+\omega^2}$  \>\LTNUM \\ \\
+				$e^{at}\sinh (\omega t) $	\> $\dfrac{\omega}{(s-a)^2-\omega^2}$  \>\LTNUM \\ \\
+				$e^{at}\cosh (\omega t) $	\> $\dfrac{s-a}{(s-a)^2-\omega^2}$  \>\LTNUM \\ \\
+				$\dfrac{1}{\omega_2}\sin(\omega_2 t) - \dfrac{1}{\omega_1}\sin (\omega_1 t) \dots $	 \\ \> $\dfrac{\omega_1^2-\omega_2^2}{(s^2+\omega_1^2)(s^2+\omega_2^2)}$	\>\LTNUM \\ \\
+				$\cos(\omega_2 t) - \cos (\omega_1 t)  $	\> $\dfrac{s(\omega_1^2-\omega_2^2)}{(s^2+\omega_1^2)(s^2+\omega_2^2)}$	\>\LTNUM \\ \\
+				$e^{at}f(t)$	\> $F(s-a)$	\>\LTNUM \\ \\ 
+				$f(t-a)\Phi(t-a)$ \> $e^{-as}F(s)$ \>\LTNUM \\ \\
+				$\Phi(t-a)$ \> $\dfrac{e^{-as}}{s}$ \>\LTNUM \\ \\
+				$f'(t)$ 	\> $sF(s) - f(0)$ \>\LTNUM \\ \\
+			\end{tabbing}
+			\end{center}
+			\end{multicols}
+			}
+			
+			% Unused Laplace Transforms
+			%$f^{n}(t)$ 	\> $s^nF(s) - s^{(n-1)} f(0) - $ \\ \\
+			% \> $\cdots - f^{(n-1)}(0)$ \>\LTNUM \\ \\
+			%$\displaystyle{\int_0^t f(x)g(t-x)dx}$ \> $F(s)G(s)$ \>\LTNUM \\ \\
+			%
+			%$t^x$ ($x\geq-1\in\mathbb{R}$)     \> $\dfrac{\Gamma(x+1)}{s^{x+1}}$ \>\LTNUM\\ \\
+			%
+			%$\dfrac{e^{at}-e^{bt}}{a-b}$	\> $\dfrac{1}{(s-a)(s-b)}$ \>\LTNUM\\ \\ 
+			%$f(t)$ \> $\Laplace{f(t)}=F(s)$ \> \\ \\
+			%$\dfrac{ae^{at}-be^{bt}}{a-b}$	\> $\dfrac{s}{(s-a)(s-b)}$ \>\LTNUM\\ \\ 
+			%$te^{at}$	\> $\dfrac{1}{(s-a)^2}$	\>\LTNUM \\ \\
+			%$t\sinh (\omega t) $  	\> $\dfrac{2\omega s}{(s^2-\omega^2)^2}$ \>\LTNUM \\ \\
+			%$t\cosh (\omega t) $  	\> $\dfrac{s^2+\omega^2}{(s^2-\omega^2)^2}$ \>\LTNUM \\ \\
+			%$\dfrac{\sin (at)}{t}$	\> $\arctan \dfrac{a}{s}$ \>\LTNUM \\ \\
+			%$\dfrac{1}{\sqrt{\pi t}}e^{-a^2/4t}$	\> $\dfrac{e^{-a\sqrt{s}}}{\sqrt{s}}$ \> \LTNUM \\ \\
+			%$\dfrac{a}{2\sqrt{\pi t^3}}e^{-a^2/4t}$	\> $e^{-a\sqrt{s}}$ \> \LTNUM \\ \\
+			%$\text{erfc}\left(\dfrac{a}{2\sqrt{t}}\right)$ \>  $\dfrac{e^{-a\sqrt{s}}}{s}$ \> \LTNUM \\ \\
+			% $t^nf(t)$ 	\> $(-1)^n\dfrac{d^nF(s)}{ds^n}$  \>\LTNUM \\ \\
+			%{\tiny \textcopyright  2011 B.E.Shapiro for \href{http://integral-table.com}{integral-table.com}. This work is licensed under a} \\
+			
+			%{\tiny\href{http://creativecommons.org/licenses/by-nc-sa/3.0/}{Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License}. } 
+									
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

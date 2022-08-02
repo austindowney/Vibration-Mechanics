@@ -1,0 +1,65 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{mathptmx} % added for time new roman font
+\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+
+\usepackage{booktabs}
+\pagenumbering{gobble}
+\usepackage{parskip} % remove all the paragraph indents
+%\twocolumn 
+
+\begin{document}
+	
+	\large{}
+	
+	\title{\vspace{-2cm} Summary of Main Equations in Mechanical Vibrations}
+	\date{}
+	\maketitle
+	
+The general response for the \textbf{undamped} case has the form:
+\begin{equation*}
+	x(t) = A \text{sin}(\omega_n t + \phi) + X \text{cos}(\omega t)
+\end{equation*}	
+where:
+
+free response:
+\begin{equation*}
+	A = \frac{\sqrt{\omega_n^2x_0^2+v_0^2}}{\omega_n} \text{,\;\;\;\;} \phi = \text{tan}^{-1}\bigg(\frac{x_0\omega_n}{v_0}\bigg) \text{,\;\;and\;\;} X=0
+\end{equation*}
+
+forced response:
+
+\begin{equation*}
+	A = \sqrt{\bigg(\frac{v_0}{\omega_n}\bigg)^2+(x_0-X)^2} \text{,\;\;\;\;} \phi = \text{tan}^{-1}\bigg(\frac{\omega_n(x_0-X)}{v_0}\bigg) \text{,\;\;and\;\;} X=\frac{f_0}{\omega_n^2-\omega^2}
+\end{equation*}
+
+\noindent\rule{\textwidth}{1pt}
+The general response for the \textbf{underdamped} case has the form:
+\begin{equation*}
+	x(t) = A e^{-\zeta \omega_n t}\text{sin}(\omega_d t + \phi) + X \text{cos}(\omega t - \phi_p)
+\end{equation*}	
+		
+		
+where:
+
+free response:
+\begin{equation*}
+	A = \frac{\sqrt{(v_0+\zeta\omega_nx_0)^2 + (x_0\omega_d)^2}}{\omega_d} \text{,\;\;\;\;} \phi = \text{tan}^{-1}\Bigg(\frac{x_0\omega_d}{v_0+\zeta\omega_nx_0}\Bigg)  \text{,\;\;and\;\;} X=0
+\end{equation*}
+
+forced response:
+
+\begin{equation*}
+	A = \frac{x_0 -X \text{cos}(\phi_p)}{\text{sin}(\phi)} \text{,\;\;\;\;} \phi = \text{tan}^{-1}\bigg(\frac{\omega_d ( x_0 -X \text{cos}(\phi_p))}{v_0 + (x_0 - X \text{cos}(\phi_p)) \zeta \omega_n - \omega X \text{sin}(\phi_p) }\bigg),
+\end{equation*}
+
+\begin{equation*}
+	X = \frac{f_0}{\sqrt{(\omega_n^2 - \omega^2)^2 +  (2\zeta \omega_n \omega)^2}}  \text{,\;\;and\;\;} \phi_p = \text{tan}^{-1}\bigg(\frac{2\zeta \omega_n \omega}{\omega_n^2 - \omega^2}\bigg)
+\end{equation*}
+
+\end{document}

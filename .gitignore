@@ -1,0 +1,11 @@
+
+*.log
+*.gz
+*.aux
+*.log
+*.blg
+*.bbl
+*.toc
+*.out
+*.toc
+*.ini
