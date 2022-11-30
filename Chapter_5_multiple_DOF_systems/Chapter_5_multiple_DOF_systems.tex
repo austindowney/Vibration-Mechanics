@@ -642,10 +642,7 @@ The process of calculating the mode shapes presented in section \ref{sec:two_deg
 		\textbf{K}\textbf{v} = \vec{\lambda}\textbf{M}\textbf{v}
 	\end{equation}		
 	
-	
-	
-
-	\rd{Need to add a discussion on normal, orthogonal, and orthonormal matrices.}	
+	%\rd{Need to add a discussion on normal, orthogonal, and orthonormal matrices.}	
 
 
 
@@ -877,7 +874,7 @@ Two masses are connected thorough a spring, as shown in figure~\ref{fig:2-DOF-sp
 \begin{figure}[H]
 	\centering
 	\includegraphics[]{../figures/2-DOF-spring_mass_free.png}
-	\caption{2-DOF system subjected to an impulse showing: (a) system, and (b) FBD. \rd{look at directions of arrow heads in (b), should some  point in?}}
+	\caption{2-DOF system subjected to an impulse showing: (a) system, and (b) FBD.}
 	\label{fig:2-DOF-spring_mass_free}
 \end{figure}
 Assuming that $x_1$ displaces more than $x_2$, the equations of motion are:
@@ -929,13 +926,13 @@ Considering a system where $F_0=10$ N, $m_1=1000$ kg, $m_2=1000$ kg, and $k=1500
 \begin{figure}[H]
 	\centering
 	\includegraphics[]{../figures/2-DOF-spring_mass_dashpot_horizontal_double_wall.png}
-	\caption{Forced 2-DOF damped system showing: (a) system, and (b) FBD. \rd{look at directions of arrow heads in (b), should some  point in?}}
+	\caption{Forced 2-DOF damped system showing: (a) system, and; (b) FBD.}
 	\label{fig:2-DOF-spring_mass_dashpot_horizontal_double_wall}
 \end{figure}
 
 
 
-Cramer's rule is an explicit formula for the solution of a system of linear equations with as many equations as unknowns. Cramer's rule is valid whenever the system has a unique solution and can be used as a more generalized approach to solving for the temporal solution to a 2-DOF. Consider the 2-DOF systems shown in figure~\ref{fig:2-DOF-spring_mass_dashpot_horizontal_double_wall}, where the two coupled equations of motion are expressed as: 
+Cramer's rule is an explicit formula for the solution of a system of linear equations with as many equations as unknowns. Cramer's rule is valid whenever the system has a unique solution and can be used as a more generalized approach to solving for the temporal solution to a 2-DOF. Consider the 2-DOF systems shown in figure~\ref{fig:2-DOF-spring_mass_dashpot_horizontal_double_wall}, where $x_2$ displaces more than $x_1$. The two coupled equations of motion are expressed as: 
 \begin{eqnarray}
 m_1\ddot{x}_1 + (c_1+c_2)\dot{x}_1 - c_2\dot{x}_2 + (k_1+k_2)x_1 - k_2x_2 =0 \\
 m_2\ddot{x}_2 + (c_2+c_3)\dot{x}_2 - c_2\dot{x}_1 + (k_2+k_3)x_2 - k_2x_1 =0 \nonumber
@@ -993,21 +990,21 @@ m_1 s^2 + (c_1 + c_2)s + (k_1+k_2) & m_2 s^2 + (c_2 + c_3)s + (k_2+k_3) \\
 
 The denominator, $D(s)$ is a 4$^{\text{th}}$ polynomial in $s$ and is the characteristic polynomial of the system. The system is considered a 4$^{\text{th}}$ order system because the characteristic polynomial of the system is of order 4. 
 
-\begin{example}
-content...
-content...
-content...
+%\begin{example}
+%content...
+%content...
+%content...
+%
+%\rd{Add an example}
+%% \rd{example 5.11 in Rao ed 6 has a good example of this nature.}
+%\end{example}
 
-\rd{Add an example}
-% \rd{example 5.11 in Rao ed 6 has a good example of this nature.}
-\end{example}
-
-\subsection{Frequency Response Transfer Functions}
+% \subsection{Frequency Response Transfer Functions}
 
 %\rd{Rao ed 5.11, p 526}
 
 
-\subsection{Computational Methods for 2-DOF Systems}
+% \subsection{Computational Methods for 2-DOF Systems}
 
 
 % This works, but not sure how to get it to work with the major compile. 
@@ -1154,7 +1151,7 @@ ylabel('x1(t) (m)')
 
 
 
-\subsubsection{Python}
+%\subsubsection{Python}
 
 
 
@@ -1287,6 +1284,7 @@ M \ddot{\vec{x}} + K\vec{x} = \vec{F}
 
 \begin{equation}
 \lambda M \textbf{v} = K \textbf{v}
+\label{eq:generiq_MDOF_system}
 \end{equation}
 
 For the $n^{\text{th}}$-degree-of-freedom, the generalized eigenvalue problem can be simplified to: 
@@ -1298,11 +1296,11 @@ Considering that the total displacement of the system, expressed as $\vec{x}(t)$
 \vec{x}(t) = q_1(t) \vec{v}_1 + q_2(t) \vec{v}_2 + q_3(t) \vec{v}_3 + \cdots + q_n(t) \vec{v}_n
 \label{eq:combination_of_modes}
 \end{eqnarray}
-\noindent where the time-dependent generalized scalars $q_1(t), q_1(t), \cdots, q_1(t)$ are the modal participation coefficients (also called principal coordinates). Defining the modal matrix $P$ as: \todo{The v here is not eigenvector, it is $M^{-1/2}u_1$. }
+\noindent where the time-dependent generalized scalars $q_1(t), q_1(t), \cdots, q_1(t)$ are the modal participation coefficients (also called principal coordinates). Defining the modal matrix $P$ as: 
 \begin{equation}
 P = [ \vec{v}_1 \; \; \vec{v}_2 \; \; \vec{v}_3 \cdots \vec{v}_n]
 \end{equation}
-Therefore, the linear combination of the normal modes (equation~\ref{eq:combination_of_modes}) can be more concisely written as:
+where $\vec{v}_1 = M^{-1/2}u_1$ and are the orthonormal eigenvectors of $\tilde{K}$ (i.e. the mass normalized eigenvectors) and not the eigenvectors of the original system formation shown in equation~\ref{eq:generiq_MDOF_system}. Therefore, the linear combination of the normal modes (equation~\ref{eq:combination_of_modes}) can be more concisely written as:
 \begin{equation}
 \vec{x}(t) = P\vec{q}(t)
 \end{equation}
@@ -1318,7 +1316,10 @@ To convert the EOM into the standard form, first the $P^{\text{T}}$ is multiplie
 \begin{equation}
 P^{\text{T}} M P\ddot{\vec{q}}(t) + P^{\text{T}} K P\vec{q}(t) = P^{\text{T}} \vec{F}
 \end{equation}
-If the modes are normalized, the following is true: \todo{Should this be $\widetilde{K}$?}
+If the modes are normalized, the following is true: 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\todo{Should this be $\widetilde{K}$?} I am not sure how the normalization works here. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{equation}
 P^{\text{T}} M P = I
 \label{eq:modes_normalized}
@@ -1379,7 +1380,9 @@ In matrix form, these become:
 \begin{equation}
 	  \vec{x}(0) = \begin{bmatrix} 1 \\  0 \end{bmatrix},\; \; \vec{v}(0) = \begin{bmatrix} 0 \\  0 \end{bmatrix} \nonumber
 \end{equation}
-The natural frequencies and mode shapes can than be obtained by solving the eigenvalue problem. Setting up the generalized eigenvalue problem: \rd{look at symmetric M and K matrices} %\rd{these are symmetric M and K matrices so I don't know why $\tilde{K}$ does not work in a normal eigenvalue problem. Maybe norms of vectors? It is not simple scaling. This example is based off or Rao 6.16 6ed} \rd{I think it has to do with solving the generalized eigenvalue matrix vs the mass normalized one and when you apply the second M$^{-1/2}$ as you need it all the time. }
+The natural frequencies and mode shapes can than be obtained by solving the eigenvalue problem. Setting up the generalized eigenvalue problem: %
+
+%\rd{look at symmetric M and K matrices} %\rd{these are symmetric M and K matrices so I don't know why $\tilde{K}$ does not work in a normal eigenvalue problem. Maybe norms of vectors? It is not simple scaling. This example is based off or Rao 6.16 6ed} \rd{I think it has to do with solving the generalized eigenvalue matrix vs the mass normalized one and when you apply the second M$^{-1/2}$ as you need it all the time. }
 \begin{equation}
 K \textbf{v} = \lambda M \textbf{v}
 \end{equation}

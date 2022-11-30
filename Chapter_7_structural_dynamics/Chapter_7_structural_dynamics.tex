@@ -113,6 +113,26 @@
 	\renewcommand\theequation{\thesection.\arabic{equation}}	
 	
 	\section{Structural Dynamics}	
+
+
+\begin{vibration_case_studies}
+
+	On August 14, 2018, the Ponte Morandi viaduct in Genoa Italy collapsed, killing 43 and displacing hundreds of people from their homes. The Morandi viaduct was a cable-stayed bridge with uniquely few stays, typically only two per span. The Stays were a hybrid of steel cables overlaid with concrete. The concrete overlay made the direct inspection of the stays impossible. 
+	
+	While the exact cause may never be known, is suspected that one of the stay cables within the concrete failed due to corrosion and poor maintenance causing a bridge with very little redundancy in its design to fail\protect\footnotemark[1].
+	
+	In 2017, researchers from the Polytechnic University of Milan instrumented and studied the vibration characteristics of the bridge and noted that the modal frequencies of the stays on pillar 9 (the one that collapsed) were more than 10\% different than other stays on the bridge. While it's always hard to draw conclusions from one text, comparing modal frequencies between two similar structures can be useful for tracking damage. 
+ 
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=6in]{../figures/ponte_morandi_bridge}
+		\caption{The Ponte Morandi bridge, showing the bridge: a) before the collapse\protect\footnotemark[2], and; b) after collapse\protect\footnotemark[3]. }
+	\end{figure}
+		
+	\footnotetext[1]{Rymsza, Janusz. ``Causes of the Collapse of the Polcevera Viaduct in Genoa, Italy.'' Applied Sciences 11, no. 17 (2021): 8098. https://doi.org/10.3390/app11178098.} 	
+	\footnotetext[2]{Davide Papalini, CC BY-SA 3.0 $<$https://creativecommons.org/licenses/by-sa/3.0$>$, via Wikimedia Commons} 
+	\footnotetext[3]{Michele Ferraris, CC BY-SA 4.0 $<$https://creativecommons.org/licenses/by-sa/4.0$>$, via Wikimedia Commons} 
+\end{vibration_case_studies}
 	
 	\subsection{Single-story frame}
 
@@ -151,7 +171,6 @@ Fig. \ref{fig:one_story_frame_example} (b) illustrates a SDOF with mass $m$ and 
 
 
 
-\pagebreak
 The response of a SDOF system can be written in general notation as:
 
 \begin{equation}
@@ -231,7 +250,6 @@ Finally, the response of the system to initial conditions $x_0$ and ${v_0}$ can 
 x(t) = x_0\text{cos}(\omega_n t) + \frac{v_0}{\omega_n}\text{sin}(\omega_n t)
 \end{equation}	
 
-\pagebreak
 
 
 \begin{example}

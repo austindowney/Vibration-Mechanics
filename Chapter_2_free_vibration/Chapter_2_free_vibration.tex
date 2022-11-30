@@ -35,7 +35,9 @@
 \usepackage{booktabs}
 %\usepackage{parskip} % remove all the paragraph indents
 \usepackage[textsize=tiny]{todonotes}
-
+\usepackage[OT2, T1]{fontenc}			% added for Russian names in Cryillic text
+\usepackage[russian, english]{babel}	% added for Russian names in Cryillic text
+\usepackage{enumitem}					% added to reduce the space in itemized list
 
 \usepackage{setspace}
 \usepackage[colorlinks=true]{hyperref}
@@ -1063,7 +1065,7 @@
 			\begin{figure}[H]
 				\centering
 				\includegraphics[width=4in]{../figures/Sayano-Shushenskaya_HPS_-_generator_hall}
-				\caption{ Sayano Shushenskaya's turbine hall before the accident where the turbine that failed is in the very foreground of the image. \protect\footnotemark[1]}
+				\caption{Sayano Shushenskaya's turbine hall before the accident where the turbine that failed is in the very foreground of the image. \protect\footnotemark[1]}
 			\end{figure}
 
 			\begin{figure}[H]
@@ -1071,13 +1073,19 @@
 				\includegraphics[width=4in]{../figures/Sayano-Shushenskaya_HPS_-_generator_hall_post-accident}
 				\caption{Sayano Shushenskaya's turbine hall after the accident. \protect\footnotemark[2] \bl{} }
 			\end{figure}
+			
+%			\begin{otherlanguage*}{russian}
+%			????? ?? ??????? ?????
+%			\end{otherlanguage*}
 
-			\footnotetext[1]{4044415 ???????:  ?????? ?????? English:  Andrey Korzun, CC BY-SA 3.0 $<$https://creativecommons.org/licenses/by-sa/3.0$>$, via Wikimedia Commons}
+			\footnotetext[1]{4044415 \foreignlanguage{russian}{Russian: Andrey Korzun} English:  Andrey Korzun, CC BY-SA 3.0 $<$https://creativecommons.org/licenses/by-sa/3.0$>$, via Wikimedia Commons}
 			\footnotetext[2]{The original source of this photograph is believed to be Jaffaa, a user of forums.drom.ru, who uploaded it on August 17 2009, a few hours after the accident. This image is a faithful digitisation of a unique historic image, and the copyright for it is most likely held by the person who created the image or the agency employing the person. It is believed that the use of this image may qualify as fair use under the Copyright law of the United States.}
 
 		\end{vibration_case_studies}
-	
 
+ 
+	
+%	4044415 ???????:  ?????? ?????? English:  Andrey Korzun, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons
 	
 		\subsection{Logarithmic decrement}
 			

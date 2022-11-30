@@ -35,7 +35,9 @@
 \usepackage{float}
 \usepackage{booktabs}
 \usepackage[textsize=tiny]{todonotes}
-
+\usepackage[OT2, T1]{fontenc}			% added for Russian names in Cryillic text
+\usepackage[russian, english]{babel}	% added for Russian names in Cryillic text
+\usepackage{enumitem}					% added to reduce the space in itemized list
 
 \usepackage{setspace}
 \usepackage[colorlinks=true]{hyperref}
@@ -196,9 +198,9 @@ The source code for this text is available at \url{https://github.com/austindown
 
 % Chapter 7 Structural Dynamics
 \include{Chapter_7_structural_dynamics/Chapter_7_structural_dynamics}
-
-%% Chapter 8 Signal Processing
-\include{Chapter_8_signal_processing/Chapter_8_signal_processing}
+%
+%%% Chapter 8 Signal Processing
+%\include{Chapter_8_signal_processing/Chapter_8_signal_processing}
 
 
 

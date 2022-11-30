@@ -5,7 +5,7 @@
    viewBox="0 0 165.1 228.60001"
    version="1.1"
    id="svg8"
-   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
    sodipodi:docname="2-DOF-spring_mass_free.svg"
    inkscape:export-filename="2-DOF-spring_mass_dashpot_horizontal_double_wall.png"
    inkscape:export-xdpi="300"
@@ -8845,7 +8845,7 @@
       <path
          inkscape:connector-curvature="0"
          transform="matrix(-0.4,0,0,-0.4,-4,0)"
-         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
          d="M 0,0 5,-5 -12.5,0 5,5 Z"
          id="path2887-4-7-6-02" />
     </marker>
@@ -8923,7 +8923,7 @@
       <path
          inkscape:connector-curvature="0"
          transform="matrix(-0.4,0,0,-0.4,-4,0)"
-         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
          d="M 0,0 5,-5 -12.5,0 5,5 Z"
          id="path2887-4-46-3" />
     </marker>
@@ -9685,16 +9685,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.21420925"
-     inkscape:cx="777.27736"
-     inkscape:cy="746.9332"
+     inkscape:zoom="0.856837"
+     inkscape:cx="492.50908"
+     inkscape:cy="611.55156"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="2880"
-     inkscape:window-height="1526"
-     inkscape:window-x="2869"
-     inkscape:window-y="-11"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="2992"
+     inkscape:window-y="833"
      inkscape:window-maximized="1"
      inkscape:snap-global="false"
      units="in"
@@ -11983,7 +11983,7 @@
          style="font-style:italic;stroke-width:0.264583">N</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker3141-96-0-2-4)"
-       d="m 57.561857,256.66344 h 12.94567"
+       d="M 71.028936,256.66344 H 58.083266"
        id="path2876-3-4-2-8"
        inkscape:connector-curvature="0"
        inkscape:export-filename="2-DOF-spring_mass_free.png"
@@ -12039,7 +12039,7 @@
          style="font-style:italic;stroke-width:0.264583">N</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker3141-96-79-8)"
-       d="M 104.48682,256.66344 H 91.541131"
+       d="M 91.019722,256.66344 H 103.96541"
        id="path2876-3-45-4"
        inkscape:connector-curvature="0"
        inkscape:export-filename="2-DOF-spring_mass_free.png"

@@ -5,7 +5,7 @@
    viewBox="0 0 165.1 228.60001"
    version="1.1"
    id="svg8"
-   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
    sodipodi:docname="Vibration_nomograph.svg"
    inkscape:export-filename="/home/austin/Documents/Dropbox/Teaching/EMCH-330/Class_notes/class_10/figures/impulse_time_history.png"
    inkscape:export-xdpi="300"
@@ -165,16 +165,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.4284185"
-     inkscape:cx="1065.5469"
-     inkscape:cy="415.48159"
+     inkscape:zoom="0.856837"
+     inkscape:cx="182.06497"
+     inkscape:cy="577.70614"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="2880"
-     inkscape:window-height="1526"
-     inkscape:window-x="2869"
-     inkscape:window-y="-11"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="2992"
+     inkscape:window-y="833"
      inkscape:window-maximized="1"
      inkscape:snap-global="false"
      units="in"
@@ -303,7 +303,7 @@
        clip-path="url(#clipPath1450)"
        transform="translate(-191.43799,-221.05599)"
        style="stroke:#8f8f8f;stroke-opacity:1"
-       inkscape:export-filename="Vibration_nomograph.png"
+       inkscape:export-filename="Vibration_nomograph.jpg"
        inkscape:export-xdpi="500"
        inkscape:export-ydpi="500">
       <g
@@ -473,7 +473,7 @@
        inkscape:export-ydpi="500" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.263175px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 129.65592,308.8122 v 4.12654"
+       d="m 132.74383,390.95054 v 4.12654"
        id="path1494-86" />
     <text
        xml:space="preserve"
@@ -696,30 +696,30 @@
     <text
        xml:space="preserve"
        style="font-size:3.52777px;line-height:100%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
-       x="151.26027"
-       y="362.32632"
+       x="154.34818"
+       y="444.46466"
        id="text1664"
        inkscape:export-filename="Vibration_nomograph.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300"><tspan
          sodipodi:role="line"
-         x="151.26027"
-         y="362.32632"
+         x="154.34818"
+         y="444.46466"
          style="stroke-width:0.264583"
          id="tspan1240">IEST VC-G extremely</tspan><tspan
          sodipodi:role="line"
-         x="151.26027"
-         y="365.8541"
+         x="154.34818"
+         y="447.99243"
          style="stroke-width:0.264583"
          id="tspan1242">quiet research spaces; </tspan><tspan
          sodipodi:role="line"
-         x="151.26027"
-         y="369.38187"
+         x="154.34818"
+         y="451.5202"
          style="stroke-width:0.264583"
          id="tspan1250">generally difficult to</tspan><tspan
          sodipodi:role="line"
-         x="151.26027"
-         y="372.90964"
+         x="154.34818"
+         y="455.04797"
          style="stroke-width:0.264583"
          id="tspan1340">achieve</tspan></text>
     <path
@@ -973,11 +973,11 @@
          sodipodi:role="line"
          id="tspan1842"
          x="0"
-         y="6.2181211">ISO 10816 Vibration Severity</tspan><tspan
+         y="6.2181211">ISO 10816 Vibration severity</tspan><tspan
          sodipodi:role="line"
          x="0"
          y="9.7458906"
-         id="tspan1844">Standards for Class I Small machines</tspan></text>
+         id="tspan1844">standards for class I small machines</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.52777px;line-height:100%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
@@ -1246,7 +1246,7 @@
     <text
        xml:space="preserve"
        id="text2079"
-       style="font-family:'Times New Roman';font-size:3.52777778px;line-height:100%;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:'Times New Roman, Normal';writing-mode:lr;white-space:pre;shape-inside:url(#rect2081)" />
+       style="font-size:3.52778px;line-height:100%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;white-space:pre;shape-inside:url(#rect2081);display:inline" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend)"
        d="m 32.770532,155.35582 44.135293,0.89606"
@@ -1426,21 +1426,21 @@
        inkscape:export-filename="Vibration_nomograph.png"
        inkscape:export-xdpi="500"
        inkscape:export-ydpi="500"><tspan
-         sodipodi:role="line"
          id="tspan2492"
          x="-247.86604"
          y="4.6029577"
-         style="stroke-width:0.264583">ISO/WD 2631 Mechanical vibration</tspan><tspan
-         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         sodipodi:role="line">ISO/WD 2631 Mechanical vibration</tspan><tspan
          x="-247.86604"
          y="8.1307278"
          style="stroke-width:0.264583"
-         id="tspan2498">and shock - Evaluationof human</tspan><tspan
-         sodipodi:role="line"
+         id="tspan2498"
+         sodipodi:role="line">and shock - Evaluationof human</tspan><tspan
          x="-247.86604"
          y="11.658498"
          style="stroke-width:0.264583"
-         id="tspan2500">exposure to whole-body vibration</tspan></text>
+         id="tspan2500"
+         sodipodi:role="line">exposure to whole-body vibration</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.52777px;line-height:100%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
@@ -1486,7 +1486,7 @@
          id="tspan2514">of perception</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend-8)"
-       d="m 150.15963,365.80637 -35.88673,1.71876"
+       d="m 153.24754,447.94471 -35.88673,1.71876"
        id="path2091-4"
        sodipodi:nodetypes="cc"
        inkscape:export-filename="Vibration_nomograph.png"
@@ -1551,12 +1551,12 @@
          x="-292.19702"
          y="7.6996984"
          style="stroke-width:0.264583"
-         id="tspan2919">Exposure toVibration in </tspan><tspan
+         id="tspan2919">eposure tovibration in </tspan><tspan
          sodipodi:role="line"
          x="-292.19702"
          y="11.227468"
          style="stroke-width:0.264583"
-         id="tspan2902">Buildings - operating rooms </tspan><tspan
+         id="tspan2902">buildings - operating rooms </tspan><tspan
          sodipodi:role="line"
          x="-292.19702"
          y="14.755239"
@@ -1804,7 +1804,7 @@
          style="stroke-width:0.264583">5 mm/s</tspan></text>
     <path
        style="fill:none;stroke:#d5d5d5;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 0.02302272,138.0323 13.01348928,0 v 32.84193 h 18.527445"
+       d="m 2.6431991,138.0323 10.3933129,0 v 32.84193 h 18.527445"
        id="path3368"
        sodipodi:nodetypes="cccc"
        inkscape:export-filename="Vibration_nomograph.png"
@@ -1812,7 +1812,7 @@
        inkscape:export-ydpi="500" />
     <path
        style="fill:none;stroke:#d5d5d5;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 0.0023513,194.07782 13.1499577,0 v 5.48103 h 18.527446"
+       d="m 2.6225276,194.07782 10.5297814,0 v 5.48103 h 18.527446"
        id="path3368-2"
        sodipodi:nodetypes="cccc"
        inkscape:export-filename="Vibration_nomograph.png"
@@ -1820,7 +1820,7 @@
        inkscape:export-ydpi="500" />
     <path
        style="fill:none;stroke:#d5d5d5;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 0.00703391,250.37721 28.43041709,0"
+       d="m 2.6272102,250.37721 25.8102408,0"
        id="path3368-6"
        sodipodi:nodetypes="cc"
        inkscape:export-filename="Vibration_nomograph.png"
@@ -1828,7 +1828,7 @@
        inkscape:export-ydpi="500" />
     <path
        style="fill:none;stroke:#0002ff;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 0.499999;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 41.867072,314.89395 8.515576,-8.73392"
+       d="m 44.954979,397.03229 8.515576,-8.73392"
        id="path1638-9"
        sodipodi:nodetypes="cc"
        inkscape:export-filename="Vibration_nomograph.png"
@@ -1836,7 +1836,7 @@
        inkscape:export-ydpi="300" />
     <path
        style="fill:none;stroke:#0002ff;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 0.499999;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 117.89898,373.65054 66.150502,322.66627"
+       d="M 120.98689,455.78888 69.238409,404.80461"
        id="path1638-9-6"
        sodipodi:nodetypes="cc"
        inkscape:export-filename="Vibration_nomograph.png"
@@ -1891,8 +1891,8 @@
        id="rect3224-57-35"
        width="12.737618"
        height="2.8177154"
-       x="291.87363"
-       y="149.52113"
+       x="352.1377"
+       y="205.41823"
        transform="rotate(45)"
        inkscape:export-filename="Vibration_nomograph.png"
        inkscape:export-xdpi="300"
@@ -1903,7 +1903,7 @@
        x="81.552994"
        y="309.67456"
        id="text1152"
-       transform="rotate(45,44.164434,335.21682)"><tspan
+       transform="rotate(45,-53.441356,380.01342)"><tspan
          id="tspan1150"
          x="81.552994"
          y="309.67456"
@@ -1938,7 +1938,7 @@
          style="stroke-width:0.264583">0.025 μm</tspan></text>
     <path
        style="fill:none;stroke:#0002ff;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 0.499999;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 89.903643,329.95996 30.132027,-30.13203 5.27847,5.25677 -0.0381,24.87526"
+       d="m 92.99155,412.0983 30.13203,-30.13203 5.27847,5.25677 -0.0381,24.87526"
        id="path1638-1"
        sodipodi:nodetypes="cccc"
        inkscape:export-filename="Vibration_nomograph.png"
@@ -1971,68 +1971,51 @@
          style="stroke-width:0.264583">3.1 μm/s</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:3.52777px;line-height:100%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
+       style="font-size:3.52777px;line-height:100%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;white-space:pre;inline-size:34.6838;display:inline;stroke-width:0.264583"
        x="128.11398"
        y="236.88269"
        id="text1522"
        inkscape:export-filename="Vibration_nomograph.png"
        inkscape:export-xdpi="500"
        inkscape:export-ydpi="500"><tspan
-         sodipodi:role="line"
-         id="tspan1520"
          x="128.11398"
          y="236.88269"
-         style="stroke-width:0.264583">NIST-A - adequate for the</tspan><tspan
-         sodipodi:role="line"
+         id="tspan1465">NIST-A - adequate for </tspan><tspan
          x="128.11398"
          y="240.41046"
-         style="stroke-width:0.264583"
-         id="tspan1528">most demanding of </tspan><tspan
-         sodipodi:role="line"
+         id="tspan1467">the most demanding of </tspan><tspan
          x="128.11398"
          y="243.93823"
-         style="stroke-width:0.264583"
-         id="tspan1530">sensitive systems </tspan><tspan
-         sodipodi:role="line"
+         id="tspan1469">sensitive systems  </tspan><tspan
          x="128.11398"
          y="247.466"
-         style="stroke-width:0.264583"
-         id="tspan1532">including long path, laser-</tspan><tspan
-         sodipodi:role="line"
+         id="tspan1471">including long path, </tspan><tspan
          x="128.11398"
          y="250.99377"
-         style="stroke-width:0.264583"
-         id="tspan1534">based, small target </tspan><tspan
-         sodipodi:role="line"
+         id="tspan1473">laser-based, small target </tspan><tspan
          x="128.11398"
-         y="254.52155"
-         style="stroke-width:0.264583"
-         id="tspan1536">systems, E-Beam </tspan><tspan
-         sodipodi:role="line"
+         y="254.52154"
+         id="tspan1475">systems, E-Beam </tspan><tspan
          x="128.11398"
-         y="258.04932"
-         style="stroke-width:0.264583"
-         id="tspan1538">lithography systems </tspan><tspan
-         sodipodi:role="line"
+         y="258.04931"
+         id="tspan1477">lithography systems 
+</tspan><tspan
          x="128.11398"
-         y="261.57709"
-         style="stroke-width:0.264583"
-         id="tspan1540">working at nanometer </tspan><tspan
-         sodipodi:role="line"
+         y="261.57707"
+         id="tspan1479">working at nanometer </tspan><tspan
          x="128.11398"
-         y="265.10486"
-         style="stroke-width:0.264583"
-         id="tspan1542">scales, and other systems </tspan><tspan
-         sodipodi:role="line"
+         y="265.10484"
+         id="tspan1481">scales, and other </tspan><tspan
          x="128.11398"
-         y="268.63263"
-         style="stroke-width:0.264583"
-         id="tspan1544">requiring extraordinary </tspan><tspan
-         sodipodi:role="line"
+         y="268.63261"
+         id="tspan1483">systems requiring </tspan><tspan
          x="128.11398"
-         y="272.1604"
-         style="stroke-width:0.264583"
-         id="tspan1546">dynamic stability. </tspan></text>
+         y="272.16038"
+         id="tspan1485">extraordinary 
+</tspan><tspan
+         x="128.11398"
+         y="275.68815"
+         id="tspan1487">dynamic stability. </tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.52777px;line-height:100%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583"
@@ -2054,7 +2037,7 @@
        inkscape:export-ydpi="500" />
     <path
        style="fill:none;stroke:#d5d5d5;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 134.00434,231.90468 h 31.20954"
+       d="m 129.58279,231.90468 h 31.20954"
        id="path3368-6-3"
        sodipodi:nodetypes="cc"
        inkscape:export-filename="Vibration_nomograph.png"

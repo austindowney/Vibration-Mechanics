@@ -35,7 +35,9 @@
 \usepackage{booktabs}
 %\usepackage{parskip} % remove all the paragraph indents
 \usepackage[textsize=tiny]{todonotes}
-
+\usepackage[OT2, T1]{fontenc}			% added for Russian names in Cryillic text
+\usepackage[russian, english]{babel}	% added for Russian names in Cryillic text
+\usepackage{enumitem}					% added to reduce the space in itemized list
 
 \usepackage{setspace}
 \usepackage[colorlinks=true]{hyperref}
@@ -118,6 +120,14 @@ Throughout this text, we have studied various aspects related to analyzing and m
 
 \subsection{Vibration Nomograph}
 
+\begin{figure}[tp!]
+    \centering
+    \includegraphics[width=6.5in]{../figures/Vibration_nomograph}
+    \caption{Vibration nomograph showing the acceptable limits of vibration for various applications.}
+    \label{fig:Vibration_nomograph}
+\end{figure}
+
+
 There exist various methods and standards for measuring and describing acceptable levels of vibrations in systems, these include ISO/AWI 2631 for the evaluation of human exposure to whole-body vibrations and ISO 4866 for the measurement and effects of vibrations on structures. A common way to present the acceptable limit of vibration is in a vibration nomograph.  A vibration nomograph is a simplified way to express the acceptable limits on a system while considering the displacement, velocity, acceleration, and frequency of a system. A typical nomograph with various limits is presented in figure \ref{fig:Vibration_nomograph}. 
 
 A vibration nomograph is a logarithmic plot that allows us to easily express the relationships between displacement, velocity, acceleration, and frequency of a system. The vibration nomograph presented in figure \ref{fig:Vibration_nomograph} considers an undamped 1-DOF system with constant amplitude ($A$) experiencing harmonic motion that can be modeled as:
@@ -165,17 +175,13 @@ doing the same for equation \ref{eq:a_max} leads to:
 \end{equation}
 It can be seen that both of these expressions are linear. 
 
+
+
 The nomograph sets the $x-$axis as frequency in Hz and the $y-$axis as velocity in mm/s. Equation \ref{eq:ln_v_max} tells us that For a constant amplitude of displacement ($A$), $\ln v_\text{max}$ is linearly proportional to $\ln (2 \pi f)$, at a rate of $2 \pi$. As the $x-$axis in a nomograph is frequency, measured in Hz and thereby accounting for the $2 \pi$, $\ln (2 \pi f)$ is a straight line with a positive slope of 1 with respect the frequency axis (i.e. $x-$axis). Therefore, a line on the nomograph that represents a constant displacement is at a 45$^\circ$ angle from the $x$-axis. 
 
 
 For a constant value of velocity, ($v_\text{max}$), equation \ref{eq:ln_v_max_2} shows that acceleration ($\ln a_\text{max}$) is linearly proportional to $-\ln (2 \pi f)$, at a rate of $2 \pi$. Again, as the $x-$axis in a nomograph is frequency, measured in Hz, acceleration is represented by a straight line that varies with $- \ln(2\pi f)$, therefore, $\ln a_\text{max}$ is a straight line with the slope of -1. This is also represented by a line of constant acceleration set at a -45$^\circ$ angle from the $x$-axis. These equations are expressed in the vibration nomograph plot of figure \ref{fig:Vibration_nomograph} where each point on the plot represents a specific sinusoidal (harmonic) vibration for a 1-DOF system.  
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=4.5in]{../figures/Vibration_nomograph.png}
-    \caption{Vibration nomograph showing the acceptable limits of vibration for various applications.}
-    \label{fig:Vibration_nomograph}
-\end{figure}
 
 
 		\begin{vibration_case_studies}
@@ -208,7 +214,10 @@ One way to do this is to track the \emph{transmissibility ratio} which is denote
 	\text{T.R.} = \frac{F_T}{F_0} = \sqrt{\frac{1+(2 \zeta \beta )^2}{(1-\beta^2)^2+(1 \zeta \beta )^2}}
 \end{equation}
 
-\todo{add exmaple on vibration isolation for electronics. Use example form shock test system.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  \todo{add exmaple on vibration isolation for electronics. Use example form shock test system.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \subsection{Vibration Absorption}
 
@@ -275,8 +284,9 @@ X_2 = -\frac{k_1}{k_2}\delta_{\text{st}} = -\frac{F_0}{k_2}
 \end{equation}
 or 1 m using the given parameters. Therefore, the mass and stiffness values of the vibration absorber should be selected based the the allowable travel of the absorber (i.e. $X_2$), among other factors. Moreover, from this equation it can be seen the force exerted by the second mass operates in the direction opposite the original force ($-F_0 - k_2 X_2$), thereby canceling it. Lastly, note that the addition of the vibration absorber creates two resonate frequencies of the system, termed $\Omega_1$ and $\Omega_2$. These  resonate frequencies represent roots of the system and care should be taken to limit the time the system spends at these frequencies (i.e. on startup). The locations of these roots can be solved for analytically by setting the denominators of equation \ref{eq:X1_norm_displacement} to zero.
 
-
-\todo{Add text on the mass and frequency ratios $\mu$ and $\beta$.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  \todo{Add text on the mass and frequency ratios $\mu$ and $\beta$.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{figure}[H]
     \centering
@@ -288,12 +298,15 @@ or 1 m using the given parameters. Therefore, the mass and stiffness values of t
 
 
 \begin{vibration_case_studies}
-	Discuss vibration mitigation in tall structures
+	Tuned mass dampers for vibration mitigation in tall structures
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=3.5in]{../figures/Taipei_101_Tuned_Mass_Damper.png}
 		\caption{Illustration of Taipei 101's main tuned mass damper. \protect\footnotemark[1]}
 	\end{figure}
+	
+	A tuned mass dampers (TMD), also known as a harmonic absorber or seismic damper, are devices that are designed into a structure to mitigate structural vibration. The mass is typically a block of steel or concrete and is mounted on suspended cables to create a pendulum and damped in relation to the structure. By tuning the oscillating frequency of the damping system to be near the same natural frequency of the structure, energy is transferred to the mass and extracted through the dampers. Thereby reducing vibration which prevents discomfort or damage. While discussed here in the context of tall buildings, tuned mass dampers are also frequently found in automobile components and power transmission lines.	
+	
 \footnotetext[1]{Someformofhuman, CC BY-SA 4.0 $<$https://creativecommons.org/licenses/by-sa/4.0$>$, via Wikimedia Commons} 	
 \end{vibration_case_studies}
 
@@ -301,26 +314,27 @@ or 1 m using the given parameters. Therefore, the mass and stiffness values of t
 
 \subsection{Active Vibration Suppression}
 
+Vibrations in systems can be mitigated through a number a active systems; typically its easiest to consider this as an actuator that add energy to the system at the correct time to cancel out vibrations. 
+
 \subsubsection{Metrics for vibration control}
 
-\todo{add a short discussion on metrics, settling time, time to peak, and overshoot.}
+There are various performance indicators that one can use to judge the performance of an active control scheme. They depend on the system order (1\textsuperscript{st}, 2\textsuperscript{nd}) and the excitation experienced by the system. For simplicity in this introductory text, we will define four performance indicators subjected to a step response, each shown in figure~\ref{fig:2nd_order_performance_indicators}. The performance indicators are:
+\begin{itemize}[itemsep=0.25ex,topsep=0.25ex]
+	%\item rise time $ \rightarrow t_\text{r}$
+	\item peak time  ($t_\text{p}$) is the time to the first peak.
+	\item peak value  ($x_\text{p}$) is the maximum value experiences by the system
+	\item settling time ($t_\text{s}$) is the time it take the system to get within an error ($\pm \epsilon \%$) of the steady-state displacement ($x_{ss}$) and stay there.
+	% \item delay time  $ \rightarrow t_\text{d}$
+	\item max percentage overshoot ($M_\text{p}$) is defined as $M_p = ( {x_p} / {x_{ss}}-1 ) \cdot 100$.
+\end{itemize}
 
-
-The settling time ($t_s$) is the time its takes $x$ to get within $\epsilon \%$ of $x_{ss}$.
 \begin{figure}[H]
 	\centering
-	\includegraphics[]{../figures/settling_time_overdamped}
+	\includegraphics[]{../figures/2nd_order_performance_indicators}
+	\label{fig:2nd_order_performance_indicators}
 \end{figure}
 
-\todo{update, this math is form a 1-st order system.}
 
-A more precise estimator is the rise time to any selected $x$ which can be defined as
-\begin{align}
-	x_{ss}(1-e^{-t/T})&=x \\
-	e^{(-t/T)} &= 1-\frac{x}{x_{ss}} \nonumber \\ 
-	-t/T &= \log \bigg[ 1-\frac{x}{x_{ss}} \bigg]  \nonumber \\ 
-	t &= -T \log \bigg[ 1-\frac{x}{x_{ss}} \bigg] \nonumber 
-\end{align}
 
 
 
@@ -419,9 +433,9 @@ where $s$ is the complex frequency. A temporal response for the 1-DOF shown in f
 
 
 
-
-\subsubsection{Linear-Quadratic Regulator (LQR) Control}
-
+%
+%\subsubsection{Linear-Quadratic Regulator (LQR) Control}
+%
 
 
 
