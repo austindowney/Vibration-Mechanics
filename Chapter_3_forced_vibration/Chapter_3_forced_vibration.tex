@@ -618,30 +618,30 @@
 			\end{equation}	
 			We want to find a way to plot the responses of the system only in terms of the system's natural and driving frequencies, and its damping. First, we define a frequency ratio as the dimensionless quantity 
 			\begin{equation}
-				\beta = \frac{\omega}{\omega_n}
+				r = \frac{\omega}{\omega_n}
 			\end{equation}
-			Another common way to express $\beta$ is $r$. Next, Recall that:
+			Another common way to express $r$ is $\beta$. Next, Recall that:
 			\begin{equation}
 				X = \frac{f_0}{\sqrt{(\omega_n^2 - \omega^2)^2 +  (2\zeta \omega_n \omega)^2}}  = \frac{\frac{F_0}{m}}{\sqrt{(\omega_n^2 - \omega^2)^2 +  (2\zeta \omega_n \omega)^2}} 
 			\end{equation}				
 			If we factor out $\omega_n^2$ from the denominator and substitute in $\omega_n^2 = k/m$ and $r = \omega/\omega_n$, we get:
 			\begin{equation}
-				X = \frac{\frac{F_0}{m}}{\omega_n^2 \sqrt{\big(1 - (\frac{\omega}{\omega_n})^2\big)^2 +  (2\zeta \frac{\omega}{\omega_n})^2}} =  \frac{\frac{F_0}{k}}{\sqrt{(1-\beta^2)^2+(2\zeta \beta)^2}}
+				X = \frac{\frac{F_0}{m}}{\omega_n^2 \sqrt{\big(1 - (\frac{\omega}{\omega_n})^2\big)^2 +  (2\zeta \frac{\omega}{\omega_n})^2}} =  \frac{\frac{F_0}{k}}{\sqrt{(1-r^2)^2+(2\zeta r)^2}}
 			\end{equation}				
 			this becomes:
 			\begin{equation}
-				\frac{Xk}{F_0} = \frac{X \omega_n^2}{f_0} = \frac{1}{\sqrt{(1-\beta^2)^2+(2\zeta \beta)^2}}
+				\frac{Xk}{F_0} = \frac{X \omega_n^2}{f_0} = \frac{1}{\sqrt{(1-r^2)^2+(2\zeta r)^2}}
 			\end{equation}				
-			in a similar fashion, if we manipulate the equation for $\phi_p$ we can get $\phi_p$ in term of $\beta$:
+			in a similar fashion, if we manipulate the equation for $\phi_p$ we can get $\phi_p$ in term of $r$:
 			\begin{equation}
-				\phi_p = \tan^{-1} \bigg(\frac{2 \zeta \beta}{1-\beta^2}\bigg)
+				\phi_p = \tan^{-1} \bigg(\frac{2 \zeta r}{1-r^2}\bigg)
 			\end{equation}	
-			If we solve for a few key values of $\beta$ we can get the following data points. On the board, we can solve for a few different frequency responses for a few different damping coefficients. 
+			If we solve for a few key values of $r$ we can get the following data points. On the board, we can solve for a few different frequency responses for a few different damping coefficients. 
 			\begin{table}[H]
 				\centering
 				\begin{tabular}{@{}lccccccccc@{}}
 				\toprule
-				 & & \multicolumn{8}{c}{frequency ratio ($\beta$)} \\ 
+				 & & \multicolumn{8}{c}{frequency ratio ($r$)} \\ 
 				 & 0 & 0.25& 0.5& 0.75& 1& 1.25& 1.5& 1.75& 2.0 \\ \midrule
 				$\zeta=0.1$	&	1.00&	1.07&	1.32&	2.16&	5.00&	1.62&	0.78&	0.48 & 0.33 \\ 
 				$\zeta=0.25$	&	1.00&	1.06&	1.27&	1.74&	2.00&	1.19&	0.69&	0.45 & 0.32 \\ 
@@ -649,33 +649,33 @@
 				$\zeta=0.7$	&	1.00&  1.00	&   0.97&	0.88&	0.71&	0.54&	0.41&	0.31 & 0.24\\\bottomrule
 				\end{tabular}
 			\end{table}
-			If we plot the values of the normalize amplitude vs $\beta$ we obtain:
+			If we plot the values of the normalize amplitude vs $r$ we obtain:
 			\begin{figure}[H]
 				\centering
 				\includegraphics[]{../figures/underdamped_frequency_response_amplitude.png}
-				\caption{Normalized amplitude response for frequency ratio ($\beta$) from 0 to 2 for a variety of critical damping ratios.}
+				\caption{Normalized amplitude response for frequency ratio ($r$) from 0 to 2 for a variety of critical damping ratios.}
 			\end{figure}			
-			\noindent And again, if we plot the values of the phase vs $\beta$ ($\omega/\omega_n$) we obtain:
+			\noindent And again, if we plot the values of the phase vs $r$ ($\omega/\omega_n$) we obtain:
 			\begin{figure}[H]
 				\centering
 				\includegraphics[]{../figures/underdamped_frequency_response_phase.png}
-				\caption{Phase response for frequency ratio ($\beta$) from 0 to 2 for a variety of critical damping ratios.}
+				\caption{Phase response for frequency ratio ($r$) from 0 to 2 for a variety of critical damping ratios.}
 			\end{figure}				
 			\noindent note that the dashed black line is there because the phase values after $\pi/2$ need to be adjusted to obtain a continuous plot. An astute observer would notice that the maximum amplitude is not at $\omega = \omega_n$. While resonance is defined as $\omega = \omega_n$, this does not define the point of maximum displacement of the steady state response. Let us solve for the frequency ratio with the maximum displacement. This will happen when
 			\begin{equation}
-				\frac{d}{d\beta}\Bigg(\frac{Xk}{F_0} \Bigg)= 0
+				\frac{d}{dr}\Bigg(\frac{Xk}{F_0} \Bigg)= 0
 			\end{equation}				
 			We can show that:
 			\begin{equation}
-			\Bigg(\frac{1}{\sqrt{(1-\beta^2)^2+(2\zeta \beta)^2}}\Bigg)	\frac{d}{d\beta} =0
+			\Bigg(\frac{1}{\sqrt{(1-r^2)^2+(2\zeta r)^2}}\Bigg)	\frac{d}{dr} =0
 			\end{equation}	
 			when 
 			\begin{equation}
-			\beta_{\text{peak}} = \sqrt{1-2 \zeta^2}= \frac{\omega_p}{\omega_n}, \hspace{1cm} \zeta<1/\sqrt{2} 
+			r_{\text{peak}} = \sqrt{1-2 \zeta^2}= \frac{\omega_p}{\omega_n}, \hspace{1cm} \zeta<1/\sqrt{2} 
 			\end{equation}				
-			however, this is only true for under damped system in which $\zeta<1/\sqrt{2}$. If $\zeta>1/\sqrt{2}$ than the value in imaginary and the peak value is at $\beta=0$. In these cases, the maximum displacement is a function of only $\omega_n$. $\omega_p$ represents the driving frequency that corresponds to the maximum amplitude ($\frac{Xk}{F_0}$) and is called the \textbf{peak frequency}, and can be calculated as:
+			however, this is only true for under damped system in which $\zeta<1/\sqrt{2}$. If $\zeta>1/\sqrt{2}$ than the value in imaginary and the peak value is at $r=0$. In these cases, the maximum displacement is a function of only $\omega_n$. $\omega_p$ represents the driving frequency that corresponds to the maximum amplitude ($\frac{Xk}{F_0}$) and is called the \textbf{peak frequency}, and can be calculated as:
 			\begin{equation}
-			\omega_p = \omega_n \beta_{\text{peak}} = \omega_n \sqrt{1-2 \zeta^2}, \hspace{1cm} \zeta<1/\sqrt{2} 
+			\omega_p = \omega_n r_{\text{peak}} = \omega_n \sqrt{1-2 \zeta^2}, \hspace{1cm} \zeta<1/\sqrt{2} 
 			\end{equation}				
 			
 			
@@ -845,15 +845,15 @@
 				
 				As before, if we want to investigate how a frequency input will affect the response (frequency response) we can substitute substitute 
 				\begin{equation}
-				\beta=\frac{\omega_b}{\omega_n}
+				r=\frac{\omega_b}{\omega_n}
 				\end{equation} 
 				into the temporal response to obtain:
 				\begin{equation}
-				X = Y \sqrt{\frac{1+(2 \zeta \beta)^2}{(1-\beta^2)^2 + (2 \zeta \beta )^2}} 
+				X = Y \sqrt{\frac{1+(2 \zeta r)^2}{(1-r^2)^2 + (2 \zeta r )^2}} 
 				\end{equation} 
 				Next, if we divide by $Y$ we can obtain a normalized expression for the displacement:
 				\begin{equation}
-				\frac{X}{Y} = \sqrt{\frac{1+(2 \zeta \beta)^2}{(1-\beta^2)^2 + (2 \zeta \beta )^2}} 
+				\frac{X}{Y} = \sqrt{\frac{1+(2 \zeta r)^2}{(1-r^2)^2 + (2 \zeta r )^2}} 
 				\end{equation} 
 				Plotting this for several critical damping ratios:
 				\begin{figure}[H]
@@ -861,7 +861,7 @@
 					\includegraphics[]{../figures/base_excitation_displacement_transmissibility.png}
 					\caption{Displacement transmissibility for an underdamped 1-DOF system.}
 				\end{figure}
-				Around resonance, the maximum amount of displacement is transmitted to the mass. Additionally,  the above plot shows that at $\beta=\sqrt{2}$ the displacement transmissibility $X/Y$ is 1. Note the ``flip'' where overdamped systems have a greater response to excitations after $\beta=\sqrt{2}$ than do underdamped systems.
+				Around resonance, the maximum amount of displacement is transmitted to the mass. Additionally,  the above plot shows that at $r=\sqrt{2}$ the displacement transmissibility $X/Y$ is 1. Note the ``flip'' where overdamped systems have a greater response to excitations after $r=\sqrt{2}$ than do underdamped systems.
 
 				\begin{example}
 	
@@ -893,7 +893,7 @@
 					\end{equation} 			
 					Therefore:
 					\begin{equation}
-					\beta=\frac{\omega_b}{\omega_n}  = 2.124
+					r=\frac{\omega_b}{\omega_n}  = 2.124
 					\end{equation} 		
 					and:
 					\begin{equation}
@@ -902,7 +902,7 @@
 					Then it can be found that the maximum deflection of the car is:
 					\begin{equation}
 					\begin{split}
-					X = Y \sqrt{\frac{1+(2 \zeta \beta)^2}{(1-\beta^2)^2 + (2 \zeta \beta )^2}} = Y \sqrt{\frac{1+(2 \cdot 0.3423 \cdot2.124)^2}{(1-2.124^2)^2 + (2 \cdot 0.3423 \cdot 2.124 )^2}}  \\ = 0.0023 \text{ m}
+					X = Y \sqrt{\frac{1+(2 \zeta r)^2}{(1-r^2)^2 + (2 \zeta r )^2}} = Y \sqrt{\frac{1+(2 \cdot 0.3423 \cdot2.124)^2}{(1-2.124^2)^2 + (2 \cdot 0.3423 \cdot 2.124 )^2}}  \\ = 0.0023 \text{ m}
 					\end{split}
 					\end{equation} 		
 				\end{example}	
@@ -927,7 +927,7 @@
 				\end{equation} 
 				where the negative sign $F(t) = -m\ddot{x}(t)$ as the force transmitted to the mass is both positive and negative and we are solving for the amplitude of the transmitted force. Again applying:
 				\begin{equation}
-					\beta=\frac{\omega_b}{\omega_n}
+					r=\frac{\omega_b}{\omega_n}
 				\end{equation} 
 				this becomes:
 				\begin{equation}
@@ -935,11 +935,11 @@
 				\end{equation} 
 				where $F_T$ is the magnitude of the transmitted force and is 
 				\begin{equation}
-					F_\text{T} = kYr^2 \sqrt{\frac{1+(2 \zeta \beta)^2}{(1-\beta^2)^2 + (2 \zeta \beta )^2}} 
+					F_\text{T} = kYr^2 \sqrt{\frac{1+(2 \zeta r)^2}{(1-r^2)^2 + (2 \zeta r )^2}} 
 				\end{equation}
 				Again, this can be converted to a force transmissibility to provide a normalized response such that:
 				\begin{equation}
-					\frac{F_\text{T}}{kY} = \beta^2 \sqrt{\frac{1+(2 \zeta \beta)^2}{(1-\beta^2)^2 + (2 \zeta \beta )^2}} 
+					\frac{F_\text{T}}{kY} = r^2 \sqrt{\frac{1+(2 \zeta r)^2}{(1-r^2)^2 + (2 \zeta r )^2}} 
 				\end{equation}
 				Plotting this for several critical damping ratios:
 				\begin{figure}[H]
@@ -947,7 +947,7 @@
 					\includegraphics[]{../figures/base_excitation_force_transmissibility.png}
 					\caption{Force transmissibility for an underdamped 1-DOF system.}
 				\end{figure}
-				Again, note the key location $\beta=\sqrt{2}$. At $\beta=\sqrt{2}$ the force transmitted to the system is 2 $\frac{F_\text{T}}{kY}$. However, also note that the normalized force does not necessarily fall off for $\beta$ values greater than $\beta=\sqrt{2}$.  
+				Again, note the key location $r=\sqrt{2}$. At $r=\sqrt{2}$ the force transmitted to the system is 2 $\frac{F_\text{T}}{kY}$. However, also note that the normalized force does not necessarily fall off for $r$ values greater than $r=\sqrt{2}$.  
 	
 				\begin{example}
 					
@@ -979,7 +979,7 @@
 							
 				\begin{example}
 		
-					A single-story building is subjected to a harmonic ground motion, $\ddot{y}(t) = A \text{cos}(\omega_b t)$. a) Find the steady-state solution for the structure.  b) If a damper was added between the base and the floor, and $\beta=2$, what would be the ideal critical damping coefficient to ensure the safety of the building. (Think of safety as limiting displacement and transmitted force.) 
+					A single-story building is subjected to a harmonic ground motion, $\ddot{y}(t) = A \text{cos}(\omega_b t)$. a) Find the steady-state solution for the structure.  b) If a damper was added between the base and the floor, and $r=2$, what would be the ideal critical damping coefficient to ensure the safety of the building. (Think of safety as limiting displacement and transmitted force.) 
 					\begin{figure}[H]
 						\centering
 						\includegraphics[width=0.35\textwidth]{../figures/base_excited_structure.png}
@@ -1035,13 +1035,16 @@
 
 
 		\begin{vibration_case_studies}
-			Discuss the Base excitation challenges of the Convair F2Y SeaDart
+			The Convair F2Y Sea Dart was a prototype seaplane fighter developed by the United States Navy in the early 1950s to enable sea-based jet fighters. One key technical issue with the aircraft's development was the violent forces induced into the plane when the hydro-skis contacted the uneven surfaces of the water. Furthermore, adding damping to the skies proved to be changed as the damping required changed significantly as a function of the hydro-skis contact with the water. Significant work went into the skies and shock-absorbing struts, which helped to improve the situation but it was never fully repaired.
+			
+			
 			\begin{figure}[H]
 				\centering
-				\includegraphics[width=4in]{../figures/Convair_F2Y_SeaDart}
-				\caption{XF2Y-1 Sea Dart (BuNo 135762) during landing. This airframe disintegrated in mid-air over San Diego Bay, California (USA) during a demonstration flight on November 4th, 1954 killing test pilot Charles E. Richbourg after the airframe limitations were exceed\protect\footnotemark[1]. \bl{}}
+				\includegraphics[width=6.0in]{../figures/Convair_F2Y_SeaDart}
+				\caption{The  Convair F2Y Sea Dart, showing: a) XF2Y-1 Sea Dart (BuNo 135762) during landing. This airframe disintegrated in mid-air over San Diego Bay, California (USA) during a demonstration flight on November 4th, 1954 killing test pilot Charles E. Richbourg after the airframe limitations were exceed\protect\footnotemark[1], and b) the hydro-skis undergoing extensive testing on a pantograph mounted on a speed boat to study the forces transmitted to the airframe from the hydro-skis\protect\footnotemark[2].}
 			\end{figure}
-			\footnotetext[1]{Public Domain 	U.S. Navy National Museum of Naval Aviation photo No. 1996.253.7213.010}  	
+			\footnotetext[1]{Public Domain 	U.S. Navy National Museum of Naval Aviation photo No. 1996.253.7213.010} 
+			\footnotetext[1]{Image from ``The Impossible Takes Longer'',  a film by Convair about Sea Dart development. The copyright of the image is unknown but may be held by the successor entities of Convair. It is believed that the use of this image qualifies as fair use under the copyright law of the United States.}  	
 		\end{vibration_case_studies}
 
 

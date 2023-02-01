@@ -356,7 +356,7 @@ Below is a typical response for both a undamped and underdamped 1-DOF system sub
 
 
 
-\subsubsection{Unit step function}
+\subsubsection{Unit Step function}
 Now consider a unit step function, denoted with a capital Greek Phi  $\Phi$: 
 
 \begin{figure}[H]
@@ -374,7 +374,7 @@ The Laplace transform of the function, for a unit step function $\Phi$, is:
 \end{equation*}
 This also lines up with Laplace Transform \#3 from the Laplace table. This would be expected as $\Phi$ is used to represent the unit step function (i.e. a step function with a displacement of 1). As we consider linear systems in this class, we can scale the magnitude of the response by the magnitude of the impulse after the transform is performed. 
 
-\subsubsection{Undamped spring-mass system}
+\subsubsection{Undamped Spring-mass System}
 
 For a spring-mass system subjected to a unit step, assuming both initial conditions are zero, the solution can be obtained using the transform method. First, the EOM is 
 \begin{equation}
@@ -397,7 +397,7 @@ where $\frac{1}{m}$ will pass through the Laplace function. Therefore, taking th
 	x(t) = \frac{1}{m} \cdot \frac{1}{\omega_n^2}\big(1-\text{cos}(\omega_n t)\big) = \frac{1}{k}\big(1-\text{cos}(\omega_n t)\big)
 \end{equation}
  
-\subsubsection{Under damped spring-mass system}
+\subsubsection{Under Damped Spring-mass System}
 
 For a spring-mass-damper system subjected to a unit step, assuming both initial conditions are zero, the solution can be obtained using the transform method. First, the EOM is:
 \begin{equation}
@@ -594,7 +594,7 @@ Again, this represents the total system response (without initial conditions) fo
 			\end{figure}
 			\noindent where $F(s)$ is the input, $H(s)$ is the system, and $X(s)$ is the output from the system. This formulation is called the transfer-function approach and is commonly used for the formulation and solution of dynamic problems in the control literature. It can also be used for solving the various forced-vibration problems including those from complex or stochastic inputs. 
 	
-\subsubsection{Defining the transfer function $\mathbf{H(s)}$}
+\subsubsection{Defining the Transfer Function $\mathbf{H(s)}$}
 
 Again, consider the generic system represented in figure~\ref{fig:transfer_function_system}. For this system representation, $F(s)$ is the Laplace of the transform of the driving force and $H(s)$ is the Laplace transform of the response of the system $h(t)$. 
 
@@ -631,7 +631,7 @@ X(s) = H(s)F(s)
 \end{equation}	
 
 
-\subsubsection{Transfer Function method (Steady-State solution)}
+\subsubsection{Transfer Function Method (Steady-state Solution)}
 
 Considering the forced system:
 \begin{figure}[H]
