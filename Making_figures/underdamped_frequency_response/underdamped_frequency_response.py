@@ -8,8 +8,8 @@ Default plotting code for Open_Vibrations that sets the fonts and format.
 
 #%% import modules and set default fonts and colors
 
-import IPython as IP
-IP.get_ipython().magic('reset -sf')
+# import IPython as IP
+# IP.get_ipython().magic('reset -sf')
 
 import matplotlib.pyplot as plt
 import matplotlib as mpl
@@ -105,23 +105,39 @@ plt.savefig('underdamped_frequency_response_amplitude',dpi=300)
 
 
 
+# plt.figure(figsize=(6.5,4.5))
+# plt.plot(r,phase_1,'-',lw=0.9,label='$\zeta=$'+str(zeta_1))
+# plt.plot(r,phase_2,'--',label='$\zeta=$'+str(zeta_2))
+# plt.plot(r,phase_3,':',label='$\zeta=$'+str(zeta_3))
+# plt.plot(r,phase_4,'-.',label='$\zeta=1/\sqrt{2}$')
+# plt.plot(r,phase_5,'-',lw=2.5,label='$\zeta=$'+str(zeta_5))
+# plt.plot(r,phase_6,'--',lw=2.5,label='$\zeta=$'+str(zeta_6))
+# plt.hlines(np.pi/2,0,2,linestyle = '--')
+# plt.legend(framealpha=1)
+# plt.grid('on')
+# plt.xlabel(r'frequency ratio ($r$)')
+# plt.ylabel('phase (rad)')
+# plt.tight_layout()
+# plt.savefig('underdamped_frequency_response_phase',dpi=300)
+
+
 plt.figure(figsize=(6.5,4.5))
-plt.plot(r,phase_1,'-',lw=0.9,label='$\zeta=$'+str(zeta_1))
-plt.plot(r,phase_2,'--',label='$\zeta=$'+str(zeta_2))
-plt.plot(r,phase_3,':',label='$\zeta=$'+str(zeta_3))
-plt.plot(r,phase_4,'-.',label='$\zeta=1/\sqrt{2}$')
-plt.plot(r,phase_5,'-',lw=2.5,label='$\zeta=$'+str(zeta_5))
-plt.plot(r,phase_6,'--',lw=2.5,label='$\zeta=$'+str(zeta_6))
-plt.hlines(np.pi/2,0,2,linestyle = '--')
+plt.plot(r,phase_1*(180/np.pi),'-',lw=0.9,label='$\zeta=$'+str(zeta_1))
+plt.plot(r,phase_2*(180/np.pi),'--',label='$\zeta=$'+str(zeta_2))
+plt.plot(r,phase_3*(180/np.pi),':',label='$\zeta=$'+str(zeta_3))
+plt.plot(r,phase_4*(180/np.pi),'-.',label='$\zeta=1/\sqrt{2}$')
+plt.plot(r,phase_5*(180/np.pi),'-',lw=2.5,label='$\zeta=$'+str(zeta_5))
+plt.plot(r,phase_6*(180/np.pi),'--',lw=2.5,label='$\zeta=$'+str(zeta_6))
+#plt.hlines(np.pi/2*(180/np.pi),0,2,linestyle = '--')
+plt.yticks((0,45,90,135,180))
+plt.ylim([-10,190])
 plt.legend(framealpha=1)
+#plt.text(0.08,91.5,'90$^\circ$',fontsize=13)
 plt.grid('on')
 plt.xlabel(r'frequency ratio ($r$)')
-plt.ylabel('phase (rad)')
+plt.ylabel('phase (deg)')
 plt.tight_layout()
 plt.savefig('underdamped_frequency_response_phase',dpi=300)
-
-
-
 
 
 

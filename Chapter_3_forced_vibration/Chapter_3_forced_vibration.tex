@@ -16,10 +16,10 @@
 \numberwithin{re}{section} % allows for the use of example numbers that lign up with the section numbers
 \newenvironment{review}{\begin{mdframed}[middlelinewidth=2mm,roundcorner=20pt]\begin{re}\normalfont}{\end{re}\end{mdframed}}
 
-% defines all vibration case studies
-\newtheorem{vcs}{Vibration Case Studies}
+% defines all vibration case study
+\newtheorem{vcs}{Vibration Case Study}
 \numberwithin{vcs}{section} % allows for the use of numbers that lign up with the section numbers
-\newenvironment{vibration_case_studies}{\begin{mdframed}[linecolor=orange,middlelinewidth=2mm,roundcorner=20pt]\begin{vcs}\normalfont}{\end{vcs}\end{mdframed}}
+\newenvironment{vibration_case_study}{\begin{mdframed}[linecolor=orange,middlelinewidth=2mm,roundcorner=20pt]\begin{vcs}\normalfont}{\end{vcs}\end{mdframed}}
 
 % defines the quotation enviorment 
 \usepackage{xcolor}
@@ -122,7 +122,7 @@
 
 
 
-			\begin{vibration_case_studies}
+			\begin{vibration_case_study}
 				Tall mast light poles are excited by a wind excitation and respond across their entire frequency domain. Consider the light pole located in the state of Kansas in the United States shown figure~\ref{fig:Li_pole_vibrations}. The structure responds more at some frequencies than other frequencies, as dictated by the structure's geometry and material properties. Studying how structures responded to forced inputs allows for a better design of the structure.  
 				\begin{figure}[H]
 					\centering
@@ -132,7 +132,7 @@
 				\end{figure}
 				\footnotetext[1]{Jian li, CC BY-SA 4.0, Light pole data}  
 				\footnotetext[2]{Shaheen, Mona, et al. ``Wind-induced vibration monitoring of high mast illumination poles.'' Sensors and Smart Structures Technologies for Civil, Mechanical, and Aerospace Systems 2022. Vol. 12046. SPIE, 2022.}  
-			\end{vibration_case_studies}
+			\end{vibration_case_study}
 
 	
 		\subsection{Harmonic Excitations of Undamped Systems}
@@ -397,7 +397,7 @@
 \end{example}
 
 
-		\begin{vibration_case_studies}
+		\begin{vibration_case_study}
 			The Millennium Bridge is a pedestrian suspension bridge in London over the River Thames. The supporting cables of the bridge are abnormally low and rest below the deck level, giving a very shallow profile. This was required by London's protected Vistas which necessitates a clear line of view from Alexandra Palace to Saint Paul's Cathedral; as well as behind Saint Paul's Cathedral where the bridge sits. 
 
 			When opened on 10 June 2000, 2,000 pedestrians at  1.5 people per square meter used the bridge. The bridge started to rock in the lateral direction at frequencies of between 0.5~Hz and 1.1~Hz with accelerations up to 0.25~g$_\text{n}$, this caused people on the bridge to try and brace themselves by moving their body mass in sync with the bridge's movement. This bio-dynamic coupling created a forced lateral vibration in the bridge that would persist when sufficient people were on the bridge.   
@@ -410,7 +410,7 @@
 				\caption{View of Millennium Bridge in London UK\protect\footnotemark[1].}
 			\end{figure}
 			\footnotetext[1]{David Martin / Under the Millennium Bridge / CC BY-SA 2.0}  
-		\end{vibration_case_studies}
+		\end{vibration_case_study}
 
 
 	
@@ -649,19 +649,23 @@
 				$\zeta=0.7$	&	1.00&  1.00	&   0.97&	0.88&	0.71&	0.54&	0.41&	0.31 & 0.24\\\bottomrule
 				\end{tabular}
 			\end{table}
-			If we plot the values of the normalize amplitude vs $r$ we obtain:
+			If we plot the values of the normalized amplitude vs $r$ we obtain figure~\ref{fig:underdamped_frequency_response_amplitude} where it can be seen that the normalized amplitude is a function of damping in the system. However, it should be noted that damping is only effective around resonance, as below and above resonance, all damping cases converge on similar values. Note that $\zeta \ge 1/\sqrt{2}$ is the changeover point from where the max normalized displacement is at $r=0$ vs around resonance.  
+		   
 			\begin{figure}[H]
 				\centering
 				\includegraphics[]{../figures/underdamped_frequency_response_amplitude.png}
-				\caption{Normalized amplitude response for frequency ratio ($r$) from 0 to 2 for a variety of critical damping ratios.}
-			\end{figure}			
-			\noindent And again, if we plot the values of the phase vs $r$ ($\omega/\omega_n$) we obtain:
+				\caption{Normalized amplitude response for frequency ratio ($r$= ($\omega/\omega_n$)) from 0 to 2 for a variety of critical damping ratios.}
+				\label{fig:underdamped_frequency_response_amplitude}
+			\end{figure}
+			% I have seen expresses that you take k out of the units on the y-axis, the base is 1/k. however, I don't see the value of it.			
+			\noindent And again, if we plot the values of the phase vs $r$ we get figure~\ref{fig:underdamped_frequency_response_phase}. Note that all systems pass through 90$^\circ$ at resonance. This means that when a system is under resonance, the position of the system will lag the input force by 90$^\circ$.
 			\begin{figure}[H]
 				\centering
 				\includegraphics[]{../figures/underdamped_frequency_response_phase.png}
 				\caption{Phase response for frequency ratio ($r$) from 0 to 2 for a variety of critical damping ratios.}
+				\label{fig:underdamped_frequency_response_phase}
 			\end{figure}				
-			\noindent note that the dashed black line is there because the phase values after $\pi/2$ need to be adjusted to obtain a continuous plot. An astute observer would notice that the maximum amplitude is not at $\omega = \omega_n$. While resonance is defined as $\omega = \omega_n$, this does not define the point of maximum displacement of the steady state response. Let us solve for the frequency ratio with the maximum displacement. This will happen when
+			\noindent note that the dashed blue line is there because the phase values after $\pi/2$ need to be adjusted to obtain a continuous plot. An astute observer would notice that the maximum amplitude is not at $\omega = \omega_n$. While resonance is defined as $\omega = \omega_n$, this does not define the point of maximum displacement of the steady state response. Let us solve for the frequency ratio with the maximum displacement. This will happen when
 			\begin{equation}
 				\frac{d}{dr}\Bigg(\frac{Xk}{F_0} \Bigg)= 0
 			\end{equation}				
@@ -673,7 +677,7 @@
 			\begin{equation}
 			r_{\text{peak}} = \sqrt{1-2 \zeta^2}= \frac{\omega_p}{\omega_n}, \hspace{1cm} \zeta<1/\sqrt{2} 
 			\end{equation}				
-			however, this is only true for under damped system in which $\zeta<1/\sqrt{2}$. If $\zeta>1/\sqrt{2}$ than the value in imaginary and the peak value is at $r=0$. In these cases, the maximum displacement is a function of only $\omega_n$. $\omega_p$ represents the driving frequency that corresponds to the maximum amplitude ($\frac{Xk}{F_0}$) and is called the \textbf{peak frequency}, and can be calculated as:
+			however, this is only true for under damped system in which $\zeta<1/\sqrt{2}$. If $\zeta \ge 1/\sqrt{2}$ than the value in imaginary and the peak value is at $r=0$. In these cases, the maximum displacement is a function of only $\omega_n$. $\omega_p$ represents the driving frequency that corresponds to the maximum amplitude ($\frac{Xk}{F_0}$) and is called the \textbf{peak frequency}, and can be calculated as:
 			\begin{equation}
 			\omega_p = \omega_n r_{\text{peak}} = \omega_n \sqrt{1-2 \zeta^2}, \hspace{1cm} \zeta<1/\sqrt{2} 
 			\end{equation}				
@@ -734,6 +738,7 @@
 \end{example}	
 
 
+		
 	
 		\subsection{Base Excitation}
 
@@ -793,7 +798,36 @@
 			\end{equation}
 			where C and D are arbitrary coefficients. 
 
+
+
+		\begin{vibration_case_study}
+					
+			Earthquakes are a classic and devastating example of base excitation. On August 24\textsuperscript{th} 2016 an earthquake hit Central Italy approximately 75 km (47 mi) southeast of the city of Perugia. 299 people were killed and the town of Amatrice was heavily damaged. A close look at the town center of Amatrice post-event, as shown in figure~\ref{fig:Italy_2016_earthquake_1} shows that the town's bell tower is still standing when the shorter residential buildings have collapsed. A simplified explanation for the robustness of the bell tower can be found in the fact the tall and slender bell tower has a natural frequency lower than that of the excitation force of the earthquake. In comparison, the shorter and stiffer residential structures tend to have a higher natural frequency that more closely aligns with the excitation frequency of the earthquake, thereby resulting in these structures being excited closer to resonance. 
+						
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=1\textwidth]{../figures/Italy_2016_earthquake_1}
+				\caption{The town center of Amatrice Italy after the August 24\textsuperscript{th} 2016 earthquake that measured 6.2  on the moment magnitude scale; note that the bell tower (lower natural frequency) is still standing while shorter stiffer structures (higher natural frequency) have suffered extensive damage. \protect\footnotemark[1] }
+				\label{fig:Italy_2016_earthquake_1}
+			\end{figure}
+			
+			The architectural and cultural importance of bell towers lead to considerable efforts to protect and preserve these historic structures, in addition to ensuring their safety to protect the public post-event. During the August 24\textsuperscript{th} earthquake, a team at the University of Perugia was actively monitoring the bell tower at Basilica di San Pietro in the city of Perugia with the intention of tracking the tower's dynamics through time to better understand the tower's state; thereby enabling better preservation of the tower.  Figure~\ref{fig:Italy_2016_earthquake_2}(a) shows the bell tower, while figure~\ref{fig:Italy_2016_earthquake_2}(b) shows a sensor placed within the tower. Lastly, figure~\ref{fig:Italy_2016_earthquake_2}(c) shows Italian researcher Nicola Cavalagli inspecting the data recorded from the accelerometer on the bell tower on the morning of August 24\textsuperscript{th}. A visual inspection of the monument the day after the event did not result in the identification of damage. However, by comparing the vibration signal from before and after the event, researchers were able to detect anomalies in the tower's structural behavior through statistical analysis of the vibration data.\protect\footnotemark[2] This statistical data is then matched with a finite element model of the system tower to infer likely locations of damage.  
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=1\textwidth]{../figures/Italy_2016_earthquake_2}
+				\caption{Bell tower at Basilica di San Pietro, showing: (a) the bell tower, (b) a sensor in the bell tower, and (c) data collected during the Central Italy earthquake of August 24, 2016. \protect\footnotemark[3] }
+				\label{fig:Italy_2016_earthquake_2}
+			\end{figure}
+
+												
+			\footnotetext[1]{Image cropped from original photo by Leggi il Firenzepost, CC BY 3.0 <https://creativecommons.org/licenses/by/3.0>, via Wikimedia Commons} 						
+			\footnotetext[2]{Giordano, P. F., Ubertini, F., Cavalagli, N., Kita, A., \& Masciotta, M. G. (2020). Four years of structural health monitoring of the San Pietro bell tower in Perugia, Italy: two years before the earthquake versus two years after. International Journal of Masonry Research and Innovation, 5(4), 445-467.} 	
+			\footnotetext[3]{Austin R.J. Downey, CC BY-SA 3.0 <https://creativecommons.org/licenses/by/3.0>} 		
+												
+		\end{vibration_case_study}
 	
+		
 			\subsubsection{Displacement Transmissibility Solution for Base Excitation}
 				The steady-state solution is often more important than the transient solution when designing systems for continuous use. The particular solution for the base excited system annotated in figure \ref{fig:1_DOF_spring_dashpot_mass_vertical_base_excited_FBD} with the EOM presented in equation \ref{eq:standard_form_base_excitation_CD} can be expressed as $	x_p(t)$. To solve for this expression we will use the linearity of the system and solve for a solution that is the sum of two particular solutions. Resulting in:
 				\begin{equation}
@@ -858,7 +892,7 @@
 				Plotting this for several critical damping ratios:
 				\begin{figure}[H]
 					\centering
-					\includegraphics[]{../figures/base_excitation_displacement_transmissibility.png}
+					\includegraphics[]{../figures/base_excitation_displacement_transmissibility}
 					\caption{Displacement transmissibility for an underdamped 1-DOF system.}
 				\end{figure}
 				Around resonance, the maximum amount of displacement is transmitted to the mass. Additionally,  the above plot shows that at $r=\sqrt{2}$ the displacement transmissibility $X/Y$ is 1. Note the ``flip'' where overdamped systems have a greater response to excitations after $r=\sqrt{2}$ than do underdamped systems.
@@ -948,7 +982,20 @@
 					\caption{Force transmissibility for an underdamped 1-DOF system.}
 				\end{figure}
 				Again, note the key location $r=\sqrt{2}$. At $r=\sqrt{2}$ the force transmitted to the system is 2 $\frac{F_\text{T}}{kY}$. However, also note that the normalized force does not necessarily fall off for $r$ values greater than $r=\sqrt{2}$.  
-	
+
+				\begin{vibration_case_study}
+					The Convair F2Y Sea Dart was a prototype seaplane fighter developed by the United States Navy in the early 1950s to enable sea-based jet fighters. One key technical issue with the aircraft's development was the violent forces induced into the plane when the hydro-skis contacted the uneven surfaces of the water. Furthermore, adding damping to the skies proved to be changed as the damping required changed significantly as a function of the hydro-skis contact with the water. Significant work went into the skies and shock-absorbing struts, which helped to improve the situation but it was never fully repaired.
+					
+					
+					\begin{figure}[H]
+						\centering
+						\includegraphics[width=6.0in]{../figures/Convair_F2Y_SeaDart}
+						\caption{The  Convair F2Y Sea Dart, showing: a) XF2Y-1 Sea Dart (BuNo 135762) during landing. This airframe disintegrated in mid-air over San Diego Bay, California (USA) during a demonstration flight on November 4th, 1954 killing test pilot Charles E. Richbourg after the airframe limitations were exceed\protect\footnotemark[1], and b) the hydro-skis undergoing extensive testing on a pantograph mounted on a speed boat to study the forces transmitted to the airframe from the hydro-skis\protect\footnotemark[2].}
+					\end{figure}
+					\footnotetext[1]{Public Domain 	U.S. Navy National Museum of Naval Aviation photo No. 1996.253.7213.010} 
+					\footnotetext[1]{Image from ``The Impossible Takes Longer'',  a film by Convair about Sea Dart development. The copyright of the image is unknown but may be held by the successor entities of Convair. It is believed that the use of this image qualifies as fair use under the copyright law of the United States.}  	
+				\end{vibration_case_study}
+			
 				\begin{example}
 					
 					For the system given below and excited at the base, should the system be excited above or below the natural frequency if the transmitted force is the design limitation? Consider the under damped with $\zeta=0.1$, and the over damped with $\zeta=2$ conditions. 
@@ -975,7 +1022,7 @@
 				
 				\end{example}
 	
-			
+				
 							
 				\begin{example}
 		
@@ -1034,21 +1081,10 @@
 				\end{example}			
 
 
-		\begin{vibration_case_studies}
-			The Convair F2Y Sea Dart was a prototype seaplane fighter developed by the United States Navy in the early 1950s to enable sea-based jet fighters. One key technical issue with the aircraft's development was the violent forces induced into the plane when the hydro-skis contacted the uneven surfaces of the water. Furthermore, adding damping to the skies proved to be changed as the damping required changed significantly as a function of the hydro-skis contact with the water. Significant work went into the skies and shock-absorbing struts, which helped to improve the situation but it was never fully repaired.
-			
-			
-			\begin{figure}[H]
-				\centering
-				\includegraphics[width=6.0in]{../figures/Convair_F2Y_SeaDart}
-				\caption{The  Convair F2Y Sea Dart, showing: a) XF2Y-1 Sea Dart (BuNo 135762) during landing. This airframe disintegrated in mid-air over San Diego Bay, California (USA) during a demonstration flight on November 4th, 1954 killing test pilot Charles E. Richbourg after the airframe limitations were exceed\protect\footnotemark[1], and b) the hydro-skis undergoing extensive testing on a pantograph mounted on a speed boat to study the forces transmitted to the airframe from the hydro-skis\protect\footnotemark[2].}
-			\end{figure}
-			\footnotetext[1]{Public Domain 	U.S. Navy National Museum of Naval Aviation photo No. 1996.253.7213.010} 
-			\footnotetext[1]{Image from ``The Impossible Takes Longer'',  a film by Convair about Sea Dart development. The copyright of the image is unknown but may be held by the successor entities of Convair. It is believed that the use of this image qualifies as fair use under the copyright law of the United States.}  	
-		\end{vibration_case_studies}
 
 
-		
+
+	
 \end{document}
 
 
