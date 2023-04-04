@@ -1,106 +1,5 @@
 \documentclass[12pt,letter]{article}
-\usepackage{mathptmx} % added for time new roman font
-\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
-\usepackage[latin1]{inputenc}
-\usepackage{amsmath}
-
-% defines all example enviorment
-\usepackage[framemethod=tikz]{mdframed} % added for the box around examples
-\newtheorem{ex}{Example}
-\numberwithin{ex}{section} % allows for the use of example numbers that lign up with the section numbers
-\newenvironment{example}{\begin{mdframed}[middlelinewidth=0.5mm]\begin{ex}\normalfont}{\end{ex}\end{mdframed}}
-
-% defines all review enviorment
-\usepackage[framemethod=tikz]{mdframed} % added for the box around examples
-\newtheorem{re}{Review}
-\numberwithin{re}{section} % allows for the use of example numbers that lign up with the section numbers
-\newenvironment{review}{\begin{mdframed}[middlelinewidth=2mm,roundcorner=20pt]\begin{re}\normalfont}{\end{re}\end{mdframed}}
-
-% defines all vibration case studyies
-\newtheorem{vcs}{Vibration Case Study}
-\numberwithin{vcs}{section} % allows for the use of numbers that lign up with the section numbers
-\newenvironment{vibration_case_study}{\begin{mdframed}[linecolor=orange,middlelinewidth=2mm,roundcorner=20pt]\begin{vcs}\normalfont}{\end{vcs}\end{mdframed}}
-
-% defines the quotation enviorment 
-\usepackage{xcolor}
-\newcommand{\quotebox}[2]{\begin{center}\fcolorbox{white}{blue!15!gray!15}{\begin{minipage}{0.9\linewidth}\vspace{10pt}\center\begin{minipage}{0.8\linewidth}{\space\Huge``}{#1}{\Huge''}{\break\null\hfill} {\small #2}  \end{minipage}\medbreak\end{minipage}}\end{center}}
-
-% defines the definition enviorment 
-\newcommand{\definitionbox}[2]{\begin{center}\fcolorbox{white}{blue!15!gray!15}{\begin{minipage}{0.9\linewidth}\vspace{10pt}\center\begin{minipage}{0.8\linewidth} {{\textbf{Definition} - }{#1}: {#2}}\end{minipage}\medbreak\end{minipage}}\end{center}}
-
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage{float}
-\usepackage{booktabs}
-%\usepackage{parskip} % remove all the paragraph indents
-\usepackage[textsize=tiny]{todonotes}
-
-
-\usepackage{setspace}
-\usepackage[colorlinks=true]{hyperref}
-\usepackage{textcomp} 
-\usepackage{multicol} 
-
-% added for MATLAB code
-\usepackage[framed]{matlab-prettifier}
-\let\ph\mlplaceholder % shorter macro
-\lstMakeShortInline"
-
-\lstset{
-	style              = Matlab-editor,
-	basicstyle         = \mlttfamily,
-	escapechar         = ",
-	mlshowsectionrules = true,
-}
-
-
-
-\usepackage{color} % color added for editing
-\newcommand{\bl}[1]{\textcolor[rgb]{0.00,0.00,1.00}{#1}}
-\newcommand{\gr}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
-\newcommand{\rd}[1]{\textcolor[rgb]{0.75,0.00,0.00}{#1}}
-\newcommand{\tl}[1]{\textcolor[rgb]{0,0.6,0.60}{#1}}
-
-
-
-%%%%%%%		define the symbols for positive directions		%%%%%%
-\makeatletter													%%	
-%%					
-\newcommand*\curveplus{% positive counterclockwise				%%
-	\mathbin{\rotatebox[origin=c]{90}{$\m@th\curvearrowleft$}+}}	%%
-%%
-\newcommand*\rightplus{% positive right							%%
-	\mathpalette\@rightplus\relax}								%%
-\newcommand*\@rightplus[1]{%									%%
-	\mathbin{\vcenter{\hbox{$\m@th\overset{#1+}{\to}$}}}}			%%
-%%	
-\newcommand*\upplus{% positive up								%%
-	\mathbin{+\mathord\uparrow}}									%%
-%%			
-\newcommand*\downplus{% positive down							%%		
-	\mathbin{+\mathord\downarrow}}								%%
-%%		
-\newcommand*\downrightplus{% positive down and right			%%	
-	\mathbin{+ \rotatebox[origin=c]{-30}{$\m@th\rightarrow$}}}	%%
-\makeatother 													%%	
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\usepackage{mathtools}          %loads amsmath as well added for the piece wise function
-\DeclarePairedDelimiter\Floor\lfloor\rfloor
-\DeclarePairedDelimiter\Ceil\lceil\rceil
-
-
-\newcounter{NumberInTable}
-\newcommand{\LTNUM}{\stepcounter{NumberInTable}{(\theNumberInTable)}}
-
-\newcommand{\Laplace}[1]{\ensuremath{\mathcal{L}{\left[#1\right]}}}
-\newcommand{\InvLap}[1]{\ensuremath{\mathcal{L}^{-1}{\left[#1\right]}}}
-\renewcommand{\textuparrow}{$\uparrow$}
-
-% Sets the footnotes to be letters, not numbers. This is needed or it's a mix of both. 
-\renewcommand*\thefootnote{\alph{footnote}}
+\usepackage{../downey_format}
 
 
 \begin{document}
@@ -124,6 +23,18 @@
 		\end{itemize}
 
 
+		\begin{vibration_case_study}
+			Discuss why chimneys are tapered and wind bands. This is useful as wind contains all frequency contents. Talk about failure and their study in the 1800's.
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=2in]{../figures/tapered_chimney}
+				\caption{Tapered chimney with wind bands at a Weaving Factory in the UK \protect\footnotemark[1].}
+			\end{figure}
+			\footnotetext[1]{P Flannagan / Large Chimney Stack of the disused Weaving Factory, Donaghcloney. / CC BY-SA 2.0} 
+		\end{vibration_case_study}
+
+
+
 		\subsection{Transfer Function Method (Generic)}
 			Consider the following system
 
@@ -134,13 +45,13 @@
 				\label{fig:control_system}
 			\end{figure}
 
-			\noindent where $F$ is the input, $H$ is the system, and $X$ is the output from the system. This formulation is called the transfer-function approach and is commonly used for the formulation and solution of dynamic problems in the control literature. It can also be used for solving the various forced-vibration problems including those from complex or stochastic inputs. 
+			\noindent where $F$ is the input, $H$ is the system, and $X$ is the output from the system. This formulation is called the transfer-function approach and is commonly used for the formulation and solution of dynamic problems in the control literature. It can also be used for solving various forced-vibration problems including those from complex or stochastic inputs. 
 
 
 \begin{review}
 	\label{sec:Laplace_review}
 				
-		Laplace transforms, or more broadly integral transform, are a procedure for integrating the time ($t$) dependence of a function into a function of position or space ($s$). By transforming the whole differential equation from the time domain into a lower order function of space the problem becomes easier to solve as the function can often be manipulated algebraically. 
+		Laplace transforms, or more broadly integral transforms, are a procedure for integrating the time ($t$) dependence of a function into a function of position or space ($s$). By transforming the whole differential equation from the time domain into a lower-order function of space the problem becomes easier to solve as the function can often be manipulated algebraically. 
 
 		\begin{figure}[H]
 			\centering
@@ -151,7 +62,7 @@
 
 		\footnotetext[1]{Johann Ernst Heinsius, CC BY-SA 4.0 $<$https://creativecommons.org/licenses/by-sa/4.0$>$, via Wikimedia Commons}  
 
-		The Laplace transform is named after mathematician and astronomer Pierre-Simon Laplace (23 March 1749 - 5 March 1827 ). Pierre-Simon Laplace was one of the greatest scientists of all time and is often considered the French Newton. He taught Napoleon at the \'Ecole Militaire in 1784, became a count of the empire in 1806, and a marquis in 1817 after the restoration of the monarchy. He is credited with advancements in engineering, mathematics, statistics, physics, astronomy, and philosophy; however, may be his greatest achievement is not only surviving but benefiting from the change from the Ancien R\'egime $\rightarrow$ Bonaparte $\rightarrow$ Bourbon Restoration. 
+		The Laplace transform is named after mathematician and astronomer Pierre-Simon Laplace (23 March 1749 - 5 March 1827 ). Pierre-Simon Laplace was one of the greatest scientists of all time and is often considered the French Newton. He taught Napoleon at the \'Ecole Militaire in 1784, became a count of the empire in 1806, and a marquis in 1817 after the restoration of the monarchy. He is credited with advancements in engineering, mathematics, statistics, physics, astronomy, and philosophy; however, maybe his greatest achievement is not only surviving but benefiting from the change from the Ancien R\'egime $\rightarrow$ Bonaparte $\rightarrow$ Bourbon Restoration. 
 
 		
 		Of interest to this class is the Laplace transform ($\Laplace{\hspace{1ex}}$) of the function $f(t)$, expressed as $\Laplace{f(t)}$. Here, a Laplace transform is used as a method of solving the differential equations of motion by reducing the computation needed to that of integration and algebraic manipulation. 
@@ -161,7 +72,7 @@
 		\begin{equation}
 				\Laplace{f(t)} = F(s) = \int_{0}^{\infty} f(t)e^{-st}dt
 		\end{equation}
-		where $s$ represents a variable in the complex plane (also called the $s$-plane) and $f(t)=0$ for all values of $t<0$. Here, the $s$ is a complex value. Lastly, the term $F(s)$ is a generic term that  represents the input to a system. As this class needs the derivatives of the base function, we will calculate these next:
+		where $s$ represents a variable in the complex plane (also called the $s$-plane) and $f(t)=0$ for all values of $t<0$. Here, the $s$ is a complex value. Lastly, the term $F(s)$ is a generic term that represents the input to a system. As this class needs the derivatives of the base function, we will calculate these next:
 		\begin{equation}
 			\Laplace{\dot{f}(t)} = \int_{0}^{\infty} \dot{f}(t)e^{-st}dt = \int_{0}^{\infty} e^{-st}\frac{d[f(t)]}{dt}dt 
 		\end{equation}		
@@ -170,7 +81,7 @@
 			\Laplace{\dot{f}(t)} = e^{-st}f(t)\Big|_0^\infty+s\int_{0}^{\infty}e^{-st}f(t)dt
 		\end{equation}
 		Astutely, it can be noticed that the second term $s\int_{0}^{\infty}e^{-st}f(t)dt$
-		is the input to the system $F(s)$. Therefor, with a little rearranging this becomes:
+		is the input to the system $F(s)$. With a little rearranging, this becomes:
 		\begin{equation}
 			\Laplace{\dot{f}(t)} = sF(s)-f(0)
 		\end{equation}
@@ -203,7 +114,7 @@
 				\label{eq:laplace_f''}
 				\Laplace{\ddot{f}(t)} = s^2F(s)-sf(0) - \dot{f}(0)
 			\end{equation}	
-			here, $f(0)$ and $\dot{f}(0)$ are the initial values of the function $f(t)$.  Furthermore, the for system outputs are:
+			here, $f(0)$ and $\dot{f}(0)$ are the initial values of the function $f(t)$.  Furthermore, the system outputs are:
 			\begin{equation}
 				\label{eq:laplace_x}
 				\Laplace{x(t)} = X(s)
@@ -234,9 +145,9 @@
 			\begin{figure}[H]
 				\centering
 				\includegraphics[]{../figures/1-DOF-spring_mass_horizontal.png}
-				\caption{A spring mass model of a 1-DOF system.}
+				\caption{A spring-mass model of a 1-DOF system.}
 			\end{figure}
-			\noindent The EOM for this system is a homogeneous differential equation becasue the right-hand side is equal to zero:
+			\noindent The EOM for this system is a homogeneous differential equation because the right-hand side is equal to zero:
 			\begin{equation}
 				m\ddot{x}(t) + kx(t) = 0 
 			\end{equation}
@@ -273,9 +184,9 @@
 			x(t) = x_0 \text{cos}(\omega_n t) + \frac{v_0}{\omega_n}\text{sin}(\omega_n t)
 			\end{equation}
 			
-			The same procedure can be used to calculate the under damped and forced responses. However, when calculating these responses the algebraic solution for $X(s)$, $s$ often contains quotients of polynomials. These Polynomial ratios may not be found in simple Laplace tables and must be solved using the method of partial fractions. An example of this procedure can be found in Appendix B of Inman. 
+			The same procedure can be used to calculate the under-damped and forced responses. However, when calculating these responses the algebraic solution for $X(s)$, $s$ often contains quotients of polynomials. These Polynomial ratios may not be found in simple Laplace tables and must be solved using the method of partial fractions. An example of this procedure can be found in Appendix B of Inman. 
 
-% this example may not be needed. Check and replace with a better one. 
+% This example may not be needed. Check and replace it with a better one. 
 %			\begin{example}
 %				Solve the following system using the transfer function approach:
 %				\begin{figure}[H]
@@ -283,7 +194,7 @@
 %					\includegraphics[width=0.4\textwidth]{../figures/forced_spring_mass_damper_system.png}
 %					\caption{Damped 1-DOF spring-mass system subjected to an external force $F(t)$.}
 %				\end{figure}
-%				\noindent\textbf{Solution:} The system above can be described the the EOM in standard form:
+%				\noindent\textbf{Solution:} The system above can be described the EOM in standard form:
 %				\begin{equation}
 %				\ddot{x}(t) + 2 \zeta \omega_n \dot{x}+ \omega_n^2x(t) = 0 \text{, where }x(0)=x_0 \text{, and } \dot{x}(0) = v_0 
 %				\end{equation}
@@ -326,7 +237,7 @@ Taking the Laplace transform of both sides of the equation yields
 \begin{equation}
 m\big(s^2X(s)-sx(0) - \dot{x}(0)\big) + c\big(sX(s)-x(0)\big) +kX(s) =1
 \end{equation}
-note that the $\Laplace{\delta}=1$ per \#1 in the transform table. However, if we assume zero initial conditions (a system at rest when the impulse happens), the equation simplifies to. 
+note that the $\Laplace{\delta}=1$ per \#1 in the transform table. However, if we assume zero initial conditions (a system at rest when the impulse happens), the equation simplifies too. 
 \begin{equation}
 ms^2X(s) + csX(s) +kX(s) =1
 \end{equation}
@@ -343,15 +254,15 @@ Again, the mass is extracted to develop a formulation that can be found in the L
 x(t) = \frac{1}{m \omega_d} e^{-\zeta \omega_n t} \text{sin}(\omega_dt)
 \label{eq:impulse_load_damped}
 \end{equation}
-where this is the general solution for a damped system subjected to an impulse loading function. For the undamped case a solution can be obtained by setting $\zeta=0$. This Results in the following form for the undamped case:
+where this is the general solution for a damped system subjected to an impulse loading function. For the undamped case, a solution can be obtained by setting $\zeta=0$. This results in the following form for the undamped case:
 \begin{equation}
 x(t) = \frac{1}{m \omega_n}\text{sin}(\omega_n t)
 \end{equation}
-Below is a typical response for both a undamped and underdamped 1-DOF system subject to an impulse response at $t=0$ seconds. 
+Below is a typical response for both an undamped and underdamped 1-DOF system subject to an impulse response at $t=0$ seconds. 
 \begin{figure}[H]
 	\centering
 	\includegraphics[]{../figures/response_impulse.png}
-	\caption{Temporal responses from a underdamped and undamped 1-DOF systems to a impulse response function.}
+	\caption{Temporal responses from underdamped and undamped 1-DOF systems to an impulse response function.}
 \end{figure}
 
 
@@ -423,7 +334,7 @@ Again, the $\frac{1}{m\omega_n^2}$ will pass through the Laplace function. There
 \begin{equation}
 	x(t) = \frac{1}{m \omega_n^2} \cdot \Big(1 - \frac{\omega_n}{\omega_d}e^{-\zeta \omega_n t}\text{sin}(\omega_dt + \phi)\Big)\text{, where } \phi = \text{cos}^{-1}(\zeta)\text{, where } \zeta<1
 \end{equation}
-After obtaining equations for the undamped and under damped cases, the responses for the unit step, solved with the transform method, can be plotted as:
+After obtaining equations for the undamped and under-damped cases, the responses for the unit step, solved with the transform method, can be plotted as:
 \begin{figure}[H]
 	\centering
 	\includegraphics[]{../figures/response_unit_step.png}
@@ -432,11 +343,11 @@ After obtaining equations for the undamped and under damped cases, the responses
 Note that the system will settle out around $F_0/k$ where $F_0  \Phi$ is a scaling factor for the step loading.
 
 \begin{example}
-A load of dirt $m_r$ is dumped into the back of a dump truck. Assuming the roosters do not move, the bed of the truck can be modeled as a spring-mass-damper system (of values $k$, $m$, and $c$, respectively). Next, the load of roosters is modeled as a force $F(t) = m_r g$ that is applied to the spring-mass-damper system, as illustrated in the following figure. The simplification of the system allows for the analysis of the truck bed's vibrations as a simple spring-mass-damper system. First, assume that the truck's damper is broken, how does the maximum dynamic displacement compare to the static displacement. What would happen to the maximum displacement if the damper was repaired on the truck? %Next, using a damping value of $\zeta=0.5$ and $\omega_n=\pi$ what is the maximum displacement. How does this compare to the displacement for the case without the damper?  
+A load of dirt $m$ is dumped into the back of a dump truck. Assuming the dirt not move, the bed of the truck can be modeled as a spring-mass-damper system (of values $k$, $m$, and $c$, respectively). Next, the load of dirt is modeled as a force $F(t) = m g$ that is applied to the spring-mass-damper system, as illustrated in the following figure. The simplification of the system allows for the analysis of the truck bed's vibrations as a simple spring-mass-damper system. First, assume that the truck's damper is broken, how does the maximum dynamic displacement compare to the static displacement? What would happen to the maximum displacement if the damper was repaired on the truck? %Next, using a damping value of $\zeta=0.5$ and $\omega_n=\pi$ what is the maximum displacement. How does this compare to the displacement for the case without the damper?  
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{../figures/dump_truck_example.png}
+	\includegraphics[width=0.8\textwidth]{../figures/dump_truck_example}
 	\caption{Dump truck being loaded with dirt showing (a) dirt going into the truck bed\protect\footnotemark[1]; and (b) the single-degree-of-freedom vibration model.  }
 \end{figure}
 \footnotetext[1]{SGT Marvin Lynchard, A dump truck is filled with dirt, by members of the 459th Civil Engineering Flight, for use in repairing a damaged runway during Exercise Prime Beef '82, Public Domain, via picryl.com}
@@ -444,16 +355,16 @@ A load of dirt $m_r$ is dumped into the back of a dump truck. Assuming the roost
 \noindent\textbf{Solution:} First, setting the load applied to the truck as 1 unit, it can be seen that this is a unit step loading condition and a broken damper represents an undamped case. To obtain a rough idea about the nature of static and dynamic displacement, the undamped displacement is
 
 \begin{equation}
-	x(t) = \frac{1}{k}\big(1-\text{cos}(\omega_n t)\big) = \frac{m_rg}{k}\big(1-\text{cos}(\omega_n t)\big)
+	x(t) = \frac{1}{k}\big(1-\text{cos}(\omega_n t)\big) = \frac{m g}{k}\big(1-\text{cos}(\omega_n t)\big)
 \end{equation}
  
 This equation has a maximum amplitude when the cos$(\omega_t)=-1$, resulting in:
 \begin{equation}
-	x(t) = \frac{m_rg}{k}\big(1-(-1)\big)
+	x(t) = \frac{m g}{k}\big(1-(-1)\big)
 \end{equation}
 This can be rearranged for the maximum displacement value $x_\text{max} $ as:
 \begin{equation}
-	x_\text{max} = 2\frac{m_rg}{k}
+	x_\text{max} = 2\frac{m g}{k}
 \end{equation} 
 
 Note that the dynamic displacement of the truck bed is twice that of the static displacement. Therefore, if the truck manufacturer designed the truck to only take the static load of rosters (i.e., if the dirt were placed gently into the truck bed), the frame of the truck would be damaged when the dirt were loaded into the truck dynamically. From this, it can be understood that it is important to consider the dynamic responses of a system during the design phase.
@@ -461,7 +372,7 @@ Note that the dynamic displacement of the truck bed is twice that of the static 
 %\textbf{Example 1 - under damped}
 %For the case where the truck has a damper with a value of $\zeta=0.5$, the displacement $(x)$ can be modeled as:
 %\begin{equation}
-%	x(t) = \frac{m_rg}{m \omega_n^2} \cdot \Big(1 - \frac{\omega_n}{\omega_d}e^{-\zeta \omega_n t}\text{sin}(\omega_dt + \phi)\Big)\text{, where } \phi = \text{cos}^{-1}(\zeta)
+%	x(t) = \frac{m g}{m \omega_n^2} \cdot \Big(1 - \frac{\omega_n}{\omega_d}e^{-\zeta \omega_n t}\text{sin}(\omega_dt + \phi)\Big)\text{, where } \phi = \text{cos}^{-1}(\zeta)
 %\end{equation}
 
 \end{example}
@@ -470,7 +381,7 @@ Note that the dynamic displacement of the truck bed is twice that of the static 
 
 \label{sec:impulse_inputs}
 
-The time-domain response of a system to an arbitrary input force in time can be calculated using a series of impulses as shown in figure \ref{fig:Arbitary_excitation_forces}. This method allows the practitioner to easily calculate the response of an arbitrary input to a system using a single expression executed in a ``for loop''. This type of analysis is often more efficient in terms of programing than more direct methods such as the transfer functions shown in this text. 
+The time-domain response of a system to an arbitrary input force in time can be calculated using a series of impulses as shown in figure \ref{fig:Arbitary_excitation_forces}. This method allows the practitioner to easily calculate the response of an arbitrary input to a system using a single expression executed in a ``for loop''. This type of analysis is often more efficient in terms of programming than more direct methods such as the transfer functions shown in this text. 
 
 \begin{figure}[H]
 	\centering
@@ -488,12 +399,12 @@ By letting $\delta t \rightarrow 0$ the summation can be transferred into the co
 	\delta x(t) = \int_{0}^{t} F( \tau ) g(t- \tau ) d \tau
 	\label{eq:Duhamel_1}	
 \end{equation}
-Knowing the solution to an impulse load, as expressed in equation~\ref{eq:impulse_load_damped}, and inserting this into the prior equation at $g(t)$ we can show that for a system of impulses the total response is
+Knowing the solution to an impulse load, as expressed in equation~\ref{eq:impulse_load_damped}, and inserting this into the prior equation at $g(t)$ we can show that for a system of impulses, the total response is
 \begin{equation}
 	x(t) = \frac{1}{m \omega_d} \int_{0}^{t} F(t) e^{-\zeta \omega_n (t-\tau)} \text{sin}\big(\omega_d(t-\tau)\big) d \tau
 	\label{eq:Duhamel_2}	
 \end{equation}
-Again, this represents the total system response (without initial conditions) for an arbitrary excitation $F(t)$.  These equations are called the \textit{Duhamel} integral. While in many case, the form of function $F(t)$ allows for explicit integration of equations~\ref{eq:Duhamel_1} and \ref{eq:Duhamel_2}. However, numerical evaluation is always possible and many times easier given the simplicity of coding. 
+Again, this represents the total system response (without initial conditions) for an arbitrary excitation $F(t)$.  These equations are called the \textit{Duhamel} integral. While in many cases, the form of the function $F(t)$ allows for explicit integration of equations~\ref{eq:Duhamel_1} and \ref{eq:Duhamel_2}. However, numerical evaluation is always possible and many times easier given the simplicity of coding. 
 
 
 
@@ -507,7 +418,7 @@ Again, this represents the total system response (without initial conditions) fo
 	\begin{equation}
 		F(t) = 0.2 \delta (t) + 0.1 \delta(t-\tau)
 	\end{equation}
-	where $\tau$ is the offset between the first and second impacts. Next, considering that the unit impulse has a magnitude of 1 we can obtain solutions for the first impact by first writing it's EOM:
+	where $\tau$ is the offset between the first and second impacts. Next, considering that the unit impulse has a magnitude of 1 we can obtain solutions for the first impact by first writing its EOM:
 	
 	\begin{equation}
 		m\ddot{x}(t) +c\dot{x}(t) +kx(t) =0.2 \delta(t)
@@ -546,7 +457,7 @@ Again, this represents the total system response (without initial conditions) fo
 	\]
 	
 	
-	For the mass, damping, and stiffness values given above this can be plotted as:
+	For the mass, damping, and stiffness values given above can be plotted as:
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.75\textwidth]{../figures/response_double_impact.png}
@@ -573,7 +484,7 @@ Again, this represents the total system response (without initial conditions) fo
 	\begin{equation}
 		m\ddot{z} + c \dot{z} + kz = F
 	\end{equation} 	
-	meaning that the solutions for an arbitrary force-excited problem can transfer to a base-excited problem if we consider the reletive displacement of the mass. Therefor, we can write the equation for the relative displacement of the mass as
+	meaning that the solutions for an arbitrary force-excited problem can transfer to a base-excited problem if we consider the relative displacement of the mass. Therefore, we can write the equation for the relative displacement of the mass as
 	
 	\begin{equation}
 		z(t) = -\frac{1}{m \omega_d} \int_{0}^{t} \ddot{y}(t) e^{-\zeta \omega_n (t-\tau)} \text{sin}\big(\omega_d(t-\tau)\big) d \tau	
@@ -581,7 +492,9 @@ Again, this represents the total system response (without initial conditions) fo
 	
 \end{example}
 
-
+		\begin{vibration_case_study}
+			Discuss transfer-function-based monitoring of systems. This will include the system identification for SHM and shifts in the system response of structures. 
+		\end{vibration_case_study}
 
 \subsection{Transfer Function for Response to Random Inputs}
 
@@ -592,18 +505,18 @@ Again, this represents the total system response (without initial conditions) fo
 				\caption{Generic block diagram of a system $H(s)$ subjected to an input $F(s)$ and its corresponding output $X(s)$ where the $(s)$ denotes that the considered system is in the $s$-plane.}
 				\label{fig:transfer_function_system}
 			\end{figure}
-			\noindent where $F(s)$ is the input, $H(s)$ is the system, and $X(s)$ is the output from the system. This formulation is called the transfer-function approach and is commonly used for the formulation and solution of dynamic problems in the control literature. It can also be used for solving the various forced-vibration problems including those from complex or stochastic inputs. 
+			\noindent where $F(s)$ is the input, $H(s)$ is the system, and $X(s)$ is the output from the system. This formulation is called the transfer-function approach and is commonly used for the formulation and solution of dynamic problems in the control literature. It can also be used for solving various forced-vibration problems including those from complex or stochastic inputs. 
 	
 \subsubsection{Defining the Transfer Function $\mathbf{H(s)}$}
 
-Again, consider the generic system represented in figure~\ref{fig:transfer_function_system}. For this system representation, $F(s)$ is the Laplace of the transform of the driving force and $H(s)$ is the Laplace transform of the response of the system $h(t)$. 
+Again, consider the generic system represented in figure~\ref{fig:transfer_function_system}. For this system representation, $F(s)$ is the Laplace of the transform of the driving force, and $H(s)$ is the Laplace transform of the response of the system $h(t)$. 
 
-We need to define transfer function $H(s)$ for a generic system. To do this let us show the reasoning behind the transfer function. Here we will show that the output of any system ($x(t)$) can be related to the input of the system ($f(t)$) through a series of polynomial coefficients ($a$ and $b$). Consider the general $n^{th}$-order linear, time-invariant differential equation that governs the behavior of the dynamic system.
+We need to define the transfer function $H(s)$ for a generic system. To do this let us show the reasoning behind the transfer function. Here we will show that the output of any system ($x(t)$) can be related to the input of the system ($f(t)$) through a series of polynomial coefficients ($a$ and $b$). Consider the general $n^{th}$-order linear, time-invariant differential equation that governs the behavior of the dynamic system.
 
 \begin{equation}
 a_n\frac{d^nx(t)}{dt^n} + a_{n-1}\frac{d^{n-1}x(t)}{dt^{n-1}} + ... + a_0x(t) = b_m\frac{d^mf(t)}{dt^m} + b_{m-1}\frac{d^{m-1}f(t)}{dt^{m-1}} + ... + b_0f(t)
 \end{equation} 
-where $x(t)$ is the output and $f(t)$ is the input. Note that this is similar to the formulation we have had before for the EOM. Taking the Laplace transformation of both side of the above equation yields
+where $x(t)$ is the output and $f(t)$ is the input. Note that this is similar to the formulation we have had before for the EOM. Taking the Laplace transform of both sides of the above equation yields
 
 \begin{eqnarray}
 &a_ns^nX(s) + a_{n-1}s^{n-1}X(s) + ... + a_0X(s) + \text{initial condition for } x(t) =   \\
@@ -643,7 +556,7 @@ Considering the forced system:
 \begin{equation}
 	m\ddot{x}(t) + c\dot{x}(t) +kx(t) = F_0 \cos(\omega t)
 \end{equation}
-Here $F_0 \cos(\omega t)$, is used at the input but any input will develope the same transfer function as the transfer function is bounded to the system and not the input. From the \#6 in the table for Laplace Transforms, we know that
+Here $F_0 \cos(\omega t)$, is used at the input but any input will develop the same transfer function as the transfer function is bounded to the system and not the input. From the \#6 in the table for Laplace Transforms, we know that
 \begin{equation}
 	\Laplace{\cos(\omega t)} = \frac{s}{s^2+\omega^2}
 \end{equation}
@@ -687,7 +600,7 @@ so
 \begin{equation}
 	 |H(j\omega)|=\sqrt{\text{R}^2+\text{I}^2}
 \end{equation}  
-multiplying $H(j\omega)$ by 1 that is represented by the its unit complex conjugate yields:
+multiplying $H(j\omega)$ by 1 that is represented by its unit complex conjugate yields:
 \begin{align}
 H(j\omega) &= \bigg( \frac{1}{k-m\omega^2+c\omega j} \bigg) \bigg( \frac{k-m\omega^2-c\omega j}{k-m\omega^2-c\omega j}\bigg) \\
 &= \bigg( \frac{k-m\omega^2}{(k-m\omega^2)^2(c\omega)^2} \bigg) \bigg( \frac{-c\omega}{(k-m\omega^2)^2(c\omega)^2}j\bigg) 
@@ -706,11 +619,11 @@ where $H(\omega)$ represents only the amplitude of the frequency response functi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%						Notes on the j therm in H(j\omega)						%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%This as been a point of major debate for myself. My current stance, is Inman drops the j term for convience as he has it with and without in his text, and I can't seem to fully understand why its dropped. 
+%This has been a point of major debate for myself. My current stance is Inman drops the j term for convenience as he has it with and without in his text, and I can't seem to fully understand why it's dropped. 
 
 % Inman 2nd example 5.5.1 has the frequency response function as just $H(\omega)$ I don't know if $H(\omega)$ is standard, as Iman seems to just jump around. }
 
-% Rao 5th in equation 3.55 expresses the "H(i\omega) as the complex frequency response of the system. The absolute value of H(i\omega) given by |H(i\omega)|". As a side note, I like Rao's figure 3.13. That is super cool!
+% Rao 5th in equation 3.55 expresses the "H(i\omega) as the complex frequency response of the system. The absolute value of H(i\omega) given by |H(i\omega)|". As a side note, I like Rao's Figure 3.13. That is super cool!
 
 % Rao 5th in section 3.14 Frequency Transfer Functions has information on this
 
@@ -774,16 +687,6 @@ where $H(\omega)$ represents only the amplitude of the frequency response functi
 	This is identical to the solution obtained using $F_0 \cos(\omega t)$ as would be expected because the transfer function is related to the system and not to the input. 
 \end{example}  
 
-		\begin{vibration_case_study}
-			Discuss why chimney's are tapered and wind bands. This is useful as wind contains all frequency contents.
-			\begin{figure}[H]
-				\centering
-				\includegraphics[width=2in]{../figures/tapered_chimney}
-				\caption{Tapered chimney with wind bands at a Weaving Factory in the UK \protect\footnotemark[1].}
-			\end{figure}
-			\footnotetext[1]{P Flannagan / Large Chimney Stack of the disused Weaving Factory, Donaghcloney. / CC BY-SA 2.0} 
-		\end{vibration_case_study}
-
 
 
 
@@ -813,13 +716,13 @@ One of the first factors to consider is the mean of the random signal $x(t)$, de
 \begin{equation}
 E[x] = \bar{x} = \lim\limits_{T \rightarrow \infty} \frac{1}{T} \int_{0}^{T}x(t)dt
 \end{equation}
-where $T$ is the length in time of the data collected. However, for random signals we often want to consider signals with an average mean of zero (i.e. $\bar{x}(t)=0$). Therefore, for signals not centered around zero we can obtain a zero centered signal if the signal is stationary and we subtract the mean value from $\bar{x}$ from the signal $x(t)$. This can be written as:
+where $T$ is the length in time of the data collected. However, for random signals, we often want to consider signals with an average mean of zero (i.e. $\bar{x}(t)=0$). For signals not centered around zero, we can obtain a zero-centered signal if the signal is stationary and we subtract the mean value from $\bar{x}$ from the signal $x(t)$. This can be written as:
 \begin{equation}
 x'(t) = x(t) - \bar{x}
 \end{equation} 
 where the $x'(t)$ is now centered around zero. As mentioned before, it is important to consider whether or not the input signals are stationary. A signal is stationary if its statistical properties (usually expressed by its mean) do not change with time. Here, it can be seen that for our inputs considered the signals are stationary if a long enough time period is considered. 
 
-Another important variable is variance (or mean-square value) of the random variable $x(t)$ defined as:
+Another important variable is the variance (or mean-square value) of the random variable $x(t)$ defined as:
 \begin{equation}
 E[(x-\bar{x})^2] = \lim\limits_{T \rightarrow \infty} \frac{1}{T} \int_{0}^{T}(x(t)-\bar{x})^2dt
 \end{equation}
@@ -836,14 +739,14 @@ Considering a nonstationary signal, an important measure of interest is how fast
 \begin{equation}
 R_{xx}(\tau) = \lim\limits_{T \rightarrow \infty} \frac{1}{T} \int_{0}^{T}x(t)x(t+\tau)dt
 \end{equation}
-The subscript $xx$ denotes that this is a measure of the response for the variable $xx$, $\tau$ is the time difference between the values at which the signal $x(t)$ is sampled. The auto collation for the two inputs considered above are expressed in figure~\ref{fig:Response_to_random_input_autocorrelation}.
+The subscript $xx$ denotes that this is a measure of the response for the variable $xx$, $\tau$ is the time difference between the values at which the signal $x(t)$ is sampled. The auto-collation for the two inputs considered above is expressed in figure~\ref{fig:Response_to_random_input_autocorrelation}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{../figures/Response_to_random_input_autocorrelation.png}
 	\caption{Responses from the autocorrelation function for the inputs shown in figure \ref{fig:Response_to_random_input_inputs} showing: (a) a sinusoidal; and (b) uniform random noise.}
 	\label{fig:Response_to_random_input_autocorrelation}
 \end{figure} 
-\noindent Note that the value of $\tau$ selected in the autocorrelation function greatly affects its response for the sinusoidal input. This is because the values for the sinusoidal are highly correlated. To expand, the value at any time $t$ is greatly effected by the values immediately before and after it. This is not the case for the random input where the signal is not correlated and therefore there is little difference in changing the value of $\tau$ on the response of the autocorrelation function.  
+\noindent Note that the value of $\tau$ selected in the autocorrelation function greatly affects its response for the sinusoidal input. This is because the values for the sinusoidal are highly correlated. To expand, the value at any time $t$ is greatly affected by the values immediately before and after it. This is not the case for the random input where the signal is not correlated and therefore there is little difference in changing the value of $\tau$ on the response of the autocorrelation function.  
 
 Next, if we take the Fourier transform of the autocorrelation function we obtain the power spectral density (PSD) defined as:
 \begin{equation}
@@ -863,7 +766,7 @@ Recall that $S_{xx}$ is the spectrum of the response of the system. For the one-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%				Notes			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% In the equations below, I think my notaion is correct. 
+% In the equations below, I think my notation is correct. 
 
 % Inman 2nd edition drops the j, not sure why
 
@@ -948,7 +851,7 @@ and
 When combined with equation \ref{eq:variance_for_S_O}, these integrals allow for the easy calculation of the expected values. 
 
 \begin{example}
-	For system below, calculate the mean-square response of the system given that the the spectrum of the input force $F(t)$ is a perfect theoretical white noise.
+	For the system below, calculate the mean-square response of the system given that the spectrum of the input force $F(t)$ is a perfect theoretical white noise.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.4\textwidth]{../figures/1-DOF-spring_dashpot_mass_horizontal_forced.png}
@@ -975,13 +878,18 @@ When combined with equation \ref{eq:variance_for_S_O}, these integrals allow for
 			
 			% Couild add notes on base excitation under random signals. IF so, maybe look at Rao 4.6.1.
 			
+
+	\begin{vibration_case_study}
+		Discuss the design process using transfer functions
+	\end{vibration_case_study}
+					
 \pagebreak			
 			\pagestyle{empty}
 			\newgeometry{top=0.5in, bottom=0.5in,left=0.5in, right=0.5in}
 			\vspace{-25ex}
 			\begin{center}
 			{\large{}\textbf{Table of Laplace Transforms for Vibrations}} \\
-			\normalsize{} This is a partial lists of important Laplace transforms for vibrations that assumes \\ zero initial conditions, $0 < t$, and $\zeta < 1$.
+			\normalsize{} This is a partial list of important Laplace transforms for vibrations and assumes \\ zero initial conditions, $0 < t$, and $\zeta < 1$.
 			\end{center}
 			
 			\vspace{0ex}

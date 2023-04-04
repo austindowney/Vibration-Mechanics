@@ -1,107 +1,5 @@
 \documentclass[12pt,letter]{article}
-\usepackage{mathptmx} % added for time new roman font
-\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
-\usepackage[latin1]{inputenc}
-\usepackage{amsmath}
-
-% defines all example enviorment
-\usepackage[framemethod=tikz]{mdframed} % added for the box around examples
-\newtheorem{ex}{Example}
-\numberwithin{ex}{section} % allows for the use of example numbers that lign up with the section numbers
-\newenvironment{example}{\begin{mdframed}[middlelinewidth=0.5mm]\begin{ex}\normalfont}{\end{ex}\end{mdframed}}
-
-% defines all review enviorment
-\usepackage[framemethod=tikz]{mdframed} % added for the box around examples
-\newtheorem{re}{Review}
-\numberwithin{re}{section} % allows for the use of example numbers that lign up with the section numbers
-\newenvironment{review}{\begin{mdframed}[middlelinewidth=2mm,roundcorner=20pt]\begin{re}\normalfont}{\end{re}\end{mdframed}}
-
-% defines all vibration case studyies
-\newtheorem{vcs}{Vibration Case Study}
-\numberwithin{vcs}{section} % allows for the use of numbers that lign up with the section numbers
-\newenvironment{vibration_case_study}{\begin{mdframed}[linecolor=orange,middlelinewidth=2mm,roundcorner=20pt]\begin{vcs}\normalfont}{\end{vcs}\end{mdframed}}
-
-% defines the quotation enviorment 
-\usepackage{xcolor}
-\newcommand{\quotebox}[2]{\begin{center}\fcolorbox{white}{blue!15!gray!15}{\begin{minipage}{0.9\linewidth}\vspace{10pt}\center\begin{minipage}{0.8\linewidth}{\space\Huge``}{#1}{\Huge''}{\break\null\hfill} {\small #2}  \end{minipage}\medbreak\end{minipage}}\end{center}}
-
-% defines the definition enviorment 
-\newcommand{\definitionbox}[2]{\begin{center}\fcolorbox{white}{blue!15!gray!15}{\begin{minipage}{0.9\linewidth}\vspace{10pt}\center\begin{minipage}{0.8\linewidth} {{\textbf{Definition} - }{#1}: {#2}}\end{minipage}\medbreak\end{minipage}}\end{center}}
-
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage{float}
-\usepackage{booktabs}
-%\usepackage{parskip} % remove all the paragraph indents
-\usepackage[textsize=tiny]{todonotes}
-
-
-\usepackage{setspace}
-\usepackage[colorlinks=true]{hyperref}
-\usepackage{textcomp} 
-\usepackage{multicol} 
-
-% added for MATLAB code
-\usepackage[framed]{matlab-prettifier}
-\let\ph\mlplaceholder % shorter macro
-\lstMakeShortInline"
-
-\lstset{
-	style              = Matlab-editor,
-	basicstyle         = \mlttfamily,
-	escapechar         = ",
-	mlshowsectionrules = true,
-}
-
-
-
-\usepackage{color} % color added for editing
-\newcommand{\bl}[1]{\textcolor[rgb]{0.00,0.00,1.00}{#1}}
-\newcommand{\gr}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
-\newcommand{\rd}[1]{\textcolor[rgb]{0.75,0.00,0.00}{#1}}
-\newcommand{\tl}[1]{\textcolor[rgb]{0,0.6,0.60}{#1}}
-
-
-
-%%%%%%%		define the symbols for positive directions		%%%%%%
-\makeatletter													%%	
-%%					
-\newcommand*\curveplus{% positive counterclockwise				%%
-	\mathbin{\rotatebox[origin=c]{90}{$\m@th\curvearrowleft$}+}}	%%
-%%
-\newcommand*\rightplus{% positive right							%%
-	\mathpalette\@rightplus\relax}								%%
-\newcommand*\@rightplus[1]{%									%%
-	\mathbin{\vcenter{\hbox{$\m@th\overset{#1+}{\to}$}}}}			%%
-%%	
-\newcommand*\upplus{% positive up								%%
-	\mathbin{+\mathord\uparrow}}									%%
-%%			
-\newcommand*\downplus{% positive down							%%		
-	\mathbin{+\mathord\downarrow}}								%%
-%%		
-\newcommand*\downrightplus{% positive down and right			%%	
-	\mathbin{+ \rotatebox[origin=c]{-30}{$\m@th\rightarrow$}}}	%%
-\makeatother 													%%	
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\usepackage{mathtools}          %loads amsmath as well added for the piece wise function
-\DeclarePairedDelimiter\Floor\lfloor\rfloor
-\DeclarePairedDelimiter\Ceil\lceil\rceil
-
-
-\newcounter{NumberInTable}
-\newcommand{\LTNUM}{\stepcounter{NumberInTable}{(\theNumberInTable)}}
-
-\newcommand{\Laplace}[1]{\ensuremath{\mathcal{L}{\left[#1\right]}}}
-\newcommand{\InvLap}[1]{\ensuremath{\mathcal{L}^{-1}{\left[#1\right]}}}
-\renewcommand{\textuparrow}{$\uparrow$}
-
-% Sets the footnotes to be letters, not numbers. This is needed or it's a mix of both. 
-\renewcommand*\thefootnote{\alph{footnote}}
-
+\usepackage{../downey_format}
 
 
 \begin{document}
@@ -120,7 +18,7 @@
     Vibrations impact our daily lives in a variety of ways, from the sound made by banjo strings that vibrates between 140 and 400 Hz to the 4-6 Hz vibration felt by a passenger in a car seat. The consideration of vibrations, and their associated mathematical modeling, are important factors in the design of mechanical systems. In the material that follows, the fundamental theories of vibration are presented and modeled using fundamental physical principles such as Newton's three laws of motion. These models and analyzed using the mathematical tools of calculus and differential equations. 
 
 	\begin{vibration_case_study}
-		Why study vibrations? One day, it could save your life! The British Aircraft Corporation TSR-2 was a strike and reconnaissance aircraft developed during the Cold War by the British Aircraft Corporation (BAC), for the Royal Air Force (RAF). During the second flight test of air-frame XR219, vibration from one of the planes fuel pump causes a vibration at the resonant frequency of the human eyeball which caused momentary loss of vision. Test pilot Roland Beamont throttled back one engine restore his full vision. Roland Beamont was an expert in vibrations, having led the vibration program of the Hawker Typhoon during WW~II. In this role, he fit vibrographs to airplanes to determine the effectiveness of propeller balancing and the testing of seats with vibration isolators. 
+		Why study vibrations? One day, it could save your life! The British Aircraft Corporation TSR-2 was a strike and reconnaissance aircraft developed during the Cold War by the British Aircraft Corporation (BAC), for the Royal Air Force (RAF). During the second flight test of air-frame XR219, vibration from one of the plane's fuel pump causes a vibration at the resonant frequency of the human eyeball which caused a momentary loss of vision. Test pilot Roland Beamont throttled back one engine to restore his full vision. Roland Beamont was an expert in vibrations, having led the vibration program of the Hawker Typhoon during WW~II. In this role, he fit vibrographs to airplanes to determine the effectiveness of propeller balancing and the testing of seats with vibration isolators. 
 
 		\begin{figure}[H]
 			\centering
@@ -168,13 +66,13 @@
 			\begin{figure}[H]
 				\centering
 				\includegraphics[]{../figures/spring_mass_model_with_point_mass.png}
-				\caption{A single-degree-of-freedom (1-DOF) spring mass model showing: (a) annotated schematic of a mass-spring system; and (b) the equivalent free-body diagram represented as a point-mass system.}
+				\caption{A single-degree-of-freedom (1-DOF) spring-mass model showing: (a) annotated schematic of a mass-spring system; and (b) the equivalent free-body diagram represented as a point-mass system.}
 				\label{fig:spring_mass_model_with_point_mass}
 			\end{figure}	
 		
 		\subsubsection{Linear Springs}
 	
-            Springs are mechanical devices that store energy, moreover, an ideal spring is a theoretical representation of this mechanical device that is massless and responds with a linear increase in force for a unit increase in displacement (i.e. $F=kx$). For simplicity, the spring in the spring-mass model considered here is assumed always ideal linear springs. A graphical representation of the idealized linear spring is presented in figure \ref{fig:linear_spring_deformation} where a unit force $F$ applied to the free end of the spring results in a unite displacement $x$ of the spring.  The resulting mathematical relationship,  $F=kx$, is known as Hooke's Law. Nonlinear springs add considerable complexity to the modeling of spring-mass systems, therefore, these are not considered in this introductory work. 
+            Springs are mechanical devices that store energy, moreover, an ideal spring is a theoretical representation of this mechanical device that is massless and responds with a linear increase in force for a unit increase in displacement (i.e. $F=kx$). For simplicity, the springs in the spring-mass models considered in this text are always assumed to be ideal linear springs. A graphical representation of the idealized linear spring is presented in figure \ref{fig:linear_spring_deformation} where a unit force $F$ applied to the free end of the spring results in a unit displacement $x$ of the spring.  The resulting mathematical relationship,  $F=kx$, is known as Hooke's Law. Nonlinear springs add considerable complexity to the modeling of spring-mass systems, therefore, these are not considered in this introductory work. 
 			
 			\begin{figure}[H]
 				\centering
@@ -196,7 +94,7 @@
 			\begin{equation}
 			\varepsilon = \frac{\Delta l}{l}
 			\end{equation} 			
-			Hooke's law can be expanded to represent an uniform and elastic bar:
+			Hooke's law can be expanded to represent a uniform and elastic bar:
 			\begin{equation}
 			\sigma = E \varepsilon
 			\end{equation} 			
@@ -219,7 +117,7 @@
 			\begin{figure}[H]
 				\centering
 				\includegraphics[]{../figures/spring_and_bar_mass_vertical.png}
-				\caption{Equivalency between a vertical bar with mass attached to the bottom and a spring-mass model of the system.}
+				\caption{Equivalency between a vertical bar with a mass attached to the bottom and a spring-mass model of the system.}
 				\label{fig:spring_and_bar_mass_vertical}
 			\end{figure}
 			
@@ -227,7 +125,7 @@
 			\begin{equation}
 				k=\frac{F}{x}
 			\end{equation}
-			The stiffness of the spring can be more closely related to materials properties of the bar $A$, $E$, and $l$ considering that Hooke's Law for the uniform tension on a bar can be expressed as:
+			The stiffness of the spring can be more closely related to material properties of the bar $A$, $E$, and $l$ considering that Hooke's Law for the uniform tension on a bar can be expressed as:
 			\begin{equation}
 				\sigma = E \varepsilon
 			\end{equation}			
@@ -245,7 +143,7 @@
 				\centering
 				\includegraphics[]{../figures/spring_and_bar_mass_cantilever_beam.png}
 			\end{figure}			
-			From engineering mechanics we can compute the deflection at the point of a beam $\delta$ with a point load $P$. This expression is typically expressed as:
+			From engineering mechanics, we can compute the deflection at the point of a beam $\delta$ with a point load $P$. This expression is typically expressed as:
 			\begin{equation}
 				\delta = \frac{Pl^3}{3EI}
 			\end{equation}					
@@ -339,7 +237,7 @@
 					\centering
 					\includegraphics[]{../figures/equivalent_mass_and_spring_system_1.png}
 				\end{figure}	
-				The springs are combined as shown, using the equations defined before.  Now, considering that the displacement ($\delta$) of the top spring, and the bottom spring are the same we can state the total stiffness $k$, is the summation of the two. Therefore,    
+				The springs are combined as shown, using the equations defined before.  Now, considering that the displacement ($\delta$) of the top spring, and the bottom spring are the same we can state the total stiffness $k$, which is the summation of the two. Therefore,    
 				\begin{figure}[H]
 					\centering
 					\includegraphics[]{../figures/equivalent_mass_and_spring_system_2.png}
@@ -366,7 +264,7 @@
 		\begin{figure}[H]
 			\centering
 			\includegraphics[]{../figures/EOM_1-DOF-mass_horizontal.png}
-			\caption{A spring mass model of a 1-DOF system showing: (a) a schematic of the system; (b)  free-body diagram of the system at its initial position.}
+			\caption{A spring-mass model of a 1-DOF system showing: (a) a schematic of the system; (b) a free-body diagram of the system at its initial position.}
 			\label{fig:EOM_1-DOF-mass_horizontal}
 		\end{figure}			
 		
@@ -393,7 +291,7 @@
 			 a \ddot{x} + b \dot{x} + cx = 0
 			\end{equation}
 		
-			\noindent The EOM for a 1-DOF system under a free vibration is a second-order differential equation due to acceleration ($\ddot{x}$) being the second derivative of displacement ($x$) and homogeneous as the forcing function (right-hand side of the equations) is zero. In EOM's current form, $m=k$, $b=0$,  and $c=k$. In future work, $b$ will account for damping in the vibrating system.     
+			\noindent The EOM for a 1-DOF system under a free vibration is a second-order differential equation due to acceleration ($\ddot{x}$) being the second derivative of displacement ($x$) and homogeneous as the forcing function (right-hand side of the equations) is zero. In EOM's current form, $a=m$, $b=0$,  and $c=k$. In future work, $b$ will account for damping in the vibrating system.     
 		\end{review}
 
 					
@@ -474,7 +372,7 @@
 
 
 		\begin{vibration_case_study}
-			Why study vibrations? One day, it could save your job! For a project to be successful they need to be completed on time and budget. Consider the Ling-Temco-Vought (LTV) XC-142  which was a tilt-wing experimental aircraft developed in the '60s for the US military and later turned over to NASA. During testing, the cross-linked driveshaft produced excessive vibration and noise which resulted in a high pilot workload. In general, the aircraft's cross-linked driveshaft was the main technical issue that caused the military to lose interest in the project. 
+			Why study vibrations? One day, it could save your job! For a project to be successful they need to be completed on time and within budget. Consider the Ling-Temco-Vought (LTV) XC-142  which was a tilt-wing experimental aircraft developed in the '60s for the US military and later turned over to NASA. During testing, the cross-linked driveshaft produced excessive vibration and noise which resulted in a high pilot workload. In general, the aircraft's cross-linked driveshaft was the main technical issue that caused the military to lose interest in the project. 
 			
 			\begin{figure}[H]
 				\centering

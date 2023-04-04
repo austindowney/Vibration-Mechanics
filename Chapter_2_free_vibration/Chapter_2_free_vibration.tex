@@ -1,108 +1,5 @@
 \documentclass[12pt,letter]{article}
-\usepackage{mathptmx} % added for time new roman font
-\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
-\usepackage[latin1]{inputenc}
-\usepackage{amsmath}
-
-% defines all example enviorment
-\usepackage[framemethod=tikz]{mdframed} % added for the box around examples
-\newtheorem{ex}{Example}
-\numberwithin{ex}{section} % allows for the use of example numbers that lign up with the section numbers
-\newenvironment{example}{\begin{mdframed}[middlelinewidth=0.5mm]\begin{ex}\normalfont}{\end{ex}\end{mdframed}}
-
-% defines all review enviorment
-\usepackage[framemethod=tikz]{mdframed} % added for the box around examples
-\newtheorem{re}{Review}
-\numberwithin{re}{section} % allows for the use of example numbers that lign up with the section numbers
-\newenvironment{review}{\begin{mdframed}[middlelinewidth=2mm,roundcorner=20pt]\begin{re}\normalfont}{\end{re}\end{mdframed}}
-
-% defines all vibration case studyies
-\newtheorem{vcs}{Vibration Case Study}
-\numberwithin{vcs}{section} % allows for the use of numbers that lign up with the section numbers
-\newenvironment{vibration_case_study}{\begin{mdframed}[linecolor=orange,middlelinewidth=2mm,roundcorner=20pt]\begin{vcs}\normalfont}{\end{vcs}\end{mdframed}}
-
-% defines the quotation enviorment 
-\usepackage{xcolor}
-\newcommand{\quotebox}[2]{\begin{center}\fcolorbox{white}{blue!15!gray!15}{\begin{minipage}{0.9\linewidth}\vspace{10pt}\center\begin{minipage}{0.8\linewidth}{\space\Huge``}{#1}{\Huge''}{\break\null\hfill} {\small #2}  \end{minipage}\medbreak\end{minipage}}\end{center}}
-
-% defines the definition enviorment 
-\newcommand{\definitionbox}[2]{\begin{center}\fcolorbox{white}{blue!15!gray!15}{\begin{minipage}{0.9\linewidth}\vspace{10pt}\center\begin{minipage}{0.8\linewidth} {{\textbf{Definition} - }{#1}: {#2}}\end{minipage}\medbreak\end{minipage}}\end{center}}
-
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage{float}
-\usepackage{booktabs}
-%\usepackage{parskip} % remove all the paragraph indents
-\usepackage[textsize=tiny]{todonotes}
-\usepackage[OT2, T1]{fontenc}			% added for Russian names in Cryillic text
-\usepackage[russian, english]{babel}	% added for Russian names in Cryillic text
-\usepackage{enumitem}					% added to reduce the space in itemized list
-
-\usepackage{setspace}
-\usepackage[colorlinks=true]{hyperref}
-\usepackage{textcomp} 
-\usepackage{multicol} 
-
-% added for MATLAB code
-\usepackage[framed]{matlab-prettifier}
-\let\ph\mlplaceholder % shorter macro
-\lstMakeShortInline"
-
-\lstset{
-	style              = Matlab-editor,
-	basicstyle         = \mlttfamily,
-	escapechar         = ",
-	mlshowsectionrules = true,
-}
-
-
-
-\usepackage{color} % color added for editing
-\newcommand{\bl}[1]{\textcolor[rgb]{0.00,0.00,1.00}{#1}}
-\newcommand{\gr}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
-\newcommand{\rd}[1]{\textcolor[rgb]{0.75,0.00,0.00}{#1}}
-\newcommand{\tl}[1]{\textcolor[rgb]{0,0.6,0.60}{#1}}
-
-
-
-%%%%%%%		define the symbols for positive directions		%%%%%%
-\makeatletter													%%	
-%%					
-\newcommand*\curveplus{% positive counterclockwise				%%
-	\mathbin{\rotatebox[origin=c]{90}{$\m@th\curvearrowleft$}+}}	%%
-%%
-\newcommand*\rightplus{% positive right							%%
-	\mathpalette\@rightplus\relax}								%%
-\newcommand*\@rightplus[1]{%									%%
-	\mathbin{\vcenter{\hbox{$\m@th\overset{#1+}{\to}$}}}}			%%
-%%	
-\newcommand*\upplus{% positive up								%%
-	\mathbin{+\mathord\uparrow}}									%%
-%%			
-\newcommand*\downplus{% positive down							%%		
-	\mathbin{+\mathord\downarrow}}								%%
-%%		
-\newcommand*\downrightplus{% positive down and right			%%	
-	\mathbin{+ \rotatebox[origin=c]{-30}{$\m@th\rightarrow$}}}	%%
-\makeatother 													%%	
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\usepackage{mathtools}          %loads amsmath as well added for the piece wise function
-\DeclarePairedDelimiter\Floor\lfloor\rfloor
-\DeclarePairedDelimiter\Ceil\lceil\rceil
-
-
-\newcounter{NumberInTable}
-\newcommand{\LTNUM}{\stepcounter{NumberInTable}{(\theNumberInTable)}}
-
-\newcommand{\Laplace}[1]{\ensuremath{\mathcal{L}{\left[#1\right]}}}
-\newcommand{\InvLap}[1]{\ensuremath{\mathcal{L}^{-1}{\left[#1\right]}}}
-\renewcommand{\textuparrow}{$\uparrow$}
-
-% Sets the footnotes to be letters, not numbers. This is needed or it's a mix of both. 
-\renewcommand*\thefootnote{\alph{footnote}}
+\usepackage{../downey_format}
 
 
 \begin{document}
@@ -141,7 +38,7 @@
 
 	\subsection{Mathematical Modeling of Free Vibration}
 
-		The Development of a mathematical model for a system under free vibration would enable the practitioner to predict, or model, the vibrating system of interest.  Therefore, considering that the following system, 
+		The Development of a mathematical model for a system under free vibration would enable the practitioner to predict, or model, the vibrating system of interest.  Therefore, considering the following system, 
 		
 		\begin{figure}[H]
 			\centering
@@ -211,7 +108,7 @@
 			where $f_n$ is the frequency of the oscillations. 
 					
 		\subsubsection{Solve for Initial Phase ($\phi$) of the System }
-			The EOM is a second-order ODE so there needs to exist two initial conditions (constants) to solve it. For the systems under considerations, the displacement ($x$) and velocity ($\dot{x}$ or $v$) at $t=0$ are the initial conditions. For simplicity, these are written as 
+			The EOM is a second-order ODE so there needs to exist two initial conditions (constants) to solve it. For the systems under consideration, the displacement ($x$) and velocity ($\dot{x}$ or $v$) at $t=0$ are the initial conditions. For simplicity, these are written as 
 			\begin{equation}
 				x(0) = x_0  
 			\end{equation}			
@@ -250,7 +147,7 @@
 			
 		\subsubsection{Solve for Amplitude ($A$) of the System }
 			
-			The amplitude of the vibrating system ($A$) is solved for in a similar manner to $\phi$ where the expressions for $x$ and $\dot{x}$ are solved for at $t=0$ and rearranged as to isolate $\phi$. This operations results in the the equations:  
+			The amplitude of the vibrating system ($A$) is solved for in a similar manner to $\phi$ where the expressions for $x$ and $\dot{x}$ are solved for at $t=0$ and rearranged as to isolate $\phi$. This operation results in the equations:  
 			\begin{equation}
 				\text{sin}(\phi) = \frac{x_0}{A}
 			\end{equation}
@@ -299,7 +196,7 @@
 
 		\subsubsection{Special Considerations for No Initial Velocity ($v_0=0$)}
 		
-			Upon close inspection of the temporal solution in equation \ref{eq:response_simple_harmonic_motion}, it becomes evident that any system without initial velocity (i.e. $v_0=0$) results in an undefined number for $(x_0\omega_\text{n})/v_0$. A solution to this challenge lies in the fact that limit of tan$^{-1}(x)$ approaches $-\pi/2$ at $-\infty$ and  $\pi/2$ at $\infty$, as depicted in figure \ref{fig:arctan_plot}. Therefore, the solution at $-\infty$ and $\infty$ is undefined, resulting in the expression:
+			Upon close inspection of the temporal solution in equation \ref{eq:response_simple_harmonic_motion}, it becomes evident that any system without initial velocity (i.e. $v_0=0$) results in an undefined number for $(x_0\omega_\text{n})/v_0$. A solution to this challenge lies in the fact that the limit of tan$^{-1}(x)$ approaches $-\pi/2$ at $-\infty$ and  $\pi/2$ at $\infty$, as depicted in figure \ref{fig:arctan_plot}. Therefore, the solution at $-\infty$ and $\infty$ is undefined, resulting in the expression:
 			
 			\begin{equation}
 				\bigg(\frac{x_0\omega_\text{n}}{v_0}\bigg) = \pm \frac{\pi}{2}, \text{ when } v_0=0
@@ -335,7 +232,7 @@
 			\end{example}
 			
 			\begin{example}		
-				Consider the following 1-DOF system, where $k = 857.8$ N/m and $m=49.2\times10^{-3}$ kg, calculate the natural frequency in rad/s and Hz. Also find the period of oscillations and the maximum displacement if the spring is initially displaced $10$ mm with no initial velocity.  	
+				Consider the following 1-DOF system, where $k = 857.8$ N/m and $m=49.2\times10^{-3}$ kg, and calculate the natural frequency in rad/s and Hz. Also, find the period of oscillations and the maximum displacement if the spring is initially displaced $10$ mm with no initial velocity.  	
 				\begin{figure}[H]
 					\centering
 					\includegraphics[]{../figures/1-DOF-spring_mass_vertical.png}
@@ -421,7 +318,7 @@
 			\begin{equation}
 				x(t) = ae^{\lambda t}
 			\end{equation}
-			is assumed where, $a$ and $t$ are nonzero constants that need to be determined. Using successive differentiation,the assumed solution becomes:
+			is assumed, where $a$ and $t$ are nonzero constants that need to be determined. Using successive differentiation, the assumed solution becomes:
 			\begin{equation}
 				\dot{x}(t) = \lambda ae^{\lambda t}
 			\end{equation}
@@ -437,7 +334,7 @@
 			\begin{equation}
 				m \lambda^2 + k = 0
 			\end{equation}
-			This can be done because $ae^{\lambda t}$ is never zero, therefore, the expressions is never divide by zero. The quadratic formula gives us:
+			This can be done because $ae^{\lambda t}$ is never zero, therefore, the expression is never divided by zero. The quadratic formula gives us:
 			\begin{equation}
 				\lambda = \pm \sqrt{-\frac{k}{m}} = \pm \sqrt{\frac{k}{m}}j = \pm \omega_\text{n} j
 			\end{equation} 
@@ -449,7 +346,7 @@
 			\begin{equation}
 				x(t) = a_2e^{-\omega_\text{n} j t}
 			\end{equation}
-			As these solutions only consider, and are only valid for, linear systems, the sum of the solutions is also a solution. This simplification results in:
+			As these solutions only consider, and are only valid for, linear systems; the sum of the solutions is also a solution. This simplification results in:
 			\begin{equation}
 				x(t) = a_1e^{+\omega_\text{n} j t} + a_2e^{-\omega_\text{n} j t}
 			\end{equation}
@@ -504,7 +401,7 @@
 			\begin{equation}
 				A_2 = (a_1-a_2)j
 			\end{equation}	
-			Lastly, as the general solution is written as:
+			Lastly, the general solution is written as:
 			\begin{equation}
 				x(t) = A_1\text{cos}(\omega_\text{n} t) + A_2\text{sin}(\omega_\text{n} t)
 			\end{equation}	
@@ -582,7 +479,7 @@
 				A_1 = (a_1+a_2) & \hspace{1.5cm} A_2 = (a_1-a_2)j \\
 				a_1 = \frac{A_1-A_2j}{2} & \hspace{1.5cm} a_2 = \frac{A_1+A_2j}{2}
 			\end{align}
-			Which follow from trigonometric identities and the Euler's formulas. 
+			Which follow from trigonometric identities and Euler's formula. 
 
 
 	
@@ -616,8 +513,8 @@
 		
 		\begin{itemize}
 			\item \textbf{Undamped} - Oscillates around the equilibrium and does not decay.
-			\item \textbf{Underdamped} - Oscillates around the equilibrium and slowly decays  and is the most common case.
-			\item \textbf{Overdamped} - Does not pass the equilibrium position and is a simple a decay with no oscillation.
+			\item \textbf{Underdamped} - Oscillates around the equilibrium and slowly decays and is the most common case.
+			\item \textbf{Overdamped} - Does not pass the equilibrium position and is a simple decay with no oscillation.
 			\item \textbf{Critically damped} - provides the quickest approach to zero amplitude for a damped oscillator.
 		\end{itemize}
 		
@@ -625,13 +522,13 @@
 		\begin{figure}[H]
 			\centering
 			\includegraphics[]{../figures/damping_cases.png}
-			\caption{Temporal responses for the three types of damping: underdamped, over damped, and critically damped.}
+			\caption{Temporal responses for the three types of damping: underdamped, overdamped, and critically damped.}
 			\label{fig:damping_cases}
 		\end{figure}
 			
 		\subsubsection{Modeling Vibrating Systems with Damping}
 				
-			The spring-mass system of chapter 1 can be expanded to a spring-dashpot-mass system that considers the damping component of the system. A mathematical model of the 	spring-dashpot-mass system can be developed for the case present in figure \ref{fig:1-DOF-mass_horizontal_damping_FBD}. Using the FBD for the system, it can conclude that the EOM for this system:
+			The spring-mass system of Chapter 1 can be expanded to a spring-dashpot-mass system that considers the damping component of the system. A mathematical model of the spring-dashpot-mass system can be developed for the case present in figure \ref{fig:1-DOF-mass_horizontal_damping_FBD}. Using the FBD for the system, it can conclude that the EOM for this system:
 			\begin{figure}[H]
 				\centering
 				\includegraphics[]{../figures/1_DOF_spring_dashpot_mass_horizontal_FBD.png}
@@ -685,11 +582,11 @@
 			\begin{equation}
 				c_{\text{cr}}^2 = 4km
 			\end{equation}		
-			next we can derive the function:
+			next, we can derive the function:
 			\begin{equation}
 				c_{\text{cr}} = 2\sqrt{km} = 2\bigg(\frac{\sqrt{m}}{\sqrt{m}}\bigg)\sqrt{km} = 2m\omega_\text{n}
 			\end{equation}			
-			remember that $\omega_\text{n} = \sqrt{\frac{k}{m}}$ for an undamped system. Next, we generate a non-dimensional number ($\zeta$), pounced `zeta' that will allow us to distinguish between different types of damping. $\zeta$ is called the \textbf{critical damping ratio}.
+			remember that $\omega_\text{n} = \sqrt{\frac{k}{m}}$ for an undamped system. Next, we generate a non-dimensional number ($\zeta$), pronounced `zeta' that will allow us to distinguish between different types of damping. $\zeta$ is called the \textbf{critical damping ratio}.
 			\begin{equation}
 				\zeta = \frac{c}{c_{\text{cr}}} = \frac{c}{2\sqrt{km}} = \frac{c}{2m\omega_\text{n}}
 			\end{equation}				
@@ -822,7 +719,7 @@
 			\begin{figure}[H]
 				\centering
 				\includegraphics[]{../figures/under_damped_various_initial_conditions.png}
-				\caption{Four example responses for an under damped 1-DOF system  ($\zeta=0.142$) with various initial conditions.}
+				\caption{Four example responses for an underdamped 1-DOF system  ($\zeta=0.142$) with various initial conditions.}
 			\end{figure}
 
 		\begin{example}				
@@ -847,7 +744,7 @@
 			\begin{equation}
 				\zeta = \frac{c}{c_{\text{cr}}} = \frac{7.8}{12.993} = 0.600
 			\end{equation}				
-			This can also be expressed as 60\% damped, this is a underdamped system, and the system will oscillate. Now we can calculate the damped frequency:
+			This can also be expressed as 60\% damped, this is an underdamped system, and the system will oscillate. Now we can calculate the damped frequency:
 			\begin{equation}
 				\omega_\text{d} = \omega_\text{n}\sqrt{1-\zeta^2} = \omega_\text{n}\sqrt{1-0.600^2} = 105.6 \hspace{1ex}\text{rad/s}
 			\end{equation}		
@@ -885,7 +782,7 @@
 	
 			\noindent\textbf{Solution:} 
 			
-			First and foremost, we need to develop a mass-spring-dashpot representation of the system. The is presented in what follows:
+			First and foremost, we need to develop a mass-spring-dashpot representation of the system. This is presented in what follows:
 			
 			\begin{figure}[H]
 				\centering
@@ -893,7 +790,7 @@
 				\caption{Mass-spring-dashpot representation of the industrial system represented if figure \ref{fig:rubber_mounted_mass_with_spring}.}
 			\end{figure}
 				
-			where the damping in the vertical direction provided by the rubber damper is modeled a dashpot in the vertical direction. As we only want an estimate of the frequency, the assumption that the is small and as such $\alpha$ of the displaced state is equal $\alpha$ of the equilibrium state. This leads to the FBD for the equilibrium  and displaced states:
+			where the damping in the vertical direction provided by the rubber damper is modeled as a dashpot in the vertical direction. As we only want an estimate of the frequency, the assumption that the is small and as such $\alpha$ of the displaced state is equal $\alpha$ of the equilibrium state. This leads to the FBD for the equilibrium  and displaced states:
 			
 			\begin{center}
 				equilibrium position \hspace{4cm} displaced position ``x''
@@ -971,7 +868,7 @@
 			\begin{figure}[H]
 				\centering
 				\includegraphics[]{../figures/Over_damped_various_initial_conditions.png}
-				\caption{Four example responses for an over damped 1-DOF system ($\zeta=2.371$) with various initial conditions.}
+				\caption{Four example responses for an overdamped 1-DOF system ($\zeta=2.371$) with various initial conditions.}
 				\label{fig:Over_damped_various_initial_conditions}
 			\end{figure}
 
@@ -1017,7 +914,7 @@
 
 		\begin{example}
 
-		An engine valve assembly depicted in figure \ref{fig:engine_valve} where $J$ is the inertia caused by the right-hand side of the rocker arm. Derive an analytical solution for the natural frequency of the rocker arm. Use the assumptions sin($\theta$) = $\theta$ and cos($\theta$) = 1.
+		An engine valve assembly is depicted in figure \ref{fig:engine_valve} where $J$ is the inertia caused by the right-hand side of the rocker arm. Derive an analytical solution for the natural frequency of the rocker arm. Use the assumptions sin($\theta$) = $\theta$ and cos($\theta$) = 1.
 		
 			\begin{figure}[H]
 				\centering
@@ -1064,7 +961,7 @@
 			
 			On August 17\textsuperscript{th}, 2009 Turbine 2 of the hydroelectric power station of the Sayano-Shushenskaya Dam near Sayanogorsk in Russia failed catastrophically. The failure flooded the turbine hall and collapsed the ceiling. Killing 75 people, many of whom were in the turbine hall to celebrate the anniversary of the plant's general director.  Turbines of the type used at Sayano-Shushenskaya are designed to have high efficiency but a very narrow working band. When they operate outside the designed working band, they vibrate due to the pulsation of water flow and water strokes. These vibrations degrade the turbine over time. 
 			
-			Turbine 2 had experienced excessive vibrations for a long time, ever since its installation in 1979. Through the early 80's several issues were fixed, along with substantial repairs in 2000 and 2005.  In July 2009 the turbine again exceeded the allowed vibration specification but stayed in operation. Over the years, the operating staff simply came accept the higher level of vibration. The final government report stated that the accident was caused by turbine vibrations which led to fatigue damage in a turbine mount. 
+			Turbine 2 had experienced excessive vibrations for a long time, ever since its installation in 1979. Through the early '80s several issues were fixed, along with substantial repairs in 2000 and 2005.  In July 2009 the turbine again exceeded the allowed vibration specification but stayed in operation. Over the years, the operating staff simply came to accept the higher level of vibration. The final government report stated that the accident was caused by turbine vibrations which led to fatigue damage in a turbine mount. 
 			
 			\begin{figure}[H]
 				\centering
@@ -1083,7 +980,7 @@
 %			\end{otherlanguage*}
 
 			\footnotetext[1]{4044415 \foreignlanguage{russian}{Russian: Andrey Korzun} English:  Andrey Korzun, CC BY-SA 3.0 $<$https://creativecommons.org/licenses/by-sa/3.0$>$, via Wikimedia Commons}
-			\footnotetext[2]{The original source of this photograph is believed to be Jaffaa, a user of forums.drom.ru, who uploaded it on August 17 2009, a few hours after the accident. This image is a faithful digitisation of a unique historic image, and the copyright for it is most likely held by the person who created the image or the agency employing the person. It is believed that the use of this image may qualify as fair use under the copyright law of the United States.}
+			\footnotetext[2]{The original source of this photograph is believed to be Jaffaa, a user of forums.drom.ru, who uploaded it on August 17, 2009, a few hours after the accident. This image is a faithful digitization of a unique historic image, and the copyright for it is most likely held by the person who created the image or the agency employing the person. It is believed that the use of this image may qualify as fair use under the copyright law of the United States.}
 
 		\end{vibration_case_study}
 
@@ -1101,7 +998,7 @@
 			\begin{figure}[H]
 				\centering
 				\includegraphics[]{../figures/Logarithmic_decrement.png}
-				\caption{Measuring the peak displacements points in an experimental system with decay caused by damping.}
+				\caption{Measuring the peak displacement points in an experimental system with decay caused by damping.}
 			\end{figure}
 			
 			\noindent we mark three points of maximum amplitude, $x_1$, $x_2$, and $x_3$ that happen at $t_1$, $t_2$, and $t_3$, respectively. Considering displacement values for the first two points $x_1$ and $x_2$, separated by a complete period ($T$).  Knowing that one cycle is $2 \pi$, the time period for this complete cycle is given by:

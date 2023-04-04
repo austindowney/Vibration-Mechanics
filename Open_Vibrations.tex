@@ -1,111 +1,22 @@
 \documentclass[12pt,letter]{article}
-\usepackage{mathptmx} % added for time new roman font
-\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
-\usepackage[latin1]{inputenc}
-\usepackage{amsmath}
+\usepackage{downey_format}
 
-% defines all example enviorment
-\usepackage[framemethod=tikz]{mdframed} % added for the box around examples
-\newtheorem{ex}{Example}
-\numberwithin{ex}{section} % allows for the use of example numbers that lign up with the section numbers
-\newenvironment{example}{\begin{mdframed}[middlelinewidth=0.5mm]\begin{ex}\normalfont}{\end{ex}\end{mdframed}}
+% These packages are added for / required to compile the entire document
+\usepackage{standalone} 
+\usepackage{chapterbib}   
 
-% defines all review enviorment
-\usepackage[framemethod=tikz]{mdframed} % added for the box around examples
-\newtheorem{re}{Review}
-\numberwithin{re}{section} % allows for the use of example numbers that lign up with the section numbers
-\newenvironment{review}{\begin{mdframed}[middlelinewidth=2mm,roundcorner=20pt]\begin{re}\normalfont}{\end{re}\end{mdframed}}
-
-% defines all vibration case studyies
-\newtheorem{vcs}{Vibration Case Study}
-\numberwithin{vcs}{section} % allows for the use of numbers that lign up with the section numbers
-\newenvironment{vibration_case_study}{\begin{mdframed}[linecolor=orange,middlelinewidth=2mm,roundcorner=20pt]\begin{vcs}\normalfont}{\end{vcs}\end{mdframed}}
-
-% defines the quotation enviorment 
-\usepackage{xcolor}
-\newcommand{\quotebox}[2]{\begin{center}\fcolorbox{white}{blue!15!gray!15}{\begin{minipage}{0.9\linewidth}\vspace{10pt}\center\begin{minipage}{0.8\linewidth}{\space\Huge``}{#1}{\Huge''}{\break\null\hfill} {\small #2}  \end{minipage}\medbreak\end{minipage}}\end{center}}
-
-% defines the definition enviorment 
-\newcommand{\definitionbox}[2]{\begin{center}\fcolorbox{white}{blue!15!gray!15}{\begin{minipage}{0.9\linewidth}\vspace{10pt}\center\begin{minipage}{0.8\linewidth} {{\textbf{Definition} - }{#1}: {#2}}\end{minipage}\medbreak\end{minipage}}\end{center}}
-
-% load in packages needed for basic layout functions
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage{float}
-\usepackage{booktabs}
-\usepackage[textsize=tiny]{todonotes}
-\usepackage[OT2, T1]{fontenc}			% added for Russian names in Cryillic text
-\usepackage[russian, english]{babel}	% added for Russian names in Cryillic text
-\usepackage{enumitem}					% added to reduce the space in itemized list
-
-\usepackage{setspace}
-\usepackage[colorlinks=true]{hyperref}
-\usepackage{textcomp} 
-\usepackage{multicol} 
-
-% added for MATLAB code
-\usepackage[framed]{matlab-prettifier}
-\let\ph\mlplaceholder % shorter macro
-\lstMakeShortInline"
-
-\lstset{
-  style              = Matlab-editor,
-  basicstyle         = \mlttfamily,
-  escapechar         = ",
-  mlshowsectionrules = true,
-}
-
-
-
-\usepackage{color} % color added for editing
-\newcommand{\bl}[1]{\textcolor[rgb]{0.00,0.00,1.00}{#1}}
-\newcommand{\gr}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
-\newcommand{\rd}[1]{\textcolor[rgb]{0.75,0.00,0.00}{#1}}
-\newcommand{\tl}[1]{\textcolor[rgb]{0,0.6,0.60}{#1}}
-
-
-
-%%%%%%%		define the symbols for positive directions		%%%%%%
-\makeatletter													%%	
-																%%					
-\newcommand*\curveplus{% positive counterclockwise				%%
-  \mathbin{\rotatebox[origin=c]{90}{$\m@th\curvearrowleft$}+}}	%%
-																%%
-\newcommand*\rightplus{% positive right							%%
-  \mathpalette\@rightplus\relax}								%%
-\newcommand*\@rightplus[1]{%									%%
-  \mathbin{\vcenter{\hbox{$\m@th\overset{#1+}{\to}$}}}}			%%
-																%%	
-\newcommand*\upplus{% positive up								%%
-  \mathbin{+\mathord\uparrow}}									%%
-																%%			
-\newcommand*\downplus{% positive down							%%		
-  \mathbin{+\mathord\downarrow}}								%%
-  																%%		
-\newcommand*\downrightplus{% positive down and right			%%	
-  \mathbin{+ \rotatebox[origin=c]{-30}{$\m@th\rightarrow$}}}	%%
-\makeatother 													%%	
+%%%%%%%%%%%%%		Notes on compiling Document		%%%%%%%%%%%%%
+% Notes on compiling Document
+%
+% 1. Each chapter can be compiled on there own.
+% 2. I set the document up with a common figures folder to allow for the reuse of figures and generally to keep the document clean. 
+% 3. When compiling the main document, you must include the \graphicspath{{xx}} for the first chapter, to set it in chapter 1. From here on, it will think its in the chapter one folder but the <../figures> in each folder will work with this. 
+% 4. I (Austin Downey) have gotten this to compile on Windows with MikTeX and Linux with TeXLive. Your results may vary. For Linux, I:
+% 	i.	added the extra {} in \graphicspath
+% 	ii.	removed the .tex extension from the file names except for chapter 1. 
+% 5. The common bibliography is an issue that has yet to be sorted out.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-\usepackage{mathtools}          %loads amsmath as well added for the piece wise function
-\DeclarePairedDelimiter\Floor\lfloor\rfloor
-\DeclarePairedDelimiter\Ceil\lceil\rceil
-
- 
-\newcounter{NumberInTable}
-\newcommand{\LTNUM}{\stepcounter{NumberInTable}{(\theNumberInTable)}}
-
-\newcommand{\Laplace}[1]{\ensuremath{\mathcal{L}{\left[#1\right]}}}
-\newcommand{\InvLap}[1]{\ensuremath{\mathcal{L}^{-1}{\left[#1\right]}}}
-\renewcommand{\textuparrow}{$\uparrow$}
-
-% Sets the footnotes to be letters, not numbers. This is needed or it's a mix of both. 
-\renewcommand*\thefootnote{\alph{footnote}}
-
-\usepackage{standalone} % This is the only new package required to compile the entire document
-\usepackage{chapterbib}   
 
 
 
@@ -162,21 +73,6 @@ The source code for this text is available at \url{https://github.com/austindown
 
 \pagebreak
 
-
-%%%%%%%%%%%%%		Notes on compiling Document		%%%%%%%%%%%%%
-% Notes on compiling Document
-%
-% 1. Each chapter can be compiled on there own.
-% 2. I set the document up with a common figures folder to allow for the reuse of figures and generally to keep the document clean. 
-% 3. When compiling the main document, you must include the \graphicspath{{xx}} for the first chapter, to set it in chapter 1. From here on, it will think its in the chapter one folder but the <../figures> in each folder will work with this. 
-% 4. I (Austin Downey) have gotten this to compile on Windows with MikTeX and Linux with TeXLive. Your results may vary. For Linux, I:
-% 	i.	added the extra {} in \graphicspath
-% 	ii.	removed the .tex extension from the file names except for chapter 1. 
-% 5. The common bibliography is an issue that has yet to be sorted out.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
 % Chapter 1 Fundamentals of vibrations
 \graphicspath{{Chapter_1_fundamentals_of_vibrations/}} 
 \input{Chapter_1_fundamentals_of_vibrations/Chapter_1_fundamentals_of_vibrations}
@@ -193,17 +89,17 @@ The source code for this text is available at \url{https://github.com/austindown
 % Chapter 5 Multiple DOF Systems
 \include{Chapter_5_multiple_DOF_systems/Chapter_5_multiple_DOF_systems}
 
-% Chapter 6 Vibration Control
-\include{Chapter_6_vibration_control/Chapter_6_vibration_control}
+% Chapter 6 Continuous Systems
+\include{Chapter_6_continuous_systems/Chapter_6_continuous_systems}
 
-% Chapter 7 Structural Dynamics
-\include{Chapter_7_structural_dynamics/Chapter_7_structural_dynamics}
-%
-%%% Chapter 8 Signal Processing
-%\include{Chapter_8_signal_processing/Chapter_8_signal_processing}
+% Chapter 7 Vibration Control
+\include{Chapter_7_vibration_control/Chapter_7_vibration_control}
 
+% Chapter 8 Experimental Vibrations
+\include{Chapter_8_experimental_vibrations/Chapter_8_experimental_vibrations}
 
-
+% Chapter 9 Signal Processing
+\include{Chapter_9_structural_dynamics/Chapter_9_structural_dynamics}
 
 
 \pagebreak
