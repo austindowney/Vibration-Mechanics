@@ -100,22 +100,26 @@ v_1 =  eig_vect[:,0]
 v_2 =  eig_vect[:,1]
 v_3 =  eig_vect[:,2]
 
+v_1 = v_1/np.linalg.norm(v_1)
+v_2 = v_2/np.linalg.norm(v_2)
+v_3 = v_3/np.linalg.norm(v_3)
+
 u_1 = M_inv_sqrt@v_1
 u_2 = M_inv_sqrt@v_2
 u_3 = M_inv_sqrt@v_3
 
-u_1_norm = u_1/np.linalg.norm(u_1)
-u_2_norm = u_2/np.linalg.norm(u_2)
-u_3_norm = u_3/np.linalg.norm(u_3)
+# u_1_norm = u_1#/np.linalg.norm(u_1)
+# u_2_norm = u_2#/np.linalg.norm(u_2)
+# u_3_norm = u_3#/np.linalg.norm(u_3)
 
 # alpha_1 = np.sqrt(1/(v_1.T@M@v_1))
 # alpha_2 = np.sqrt(1/(v_2.T@M@v_2))
 # alpha_3 = np.sqrt(1/(v_3.T@M@v_3))
 
 plt.figure(figsize=(6,3))
-plt.plot(u_1_norm,'o-',label='mode 1 at '+str(np.round(omega_1,3))+' rad/sec')
-plt.plot(u_2_norm,'s--',label='mode 2 at '+str(np.round(omega_2,3))+' rad/sec')
-plt.plot(u_3_norm,'d:',label='mode 3 at '+str(np.round(omega_3,3))+' rad/sec')
+plt.plot(u_1,'o-',label='mode 1 at '+str(np.round(omega_1,3))+' rad/sec')
+plt.plot(u_2,'s--',label='mode 2 at '+str(np.round(omega_2,3))+' rad/sec')
+plt.plot(u_3,'d:',label='mode 3 at '+str(np.round(omega_3,3))+' rad/sec')
 plt.hlines(0,-2,3,'k')
 plt.xlim(-0.1,2.1)
 plt.grid(True)
@@ -133,10 +137,11 @@ u_2_norm = u_2/np.max(u_2)
 u_3_norm = u_3/np.max(u_3)
 
 plt.figure(figsize=(6,3))
+plt.hlines(0,-2,3,'k')
 plt.plot(u_1_norm,'o-',label='mode 1 at '+str(np.round(omega_1,3))+' rad/sec')
 plt.plot(u_2_norm,'s--',label='mode 2 at '+str(np.round(omega_2,3))+' rad/sec')
 plt.plot(u_3_norm,'d:',label='mode 3 at '+str(np.round(omega_3,3))+' rad/sec')
-plt.hlines(0,-2,3,'k')
+plt.xticks([0, 1, 2],labels=[1, 2, 3])
 plt.xlim(-0.1,2.1)
 plt.grid(True)
 plt.legend(framealpha=1)

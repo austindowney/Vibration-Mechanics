@@ -75,17 +75,17 @@ absorber_without = 1/(1-(omega/omega_1)**2)
 absorber_without = np.abs(absorber_without)
 
 
-plt.figure(figsize=(6.5,3))
-plt.plot(omega/omega_1,absorber_with,label='with absorber')
-plt.plot(omega/omega_1,absorber_without,'--',label='without absorber')
-plt.ylim([0,20])
+plt.figure(figsize=(6.5,2.5))
+plt.plot(omega/omega_1,absorber_with,label='with vibration absorber')
+plt.plot(omega/omega_1,absorber_without,'--',label='without vibration absorber')
+plt.ylim([0,17])
 plt.xlim([0.5,1.5])
 plt.legend(framealpha=1)
 plt.grid(True)
 plt.xlabel(r'$\omega $ / $ \omega_1$')
 plt.ylabel(r'$X_1 $ / $\delta_\textnormal{st}$')
 plt.tight_layout()
-plt.savefig('vibration_absorber_undamped_results',dpi=500)
+plt.savefig('vibration_absorber_undamped_results',dpi=300)
 
 
 

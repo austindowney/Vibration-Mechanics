@@ -10,7 +10,7 @@
 	\setcounter{equation}{0}   
 	\renewcommand\theequation{\thesection.\arabic{equation}}
 	
-		\section{Multiple degree-of-freedom Systems}
+		\section{Multiple Degree-of-freedom Systems}
 	
 	
 	
@@ -352,7 +352,7 @@
 	\begin{equation}
 		 \vec{u}_1 = \begin{bmatrix} \frac{1}{3}\\ 1\end{bmatrix}
 	\end{equation}
-	The same processes can be used for obtaining $\vec{u}_1$ using $\omega_2=2$, this results in:
+	The same processes can be used for obtaining $\vec{u}_2$ using $\omega_2=2$, this results in:
 	\begin{equation}
 		 \begin{bmatrix} -9 & -3 \\    -3  & -1 \end{bmatrix} 
 		 \begin{bmatrix} u_{12}\\ u_{22}\end{bmatrix}=\begin{bmatrix} 0\\ 0\end{bmatrix}
@@ -481,7 +481,7 @@
 	\end{equation}
 	Therefore, 
 	\begin{equation}
-	\omega_1 \pm \sqrt{\frac{k}{m}}=1 \text{ rad/sec}, \hspace{2ex} \omega_2 \pm \sqrt{\frac{3k}{m}}=\sqrt{3} \text{ rad/sec}
+	\omega_1 = \pm \sqrt{\frac{k}{m}}=1 \text{ rad/sec}, \hspace{2ex} \omega_2 = \pm \sqrt{\frac{3k}{m}}=\sqrt{3} \text{ rad/sec}
 	\end{equation}
 	Now, we need to obtain solutions for $\vec{u}_1$ and $\vec{u}_2$. Knowing $(-\omega_1^2 M  + K)\vec{u}_1 =0$ yields:
 	\begin{equation}
@@ -513,7 +513,7 @@
 	
 	\begin{figure}[H]
 		\centering
-		\includegraphics[]{../figures/2-DOF-spring_mass_dashpot_horizontal_double_wall.png}
+		\includegraphics[]{../figures/2-DOF-spring_mass_dashpot_horizontal_forced_double_wall.png}
 		\caption{Forced 2-DOF damped system showing: (a) system, and; (b) FBD.}
 		\label{fig:2-DOF-spring_mass_dashpot_horizontal_double_wall}
 	\end{figure}
@@ -586,36 +586,34 @@
 	%\rd{Add an example}
 	%% \rd{example 5.11 in Rao ed 6 has a good example of this nature.}
 	%\end{example}
-	
-	
+
 	
 	
 	\begin{vibration_case_study}
-	Multi-span concrete bridges like the ones shown below have repeating segments that make up the bridge decks. The structural components of the segmented bridge decks are separate components sitting bearing pads on the piers where the only connecting material between decks is the overlay that is added to provide a contentious road surface; as demonstrated by the bridge in figure~\ref{fig:case_study_closely_coupled_bridge_frequencies_1}. This configuration forms what is known as a partially-connected bridge deck [cite paper].
+	Multi-span concrete bridges like the Trigno V bridge (figure~\ref{fig:case_study_closely_coupled_bridge_frequencies_1}) over the Trigno river in Italy have repeating segments that make up the bridge decks. The structural components of the segmented bridge decks are separate components sitting on bearing pads and piers where the only connecting material between decks is the overlay that is added to provide a contentious road surface. This configuration forms what is known as a partially-connected bridge deck\protect\footnotemark[1].
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=\linewidth]{../figures/case_study_closely_coupled_bridge_frequencies_1}
-		\caption{A concrete bridge in Italy \protect\footnotemark[1] }%\footnotetext[1]{Elisa Tomassini, CC BY-SA 4.0 $<$https://creativecommons.org/licenses/by-sa/4.0$>$}.}
+		\caption{The Trigno V bridge over the Trigno river that carries SS650 north of Trivento Italy is made up of seven repeating concrete bridge deck\protect\footnotemark[2]. }%\footnotetext[1]{Elisa Tomassini, CC BY-SA 4.0 $<$https://creativecommons.org/licenses/by-sa/4.0$>$}.}
 		\label{fig:case_study_closely_coupled_bridge_frequencies_1}
+		% 41°47'26.0"N 14°32'15.5"E
 	\end{figure}
 	
-	This system can be modeled as a multi-degree of freedom problem. However, the challenge is that with so many nearly identical bridge components, the natural frequencies of each bridge deck will be close, but not identical. This results in a clustering of natural frequencies as shown in figure~\ref{fig:case_study_closely_coupled_bridge_frequencies_2} where the frequencies of the 1\textsuperscript{st} and 2\textsuperscript{nd} modes of the various bridge deck components are clustered in groups and therefore hard to distinguish. Moreover, obtaining the characteristic structural dynamics of any particular bridge deck section would be difficult as the decks are coupled through the pavement overlay making it difficult to isolate the measurements of just one bridge section. 
+	This system can be modeled as a multi-degree of freedom problem. However, the challenge is that with so many nearly identical bridge components, the natural frequencies of each bridge deck will be close, but not identical. This results in a clustering of natural frequencies as shown in figure~\ref{fig:case_study_closely_coupled_bridge_frequencies_2} where the frequencies of the 1\textsuperscript{st} and 2\textsuperscript{nd} modes of the various bridge deck components are clustered in groups and therefore hard to distinguish. Moreover, obtaining the characteristic structural dynamics of any particular bridge deck section would be difficult as the decks are coupled through the pavement overlay making it challenging to isolate the dynamic measurements of just one bridge section. 
 	
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=\linewidth]{../figures/case_study_closely_coupled_bridge_frequencies_2}
-		\caption{Measured acceleration signal for the bridge showing the estimated 1\textsuperscript{st} and 2\textsuperscript{nd} frequencies for the obtained using the method outlined in et al. [X] }
+		\caption{Measured acceleration signal for the bridge showing the estimated 1\textsuperscript{st} and 2\textsuperscript{nd} frequencies for the obtained using the method outlined in Tomassini et al.\protect\footnotemark[1].}
 		\label{fig:case_study_closely_coupled_bridge_frequencies_2}
 	\end{figure}
 	
-	\footnotetext[1]{Elisa Tomassini, CC BY-SA 4.0 $<$https://creativecommons.org/licenses/by-sa/4.0$>$} 	
+	\footnotetext[1]{Tomassini E., García-Macías E., Reynders E., Ubertini F., Modal analysis for damage identification of partially continuous multi-span bridges, Journal of Physics: Conference Series, Eurodyn 2023: XII International Conference on Structural Dynamics (2023).} 	
+	%\footnotetext[1]{Elisa Tomassini, CC BY-SA 4.0 $<$https://creativecommons.org/licenses/by-sa/4.0$>$} 
+	\footnotetext[2]{Imagery 2003 Google and Maxar Technologies used in accordance with their general guidelines on sharing (2003) and likely falls under free use in the U.S.} 
 	\end{vibration_case_study}
-	
-	
-	\subsection{Eigenvalue-based Solution for Natural Frequencies and Mode Shapes}
-	
-	The process of calculating the mode shapes presented in section \ref{sec:two_degree_of_freedom} is long and tedious. Therefore, methods that can be easily deployed on computers are of great interest to the practitioner. An eigenvalue-based solution that takes advantage of the symmetry in the $M$ and $K$ matrices and can be easily implemented on a computer is discussed in this section. 
-	
+
+
 	\begin{review}
 	
 		\textbf{Eigenvalues and Eigenvectors}
@@ -629,13 +627,21 @@
 		\textbf{A}\textbf{v} = \lambda\textbf{v}
 		\end{equation}
 		where $\textbf{v}$ is a $n \times 1$ matrix of the eigenvectors. For the matrix $A$, eigenvalues and eigenvectors can be used to decompose the matrix.
-	
+
 		\begin{figure}[H]
 			\centering
-			\includegraphics[]{../figures/eigenvalues.png}
-			\caption{The stretching and shearing of the plane on which a matrix lies where the eigenvectors of the matrix are denoted by the blue lines and are the special directions such that point on the lines will just slide on them.}
+			\includegraphics[width=3in]{../figures/eigenvalues_2}
+			\caption{Matrix $\textbf{A}$ acts by stretching the vector $\textbf{v}$, not changing its direction, so $\textbf{v}$ is an eigenvector of $\textbf{A}$.}
 			\label{fig:eigenvalues}
 		\end{figure}
+		
+			
+%		\begin{figure}[H]
+%			\centering
+%			\includegraphics[]{../figures/eigenvalues.png}
+%			\caption{The stretching and shearing of the plane on which a matrix lies where the eigenvectors of the matrix are denoted by the blue lines and are the special directions such that point on the lines will just slide on them.}
+%			\label{fig:eigenvalues}
+%		\end{figure}
 	
 		The generalized eigenvalue problem is an important formulation for the study of vibrations and is written as 
 		\begin{equation}
@@ -647,13 +653,13 @@
 		\end{equation}		
 		
 		%\rd{Need to add a discussion on normal, orthogonal, and orthonormal matrices.}	
+		
+	\end{review}	
 	
+	\subsection{Eigenvalue-based Solution for Natural Frequencies and Mode Shapes}
 	
+	The process of calculating the mode shapes presented in section \ref{sec:two_degree_of_freedom} is long and tedious. Therefore, methods that can be easily deployed on computers are of great interest to the practitioner. An eigenvalue-based solution that takes advantage of the symmetry in the $M$ and $K$ matrices and can be easily implemented on a computer is discussed in this section. 
 	
-	
-	
-	
-	\end{review}
 	
 	\begin{review}
 	
@@ -704,13 +710,13 @@
 	\begin{equation}
 	I\ddot{\vec{q}} + \widetilde{K}\vec{q} =0
 	\end{equation}
-	where $\widetilde{K}=M^{-1/2}KM^{-1/2}$ is analogous to $\sqrt{k/m}$ from the 1-DOF system. 
+	where $\widetilde{K}=M^{-1/2}KM^{-1/2}$ is equivalent to the expression $k/m$ from the 1-DOF system as the are both mass-normalized stiffness values. 
 	
 	As before, a solution is found by assuming a solution, taking the derivatives of the solution, and substituting it into the EOM. Following these steps and assuming a solution of:
 	\begin{equation}
 	\vec{q} = \textbf{v}e^{j\omega t}
 	\end{equation}
-	results in an EOM in the form:
+	where $\textbf{v}$ in an $n \times n$ matrix for a system with $n$ degrees of freedom. Adding this assumed solution to the EOM results in the form:
 	\begin{equation}
 	-\textbf{v} \omega^2 e^{j\omega t} + \widetilde{K}\textbf{v}e^{j\omega t} =0
 	\end{equation}
@@ -718,34 +724,46 @@
 	\begin{equation}
 	\widetilde{K}\textbf{v} =  \omega^2 \textbf{v}
 	\end{equation}
-	Knowing that $\textbf{v}\neq0$, as a vector with zeros would mean no motion is present in the system, this equation can be expressed in a typical eigenvalue formulation:
+	Knowing that $\textbf{v}\neq0$, as a matrix of zeros would mean no motion is present in the system, this equation can be expressed in a typical eigenvalue formulation:
 	\begin{equation}
 	\widetilde{K}\textbf{v} =  \lambda \textbf{v}
 	\label{eq:eigenvalue_problem}
 	\end{equation}
-	where $\lambda = \omega^2 $. Or more importantly, $\omega = \sqrt{\lambda}$. As $\widetilde{K}$ is symmetric, this is a symmetric eigenvalue problem. Moreover, the vector $\lambda$ represents the eigenvalues of the system. Given that we set $\vec{x}=M^{-1/2}\vec{q}$, the eigenvectors are not a direct representation of the mode shapes. To develop a link between the eigenvectors and mode shapes we first need to normalize the lengths of the eigenvectors obtained by solving equation \ref{eq:eigenvalue_problem} to that of a unit vector. The norm of a unit vector is defined as:
+	where $\textbf{v}$ is a column matrix made up of the eigenvectors ($\textbf{v} = [v_1, \; v_1, \; \cdots, \; v_n ]$) and 
+	$\lambda$ is a square matrix with eigenvalues on the diagonal. As $\widetilde{K}$ is symmetric, this is a symmetric eigenvalue problem. 
+	
+	An important attribute of eigenvectors to note is that the eigenvectors only encode information about the direction of the transformation while information on the magnitude is captured by the eigenvalue. Therefore, different values within an eigenvector may be used to represent the same direction.  A challenge for the entry-level practitioner is that different software systems may return different eigenvectors for the same problem. For example, MATLAB\protect\footnotemark[1] returns eigenvectors such that the 2-norm of each is 1. However, when solved symbolically\protect\footnotemark[2] non-normalized eigenvectors are returned. Various other engineering-focused applications may return normalized or non-normalized eigenvectors\protect\footnotemark[3]. Therefore, it is helpful for practitioners to normalize computed eigenvectors to unit norm eigenvectors to allow for comparison between different computational tools. 
+	
+
+	\footnotetext[1]{MATLAB 2023a {\ttfamily{}eig} function.} 
+	\footnotetext[2]{MATLAB 2023a Symbolic Math Toolbox.} 
+	\footnotetext[3]{LAPACK.} 	
+	
+	
+		\begin{review}	
+		\textbf{Vector Norms} 
+		
+	The Euclidean norm of a vector (also termed as 2-norm, Euclidean length or the vector magnitude) is defined as:
 	\begin{equation}
-	1= ||\textbf{v}|| = \sqrt{\textbf{v}^{\text{T}}\textbf{v}} = \sqrt{\sum_{i=1}^{n}(v_i^2)}
+	||\textbf{v}|| = \sqrt{\sum_{i=1}^{n}(v_i^2)} = \sqrt{\textbf{v}^{\text{T}}\textbf{v}}
 	\end{equation} 
-	where a scalar is used in conjunction with a vector such that $\alpha\textbf{u}=1$ computed the normalized unit vector directions as outlined in example \ref{ex:vector_normalizeation}. In general, a nonzero vector of any length can be normalized by calculating:
-	\begin{equation}
-	\frac{1}{\sqrt{\textbf{v}^{\text{T}}\textbf{v}} } \textbf{v}
-	\end{equation} 
+	If $||\textbf{v}|| = 1$ it is a ``unit norm''. If $||\textbf{v}||$ is not a a unit norm vector, in can be converted to one in by applying a scalar $\alpha$ such that such that $\alpha\textbf{v}=1$. In general, a nonzero vector $\textbf{v}$ of any length can be normalized to $\textbf{v}_\text{normalized}$ using the following expression:
+		\begin{equation}
+		\textbf{v}_\text{normalized} = \frac{1}{\sqrt{\textbf{v}^{\text{T}}\textbf{v}} } \textbf{v}
+		\end{equation}
+	\end{review}	
+
 	
 	
-	We can relate the eigenvectors to the modes shapes by a factor of the mass matrix:
-	\begin{equation}
-	\vec{u}_1 = M^{-1/2}\vec{v}_1
-	\label{eq:modeshape_to_eigenvector}
-	\end{equation}
-	The important thing to remember is that the natural frequencies are the square root of the eigenvalues and the mode shapes are related to the eigenvectors through the mass matrix. 
-	
+	 
 	
 	\begin{example}
 	\label{ex:vector_normalizeation}
-	Normalize the vector $\vec{v}_1=[1/3 \hspace{1ex} 1]^\text{T}$
+	Normalize the vector $\vec{v}_1=[1/3 \hspace{1ex} 1]^\text{T}$.
 	
-	\textbf{Solution:} To normalize the vector $\vec{v}_1$, a scalar ($\alpha$) is calculated to make $\alpha\textbf{v}=1$.  Therefore, following the definition of an orthogonal vector:
+	\textbf{Solution:} First, let's check the Euclidean norm of $\vec{v}_1$, this is $\sqrt{1^2+1/3^2} = \sqrt{1.11} = 1.105$; therefore, the unit vector is not unit norm.
+	
+	To normalize the vector $\vec{v}_1$, a scalar ($\alpha$) is calculated to make $\alpha\textbf{v}=1$.  Therefore, following the definition of an orthogonal vector:
 	\begin{equation}
 	(\alpha \vec{v}_1)^\text{T}(\alpha \vec{v}_1) = 1
 	\end{equation}
@@ -753,9 +771,31 @@
 	\begin{equation}
 	\alpha [1/3 \hspace{1ex} 1]\alpha  \begin{bmatrix} \frac{1}{3}\\  1 \end{bmatrix}  = \alpha^2(1/9+1) = 1
 	\end{equation}
-	Therefore, $\alpha=3/\sqrt{10}$. Resulting in a normalized unit vector of $\alpha\vec{v}_1=[1/\sqrt{10} \hspace{1ex} 3/\sqrt{10}]^\text{T}$
+	Therefore, $\alpha=3/\sqrt{10}$. Resulting in a normalized unit vector of
+	\begin{equation}
+		\vec{v}_{1-\text{normalized}} = \alpha\vec{v}_1= \begin{bmatrix} \frac{1}{\sqrt{10}}\\  \frac{3}{\sqrt{10}} \end{bmatrix}
+		\end{equation}
+		 as $\sqrt{(1/\sqrt{10})^2 + (3/\sqrt{10})^2} =1$
 	
-	\end{example}
+	\end{example}	
+	
+	%Given that we set $\vec{x}=M^{-1/2}\vec{q}$, the eigenvectors are not a direct representation of the mode shapes. 
+	%To develop a link between the  we first need to normalize the lengths of the eigenvectors obtained by solving equation \ref{eq:eigenvalue_problem} to that of a unit vector.
+		
+	Eigenvalues from the EOM are equal to $\omega^2$. Or more importantly, $\omega_i = \sqrt{\lambda_i}$. 
+	Moreover, we can relate the eigenvectors to the modes shapes by a factor of the mass matrix:
+	\begin{equation}
+	\vec{u}_1 = M^{-1/2}\vec{v}_1
+	\label{eq:modeshape_to_eigenvector}
+	\end{equation}
+	The important thing to remember is that the natural frequencies are the square root of the eigenvalues and the mode shapes are related to the eigenvectors through the mass matrix. Expanding on equation \ref{eq:modeshape_to_eigenvector}, one can go from the mode shapes to the eigenvector through:
+	\begin{equation}
+	\vec{v}_1 = M^{1/2}\vec{u}_1
+	\end{equation}
+	therefore, it can be seen that the eigenvectors and mode shapes are related through the mass normalization process. 
+		
+	
+
 	
 	
 	
@@ -799,7 +839,7 @@
 	\begin{equation}
 	(\widetilde{K} - \lambda I)\textbf{v} =  0
 	\end{equation}
-	as $\textbf{v} \neq 0$ the matrix must be singular, resulting in the determinant of the matrix equaling zero. Or:
+	However, as $\textbf{v} \neq 0$ the matrix must be singular, the determinant of the $(\widetilde{K} - \lambda I)$ matrix must equal zero. Or:
 	\begin{equation}
 	\det \begin{bmatrix} 3-\lambda & -1 \\    -1  & 3-\lambda \end{bmatrix}  =  0
 	\end{equation}
@@ -823,34 +863,31 @@
 	\begin{equation}
 	v_{11} - v_{21} = 0 \text{ and } -v_{11} + v_{21} =0
 	\end{equation}
-	That show us that $v_{11} = v_{21}$ or $\vec{v}_1=[1 \hspace{1ex} 1]^\text{T}$. Therefore, using $(\alpha \vec{v}_1)^\text{T}(\alpha \vec{v}_1) = 1$ we obtain:
+	That show us that $v_{11} = v_{21}$ or $\vec{v}_1=[1 \hspace{1ex} 1]^\text{T}$. However, $\vec{v}_1$ so let's apply a scalar $\alpha$ to normalize it to a unit vector. Therefore, using $(\alpha \vec{v}_1)^\text{T}(\alpha \vec{v}_1) = 1$ we obtain:
 	\begin{equation}
 	\alpha [1 \hspace{1ex} 1]\alpha  \begin{bmatrix} 1 \\  1 \end{bmatrix}  = \alpha^2(2) = 1
 	\end{equation}
 	or $\alpha = 1/\sqrt{2}$. This allows us to normalize the vector knowing $\alpha \vec{v}_1=1$, resulting in a normalized vector of:
 	\begin{equation}
-	\alpha \vec{v}_1=  \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\ 1 \end{bmatrix} 
+	\alpha \vec{v}_1=  \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\ 1 \end{bmatrix}  =  \begin{bmatrix} 0.71 \\ 0.71 \end{bmatrix} 
 	\end{equation} 
 	A similar process is followed for $\lambda_2=4$ that leads to the normalized vector 
 	\begin{equation}
-	\alpha \vec{v}_2=  \frac{1}{\sqrt{2}} \begin{bmatrix} -1 \\ 1 \end{bmatrix} 
+	\alpha \vec{v}_2=  \frac{1}{\sqrt{2}} \begin{bmatrix} -1 \\ 1 \end{bmatrix} =  \begin{bmatrix} -0.71 \\ 0.71 \end{bmatrix} 
 	\end{equation} 
 	Lastly, the normalized eigenvectors can be converted to mode shapes using $\textbf{u} = M^{-1/2}\textbf{v}$. Resulting in: 
 	\begin{eqnarray}
-	\vec{u}_1 =  \begin{bmatrix} \frac{1}{3} & 0  \\  0 & 1 \end{bmatrix}   \begin{bmatrix} 1 \\  1 \end{bmatrix} =  \begin{bmatrix} \frac{1}{3} \\  1 \end{bmatrix}
+	\vec{u}_1 =  \begin{bmatrix} \frac{1}{3} & 0  \\  0 & 1 \end{bmatrix}   \begin{bmatrix} 0.71 \\ 0.71 \end{bmatrix} =  \begin{bmatrix} 0.24 \\  0.71 \end{bmatrix}
 	\end{eqnarray}
 	and:
 	\begin{eqnarray}
-	\vec{u}_2 =  \begin{bmatrix} \frac{1}{3} & 0  \\  0 & 1 \end{bmatrix}   \begin{bmatrix} -1 \\  1 \end{bmatrix} =  \begin{bmatrix} -\frac{1}{3} \\  1 \end{bmatrix}
+	\vec{u}_2 =  \begin{bmatrix} \frac{1}{3} & 0  \\  0 & 1 \end{bmatrix}   \begin{bmatrix} -1 \\  1 \end{bmatrix} =  \begin{bmatrix} -0.24 \\  0.71 \end{bmatrix}
 	\end{eqnarray}
-	Therefore, the first mode shape is $[1 \hspace{1ex} 1]$ while the second mode shape is $[\frac{1}{3} \hspace{1ex} -\frac{1}{3}]$. Again, this is using our prior definition of mode shapes to set $[1 \hspace{1ex} 1]$ as the first mode shape. Note that these are the same mode shape vectors as computed in example \ref{ex:2-DOF}.
+	While these mode shapes are correct, it is common practice to report them normalized with a maximum value of 1, therefore, $\vec{u}_1 = [1/3 \hspace{1ex} 1]$ and $\vec{u}_2 = [-1/3 \hspace{1ex} 1]$. While unit-normalization of the eigenvectors was not required in this example to obtain the right solution, it is good practice. Note that these are the same mode shape vectors as computed in example \ref{ex:2-DOF}.
+	
 	\end{example}
 	
-	Expanding on equation \ref{eq:modeshape_to_eigenvector}, one can go from the eigenvector to the mode shapes through:
-	\begin{equation}
-	\vec{u}_1 = M^{-1/2}\vec{v}_1 \; \text{ and } \; \vec{v}_1 = M^{1/2}\vec{u}_1
-	\end{equation}
-	therefore, it can be seen that the eigenvectors and mode shapes are related through the term $\vec{v}_1$. 
+
 	
 	
 	
@@ -1123,19 +1160,19 @@
 	\begin{equation}
 	\tilde{K} \textbf{v} = \lambda \textbf{v}
 	\end{equation}
-	is solved for the eigenvalues and eigenvectors, resulting in:
+	is solved for the eigenvalues and normalized eigenvectors using a computer, resulting in:
 	\begin{equation}
 	\lambda_1 = 0, \; \; \lambda_2 = 1.73, \; \; \lambda_3 = 2.23
 	\end{equation}
 	\begin{equation}
-	\vec{v}_1 = \begin{bmatrix} 0.44721 \\    0.77460 \\    0.44721  \end{bmatrix}, \; \; \vec{v}_2 = \begin{bmatrix} -0.707107 \\    0.0 \\    -0.707107 \end{bmatrix}, \; \; \vec{v}_3 = \begin{bmatrix} 0.54772 \\    -0.63245 \\    0.54772  \end{bmatrix}
+	\vec{v}_1 = \begin{bmatrix} 0.447 \\    0.775 \\    0.447  \end{bmatrix}, \; \; \vec{v}_2 = \begin{bmatrix} -0.707 \\    0.0 \\    0.707 \end{bmatrix}, \; \; \vec{v}_3 = \begin{bmatrix} 0.548 \\    -0.632 \\    0.548  \end{bmatrix}
 	\end{equation}
 	When the eigenvalue problem is solved using the mass normalized stiffness matrix $\tilde{K}$ the natural frequencies are $\omega_i = \sqrt{\lambda_i}$ while the mode shapes are derived from the eigenvectors as $\vec{u}=M^{-1/2}\vec{v}$. This results in:
 	\begin{equation}
-	\omega_1 = 0  \text{ rad/sec}, \; \; \omega_2 = 1.41421 \text{ rad/sec}, \; \; \omega_3 = 1.82574  \text{ rad/sec}
+	\omega_1 = 0  \text{ rad/sec}, \; \; \omega_2 = 1.414 \text{ rad/sec}, \; \; \omega_3 = 1.826  \text{ rad/sec}
 	\end{equation}
 	\begin{equation}
-	\vec{u}_1 = \begin{bmatrix} 0.44721 \\   0.44721 \\    0.44721 \end{bmatrix}, \; \; \vec{u}_2 = \begin{bmatrix} -0.707107 \\    0.0 \\    -0.707107 \end{bmatrix}, \; \; \vec{u}_3 = \begin{bmatrix} 0.54772 \\    -0.36515 \\    0.54772  \end{bmatrix}
+	\vec{u}_1 = \begin{bmatrix} 0.447 \\   0.447 \\    0.447 \end{bmatrix}, \; \; \vec{u}_2 = \begin{bmatrix} -0.707 \\    0.0 \\    0.707 \end{bmatrix}, \; \; \vec{u}_3 = \begin{bmatrix} 0.548 \\    -0.365 \\    0.548  \end{bmatrix}
 	\end{equation}
 	Next, normalizing the mode shapes by the max of the vector results in:
 	\begin{equation}
@@ -1164,9 +1201,9 @@
 	\lambda_1 = 0, \; \; \lambda_2 = 1.73, \; \; \lambda_3 = 2.23
 	\end{equation}
 	\begin{equation}
-	v_1 = \begin{bmatrix} -0.57735 \\    -0.57735 \\   -0.57735  \end{bmatrix}, \; \; v_2 = \begin{bmatrix} 0.707107 \\    0.0 \\    -0.707107 \end{bmatrix}, \; \; v_3 = \begin{bmatrix} 0.63960 \\    -0.42640 \\    0.63960  \end{bmatrix}
+	v_1 = \begin{bmatrix} -0.577 \\    -0.577 \\   -0.577  \end{bmatrix}, \; \; v_2 = \begin{bmatrix} 0.707 \\    0.0 \\    -0.707 \end{bmatrix}, \; \; v_3 = \begin{bmatrix} 0.639 \\    -0.426 \\    0.639 \end{bmatrix}
 	\end{equation}
-	Note that the eigenvalues are the same as those solved for using the normalized stiffness matrix approach while the eigenvectors appear to be different. This is because the absolute value of the eigenvectors do not hold information as only their direction as a set matters. To get the same values, you must normalize the mode shapes by the norm of the vector such that $\vec{u}_i = \frac{\vec{u}_i}{|\vec{u}_i|}$. While for the generalized eigenvalue approach $u_i=v_i \alpha$ where $\alpha$ is a scaling value. Note that here $\alpha=1$ as the mode shapes are already normalized. Plotting the normalized mode shapes results in:
+	Note that the eigenvalues are the same as those solved for using the normalized stiffness matrix approach while the eigenvectors appear to be different (mode 2). software tools and computing languages do not all follow the same standards in terms of returning eigenvectors as the information stored in the eigenvectors is just the direction of the transform. However, mode 2 reported here is still correct as only the shape of the eigenvalue matters.
 	
 	\begin{figure}[H]
 		\centering
@@ -1174,20 +1211,7 @@
 		\caption{The unit vector normalized displacement of the mode shapes solved for using the generalized eigenvalue approach.}
 		\label{fig:mode_shape_aiplane_example_generalized_eigenvalue}
 	\end{figure}
-	
-	Software tools and computing languages do not all follow the same standards in terms of returning normalized eigenvectors.  However, the information stored in the eigenvectors is just the direction of the transform. Therefore, the mode shapes are correct but some amplitudes are reversed as the mode shapes only report the shape these are corrected.  For example, see mode shape 2 above, in each case the mode shape is the same, however, how it is presented is a matter of preference.
-	
-	
-	
-	
-	%Next, normalizing the mode shapes by the norm of the vector as $\vec{u}_i = \frac{\vec{u}_i}{|\vec{u}_i|}$ results in:
-	%\begin{equation}
-	%	\vec{u}_1 = \begin{bmatrix} 0.57735 \\    0.57735 \\    0.57735  \end{bmatrix}, \; \; \vec{u}_2 = \begin{bmatrix} -0.707107 \\    0.0 \\    0.707107 \end{bmatrix}, \; \; \vec{u}_3 = \begin{bmatrix} 0.666667 \\    -0.333333 \\    0.666667  \end{bmatrix}
-	%\end{equation}
-	% These mode-shapes can then be plotted as:
-	
-	
-	
+
 	\end{example}
 	
 	
@@ -1223,7 +1247,7 @@
 	\end{eqnarray}
 	\noindent where the time-dependent generalized scalars $q_1(t), q_1(t), \cdots, q_1(t)$ are the modal participation coefficients (also called principal coordinates). Defining the modal matrix $P$ as: 
 	\begin{equation}
-	P = [ \vec{v}_1 \; \; \vec{v}_2 \; \; \vec{v}_3 \cdots \vec{v}_n]
+	P = [ \vec{v}_1 \;  \vec{v}_2 \;  \vec{v}_3 \; \cdots \; \vec{v}_n]
 	\end{equation}
 	where $\vec{v}_1 = M^{-1/2}u_1$ and are the orthonormal eigenvectors of $\tilde{K}$ (i.e. the mass normalized eigenvectors) and not the eigenvectors of the original system formation shown in equation~\ref{eq:generiq_MDOF_system}. Therefore, the linear combination of the normal modes (equation~\ref{eq:combination_of_modes}) can be more concisely written as:
 	\begin{equation}
@@ -1262,7 +1286,7 @@
 	\end{equation}
 	For a system with $n$ degrees of freedom, this equation can be broken down into:
 	\begin{equation}
-	\ddot{\vec{q}}_i(t) + \omega_i^2 \vec{q}_i (t) =  \vec{Q}(t), \; \; i=1,2, \cdots, n
+	\ddot{q}_i(t) + \omega_i^2 q_i (t) =  Q_i(t), \; \; i=1, \; 2, \; \cdots, \;n
 	\end{equation}
 	This expression is the same ODE that we have solved multiple times in this text. Therefore, we know the solution to be:
 	\begin{equation}
@@ -1313,35 +1337,35 @@
 	\end{equation}
 	and solving yields:
 	\begin{equation}
-	\lambda_1 = 2.734 \text{, } \vec{v}_1 = \begin{bmatrix} 0.546819 \\  0.837251 \end{bmatrix} 
+	\lambda_1 = 2.73 \text{, } \vec{v}_1 = \begin{bmatrix} 0.55 \\  0.84 \end{bmatrix} 
 	\end{equation}
 	\begin{equation}
-	\lambda_2 = 6.765 \text{, } \vec{v}_2 = \begin{bmatrix} -0.151349 \\  0.988480 \end{bmatrix}  \nonumber
+	\lambda_2 = 6.76 \text{, } \vec{v}_2 = \begin{bmatrix} -0.15 \\  0.99 \end{bmatrix}  \nonumber
 	\end{equation}
 	this is then related to the natural frequency and mode shapes as:
 	\begin{equation}
-	\omega_1 = \sqrt{\lambda_1} = 1.65 \text{ rad/s, } \vec{v}_1 = \vec{v}_1 \alpha_1 = \begin{bmatrix} 0.546819 \\  0.837251 \end{bmatrix} \alpha_1
+	\omega_1 = \sqrt{\lambda_1} = 1.65 \text{ rad/s, } \vec{v}_1 = \vec{v}_1 \alpha_1 = \begin{bmatrix} 0.55 \\  0.84 \end{bmatrix} \alpha_1
 	\end{equation}
 	\begin{equation}
-	\omega_2 = \sqrt{\lambda_2} = 2.60 \text{ rad/s, } \vec{v}_2 = \vec{v}_2 \alpha_2 = \begin{bmatrix} -0.151349 \\  0.988480 \end{bmatrix} \alpha_2 
+	\omega_2 = \sqrt{\lambda_2} = 2.60 \text{ rad/s, } \vec{v}_2 = \vec{v}_2 \alpha_2 = \begin{bmatrix} -0.15 \\  0.99 \end{bmatrix} \alpha_2 
 	\end{equation}
 	recall that the eigenvalues only contain information about the direction of the linear transform, and therefore, their magnitudes are arbitrary. Therefore, they must be scaled proportionally to each other. For this reason, the scalars $\alpha_1$ and $\alpha_2$ are added. My orthogonalizing the modal vectors with respect to the mass matrix, the values of $\alpha_1$ and $\alpha_2$ are found as:
 	\begin{equation}
 	1 = \vec{v}_1^\text{T} M \vec{v}_1 
 	\end{equation}
 	\begin{equation}
-	1 = \alpha_1^2 \begin{bmatrix} 0.546819 &  0.837251 \end{bmatrix} \begin{bmatrix} 10 & 0 \\    0  & 1 \end{bmatrix}  \begin{bmatrix} 0.546819 \\  0.837251 \end{bmatrix}
+	1 = \alpha_1^2 \begin{bmatrix} 0.55 &  0.84 \end{bmatrix} \begin{bmatrix} 10 & 0 \\    0  & 1 \end{bmatrix}  \begin{bmatrix} 0.55 \\  0.84 \end{bmatrix}
 	\end{equation}
 	and:
 	\begin{equation}
 	1 = \vec{v}_2^\text{T} M \vec{v}_2 
 	\end{equation}
 	\begin{equation}
-	1 = \alpha_2^2 \begin{bmatrix} -0.151349 &  0.98848 \end{bmatrix} \begin{bmatrix} 10 & 0 \\    0  & 1 \end{bmatrix}  \begin{bmatrix} -0.151349 \\  0.98848 \end{bmatrix}
+	1 = \alpha_2^2 \begin{bmatrix} -0.15 &  0.99 \end{bmatrix} \begin{bmatrix} 10 & 0 \\    0  & 1 \end{bmatrix}  \begin{bmatrix} -0.15 \\  0.99 \end{bmatrix}
 	\end{equation}
-	therefore, $\alpha_1=0.520$ and $\alpha_2=0.910$. Now, applying the proper scaling values to the modal vector, the modal matrix becomes:
+	therefore, $\alpha_1=0.52$ and $\alpha_2=0.91$. Now, applying the proper scaling values to the modal vector, the modal matrix becomes:
 	\begin{equation}
-	P = [ \vec{v}_1 \; \; \vec{v}_2 ] = \begin{bmatrix} 0.284 & -0.137 \\    0.435  & 0.900 \end{bmatrix}
+	P = [ \vec{v}_1 \; \; \vec{v}_2 ] = \begin{bmatrix} 0.284 & -0.14 \\    0.43  & 0.900 \end{bmatrix}
 	\end{equation}
 	Next, check that the normal modes in the modal matrix ($P$) are normalized, per equation~\ref{eq:modes_normalized}. This yields,
 	\begin{equation}
@@ -1361,25 +1385,25 @@
 	\end{equation}
 	where $q_{i0}$ and $\dot{q}_{i0}$ are the initial conditions in modal space. Therefore, the given initial conditions must be transferred into modal space as:
 	\begin{equation}
-	\vec{q}(0) = P^\text{T} M \vec{x}(0) = \begin{bmatrix} 0.284 &  0.435 \\  -0.137    & 0.900 \end{bmatrix} \begin{bmatrix} 10 & 0 \\  0  & 1 \end{bmatrix}  \begin{bmatrix} 1 \\  0 \end{bmatrix} =  \begin{bmatrix}  2.846 \\  -1.378 \end{bmatrix}
+	\vec{q}(0) = P^\text{T} M \vec{x}(0) = \begin{bmatrix} 0.284 &  0.43 \\  -0.14    & 0.900 \end{bmatrix} \begin{bmatrix} 10 & 0 \\  0  & 1 \end{bmatrix}  \begin{bmatrix} 1 \\  0 \end{bmatrix} =  \begin{bmatrix}  2.85 \\  -1.378 \end{bmatrix}
 	\end{equation}
 	\begin{equation}
-	\dot{\vec{q}}(0) = P^\text{T} M \vec{v}(0) = \begin{bmatrix} 0.284 &  0.435 \\  -0.137    & 0.900 \end{bmatrix} \begin{bmatrix} 10 & 0 \\  0  & 1 \end{bmatrix}  \begin{bmatrix} 0 \\  0 \end{bmatrix} =  \begin{bmatrix}  0 \\  0 \end{bmatrix}
+	\dot{\vec{q}}(0) = P^\text{T} M \vec{v}(0) = \begin{bmatrix} 0.28 &  0.43 \\  -0.14    & 0.90 \end{bmatrix} \begin{bmatrix} 10 & 0 \\  0  & 1 \end{bmatrix}  \begin{bmatrix} 0 \\  0 \end{bmatrix} =  \begin{bmatrix}  0 \\  0 \end{bmatrix}
 	\end{equation}
 	therefore, 
 	\begin{eqnarray}
-	q_1(t) = 2.846 \cdot \cos (1.65 t) \\ 
-	q_2(t) = -1.378 \cdot \cos (2.6 t)  \nonumber
+	q_1(t) = 2.85 \cdot \cos (1.65 t) \\ 
+	q_2(t) = -1.34 \cdot \cos (2.6 t)  \nonumber
 	\label{eq:participation}
 	\end{eqnarray}
 	converting back into the time domain is done knowing $\vec{x}(t) = P\vec{q}(t)$, therefore, 
 	\begin{equation}
-	\vec{x}(t) = P\vec{q}(t) = \begin{bmatrix} 0.284 & -0.137 \\    0.435  & 0.900 \end{bmatrix}  \begin{bmatrix} 2.846 \cdot \cos (1.65 t) \\  -1.378 \cdot \cos (2.6 t) \end{bmatrix}
+	\vec{x}(t) = P\vec{q}(t) = \begin{bmatrix} 0.28 & -0.14 \\    0.43  & 0.90 \end{bmatrix}  \begin{bmatrix} 2.85 \cdot \cos (1.65 t) \\  -1.38 \cdot \cos (2.6 t) \end{bmatrix}
 	\end{equation}
 	This is further simplified into:
 	\begin{eqnarray}
-	x_1(t) = 0.808 \cdot \cos (1.65 t) + 0.189 \cdot \cos (2.6 t) \\ 
-	x_2(t) = 1.238 \cdot \cos (1.65 t) - 1.240 \cdot \cos (2.6 t)  \nonumber
+	x_1(t) = 0.81 \cdot \cos (1.65 t) + 0.19 \cdot \cos (2.6 t) \\ 
+	x_2(t) = 1.24 \cdot \cos (1.65 t) - 1.24 \cdot \cos (2.6 t)  \nonumber
 	\end{eqnarray}
 	These results are plotted in figure~\ref{fig:modal_analysis_free_vibration}.
 	\begin{figure}[H]
@@ -1392,12 +1416,12 @@
 	Next, the truncated response can be computed by only considering the first mode response for the system (i.e. $\vec{x}(t) = q_1(t) \vec{v}_1$). This is obtained as:
 	
 	\begin{equation}
-	\vec{x}(t) = P\vec{q}_\text{truncated}(t) = \begin{bmatrix} 0.284 & -0.137 \\    0.435  & 0.900 \end{bmatrix}  \begin{bmatrix} 2.846 \cdot \cos (1.65 t) \end{bmatrix}
+	\vec{x}(t) = P\vec{q}_\text{truncated}(t) = \begin{bmatrix} 0.28 & -0.14 \\    0.43  & 0.90 \end{bmatrix}  \begin{bmatrix} 2.85 \cdot \cos (1.65 t) \end{bmatrix}
 	\end{equation}
 	This is further simplified into:
 	\begin{eqnarray}
-	x_1(t) = 0.808 \cdot \cos (1.65 t) \\ 
-	x_2(t) = 1.238 \cdot \cos (1.65 t) \nonumber
+	x_1(t) = 0.81 \cdot \cos (1.65 t) \\ 
+	x_2(t) = 1.24 \cdot \cos (1.65 t) \nonumber
 	\end{eqnarray}
 	These results are plotted in figure~\ref{fig:modal_analysis_free_vibration_truncated}. Note that this only considers the response of the system that is a function of the first mode. Note that this captures some of the ``general'' idea of the system while missing out on the finer points that the 2$^{\text{nd}}$ mode contributes. 
 	

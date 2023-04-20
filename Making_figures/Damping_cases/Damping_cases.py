@@ -27,7 +27,20 @@ import time
 import scipy.io as sio
 tt1 = time.time()
 
+# set default fonts and plot colors
+plt.rcParams.update({'text.usetex': True})
+plt.rcParams.update({'image.cmap': 'viridis'})
+plt.rcParams.update({'font.serif':['Times New Roman', 'Times', 'DejaVu Serif',
+ 'Bitstream Vera Serif', 'Computer Modern Roman', 'New Century Schoolbook',
+ 'Century Schoolbook L',  'Utopia', 'ITC Bookman', 'Bookman', 
+ 'Nimbus Roman No9 L', 'Palatino', 'Charter', 'serif']})
+plt.rcParams.update({'font.family':'serif'})
+plt.rcParams.update({'font.size': 10})
+plt.rcParams.update({'mathtext.rm': 'serif'})
+plt.rcParams.update({'mathtext.fontset': 'custom'}) # I don't think I need this as its set to 'stixsans' above.
+cc = plt.rcParams['axes.prop_cycle'].by_key()['color']
 plt.close('all')
+
 
 
 
@@ -89,8 +102,8 @@ plt.grid('on')
 plt.ylabel('amplitude (mm)')
 plt.xlabel('time (s)')
 plt.tight_layout()
-plt.legend(loc=1,ncol=3,framealpha=1)
-plt.savefig('Damping_cases',dpi=300)
+plt.legend(loc=1,framealpha=1)
+plt.savefig('Damping_cases.jpg',dpi=300)
 
 
 

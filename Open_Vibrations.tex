@@ -21,7 +21,7 @@
 
 
 \begin{document}
-
+\thispagestyle{empty}	
 
 \begin{center}
 	{\fontsize{50}{60}\selectfont Open Vibrations}
@@ -39,14 +39,16 @@
 	
 	\vspace{1cm}
 	
-	\textbf{Laura Micheli}\\  Department of Civil and Environmental Engineering \\ Catholic University of America, Washington DC, USA
+	\textbf{Laura Micheli}\\ Department of Civil and Environmental Engineering \\ University of South Carolina, Columbia SC, USA 
 	
 	\vspace{2cm}
-	
-	\today
+
+
+
 \end{center}
 
 \pagebreak
+\thispagestyle{empty}	
 
 \section*{Preface}
 This open-source text is designed to offer the reader a complete text on the basics of mechanical vibrations. 
@@ -65,13 +67,20 @@ This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 Intern
 The source code for this text is available at \url{https://github.com/austindowney/Open-Vibrations}.
 
 
+\vspace*{\fill}
+\begin{center}
+\today
+\end{center}
 
 
 \pagebreak
-
+\setcounter{page}{1}
+\pagenumbering{roman}
 \tableofcontents
 
 \pagebreak
+\setcounter{page}{1}
+\pagenumbering{arabic} 
 
 % Chapter 1 Fundamentals of vibrations
 \graphicspath{{Chapter_1_fundamentals_of_vibrations/}} 
@@ -89,17 +98,17 @@ The source code for this text is available at \url{https://github.com/austindown
 % Chapter 5 Multiple DOF Systems
 \include{Chapter_5_multiple_DOF_systems/Chapter_5_multiple_DOF_systems}
 
-% Chapter 6 Continuous Systems
-\include{Chapter_6_continuous_systems/Chapter_6_continuous_systems}
+% Chapter 6 Vibration Control
+\include{Chapter_6_vibration_control/Chapter_6_vibration_control}
 
-% Chapter 7 Vibration Control
-\include{Chapter_7_vibration_control/Chapter_7_vibration_control}
+% Chapter 7 Structural Dynamics
+\include{Chapter_7_structural_dynamics/Chapter_7_structural_dynamics}
 
-% Chapter 8 Experimental Vibrations
-\include{Chapter_8_experimental_vibrations/Chapter_8_experimental_vibrations}
-
-% Chapter 9 Signal Processing
-\include{Chapter_9_structural_dynamics/Chapter_9_structural_dynamics}
+%% Chapter 8 Continuous Systems
+%\include{Chapter_8_continuous_systems/Chapter_8_continuous_systems}
+%
+%% Chapter 9 Experimental Vibrations
+%\include{Chapter_9_experimental_vibrations/Chapter_9_experimental_vibrations}
 
 
 \pagebreak

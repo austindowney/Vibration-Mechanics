@@ -5,7 +5,7 @@
    viewBox="0 0 165.1 228.60001"
    version="1.1"
    id="svg8"
-   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
    sodipodi:docname="2-DOF-spring_mass_horizontal_double_wall.svg"
    inkscape:export-filename="2-DOF-spring_mass_dashpot_horizontal_double_wall.png"
    inkscape:export-xdpi="300"
@@ -8740,7 +8740,7 @@
        inkscape:stockid="Arrow1Lend">
       <path
          transform="matrix(-0.8,0,0,-0.8,-10,0)"
-         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
          d="M 0,0 5,-5 -12.5,0 5,5 Z"
          id="path1174-4-7-2-4"
          inkscape:connector-curvature="0" />
@@ -9781,16 +9781,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.15146881"
-     inkscape:cx="3918.2983"
-     inkscape:cy="917.68066"
+     inkscape:zoom="1.2117505"
+     inkscape:cx="358.57217"
+     inkscape:cy="656.07566"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="2880"
-     inkscape:window-height="1526"
-     inkscape:window-x="2869"
-     inkscape:window-y="-11"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1072"
+     inkscape:window-y="835"
      inkscape:window-maximized="1"
      inkscape:snap-global="false"
      units="in"
@@ -10583,7 +10583,7 @@
    id="tspan18018-2-2">2</tspan></tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 94.637273,189.21617 v 8.71048"
+       d="m 94.637273,193.63772 0,4.28893"
        id="path1167-4-2-9-1-7-6-9"
        inkscape:connector-curvature="0"
        inkscape:export-filename="2-DOF-spring_mass_horizontal_double_wall.png"
@@ -10592,7 +10592,7 @@
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend-3-3-7-5-5-0-1-7)"
-       d="M 94.662523,190.98083 H 101.3748"
+       d="M 94.662523,135.86168 H 101.3748"
        id="path1169-4-5-2-4-9-4-97-0"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
@@ -10603,7 +10603,7 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.9389px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="102.76047"
-       y="191.73962"
+       y="136.62047"
        id="text1497-9-4-7-6-7-3-9-1"
        inkscape:export-filename="2-DOF-spring_mass_horizontal_double_wall.png"
        inkscape:export-xdpi="300"
@@ -10611,13 +10611,13 @@
          sodipodi:role="line"
          id="tspan1495-4-19-4-65-6-5-89-1"
          x="102.76047"
-         y="191.73962"
+         y="136.62047"
          style="font-style:italic;font-size:4.9389px;stroke-width:0.264583">f<tspan
-   style="font-size:3.2103px;baseline-shift:sub;stroke-width:0.264583;font-style:normal"
+   style="font-style:normal;font-size:3.2103px;baseline-shift:sub;stroke-width:0.264583"
    id="tspan18491-9">2</tspan>(t)</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 50.159703,189.19041 v 8.71048"
+       d="m 50.159703,193.61196 0,4.28893"
        id="path1167-4-2-9-1-7-2"
        inkscape:connector-curvature="0"
        inkscape:export-filename="2-DOF-spring_mass_horizontal_double_wall.png"
@@ -10651,7 +10651,7 @@
    id="tspan18022-3-7">1</tspan></tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend-3-3-7-5-5-0-1-0-6)"
-       d="m 50.135884,191.22705 h 6.71227"
+       d="m 50.135884,136.1079 h 6.71227"
        id="path1169-4-5-2-4-9-4-97-2-0"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
@@ -10662,7 +10662,7 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.9389px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="58.233829"
-       y="191.59966"
+       y="136.4805"
        id="text1497-9-4-7-6-7-3-9-2-0"
        inkscape:export-filename="2-DOF-spring_mass_horizontal_double_wall.png"
        inkscape:export-xdpi="300"
@@ -10670,9 +10670,9 @@
          sodipodi:role="line"
          id="tspan1495-4-19-4-65-6-5-89-8-1"
          x="58.233829"
-         y="191.59966"
+         y="136.4805"
          style="font-style:italic;font-size:4.9389px;stroke-width:0.264583">f<tspan
-   style="font-size:3.2103px;baseline-shift:sub;stroke-width:0.264583;font-style:normal"
+   style="font-style:normal;font-size:3.2103px;baseline-shift:sub;stroke-width:0.264583"
    id="tspan18491-1-8">1</tspan>(t)</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -11199,686 +11199,6 @@
        x="244.73958"
        y="-382.31772"
        id="text7026" />
-    <g
-       id="g4991-19"
-       transform="rotate(-90,199.41635,158.38393)"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\spring_and_bar_mass_cantilever_beam.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300">
-      <path
-         inkscape:connector-curvature="0"
-         id="path4556-6-3"
-         d="M 91.789659,253.50085 H 117.58653"
-         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-06-8"
-         d="m 117.47549,253.52063 -2.53907,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-6-2-8"
-         d="m 115.20103,253.52063 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-7-6-7"
-         d="m 112.92658,253.52063 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-5-1-4"
-         d="m 110.65215,253.52063 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-3-8-3"
-         d="m 108.37769,253.52063 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-56-7-2"
-         d="m 106.10324,253.52063 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-2-9-8"
-         d="m 103.82879,253.52063 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-9-2-5"
-         d="m 99.279891,253.52063 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-1-0-6"
-         d="m 97.005452,253.52063 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-27-2-3"
-         d="m 94.731002,253.52063 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-0-3-5"
-         d="m 92.456554,253.52063 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-93-7-11"
-         d="m 101.55434,253.52063 -2.539058,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-    </g>
-    <rect
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.20987965;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect15758-6"
-       width="3.8882332"
-       height="28.773632"
-       x="-256.04385"
-       y="294.50031"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\spring_and_bar_mass_cantilever_beam.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"
-       transform="rotate(-90)" />
-    <rect
-       id="rect3745-8-4"
-       width="15.635269"
-       height="15.635269"
-       x="-261.91736"
-       y="323.36725"
-       style="fill:none;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\spring_and_bar_mass_cantilever_beam.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"
-       transform="rotate(-90)" />
-    <text
-       xml:space="preserve"
-       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Italic';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="328.4325"
-       y="255.61728"
-       id="text4554-4-8"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\spring_and_bar_mass_cantilever_beam.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"><tspan
-         sodipodi:role="line"
-         id="tspan4552-7-2"
-         x="328.4325"
-         y="255.61728"
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman,  Italic';stroke-width:0.264583">m</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="308.36877"
-       y="261.93057"
-       id="text15783-7"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\spring_and_bar_mass_cantilever_beam.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"><tspan
-         sodipodi:role="line"
-         id="tspan15781-5"
-         x="308.36877"
-         y="261.93057"
-         style="font-style:italic;stroke-width:0.264583">l</tspan></text>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.26499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker15797-4)"
-       d="m 312.5309,260.64296 h 9.60366"
-       id="path15785-4"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\spring_and_bar_mass_cantilever_beam.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.26499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker15797-2-5)"
-       d="m 305.79273,260.64296 h -9.40321"
-       id="path15785-9-4"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\spring_and_bar_mass_cantilever_beam.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 344.31111,246.35994 h -4.016"
-       id="path1167-8-3-3"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\spring_and_bar_mass_cantilever_beam.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.26499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend-9-1-0)"
-       d="m 342.30311,246.40718 v 6.71227"
-       id="path1169-6-5-3"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\spring_and_bar_mass_cantilever_beam.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="341.59335"
-       y="255.97359"
-       id="text1497-5-6-1"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\spring_and_bar_mass_cantilever_beam.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"><tspan
-         sodipodi:role="line"
-         id="tspan1495-5-47-3"
-         x="341.59335"
-         y="255.97359"
-         style="font-style:italic;stroke-width:0.264583">x</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.4208px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.23156"
-       x="353.58755"
-       y="258.7204"
-       id="text18043-3"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\spring_and_bar_mass_cantilever_beam.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"><tspan
-         sodipodi:role="line"
-         id="tspan18041-5"
-         x="353.58755"
-         y="258.7204"
-         style="stroke-width:1.23156">=</tspan></text>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 392.87855,261.43665 v -7.79576 l -1.44694,-0.61776 1.44694,-0.61775 1.44694,-0.61776 -1.44694,-0.61775 -1.44694,-0.61776 1.44694,-0.61774 1.44694,-0.61776 -1.44694,-0.61776 -1.44694,-0.61775 1.44694,-0.61776 1.44694,-0.61774 -1.44694,-0.61776 -1.44694,-0.61776 1.44694,-0.61776 1.44694,-0.61775 -1.44694,-0.61775 -1.44694,-0.61776 1.44694,-0.61775 1.44694,-0.61776 -1.44694,-0.61774 v -8.5281"
-       id="path3728-3-4-1-6-8"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccccccccccccccccccccccc"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\spring_and_bar_mass_cantilever_beam.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300" />
-    <rect
-       id="rect3745-0-6-9-4"
-       width="15.63527"
-       height="15.63527"
-       x="-400.70407"
-       y="-277.23181"
-       style="fill:none;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\spring_and_bar_mass_cantilever_beam.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"
-       transform="scale(-1)" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;line-height:1.25;font-family:Amiri;-inkscape-font-specification:Amiri;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="390.50366"
-       y="271.31314"
-       id="text4554-6-1-6-4"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\spring_and_bar_mass_cantilever_beam.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"><tspan
-         sodipodi:role="line"
-         id="tspan4552-1-2-2-1"
-         x="390.50366"
-         y="271.31314"
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.264583">m</tspan></text>
-    <g
-       transform="matrix(1.0087068,0,0,1.0087068,288.28273,-22.970296)"
-       id="g4991-5-6-57-0-7"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\spring_and_bar_mass_cantilever_beam.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300">
-      <path
-         inkscape:connector-curvature="0"
-         id="path4556-6-9-7-19-3-3"
-         d="M 91.789659,253.50085 H 117.58653"
-         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-06-2-6-51-8-3"
-         d="m 117.47549,253.52063 -2.53907,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-6-2-2-4-7-1-0"
-         d="m 115.20103,253.52063 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-7-6-8-1-2-29-9"
-         d="m 112.92658,253.52063 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-5-1-9-4-1-8-2"
-         d="m 110.65215,253.52063 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-3-8-7-7-4-1-1"
-         d="m 108.37769,253.52063 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-56-7-3-8-6-4-9"
-         d="m 106.10324,253.52063 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-2-9-6-8-2-2-8"
-         d="m 103.82879,253.52063 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-9-2-1-5-0-5-3"
-         d="m 99.279891,253.52063 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-1-0-2-8-03-2-7"
-         d="m 97.005452,253.52063 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-27-2-9-7-1-7-3"
-         d="m 94.731002,253.52063 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-0-3-3-5-2-1-9"
-         d="m 92.456554,253.52063 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-93-7-1-2-4-6-2"
-         d="m 101.55434,253.52063 -2.539058,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-    </g>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;line-height:1.25;font-family:Amiri;-inkscape-font-specification:Amiri;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="395.66415"
-       y="250.63852"
-       id="text5083-7-0-5-3"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\spring_and_bar_mass_cantilever_beam.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"><tspan
-         sodipodi:role="line"
-         id="tspan5081-4-1-3-3"
-         x="395.66415"
-         y="250.63852"
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.264583">k</tspan></text>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 383.39601,261.60721 h -4.016"
-       id="path1167-8-3-6-9"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\spring_and_bar_mass_cantilever_beam.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.26499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend-9-1-5-3)"
-       d="m 381.38801,261.65445 v 6.71227"
-       id="path1169-6-5-4-8"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\spring_and_bar_mass_cantilever_beam.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="-382.09778"
-       y="-269.70328"
-       id="text1497-5-6-0-3"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\spring_and_bar_mass_cantilever_beam.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"
-       transform="scale(-1)"><tspan
-         sodipodi:role="line"
-         id="tspan1495-5-47-1-3"
-         x="-382.09778"
-         y="-269.70328"
-         style="font-style:italic;stroke-width:0.264583">x</tspan></text>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 304.43623,314.81113 h 7.79576 l 0.61776,-1.44694 0.61775,1.44694 0.61776,1.44694 0.61775,-1.44694 0.61776,-1.44694 0.61774,1.44694 0.61776,1.44694 0.61776,-1.44694 0.61775,-1.44694 0.61776,1.44694 0.61774,1.44694 0.61776,-1.44694 0.61776,-1.44694 0.61776,1.44694 0.61775,1.44694 0.61775,-1.44694 0.61776,-1.44694 0.61775,1.44694 0.61776,1.44694 0.61774,-1.44694 h 8.5281"
-       id="path3728-3-4-1-6-8-9"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccccccccccccccccccccccc"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\equivalent_stiffness_series.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 334.95777,314.81113 h 7.79576 l 0.61776,-1.44694 0.61775,1.44694 0.61776,1.44694 0.61775,-1.44694 0.61776,-1.44694 0.61774,1.44694 0.61776,1.44694 0.61776,-1.44694 0.61775,-1.44694 0.61776,1.44694 0.61774,1.44694 0.61776,-1.44694 0.61776,-1.44694 0.61776,1.44694 0.61775,1.44694 0.61775,-1.44694 0.61776,-1.44694 0.61775,1.44694 0.61776,1.44694 0.61774,-1.44694 h 8.52811"
-       id="path3728-3-4-1-6-8-9-2"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccccccccccccccccccccccc"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\equivalent_stiffness_series.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.14349779;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="path18831"
-       cx="334.03647"
-       cy="314.81113"
-       r="1.4011676"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\equivalent_stiffness_series.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.14349779;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="path18831-6"
-       cx="303.51489"
-       cy="314.81113"
-       r="1.4011676"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\equivalent_stiffness_series.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.14349779;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="path18831-9"
-       cx="364.55804"
-       cy="314.81113"
-       r="1.4011676"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\equivalent_stiffness_series.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="304.07721"
-       y="312.27905"
-       id="text18895"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\equivalent_stiffness_series.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"><tspan
-         sodipodi:role="line"
-         id="tspan18893"
-         x="304.07721"
-         y="312.27905"
-         style="font-style:italic;stroke-width:0.264583">a</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="335.51239"
-       y="312.70288"
-       id="text18899"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\equivalent_stiffness_series.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"><tspan
-         sodipodi:role="line"
-         id="tspan18897"
-         x="335.51239"
-         y="312.70288"
-         style="font-style:italic;stroke-width:0.264583">b</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="365.95877"
-       y="312.83569"
-       id="text18903"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\equivalent_stiffness_series.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"><tspan
-         sodipodi:role="line"
-         id="tspan18901"
-         x="365.95877"
-         y="312.83569"
-         style="font-style:italic;stroke-width:0.264583">c</tspan></text>
-    <g
-       style="fill:#000000;fill-opacity:1"
-       id="g20089"
-       transform="matrix(0.35277779,0,0,0.35277779,288.16975,118.67502)"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\equivalent_stiffness.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300">
-      <use
-         height="100%"
-         width="100%"
-         xlink:href="#glyph1-1-9"
-         x="259.814"
-         y="558.57898"
-         id="use20087" />
-    </g>
-    <g
-       style="fill:#000000;fill-opacity:1"
-       id="g20095"
-       transform="matrix(0.35277779,0,0,0.35277779,288.16975,118.67502)"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\equivalent_stiffness.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300">
-      <use
-         height="100%"
-         width="100%"
-         xlink:href="#glyph7-1-03"
-         x="266.18399"
-         y="560.73102"
-         id="use20091" />
-      <use
-         height="100%"
-         width="100%"
-         xlink:href="#glyph7-2-7"
-         x="271.63855"
-         y="560.73102"
-         id="use20093" />
-    </g>
-    <g
-       style="fill:#000000;fill-opacity:1"
-       id="g20099"
-       transform="matrix(0.35277779,0,0,0.35277779,288.16975,118.67502)"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\equivalent_stiffness.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300">
-      <use
-         height="100%"
-         width="100%"
-         xlink:href="#glyph2-1-2"
-         x="280.168"
-         y="558.57898"
-         id="use20097" />
-    </g>
-    <g
-       style="fill:#000000;fill-opacity:1"
-       id="g20103"
-       transform="matrix(0.35277779,0,0,0.35277779,288.16975,118.67502)"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\equivalent_stiffness.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300">
-      <use
-         height="100%"
-         width="100%"
-         xlink:href="#glyph0-27-8"
-         x="311.396"
-         y="548.867"
-         id="use20101" />
-    </g>
-    <path
-       inkscape:connector-curvature="0"
-       style="fill:none;stroke:#000000;stroke-width:0.20249446;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
-       d="m 392.48587,314.46393 h 13.60537"
-       id="path20105"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\equivalent_stiffness.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300" />
-    <g
-       style="fill:#000000;fill-opacity:1"
-       id="g20109"
-       transform="matrix(0.35277779,0,0,0.35277779,288.16975,118.67502)"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\equivalent_stiffness.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300">
-      <use
-         height="100%"
-         width="100%"
-         xlink:href="#glyph4-2-5"
-         x="298.82999"
-         y="564.29901"
-         id="use20107" />
-    </g>
-    <path
-       inkscape:connector-curvature="0"
-       style="fill:none;stroke:#000000;stroke-width:0.20249446;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
-       d="m 392.90755,318.4754 h 3.29075"
-       id="path20111"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\equivalent_stiffness.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300" />
-    <g
-       style="fill:#000000;fill-opacity:1"
-       id="g20115"
-       transform="matrix(0.35277779,0,0,0.35277779,288.16975,118.67502)"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\equivalent_stiffness.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300">
-      <use
-         height="100%"
-         width="100%"
-         xlink:href="#glyph7-3-9"
-         x="296.89401"
-         y="574.90002"
-         id="use20113" />
-    </g>
-    <g
-       style="fill:#000000;fill-opacity:1"
-       id="g20119"
-       transform="matrix(0.35277779,0,0,0.35277779,288.16975,118.67502)"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\equivalent_stiffness.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300">
-      <use
-         height="100%"
-         width="100%"
-         xlink:href="#glyph8-1-5"
-         x="301.73801"
-         y="576.53699"
-         id="use20117" />
-    </g>
-    <g
-       style="fill:#000000;fill-opacity:1"
-       id="g20123"
-       transform="matrix(0.35277779,0,0,0.35277779,288.16975,118.67502)"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\equivalent_stiffness.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300">
-      <use
-         height="100%"
-         width="100%"
-         xlink:href="#glyph2-2-5"
-         x="309.409"
-         y="569.95099"
-         id="use20121" />
-    </g>
-    <g
-       style="fill:#000000;fill-opacity:1"
-       id="g20127"
-       transform="matrix(0.35277779,0,0,0.35277779,288.16975,118.67502)"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\equivalent_stiffness.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300">
-      <use
-         height="100%"
-         width="100%"
-         xlink:href="#glyph4-2-5"
-         x="325.67999"
-         y="564.29901"
-         id="use20125" />
-    </g>
-    <path
-       inkscape:connector-curvature="0"
-       style="fill:none;stroke:#000000;stroke-width:0.20249446;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
-       d="m 402.3788,318.4754 h 3.29076"
-       id="path20129"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\equivalent_stiffness.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300" />
-    <g
-       style="fill:#000000;fill-opacity:1"
-       id="g20133"
-       transform="matrix(0.35277779,0,0,0.35277779,288.16975,118.67502)"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\equivalent_stiffness.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300">
-      <use
-         height="100%"
-         width="100%"
-         xlink:href="#glyph7-3-9"
-         x="323.74399"
-         y="574.90002"
-         id="use20131" />
-    </g>
-    <g
-       style="fill:#000000;fill-opacity:1"
-       id="g20137"
-       transform="matrix(0.35277779,0,0,0.35277779,288.16975,118.67502)"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\equivalent_stiffness.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300">
-      <use
-         height="100%"
-         width="100%"
-         xlink:href="#glyph8-2-3"
-         x="328.58701"
-         y="576.53699"
-         id="use20135" />
-    </g>
-    <g
-       style="fill:#000000;fill-opacity:1"
-       id="g20169-6"
-       transform="matrix(0.3527778,0,0,0.3527778,212.31373,92.130331)"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\equivalent_stiffness_series.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300">
-      <use
-         height="100%"
-         width="100%"
-         xlink:href="#glyph1-1-9"
-         x="294.20401"
-         y="621.37903"
-         id="use20167-9" />
-    </g>
-    <g
-       style="fill:#000000;fill-opacity:1"
-       id="g20173-46"
-       transform="matrix(0.3527778,0,0,0.3527778,212.31373,92.249581)"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\equivalent_stiffness_series.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300">
-      <use
-         height="100%"
-         width="100%"
-         xlink:href="#glyph4-2-5"
-         x="300.57401"
-         y="623.742"
-         id="use20171-4" />
-    </g>
-    <g
-       style="fill:#000000;fill-opacity:1"
-       id="g20187-4"
-       transform="matrix(0.3527778,0,0,0.3527778,233.29702,92.339565)"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\equivalent_stiffness_series.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300">
-      <use
-         height="100%"
-         width="100%"
-         xlink:href="#glyph1-1-9"
-         x="324.04901"
-         y="621.37903"
-         id="use20185-3" />
-    </g>
-    <g
-       style="fill:#000000;fill-opacity:1"
-       id="g20191-0"
-       transform="matrix(0.3527778,0,0,0.3527778,233.29702,92.458815)"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_5\figures\equivalent_stiffness_series.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300">
-      <use
-         height="100%"
-         width="100%"
-         xlink:href="#glyph4-3-87"
-         x="330.41901"
-         y="623.742"
-         id="use20189-8" />
-    </g>
     <flowRoot
        xml:space="preserve"
        id="flowRoot7116"
@@ -11890,129 +11210,6 @@
            x="2237.1428"
            y="74.662537" /></flowRegion><flowPara
          id="flowPara7122" /></flowRoot>
-    <rect
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect5817"
-       width="18.804327"
-       height="10.583344"
-       x="541.2619"
-       y="264.87201"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_9\figures\system_input_output.png"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="550.58484"
-       y="268.6293"
-       id="text5821"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_9\figures\system_input_output.png"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500"><tspan
-         sodipodi:role="line"
-         id="tspan5819"
-         x="550.58484"
-         y="268.6293"
-         style="text-align:center;text-anchor:middle;stroke-width:0.264583">system</tspan><tspan
-         sodipodi:role="line"
-         x="550.58484"
-         y="273.03992"
-         style="text-align:center;text-anchor:middle;stroke-width:0.264583"
-         id="tspan5823"><tspan
-   style="font-style:italic"
-   id="tspan5825">H</tspan>(<tspan
-   style="font-style:italic"
-   id="tspan5827">s</tspan>)</tspan></text>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend-3-5)"
-       d="m 519.0094,270.16368 h 21.5152"
-       id="path5829"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_9\figures\system_input_output.png"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend-3-5-1)"
-       d="m 560.20209,270.16368 h 21.5152"
-       id="path5829-9"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_9\figures\system_input_output.png"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="529.96869"
-       y="263.45764"
-       id="text7024"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_9\figures\system_input_output.png"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500"><tspan
-         sodipodi:role="line"
-         id="tspan7022"
-         x="529.96869"
-         y="263.45764"
-         style="text-align:center;text-anchor:middle;stroke-width:0.264583">input</tspan><tspan
-         sodipodi:role="line"
-         x="529.96869"
-         y="267.86826"
-         style="text-align:center;text-anchor:middle;stroke-width:0.264583"
-         id="tspan7026"><tspan
-   style="font-style:italic;text-align:center;text-anchor:middle"
-   id="tspan7028">F</tspan>(<tspan
-   style="font-style:italic;text-align:center;text-anchor:middle"
-   id="tspan7030">s</tspan><tspan
-   style="text-align:center;text-anchor:middle"
-   id="tspan7032">)</tspan></tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="571.15363"
-       y="263.28107"
-       id="text7024-1"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\Class_notes\Class_9\figures\system_input_output.png"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500"><tspan
-         sodipodi:role="line"
-         id="tspan7022-4"
-         x="571.15363"
-         y="263.28107"
-         style="text-align:center;text-anchor:middle;stroke-width:0.264583">output</tspan><tspan
-         sodipodi:role="line"
-         x="571.15363"
-         y="267.69168"
-         style="text-align:center;text-anchor:middle;stroke-width:0.264583"
-         id="tspan7026-9"><tspan
-   style="font-style:italic"
-   id="tspan7064">X</tspan>(<tspan
-   style="font-style:italic;text-align:center;text-anchor:middle;stroke-width:0.264583"
-   id="tspan7030-6">s</tspan>)</tspan></text>
-    <rect
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect5817-4"
-       width="18.804327"
-       height="10.583344"
-       x="541.28217"
-       y="299.20996"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\HW\Final_exam\Midterm_exam_solution\figures\system_input_output_empty.png"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend-3-5-4)"
-       d="m 519.02967,304.50141 h 21.5152"
-       id="path5829-6"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\HW\Final_exam\Midterm_exam_solution\figures\system_input_output_empty.png"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend-3-5-1-6)"
-       d="m 560.22236,304.50141 h 21.5152"
-       id="path5829-9-3"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="C:\Users\adowney2\Dropbox\Teaching\EMCH-330\HW\Final_exam\Midterm_exam_solution\figures\system_input_output_empty.png"
-       inkscape:export-xdpi="500"
-       inkscape:export-ydpi="500" />
     <flowRoot
        xml:space="preserve"
        id="flowRoot18028"
@@ -12053,7 +11250,7 @@
    id="tspan19883">1</tspan>g</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 42.030247,232.02543 v 8.71048"
+       d="m 42.030247,235.73092 0,5.00499"
        id="path1167-4-2-9-1-7"
        inkscape:connector-curvature="0"
        inkscape:export-filename="2-DOF-spring_mass_horizontal_double_wall.png"
@@ -12401,7 +11598,7 @@
            style="font-style:normal;font-size:2.29306px;baseline-shift:sub;stroke-width:0.264583">2</tspan></tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 104.38318,232.29741 v 8.71048"
+       d="m 104.38318,236.0029 0,5.00499"
        id="path1167-4-2-9-1-7-6"
        inkscape:connector-curvature="0"
        inkscape:export-filename="2-DOF-spring_mass_horizontal_double_wall.png"
@@ -12410,7 +11607,7 @@
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend-3-3-7-5-5-0-1)"
-       d="m 104.40843,234.06207 h 6.71227"
+       d="m 104.40843,146.67429 h 6.71227"
        id="path1169-4-5-2-4-9-4-97"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
@@ -12421,7 +11618,7 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.9389px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="112.50638"
-       y="234.82085"
+       y="147.43306"
        id="text1497-9-4-7-6-7-3-9"
        inkscape:export-filename="2-DOF-spring_mass_horizontal_double_wall.png"
        inkscape:export-xdpi="300"
@@ -12429,13 +11626,13 @@
          sodipodi:role="line"
          id="tspan1495-4-19-4-65-6-5-89"
          x="112.50638"
-         y="234.82085"
+         y="147.43306"
          style="font-style:italic;font-size:4.9389px;stroke-width:0.264583">f<tspan
-   style="font-size:65%;baseline-shift:sub;font-style:normal"
+   style="font-style:normal;font-size:65%;baseline-shift:sub"
    id="tspan18491">2</tspan>(t)</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend-3-3-7-5-5-0-1-0)"
-       d="m 42.006428,234.06207 h 6.71227"
+       d="m 42.006428,146.67429 h 6.71227"
        id="path1169-4-5-2-4-9-4-97-2"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
@@ -12446,7 +11643,7 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.9389px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="50.104374"
-       y="234.43466"
+       y="147.04688"
        id="text1497-9-4-7-6-7-3-9-2"
        inkscape:export-filename="2-DOF-spring_mass_horizontal_double_wall.png"
        inkscape:export-xdpi="300"
@@ -12454,9 +11651,9 @@
          sodipodi:role="line"
          id="tspan1495-4-19-4-65-6-5-89-8"
          x="50.104374"
-         y="234.43466"
+         y="147.04688"
          style="font-style:italic;font-size:4.9389px;stroke-width:0.264583">f<tspan
-   style="font-size:3.2103px;baseline-shift:sub;stroke-width:0.264583;font-style:normal"
+   style="font-style:normal;font-size:3.2103px;baseline-shift:sub;stroke-width:0.264583"
    id="tspan18491-1">1</tspan>(t)</tspan></text>
     <text
        xml:space="preserve"
