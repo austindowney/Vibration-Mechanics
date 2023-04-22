@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Spyder Editor
+Code for plotting plot
 
-This is a temporary script file.
+Austin Downey
 """
 
 #%% import modules
@@ -24,7 +24,6 @@ import sympy as sym
 from matplotlib import cm
 import re as re
 from scipy import signal
-from scipy import fft
 import json as json
 from mpl_toolkits import mplot3d
 import mpl_toolkits.mplot3d as mp3d
@@ -46,6 +45,10 @@ cc = plt.rcParams['axes.prop_cycle'].by_key()['color']
 
 
 plt.close('all')
+
+#%% Plot the figure
+
+
 
 import numpy, scipy.optimize
 
@@ -110,13 +113,13 @@ signal_2 = A['amp']*np.sin(A['omega']*tt+A['phase'])
 
 
 
-plt.figure(figsize=(6.5,3))
+plt.figure(figsize=(6.5,2.5))
 plt.plot(tt,signal_1,label='original signal')
-plt.plot(tt,signal_2,'--',label='reconstructed signal')
+plt.plot(tt,signal_2,'--',label='distorted signal')
 markerline, stemline, baseline, = plt.stem(tt[subsample],signal_2[subsample],'ko',markerfmt='ko', label='signal digitization')
 plt.setp(stemline, linewidth = 1.5)
 plt.setp(markerline, markersize = 6)
-plt.xlim([0,1])
+plt.xlim([-0.01,1.01])
 plt.grid(True)
 plt.ylabel('$x(t)$')
 plt.xlabel('time (s)')
@@ -124,7 +127,7 @@ plt.legend(framealpha=1,loc=4)
 plt.tight_layout()
 
 
-plt.savefig('aliasing',dpi=500)
+plt.savefig('aliasing',dpi=300)
 
 
 

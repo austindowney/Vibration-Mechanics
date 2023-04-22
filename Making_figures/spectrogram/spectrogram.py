@@ -65,7 +65,7 @@ f, t, Sxx = signal.spectrogram(x, fs, nperseg=10000,noverlap=4000)
 
 #%% Plot the spectrogram 
 
-plt.figure(figsize=(6.5,3.5))
+plt.figure(figsize=(6.5,3.))
 
 plt.subplot(2,1,1)
 plt.plot(tt,x,lw=0.6)
@@ -81,7 +81,7 @@ plt.xlabel('time (s)')
 plt.ylim([0,12])
 plt.xlim([0,10])
 plt.tight_layout()
-plt.savefig('spectrogram',dpi=500)
+plt.savefig('spectrogram',dpi=300)
 
 
 
