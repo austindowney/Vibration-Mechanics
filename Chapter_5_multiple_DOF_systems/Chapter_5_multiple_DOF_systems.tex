@@ -22,7 +22,7 @@
 	\begin{review}
 	\textbf{Linear Algebra}
 	
-	Linear algebra allows for the efficient solving of these coupled equations. In this text, matrices are expressed as bold capital letters ($\textbf{X}$), vectors are denoted with an arrow ($\vec{x}$), and scalars and italic letters ($x$). However, given the range of notation needed, it is not always possible to strictly follow this formulation.
+	Linear algebra allows for the efficient solving of these coupled equations. In this text, matrices are expressed as bold capital letters ($\textbf{X}$), vectors are denoted with an arrow ($\vec{x}$), and scalars/variables with italic letters ($x$). However, given the range of notation needed, it is not always possible to strictly follow this formulation.
 	
 	The dot product allows us to multiply matrices and is defined as:
 	\begin{eqnarray}
@@ -64,7 +64,7 @@
 	
 	\subsection{General Discussion on Mode Shapes}
 	
-	Studying and characterizing the natural frequencies of a system allows for the detailed investigation of the system response. Modern vibration analysis relies heavily on the concepts of mode shapes for various engineering tasks. Particle applications of the study of mode shapes (often called experimental modal analysis) include
+	Studying and characterizing the natural frequencies of a system allows for the detailed investigation of the system response. Modern vibration analysis relies heavily on the concepts of mode shapes for various engineering tasks. Practical applications of the study of mode shapes (often called experimental modal analysis) include
 	\begin{itemize}
 		\item Correlation Finite Element Analysis with structures
 		\item Structural Dynamic Modification
@@ -120,7 +120,7 @@
 	\begin{figure}[H]
 		\centering
 		\includegraphics[]{../figures/2-DOF-spring_mass_horizontal.png}
-		\caption{2-DOF system with two masses and two independent confidante systems $x_1$ and $x_2$.}
+		\caption{2-DOF system with two masses and two independent coordinate systems $x_1$ and $x_2$.}
 		\label{fig:2-DOF-spring_mass_horizontal}
 	\end{figure}
 	
@@ -477,9 +477,9 @@
 	\end{eqnarray}
 	The determinant yields that the unknown quantity, $\omega^2$, must satisfy:
 	\begin{equation}
-	m^2 \omega^4 - 4km\omega^2 + 3k = 0
+	m^2 \omega^4 - 4km\omega^2 + 3k^2 = 0
 	\end{equation}
-	Therefore, 
+	using the quadratic formula we obtain
 	\begin{equation}
 	\omega_1 = \pm \sqrt{\frac{k}{m}}=1 \text{ rad/sec}, \hspace{2ex} \omega_2 = \pm \sqrt{\frac{3k}{m}}=\sqrt{3} \text{ rad/sec}
 	\end{equation}
@@ -614,6 +614,17 @@
 	\end{vibration_case_study}
 
 
+	
+	\subsection{Eigenvalue-based Solution for Natural Frequencies and Mode Shapes}
+	
+	The process of calculating the mode shapes presented in section \ref{sec:two_degree_of_freedom} is long and tedious. Therefore, methods that can be easily deployed on computers are of great interest to the practitioner. An eigenvalue-based solution that takes advantage of the symmetry in the $M$ and $K$ matrices and can be easily implemented on a computer is discussed in this section. 
+	
+	
+
+	
+
+	
+
 	\begin{review}
 	
 		\textbf{Eigenvalues and Eigenvectors}
@@ -655,19 +666,18 @@
 		%\rd{Need to add a discussion on normal, orthogonal, and orthonormal matrices.}	
 		
 	\end{review}	
-	
-	\subsection{Eigenvalue-based Solution for Natural Frequencies and Mode Shapes}
-	
-	The process of calculating the mode shapes presented in section \ref{sec:two_degree_of_freedom} is long and tedious. Therefore, methods that can be easily deployed on computers are of great interest to the practitioner. An eigenvalue-based solution that takes advantage of the symmetry in the $M$ and $K$ matrices and can be easily implemented on a computer is discussed in this section. 
+
 	
 	
+	\subsubsection{Deriving the Eigenvalue-based Solution}
+	 
+	To derive an eigenvalue-based solution for calculating the natural frequencies and mode shapes in a computationally efficient way, we need to merge our mass and stiffness into one expression; termed the  mass normalized stiffness $\widetilde{K}$ matrix that we mathematically define later. First, let us consider that the vast majority of mass ($\textbf{M}$) and stiffness ($\textbf{K}$) matrices are symmetric and positive definite due to the physical meaning of these matrices. Therefore, $\textbf{M}$ can be factored into two terms using the Cholesky decomposition:
+		\begin{equation}
+			M=LL^{\text{T}}
+		\end{equation}
 	\begin{review}
-	
 	\textbf{Cholesky Decomposition} 
-	
-	
-		
-		The Cholesky decomposition of a real positive-definite matrix $A$ is a decomposition of the form:
+			The Cholesky decomposition of a real positive-definite matrix $A$ is a decomposition of the form:
 		\begin{equation}
 			\textbf{A}=\textbf{LL}^{\text{T}}
 			\end{equation}
@@ -675,34 +685,28 @@
 		\begin{equation}
 			\textbf{x}^{\text{T}}\textbf{A}\textbf{x} > 0
 		\end{equation}
+	\end{review}	
+
+		For the unique case diagonal mass matrices (all the mass values lie along the diagonal of the matrix) the Cholesky decomposition ($L$) is defined as:
+		\begin{equation}
+			L = M^{1/2} = \begin{bmatrix} \sqrt{m_1} & 0 \\  0  & \sqrt{m_2} \end{bmatrix} 
+			\label{eq:Cholesky_lower_L}
+		\end{equation}
+		While a special case that is not always true, it is a commonly encountered mass matrix formulation due to the nature of mass matrices. Moreover, the example considered within this test all consists of a diagonal mass matrix. For the special case  diagonal mass matrices, equation~\ref{eq:Cholesky_lower_L} factors into:
+		\begin{equation}
+			M = M^{1/2}M^{1/2}
+		\end{equation}
+		Moreover, the inverse of the diagonal matrix ($M^{1/2}$) is denoted as $M^{-1/2}$ and defined as:
+		\begin{equation}
+			L^{-1} = M^{-1/2} = \begin{bmatrix} \frac{1}{\sqrt{m_1}} & 0 \\  0  & \frac{1}{\sqrt{m_2}} \end{bmatrix} 
+		\end{equation}	
 	
 	
-	The vast majority of mass ($\textbf{M}$) and stiffness ($\textbf{K}$) matrices are symmetric and positive definite due to the physical meaning of these matrices. Therefore, $\textbf{M}$ can be factored into two terms using the Cholesky decomposition:
-	\begin{equation}
-		M=LL^{\text{T}}
-	\end{equation}
-	For diagonal mass matrices (all the mass values lie along the diagonal of the matrix) the Cholesky decomposition ($L$) is defined as:
-	\begin{equation}
-		L = M^{1/2} = \begin{bmatrix} \sqrt{m_1} & 0 \\  0  & \sqrt{m_2} \end{bmatrix} 
-	\end{equation}
-	This expression factors into:
-	\begin{equation}
-		M = M^{1/2}M^{1/2}
-	\end{equation}
-	Moreover, the inverse of the diagonal matrix ($M^{1/2}$) is denoted as $M^{-1/2}$ and defined as:
-	\begin{equation}
-		L^{-1} = M^{-1/2} = \begin{bmatrix} \frac{1}{\sqrt{m_1}} & 0 \\  0  & \frac{1}{\sqrt{m_2}} \end{bmatrix} 
-	\end{equation}
-	\end{review}
-	
-	
-	\subsubsection{Deriving the Eigenvalue-based Solution}
-	 
-	To derive an eigenvalue-based solution for calculating the natural frequencies and mode shapes let us consider the previously derived EOM for an undamped 2-DOF system:
+	Now, let us consider the previously derived EOM for an undamped 2-DOF system:
 	\begin{equation}
 	M\ddot{\vec{x}} + K\vec{x} =0
 	\end{equation}
-	This expression can be transformed into a symmetric eigenvalue problem, allowing us to leverage the strengths of symmetric eigenvalue mathematics and computer solvers. To perform this transform, we set $\vec{x}=M^{-1/2}\vec{q}$ and multiply the equation by $M^{-1/2}$ such that the EOM becomes:
+	This expression can be transformed into a symmetric eigenvalue problem, allowing us to leverage the strengths of symmetric eigenvalue mathematics and computer solvers. To solve the perform this transform, we set $\vec{x}=M^{-1/2}\vec{q}$ and multiply the equation by $M^{-1/2}$ such that the EOM becomes:
 	\begin{equation}
 	M^{-1/2}MM^{-1/2}\ddot{\vec{q}} + M^{-1/2}KM^{-1/2}\vec{q} =0
 	\end{equation}
@@ -761,7 +765,7 @@
 	\label{ex:vector_normalizeation}
 	Normalize the vector $\vec{v}_1=[1/3 \hspace{1ex} 1]^\text{T}$.
 	
-	\textbf{Solution:} First, let's check the Euclidean norm of $\vec{v}_1$, this is $\sqrt{1^2+1/3^2} = \sqrt{1.11} = 1.105$; therefore, the unit vector is not unit norm.
+	\textbf{Solution:} First, let's check the Euclidean norm of $\vec{v}_1$, this is $\sqrt{1^2+1/3^2} = \sqrt{1.11} = 1.05$; therefore, the unit vector is not unit norm.
 	
 	To normalize the vector $\vec{v}_1$, a scalar ($\alpha$) is calculated to make $\alpha\textbf{v}=1$.  Therefore, following the definition of an orthogonal vector:
 	\begin{equation}
@@ -1131,7 +1135,7 @@
 	
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=\linewidth]{../figures/mode_shape_aiplane_example.png}
+		\includegraphics[width=\linewidth]{../figures/mode_shape_aiplane_example}
 		\caption{A Beechcraft Baron in flight\protect\footnotemark[1] along with the Free-Free 3-DOF model simplified as a mass-spring model.}
 		\label{fig:mode_shape_aiplane_example}
 	\end{figure}
@@ -1141,7 +1145,7 @@
 	Assuming that $m_1=m_3=1m$, $m_2=3m$, and $k=\frac{3EI}{l}$, the EOM can be written as:
 	
 	\begin{equation}
-		  m\begin{bmatrix} 1 & 0 & 0 \\    0  & 3 & 0 \\ 0  & 0 & 1 \end{bmatrix} \begin{bmatrix} \ddot{x}_1 \\    \ddot{x}_2 \\    \ddot{x}_3  \end{bmatrix} + \frac{3EI}{l} \begin{bmatrix} 3 & -3 & 0 \\  -3  & 6 & -3 \\  0  & -3 & 3 \end{bmatrix} \begin{bmatrix} x_1 \\    x_2 \\    x_3 \end{bmatrix} = \begin{bmatrix} 0 \\  0 \\ 0 \end{bmatrix} 
+		  m\begin{bmatrix} 1 & 0 & 0 \\    0  & 3 & 0 \\ 0  & 0 & 1 \end{bmatrix} \begin{bmatrix} \ddot{x}_1 \\    \ddot{x}_2 \\    \ddot{x}_3  \end{bmatrix} + \frac{EI}{l} \begin{bmatrix} 3 & -3 & 0 \\  -3  & 6 & -3 \\  0  & -3 & 3 \end{bmatrix} \begin{bmatrix} x_1 \\    x_2 \\    x_3 \end{bmatrix} = \begin{bmatrix} 0 \\  0 \\ 0 \end{bmatrix} 
 	\end{equation}
 	calculate the natural frequencies and mode shapes of the system and plot the mode shapes in relation to the considered Beechcraft Baron.
 	
@@ -1219,6 +1223,10 @@
 	
 	\subsection{Modal Analysis}
 	
+	% Inman has S defined as a "modal matrix" and a "matrix of mode shapes", I belive his definition of S = M^(-1/2)P as a "matrix of mode shapes" is correct in the context of how I use it here. 
+	
+	% This math more closely lines up with Rao 6th edition section 6.14.
+	
 	Modal analysis is the study of a system's dynamic properties and is done in the frequency domain. Consider a system with $n$ degrees of motion, modal analysis allows for the uncoupling of the EOM into $n$ single-degree-of-freedom system (represented as 2$^{\text{nd}}$-order DOF systems) where the displacements of the masses are expressed as the linear summations of the normal modes of the system. If every mode shape is considered, the solution is equivalent to the solution obtained from the original $n^{\text{th}}$-degree-of-freedom system. 
 	
 	Consider the generic multidegree-of-freedom system under external forces, expressed as:
@@ -1245,11 +1253,27 @@
 	\vec{x}(t) = q_1(t) \vec{v}_1 + q_2(t) \vec{v}_2 + q_3(t) \vec{v}_3 + \cdots + q_n(t) \vec{v}_n
 	\label{eq:combination_of_modes}
 	\end{eqnarray}
-	\noindent where the time-dependent generalized scalars $q_1(t), q_1(t), \cdots, q_1(t)$ are the modal participation coefficients (also called principal coordinates). Defining the modal matrix $P$ as: 
+	\noindent where the time-dependent generalized scalars $q_1(t), \; q_1(t), \; \cdots, \; q_1(t)$ are the modal participation coefficients (also called principal coordinates). Defining the modal matrix $P$ as: 
 	\begin{equation}
 	P = [ \vec{v}_1 \;  \vec{v}_2 \;  \vec{v}_3 \; \cdots \; \vec{v}_n]
 	\end{equation}
-	where $\vec{v}_1 = M^{-1/2}u_1$ and are the orthonormal eigenvectors of $\tilde{K}$ (i.e. the mass normalized eigenvectors) and not the eigenvectors of the original system formation shown in equation~\ref{eq:generiq_MDOF_system}. Therefore, the linear combination of the normal modes (equation~\ref{eq:combination_of_modes}) can be more concisely written as:
+	where $\vec{v}_1 = M^{-1/2}u_1$ and are the orthonormal eigenvectors of $\tilde{K}$ (i.e. the mass normalized eigenvectors) and not the eigenvectors of the original system formation shown in equation~\ref{eq:generiq_MDOF_system}. Note that the modal matrix is made of of the eigenvectors of $\tilde{K}$ and not the mode shapes of the system; for context see review~\ref{review:modal_matirx}.
+
+		\begin{review}	
+		\label{review:modal_matirx}
+		\textbf{Modal Matrix} 
+			A \emph{modal matrix} is a mathematical concept taken from linear algebra and not specific to vibrations or structural dynamics. This is why the modal matrix does not contain the modes of the system but rather eigenvectors. 
+			
+			Specifically, the modal matrix $B$ for the matrix $A$ is a matrix of size $n \times n$ consisting of the eigenvectors of $A$ as columns in $B$. It is used in the definition of matrix similarity such that 
+			\begin{equation}
+			C = B^{-1}AB
+			\end{equation}
+			where $C$ is a $n \times n$ diagonal matrix with the eigenvalues of $A$ on the main diagonal (zeros elsewhere). $D$ is the spectral matrix of $A$. The eigenvalues must appear in the diagonal (top-left to bottom-right in the same order as their corresponding eigenvectors are arranged in $B$ (column-wise left to right).			
+		\end{review}	
+	
+	
+		
+	The linear combination of the normal modes (equation~\ref{eq:combination_of_modes}) can be more concisely written as:
 	\begin{equation}
 	\vec{x}(t) = P\vec{q}(t)
 	\end{equation}
@@ -1278,9 +1302,7 @@
 	P^{\text{T}} K P = \begin{bmatrix} \nwarrow & 0 & 0 \\  0  & \omega^2 & 0 \\  0  & 0 & \searrow \end{bmatrix}
 	\end{equation}
 	
-	
-	
-	Moreover, defining $\vec{Q}(t) = P^{\text{T}} \vec{F}$ results in a EOM expressed as:
+	Next we define $\vec{Q}(t)$ as vector of generalized forces in the modal space such that $\vec{Q}(t) = P^{\text{T}}\vec{F}$. This results in a EOM in the modal space expressed as:
 	\begin{equation}
 	\ddot{\vec{q}}(t) +  \begin{bmatrix} \nwarrow & 0 & 0 \\  0  & \omega^2 & 0 \\  0  & 0 & \searrow \end{bmatrix} \vec{q}(t) = \vec{Q}(t)
 	\end{equation}
@@ -1306,7 +1328,7 @@
 	\begin{example}
 	\textbf{Free vibration response}
 	
-	Solve for the free vibration response of the 2-DOF presented in figure~\ref{fig:2-DOF-spring_mass_horizontal_double_wall} using modal analysis. Show the temporal response for the entire system for its first 20 seconds using the full modal reconstruction and the reconstruction truncated to just include the first mode. Also, plot the variations in the modal participation coefficients through time. Apply the parameters, $f_1 = 0$ kg, $f_2 = 0$ N, $m_1 = 10$ kg, $m_2 = 1$ kg, $k_1 = 30$ N/m, $k_2 = 5$ N/m, $k_3 = 1$ N/m, $x_1(0) = 1$ mm, $x_2(0) = 0$ mm, $v_1(0) = 0$ mm, and $v_2(0) = 0$ mm.
+	Solve for the free vibration response of the 2-DOF presented in figure~\ref{fig:2-DOF-spring_mass_horizontal_double_wall} using modal analysis. Show the temporal response for the entire system for its first 20 seconds using the full modal reconstruction and the reconstruction truncated to just include the first mode. Also, plot the variations in the modal participation coefficients through time. Apply the parameters, $f_1 = 0$ N, $f_2 = 0$ N, $m_1 = 10$ kg, $m_2 = 1$ kg, $k_1 = 30$ N/m, $k_2 = 5$ N/m, $k_3 = 1$ N/m, $x_1(0) = 1$ mm, $x_2(0) = 0$ mm, $v_1(0) = 0$ mm/s, and $v_2(0) = 0$ mm/s.
 	
 	\begin{figure}[H]
 		\centering
@@ -1349,7 +1371,7 @@
 	\begin{equation}
 	\omega_2 = \sqrt{\lambda_2} = 2.60 \text{ rad/s, } \vec{v}_2 = \vec{v}_2 \alpha_2 = \begin{bmatrix} -0.15 \\  0.99 \end{bmatrix} \alpha_2 
 	\end{equation}
-	recall that the eigenvalues only contain information about the direction of the linear transform, and therefore, their magnitudes are arbitrary. Therefore, they must be scaled proportionally to each other. For this reason, the scalars $\alpha_1$ and $\alpha_2$ are added. My orthogonalizing the modal vectors with respect to the mass matrix, the values of $\alpha_1$ and $\alpha_2$ are found as:
+	recall that the eigenvalues only contain information about the direction of the linear transform, and therefore, their magnitudes are arbitrary. Therefore, they must be scaled proportionally to each other. For this reason, the scalars $\alpha_1$ and $\alpha_2$ are added. By orthogonalizing the modal vectors with respect to the mass matrix, the values of $\alpha_1$ and $\alpha_2$ are found as:
 	\begin{equation}
 	1 = \vec{v}_1^\text{T} M \vec{v}_1 
 	\end{equation}
