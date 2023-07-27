@@ -297,7 +297,9 @@
 	Calculate response for the system if $m_1$=9 kg, $m_2$=1 kg, $k_1$ = 24 N/m, and $k_2$ = 3 N/m with the initial conditions $x_{10}=1$ mm, $v_{10}=0$ mm/s, $x_{20}=0$ mm, and $v_{20}=0$ mm/s. \\
 	
 	
-	\noindent \textbf{Solution:} We have already obtained a characteristic equation for this system. This is shown in Equation~\ref{eq:characteristic_equation} and is given as:
+	\noindent \textbf{Solution:} 
+
+	We have already obtained a characteristic equation for this system. This is shown in Equation~\ref{eq:characteristic_equation} and is given as:
 	\begin{equation}
 	m_1 m_2 \omega^4 - (m_1 k_2 + m_2 k_1 + m_2 k_2)\omega^2 + k_1 k_2 = 0
 	\end{equation}
@@ -462,7 +464,11 @@
 		\caption{(a) 2-DOF system with two masses arranged in a vertical configuration; and (b) FBD of system.}
 		\label{fig:2-DOF-spring_mass_vertical}
 	\end{figure}
-	\noindent For simplicity, all masses, and spring stiffness are considered equal and that $m=1$ and $k=1$. From the previous investigations in this text, we know that the forces caused by gravity will cancel out. Therefore, the EOM for the system can be written as:
+	\noindent For simplicity, all masses, and spring stiffness are considered equal and that $m=1$ and $k=1$. \\
+
+\noindent \textbf{Solution:} 
+
+ From the previous investigations in this text, we know that the forces caused by gravity will cancel out. Therefore, the EOM for the system can be written as:
 	\begin{eqnarray}
 	m\ddot{x}_1 &= & -kx_1 + k(x_2-x_1) \\
 	m\ddot{x}_2&= & -k(x_2-x_1) -kx_2 \nonumber
@@ -629,7 +635,7 @@
 	
 		\textbf{Eigenvalues and Eigenvectors}
 	
-		In linear algebra, eigenvalues ($\lambda$) and eigenvectors ($\vec{v}$) are concepts that appear prominently in the analysis of linear transformations. By definition, If  $\vec{v}$ is a vector (in vector space $V$ over a field $F$) and $T$ is a linear transformation into itself, then $\vec{v}$ is an eigenvector of $T$ if $T(\vec{v})$ is a scalar multiple of $\vec{v}$:
+		In linear algebra, eigenvalues ($\lambda$) and eigenvectors ($\vec{v}$) are concepts that appear prominently in the analysis of linear transformations. By definition, if  $\vec{v}$ is a vector (in vector space $V$ over a field $F$) and $T$ is a linear transformation into itself, then $\vec{v}$ is an eigenvector of $T$ if $T(\vec{v})$ is a scalar multiple of $\vec{v}$:
 		\begin{equation}
 		T(\vec{v}) = \lambda\vec{v}
 		\end{equation}
@@ -763,9 +769,11 @@
 	
 	\begin{example}
 	\label{ex:vector_normalizeation}
-	Normalize the vector $\vec{v}_1=[1/3 \hspace{1ex} 1]^\text{T}$.
+	Normalize the vector $\vec{v}_1=[1/3 \hspace{1ex} 1]^\text{T}$. \\
 	
-	\textbf{Solution:} First, let's check the Euclidean norm of $\vec{v}_1$, this is $\sqrt{1^2+1/3^2} = \sqrt{1.11} = 1.05$; therefore, the unit vector is not unit norm.
+\noindent \textbf{Solution:} 
+
+First, let's check the Euclidean norm of $\vec{v}_1$, this is $\sqrt{1^2+1/3^2} = \sqrt{1.11} = 1.05$; therefore, the unit vector is not unit norm.
 	
 	To normalize the vector $\vec{v}_1$, a scalar ($\alpha$) is calculated to make $\alpha\textbf{v}=1$.  Therefore, following the definition of an orthogonal vector:
 	\begin{equation}
@@ -814,7 +822,9 @@
 	
 	
 	
-	\textbf{Solution:} Writing the mass and stiffness matrix of the system as:
+\noindent \textbf{Solution:}  
+
+Writing the mass and stiffness matrix of the system as:
 	
 	\begin{equation}
 		M = \begin{bmatrix} 9 & 0 \\  0  & 1 \end{bmatrix} 
@@ -922,7 +932,10 @@
 		\caption{2-DOF system subjected to an impulse showing: (a) system, and (b) FBD.}
 		\label{fig:2-DOF-spring_mass_free}
 	\end{figure}
-	Assuming that $x_1$ displaces more than $x_2$, the equations of motion are:
+
+\noindent \textbf{Solution:}
+
+  Assuming that $x_1$ displaces more than $x_2$, the equations of motion are:
 	\begin{eqnarray}
 	m_1\ddot{x}_1 + k(x_1-x_2)  = F_0 \delta (t) \\
 	m_2\ddot{x}_2 + k(x_2-x_1)  = 0  \nonumber
@@ -990,7 +1003,10 @@
 	Using the Eigenvalue approach and MATLAB, determine the natural frequencies and mode shapes of the system shown in figure~\ref{fig:2-DOF-spring_mass_horizontal_2}, where $m_1$=9 kg, $m_2$=1 kg, $k_1$ = 24 N/m, and $k_2$ = 3 N/m with the initial conditions $x_{10}=1$ mm, $v_{10}=0$ mm/s, $x_{20}=0$ mm, and $v_{20}=0$ mm/s with the EOM expressed as: 
 	\begin{eqnarray}
 	  \begin{bmatrix} m_1 & 0  \\  0 & m_2 \end{bmatrix}\begin{bmatrix} \ddot{x_1} \\  \ddot{x_2} \end{bmatrix} + \begin{bmatrix} k_1+k_2 & -k_2  \\  -k_2 & k_2 \end{bmatrix}\begin{bmatrix} x_1 \\  x_2 \end{bmatrix} = \begin{bmatrix} 0 \\  0 \end{bmatrix}
-	\end{eqnarray}
+	\end{eqnarray} \\
+
+	\noindent \textbf{Solution:} 
+
 	Using the eigenvalue method, the following MATLAB code will solve for the natural frequencies and mode shapes:
 	
 	%\lstinputlisting[caption = {Sample code from Matlab}]{code/matlab_eigenvalue_problem.m}
@@ -1031,6 +1047,13 @@
 	
 	\begin{example}
 	\textbf{Roots of Quadratic Equation} \\
+Using MATLAB, find the roots of following quadratic equation.
+\begin{equation}
+x^4 -8x +12 = 0
+\end{equation} \\
+
+\noindent \textbf{Solution:} 
+
 	%\lstinputlisting[caption = {Sample code from Matlab}]{code/matlab_roots_of_quartic_equation.m}
 	\lstset{linewidth=5.8in}
 	\begin{minipage}{1\textwidth}
@@ -1052,6 +1075,9 @@
 	\begin{example}
 	\textbf{Directly solving the ODE of the EOM for a 2-DOF system.} \\
 	
+Using MATLAB, solve the EOM for a 2-DOF system using a numerical ODE solver.
+
+\noindent \textbf{Solution:} 
 	
 		%\lstinputlisting[caption = {Function for Matlab code}]{code/matlab_function_dfunc.m}
 		\lstset{linewidth=5.8in}
@@ -1150,7 +1176,7 @@
 	calculate the natural frequencies and mode shapes of the system and plot the mode shapes in relation to the considered Beechcraft Baron.
 	
 	\vspace{2ex}
-	\noindent \textbf{Solution using the mass normalized stiffness matrix $\tilde{K}$.}
+	\noindent \textbf{Solution using the mass normalized stiffness matrix $\tilde{K}$:}
 	\vspace{1ex}
 	
 	Solving for the modes shapes using the  mass normalized stiffness matrix $\tilde{K}$ requires solving for $M^{-1/2}$ and $\tilde{K}$ such that:
@@ -1193,7 +1219,7 @@
 	
 	
 	\vspace{2ex}
-	\noindent \textbf{Solution using the generalized eigenvalue approach.}
+	\noindent \textbf{Solution using the generalized eigenvalue approach:}
 	\vspace{1ex}
 	
 	The mode shapes can also be solved for using the generalized eigenvalue approach where the eigenvalue problem is written as:
@@ -1336,9 +1362,10 @@
 		\caption{Forced 2-DOF damped system showing: (a) system, and (b) FBD.}
 		\label{fig:2-DOF-spring_mass_horizontal_double_wall}
 	\end{figure}
-	
-	
-	The equations of motion that couple the system are:
+
+\noindent \textbf{Solution:} 
+
+The equations of motion that couple the system are:
 	\begin{eqnarray}
 	m_1\ddot{x}_1 + (k_1+k_2)x_1 - k_2x_2 = 0 \\
 	m_2\ddot{x}_2 + (k_2+k_3)x_2 - k_2x_1 = 0 \nonumber

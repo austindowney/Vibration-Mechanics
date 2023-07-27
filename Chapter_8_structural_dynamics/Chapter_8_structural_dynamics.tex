@@ -132,43 +132,34 @@ x(t) = x_0\text{cos}(\omega_n t) + \frac{v_0}{\omega_n}\text{sin}(\omega_n t)
 
 \begin{example}
 	
-Let's consider the single-story frame shown in Fig. \ref{fig:one_story_frame_example} with mass $m$ = 0.15 kip $s^2$/ft, $L$ = 12 ft, $EI$= 1800 kip $ft^2$. a) Determine the EOM and the natural period of the frame; b) assume that the moment of inertia of the right column is $2I$. Will the EOM change?
+Let's consider the single-story frame shown in Fig. \ref{fig:one_story_frame_example} with mass $m$ = 0.15 kip $s^2$/ft, $L$ = 12 ft, $EI$= 1800 kip $ft^2$. a) Determine the EOM and the natural period of the frame; b) assume that the moment of inertia of the right column is $2I$. Will the EOM change? \\
 
-\vspace{1ex}
+\noindent \textbf{Solution a) :} 
 
-\noindent$Solution$:
-
-\vspace{1ex}
-
-a) The frame can be modeled as a single degree of freedom in free vibration. Therefore, the EOM is:
+The frame can be modeled as a single degree of freedom in free vibration. Therefore, the EOM is:
 
 \begin{equation}
 	m \ddot{x} + k x = 0
 \end{equation}
-
 The lateral stiffness of the system is:
-
 \begin{equation}
 k = \sum_{columns}^{} k_c = \sum_{2}^{} \frac{12EI} {H^3} = \frac{24 EI}{H^3}
 \end{equation}
-
 Thus, the natural frequency and period are:
-
 \begin{equation}
 \omega_n = \sqrt{\frac{k}{m}} = \sqrt{\frac{24 EI}{m H^3}} = \sqrt{\frac{1800}{0.15 \cdot 12^3}} = 12.91 \frac{rad}{s}
 \end{equation}
-
 \begin{equation}
 T_n =\frac{2 \pi}{\omega_n} = 0.48 s
-\end{equation}
+\end{equation} \\
 
-b) The EOM won't change, but the lateral stiffness of the system will be: 
+\noindent \textbf{Solution b) :} 
 
+The EOM won't change, but the lateral stiffness of the system will be: 
 \begin{equation}
 k = \sum_{columns}^{} k_c = \frac{12EI} {H^3} + \frac{24EI} {H^3} = \frac{36 EI}{H^3}
 \end{equation}
 
-	
 \end{example}
 
 
@@ -276,13 +267,9 @@ Note that Eq. (\ref{Eq_Duhamel}) and (\ref{Eq_Duhamel_undamped}) apply when the 
 		\includegraphics{../figures/structural_step_function_example.png}
 		\caption{(a) Step function force; (b) undamped SDOF system.}
 		\label{fig:step_force}
-	\end{figure}
+	\end{figure} 
 
-\vspace{1ex}
-	
-\noindent $Solution$:
-	
-\vspace{1ex}
+\noindent \textbf{Solution:} 
 	
 The system is undamped, therefore we can use the Duhamel's integral in Eq. (\ref{Eq_Duhamel_undamped}) to find $x(t)$:
 

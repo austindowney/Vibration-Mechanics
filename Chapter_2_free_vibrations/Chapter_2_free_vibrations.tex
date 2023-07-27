@@ -50,8 +50,10 @@
 			m\ddot{x}(t) + kx(t) = 0
 			\label{eq:EOM}
 		\end{equation}		
-		it becomes prudent to solve this homogeneous ordinary differential equation (ODE) to obtain a model of the vibrating system. The simplest method for solving an ODE is to propose a solution based on observations of a vibrating physical system. Figure \ref{fig:Harmonic_Motion_2.png} reports and annotates the key components from an observation of a vibrating system. 
+		it becomes prudent to solve this homogeneous ordinary differential equation (ODE) to obtain a model of the vibrating system. The simplest method for solving an ODE is to propose a solution based on observations of a vibrating physical system\protect\footnotemark[1]. Figure \ref{fig:Harmonic_Motion_2.png} reports and annotates the key components from an observation of a vibrating system. 
 		
+		\footnotetext[1]{Called an ansatz solution. Oxford Languages definition: noun, MATHEMATICS, an assumption about the form of an unknown function which is made in order to facilitate solution of an equation or other problem.} 
+
 		\begin{figure}[H]
 			\centering
 			\includegraphics[]{../figures/harmonic_motion_2.png}
@@ -224,6 +226,7 @@
 				\end{figure}				
 				
 				\noindent\textbf{Solution:} 
+
 				Considering:
 				\begin{equation}
 					\omega_\text{n} = \sqrt{\frac{k}{m}}
@@ -240,6 +243,7 @@
 				\end{figure}		
 	
 				\noindent\textbf{Solution:} 
+
 				\begin{equation}
 					\omega_\text{n} = \sqrt{\frac{k}{m}}= \sqrt{\frac{857.8}{49.2\times10^{-3}}} = 132 \hspace{1ex}\text{rad/sec}
 				\end{equation}	
@@ -370,6 +374,7 @@
 				Show that $	x(t) = a_1e^{+\omega_\text{n} j t} + a_2e^{-\omega_\text{n} j t}$ is equal to $A\text{sin}(\omega_\text{n} t +\phi)$. \\
 				
 				\noindent\textbf{Solution:} 
+
 				This equation was derived using Euler's formula and it can be shown that this equation is equivalent to the $A\text{sin}(\omega_\text{n}+\phi)$. To recover the previously assumed solution, the knowledge that $a_1$ and $a_2$ are complex congregate pairs and as such the magnitude can be expressed as $a_1=a_2$ is leveraged. Using Euler's polar notation, $a_1$ and $a_2$ can be expressed as 
 				\begin{equation}
 					a_1 = a_2 = ae^{j\psi}
@@ -448,7 +453,9 @@
 				\end{equation}			
 				Calculate the values of $A_1$ and $A_2$ in terms of their initial conditions $x_0$ and $v_0$.
 				
-				\noindent\textbf{Solution:} Knowing the following for $x$ and $\dot{x}$:
+				\noindent\textbf{Solution:} 
+
+				Knowing the following for $x$ and $\dot{x}$:
 				\begin{equation}
 					x(t) = A_1\text{cos}(\omega_\text{n} t) + A_2\text{sin}(\omega_\text{n} t)
 				\end{equation}	
@@ -551,7 +558,7 @@
 			\centering
 			\includegraphics[width=6in]{../figures/Arthur_Ravenel_Jr._Bridge}
 			\caption{Dampers installed on the center cables of the Author Ravel Junior Bridge in Charleston South Carolina, showing: (a) the main span of the bridge taken from the water\protect\footnotemark[1] with the damper structure annotated; and (b) close up of the structure that holds the damper.}
-				\footnotetext[1]{bbatsell, CC BY-SA 2.5 $<$https://creativecommons.org/licenses/by-sa/2.5$>$, via Wikimedia Commons}
+				\footnotetext[1]{original un-annotated image by bbatsell, CC BY-SA 2.5 $<$https://creativecommons.org/licenses/by-sa/2.5$>$, via Wikimedia Commons}
 		\end{figure}		
 		\end{vibration_case_study}
 			

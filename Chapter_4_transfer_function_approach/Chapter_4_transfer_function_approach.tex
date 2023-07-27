@@ -185,7 +185,9 @@
 %					\includegraphics[width=0.4\textwidth]{../figures/forced_spring_mass_damper_system.png}
 %					\caption{Damped 1-DOF spring-mass system subjected to an external force $F(t)$.}
 %				\end{figure}
-%				\noindent\textbf{Solution:} The system above can be described the EOM in standard form:
+%				\noindent\textbf{Solution:} 
+
+%				The system above can be described the EOM in standard form:
 %				\begin{equation}
 %				\ddot{x}(t) + 2 \zeta \omega_n \dot{x}+ \omega_n^2x(t) = 0 \text{, where }x(0)=x_0 \text{, and } \dot{x}(0) = v_0 
 %				\end{equation}
@@ -341,9 +343,11 @@ A load of dirt $m$ is dumped into the back of a dump truck. Assuming the dirt no
 	\includegraphics[width=0.8\textwidth]{../figures/dump_truck_example}
 	\caption{Dump truck being loaded with dirt showing (a) dirt going into the truck bed\protect\footnotemark[1]; and (b) the single-degree-of-freedom vibration model.  }
 \end{figure}
-\footnotetext[1]{SGT Marvin Lynchard, A dump truck is filled with dirt, by members of the 459th Civil Engineering Flight, for use in repairing a damaged runway during Exercise Prime Beef '82, Public Domain, via picryl.com}
+\footnotetext[1]{SGT Marvin Lynchard, A dump truck is filled with dirt, by members of the 459th Civil Engineering Flight, for use in repairing a damaged runway during Exercise Prime Beef '82, Public Domain, via picryl.com} 
 
-\noindent\textbf{Solution:} First, setting the load applied to the truck as 1 unit, it can be seen that this is a unit step loading condition and a broken damper represents an undamped case. To obtain a rough idea about the nature of static and dynamic displacement, the undamped displacement is
+\noindent\textbf{Solution:} 
+
+First, setting the load applied to the truck as 1 unit, it can be seen that this is a unit step loading condition and a broken damper represents an undamped case. To obtain a rough idea about the nature of static and dynamic displacement, the undamped displacement is
 
 \begin{equation}
 	x(t) = \frac{1}{k}\big(1-\text{cos}(\omega_n t)\big) = \frac{m g}{k}\big(1-\text{cos}(\omega_n t)\big)
@@ -422,9 +426,11 @@ Again, this represents the total system response (without initial conditions) fo
 \begin{example}
 	
 	
-	In testing, a hammer is used to excite a 1-DOF system with an impact (i.e. impulse), however, the hammer impacts the system twice by ascendant (a double hit). The first impact has a force of 0.2 N, while the second has a force of 0.1 N and happens 0.1 seconds after the first impact. Plot the response for the double impact. The system has the parameters $m$ = 1 kg, $c$ = 0.5 kg/s, k = 4 N/m. 
+	In testing, a hammer is used to excite a 1-DOF system with an impact (i.e. impulse), however, the hammer impacts the system twice by ascendant (a double hit). The first impact has a force of 0.2 N, while the second has a force of 0.1 N and happens 0.1 seconds after the first impact. Plot the response for the double impact. The system has the parameters $m$ = 1 kg, $c$ = 0.5 kg/s, k = 4 N/m. \\
 	
-	\noindent\textbf{Solution:} First, we can define the forcing function as:
+	\noindent\textbf{Solution:} 
+
+First, we can define the forcing function as:
 	
 	\begin{equation}
 		F(t) = 0.2 \delta (t) + 0.1 \delta(t-\tau)
@@ -488,6 +494,10 @@ Again, this represents the total system response (without initial conditions) fo
 	\end{figure}
 	
 	Defining the EOM for the system results in
+	\begin{equation}
+		m\ddot{x} + c\dot{x} + kx = c\dot{y} + ky 
+	\end{equation} 	
+	Using $z = x - y$, this can be simplified to
 	\begin{equation}
 		m\ddot{z} + c \dot{z} + kz = -m\ddot{y}
 	\end{equation} 	
@@ -665,7 +675,7 @@ where $H(\omega)$ represents only the amplitude of the frequency response functi
 		\includegraphics[width=0.4\textwidth]{../figures/1-DOF-spring_dashpot_mass_horizontal_forced.png}
 		\caption{A spring-dashpot-mass model of a 1-DOF system with external excitation.}
 	\end{figure}
-	Set the forcing function to be $F_0 \sin(\omega t)$ and calculate the transfer function. 
+	Set the forcing function to be $F_0 \sin(\omega t)$ and calculate the transfer function.  \\
 	
 	\noindent\textbf{Solution:} The equation of motion for the system is:
 	\begin{equation}
@@ -761,7 +771,7 @@ Considering a nonstationary signal, an important measure of interest is how fast
 \begin{equation}
 R_{xx}(\tau) = \lim\limits_{T \rightarrow \infty} \frac{1}{T} \int_{0}^{T}x(t)x(t+\tau)dt
 \end{equation}
-The subscript $xx$ denotes that this is a measure of the response for the variable $xx$, $\tau$ is the time difference between the values at which the signal $x(t)$ is sampled. The auto-collation for the two inputs considered above is expressed in figure~\ref{fig:Response_to_random_input_autocorrelation}.
+The subscript $xx$ denotes that this is a measure of the response for the variable $xx$, $\tau$ is the time difference between the values at which the signal $x(t)$ is sampled. The autocorrelation for the two inputs considered above is expressed in figure~\ref{fig:Response_to_random_input_autocorrelation}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{../figures/Response_to_random_input_autocorrelation.png}
@@ -818,7 +828,7 @@ where $R_{ff}$ denotes the autocorrelation function of $F(t)$ and $S_{ff}$ denot
 		\includegraphics[width=0.4\textwidth]{../figures/1-DOF-spring_dashpot_mass_horizontal_forced.png}
 		\caption{A spring-dashpot-mass model of a 1-DOF system with external excitation.}
 	\end{figure}
-	Calculate the PSD of the response $x(t)$ given that the PSD of the applied force $S_{ff}(\omega)$ is white noise. 
+	Calculate the PSD of the response $x(t)$ given that the PSD of the applied force $S_{ff}(\omega)$ is white noise. \\
 	
 	\noindent\textbf{Solution:} From the system we know that the EOM is 
 	\begin{equation}
@@ -879,6 +889,8 @@ When combined with equation \ref{eq:variance_for_S_O}, these integrals allow for
 		\includegraphics[width=0.4\textwidth]{../figures/1-DOF-spring_dashpot_mass_horizontal_forced.png}
 		\caption{A spring-dashpot-mass model of a 1-DOF system with external excitation.}
 	\end{figure}
+
+
 	\noindent\textbf{Solution:} Again, as the forcing function $S_{ff}(\omega)$ is constant across the frequency spectrum $S_{ff}(\omega)=S_0$ the mean-square response can be calculated as:
 	\begin{equation}
 		E[x^2] = \overline{x^2} =   S_{0} \int_{-\infty}^{\infty} |H(j\omega)|^2 d\omega
