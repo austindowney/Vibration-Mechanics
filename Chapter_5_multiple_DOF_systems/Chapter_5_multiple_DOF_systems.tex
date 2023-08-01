@@ -904,6 +904,52 @@ Writing the mass and stiffness matrix of the system as:
 
 	
 	
+		\begin{example}
+		\textbf{Eigenvalue Approach Solved using MATLAB}
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[]{../figures/2-DOF-spring_mass_horizontal.png}
+			\caption{2-DOF system with two masses and two independent confidante systems $x_1$ and $x_2$.}
+			\label{fig:2-DOF-spring_mass_horizontal_2}
+		\end{figure}
+		
+		Using the Eigenvalue approach and MATLAB, determine the natural frequencies and mode shapes of the system shown in figure~\ref{fig:2-DOF-spring_mass_horizontal_2}, where $m_1$=9 kg, $m_2$=1 kg, $k_1$ = 24 N/m, and $k_2$ = 3 N/m with the initial conditions $x_{10}=1$ mm, $v_{10}=0$ mm/s, $x_{20}=0$ mm, and $v_{20}=0$ mm/s with the EOM expressed as: 
+		\begin{eqnarray}
+		  \begin{bmatrix} m_1 & 0  \\  0 & m_2 \end{bmatrix}\begin{bmatrix} \ddot{x_1} \\  \ddot{x_2} \end{bmatrix} + \begin{bmatrix} k_1+k_2 & -k_2  \\  -k_2 & k_2 \end{bmatrix}\begin{bmatrix} x_1 \\  x_2 \end{bmatrix} = \begin{bmatrix} 0 \\  0 \end{bmatrix}
+		\end{eqnarray} \\
+	
+		\noindent \textbf{Solution:} 
+	
+		Using the eigenvalue method, the following MATLAB code will solve for the natural frequencies and mode shapes:
+		
+	\lstset{caption={MATLAB code to find the frequencies and mode shapes of a 2-DOF system.},
+		label={lst:code},
+		frame=lines,
+		basicstyle=\ttfamily\footnotesize\bfseries}
+		\begin{lstlisting}
+% define the M and K matrix
+M = [9 0; 0 1]
+K = [24+3 -3; -3 3]
+
+% build the M inverse square-root and mass normalized stiffness matrix 
+M_inv_sqr = sqrt(inv(M))
+K_mass_norm = M_inv_sqr*K*M_inv_sqr
+
+% Using, K_mass_norm*v=lambda*v
+[v,lambda] = eig(K_mass_norm)
+
+% Solve for natural frequencies
+omega_1 = sqrt(lambda(1,1))
+omega_2 = sqrt(lambda(2,2))
+
+% solve for the mode shapes
+u_1 = M_inv_sqr*v(:,1)
+u_2 = M_inv_sqr*v(:,2)
+				\end{lstlisting}
+		\noindent where $\omega_1$=1.41 rad/sec and  $\omega_2$=2 rad/sec while $\vec{u}_1 = [0.333 \; 1]$ and $\vec{u}_2 = [-0.333 \; 1]$.
+		\end{example}
+	
 	
 	
 	
@@ -986,162 +1032,89 @@ Writing the mass and stiffness matrix of the system as:
 	% \subsection{Computational Methods for 2-DOF Systems}
 	
 	
-	% This works, but not sure how to get it to work with the major compile. 
-	
-	\subsubsection{MATLAB}
-	
-	\begin{example}
-	\textbf{Eigenvalue Problem}
-	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[]{../figures/2-DOF-spring_mass_horizontal.png}
-		\caption{2-DOF system with two masses and two independent confidante systems $x_1$ and $x_2$.}
-		\label{fig:2-DOF-spring_mass_horizontal_2}
-	\end{figure}
-	
-	Using the Eigenvalue approach and MATLAB, determine the natural frequencies and mode shapes of the system shown in figure~\ref{fig:2-DOF-spring_mass_horizontal_2}, where $m_1$=9 kg, $m_2$=1 kg, $k_1$ = 24 N/m, and $k_2$ = 3 N/m with the initial conditions $x_{10}=1$ mm, $v_{10}=0$ mm/s, $x_{20}=0$ mm, and $v_{20}=0$ mm/s with the EOM expressed as: 
-	\begin{eqnarray}
-	  \begin{bmatrix} m_1 & 0  \\  0 & m_2 \end{bmatrix}\begin{bmatrix} \ddot{x_1} \\  \ddot{x_2} \end{bmatrix} + \begin{bmatrix} k_1+k_2 & -k_2  \\  -k_2 & k_2 \end{bmatrix}\begin{bmatrix} x_1 \\  x_2 \end{bmatrix} = \begin{bmatrix} 0 \\  0 \end{bmatrix}
-	\end{eqnarray} \\
 
-	\noindent \textbf{Solution:} 
-
-	Using the eigenvalue method, the following MATLAB code will solve for the natural frequencies and mode shapes:
-	
-	%\lstinputlisting[caption = {Sample code from Matlab}]{code/matlab_eigenvalue_problem.m}
-	\lstset{linewidth=5.8in}
-	\begin{minipage}{1\textwidth}
-		\begin{center}
-			\lstset{%
-				caption={MATLAB code to find the frequencies and mode shapes of a 2-DOF system.},
-				basicstyle=\ttfamily\footnotesize\bfseries,
-				frame=tb,
-			}
-			\begin{lstlisting}
-	% define the M and K matrix
-	M = [9 0; 0 1]
-	K = [24+3 -3; -3 3]
-	
-	% build the M inverse square-root and mass normalized stiffness matrix 
-	M_inv_sqr = sqrt(inv(M))
-	K_mass_norm = M_inv_sqr*K*M_inv_sqr
-	
-	% Using, K_mass_norm*v=lambda*v
-	[v,lambda] = eig(K_mass_norm)
-	
-	% Solve for natural frequencies
-	omega_1 = sqrt(lambda(1,1))
-	omega_2 = sqrt(lambda(2,2))
-	
-	% solve for the mode shapes
-	u_1 = M_inv_sqr*v(:,1)
-	u_2 = M_inv_sqr*v(:,2)
-			\end{lstlisting}
-		\end{center}
-	\end{minipage}
-	\noindent where $\omega_1$=1.41 rad/sec and  $\omega_2$=2 rad/sec while $\vec{u}_1 = [0.333 \; 1]$ and $\vec{u}_2 = [-0.333 \; 1]$.
-	
-	\end{example}
-	
-	
-	\begin{example}
-	\textbf{Roots of Quadratic Equation} \\
-Using MATLAB, find the roots of following quadratic equation.
-\begin{equation}
-x^4 -8x +12 = 0
-\end{equation} \\
-
-\noindent \textbf{Solution:} 
-
-	%\lstinputlisting[caption = {Sample code from Matlab}]{code/matlab_roots_of_quartic_equation.m}
-	\lstset{linewidth=5.8in}
-	\begin{minipage}{1\textwidth}
-		\begin{center}
-			\lstset{%
-				caption={MATLAB code for time series responses of 1\textsuperscript{st} order system.},
-				basicstyle=\ttfamily\footnotesize\bfseries,
-				frame=tb,
-			}
-			\begin{lstlisting}
-	% for the function f(x) = x^4 -8x +12 =0
-	roots([1 0 0 -8 12]) 
-			\end{lstlisting}
-		\end{center}
-	\end{minipage}
-	\end{example}
-	
-	
-	\begin{example}
-	\textbf{Directly solving the ODE of the EOM for a 2-DOF system.} \\
-	
-Using MATLAB, solve the EOM for a 2-DOF system using a numerical ODE solver.
-
-\noindent \textbf{Solution:} 
-	
-		%\lstinputlisting[caption = {Function for Matlab code}]{code/matlab_function_dfunc.m}
-		\lstset{linewidth=5.8in}
-		\begin{minipage}{1\textwidth}
-			\begin{center}
-				\lstset{%
-					caption={Function for Matlab code.},
-					basicstyle=\ttfamily\footnotesize\bfseries,
-					frame=tb,
-				}
-				\begin{lstlisting}
-	function f = matlab_function_dfunc(t,y)
-		%UNTITLED Summary of this function goes here
-		%   Detailed explanation goes here
-		f=zeros(4,1)
-		f(1) = y(2)
-		f(2) = cos(3*t) - 4*y(2) + y(4) - 5*y(1) + 2*y(3)
-		f(3) = y(2)
-		f(4) = cos(3*t) + 0.5*y(2) - y(4) + y(1) - 1.5*y(3)
-	end 
-				\end{lstlisting}
-			\end{center}
-		\end{minipage}
-	
-	
-	
-	
-	
-		%\lstinputlisting[caption = {Sample code from Matlab}]{code/matlab_temporal_response.m}
-		\lstset{linewidth=5.8in}
-		\begin{minipage}{1\textwidth}
-			\begin{center}
-				\lstset{%
-					caption={Sample code from Matlab.},
-					basicstyle=\ttfamily\footnotesize\bfseries,
-					frame=tb,
-				}
-				\begin{lstlisting}
-	% define the time stamps of the system
-	tspan = [0: 0.1 : 20]
-	
-	% define the initial conditions
-	y0 = [0.2; 1.0; 0.0; 8.0];
-	
-	% solge the 2-DOF system using a ODE solver
-	[t,y] = ode23('matlab_function_dfunc',tspan, y0)
-	
-	% plot the results
-	figure()
-	subplot(211)
-	plot(t,y(:,1))
-	xlabel('time (s)')
-	ylabel('x1(t) (m)')
-	subplot(212)
-	plot(t,y(:,3))
-	xlabel('time (s)')
-	ylabel('x1(t) (m)')
-				\end{lstlisting}
-			\end{center}
-		\end{minipage}
-	
-	\end{example}
-	
-	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+%	What follows here is poorly developed matlab examples that should be deleted/re-worked
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	\begin{example}
+%	\textbf{Roots of Quadratic Equation} \\
+%Using MATLAB, find the roots of following quadratic equation.
+%\begin{equation}
+%x^4 -8x +12 = 0
+%\end{equation} \\
+%
+%\noindent \textbf{Solution:} 
+%
+%\lstset{%
+%	caption={MATLAB code for time series responses of 1\textsuperscript{st} order system.},
+%	basicstyle=\ttfamily\footnotesize\bfseries,
+%	frame=tb,
+%}
+%\begin{lstlisting}
+%% for the function f(x) = x^4 -8x +12 =0
+%roots([1 0 0 -8 12]) 
+%\end{lstlisting}
+%	\end{example}
+%	
+%	
+%	\begin{example}
+%	\textbf{Directly solving the ODE of the EOM for a 2-DOF system.} \\
+%	
+%Using MATLAB, solve the EOM for a 2-DOF system using a numerical ODE solver.
+%
+%\noindent \textbf{Solution:} 
+%	
+%\lstset{%
+%caption={Function for Matlab code.},
+%basicstyle=\ttfamily\footnotesize\bfseries,
+%frame=tb,
+%}
+%\begin{lstlisting}
+%function f = matlab_function_dfunc(t,y)
+%%UNTITLED Summary of this function goes here
+%%   Detailed explanation goes here
+%f=zeros(4,1)
+%f(1) = y(2)
+%f(2) = cos(3*t) - 4*y(2) + y(4) - 5*y(1) + 2*y(3)
+%f(3) = y(2)
+%f(4) = cos(3*t) + 0.5*y(2) - y(4) + y(1) - 1.5*y(3)
+%end 
+%\end{lstlisting}
+%	
+%	
+%	
+%	
+%
+%\lstset{%
+%caption={Sample code for Matlab.},
+%basicstyle=\ttfamily\footnotesize\bfseries,
+%frame=tb,
+%}
+%\begin{lstlisting}
+%% define the time stamps of the system
+%tspan = [0: 0.1 : 20]
+%
+%% define the initial conditions
+%y0 = [0.2; 1.0; 0.0; 8.0];
+%
+%% solge the 2-DOF system using a ODE solver
+%[t,y] = ode23('matlab_function_dfunc',tspan, y0)
+%
+%% plot the results
+%figure()
+%subplot(211)
+%plot(t,y(:,1))
+%xlabel('time (s)')
+%ylabel('x1(t) (m)')
+%subplot(212)
+%plot(t,y(:,3))
+%xlabel('time (s)')
+%ylabel('x1(t) (m)')
+%\end{lstlisting}
+%	
+%	\end{example}
+%	
+%	
 	
 	%\subsubsection{Python}
 	
