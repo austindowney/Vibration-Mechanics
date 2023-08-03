@@ -1056,64 +1056,7 @@ u_2 = M_inv_sqr*v(:,2)
 %\end{lstlisting}
 %	\end{example}
 %	
-%	
-%	\begin{example}
-%	\textbf{Directly solving the ODE of the EOM for a 2-DOF system.} \\
-%	
-%Using MATLAB, solve the EOM for a 2-DOF system using a numerical ODE solver.
-%
-%\noindent \textbf{Solution:} 
-%	
-%\lstset{%
-%caption={Function for Matlab code.},
-%basicstyle=\ttfamily\footnotesize\bfseries,
-%frame=tb,
-%}
-%\begin{lstlisting}
-%function f = matlab_function_dfunc(t,y)
-%%UNTITLED Summary of this function goes here
-%%   Detailed explanation goes here
-%f=zeros(4,1)
-%f(1) = y(2)
-%f(2) = cos(3*t) - 4*y(2) + y(4) - 5*y(1) + 2*y(3)
-%f(3) = y(2)
-%f(4) = cos(3*t) + 0.5*y(2) - y(4) + y(1) - 1.5*y(3)
-%end 
-%\end{lstlisting}
-%	
-%	
-%	
-%	
-%
-%\lstset{%
-%caption={Sample code for Matlab.},
-%basicstyle=\ttfamily\footnotesize\bfseries,
-%frame=tb,
-%}
-%\begin{lstlisting}
-%% define the time stamps of the system
-%tspan = [0: 0.1 : 20]
-%
-%% define the initial conditions
-%y0 = [0.2; 1.0; 0.0; 8.0];
-%
-%% solge the 2-DOF system using a ODE solver
-%[t,y] = ode23('matlab_function_dfunc',tspan, y0)
-%
-%% plot the results
-%figure()
-%subplot(211)
-%plot(t,y(:,1))
-%xlabel('time (s)')
-%ylabel('x1(t) (m)')
-%subplot(212)
-%plot(t,y(:,3))
-%xlabel('time (s)')
-%ylabel('x1(t) (m)')
-%\end{lstlisting}
-%	
-%	\end{example}
-%	
+
 %	
 	
 	%\subsubsection{Python}
@@ -1263,7 +1206,7 @@ u_2 = M_inv_sqr*v(:,2)
 		\textbf{Modal Matrix} 
 			A \emph{modal matrix} is a mathematical concept taken from linear algebra and not specific to vibrations or structural dynamics. This is why the modal matrix does not contain the modes of the system but rather eigenvectors. 
 			
-			Specifically, the modal matrix $B$ for the matrix $A$ is a matrix of size $n \times n$ consisting of the eigenvectors of $A$ as columns in $B$. It is used in the definition of matrix similarity such that 
+			From linear algebra, the modal matrix $B$ for the matrix $A$ is a matrix of size $n \times n$ consisting of the eigenvectors of $A$ as columns in $B$. It is used in the definition of matrix similarity such that 
 			\begin{equation}
 			C = B^{-1}AB
 			\end{equation}
@@ -1467,7 +1410,126 @@ The equations of motion that couple the system are:
 	
 	\end{example}
 	
+		\subsection{Numerical Methods}
+		
+			Numerical methods can be used to solve the response of multi-degree of freedom system subjected to forced vibrations. While not the most computationally efficient method, the EOM is an ODE that can be solved directly while considering the initial directions to obtain the response of the system. 
+			
+
+			
+
 	
+	\begin{example}
+	\textbf{Directly Solving the ODE of the EOM for a 2-DOF system.} \\
+
+	Consider the system presented in figure~\ref{fig:2-DOF-spring_mass_dashpot_horizontal_forced_ramp_function}(a) where $m_1$=2 kg, $m_2$=1 kg, $k_1$ = 20 N/m, $k_2$ = 10 N/m, $c_1=0.5$ kg/s, and $c_2=1$ kg/s; initially at rest. $m_1$ is subjected to the ramp and hold load shown in figure~\ref{fig:2-DOF-spring_mass_dashpot_horizontal_forced_ramp_function}(b). 	Using MATLAB, solve the EOM for the temporal response 2-DOF system using a numerical ODE solver.
+
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=\linewidth]{../figures/2-DOF-spring_mass_dashpot_horizontal_forced_ramp_function}
+				\caption{2-DOF system with two masses and two independent confidante systems $x_1$ and $x_2$.}
+				\label{fig:2-DOF-spring_mass_dashpot_horizontal_forced_ramp_function}
+			\end{figure}
+			
+			
+\noindent \textbf{Solution:} 
+	
+	Assuming $x_1<x_2$, the matrix form of the system is
+	
+				\begin{eqnarray}
+				  \begin{bmatrix} m_1 & 0  \\  0 & m_2 \end{bmatrix}\begin{bmatrix} \ddot{x_1} \\  \ddot{x_2} \end{bmatrix} + \begin{bmatrix} c_1+c_2 & -c_2  \\  -c_2 & c_2 \end{bmatrix}\begin{bmatrix} \dot{x}_1 \\  \dot{x}_2 \end{bmatrix} + \begin{bmatrix} k_1+k_2 & -k_2  \\  -k_2 & k_2 \end{bmatrix}\begin{bmatrix} x_1 \\  x_2 \end{bmatrix}  = \begin{bmatrix} 0 \\  0 \end{bmatrix}
+				\end{eqnarray} \\
+
+This expression can be re-arranged to:				
+\begin{equation}
+\ddot{\vec{x}} = M^{-1}(F_t - C \cdot \dot{\vec{x}} -K \cdot \vec{x})
+\end{equation}
+which is the format required by MATLAB's \texttt{ode45} solver. Thereafter, the code in listings~\ref{lst:code} and \ref{lst:functions} can be used to develop the results shown in figure~\ref{fig:ODE_results-2-DOF}. 
+
+
+			
+
+
+	
+
+\lstset{%
+caption={MATLAB code for solving the EOM of the two-degree-of-freedom system.},
+label={lst:code},
+basicstyle=\ttfamily\footnotesize\bfseries,
+frame=tb,
+}
+\begin{lstlisting}
+% Time span for simulation
+tspan = [0, 10]; % Start time and end time
+
+% Initial conditions [x1, x1', x2, x2']
+initial_conditions = [0, 0, 0, 0];
+
+% Use ode45 to solve the system of ODEs
+[t, y] = ode45(@equations_of_motion, tspan, initial_conditions);
+
+% Extract displacements of masses
+x1 = y(:, 1);
+x2 = y(:, 3);
+\end{lstlisting}
+	
+	
+\lstset{%
+caption={Functions for Matlab code.},
+label={lst:functions},
+basicstyle=\ttfamily\footnotesize\bfseries,
+frame=tb,
+}
+\begin{lstlisting}
+% Equations of motion for the system
+function [dydt,F_t] = equations_of_motion(t, y)
+
+	% Setup the system parameters
+	m1=2; m2=1; k1=20; k2=10; c1=0.5; c2=1;
+	
+	% Build the Mass, Damping, and Stiffnes matrices 
+	M = [m1, 0; 0, m2];
+	C = [c1 + c2, -c2; -c2, c2];
+	K = [k1 + k2, -k2; -k2, k2];
+	
+	% Unpack the state variables
+	x = y(1:2);
+	x_dot = y(3:4);
+	
+	% Get the force excitation vector at time t
+	F_t = force_excitation_vector(t);
+	
+	% Equations of motion
+	x_dotdot = inv(M) * (F_t - C * x_dot - K * x);
+	
+	% Pack the derivatives into the output vector dydt
+	dydt = [x_dot; x_dotdot];
+end
+
+% Define the force excitation vector F(t)
+function F_t = force_excitation_vector(t)
+	
+	if t<1 % Ramp load from 0 to 1 second 
+	    f1_t = t;
+	else % constant load after 1 second 
+	    f1_t=1;
+	end
+	
+	% Force vector, with no load on f2
+	F_t = [f1_t; 0]; 
+
+end
+\end{lstlisting}
+	
+	
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=4.25in]{../figures/ODE_results-2-DOF}
+	\caption{Displacement response of the 2-DOF system.}
+	\label{fig:ODE_results-2-DOF}
+\end{figure}
+				
+	\end{example}
+				
 
 \end{document}
 
