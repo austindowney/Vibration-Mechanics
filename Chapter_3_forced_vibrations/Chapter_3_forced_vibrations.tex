@@ -1017,7 +1017,11 @@ B_s
 	\noindent \textbf{Solution:} 
 	
 	
-	In MATLAB, {\ttfamily{}ode45} is a versatile ODE solver and is one of the first solvers you should try for most problems. The solver is setup as {\ttfamily{}[t,y] = ode45(odefun,tspan,y0),} where {\ttfamily{}tspan = [t0 tf],} integrates the system of differential equations {\ttfamily{}y'=f(t,y)} from {\ttfamily{}t0} to {\ttfamily{}tf} with initial conditions {\ttfamily{}y0}. Each row in the solution array y corresponds to a value returned in column vector {\ttfamily{}t}. Setting up code for figure~\ref{fig:2-DOF-spring_mass_horizontal_3} results in listing~\ref{lst:code}.
+	In MATLAB, {\ttfamily{}ode45} is a versatile ODE solver and is one of the first solvers you should try for most problems. The solver is setup as {\ttfamily{}[t,y] = ode45(odefun,tspan,y0),} where {\ttfamily{}tspan = [t0 tf],} integrates the system of differential equations {\ttfamily{}y'=f(t,y)} from {\ttfamily{}t0} to {\ttfamily{}tf} with initial conditions {\ttfamily{}y0}. Each row in the solution array y corresponds to a value returned in column vector {\ttfamily{}t}. The ODE is re-organized as 
+	\begin{equation}
+	\ddot{x} = (f_t - c  \dot{x} - k  x) / m
+	\end{equation}
+	for the {\ttfamily{}ode45} solver. Listing~\ref{lst:code} reports the code needed to solve the time response of the system shown in figure~\ref{fig:2-DOF-spring_mass_horizontal_3}.
 
 \lstset{caption={MATLAB code for solving the EOM through time.},
 	label={lst:code},
@@ -1091,7 +1095,7 @@ function dydt = equation_of_motion(t, y)
 	x = y(1);
 	x_dot = y(2);
 	
-	% Define the force excitation function f(t) here (replace as needed)
+	% Define the force excitation function f(t)
 	f_t = force_excitation_function(t);
 	
 	% Equation of motion
@@ -1101,7 +1105,7 @@ function dydt = equation_of_motion(t, y)
 	dydt = [x_dot; x_dotdot];
 end
 
-% Define the force excitation function f(t) of a simple sinusoidal force excitation  (replace as needed)
+% Force excitation function f(t) for a sinusoidal force excitation
 function f_t = force_excitation_function(t)
 	f_t = 0.5 * sin(2 * pi * t);
 end
