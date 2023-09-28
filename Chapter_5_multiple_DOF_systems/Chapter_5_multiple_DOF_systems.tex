@@ -1436,10 +1436,9 @@ The equations of motion that couple the system are:
 	Assuming $x_1<x_2$, the matrix form of the system is
 	
 				\begin{eqnarray}
-				  \begin{bmatrix} m_1 & 0  \\  0 & m_2 \end{bmatrix}\begin{bmatrix} \ddot{x_1} \\  \ddot{x_2} \end{bmatrix} + \begin{bmatrix} c_1+c_2 & -c_2  \\  -c_2 & c_2 \end{bmatrix}\begin{bmatrix} \dot{x}_1 \\  \dot{x}_2 \end{bmatrix} + \begin{bmatrix} k_1+k_2 & -k_2  \\  -k_2 & k_2 \end{bmatrix}\begin{bmatrix} x_1 \\  x_2 \end{bmatrix}  = \begin{bmatrix} 0 \\  0 \end{bmatrix}
+				  \begin{bmatrix} m_1 & 0  \\  0 & m_2 \end{bmatrix}\begin{bmatrix} \ddot{x_1} \\  \ddot{x_2} \end{bmatrix} + \begin{bmatrix} c_1+c_2 & -c_2  \\  -c_2 & c_2 \end{bmatrix}\begin{bmatrix} \dot{x}_1 \\  \dot{x}_2 \end{bmatrix} + \begin{bmatrix} k_1+k_2 & -k_2  \\  -k_2 & k_2 \end{bmatrix}\begin{bmatrix} x_1 \\  x_2 \end{bmatrix}  = \begin{bmatrix} \ R(t) \\  0 \end{bmatrix}
 				\end{eqnarray} \\
-
-This expression can be re-arranged to:				
+where $R(t)$ is the piecewise ramp function shown in figure~\ref{fig:2-DOF-spring_mass_dashpot_horizontal_forced_ramp_function}(b). This expression can be re-arranged to:				
 \begin{equation}
 \ddot{\vec{x}} = M^{-1}(F_t - C \cdot \dot{\vec{x}} -K \cdot \vec{x})
 \end{equation}
@@ -1481,7 +1480,7 @@ frame=tb,
 }
 \begin{lstlisting}
 % Equations of motion for the system
-function [dydt,F_t] = equations_of_motion(t, y)
+function [dydt] = equations_of_motion(t, y)
 
 	% Setup the system parameters
 	m1=2; m2=1; k1=20; k2=10; c1=0.5; c2=1;

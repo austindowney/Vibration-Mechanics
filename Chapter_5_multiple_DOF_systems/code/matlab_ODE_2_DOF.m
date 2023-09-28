@@ -28,7 +28,7 @@ exportgraphics(f,'ODE_results-2-DOF.jpg','Resolution',300)
 
 
 % Equations of motion for the system
-function [dydt,F_t] = equations_of_motion(t, y)
+function [dydt] = equations_of_motion(t, y)
 
 % Setup the system parameters
 m1=2; m2=1; k1=20; k2=10; c1=0.5; c2=1;
