@@ -13,18 +13,26 @@
 
 	\section{Basic Concepts in Vibrations}
 
-    The study of vibrations, within the broader field of classical mechanics, is the investigation of oscillations that occur about an equilibrium point. Vibrations, both desired and undesired, are present in all mechanical systems and can be helpful (e.g. a soil sieve, rotary sander) or destructive (e.g. an aircraft frame in resonance). The oscillations that form a vibrating system may be periodic (e.g., pendulum) or random (e.g. turbulence in an airplane), or a combination of the two. 
+    Vibrations, within the broader field of classical mechanics, is the investigation of oscillations that occur about an equilibrium point. Vibrations, both desired and undesired, are present in all mechanical systems and can be helpful (e.g. a soil sieve, rotary sander) or destructive (e.g. an aircraft frame in resonance). The oscillations that form a vibrating system may be periodic (e.g., pendulum) or random (e.g. turbulence in an airplane), or a combination of the two. 
 
-    Vibrations impact our daily lives in a variety of ways, from the sound made by banjo strings that vibrates between 140 and 400 Hz to the 4-6 Hz vibration felt by a passenger in a car seat. The consideration of vibrations, and their associated mathematical modeling, are important factors in the design of mechanical systems. In the material that follows, the fundamental theories of vibration are presented and modeled using fundamental physical principles such as Newton's three laws of motion. These models and analyzed using the mathematical tools of calculus and differential equations. 
+    Vibrations impact our daily lives in a variety of ways, from the sound made by banjo strings that vibrate between 140 and 400 Hz to the vibrations felt by a passenger in a car seat that are typically under 6 Hz.
+    
+    The consideration of vibrations, and their associated mathematical modeling, are important factors in the design of mechanical systems. In this text, the fundamental theories of vibration are presented and modeled using basic physical principles such as Newton's three laws of motion. These models and analyzed using the mathematical tools of calculus and differential equations. 
 
 	\begin{vibration_case_study}
-		Why study vibrations? One day, it could save your life! The British Aircraft Corporation TSR-2 was a strike and reconnaissance aircraft developed during the Cold War by the British Aircraft Corporation (BAC), for the Royal Air Force (RAF). During the second flight test of air-frame XR219, vibration from one of the plane's fuel pump causes a vibration at the resonant frequency of the human eyeball which caused a momentary loss of vision. Test pilot Roland Beamont throttled back one engine to restore his full vision. Roland Beamont was an expert in vibrations, having led the vibration program of the Hawker Typhoon during WW~II. In this role, he fit vibrographs to airplanes to determine the effectiveness of propeller balancing and the testing of seats with vibration isolators. 
+		Why study vibrations? One day, it could save your life! The British Aircraft Corporation (BAC) TSR-2 was a strike and reconnaissance aircraft developed during the Cold War by BAC, for the Royal Air Force (RAF). 
+		
+		During the second flight test of air-frame XR219, vibration from one of the plane's fuel pumps caused vibration at the resonant frequency of the human eyeball. As you may expect, an eyeball experiencing high levels of vibrations will distort, causing blindness. Test pilot Roland Beamont was blinded by the vibrations that originated in the fuel pump and transmitted to his head. Roland just happened to be an expert in vibrations and had the knowledge to throttle back one engine. This led to a reduction in the vibrations and a restoration of his full vision. 
 
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=4in]{../figures/TSR_2.jpg}
 			\caption{The only BAC TSR-2 prototype to fly, picture taken in 1966 at what is now BAE Warton Lancashire.\protect\footnotemark[1]}
 		\end{figure}
+				
+		Roland gained his expertise in vibrations during WW II. During this time he led the vibration program of the Hawker Typhoon. He fit vibrographs to airplanes to determine the effectiveness of propeller balancing. He also led the testing testing of seats with vibration isolators to limit vibrations transmitted from the airframe into the pilot. 
+
+
 		\footnotetext[1]{RuthAS, CC BY 3.0 $<$https://creativecommons.org/licenses/by/3.0$>$, via Wikimedia Commons}	
 	\end{vibration_case_study}
 
@@ -39,7 +47,7 @@
 
 	\subsection{Single Degree-of-Freedom Systems}
 	
-        In its simplest form, the phenomenon of vibration is the exchange of energy between potential and kinetic energy. Therefore, a vibrating system must have a component that stores potential energy. This component must also be capable of releasing the energy as kinetic energy. This kinetic energy is stored in the movement of a mass where the measure of this movement is the velocity of the system and the continuous interchange between potential and kinetic energy is the vibration of the system. The simplest vibrating systems can be modeled as a single-degree-of-freedom (1-DOF) system. In a 1-DOF system, one variable can describe the motion of a system. Potential examples of  1-DOF systems include:
+        In its simplest form, the phenomenon of vibration is the exchange of energy between potential and kinetic energy. Therefore, a vibrating system must have a component that stores potential energy. This component must also be capable of releasing the energy as kinetic energy. This kinetic energy is stored in the movement of a mass where the measure of this movement is the velocity of the system. The continuous interchange between potential and kinetic energy is the vibration of the system. The simplest vibrating systems can be modeled as a single-degree-of-freedom (1-DOF) system. In a 1-DOF system, one variable can describe the motion of a system. Potential examples of 1-DOF systems include:
 		
 		\begin{enumerate}
 			\item yo-yo
@@ -48,7 +56,7 @@
 			\item throttle (gas pedal)
 		\end{enumerate}
 				
-		\noindent Variables often used for describing 1-DOF systems are $x(t)$,  $y(t)$,  $z(t)$, and  $\theta(t)$.  Examples of 1-DOF systems are presented in figure \ref{fig:Examples_of_1DOF_systems} where the assumption of small displacements is made. Note: we will often drop the ``$(t)$'' for simplicity in this material. 
+		Variables often used for describing 1-DOF systems are $x(t)$,  $y(t)$,  $z(t)$, and  $\theta(t)$.  Examples of 1-DOF systems are presented in figure~\ref{fig:Examples_of_1DOF_systems} where the assumption of small displacements is made. \todo{add note for this} Note: we will often drop the ``$(t)$'' for simplicity in this text, such that $x$,  $y$,  $z$, and  $\theta$ become the notation for the variables of interests
 
 		\begin{figure}[H]
 			\centering
@@ -57,11 +65,15 @@
 			\label{fig:Examples_of_1DOF_systems}
 		\end{figure}
 
+		\begin{review}
+			The \emph{assumption of small displacements} states that any displacement in a system is considerably smaller the the initial geometry of the system. This means that any 2\textsuperscript{nd}-order effects caused by displacements within the system are ignored. These 2\textsuperscript{nd}-order effects could be loads or angles at the point of linkage/spring connections. 
+		\end{review}
+	
 		\subsubsection{Spring-Mass Model}
 
-			\quotebox{\large{All models are wrong, but some are useful}}{George E.P. Box (1919 - 2013)}	
+
 							
-            Newtonian physics describes the motion of particles in terms of displacement $x$, velocity $\dot{x}$, and acceleration $\ddot{x}$ vectors. Moreover, Newton's second law of motion says that the change in the velocity of mass in motion is a product of the force acting on the mass. A simple way to express this phenomenon is through a spring-mass model as presented in figure  \ref{fig:spring_mass_model_with_point_mass}. These spring-mass models neglect the mass of the spring and concentrate all the mass of the system into a single point. Note that in this case the force vector and mass-acceleration vectors lie on the same axis and as such are collinear. Therefore, these vectors can be easily treated as scalers simplifying the math used in the modeling of the system.     
+            Newtonian physics describes the motion of particles in terms of displacement $x$, velocity $\dot{x}$, and acceleration $\ddot{x}$ vectors. Moreover, Newton's second law of motion says that the change in the velocity of mass in motion is a product of the force acting on the mass. A simple way to express this phenomenon is through a spring-mass model as presented in figure~\ref{fig:spring_mass_model_with_point_mass}. These spring-mass models neglect the mass of the spring and concentrate all the mass of the system into a single point. Note that in this case the force vector and mass-acceleration vectors lie on the same axis and as such are collinear. Therefore, these vectors can be easily treated as scalers simplifying the math used in the modeling of the system.     
 
 			\begin{figure}[H]
 				\centering
@@ -69,7 +81,9 @@
 				\caption{A single-degree-of-freedom (1-DOF) spring-mass model showing: (a) annotated schematic of a mass-spring system; and (b) the equivalent free-body diagram represented as a point-mass system.}
 				\label{fig:spring_mass_model_with_point_mass}
 			\end{figure}	
-		
+
+
+					
 		\subsubsection{Linear Springs}
 	
             Springs are mechanical devices that store energy, moreover, an ideal spring is a theoretical representation of this mechanical device that is massless and responds with a linear increase in force for a unit increase in displacement (i.e. $F=kx$). For simplicity, the springs in the spring-mass models considered in this text are always assumed to be ideal linear springs. A graphical representation of the idealized linear spring is presented in figure \ref{fig:linear_spring_deformation} where a unit force $F$ applied to the free end of the spring results in a unit displacement $x$ of the spring.  The resulting mathematical relationship,  $F=kx$, is known as Hooke's Law. Nonlinear springs add considerable complexity to the modeling of spring-mass systems, therefore, these are not considered in this introductory work. 
@@ -81,6 +95,10 @@
 				\label{fig:linear_spring_deformation}
 			\end{figure}					
 
+		\subsubsection{Linear Point-mass Models}
+		
+			Combining linear springs and point masses we get \emph{linear point-mass models}; to which we will add dampers in Chapter~2. An important thing to consider is that the linear point-mass models used throughout this text are only a representation of real-world systems. Moreover, this representation removes any concept of non-linearity that is always present in physical systems. While these models are a gross under-representation of how a system would oscillate in the real world; they can capture enough of the system's dynamics to be incredibly useful in engineering and design. leading to the famous quote:   
+			\quotebox{\large{All models are wrong, but some are useful}}{George E.P. Box (1919 - 2013)}	
 
 		\begin{vibration_case_study}
 			Why study vibrations? Because vibrations form an integral part of how we interact with our world and as such, are an important consideration in product. For example, vibrations in the automotive industry fall within a field of expertise termed Noise Vibration and Harshness (NVH). NVH is important because, within a single company, different levels of NVH will be desired for different market segments and products. 
@@ -92,22 +110,22 @@
 				\caption{VW Golf GTI with three suspension modes, showing: (a) the car, and; (b) the accelerometer and data acquisition system used for measuring vibrations.}
 				\label{fig:VW_GTI_Suspension_1}
 			\end{figure}
-			Figure~\ref{fig:VW_GTI_Suspension_2} shows the measured acceleration in the frequency domain for the three suspension modes during 5 minutes of interstate driving. While we will delve into the technical of power spectral density, for now, consider the area under the curve to be representative of the amount of energy in the measured vibrations for each suspension setting. 
+			Figure~\ref{fig:VW_GTI_Suspension_2} shows the measured acceleration in both the time and frequency domains for the three suspension modes during 5 minutes of interstate driving. Note that in the time domain, the responses of the three suspension modes are indistinguishable. However, in the frequency domain, the sport mode is shown to have greater vibrational energy. Later in this text we will delve into the technical aspects of power spectral density, for now, consider the area under the curve to be representative of the measured energy for each suspension setting. 
 			\begin{figure}[H]
 				\centering
 				\includegraphics[width=6in]{../figures/VW_GTI_Suspension_2}
-				\caption{Response spectrum of the vibrational energy in a VW GTI measured using the experimental setup shown in figure~\ref{fig:VW_GTI_Suspension_1}(b). }
+				\vspace{-1.5ex}
+				\caption{Response measured using the experimental setup shown in figure~\ref{fig:VW_GTI_Suspension_1}(b), showing (a) time-series data, and b) spectrum in the frequency domain.}
 				\label{fig:VW_GTI_Suspension_2}
 			\end{figure}
 			The sport mode is by far the suspension mode with the firmest ride and the highest amount of measured vibration energy. While a stiff ride is beneficial during spirited driving on a track, the associated NVH level is tiring during prolonged driving. However, the comfort mode adds a considerable amount of damping to the suspension, resulting in a ride quality that is much more amenable to everyday driving. An engineer, using their knowledge of vibrations, could develop systems that enable a single product (such as an automobile or an airplane) to function well in multiple use cases; thereby increasing its usefulness and marketability. 
-
 		\end{vibration_case_study}
 		
 	\subsection{Equivalent Stiffness}
 		
 		The generalized concept of stiffness can be directly related to mechanical systems and structural components through Hooke's law. 
 		\begin{review}
-			Hooke's Law states that the force ($F$) needed to extend or compress a spring by some distance $x$ scales linearly with respect to that distance. This law can be extended to tensional stress of a uniform and elastic bar where the length, area, and Young's modulus of the bar are represented by $l$, $A$, and $E$, respectively. Knowing the tensile stress in the bar:
+			Hooke's Law states that the force ($F$) needed to extend or compress a spring by some distance $x$ scales linearly with respect to that distance. This law can be extended to the tensional stress of a uniform and elastic bar where the length, area, and Young's modulus of the bar are represented by $l$, $A$, and $E$, respectively. Knowing the tensile stress in the bar:
 			\begin{equation}
 			\sigma = \frac{F}{A}
 			\end{equation} 			
@@ -266,7 +284,7 @@
 				\begin{figure}[H]
 					\centering
 					\includegraphics[]{../figures/equivalent_mass_and_spring_system_2.png}
-					\caption{A spring mass system simplified down form springs in series and parallel..}
+					\caption{A spring-mass system simplified down form springs in series and parallel..}
 				\end{figure}	
 %				until a final $k$ value can be obtained:
 %				\begin{equation}
@@ -327,7 +345,7 @@
 			\begin{figure}[H]
 				\centering
 				\includegraphics[]{../figures/1-DOF-spring_mass_horizontal.png}
-				\caption{A 1 DOF spring mass system with movement in the horizontal direction}
+				\caption{A 1 DOF spring-mass system with movement in the horizontal direction}
 			\end{figure}		
 			
 			\textbf{Step-1}
@@ -336,7 +354,7 @@
 				\centering
 				\includegraphics[width=0.45\textwidth]{../figures/1-DOF-mass_horizontal_FBD.png}\\
 				equilibrium state \hspace{3cm} displaced state
-				\caption{Equivalent forces for a 1 DOF spring mass system with movement in the horizontal direction}
+				\caption{Equivalent forces for a 1 DOF spring-mass system with movement in the horizontal direction}
 			\end{figure}		
 			\noindent The equation for the equilibrium state is:
 			\begin{equation}
@@ -366,7 +384,7 @@
 			\begin{figure}[H]
 				\centering
 				\includegraphics[]{../figures/1-DOF-spring_mass_vertical.png}
-				\caption{A 1 DOF spring mass system with movement in the vertical direction}
+				\caption{A 1 DOF spring-mass system with movement in the vertical direction}
 			\end{figure}		
 			\noindent \textbf{Step-1}
 			Define the direction of displacement, and draw the FBD for the equilibrium and displaced state.  
@@ -374,7 +392,7 @@
 				\centering
 				\includegraphics[]{../figures/1-DOF-spring_mass_vertical_FBD.png}\\
 				equilibrium state \hspace{3cm} displaced state
-				\caption{Equivalent forces for a 1 DOF spring mass system with movement in the vertical direction}
+				\caption{Equivalent forces for a 1 DOF spring-mass system with movement in the vertical direction}
 			\end{figure}		
 			\noindent The equation for the equilibrium state is:
 			\begin{equation}
@@ -390,7 +408,7 @@
 			\begin{equation}
 				m\ddot{x} = \downplus \sum F_x =mg -k\delta -kx
 			\end{equation}
-			We can than use the information from the equilibrium state to cancel out some terms, this becomes:
+			We can then use the information from the equilibrium state to cancel out some terms, this becomes:
 			\begin{equation}
 				m\ddot{x} = -kx
 			\end{equation}				
@@ -402,7 +420,9 @@
 
 
 		\begin{vibration_case_study}
-			Why study vibrations? One day, it could save your job! For a project to be successful they need to be completed on time and within budget. Consider the Ling-Temco-Vought (LTV) XC-142  which was a tilt-wing experimental aircraft developed in the '60s for the US military and later turned over to NASA. During testing, the cross-linked driveshaft produced excessive vibration and noise which resulted in a high pilot workload. In general, the aircraft's cross-linked driveshaft was the main technical issue that caused the military to lose interest in the project. 
+			Why study vibrations? One day, it could save your job! For a project to be successful it needs to be completed on time and within budget. 
+			
+			Consider the Ling-Temco-Vought (LTV) XC-142  which was a tilt-wing experimental aircraft developed in the '60s for the US military and later turned over to NASA. During testing, the cross-linked driveshaft produced excessive vibration and noise which resulted in a high pilot workload. In general, the aircraft's cross-linked driveshaft was the main technical issue that caused the military to lose interest in the project. 
 			
 			\begin{figure}[H]
 				\centering
