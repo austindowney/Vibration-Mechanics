@@ -21,6 +21,9 @@
 \numberwithin{vcs}{section} % allows for the use of numbers that line up with the section numbers
 \newenvironment{vibration_case_study}{\begin{mdframed}[linecolor=orange,middlelinewidth=2mm,roundcorner=20pt]\begin{vcs}\normalfont}{\end{vcs}\end{mdframed}}
 
+% defines all note environment
+\newenvironment{note}{\begin{mdframed}[middlelinewidth=0.5mm,roundcorner=0pt]\begin{center} \bl{NOTE} \end{center}\normalfont\noindent \hspace{-0.75ex}}{\end{mdframed}} % This has an extra \hspace{-0.75ex} in it as the with noindent it still had a small indent. Not sure why.
+
 % defines the quotation environment 
 \usepackage{xcolor}
 \newcommand{\quotebox}[2]{\begin{center}\fcolorbox{white}{blue!15!gray!15}{\begin{minipage}{0.9\linewidth}\vspace{10pt}\center\begin{minipage}{0.8\linewidth}{\space\Huge``}{#1}{\Huge''}{\break\null\hfill} {\small #2}  \end{minipage}\medbreak\end{minipage}}\end{center}}
