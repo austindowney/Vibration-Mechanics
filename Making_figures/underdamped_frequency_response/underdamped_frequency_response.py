@@ -88,21 +88,30 @@ phase_6[150::] = phase_6[150::] + np.pi #adjust for atan aliasing at pi
 # round the values in the table
 Xk_F_table = np.round(Xk_F_table,2)
 
+# build a vector of r-peak values
+zetas = np.linspace(0,1/np.sqrt(2))
+r_peaks = np.sqrt(1-2*zetas**2)
+peaks = 1/(np.sqrt((1-r_peaks**2)**2+(2*zetas*r_peaks)**2))
+
 # plot the figures
 plt.figure(figsize=(6.5,4.5))
+plt.plot(r_peaks,peaks,'gray')
+t = plt.text(0.4,4.5,'$r_\r{peak}$ locations',fontsize=13)
+t.set_bbox(dict(facecolor='white', alpha=1, edgecolor='white'))
 plt.plot(r,Xk_F_1,'-',lw=0.9,label='$\zeta=$'+str(zeta_1))
 plt.plot(r,Xk_F_2,'--',label='$\zeta=$'+str(zeta_2))
 plt.plot(r,Xk_F_3,':',label='$\zeta=$'+str(zeta_3))
 plt.plot(r,Xk_F_4,'-.',label='$\zeta=1/\sqrt{2}$')
 plt.plot(r,Xk_F_5,'-',lw=2.5,label='$\zeta=$'+str(zeta_5))
 plt.plot(r,Xk_F_6,'--',lw=2.5,label='$\zeta=$'+str(zeta_6))
+plt.ylim(-0.15,5.15)
 plt.legend(framealpha=1)
 plt.grid('on')
 plt.xlabel(r'frequency ratio ($r$)')
 plt.ylabel('normalized amplitude ($Xk/F_0$)')
 plt.tight_layout()
-plt.savefig('underdamped_frequency_response_amplitude',dpi=300)
-
+#plt.savefig('underdamped_frequency_response_amplitude',dpi=300)
+plt.savefig('underdamped_frequency_response_amplitude.pdf',dpi=300)
 
 
 # plt.figure(figsize=(6.5,4.5))
@@ -128,11 +137,12 @@ plt.plot(r,phase_3*(180/np.pi),':',label='$\zeta=$'+str(zeta_3))
 plt.plot(r,phase_4*(180/np.pi),'-.',label='$\zeta=1/\sqrt{2}$')
 plt.plot(r,phase_5*(180/np.pi),'-',lw=2.5,label='$\zeta=$'+str(zeta_5))
 plt.plot(r,phase_6*(180/np.pi),'--',lw=2.5,label='$\zeta=$'+str(zeta_6))
-#plt.hlines(np.pi/2*(180/np.pi),0,2,linestyle = '--')
+plt.hlines(np.pi/2*(180/np.pi),1,2,color = 'black', linestyle = '--',lw=2)
 plt.yticks((0,45,90,135,180))
 plt.ylim([-10,190])
 plt.legend(framealpha=1)
-#plt.text(0.08,91.5,'90$^\circ$',fontsize=13)
+t = plt.text(1.05,79,'shifted up by $\pi$ for plotting',fontsize=13)
+t.set_bbox(dict(facecolor='white', alpha=1, edgecolor='white'))
 plt.grid('on')
 plt.xlabel(r'frequency ratio ($r$)')
 plt.ylabel('phase (deg)')

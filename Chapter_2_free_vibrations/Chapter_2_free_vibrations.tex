@@ -366,11 +366,23 @@
 			\begin{equation}
 				x(t) = a_2e^{-\omega_\text{n} j t}
 			\end{equation}
+		
 			As these solutions only consider, and are only valid for, linear systems; the sum of the solutions is also a solution. This simplification results in:
 			\begin{equation}
 				x(t) = a_1e^{+\omega_\text{n} j t} + a_2e^{-\omega_\text{n} j t}
 			\end{equation}
 			where $a_1$ and $a_2$ are constants of integration that scale the unit Euler's vector. The positive and negative values in the exponent indicate that the terms are a conjugate pair.
+
+			\begin{review}
+				In linear algebra, the principle of superposition is a fundamental characteristic of linear systems. It states that if $x_1$ and $x_2$ are solutions to a linear system $Ax = b$, where $A$ is a matrix and $b$ is a vector, then any linear combination of these solutions is also a solution to the system. 
+				
+				Mathematically, if $Ax_1 = b$ and $Ax_2 = b$, then for any scalars $\alpha$ and $\beta$, the vector $\alpha x_1 + \beta x_2$ is also a solution. This can be demonstrated as:
+				\begin{equation}
+					A(\alpha x_1 + \beta x_2) = \alpha Ax_1 + \beta Ax_2 = \alpha b + \beta b = (\alpha + \beta)b
+				\end{equation}
+				This principle allows for the construction of the general solution to a linear system.
+			\end{review}		
+
 			
 			
 			\begin{example}

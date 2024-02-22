@@ -46,7 +46,7 @@
 	\begin{equation}
 		F(t) = F_0\text{cos}(\omega t)
 	\end{equation}							
-	note that here, $\omega$ has no subscript and is the frequency in rad/sec of the driving force. $\omega$ is often called the input frequency, driving frequency, or forcing frequency. $F_0$ represents the magnitude of the applied force.  Building the EOM for the system in figure \ref{fig:1-DOF-spring_mass_horizontal_forced_FBD} yields:
+	note that here, $\omega$ has no subscript and is the frequency in~rad/sec of the driving force. $\omega$ is often called the input frequency, driving frequency, or forcing frequency. $F_0$ represents the magnitude of the applied force.  Building the EOM for the system in figure \ref{fig:1-DOF-spring_mass_horizontal_forced_FBD} yields:
 	\begin{equation}
 		m \ddot{x}(t)+kx(t) = F_0\text{cos}(\omega t)
 	\end{equation}			
@@ -151,7 +151,7 @@
 			\includegraphics[width=0.5\textwidth]{../figures/1-DOF-spring_mass_horizontal_forced.png}
 			\caption{1-DOF spring-mass system subjected to an external force $F(t)$.}
 		\end{figure}
-		with $k$ = 10~N/m, $m$ = 2.5~kg, $\omega$ = 4~rad/sec, $F_0$ = 0.1~kN, $x_0$ = 1~mm, and $v_0$ = 0~mm/s plot the temporal responses of the system considering the free-vibration case and the excited case. Plot these on a single plot to compare the responses. 
+		\noindent with $k$ = 10~N/m, $m$ = 2.5~kg, $\omega$ = 4~rad/sec, $F_0$ = 0.1~kN, $x_0$ = 1~mm, and $v_0$ = 0~mm/s plot the temporal responses of the system considering the free-vibration case and the excited case. Plot these on a single plot to compare the responses. 
 					
 		\noindent\textbf{Solution:} 
 
@@ -178,7 +178,8 @@
 	\begin{equation}
 		x_p(t) = t X\text{sin}(\omega t)
 	\end{equation}				
-	Substituting this into the EOM of the system in standard form equation (from Boyce and DiPrima (1997)) and solving for X yields:
+	Substituting this into the EOM of the system in standard form equation\footnotemark[1] and solving for X yields:
+	\footnotetext[1]{Boyce, William E., Richard C. DiPrima, and Douglas B. Meade. Elementary differential equations and boundary value problems. John Wiley \& Sons, 2021.} 	
 	\begin{equation}
 		x_p(t) = \frac{f_0}{2 \omega} t \text{sin}(\omega t)
 	\end{equation}	
@@ -199,7 +200,7 @@
 
 \begin{example}
 
-	Compute solutions for the homogeneous and particular solution separately, then compute the total response of a spring-mass system with the following values: $k$ = 1000 N/m, $m$ = 10 kg, subject to a harmonic force of magnitude $F_0$ = 100 N and frequency of 8.162 rad/s, and initial conditions given by $x_0$ = 0 m and $v_0$ = 0 m/s. Plot the response.
+	Compute solutions for the homogeneous and particular solution separately, then compute the total response of a spring-mass system with the following values: $k$ = 1000~N/m, $m$ = 10~kg, subject to a harmonic force of magnitude $F_0$ = 100~N and frequency of 8.162~rad/s, and initial conditions given by $x_0$ = 0 m and $v_0$ = 0 m/s. Plot the response.
 	
 	\begin{figure}[H]
 		\centering
@@ -240,7 +241,7 @@
 \end{example}
 
 \begin{example}
-	Considering the following system, write the equation of motion and calculate the response assuming a) that the system is initially at rest, and b) that the system has an initial displacement of 0.005 m. Use $k$ = 2000 N/m, $m$ = 100 kg, $F(t)$ = 10sin(10t) N.
+	Considering the following system, write the equation of motion and calculate the response assuming a) that the system is initially at rest, and b) that the system has an initial displacement of 0.005 m. Use $k$ = 2000~N/m, $m$ = 100~kg, $F(t)$ = 10sin(10t) N.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.5\textwidth]{../figures/1-DOF-spring_mass_horizontal_forced.png}
@@ -278,7 +279,7 @@
 	\end{equation}								
 	Also, knowing:
 	\begin{equation}
-		\omega_n = \sqrt{\frac{k}{m}} = \sqrt{20} \text{ rad/sec} =  4.472 \text{ rad/sec}
+		\omega_n = \sqrt{\frac{k}{m}} = \sqrt{20} \text{~rad/sec} =  4.472 \text{~rad/sec}
 	\end{equation}				
 	and
 	\begin{equation}
@@ -475,9 +476,9 @@ B_s
 		Consider the damped 1-DOF system below, and plot the total, steady state, and transient responses for the following system configurations with no initial conditions. For each configuration, comment on the temporal response and how it differs from the response of the previous configuration.    
 		
 		\begin{itemize}
-		\item[a)] $k=100$ N/m, $m=10$ kg,  $c=10$ kg/s, $F_0=1$ N, and $\omega = 8.162$.
-		\item[b)] $k=100$ N/m, $m=10$ kg,  $c=10$ kg/s, $F_0=3$ N, and $\omega = 8.162$.
-		\item[c)] $k=100$ N/m, $m=10$ kg,  $c=10$ kg/s, $F_0=3$ N, and $\omega = 3.162$.
+		\item[a)] $k=100$~N/m, $m=10$~kg,  $c=10$~kg/s, $F_0=1$~N, and $\omega = 8.162$~rad/s.
+		\item[b)] $k=100$~N/m, $m=10$~kg,  $c=10$~kg/s, $F_0=3$~N, and $\omega = 8.162$~rad/s.
+		\item[c)] $k=100$~N/m, $m=10$~kg,  $c=10$~kg/s, $F_0=3$~N, and $\omega = 3.162$~rad/s.
 		\end{itemize}
 		
 		\begin{figure}[H]
@@ -495,21 +496,21 @@ B_s
 		\begin{figure}[H]
 			\centering
 			\includegraphics[]{../figures/homogeneous_and_particular_solutions_in_resonance_a.png}
-			\caption{Temporal responses for a underdamped system with $k=100$ N/m, $m=10$ kg,  $c=10$ kg/s, $F_0=1$ N, and $\omega = 8.162$.}
+			\caption{Temporal responses for a underdamped system with $k=100$~N/m, $m=10$~kg,  $c=10$~kg/s, $F_0=1$~N, and $\omega = 8.162$~rad/s.}
 		\end{figure}			
  
 		\noindent\textbf{Solution b):} Configuration b increases the forcing function $F_0$ to 3 N. This results in a similar response to configuration a but with a linearly scaled amplitude:
 		\begin{figure}[H]
 			\centering
 			\includegraphics[]{../figures/homogeneous_and_particular_solutions_in_resonance_b.png}
-			\caption{Temporal responses for a underdamped system with $k=100$ N/m, $m=10$ kg,  $c=10$ kg/s, $F_0=3$ N, and $\omega = 8.162$.}
+			\caption{Temporal responses for a underdamped system with $k=100$~N/m, $m=10$~kg,  $c=10$~kg/s, $F_0=3$~N, and $\omega = 8.162$~rad/s.}
 		\end{figure}			
 		
-		\noindent\textbf{Solution c):} Now, using $\omega=3.162$ rad/sec we put the system into resonance as $\omega=\omega_n$. However, unlike the undamped system, the amplitude of the displacement is not unbounded as the damper absorbs energy from the system. Therefore, after about 7 seconds the system enters an equilibrium state where any additional increase in amplitude caused by the system entering into resonance is canceled out by the damping in the system as demonstrated in the plot below:
+		\noindent\textbf{Solution c):} Now, using $\omega=3.162$~rad/sec we put the system into resonance as $\omega=\omega_n$. However, unlike the undamped system, the amplitude of the displacement is not unbounded as the damper absorbs energy from the system. Therefore, after about 7 seconds the system enters an equilibrium state where any additional increase in amplitude caused by the system entering into resonance is canceled out by the damping in the system as demonstrated in the plot below:
 		\begin{figure}[H]
 			\centering
 			\includegraphics[]{../figures/homogeneous_and_particular_solutions_in_resonance_c.png}
-			\caption{Temporal responses for a underdamped system with $k=100$ N/m, $m=10$ kg,  $c=10$ kg/s, $F_0=3$ N, and $\omega = 3.162$.}
+			\caption{Temporal responses for a underdamped system with $k=100$~N/m, $m=10$~kg,  $c=10$~kg/s, $F_0=3$~N, and $\omega = 3.162$.}
 		\end{figure}				
 	\end{example}	
 
@@ -580,7 +581,7 @@ B_s
 		\caption{Phase response for frequency ratio ($r$) from 0 to 2 for a variety of critical damping ratios.}
 		\label{fig:underdamped_frequency_response_phase}
 	\end{figure}				
-	\noindent note that the dashed blue line is there because the phase values after $\pi/2$ need to be adjusted to obtain a continuous plot. An astute observer would notice that the maximum amplitude is not at $\omega = \omega_n$. While resonance is defined as $\omega = \omega_n$, this does not define the point of maximum displacement of the steady-state response. Let us solve for the frequency ratio with the maximum displacement. This will happen when
+	\noindent note that the dashed black line is there because the phase values after $\pi/2$ need to be adjusted to obtain a continuous plot. An astute observer would notice that the maximum amplitude is not at $\omega = \omega_n$. While resonance is defined as $\omega = \omega_n$, this does not define the point of maximum displacement of the steady-state response. Let us solve for the frequency ratio with the maximum displacement. This will happen when
 	\begin{equation}
 		\frac{d}{dr}\Bigg(\frac{Xk}{F_0} \Bigg)= 0
 	\end{equation}				
@@ -592,7 +593,7 @@ B_s
 	\begin{equation}
 	r_{\text{peak}} = \sqrt{1-2 \zeta^2}= \frac{\omega_p}{\omega_n}, \hspace{1cm} \zeta<1/\sqrt{2} 
 	\end{equation}				
-	however, this is only true for underdamped systems in which $\zeta<1/\sqrt{2}$. If $\zeta \ge 1/\sqrt{2}$ then the value is imaginary and the peak value is at $r=0$. In these cases, the maximum displacement is a function of only $\omega_n$. $\omega_p$ represents the driving frequency that corresponds to the maximum amplitude ($\frac{Xk}{F_0}$) and is called the \textbf{peak frequency}, and can be calculated as:
+	however, this is only true for underdamped systems in which $\zeta<1/\sqrt{2}$. If $\zeta \ge 1/\sqrt{2}$ then the value is imaginary and the peak value is at $r=0$. In these cases, the maximum displacement is a function of only $\omega_n$. $\omega_p$ represents the driving frequency that corresponds to the maximum amplitude ($\frac{Xk}{F_0}$) and is called the peak frequency, and can be calculated as:
 	\begin{equation}
 	\omega_p = \omega_n r_{\text{peak}} = \omega_n \sqrt{1-2 \zeta^2}, \hspace{1cm} \zeta<1/\sqrt{2} 
 	\end{equation}				
@@ -607,13 +608,13 @@ B_s
 		\includegraphics[]{../figures/1-DOF-spring_dashpot_mass_horizontal_forced.png}
 		\caption{Damped 1-DOF spring-mass system subjected to an external force $F(t)$.}
 	\end{figure}				
-	\noindent where $\omega_n = 132$ rad/sec and $\zeta$ = 0.0085. Calculate the displacements of the steady-state response for $\omega$=132 and 125 rad/sec. In both cases, use $f_0$ = 10 N/kg. 
+	\noindent where $\omega_n = 132$~rad/sec and $\zeta$ = 0.0085. Calculate the displacements of the steady-state response for $\omega$=132 and 125~rad/sec. In both cases, use $f_0$ = 10 N/kg. 
 
-	\noindent\textbf{Solution:}	From before, we know the solution for the displacement of the particular solution for $\omega$=132 rad/sec is:
+	\noindent\textbf{Solution:}	From before, we know the solution for the displacement of the particular solution for $\omega$=132~rad/sec is:
 	\begin{equation}
 		X = \frac{f_0}{\sqrt{(\omega_n^2 - \omega^2)^2 +  (2\zeta \omega_n \omega)^2}} = \frac{10}{2(0.0085)(132)^2} = 0.034 \text{ m}
 	\end{equation}							
-	while for $\omega$=125 rad/sec X is:
+	while for $\omega$=125~rad/sec X is:
 	\begin{equation}
 		X = \frac{f_0}{\sqrt{(\omega_n^2 - \omega^2)^2 +  (2\zeta \omega_n \omega)^2}} = \frac{10}{\sqrt{(1799)^2 +  (280.5)^2}}  = 0.005 \text{ m}
 	\end{equation}				
@@ -630,7 +631,7 @@ B_s
 		\includegraphics[]{../figures/1-DOF-spring_dashpot_mass_horizontal_forced.png}
 		\caption{Damped 1-DOF spring-mass system subjected to an external force $F(t)$.}
 	\end{figure}	
-	\noindent Use $k$ = 2000 N/m, $m$ = 100 kg, $F(t)$ = 20 cos($6.3t$) N. 			
+	\noindent Use $k$ = 2000~N/m, $m$ = 100~kg, $F(t)$ = 20 cos($6.3t$) N. 			
 
 	\noindent\textbf{Solution:}
 
@@ -650,7 +651,7 @@ B_s
 	\begin{equation}
 		c = m\sqrt{\frac{f_0^2}{\omega^2 X^2}-\frac{\big(\omega_n^2-\omega^2\big)^2}{\omega^2}} = \sqrt{\frac{F_0^2}{\omega^2 X^2}-m^2\frac{\big(\omega_n^2-\omega^2\big)^2}{\omega^2}} 
 	\end{equation}
-	Therefore, if we set $X=0.01$ m we can solve the above equation to yield $c$ = 55.7 kg/s.
+	Therefore, if we set $X=0.01$ m we can solve the above equation to yield $c$ = 55.7~kg/s.
 	
 \end{example}	
 
@@ -667,31 +668,35 @@ B_s
 	\item building under earthquake loading
 	\item hospital equipment
 	\end{itemize}
-	
-	Consider the following system base excited system
+
 	\begin{figure}[H]
 		\centering
 		\includegraphics[]{../figures/1_DOF_spring_dashpot_mass_vertical_base_excited_FBD.png}
 		\caption{Damped 1-DOF spring-mass system subjected to a displacement controlled base excitation showing the FBDs for the equilibrium and displaced positions.}
 		\label{fig:1_DOF_spring_dashpot_mass_vertical_base_excited_FBD}
 	\end{figure}
-	where $x$ is the displacement of the mass and $y$ is the displacement of the base. Note that we consider positive upward here. The EOM can be constructed the same as before, but now considering that the displacement of the springs and damper is $x-y$.  In the equilibrium state, where a positive $x$ is up and the base displaces down:
+	
+	Consider the following system base excited system shown in figure~\ref{fig:1_DOF_spring_dashpot_mass_vertical_base_excited_FBD} where $x$ is the displacement of the mass and $y$ is the displacement of the base. Note that we consider positive upward here so both $x$ and $y$ displace in the same direction. The EOM can be constructed the same as before, but now considering that the relative displacement of the spring and damper is $x-y$.
+
+ 	In the equilibrium state, where a positive $x$ is up and the base displaces down:
 	\begin{equation}
-	\upplus \sum F_x = -k\delta -mg =0
+	\upplus \sum F_x = k\delta -mg =0
 	\end{equation}	
-	Note that these are both negative because the base displacing down ``pulls'' the mass down with a force $k\delta$ (i.e. if you hold the mass and let the base ``fall''). Conversely, the equation for the displaced state is:
+	Conversely, the equation for the displaced state is:
 	\begin{equation}
-	\upplus \sum F_x = -k(\delta + x - y) -mg -c(\dot{x} -\dot{y})
+	\upplus \sum F_x = k\delta -k(x - y) -mg -c(\dot{x} -\dot{y})
 	\end{equation}	
-	Apply Newton's second law about the mass ($m\ddot{x}$) of motion to the sum of forces for the displaced position we get:
+
+	Apply Newton's second law about the mass of motion to the sum of forces for the displaced position we get:
 	\begin{equation}
-	\upplus \sum F_x = m\ddot{x} = -k\delta -kx + ky -mg -c\dot{x} +c\dot{y}
+	\upplus \sum F_x = m\ddot{x} = k\delta -kx + ky -mg -c\dot{x} +c\dot{y}
 	\end{equation}	
-	applying the equation $-k\delta -mg =0$, and rearrange into the EOM yields:	
+	applying the equation $k\delta -mg =0$, and rearrange into the EOM yields:	
 	\begin{equation}
 	m\ddot{x} + c\dot{x} + kx = c\dot{y} + ky 
 	\end{equation}
-	Now as before we assume an input for the base excitation. For simplicity we assume:
+
+	As before we assume an input for the base excitation. For simplicity, we assume:
 	\begin{equation}
 	y(t) = Y\text{sin}(\omega_b t)
 	\end{equation}
@@ -755,7 +760,7 @@ B_s
 		\begin{equation}
 			C \text{cos}(\omega_b t)  + D \text{sin}(\omega_b t)   = x_p = 	x_p^{(1)} + 	x_p^{(2)} 
 		\end{equation}
-		where we dropped the $(t)$ term from the expression for simplicity in writing and:
+		where we dropped the $(t)$ term from the expression for simplicity. We can then write:
 		\begin{equation}
 			x_p^{(1)} = X^{(1)}\text{cos}(\omega_b t - \phi_1)
 		\end{equation}
@@ -822,7 +827,7 @@ B_s
 				\includegraphics[]{../figures/vehicle_on_road_example.png}
 				\caption{A 1-DOF ``car'' traveling over an uneven road.}
 			\end{figure}				
-			\noindent where $k$ = 300,000 N/m, $m$ = 1600 kg, $c$ = 15,000 kg/s, the period of road roughness = 3 m, and the height of road roughness = 0.01 m. What is the deflection experience by the car at $v$ = 50 km/h?
+			\noindent where $k$ = 300,000~N/m, $m$ = 1600~kg, $c$ = 15,000~kg/s, the period of road roughness = 3 m, and the height of road roughness = 0.01 m. What is the deflection experience by the car at $v$ = 50 km/h?
 			
 			\noindent\textbf{Solution:}
 
@@ -834,7 +839,7 @@ B_s
 				v \text{ m/s} = 50 \text{ km/hr}\Bigg(\frac{1000 \text{ m}}{1 \text {km}}\Bigg) \Bigg(\frac{1 \text{ hours}}{3600 \text { s}}\Bigg) = 13.888 \text{ m/sec}
 			\end{equation} 	
 			\begin{equation}
-				\omega_b = \Bigg(\frac{ 13.88 \text{ m}}{s}\Bigg) \Bigg(\frac{ 1 \text{ cycle}}{3 \text{ m}}\Bigg) \Bigg(\frac{ 2 \pi \text{ rad}}{\text {cycle}}\Bigg) = \text{ rad/s} = 29.08 \text{ rad/s} 
+				\omega_b = \Bigg(\frac{ 13.88 \text{ m}}{s}\Bigg) \Bigg(\frac{ 1 \text{ cycle}}{3 \text{ m}}\Bigg) \Bigg(\frac{ 2 \pi \text{ rad}}{\text {cycle}}\Bigg) = \text{~rad/s} = 29.08 \text{~rad/s} 
 			\end{equation} 	
 			Therefore, the sinusoidal for the base excitation is then:
 			\begin{equation}
@@ -842,7 +847,7 @@ B_s
 			\end{equation} 	
 			Next, we can calculate the natural frequency:
 			\begin{equation}
-				\omega_n = \sqrt{\frac{k}{m}} = \sqrt{\frac{300,000}{1600}} = 13.69 \text{ rad/s}
+				\omega_n = \sqrt{\frac{k}{m}} = \sqrt{\frac{300,000}{1600}} = 13.69 \text{~rad/s}
 			\end{equation} 			
 			Therefore:
 			\begin{equation}
@@ -1018,7 +1023,7 @@ B_s
 	\end{figure}
 	
 	
-	Using the EOM for the system in figure~\ref{fig:2-DOF-spring_mass_horizontal_3} solve for its temporal response by directly solving the ODE for a system initially at rest with $m=1$ kg, $c=0.2$, $k=2.0$, and $F(t)=1/2 \sin (2 \pi t)$. 
+	Using the EOM for the system in figure~\ref{fig:2-DOF-spring_mass_horizontal_3} solve for its temporal response by directly solving the ODE for a system initially at rest with $m=1$~kg, $c=0.2$, $k=2.0$, and $F(t)=1/2 \sin (2 \pi t)$. 
 	
 	\noindent \textbf{Solution:} 
 	
