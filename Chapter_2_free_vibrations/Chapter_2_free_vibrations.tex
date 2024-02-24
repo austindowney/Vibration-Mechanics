@@ -50,7 +50,9 @@
 			m\ddot{x}(t) + kx(t) = 0
 			\label{eq:EOM}
 		\end{equation}		
-		it becomes prudent to solve this homogeneous ordinary differential equation (ODE) to obtain a model of the vibrating system. The simplest method for solving an ODE is to propose a solution based on observations of a vibrating physical system\protect\footnotemark[1]. Figure \ref{fig:Harmonic_Motion_2.png} reports and annotates the key components from an observation of a vibrating system. 
+		it becomes prudent to solve this homogeneous ordinary differential equation (ODE) to obtain a model of the vibrating system. 
+
+		The simplest method for solving an ODE is to propose a solution based on observations of a vibrating physical system\protect\footnotemark[1]. Figure \ref{fig:Harmonic_Motion_2.png} reports and annotates the key components from an observation of a vibrating system. 
 		
 		\footnotetext[1]{Called an ansatz solution. Oxford Languages definition: noun, MATHEMATICS, an assumption about the form of an unknown function which is made in order to facilitate solution of an equation or other problem.} 
 
@@ -65,8 +67,6 @@
 
 		A mathematical expression can now be formulated to represent the observed simple harmonic motion. This expression can be based on the projection of a point on a vector (transposed into the time domain) or assembled from constituent parts as done in what follows. Solving for a location $x$, at a time $t$; $x(t)$, the various characteristics of the expression can be identified:
 
-		\subsubsection{Solve for the Natural Frequency ($\omega_\text{n}$) of the System }
-				
 			\begin{itemize}
 				\item System oscillates $\rightarrow$ a sin function models this 
 				\item System oscillates at different speed $\rightarrow$ use a parameter to adjust $\omega_\text{n}$ in rad/s. 
@@ -78,7 +78,11 @@
 			\begin{equation}
 				{x}(t) = A\text{sin}(\omega_\text{n} t + \phi)
 			\end{equation}
-			Take the derivative to get velocity:
+			This expression can be shown to be the correct solution of a 1-DOF system through simple experimentation. 
+
+			\subsubsection{Solve for the Natural Frequency ($\omega_\text{n}$) of the System }
+
+			Often, we with to directly compute the natural frequency of a system from its parameters. Take the derivative to get velocity:
 			\begin{equation}
 				\dot{x}(t) = A\omega_\text{n}\text{cos}(\omega_\text{n} t + \phi)
 			\end{equation}
@@ -99,6 +103,7 @@
 				\omega_\text{n}= \sqrt{\frac{k}{m}}
 				\label{eq:natural_frequency}
 			\end{equation}
+			
 			Equation \ref{eq:natural_frequency} represents a solution to the EOM  presented in equation \ref{eq:EOM}. This solution is not in the form of an ODE  so, therefore, we can experientially prove that this is the correct solution. For example, we could build a system with known mass and stiffness and measure the natural frequency of the system. Equation \ref{eq:natural_frequency} equation leads to:
 			\begin{equation}
 				T= \frac{2 \pi}{\omega_\text{n}}
@@ -108,6 +113,11 @@
 				f_n= \frac{\omega_\text{n}}{2 \pi}
 			\end{equation}
 			where $f_n$ is the frequency of the oscillations. 
+
+				\begin{note}
+					Radians are considered a dimensionless quantity and as such the units of  $m\omega_\text{n}^2$ become  $\frac{\rm{kg}}{\rm{s}^2}\cdot\frac{\rm{m}}{\rm{m}}$ where the unit value $\frac{\rm{m}}{\rm{m}}$ is added such that the stiffness of the spring can be expressed as $\frac{\rm{kg}\cdot \rm{m}}{\rm{s}^2}\cdot\frac{1}{\rm{m}}$ = $\frac{\rm{N}}{\rm{m}}$.  The International System of Units (SI) defines radians as a derived unit for measuring angles. Interestingly, the topic is still discussed by some  \protect\footnotemark[1]. 
+				\end{note}
+				\footnotetext[1]{Quincey, Paul. ``Angles in the SI: treating the radian as an independent, unhidden unit does not require the redefinition of the term `frequency' or the unit hertz.'' Metrologia 57.5 (2020):053001.}
 					
 		\subsubsection{Solve for Initial Phase ($\phi$) of the System }
 			The EOM is a second-order ODE so there needs to exist two initial conditions (constants) to solve it. For the systems under consideration, the displacement ($x$) and velocity ($\dot{x}$ or $v$) at $t=0$ are the initial conditions. For simplicity, these are written as 
@@ -216,7 +226,10 @@
 
 			\begin{example}
 		
-				A vehicle wheel, tire, and suspension can be modeled as an SDOF spring and mass as depicted below: The mass of the wheel and tire is measured to be 300 kg and its frequency of oscillation is observed to be 10 rad/sec. What is the stiffness of the wheel assembly?
+				
+			\textbf{Vehicle Suspension Modeling}
+
+			\noindent A vehicle wheel, tire, and suspension can be modeled as an SDOF spring and mass as depicted below: The mass of the wheel and tire is measured to be 300 kg and its frequency of oscillation is observed to be 10 rad/sec. What is the stiffness of the wheel assembly?
 				
 				\begin{figure}[H]
 					\centering
@@ -232,12 +245,14 @@
 					\omega_\text{n} = \sqrt{\frac{k}{m}}
 				\end{equation}
 				therefore, $k=m\omega_\text{n}^2=(300$ $\text{kg})(10$ $\text{rad/s})^2=30$ KN/m. 
-				\begin{note}
-					Radians are a dimensionless quantity and as such the units of  $m\omega_\text{n}^2$ become  $\frac{\rm{kg}}{\rm{s}^2}\cdot\frac{\rm{m}}{\rm{m}}$ where the unit value $\frac{\rm{m}}{\rm{m}}$ is added such that the stiffness of the spring can be expressed as $\frac{\rm{kg}\cdot \rm{m}}{\rm{s}^2}\cdot\frac{1}{\rm{m}}$ = $\frac{\rm{N}}{\rm{m}}$.
-				\end{note}
+	
 			\end{example}
-			
-			\begin{example}		
+		
+		\begin{example}		
+
+			\textbf{Calculating Natural Frequency}
+
+			\noindent 
 				Consider the following 1-DOF system, where $k = 857.8$ N/m and $m=49.2\times10^{-3}$ kg, and calculate the natural frequency in rad/s and Hz. Also, find the period of oscillations and the maximum displacement if the spring is initially displaced $10$ mm with no initial velocity.  	
 				\begin{figure}[H]
 					\centering
@@ -272,7 +287,10 @@
 		The EOM for a vibrating system has many solutions and can be expressed in various forms including a general solution. These forms offer different mathematical approaches to solve the same 1-DOF spring-mass system and relate to each other through Euler's equations.
 				
 		\begin{review}
-			Vibration analysis uses complex numbers to solve the EOM's differential equation. In this text the imaginary number is termed $j$ (sometimes referred to as $i$): such that:
+
+			\textbf{Complex Plane}
+
+			\noindent Vibration analysis uses complex numbers to solve the EOM's differential equation. In this text the imaginary number is termed $j$ (sometimes referred to as $i$): such that:
 			
 			\begin{equation}
 				j = \sqrt{-1}
@@ -300,7 +318,9 @@
 		\end{review}			
 		\begin{review}
 		
-			Euler's (pronounced oy-ler) formula, is a mathematical formula in complex analysis that establishes the fundamental relationship between the trigonometric functions and the complex exponential function. Euler's formula states that for any real number $x$,
+			\textbf{Euler's Formula}
+
+			\noindent Euler's (pronounced oy-ler) formula, is a mathematical formula in complex analysis that establishes the fundamental relationship between the trigonometric functions and the complex exponential function. Euler's formula states that for any real number $x$,
 			\begin{equation}
 				e^{j\psi} = \text{cos}(\psi) + j \text{sin}(\psi)
 			\end{equation}		
@@ -374,7 +394,10 @@
 			where $a_1$ and $a_2$ are constants of integration that scale the unit Euler's vector. The positive and negative values in the exponent indicate that the terms are a conjugate pair.
 
 			\begin{review}
-				In linear algebra, the principle of superposition is a fundamental characteristic of linear systems. It states that if $x_1$ and $x_2$ are solutions to a linear system $Ax = b$, where $A$ is a matrix and $b$ is a vector, then any linear combination of these solutions is also a solution to the system. 
+				
+				\textbf{Superposition of Linear Systems}
+
+				\noindent In linear algebra, the principle of superposition is a fundamental characteristic of linear systems. It states that if $x_1$ and $x_2$ are solutions to a linear system $Ax = b$, where $A$ is a matrix and $b$ is a vector, then any linear combination of these solutions is also a solution to the system. 
 				
 				Mathematically, if $Ax_1 = b$ and $Ax_2 = b$, then for any scalars $\alpha$ and $\beta$, the vector $\alpha x_1 + \beta x_2$ is also a solution. This can be demonstrated as:
 				\begin{equation}
@@ -386,11 +409,15 @@
 			
 			
 			\begin{example}
+				\textbf{Equivalences of Mathematical Vibration Models}
+
+				\noindent 
+
 				Show that $	x(t) = a_1e^{+\omega_\text{n} j t} + a_2e^{-\omega_\text{n} j t}$ is equal to $A\text{sin}(\omega_\text{n} t +\phi)$. \\
 				
 				\noindent\textbf{Solution:} 
 
-				This equation was derived using Euler's formula and it can be shown that this equation is equivalent to the $A\text{sin}(\omega_\text{n}+\phi)$. To recover the previously assumed solution, the knowledge that $a_1$ and $a_2$ are complex congregate pairs and as such the magnitude can be expressed as $a_1=a_2$ is leveraged. Using Euler's polar notation, $a_1$ and $a_2$ can be expressed as 
+				\noindent This equation was derived using Euler's formula and it can be shown that this equation is equivalent to the $A\text{sin}(\omega_\text{n}+\phi)$. To recover the previously assumed solution, the knowledge that $a_1$ and $a_2$ are complex congregate pairs and as such the magnitude can be expressed as $a_1=a_2$ is leveraged. Using Euler's polar notation, $a_1$ and $a_2$ can be expressed as 
 				\begin{equation}
 					a_1 = a_2 = ae^{j\psi}
 				\end{equation}	
@@ -402,6 +429,7 @@
 				\begin{equation}
 					x(t) = a(e^{j(\omega_\text{n} t+\psi)} + e^{-j(\omega_\text{n} t+\psi)})
 				\end{equation}				
+				
 				Remembering Euler's equations from before, this becomes:
 				\begin{equation}
 					x(t) = a\big(\text{cos}(\omega_\text{n} t+\psi) + j \text{sin}(\omega_\text{n} t+\psi) + \text{cos}(\omega_\text{n} t+\psi) - j \text{sin}(\omega_\text{n} t+\psi)\big)
@@ -462,15 +490,18 @@
 
 
 			\begin{example}			
-				Using the general solution: 
+
+				\textbf{Solving for Constants in the General Solution}
+
+				\noindent Using the general solution: 
 				\begin{equation}
 					x(t) = A_1\text{cos}(\omega_\text{n} t) + A_2\text{sin}(\omega_\text{n} t)
 				\end{equation}			
 				Calculate the values of $A_1$ and $A_2$ in terms of their initial conditions $x_0$ and $v_0$.
 				
-				\noindent\textbf{Solution:} 
+				\noindent \textbf{Solution:} 
 
-				Knowing the following for $x$ and $\dot{x}$:
+				\noindent Knowing the following for $x$ and $\dot{x}$:
 				\begin{equation}
 					x(t) = A_1\text{cos}(\omega_\text{n} t) + A_2\text{sin}(\omega_\text{n} t)
 				\end{equation}	
@@ -567,7 +598,10 @@
 		\end{figure}
 
 		\begin{vibration_case_study}
-			Dampers are used to extract energy from systems in an effort to reduce their vibrations. The Author Ravel Junior Bridge in Charleston South Carolina is a cable-stayed bridge over the Cooper River with a main span of 471 m (1,546 feet). The bridge uses two dampers connected to the cables in the middle of the bridge to dissipate excess energy in the cables that would otherwise cause unwanted vibrations from wind, traffic, and seismic activity. The inclusion of these dampers on the bridges is a proactive measure to enhance the bridge's performance, safety, and user experience by reducing the effects of vibrations.
+
+			\textbf{Supplemental Damping on Suspension Bridges}
+
+			\noindent Dampers are used to extract energy from systems in an effort to reduce their vibrations. The Author Ravel Junior Bridge in Charleston South Carolina is a cable-stayed bridge over the Cooper River with a main span of 471 m (1,546 feet). The bridge uses two dampers connected to the cables in the middle of the bridge to dissipate excess energy in the cables that would otherwise cause unwanted vibrations from wind, traffic, and seismic activity. The inclusion of these dampers on the bridges is a proactive measure to enhance the bridge's performance, safety, and user experience by reducing the effects of vibrations.
 			
 		\begin{figure}[H]
 			\centering
@@ -774,7 +808,10 @@
 			\end{figure}
 
 		\begin{example}				
-			Consider the following 1-DOF system, where $k = 857.8$ N/m, $c=7.8$ kg/s, and $m=49.2\times10^{-3}$ kg, calculate the damped frequency in rad/s and Hz. What damping case is this system?  
+
+			\noindent \textbf{Solving for Percent Damping} 
+
+			\noindent Consider the following 1-DOF system, where $k = 857.8$ N/m, $c=7.8$ kg/s, and $m=49.2\times10^{-3}$ kg, calculate the percentage of damping and the damped frequency in rad/s and Hz.
 			\begin{figure}[H]
 				\centering
 				\includegraphics[]{../figures/1_DOF_spring_dashpot_mass_vertical.png}
@@ -783,7 +820,7 @@
 
 			\noindent\textbf{Solution:} 
 			
-			Calculate the undamped frequency:
+			\noindent Calculate the undamped frequency:
 			\begin{equation}
 				\omega_\text{n} = \sqrt{\frac{k}{m}}= \sqrt{\frac{857.8}{49.2\times10^{-3}}} = 132 \hspace{1ex}\text{rad/s}
 			\end{equation}	
@@ -795,7 +832,7 @@
 			\begin{equation}
 				\zeta = \frac{c}{c_{\text{cr}}} = \frac{7.8}{12.993} = 0.600
 			\end{equation}				
-			This can also be expressed as 60\% damped, this is an underdamped system, and the system will oscillate. Now we can calculate the damped frequency:
+			This can be expressed as 60\% damped, this is an underdamped system, and the system will oscillate. Now we can calculate the damped frequency:
 			\begin{equation}
 				\omega_\text{d} = \omega_\text{n}\sqrt{1-\zeta^2} = \omega_\text{n}\sqrt{1-0.600^2} = 105.6 \hspace{1ex}\text{rad/s}
 			\end{equation}		
@@ -803,7 +840,10 @@
 		\end{example}
 
 		\begin{example}
-			For a damped one DOF system where $m$, $c$, and $k$ are known to be $m$ = 1 kg, $c$ = 2 kg/s, and $k$ = 10 N/m. Calculate the value of $\zeta$ and $\omega_\text{n}$. Is the system overdamped, underdamped, or critically damped?	
+
+			\noindent \textbf{Solving for the Damping Case} 
+
+			\noindent For a damped one DOF system where $m$, $c$, and $k$ are known to be $m$ = 1 kg, $c$ = 2 kg/s, and $k$ = 10 N/m. Calculate the value of $\zeta$ and $\omega_\text{n}$. Is the system overdamped, underdamped, or critically damped?	
 
 			\noindent\textbf{Solution:} 
 						
@@ -823,7 +863,10 @@
 		\end{example}
 
 		\begin{example}
-			Figure~\ref{fig:rubber_mounted_mass_with_spring} shows an industrial device consisting of a mass isolated from its fixtures by two rubber dampers and an offset spring with an angle $\alpha$. Provide an estimate of the system's damped natural frequency in the vertical direction.	Assume the rubber dampers add damping and only negligible stiffness to the system and that the spring is long enough such that the angles remain constant. 	
+
+			\noindent \textbf{Off Orthogonal Stiffness} 
+
+			\noindent Figure~\ref{fig:rubber_mounted_mass_with_spring} shows an industrial device consisting of a mass isolated from its fixtures by two rubber dampers and an offset spring with an angle $\alpha$. Provide an estimate of the system's damped natural frequency in the vertical direction.	Assume the rubber dampers add damping and only negligible stiffness to the system and that the spring is long enough such that the angles remain constant. 	
 			\begin{figure}[H]
 				\centering
 				\includegraphics[]{../figures/rubber_mounted_mass_with_spring.png}
@@ -833,16 +876,16 @@
 	
 			\noindent\textbf{Solution:} 
 			
-			First and foremost, we need to develop a mass-spring-dashpot representation of the system. This is presented in what follows:
-			
+			\noindent First and foremost, we need to develop a mass-spring-dashpot representation of the system. This is presented in figure~\ref{fig:rubber_mounted_mass_with_spring_spring_dashpot_system} where the damping in the vertical direction provided by the rubber damper is modeled as a dashpot in the vertical direction. As we only want an estimate of the frequency, the assumption that the is small and as such $\alpha$ of the displaced state is equal $\alpha$ of the equilibrium state. 
+
 			\begin{figure}[H]
 				\centering
 				\includegraphics[]{../figures/rubber_mounted_mass_with_spring_spring_dashpot_system.png}
 				\caption{Mass-spring-dashpot representation of the industrial system represented if figure \ref{fig:rubber_mounted_mass_with_spring}.}
+				\label{fig:rubber_mounted_mass_with_spring_spring_dashpot_system}
 			\end{figure}
-				
-			where the damping in the vertical direction provided by the rubber damper is modeled as a dashpot in the vertical direction. As we only want an estimate of the frequency, the assumption that the is small and as such $\alpha$ of the displaced state is equal $\alpha$ of the equilibrium state. This leads to the FBD for the equilibrium  and displaced states:
-			
+
+			This leads to the FBD for the equilibrium  and displaced states:
 			\begin{center}
 				equilibrium position \hspace{4cm} displaced position ``x''
 			\end{center}
@@ -882,7 +925,10 @@
 
 	
 		\begin{vibration_case_study}
-			Epoxy-based damping is used in the automotive field to reduce vehicle noise and vibration harshness (NVH). This passive form of damping is essential for increasing comfort in modern light-wight vehicles. 
+			
+		\textbf{Supplemental Damping in Automotive Damping}
+		
+		\noindent Epoxy-based damping is used in the automotive field to reduce vehicle noise and vibration harshness (NVH). This passive form of damping is essential for increasing comfort in modern light-wight vehicles. 
 			
 		\begin{figure}[H]
 		\centering
@@ -961,7 +1007,9 @@
 
 		\begin{example}
 
-		An engine valve assembly is depicted in figure \ref{fig:engine_valve} where $J$ is the inertia caused by the right-hand side of the rocker arm. Derive an analytical solution for the natural frequency of the rocker arm. Use the assumptions sin($\theta$) = $\theta$ and cos($\theta$) = 1.
+		\textbf{Vibration Modeling of Rocker Arm}
+
+		\noindent An engine valve assembly is depicted in figure \ref{fig:engine_valve} where $J$ is the inertia caused by the right-hand side of the rocker arm. Derive an analytical solution for the natural frequency of the rocker arm. Use the assumptions sin($\theta$) = $\theta$ and cos($\theta$) = 1.
 		
 			\begin{figure}[H]
 				\centering
@@ -972,7 +1020,7 @@
 			
 		\noindent\textbf{Solution:} 
 		
-		Taking the sum of the moments about $O$ and considering the inertia caused by the right-hand side of the rocker arm, $J$, the FBDs can be written as: 
+		\noindent Taking the sum of the moments about $O$ and considering the inertia caused by the right-hand side of the rocker arm, $J$, the FBDs can be written as: 
 		\begin{center}
 			equilibrium position \hspace{4cm} displaced position ``x''
 		\end{center}
@@ -1006,9 +1054,11 @@
 
 		\begin{vibration_case_study}
 			
-			On August 17\textsuperscript{th}, 2009 Turbine 2 of the hydroelectric power station of the Sayano-Shushenskaya Dam near Sayanogorsk in Russia failed catastrophically. The failure flooded the turbine hall and collapsed the ceiling. Killing 75 people, many of whom were in the turbine hall to celebrate the anniversary of the plant's general director.  Turbines of the type used at Sayano-Shushenskaya are designed to have high efficiency but a very narrow working band. When they operate outside the designed working band, they vibrate due to the pulsation of water flow and water strokes. These vibrations degrade the turbine over time. 
+			\textbf{Vibration Induced Failure of Water Turbines}		
+
+			\noindent On August 17\textsuperscript{th}, 2009 Turbine 2 of the hydroelectric power station of the Sayano-Shushenskaya Dam near Sayanogorsk in Russia failed catastrophically. The failure flooded the turbine hall and collapsed the ceiling. Killing 75 people, many of whom were in the turbine hall to celebrate the anniversary of the plant's general director.  Turbines of the type used at Sayano-Shushenskaya are designed to have high efficiency but a very narrow working band. When they operate outside the designed working band, they vibrate due to the pulsation of water flow and water strokes. These vibrations degrade the turbine over time. 
 			
-			Turbine 2 had experienced excessive vibrations for a long time, ever since its installation in 1979. Through the early '80s several issues were fixed, along with substantial repairs in 2000 and 2005.  In July 2009 the turbine again exceeded the allowed vibration specification but stayed in operation. Over the years, the operating staff simply came to accept the higher level of vibration. The final government report stated that the accident was caused by turbine vibrations which led to fatigue damage in a turbine mount. 
+			Turbine 2 had experienced excessive vibrations for a long time, ever since its installation in 1979. Through the early 1980s several issues were fixed, along with substantial repairs in 2000 and 2005.  In July 2009 the turbine again exceeded the allowed vibration specification but stayed in operation. Over the years, the operating staff simply came to accept the higher level of vibration. The final government report stated that the accident was caused by turbine vibrations which led to fatigue damage in a turbine mount. 
 			
 			\begin{figure}[H]
 				\centering
@@ -1098,9 +1148,10 @@
 				c = \zeta 2\sqrt{km}
 			\end{equation}					
 
-\begin{example}
+			\begin{example}
+			\textbf{Experimentally Measuring System Damping}
 			
-			Calculate the damping coefficient for the system with the measured amplitude as expressed below given that $m$ = 3 kg and $k$ = 43 N/m. Use $t_1$ = 1 sec, and $t_{n+1} =t_4=6$ sec. Use the peaks as marked in figure~\ref{fig:Logarithmic_decrement_with_noise}.
+			\noindent Calculate the damping coefficient for the system with the measured amplitude as expressed below given that $m$ = 3 kg and $k$ = 43 N/m. Use $t_1$ = 1 sec, and $t_{n+1} =t_4=6$ sec. Use the peaks as marked in figure~\ref{fig:Logarithmic_decrement_with_noise}.
 
 			\begin{figure}[H]
 				\centering
@@ -1124,16 +1175,18 @@
 				c = \zeta 2\sqrt{km} = 0.0879 \cdot 2\sqrt{43 \cdot 3} = 2.0 \text{ kg/s}
 			\end{equation}	
 
-\end{example}
+			\end{example}
 
 	
-\begin{example}
+			\begin{example}
 			
-			The free-response of a 1000-kg automobile with stiffness of $k$ = 400,000 N/m is observed to be underdamped. Modeling the automobile as a single-degree-of-freedom oscillation in the vertical direction, as annotated in figure \ref{fig:vehicle_wheel_undamped}, determine the damping coefficient if the displacement at $t_1$ is measured to be 2 cm and 0.22 cm at $t_2$.
+			\textbf{Calculating Damping Coefficient}
+			
+			\noindent The free-response of a 1000-kg automobile with stiffness of $k$ = 400,000 N/m is observed to be underdamped. Modeling the automobile as a single-degree-of-freedom oscillation in the vertical direction, as annotated in figure \ref{fig:vehicle_wheel_undamped}, determine the damping coefficient if the displacement at $t_1$ is measured to be 2 cm and 0.22 cm at $t_2$.
 
 			\noindent\textbf{Solution:} 
-						
-			Knowing $x_1$ = 2 cm and $x_2$ = 0.22 cm and $t_2 = T + t_1$, therefore:
+					
+			\noindent Knowing $x_1$ = 2 cm and $x_2$ = 0.22 cm and $t_2 = T + t_1$, therefore:
 			\begin{equation}
 				\delta = \text{ln}\frac{x_1}{x_2} = \text{ln}\frac{2}{0.22} = 2.207
 			\end{equation}			

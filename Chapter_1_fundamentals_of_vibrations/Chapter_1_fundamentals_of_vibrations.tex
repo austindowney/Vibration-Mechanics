@@ -23,9 +23,12 @@
     The consideration of vibrations, and their associated mathematical modeling, are important factors in the design of mechanical systems. In this text, the fundamental theories of vibration are presented and modeled using basic physical principles such as Newton's three laws of motion. These models and analyzed using the mathematical tools of calculus and differential equations. 
 
 	\begin{vibration_case_study}
-		Why study vibrations? One day, it could save your life! The British Aircraft Corporation (BAC) TSR-2 was a strike and reconnaissance aircraft developed during the Cold War by BAC, for the Royal Air Force (RAF). 
 		
-		During the second flight test of air-frame XR219, vibration from one of the plane's fuel pumps caused vibration at the resonant frequency of the human eyeball. As you may expect, an eyeball experiencing high levels of vibrations will distort, causing blindness. Test pilot Roland Beamont was blinded by the vibrations that originated in the fuel pump and transmitted to his head. Roland just happened to be an expert in vibrations and had the knowledge to throttle back one engine. This led to a reduction in the vibrations and a restoration of his full vision. 
+			\textbf{TSR-2 and the Resonance of the Human Eye}
+
+		\noindent Why study vibrations? One day, it could save your life! The British Aircraft Corporation (BAC) TSR-2 was a strike and reconnaissance aircraft developed during the Cold War by BAC, for the Royal Air Force (RAF). 
+		
+		During the second flight test of air-frame XR219, vibration from one of the plane's fuel pumps caused vibration at the resonant frequency of the human eyeball. As you may expect, a human eye experiencing high levels of vibrations will distort, causing blindness. Test pilot Roland Beamont was blinded by the vibrations that originated in the fuel pump and transmitted to his head. Roland just happened to be an expert in vibrations and had the knowledge to throttle back one engine. This led to a reduction in the vibrations and a restoration of his full vision. 
 
 		\begin{figure}[H]
 			\centering
@@ -40,7 +43,10 @@
 	\end{vibration_case_study}
 
 	\begin{review}
-		Newton's three laws of motion:
+
+		\textbf{Newton's Laws of Motion}
+
+		\noindent Newton's three laws of motion:
 		\begin{enumerate}
 			\item In an inertial frame of reference, an object either remains at rest or continues to move at a constant velocity unless acted upon by a force.
 			\item In an inertial reference frame, the vector sum of the forces $F$ on an object is equal to the mass m of that object multiplied by the acceleration of the object: $F = ma$. (It is assumed here that the mass m is constant)
@@ -73,7 +79,10 @@
 		\end{figure}
 
 		\begin{review}
-			The \emph{assumption of small displacements} states that any displacement in a system is considerably smaller the the initial geometry of the system. This means that any 2\textsuperscript{nd}-order effects caused by displacements within the system are ignored. These 2\textsuperscript{nd}-order effects could be loads or angles at the point of linkage/spring connections. 
+			
+			\textbf{Assumption of Small Displacements}
+
+		\noindent The assumption of small displacements states that any displacement in a system is considerably smaller the the initial geometry of the system. This means that any 2\textsuperscript{nd}-order effects caused by displacements within the system are ignored. These 2\textsuperscript{nd}-order effects could be loads or angles at the point of linkage/spring connections. 
 		\end{review}
 	
 		\subsubsection{Spring-Mass Model}
@@ -108,7 +117,10 @@
 			\quotebox{\large{All models are wrong, but some are useful}}{George E.P. Box (1919 - 2013)}	
 
 		\begin{vibration_case_study}
-			Why study vibrations? Because vibrations form an integral part of how we interact with our world and as such, are an important consideration in product. For example, vibrations in the automotive industry fall within a field of expertise termed Noise Vibration and Harshness (NVH). NVH is important because, within a single company, different levels of NVH will be desired for different market segments and products. 
+
+			\textbf{Adjustable Vehicle Suspension}
+
+			\noindent Why study vibrations? Because vibrations form an integral part of how we interact with our world and as such, are an important consideration in product. For example, vibrations in the automotive industry fall within a field of expertise termed Noise Vibration and Harshness (NVH). NVH is important because, within a single company, different levels of NVH will be desired for different market segments and products. 
 			
 			With a proper understanding of NVH, engineers can design cars that can adapt to their environment or desired use case. Consider the 2019 VW Golf GTI shown in figure~\ref{fig:VW_GTI_Suspension_1}(a) equipped with a dynamic suspension system where the driver can select between `comfort' `normal' and `sport' suspension options. To investigate the effect of these suspension settings, an engineer can install an accelerometer (a sensor used for measuring acceleration) as shown in figure~\ref{fig:VW_GTI_Suspension_1}(b). An important consideration in measuring acceleration is where and how to mount the accelerometer. Here, the accelerometer is mounted in the cup holder to measure the vertical acceleration in the center of the car. 
 			\begin{figure}[H]
@@ -132,7 +144,9 @@
 		
 		The generalized concept of stiffness can be directly related to mechanical systems and structural components through Hooke's law. 
 		\begin{review}
-			Hooke's Law states that the force ($F$) needed to extend or compress a spring by some distance $x$ scales linearly with respect to that distance. This law can be extended to the tensional stress of a uniform and elastic bar where the length, area, and Young's modulus of the bar are represented by $l$, $A$, and $E$, respectively. Knowing the tensile stress in the bar:
+						\textbf{Hooke's Law}
+
+		\noindent Hooke's Law states that the force ($F$) needed to extend or compress a spring by some distance $x$ scales linearly with respect to that distance. This law can be extended to the tensional stress of a uniform and elastic bar where the length, area, and Young's modulus of the bar are represented by $l$, $A$, and $E$, respectively. Knowing the tensile stress in the bar:
 			\begin{equation}
 			\sigma = \frac{F}{A}
 			\end{equation} 			
@@ -202,7 +216,9 @@
 
 			\begin{example}
     			
-    			Considering the rod diagrammed below; calculate an equivalent spring constant for the rod using the length of the rod $l$, its area $A$, and Young's modulus $E$ for a compressive force $F$ that compresses the rod a distance $x$. Additionally, is a linear spring a useful model for a rod under compression? What if the rod is under tension?
+    		\textbf{Axial Rod Vibrations}
+
+			\noindent	Considering the rod diagrammed below; calculate an equivalent spring constant for the rod using the length of the rod $l$, its area $A$, and Young's modulus $E$ for a compressive force $F$ that compresses the rod a distance $x$. Additionally, is a linear spring a useful model for a rod under compression? What if the rod is under tension?
         
 		 		\begin{figure}[H]
 		 			\centering
@@ -281,7 +297,9 @@
 
 			\begin{example}
 
-				Calculate the equivalent stiffness of the following system:
+			\textbf{Springs in Parallel and Series Configurations}
+
+			\noindent Calculate the equivalent stiffness of the following system:
 				\begin{figure}[H]
 					\centering
 					\includegraphics[]{../figures/equivalent_mass_and_spring_system_1.png}
@@ -336,7 +354,10 @@
 		\end{equation}
 
 		\begin{review}
-			A second-order linear homogeneous differential equation has the form:
+
+			\textbf{Differential Equation}
+
+			\noindent A second-order linear homogeneous differential equation has the form:
 			
 			\begin{equation}
 			 a \ddot{x} + b \dot{x} + cx = 0
@@ -348,14 +369,17 @@
 					
 		\begin{example}			
 			
-			Considering the system:
+
+			\textbf{Deriving Equation of Motion}
+
+			\noindent Considering the system:
 			\begin{figure}[H]
 				\centering
 				\includegraphics[]{../figures/1-DOF-spring_mass_horizontal.png}
 				\caption{A 1 DOF spring-mass system with movement in the horizontal direction}
 			\end{figure}		
 			
-			\textbf{Step-1}
+			\noindent \textbf{Step-1}
 			Define the direction of displacement, and draw the FBD for the equilibrium and displaced state.  
 			\begin{figure}[H]
 				\centering
@@ -387,7 +411,10 @@
 		\end{example}			
 
 		\begin{example}	
-			Some systems will have an initial displacement, as the system will oscillate around this position we need to define the EOM about this position. Considering the system:
+
+			\textbf{Deriving Equation of Motion Considering Initial Displacement}
+
+			\noindent Some systems will have an initial displacement, as the system will oscillate around this position we need to define the EOM about this position. Considering the system:
 			\begin{figure}[H]
 				\centering
 				\includegraphics[]{../figures/1-DOF-spring_mass_vertical.png}
@@ -427,9 +454,12 @@
 
 
 		\begin{vibration_case_study}
-			Why study vibrations? One day, it could save your job! For a project to be successful it needs to be completed on time and within budget. 
 			
-			Consider the Ling-Temco-Vought (LTV) XC-142  which was a tilt-wing experimental aircraft developed in the '60s for the US military and later turned over to NASA. During testing, the cross-linked driveshaft produced excessive vibration and noise which resulted in a high pilot workload. In general, the aircraft's cross-linked driveshaft was the main technical issue that caused the military to lose interest in the project. 
+			\textbf{Design Considerations in Vibrations}
+
+			\noindent Why study vibrations? One day, it could save your job! For a project to be successful it needs to be completed on time and within budget. 
+			
+			Consider the Ling-Temco-Vought (LTV) XC-142  which was a tilt-wing experimental aircraft developed in the 1960s for the US military and later turned over to NASA. During testing, the cross-linked driveshaft produced excessive vibration and noise which resulted in a high pilot workload. In general, the aircraft's cross-linked driveshaft was the main technical issue that caused the military to lose interest in the project. 
 			
 			\begin{figure}[H]
 				\centering

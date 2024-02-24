@@ -117,12 +117,14 @@ x(t) = x_0\text{cos}(\omega_n t) + \frac{v_0}{\omega_n}\text{sin}(\omega_n t)
 
 
 \begin{example}
+
+\textbf{Single-story Frame}
 	
-Let's consider the single-story frame shown in figure~\ref{fig:one_story_frame_example} with mass $m$ = 0.15 kip $s^2$/ft, $L$ = 12 ft, $EI$= 1800 kip $ft^2$. a) Determine the EOM and the natural period of the frame; b) assume that the moment of inertia of the right column is $2I$. Will the EOM change? \\
+\noindent Let's consider the single-story frame shown in figure~\ref{fig:one_story_frame_example} with mass $m$ = 0.15 kip $s^2$/ft, $L$ = 12 ft, $EI$= 1800 kip $ft^2$. a) Determine the EOM and the natural period of the frame; b) assume that the moment of inertia of the right column is $2I$. Will the EOM change? \\
 
 \noindent \textbf{Solution a) :} 
 
-The frame can be modeled as a single degree of freedom in free vibration. Therefore, the EOM is:
+\noindent The frame can be modeled as a single degree of freedom in free vibration. Therefore, the EOM is:
 \begin{equation}
 	m \ddot{x} + k x = 0
 \end{equation}
@@ -140,7 +142,7 @@ T_n =\frac{2 \pi}{\omega_n} = 0.48 s
 
 \noindent \textbf{Solution b) :} 
 
-The EOM won't change, but the lateral stiffness of the system will be: 
+\noindent The EOM won't change, but the lateral stiffness of the system will be: 
 \begin{equation}
 k = \sum_{columns}^{} k_c = \frac{12EI} {H^3} + \frac{24EI} {H^3} = \frac{36 EI}{H^3}
 \end{equation}
@@ -235,6 +237,9 @@ If $F(t)$ is characterized by a simple function, Duhamel's integral can be evalu
 
 
 \begin{example}
+\textbf{Solving for Response due to Step Function Loading} 
+	
+\noindent
 	
 	Let's consider an undamped SDOF system subjected to a step function force with constant amplitude $F_0$, as schematically represented in figure~\ref{fig:step_force}. Assume that the system is at rest (initial conditions: $x(0) = \dot{x}(0) = 0$) and compute the system response $x(t)$. 
 	
@@ -247,7 +252,7 @@ If $F(t)$ is characterized by a simple function, Duhamel's integral can be evalu
 
 \noindent \textbf{Solution:} 
 	
-The system is undamped, therefore we can use the Duhamel's integral in equation~\ref{Eq_Duhamel_undamped} to find $x(t)$:
+\noindent The system is undamped, therefore we can use the Duhamel's integral in equation~\ref{Eq_Duhamel_undamped} to find $x(t)$:
 \begin{equation} 
 x(t) = \frac{1}{m \omega_n} \int_{0}^{t} F_0 sin(\omega_n (t - \tau)) d\tau 
 \end{equation}
@@ -352,8 +357,9 @@ $\phi_1$, $\phi_2$, $A_1$, and $A_2$ are constants that can be found based on th
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		
 \begin{example}
+\textbf{Finding the Structural Response of a Two Story Building}
 
-Consider the frame in figure~\ref{fig:two_story_frame_ex}. Determine the natural frequency of vibration and mode shapes of the system.
+\noindent Consider the frame in figure~\ref{fig:two_story_frame_ex}. Determine the natural frequency of vibration and mode shapes of the system.
 \begin{figure}[H]
 	\centering
 	\includegraphics{../figures/two_story_frame_example.png}

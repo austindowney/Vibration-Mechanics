@@ -22,7 +22,7 @@
 	\begin{review}
 	\textbf{Linear Algebra}
 	
-	Linear algebra allows for the efficient solving of these coupled equations. In this text, matrices are expressed as bold capital letters ($\textbf{X}$), vectors are denoted with an arrow ($\vec{x}$), and scalars/variables with italic letters ($x$). However, given the range of notation needed, it is not always possible to strictly follow this formulation.
+	\noindent Linear algebra allows for the efficient solving of these coupled equations. In this text, matrices are expressed as bold capital letters ($\textbf{X}$), vectors are denoted with an arrow ($\vec{x}$), and scalars/variables with italic letters ($x$). However, given the range of notation needed, it is not always possible to strictly follow this formulation.
 	
 	The dot product allows us to multiply matrices and is defined as:
 	\begin{eqnarray}
@@ -74,7 +74,9 @@
 	\end{itemize}
 	
 	\begin{vibration_case_study}
-		In automotive engineering, the requirements for safe and comfortable vehicles necessitate the need for a thorough understanding of the vehicle's dynamic properties and how any design changes affect its dynamics. Experimental modal analysis is an important troubleshooting and model-updating tool in the study of vehicle noise and vibration harshness (NVH). Oftentimes, experimental modal analysis is performed on a ``body in white'' or a sub-frame structure to develop a better understanding of the dynamics of the structure. Overall, experimental modal analysis is an important tool used in improving a vehicle's NVH performance.
+		\textbf{Modal Testing}
+		
+		\noindent In automotive engineering, the requirements for safe and comfortable vehicles necessitate the need for a thorough understanding of the vehicle's dynamic properties and how any design changes affect its dynamics. Experimental modal analysis is an important troubleshooting and model-updating tool in the study of vehicle noise and vibration harshness (NVH). Oftentimes, experimental modal analysis is performed on a ``body in white'' or a sub-frame structure to develop a better understanding of the dynamics of the structure. Overall, experimental modal analysis is an important tool used in improving a vehicle's NVH performance.
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=6in]{../figures/modal_testing}
@@ -288,7 +290,9 @@
 	
 	\begin{example}
 	\label{ex:2-DOF}
-	Considering the following system:
+	\textbf{Calculating Response of a two-DOF system}
+
+	\noindent Considering the following system:
 	\begin{figure}[H]
 		\centering
 		\includegraphics[]{../figures/2-DOF-spring_mass_horizontal.png}
@@ -299,7 +303,7 @@
 	
 	\noindent \textbf{Solution:} 
 
-	We have already obtained a characteristic equation for this system. This is shown in Equation~\ref{eq:characteristic_equation} and is given as:
+	\noindent  We have already obtained a characteristic equation for this system. This is shown in Equation~\ref{eq:characteristic_equation} and is given as:
 	\begin{equation}
 	m_1 m_2 \omega^4 - (m_1 k_2 + m_2 k_1 + m_2 k_2)\omega^2 + k_1 k_2 = 0
 	\end{equation}
@@ -319,7 +323,8 @@
 	\begin{equation}
 	\omega_1 = \pm \sqrt{2} \text{ rad/sec}, \hspace{2ex} \omega_2 = \pm 2 \text{ rad/sec}
 	\end{equation}
-	Next, we need to obtain solutions for $\vec{u}_1$ and $\vec{u}_2$. Having solved for $\omega_1$ and $\omega_2$ we can obtain this. First, knowing $\vec{u}_1 = [u_{11} u_{21}]^\text{T}$ and using $\omega_1 = \sqrt{2}$ and the following equation:
+	
+	We need to obtain solutions for $\vec{u}_1$ and $\vec{u}_2$. Having solved for $\omega_1$ and $\omega_2$ we can obtain this. First, knowing $\vec{u}_1 = [u_{11} u_{21}]^\text{T}$ and using $\omega_1 = \sqrt{2}$ and the following equation:
 	\begin{equation}
 		(-\omega_1^2 M  + K)\vec{u}_1 =0
 	\end{equation}
@@ -372,6 +377,7 @@
 		 \vec{u}_2 = \begin{bmatrix} -\frac{1}{3}\\ 1\end{bmatrix}
 	\end{equation}
 	Where $\vec{u}_1$ and $\vec{u}_2$ represent only the directions and shape of the mode shapes and not the magnitude of the mode shapes. 
+
 	Now that we have the mode shapes, we can solve for the initial conditions $A_1$ and $A_2$. To do this, let us use the following formulation of the solution:
 	\begin{equation}
 		 \begin{bmatrix} x_1(t) \\  x_2(t) \end{bmatrix} =  \begin{bmatrix} \vec{u}_1 & \vec{u}_2 \end{bmatrix}
@@ -422,7 +428,9 @@
 	\begin{equation}
 	0= A_1 + A_2 
 	\end{equation}
-	Where this shows us that $A_1 = \frac{3}{2}$ and $A_2 = -\frac{3}{2}$. Therefore, now that we have the initial conditions we can find a solution for the temporal response of each mass. Using the equations from before:
+	Where this shows us that $A_1 = \frac{3}{2}$ and $A_2 = -\frac{3}{2}$. 
+
+	Now that we have the initial conditions we can find a solution for the temporal response of each mass. Using the equations from before:
 	\begin{equation}
 		x_1(t) = A_1 \sin (\omega_1 t + \phi_1 )u_{11} + A_2 \sin (\omega_2 t + \phi_2 )u_{12}
 	\end{equation}
@@ -456,7 +464,10 @@
 	
 	
 	\begin{example}
-	Mode shapes can be better understood through a graphical representation. To do this, consider the 2-DOF system presented in figure \ref{fig:2-DOF-spring_mass_vertical}(a). Assuming that $x_1<x_2$ the FBD for the system is expressed in figure \ref{fig:2-DOF-spring_mass_vertical}(b).
+
+	\textbf{Plotting Mode Shapes}
+
+	\noindent Mode shapes can be better understood through a graphical representation. To do this, consider the 2-DOF system presented in figure \ref{fig:2-DOF-spring_mass_vertical}(a). Assuming that $x_1<x_2$ the FBD for the system is expressed in figure \ref{fig:2-DOF-spring_mass_vertical}(b).
 	
 	\begin{figure}[H]
 		\centering
@@ -466,9 +477,9 @@
 	\end{figure}
 	\noindent For simplicity, all masses, and spring stiffness are considered equal and that $m=1$ and $k=1$. \\
 
-\noindent \textbf{Solution:} 
+	\noindent \textbf{Solution:} 
 
- From the previous investigations in this text, we know that the forces caused by gravity will cancel out. Therefore, the EOM for the system can be written as:
+	\noindent  From the previous investigations in this text, we know that the forces caused by gravity will cancel out. Therefore, the EOM for the system can be written as:
 	\begin{eqnarray}
 	m\ddot{x}_1 &= & -kx_1 + k(x_2-x_1) \\
 	m\ddot{x}_2&= & -k(x_2-x_1) -kx_2 \nonumber
@@ -596,7 +607,10 @@
 	
 	
 	\begin{vibration_case_study}
-	Multi-span concrete bridges like the Trigno V bridge (figure~\ref{fig:case_study_closely_coupled_bridge_frequencies_1}) over the Trigno river in Italy have repeating segments that make up the bridge decks. The structural components of the segmented bridge decks are separate components sitting on bearing pads and piers where the only connecting material between decks is the overlay that is added to provide a contentious road surface. This configuration forms what is known as a partially-connected bridge deck\protect\footnotemark[1].
+
+	\textbf{Closely Coupled Modes in Complex Structures}
+
+	\noindent Multi-span concrete bridges like the Trigno V bridge (figure~\ref{fig:case_study_closely_coupled_bridge_frequencies_1}) over the Trigno river in Italy have repeating segments that make up the bridge decks. The structural components of the segmented bridge decks are separate components sitting on bearing pads and piers where the only connecting material between decks is the overlay that is added to provide a contentious road surface. This configuration forms what is known as a partially-connected bridge deck\protect\footnotemark[1].
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=\linewidth]{../figures/case_study_closely_coupled_bridge_frequencies_1}
@@ -635,7 +649,7 @@
 	
 		\textbf{Eigenvalues and Eigenvectors}
 	
-		In linear algebra, eigenvalues ($\lambda$) and eigenvectors ($\vec{v}$) are concepts that appear prominently in the analysis of linear transformations. By definition, if  $\vec{v}$ is a vector (in vector space $V$ over a field $F$) and $T$ is a linear transformation into itself, then $\vec{v}$ is an eigenvector of $T$ if $T(\vec{v})$ is a scalar multiple of $\vec{v}$:
+		\noindent In linear algebra, eigenvalues ($\lambda$) and eigenvectors ($\vec{v}$) are concepts that appear prominently in the analysis of linear transformations. By definition, if  $\vec{v}$ is a vector (in vector space $V$ over a field $F$) and $T$ is a linear transformation into itself, then $\vec{v}$ is an eigenvector of $T$ if $T(\vec{v})$ is a scalar multiple of $\vec{v}$:
 		\begin{equation}
 		T(\vec{v}) = \lambda\vec{v}
 		\end{equation}
@@ -683,7 +697,8 @@
 		\end{equation}
 	\begin{review}
 	\textbf{Cholesky Decomposition} 
-			The Cholesky decomposition of a real positive-definite matrix $A$ is a decomposition of the form:
+
+		\noindent The Cholesky decomposition of a real positive-definite matrix $A$ is a decomposition of the form:
 		\begin{equation}
 			\textbf{A}=\textbf{LL}^{\text{T}}
 			\end{equation}
@@ -753,7 +768,7 @@
 		\begin{review}	
 		\textbf{Vector Norms} 
 		
-	The Euclidean norm of a vector (also termed as 2-norm, Euclidean length or the vector magnitude) is defined as:
+	\noindent The Euclidean norm of a vector (also termed as 2-norm, Euclidean length or the vector magnitude) is defined as:
 	\begin{equation}
 	||\textbf{v}|| = \sqrt{\sum_{i=1}^{n}(v_i^2)} = \sqrt{\textbf{v}^{\text{T}}\textbf{v}}
 	\end{equation} 
@@ -769,11 +784,14 @@
 	
 	\begin{example}
 	\label{ex:vector_normalizeation}
-	Normalize the vector $\vec{v}_1=[1/3 \hspace{1ex} 1]^\text{T}$. \\
-	
-\noindent \textbf{Solution:} 
 
-First, let's check the Euclidean norm of $\vec{v}_1$, this is $\sqrt{1^2+1/3^2} = \sqrt{1.11} = 1.05$; therefore, the unit vector is not unit norm.
+	\textbf{Normalizing Vectors}
+
+	\noindent Normalize the Eigenvector $\vec{v}_1=[1/3 \hspace{1ex} 1]^\text{T}$. \\
+		
+	\noindent \textbf{Solution:} 
+	
+	\noindent First, let's check the Euclidean norm of $\vec{v}_1$, this is $\sqrt{1^2+1/3^2} = \sqrt{1.11} = 1.05$; therefore, the unit vector is not unit norm.
 	
 	To normalize the vector $\vec{v}_1$, a scalar ($\alpha$) is calculated to make $\alpha\textbf{v}=1$.  Therefore, following the definition of an orthogonal vector:
 	\begin{equation}
@@ -812,7 +830,10 @@ First, let's check the Euclidean norm of $\vec{v}_1$, this is $\sqrt{1^2+1/3^2} 
 	
 	
 	\begin{example}
-	Consider the system presented in example \ref{ex:2-DOF} and repeated below where $m_1$=9 kg, $m_2$=1 kg, $k_1$ = 24 N/m, and $k_2$ = 3 N/m with the initial conditions $x_{10}=1$ mm, $v_{10}=0$ mm/s, $x_{20}=0$ mm, and $v_{20}=0$ mm/s. Calculate the natural frequencies and the mode shapes using the eigenvalue solution. 
+
+	\noindent \textbf{Calculating Eigenvalue-based Solutions for System Dynamics}  
+
+	\noindent Consider the system presented in example \ref{ex:2-DOF} and repeated below where $m_1$=9 kg, $m_2$=1 kg, $k_1$ = 24 N/m, and $k_2$ = 3 N/m with the initial conditions $x_{10}=1$ mm, $v_{10}=0$ mm/s, $x_{20}=0$ mm, and $v_{20}=0$ mm/s. Calculate the natural frequencies and the mode shapes using the eigenvalue solution. 
 	\begin{figure}[H]
 		\centering
 		\includegraphics[]{../figures/2-DOF-spring_mass_horizontal.png}
@@ -824,7 +845,7 @@ First, let's check the Euclidean norm of $\vec{v}_1$, this is $\sqrt{1^2+1/3^2} 
 	
 \noindent \textbf{Solution:}  
 
-Writing the mass and stiffness matrix of the system as:
+\noindent Writing the mass and stiffness matrix of the system as:
 	
 	\begin{equation}
 		M = \begin{bmatrix} 9 & 0 \\  0  & 1 \end{bmatrix} 
@@ -849,6 +870,7 @@ Writing the mass and stiffness matrix of the system as:
 	\begin{equation}
 	\widetilde{K}\textbf{v} =  \lambda \textbf{v}
 	\end{equation}
+	
 	While this can be obtained using computers for such a simple case it is more appropriate to solve this expression by had. Therefore, the above expression can be rewritten as:
 	\begin{equation}
 	(\widetilde{K} - \lambda I)\textbf{v} =  0
@@ -885,6 +907,7 @@ Writing the mass and stiffness matrix of the system as:
 	\begin{equation}
 	\alpha \vec{v}_1=  \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\ 1 \end{bmatrix}  =  \begin{bmatrix} 0.71 \\ 0.71 \end{bmatrix} 
 	\end{equation} 
+	
 	A similar process is followed for $\lambda_2=4$ that leads to the normalized vector 
 	\begin{equation}
 	\alpha \vec{v}_2=  \frac{1}{\sqrt{2}} \begin{bmatrix} -1 \\ 1 \end{bmatrix} =  \begin{bmatrix} -0.71 \\ 0.71 \end{bmatrix} 
@@ -914,14 +937,14 @@ Writing the mass and stiffness matrix of the system as:
 			\label{fig:2-DOF-spring_mass_horizontal_2}
 		\end{figure}
 		
-		Using the Eigenvalue approach and MATLAB, determine the natural frequencies and mode shapes of the system shown in figure~\ref{fig:2-DOF-spring_mass_horizontal_2}, where $m_1$=9 kg, $m_2$=1 kg, $k_1$ = 24 N/m, and $k_2$ = 3 N/m with the initial conditions $x_{10}=1$ mm, $v_{10}=0$ mm/s, $x_{20}=0$ mm, and $v_{20}=0$ mm/s with the EOM expressed as: 
+		\noindent Using the Eigenvalue approach and MATLAB, determine the natural frequencies and mode shapes of the system shown in figure~\ref{fig:2-DOF-spring_mass_horizontal_2}, where $m_1$=9 kg, $m_2$=1 kg, $k_1$ = 24 N/m, and $k_2$ = 3 N/m with the initial conditions $x_{10}=1$ mm, $v_{10}=0$ mm/s, $x_{20}=0$ mm, and $v_{20}=0$ mm/s with the EOM expressed as: 
 		\begin{eqnarray}
 		  \begin{bmatrix} m_1 & 0  \\  0 & m_2 \end{bmatrix}\begin{bmatrix} \ddot{x_1} \\  \ddot{x_2} \end{bmatrix} + \begin{bmatrix} k_1+k_2 & -k_2  \\  -k_2 & k_2 \end{bmatrix}\begin{bmatrix} x_1 \\  x_2 \end{bmatrix} = \begin{bmatrix} 0 \\  0 \end{bmatrix}
 		\end{eqnarray} \\
 	
 		\noindent \textbf{Solution:} 
 	
-		Using the eigenvalue method, the following MATLAB code will solve for the natural frequencies and mode shapes:
+	\noindent Using the eigenvalue method, the following MATLAB code will solve for the natural frequencies and mode shapes:
 		
 	\lstset{caption={MATLAB code to find the frequencies and mode shapes of a 2-DOF system.},
 		label={lst:code},
@@ -971,7 +994,7 @@ u_2 = M_inv_sqr*v(:,2)
 	\begin{example}
 	\textbf{2-DOF System Subjected to Impulse}
 	
-	Two masses are connected through a spring, as shown in figure~\ref{fig:2-DOF-spring_mass_free}. 
+	\noindent Two masses are connected through a spring, as shown in figure~\ref{fig:2-DOF-spring_mass_free}. 
 	\begin{figure}[H]
 		\centering
 		\includegraphics[]{../figures/2-DOF-spring_mass_free.png}
@@ -981,7 +1004,7 @@ u_2 = M_inv_sqr*v(:,2)
 
 \noindent \textbf{Solution:}
 
-  Assuming that $x_1$ displaces more than $x_2$, the equations of motion are:
+	\noindent Assuming that $x_1$ displaces more than $x_2$, the equations of motion are:
 	\begin{eqnarray}
 	m_1\ddot{x}_1 + k(x_1-x_2)  = F_0 \delta (t) \\
 	m_2\ddot{x}_2 + k(x_2-x_1)  = 0  \nonumber
@@ -1083,7 +1106,7 @@ u_2 = M_inv_sqr*v(:,2)
 	\end{figure}
 	\footnotetext[1]{``A Beechcraft Baron 58 in flight'' by San Diego Air \& Space Museum Archives, Public Domain.}  
 	
-	Modeling the vibrations of a twin-engine airplane as a three-degree-of-freedom system can be done as shown in figure~\ref{fig:mode_shape_aiplane_example} where the fuselage is a center mass, and the engines are point masses suspended by cantilevers from the center mass. The stiffness of the wing corresponds to the modulus of the wing $E$ and its moment of inertia $I$. 
+	\noindent Modeling the vibrations of a twin-engine airplane as a three-degree-of-freedom system can be done as shown in figure~\ref{fig:mode_shape_aiplane_example} where the fuselage is a center mass, and the engines are point masses suspended by cantilevers from the center mass. The stiffness of the wing corresponds to the modulus of the wing $E$ and its moment of inertia $I$. 
 	Assuming that $m_1=m_3=1m$, $m_2=3m$, and $k=\frac{3EI}{l}$, the EOM can be written as:
 	
 	\begin{equation}
@@ -1091,11 +1114,11 @@ u_2 = M_inv_sqr*v(:,2)
 	\end{equation}
 	calculate the natural frequencies and mode shapes of the system and plot the mode shapes in relation to the considered Beechcraft Baron.
 	
-	\vspace{2ex}
+
 	\noindent \textbf{Solution using the mass normalized stiffness matrix $\tilde{K}$:}
-	\vspace{1ex}
+
 	
-	Solving for the modes shapes using the  mass normalized stiffness matrix $\tilde{K}$ requires solving for $M^{-1/2}$ and $\tilde{K}$ such that:
+	\noindent 	Solving for the modes shapes using the  mass normalized stiffness matrix $\tilde{K}$ requires solving for $M^{-1/2}$ and $\tilde{K}$ such that:
 	\begin{equation}
 		  M^{-1/2} = \begin{bmatrix} 1 & 0 & 0 \\    0  & 0.577 & 0 \\ 0  & 0 & 1 \end{bmatrix}
 	\end{equation}
@@ -1132,13 +1155,9 @@ u_2 = M_inv_sqr*v(:,2)
 		\label{fig:mode_shape_aiplane_example_normalized_stiffness}
 	\end{figure}
 	
-	
-	
-	\vspace{2ex}
 	\noindent \textbf{Solution using the generalized eigenvalue approach:}
-	\vspace{1ex}
-	
-	The mode shapes can also be solved for using the generalized eigenvalue approach where the eigenvalue problem is written as:
+
+	\noindent The mode shapes can also be solved for using the generalized eigenvalue approach where the eigenvalue problem is written as:
 	\begin{equation}
 	\textbf{K}\textbf{v} = \vec{\lambda}\textbf{M}\textbf{v}
 	\end{equation}
@@ -1204,7 +1223,8 @@ u_2 = M_inv_sqr*v(:,2)
 		\begin{review}	
 		\label{review:modal_matirx}
 		\textbf{Modal Matrix} 
-			A \emph{modal matrix} is a mathematical concept taken from linear algebra and not specific to vibrations or structural dynamics. This is why the modal matrix does not contain the modes of the system but rather eigenvectors. 
+
+		\noindent A modal matrix is a mathematical concept taken from linear algebra and not specific to vibrations or structural dynamics. This is why the modal matrix does not contain the modes of the system but rather eigenvectors. 
 			
 			From linear algebra, the modal matrix $B$ for the matrix $A$ is a matrix of size $n \times n$ consisting of the eigenvectors of $A$ as columns in $B$. It is used in the definition of matrix similarity such that 
 			\begin{equation}
@@ -1268,9 +1288,9 @@ u_2 = M_inv_sqr*v(:,2)
 	%\todo{test}
 	
 	\begin{example}
-	\textbf{Free vibration response}
+	\textbf{Free Vibration Response}
 	
-	Solve for the free vibration response of the 2-DOF presented in figure~\ref{fig:2-DOF-spring_mass_horizontal_double_wall} using modal analysis. Show the temporal response for the entire system for its first 20 seconds using the full modal reconstruction and the reconstruction truncated to just include the first mode. Also, plot the variations in the modal participation coefficients through time. Apply the parameters, $f_1 = 0$ N, $f_2 = 0$ N, $m_1 = 10$ kg, $m_2 = 1$ kg, $k_1 = 30$ N/m, $k_2 = 5$ N/m, $k_3 = 1$ N/m, $x_1(0) = 1$ mm, $x_2(0) = 0$ mm, $v_1(0) = 0$ mm/s, and $v_2(0) = 0$ mm/s.
+	\noindent Solve for the free vibration response of the 2-DOF presented in figure~\ref{fig:2-DOF-spring_mass_horizontal_double_wall} using modal analysis. Show the temporal response for the entire system for its first 20 seconds using the full modal reconstruction and the reconstruction truncated to just include the first mode. Also, plot the variations in the modal participation coefficients through time. Apply the parameters, $f_1 = 0$ N, $f_2 = 0$ N, $m_1 = 10$ kg, $m_2 = 1$ kg, $k_1 = 30$ N/m, $k_2 = 5$ N/m, $k_3 = 1$ N/m, $x_1(0) = 1$ mm, $x_2(0) = 0$ mm, $v_1(0) = 0$ mm/s, and $v_2(0) = 0$ mm/s.
 	
 	\begin{figure}[H]
 		\centering
@@ -1281,7 +1301,7 @@ u_2 = M_inv_sqr*v(:,2)
 
 \noindent \textbf{Solution:} 
 
-The equations of motion that couple the system are:
+\noindent The equations of motion that couple the system are:
 	\begin{eqnarray}
 	m_1\ddot{x}_1 + (k_1+k_2)x_1 - k_2x_2 = 0 \\
 	m_2\ddot{x}_2 + (k_2+k_3)x_2 - k_2x_1 = 0 \nonumber
@@ -1328,7 +1348,9 @@ The equations of motion that couple the system are:
 	\begin{equation}
 	1 = \alpha_2^2 \begin{bmatrix} -0.15 &  0.99 \end{bmatrix} \begin{bmatrix} 10 & 0 \\    0  & 1 \end{bmatrix}  \begin{bmatrix} -0.15 \\  0.99 \end{bmatrix}
 	\end{equation}
-	therefore, $\alpha_1=0.52$ and $\alpha_2=0.91$. Now, applying the proper scaling values to the modal vector, the modal matrix becomes:
+	therefore, $\alpha_1=0.52$ and $\alpha_2=0.91$.
+
+	Applying the proper scaling values to the modal vector, the modal matrix becomes:
 	\begin{equation}
 	P = [ \vec{v}_1 \; \; \vec{v}_2 ] = \begin{bmatrix} 0.284 & -0.14 \\    0.43  & 0.900 \end{bmatrix}
 	\end{equation}
@@ -1421,7 +1443,7 @@ The equations of motion that couple the system are:
 	\begin{example}
 	\textbf{Directly Solving the ODE of the EOM for a 2-DOF system.} \\
 
-	Consider the system presented in figure~\ref{fig:2-DOF-spring_mass_dashpot_horizontal_forced_ramp_function}(a) where $m_1$=2 kg, $m_2$=1 kg, $k_1$ = 20 N/m, $k_2$ = 10 N/m, $c_1=0.5$ kg/s, and $c_2=1$ kg/s; initially at rest. $m_1$ is subjected to the ramp and hold load shown in figure~\ref{fig:2-DOF-spring_mass_dashpot_horizontal_forced_ramp_function}(b). 	Using MATLAB, solve the EOM for the temporal response 2-DOF system using a numerical ODE solver.
+	\noindent Consider the system presented in figure~\ref{fig:2-DOF-spring_mass_dashpot_horizontal_forced_ramp_function}(a) where $m_1$=2 kg, $m_2$=1 kg, $k_1$ = 20 N/m, $k_2$ = 10 N/m, $c_1=0.5$ kg/s, and $c_2=1$ kg/s; initially at rest. $m_1$ is subjected to the ramp and hold load shown in figure~\ref{fig:2-DOF-spring_mass_dashpot_horizontal_forced_ramp_function}(b). 	Using MATLAB, solve the EOM for the temporal response 2-DOF system using a numerical ODE solver.
 
 			\begin{figure}[H]
 				\centering
@@ -1433,7 +1455,7 @@ The equations of motion that couple the system are:
 			
 \noindent \textbf{Solution:} 
 	
-	Assuming $x_1<x_2$, the matrix form of the system is
+\noindent Assuming $x_1<x_2$, the matrix form of the system is
 	
 				\begin{eqnarray}
 				  \begin{bmatrix} m_1 & 0  \\  0 & m_2 \end{bmatrix}\begin{bmatrix} \ddot{x_1} \\  \ddot{x_2} \end{bmatrix} + \begin{bmatrix} c_1+c_2 & -c_2  \\  -c_2 & c_2 \end{bmatrix}\begin{bmatrix} \dot{x}_1 \\  \dot{x}_2 \end{bmatrix} + \begin{bmatrix} k_1+k_2 & -k_2  \\  -k_2 & k_2 \end{bmatrix}\begin{bmatrix} x_1 \\  x_2 \end{bmatrix}  = \begin{bmatrix} \ R(t) \\  0 \end{bmatrix}

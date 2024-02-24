@@ -42,7 +42,9 @@
 \begin{review}
 	\label{sec:Laplace_review}
 				
-		Laplace transforms, or more broadly integral transforms, are a procedure for integrating the time ($t$) dependence of a function into a function of position or space ($s$). By transforming the whole differential equation from the time domain into a lower-order function of space the problem becomes easier to solve as the function can often be manipulated algebraically. 
+		\textbf{Laplace Transform}
+
+		\noindent Laplace transforms, or more broadly integral transforms, are a procedure for integrating the time ($t$) dependence of a function into a function of position or space ($s$). By transforming the whole differential equation from the time domain into a lower-order function of space the problem becomes easier to solve as the function can often be manipulated algebraically. 
 
 		\begin{figure}[H]
 			\centering
@@ -230,7 +232,7 @@ Taking the Laplace transform of both sides of the equation yields
 \begin{equation}
 m\big(s^2X(s)-sx(0) - \dot{x}(0)\big) + c\big(sX(s)-x(0)\big) +kX(s) =1
 \end{equation}
-note that the $\Laplace{\delta}=1$ per \#1 in the transform table. However, if we assume zero initial conditions (a system at rest when the impulse happens), the equation simplifies too. 
+The $\Laplace{\delta}=1$ per \#1 in the transform table. However, if we assume zero initial conditions (a system at rest when the impulse happens), the equation simplifies too. 
 \begin{equation}
 ms^2X(s) + csX(s) +kX(s) =1
 \end{equation}
@@ -336,7 +338,10 @@ After obtaining equations for the undamped and under-damped cases, the responses
 Note that the system will settle out around $F_0/k$ where $F_0  \Phi$ is a scaling factor for the step loading.
 
 \begin{example}
-A load of dirt $m$ is dumped into the back of a dump truck. Assuming the dirt not move, the bed of the truck can be modeled as a spring-mass-damper system (of values $k$, $m$, and $c$, respectively). Next, the load of dirt is modeled as a force $F(t) = m g$ that is applied to the spring-mass-damper system, as illustrated in the following figure. The simplification of the system allows for the analysis of the truck bed's vibrations as a simple spring-mass-damper system. First, assume that the truck's damper is broken, how does the maximum dynamic displacement compare to the static displacement? What would happen to the maximum displacement if the damper was repaired on the truck? %Next, using a damping value of $\zeta=0.5$ and $\omega_n=\pi$ what is the maximum displacement. How does this compare to the displacement for the case without the damper?  
+
+		\textbf{Dynamic Loading}
+
+		\noindent A load of dirt $m$ is dumped into the back of a dump truck. Assuming the dirt not move, the bed of the truck can be modeled as a spring-mass-damper system (of values $k$, $m$, and $c$, respectively). Next, the load of dirt is modeled as a force $F(t) = m g$ that is applied to the spring-mass-damper system, as illustrated in the following figure. The simplification of the system allows for the analysis of the truck bed's vibrations as a simple spring-mass-damper system. First, assume that the truck's damper is broken, how does the maximum dynamic displacement compare to the static displacement? What would happen to the maximum displacement if the damper was repaired on the truck? %Next, using a damping value of $\zeta=0.5$ and $\omega_n=\pi$ what is the maximum displacement. How does this compare to the displacement for the case without the damper?  
 
 \begin{figure}[H]
 	\centering
@@ -374,8 +379,10 @@ Note that the dynamic displacement of the truck bed is twice that of the static 
 
 
 		\begin{vibration_case_study}
+
+		\textbf{Limiting Wind-induced Loading}
 			
-		A smokestack or chimney stack is used to exhaust combustion gases into the outside air. The design of large stacks poses considerable challenges from a structural dynamics perspective. As high winds pass over the tower creating a combination of oscillating wind currents and complex vortex shedding that load the tower with a variety of wind-induced frequencies. This are called vortex-induced vibrations \protect\footnotemark[1]. This wide bandwidth of excitation results in a stack that is loaded near its resonant frequency. To mitigate this, stack designers have designed stacks with changing diameters to ensure that different parts of the stack have different resonant frequencies. Also, wind bands in the forms of protruding bricks or helical strakes are added to the stacks to prevent vortex shedding which reduces the loading on the tower.
+		\noindent A smokestack or chimney stack is used to exhaust combustion gases into the outside air. The design of large stacks poses considerable challenges from a structural dynamics perspective. As high winds pass over the tower creating a combination of oscillating wind currents and complex vortex shedding that load the tower with a variety of wind-induced frequencies. This are called vortex-induced vibrations \protect\footnotemark[1]. This wide bandwidth of excitation results in a stack that is loaded near its resonant frequency. To mitigate this, stack designers have designed stacks with changing diameters to ensure that different parts of the stack have different resonant frequencies. Also, wind bands in the forms of protruding bricks or helical strakes are added to the stacks to prevent vortex shedding which reduces the loading on the tower.
 			
 		\footnotetext[1]{Wang, Lei, and Xing-yan Fan. ``Failure cases of high chimneys: A review.'' Engineering failure analysis 105 (2019): 1107-1117.	} 
 			
@@ -425,12 +432,12 @@ Again, this represents the total system response (without initial conditions) fo
 
 \begin{example}
 	
-	
-	In testing, a hammer is used to excite a 1-DOF system with an impact (i.e. impulse), however, the hammer impacts the system twice by ascendant (a double hit). The first impact has a force of 0.2 N, while the second has a force of 0.1 N and happens 0.1 seconds after the first impact. Plot the response for the double impact. The system has the parameters $m$ = 1 kg, $c$ = 0.5 kg/s, k = 4 N/m. \\
+	\textbf{Double Hammer Impact}
+
+	\noindent In testing, a hammer is used to excite a 1-DOF system with an impact (i.e. impulse), however, the hammer impacts the system twice by ascendant (a double hit). The first impact has a force of 0.2 N, while the second has a force of 0.1 N and happens 0.1 seconds after the first impact. Plot the response for the double impact. The system has the parameters $m$ = 1 kg, $c$ = 0.5 kg/s, k = 4 N/m. \\
 	
 	\noindent\textbf{Solution:} 
-
-First, we can define the forcing function as:
+	\noindent First, we can define the forcing function as:
 	
 	\begin{equation}
 		F(t) = 0.2 \delta (t) + 0.1 \delta(t-\tau)
@@ -463,17 +470,15 @@ First, we can define the forcing function as:
 	\begin{equation}
 		x_2(t) = \frac{0.1}{m \omega_d} e^{-\zeta \omega_n (t-\tau)} \text{sin}\big(\omega_d(t-\tau)\big)
 	\end{equation}
-	Next, using the knowledge that the systems are linear and that the Laplace transform of a linear combination of two transforms is the same as the linear transformation of these functions we can build the piecewise function:
-	
-	\[
+
+	Using the knowledge that the systems are linear and that the Laplace transform of a linear combination of two transforms is the same as the linear transformation of these functions we can build the piecewise function:
+	\begin{equation}
 	x(t) = 
 	\begin{cases}
 		\frac{0.2}{m \omega_d} e^{-\zeta \omega_n t} \text{sin}(\omega_dt) & \text{if } t < \tau \\
 		\frac{0.2}{m \omega_d} e^{-\zeta \omega_n t} \text{sin}(\omega_dt)  + \frac{0.1}{m \omega_d} e^{-\zeta \omega_n (t-\tau)} \text{sin}\big(\omega_d(t-\tau)\big) & \text{if } \tau \leq t 
 	\end{cases}
-	\]
-	
-	
+	\end{equation}
 	For the mass, damping, and stiffness values given above can be plotted as:
 	\begin{figure}[H]
 		\centering
@@ -484,8 +489,9 @@ First, we can define the forcing function as:
 
 
 \begin{example}
-	
-	Consider the base exciton as shown below subjected to an arbitrary base excitation. Derive an equation (\textit{Duhamel} integral) for its displacement $(z)$, when the displacement is expressed at the relative displacement of the mass such that $z = x - y$. 
+	\textbf{Arbitrary Base Excitation}
+
+	\noindent Consider the base exciton as shown below subjected to an arbitrary base excitation. Derive an equation (Duhamel integral) for its displacement $(z)$, when the displacement is expressed at the relative displacement of the mass such that $z = x - y$. 
 	
 	\begin{figure}[H]
 		\centering
@@ -654,7 +660,10 @@ where $H(\omega)$ represents only the amplitude of the frequency response functi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{review}
-	To recap, for a single DOF damped spring-mass system the transfer function is:
+	
+	\textbf{System Response Modeling using Transfer Functions} 
+
+	\noindent To recap, for a single DOF damped spring-mass system the transfer function is:
 	\begin{equation}
 	H(s) = \frac{1}{ms^2+cs+k}
 	\end{equation}
@@ -669,15 +678,22 @@ where $H(\omega)$ represents only the amplitude of the frequency response functi
 \end{review}
 
 \begin{example}
-	Considering the forced system:
+
+
+	\noindent\textbf{Deriving Transfer Function for Forced System}
+
+	\noindent Considering the forced system in figure~\ref{fig:1-DOF-spring_dashpot_mass_horizontal_forced}	set the forcing function to be $F_0 \sin(\omega t)$ and calculate the transfer function.  \\
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.4\textwidth]{../figures/1-DOF-spring_dashpot_mass_horizontal_forced.png}
 		\caption{A spring-dashpot-mass model of a 1-DOF system with external excitation.}
+		\label{fig:1-DOF-spring_dashpot_mass_horizontal_forced}
 	\end{figure}
-	Set the forcing function to be $F_0 \sin(\omega t)$ and calculate the transfer function.  \\
+
 	
-	\noindent\textbf{Solution:} The equation of motion for the system is:
+	\noindent\textbf{Solution:}
+
+	\noindent The equation of motion for the system is:
 	\begin{equation}
 		m\ddot{x} + c\dot{x} +kx = F_0 \sin(\omega t)
 	\end{equation}
@@ -712,7 +728,9 @@ where $H(\omega)$ represents only the amplitude of the frequency response functi
 \begin{review}
 	\label{sec:TimeFrequencySpectrum}
 
-The frequency domain is a mathematical representation of a signal or data in terms of its frequency components, as opposed to its temporal or time-based representation. The frequency domain provides a different perspective on the signal by decomposing it into its constituent sinusoidal signals at discrete frequencies and their respective magnitudes. A 3D rerensation of this process is shown in figure~\ref{fig:3D_time_frequency_analysis}. The transformation between the time domain and the frequency domain is typically achieved using mathematical techniques such as the Fourier Transform or the Fast Fourier Transform (FFT).
+	\textbf{Frequency and Time Domains}
+
+	\noindent The frequency domain is a mathematical representation of a signal or data in terms of its frequency components, as opposed to its temporal or time-based representation. The frequency domain provides a different perspective on the signal by decomposing it into its constituent sinusoidal signals at discrete frequencies and their respective magnitudes. A 3D rerensation of this process is shown in figure~\ref{fig:3D_time_frequency_analysis}. The transformation between the time domain and the frequency domain is typically achieved using mathematical techniques such as the Fourier Transform or the Fast Fourier Transform (FFT).
 
 		\begin{figure}[H]
 			\centering
@@ -739,7 +757,7 @@ First, let us consider two inputs, a deterministic input (typical sin wave), and
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1\textwidth]{../figures/Response_to_random_input_inputs}
+	\includegraphics[width=6.5in]{../figures/Response_to_random_input_inputs}
 	\caption{Two arbitrary inputs: (a) sinusoidal; and (b) uniform random noise.}
 	\label{fig:Response_to_random_input_inputs}
 \end{figure}
@@ -774,24 +792,30 @@ R_{xx}(\tau) = \lim\limits_{T \rightarrow \infty} \frac{1}{T} \int_{0}^{T}x(t)x(
 The subscript $xx$ denotes that this is a measure of the response for the variable $xx$, $\tau$ is the time difference between the values at which the signal $x(t)$ is sampled. The autocorrelation for the two inputs considered above is expressed in figure~\ref{fig:Response_to_random_input_autocorrelation}.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1\textwidth]{../figures/Response_to_random_input_autocorrelation.png}
+	\includegraphics[width=6.5in]{../figures/Response_to_random_input_autocorrelation}
 	\caption{Responses from the autocorrelation function for the inputs shown in figure \ref{fig:Response_to_random_input_inputs} showing: (a) a sinusoidal; and (b) uniform random noise.}
 	\label{fig:Response_to_random_input_autocorrelation}
 \end{figure} 
-\noindent Note that the value of $\tau$ selected in the autocorrelation function greatly affects its response for the sinusoidal input. This is because the values for the sinusoidal are highly correlated. To expand, the value at any time $t$ is greatly affected by the values immediately before and after it. This is not the case for the random input where the signal is not correlated and therefore there is little difference in changing the value of $\tau$ on the response of the autocorrelation function.  
 
-Next, if we take the Fourier transform of the autocorrelation function we obtain the power spectral density (PSD) defined as:
+\begin{note}
+ The value of $\tau$ selected in the autocorrelation function greatly affects its response for the sinusoidal input. This is because the values for the sinusoidal are highly correlated. To expand, the value at any time $t$ is greatly affected by the values immediately before and after it. This is not the case for the random input where the signal is not correlated and therefore there is little difference in changing the value of $\tau$ on the response of the autocorrelation function.  
+\end{note}
+
+If we take the Fourier transform of the autocorrelation function we obtain the power spectral density (PSD) defined as:
 \begin{equation}
 S_{xx}(\omega) =\frac{1}{2 \pi} \int_{-\infty}^{\infty} R_{xx}(\tau) e^{-j \omega \tau}d \tau
 \end{equation}
-where the integral of $R_{xx}(\tau)$ changes the real number $\tau$ into the frequency-domain value $\omega$. The frequency spectrum is denoted with $S$ and the subscript of the considered variable $(\text{e.g., }S_{xx}(\omega))$.  The frequency spectrum for the two input cases considered are plotted in figure~\ref{fig:Response_to_random_input_PSD}.
+where the integral of $R_{xx}(\tau)$ changes the real number $\tau$ into the frequency-domain value $\omega$. The frequency spectrum is denoted with $S$ and the subscript of the considered variable $(\text{e.g., }S_{xx}(\omega))$.  
+
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1\textwidth]{../figures/Response_to_random_input_PSD}
+	\includegraphics[width=6.5in]{../figures/Response_to_random_input_PSD}
 	\caption{Power spectral density plots for the inputs shown in figure \ref{fig:Response_to_random_input_inputs} showing: (a) a sinusoidal; and (b) uniform random noise.}
 	\label{fig:Response_to_random_input_PSD}
 \end{figure}
-\noindent where the flat frequency response for the random input denotes that the random input is white noise input.  This flat frequency response in the frequency domain can be denoted $S_0$, such that $S_{ff}(\omega) = S_0$ or $S_{xx}(\omega) = S_0$, depending on whether the frequency spectrum of the input $(ff)$ or output  $(xx)$ is being considered. While a true white noise input would be perfectly flat, white noise is really just a theoretical concept as all real-world data will have some variation in the frequency domain as diagrammed in figure \ref{fig:Response_to_random_input_PSD}(b). 
+
+The frequency spectrum for the two input cases considered are plotted in figure~\ref{fig:Response_to_random_input_PSD}. where the flat frequency response for the random input denotes that the random input is white noise input.  This flat frequency response in the frequency domain can be denoted $S_0$, such that $S_{ff}(\omega) = S_0$ or $S_{xx}(\omega) = S_0$, depending on whether the frequency spectrum of the input $(ff)$ or output  $(xx)$ is being considered. While a true white noise input would be perfectly flat, white noise is really just a theoretical concept as all real-world data will have some variation in the frequency domain as diagrammed in figure \ref{fig:Response_to_random_input_PSD}(b). 
+
 
 Recall that $S_{xx}$ is the spectrum of the response of the system. For the one-DOF system considered here, we can express the arbitrary input as a series of impulse inputs as discussed in section \ref{sec:impulse_inputs}. This knowledge, along with the frequency response function can be used to relate the spectrum of the input $S_{ff}(\omega)$ to the output through the transfer function as: 
 
@@ -822,15 +846,21 @@ where $R_{ff}$ denotes the autocorrelation function of $F(t)$ and $S_{ff}$ denot
 %\footnotetext[3]{Newland, David E. ``Random vibrations, spectral  wavelet analysis.'' Longman Scientific & Technical (1993).} 
 
 \begin{example}
-	Consider the following system
+
+\textbf{Calculating the Power Spectral Density of a Forced System}
+
+	\noindent Consider the system in figure~\ref{fig:1-DOF-spring_dashpot_mass_horizontal_forced-2} and calculate the PSD of the response $x(t)$ given that the PSD of the applied force $S_{ff}(\omega)$ is white noise.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.4\textwidth]{../figures/1-DOF-spring_dashpot_mass_horizontal_forced.png}
 		\caption{A spring-dashpot-mass model of a 1-DOF system with external excitation.}
+		\label{fig:1-DOF-spring_dashpot_mass_horizontal_forced-2}
 	\end{figure}
-	Calculate the PSD of the response $x(t)$ given that the PSD of the applied force $S_{ff}(\omega)$ is white noise. \\
 	
-	\noindent\textbf{Solution:} From the system we know that the EOM is 
+	
+	\noindent\textbf{Solution:} 
+
+	\noindent From the system we know that the EOM is 
 	\begin{equation}
 	m\ddot{x}(t) +c\dot{x}(t) + kx(t) = F(t)
 	\end{equation} 
@@ -883,15 +913,21 @@ and
 When combined with equation \ref{eq:variance_for_S_O}, these integrals allow for the easy calculation of the expected values. 
 
 \begin{example}
-	For the system below, calculate the mean-square response of the system given that the spectrum of the input force $F(t)$ is a perfect theoretical white noise.
+
+	\textbf{Calculating the Mean-square Response of a Forced System}
+
+	\noindent Consider the system in figure~\ref{fig:1-DOF-spring_dashpot_mass_horizontal_forced-2} and calculate the mean-square response of the system given that the spectrum of the input force $F(t)$ is a perfect theoretical white noise.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.4\textwidth]{../figures/1-DOF-spring_dashpot_mass_horizontal_forced.png}
 		\caption{A spring-dashpot-mass model of a 1-DOF system with external excitation.}
+				\label{fig:1-DOF-spring_dashpot_mass_horizontal_forced-3}
 	\end{figure}
 
 
-	\noindent\textbf{Solution:} Again, as the forcing function $S_{ff}(\omega)$ is constant across the frequency spectrum $S_{ff}(\omega)=S_0$ the mean-square response can be calculated as:
+	\noindent\textbf{Solution:}
+
+	\noindent Again, as the forcing function $S_{ff}(\omega)$ is constant across the frequency spectrum $S_{ff}(\omega)=S_0$ the mean-square response can be calculated as:
 	\begin{equation}
 		E[x^2] = \overline{x^2} =   S_{0} \int_{-\infty}^{\infty} |H(j\omega)|^2 d\omega
 	\end{equation}

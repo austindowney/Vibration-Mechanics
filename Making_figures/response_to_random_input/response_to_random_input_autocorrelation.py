@@ -46,7 +46,7 @@ xx_rand = (np.random.rand(tt.shape[0])-0.5)*2
 
 
 
-plt.figure(figsize=(6.5,3))
+plt.figure(figsize=(6.5,2))
 plt.subplot(121)
 plt.plot(tt,xx_sin)
 plt.ylabel('x (mm)')
@@ -65,7 +65,7 @@ plt.xlim(0,10)
 plt.ylim(-1.1,1.1)
 #plt.title('uniform random noise')
 plt.tight_layout()
-plt.savefig('response_to_random_input_inputs.jpg',dpi=300)
+plt.savefig('response_to_random_input_inputs.jpg',dpi=275)
 
 
 #%% response_to_random_input_autocorrelation
@@ -87,7 +87,7 @@ def estimated_autocorrelation(x):
 R_xx_sin = estimated_autocorrelation(xx_sin)   
 R_xx_rand = estimated_autocorrelation(xx_rand)  
 
-plt.figure(figsize=(6.5,3))
+plt.figure(figsize=(6.5,2))
 plt.subplot(121)
 plt.plot(tt,R_xx_sin)
 plt.ylabel('$R_{xx}$')
@@ -109,7 +109,7 @@ plt.ylim(-1.1,1.1)
 #plt.title('uniform random noise')
 plt.tight_layout()
 plt.legend(framealpha=1)
-plt.savefig('response_to_random_input_autocorrelation',dpi=300)
+plt.savefig('response_to_random_input_autocorrelation.jpg',dpi=275)
 
 
 
@@ -135,11 +135,11 @@ def Fourier_transform(tt,xx):
 
 
 
-plt.figure(figsize=(6.5,3))
+plt.figure(figsize=(6.5,2))
 plt.subplot(121)
 plt.plot(PSD_xx_sin,PSD_yy_sin)
 plt.ylabel('PSD (mm$^2$)')
-plt.xlabel('Frequency (Hz)')
+plt.xlabel('frequency (Hz)')
 plt.grid('on')
 plt.xlim(0,1)
 #plt.ylim(-1.1,1.1)
@@ -149,7 +149,7 @@ plt.subplot(122)
 plt.plot(PSD_xx_rand,PSD_yy_rand,linewidth=0.4,label='calculated')
 plt.plot([0,1],[np.mean(PSD_yy_rand),np.mean(PSD_yy_rand)],'--',color='red',linewidth=2,label='theoretical')
 plt.ylabel('PSD (mm$^2$)')
-plt.xlabel('Frequency (Hz)')
+plt.xlabel('frequency (Hz)')
 plt.grid('on')
 plt.xlim(0,1)
 #plt.ylim(-1.1,1.1)

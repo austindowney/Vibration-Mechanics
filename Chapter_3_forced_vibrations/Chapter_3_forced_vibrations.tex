@@ -20,7 +20,9 @@
 
 
 	\begin{vibration_case_study}
-		Tall mast light poles are excited by a wind excitation and respond across their entire frequency domain. Consider the light pole located in the state of Kansas in the United States shown figure~\ref{fig:Li_pole_vibrations}. The structure responds more at some frequencies than other frequencies, as dictated by the structure's geometry and material properties. Studying how structures responded to forced inputs allows for a better design of the structure.  
+			\textbf{Wind Induced Loading}
+
+	\noindent Tall mast light poles are excited by a wind excitation and respond across their entire frequency domain. Consider the light pole located in the state of Kansas in the United States shown figure~\ref{fig:Li_pole_vibrations}. The structure responds more at some frequencies than other frequencies, as dictated by the structure's geometry and material properties. Studying how structures responded to forced inputs allows for a better design of the structure.  
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=6in]{../figures/Li_pole_vibrations}
@@ -145,7 +147,10 @@
 	\end{equation}				
 	
 	\begin{example}
-		For the 1-DOF system:
+
+	\textbf{Plotting Free and Forced Vibrations}
+
+	\noindent For the 1-DOF system:
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.5\textwidth]{../figures/1-DOF-spring_mass_horizontal_forced.png}
@@ -155,7 +160,7 @@
 					
 		\noindent\textbf{Solution:} 
 
-		The free-vibration response can be plotted using the expression:
+		\noindent  The free-vibration response can be plotted using the expression:
 		\begin{equation}
 			x(t) = x_0\text{cos}(\omega_n t) + \frac{v_0}{\omega_n}\text{sin}(\omega_n t)
 		\end{equation}				
@@ -174,7 +179,7 @@
 	
 \subsection{Harmonic Resonance}			
 	
-	Recall that our solution from before assumed that $\omega_n \neq \omega$, however, if $\omega_n = \omega$ then the system will develop the phenomenon of resonance. Mathematically, this means the amplitude of the vibrations becomes unbounded. The prior choice of $X\text{cos}(\omega t)$ for the particular solution fails as it is also a solution for a homogeneous equation. Therefore, a new particular solution is needed for the case where $\omega_n = \omega$. This new particular solution can be written as:
+ Recall that our solution from before assumed that $\omega_n \neq \omega$, however, if $\omega_n = \omega$ then the system will develop the phenomenon of resonance. Mathematically, this means the amplitude of the vibrations becomes unbounded. The prior choice of $X\text{cos}(\omega t)$ for the particular solution fails as it is also a solution for a homogeneous equation. Therefore, a new particular solution is needed for the case where $\omega_n = \omega$. This new particular solution can be written as:
 	\begin{equation}
 		x_p(t) = t X\text{sin}(\omega t)
 	\end{equation}				
@@ -200,7 +205,9 @@
 
 \begin{example}
 
-	Compute solutions for the homogeneous and particular solution separately, then compute the total response of a spring-mass system with the following values: $k$ = 1000~N/m, $m$ = 10~kg, subject to a harmonic force of magnitude $F_0$ = 100~N and frequency of 8.162~rad/s, and initial conditions given by $x_0$ = 0 m and $v_0$ = 0 m/s. Plot the response.
+	\textbf{Homogeneous and Particular Solution}
+
+	\noindent Compute solutions for the homogeneous and particular solution separately, then compute the total response of a spring-mass system with the following values: $k$ = 1000~N/m, $m$ = 10~kg, subject to a harmonic force of magnitude $F_0$ = 100~N and frequency of 8.162~rad/s, and initial conditions given by $x_0$ = 0 m and $v_0$ = 0 m/s. Plot the response.
 	
 	\begin{figure}[H]
 		\centering
@@ -210,7 +217,7 @@
 	
 	\noindent\textbf{Solution:}
 
-	 First, make sure that the system is not in resonance. Calculating that $\omega_n = \sqrt{1000/10} = 10$ shows us that $\omega_n \neq \omega$. Next knowing that $f_0 = F_o/m = 10$ we can find the homogeneous and particular solutions as:
+	\noindent First, make sure that the system is not in resonance. Calculating that $\omega_n = \sqrt{1000/10} = 10$ shows us that $\omega_n \neq \omega$. Next knowing that $f_0 = F_o/m = 10$ we can find the homogeneous and particular solutions as:
 	\begin{equation}
 		x_h(t) = A\text{sin}(\omega_n t + \phi)
 	\end{equation}				
@@ -241,7 +248,9 @@
 \end{example}
 
 \begin{example}
-	Considering the following system, write the equation of motion and calculate the response assuming a) that the system is initially at rest, and b) that the system has an initial displacement of 0.005 m. Use $k$ = 2000~N/m, $m$ = 100~kg, $F(t)$ = 10sin(10t) N.
+	\textbf{Forced Undamped System Response}
+
+	\noindent Considering the following system, write the equation of motion and calculate the response assuming a) that the system is initially at rest, and b) that the system has an initial displacement of 0.005 m. Use $k$ = 2000~N/m, $m$ = 100~kg, $F(t)$ = 10sin(10t) N.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.5\textwidth]{../figures/1-DOF-spring_mass_horizontal_forced.png}
@@ -249,6 +258,7 @@
 	\end{figure}
 	\noindent\textbf{Solution:} 
 
+	\noindent
 	The equation of motion is
 	\begin{equation}
 		m\ddot{x}+kx=10\text{sin}(10t)
@@ -285,11 +295,17 @@
 	\begin{equation}
 		f_o = \frac{F_0}{m} = \frac{F_0}{m} = 0.1 \text{ N/kg}
 	\end{equation}	
-	a) using the initial conditions $x_0$ = 0 m and $v_0$ = 0 m/s and the general expression obtained above:
+
+	\noindent\textbf{Solution a):} 
+
+	\noindent Using the initial conditions $x_0$ = 0 m and $v_0$ = 0 m/s and the general expression obtained above:
 	\begin{equation}
 		x(t) = \Big(0-\frac{10}{\sqrt{20}}\cdot \frac{0.1}{20-10^2}\Big)\text{sin}(\sqrt{20} t) + 0 + \frac{0.1}{20-10^2}\text{sin}(10 t)
 	\end{equation}			
-	b) using the initial conditions $x_0$ = 0.005 m and $v_0$ = 0 m/s and the general expression obtained above:
+
+	\noindent\textbf{Solution b):} 
+
+	\noindent Using the initial conditions $x_0$ = 0.005 m and $v_0$ = 0 m/s and the general expression obtained above:
 	\begin{equation}
 		x(t) = \Big(0-\frac{10}{\sqrt{20}}\cdot \frac{0.1}{20-10^2}\Big)\text{sin}(\sqrt{20} t) + 0.05\text{cos}(\sqrt{20} t) + \frac{0.1}{20-10^2}\text{sin}(10 t)
 	\end{equation}			
@@ -302,7 +318,9 @@
 
 
 \begin{vibration_case_study}
-	The Millennium Bridge is a pedestrian suspension bridge in London over the River Thames. The supporting cables of the bridge are abnormally low and rest below the deck level, giving a very shallow profile. This was required by London's protected Vistas which necessitates a clear line of view from Alexandra Palace to Saint Paul's Cathedral; as well as behind Saint Paul's Cathedral where the bridge sits. 
+	\textbf{Bio-dynamic Induced Loading}
+	
+	\noindent The Millennium Bridge is a pedestrian suspension bridge in London over the River Thames. The supporting cables of the bridge are abnormally low and rest below the deck level, giving a very shallow profile. This was required by London's protected Vistas which necessitates a clear line of view from Alexandra Palace to Saint Paul's Cathedral; as well as behind Saint Paul's Cathedral where the bridge sits. 
 
 	When opened on 10 June 2000, 2,000 pedestrians at  1.5 people per square meter used the bridge. The bridge started to rock in the lateral direction at frequencies of between 0.5~Hz and 1.1~Hz with accelerations up to 0.25~g$_\text{n}$, this caused people on the bridge to try and brace themselves by moving their body mass in sync with the bridge's movement. This bio-dynamic coupling created a forced lateral vibration in the bridge that would persist when sufficient people were on the bridge.   
 
@@ -325,12 +343,13 @@
 		\centering
 		\includegraphics[]{../figures/1-DOF-spring_dashpot_mass_horizontal_forced_FBD.png}
 		\caption{Damped 1-DOF system with an external force ($F(t)$) applied, showing: (a) the system configuration; and (b) the free body diagram}
+		\label{fig:1-DOF-spring_dashpot_mass_horizontal_forced_FBD}
 	\end{figure}	
 	\noindent Again, for simplicity, let us consider a harmonic excitation for $F(t)$ such that:
 	\begin{equation}
 		F(t) = F_0\text{cos}(\omega t)
 	\end{equation}							
-	Building the EOM for the above system results in:
+	Building the EOM for the system in figure~\ref{fig:1-DOF-spring_dashpot_mass_horizontal_forced_FBD} results in:
 	\begin{equation}
 		m \ddot{x}(t)+c\dot{x}(t)+kx(t) = F_0\text{cos}(\omega t)
 	\end{equation}			
@@ -446,7 +465,12 @@ B_s
 	\begin{equation}
 		x(t) = Ae^{-\zeta \omega_n t}\text{sin}(\omega_d t + \phi) +  X \text{cos}(\omega t - \phi_p)
 	\end{equation}				
-	Note for larger values of $t$, the homogeneous solution approaches zero resulting in the particular solution becoming the total solution. Therefore, the particular solution is sometimes called the steady-state response, and the homogeneous solution is called the transient response. Solving for the constants $A$ and $\phi$ using boundary conditions ($x_0=0$ and $v_0=0$) results in a total solution expressed as:
+	
+	\begin{note}
+	For larger values of $t$, the homogeneous solution approaches zero resulting in the particular solution becoming the total solution. Therefore, the particular solution is sometimes called the steady-state response, and the homogeneous solution is called the transient response. 
+	\end{note}
+
+	Solving for the constants $A$ and $\phi$ using boundary conditions ($x_0=0$ and $v_0=0$) results in a total solution expressed as:
 	\begin{equation}
 		A = \frac{x_0 -X \text{cos}(\phi_p)}{\text{sin}(\phi)}
 	\end{equation}			 
@@ -473,7 +497,9 @@ B_s
 	\end{equation}		
 	\begin{example}
 	\label{ex:homogeneous_and_particular_solutions_in_resonance}		
-		Consider the damped 1-DOF system below, and plot the total, steady state, and transient responses for the following system configurations with no initial conditions. For each configuration, comment on the temporal response and how it differs from the response of the previous configuration.    
+		\textbf{Plotting Steady State and Transient Responses}
+		
+		\noindent Consider the damped 1-DOF system below, and plot the total, steady state, and transient responses for the following system configurations with no initial conditions. For each configuration, comment on the temporal response and how it differs from the response of the previous configuration.    
 		
 		\begin{itemize}
 		\item[a)] $k=100$~N/m, $m=10$~kg,  $c=10$~kg/s, $F_0=1$~N, and $\omega = 8.162$~rad/s.
@@ -489,10 +515,12 @@ B_s
 		
 		\noindent\textbf{Solution:} 
 
-		The total response for the damped 1-DOF system subjected to an external force is modeled using equations \ref{eq:damped_forced_x} through \ref{eq:damped_forced_theta_p} while the transient response consists of the first half of equation \ref{eq:damped_forced_x} and the steady state response consists of the second half of equation \ref{eq:damped_forced_x}.  
+		\noindent The total response for the damped 1-DOF system subjected to an external force is modeled using equations \ref{eq:damped_forced_x} through \ref{eq:damped_forced_theta_p} while the transient response consists of the first half of equation \ref{eq:damped_forced_x} and the steady state response consists of the second half of equation \ref{eq:damped_forced_x}.  
 		
 		
-		\noindent\textbf{Solution a):} Therefore, plotting the temporal responses for the configuration yields:
+		\noindent\textbf{Solution a):} 
+		
+		\noindent Therefore, plotting the temporal responses for the configuration yields:
 		\begin{figure}[H]
 			\centering
 			\includegraphics[]{../figures/homogeneous_and_particular_solutions_in_resonance_a.png}
@@ -506,7 +534,9 @@ B_s
 			\caption{Temporal responses for a underdamped system with $k=100$~N/m, $m=10$~kg,  $c=10$~kg/s, $F_0=3$~N, and $\omega = 8.162$~rad/s.}
 		\end{figure}			
 		
-		\noindent\textbf{Solution c):} Now, using $\omega=3.162$~rad/sec we put the system into resonance as $\omega=\omega_n$. However, unlike the undamped system, the amplitude of the displacement is not unbounded as the damper absorbs energy from the system. Therefore, after about 7 seconds the system enters an equilibrium state where any additional increase in amplitude caused by the system entering into resonance is canceled out by the damping in the system as demonstrated in the plot below:
+		\noindent\textbf{Solution c):}
+
+		\noindent  Now, using $\omega=3.162$~rad/sec we put the system into resonance as $\omega=\omega_n$. However, unlike the undamped system, the amplitude of the displacement is not unbounded as the damper absorbs energy from the system. Therefore, after about 7 seconds the system enters an equilibrium state where any additional increase in amplitude caused by the system entering into resonance is canceled out by the damping in the system as demonstrated in the plot below:
 		\begin{figure}[H]
 			\centering
 			\includegraphics[]{../figures/homogeneous_and_particular_solutions_in_resonance_c.png}
@@ -601,8 +631,9 @@ B_s
 	
 	
 \begin{example}
+	\textbf{Steady State Displacement }
 
-	Consider the simple spring-mass system, 
+	\noindent Consider the simple spring-mass system, 
 	\begin{figure}[H]
 		\centering
 		\includegraphics[]{../figures/1-DOF-spring_dashpot_mass_horizontal_forced.png}
@@ -610,7 +641,10 @@ B_s
 	\end{figure}				
 	\noindent where $\omega_n = 132$~rad/sec and $\zeta$ = 0.0085. Calculate the displacements of the steady-state response for $\omega$=132 and 125~rad/sec. In both cases, use $f_0$ = 10 N/kg. 
 
-	\noindent\textbf{Solution:}	From before, we know the solution for the displacement of the particular solution for $\omega$=132~rad/sec is:
+	\noindent \textbf{Solution:}
+
+	\noindent 
+	From before, we know the solution for the displacement of the particular solution for $\omega$=132~rad/sec is:
 	\begin{equation}
 		X = \frac{f_0}{\sqrt{(\omega_n^2 - \omega^2)^2 +  (2\zeta \omega_n \omega)^2}} = \frac{10}{2(0.0085)(132)^2} = 0.034 \text{ m}
 	\end{equation}							
@@ -623,9 +657,9 @@ B_s
 
 \begin{example}
 
+	\textbf{Displacement-limited System Design}
 
-
-	The steady-state response for an engineered system must not surpass 1 cm, if the system can be modeled as the spring and mass system below, what value of $c$ must be used?  
+	\noindent The steady-state response for an engineered system must not surpass 1 cm, if the system can be modeled as the spring and mass system below, what value of $c$ must be used?  
 	\begin{figure}[H]
 		\centering
 		\includegraphics[]{../figures/1-DOF-spring_dashpot_mass_horizontal_forced.png}
@@ -635,6 +669,7 @@ B_s
 
 	\noindent\textbf{Solution:}
 
+	\noindent 
 	 The steady state solution is:
 	\begin{equation}
 		x_p(t) = X \text{cos}(\omega t - \phi_p)
@@ -723,8 +758,10 @@ B_s
 
 
 \begin{vibration_case_study}
+
+	Structural Health Monitoring during Earthquakes
 			
-	Earthquakes are a classic and devastating example of base excitation. On August 24\textsuperscript{th} 2016 an earthquake hit Central Italy approximately 75 km (47 mi) southeast of the city of Perugia. 299 people were killed and the town of Amatrice was heavily damaged. A close look at the town center of Amatrice post-event, as shown in figure~\ref{fig:Italy_2016_earthquake_1} shows that the town's bell tower is still standing when the shorter residential buildings have collapsed. A simplified explanation for the robustness of the bell tower can be found in the fact the tall and slender bell tower has a natural frequency lower than that of the excitation force of the earthquake. In comparison, the shorter and stiffer residential structures tend to have a higher natural frequency that more closely aligns with the excitation frequency of the earthquake, thereby resulting in these structures being excited closer to resonance. 
+	\noindent Earthquakes are a classic and devastating example of base excitation. On August 24\textsuperscript{th} 2016 an earthquake hit Central Italy approximately 75 km (47 mi) southeast of the city of Perugia. 299 people were killed and the town of Amatrice was heavily damaged. A close look at the town center of Amatrice post-event, as shown in figure~\ref{fig:Italy_2016_earthquake_1} shows that the town's bell tower is still standing when the shorter residential buildings have collapsed. A simplified explanation for the robustness of the bell tower can be found in the fact the tall and slender bell tower has a natural frequency lower than that of the excitation force of the earthquake. In comparison, the shorter and stiffer residential structures tend to have a higher natural frequency that more closely aligns with the excitation frequency of the earthquake, thereby resulting in these structures being excited closer to resonance. 
 				
 	\begin{figure}[H]
 		\centering
@@ -767,8 +804,11 @@ B_s
 		\begin{equation}
 			x_p^{(2)} = X^{(2)} \text{sin}(\omega_b t - \phi_1)
 		\end{equation}
-		Note that $x_p^{(1)}$ uses a cos term while $x_p^{(2)}$ uses a sin term. Both solutions use $\phi_1$ as the damping term as the phase angle is independent of the excitation amplitude and the sin and cos terms account for the difference in phase. 
-		
+	
+		\begin{note}
+		$x_p^{(1)}$ uses a cos term while $x_p^{(2)}$ uses a sin term. Both solutions use $\phi_1$ as the damping term as the phase angle is independent of the excitation amplitude and the sin and cos terms account for the difference in phase. 
+		\end{note}
+
 		For $x_p^{(1)}$, we use the method of undetermined coefficients to obtain a solution for $x_p^{(1)} = X^{(1)}\text{cos}(\omega_b t - \phi_1)$. This can be as simple as setting $2 \zeta \omega_n \omega_b Y$ equal to $f_0$ from equation \ref{eq:X_damped} that defines $X$ for underdamped systems. Again, $2 \zeta \omega_n \omega_b Y$  comes from the EOM in standard form as presented in equation 	
 		\ref{eq:standard_form_base_excitation}. We can do this because both terms can be considered a ``driving force''. This results in the equation:
 		\begin{equation}
@@ -820,8 +860,9 @@ B_s
 		Around resonance, the maximum amount of displacement is transmitted to the mass. Additionally,  the above plot shows that at $r=\sqrt{2}$ the displacement transmissibility $X/Y$ is 1. Note the ``flip'' where overdamped systems have a greater response to excitations after $r=\sqrt{2}$ than do underdamped systems.
 
 		\begin{example}
+			\textbf{Car Traveling over Rough Road}
 
-			A very common example of base motion is the SDOF model of a vehicle wheel driving over a ``rough'' road as shown below. For this, let's consider a generic modern sports sedan that we can diagram as below
+			\noindent A very common example of base motion is the SDOF model of a vehicle wheel driving over a ``rough'' road as shown below. For this, let's consider a generic modern sports sedan that we can diagram as below
 			\begin{figure}[H]
 				\centering
 				\includegraphics[]{../figures/vehicle_on_road_example.png}
@@ -831,6 +872,7 @@ B_s
 			
 			\noindent\textbf{Solution:}
 
+			\noindent 
 			The road is applying a base excitation that can be approximated as 
 			\begin{equation}
 				Y = 0.005 \text{ m}
@@ -867,7 +909,7 @@ B_s
 			
 	\subsubsection{Force Transmissibility Solution for Base Excitation}
 	
-		For some systems, such as those with weak connections, the force transmitted to the mass is more important than the displacement of the mass. The force transmitted to the mass is the sum of the forces applied by the spring and damper. From the FBD above,
+		For some systems, such as those with weak connections, the force transmitted to the mass is more important than the displacement of the mass. The force transmitted to the mass is the sum of the forces applied by the spring and damper. From the FBD shown in figure~\ref{fig:1_DOF_spring_dashpot_mass_vertical_base_excited_FBD},
 		\begin{equation}
 		F(t) = k(x-y) + c(\dot{x} - \dot{y}) 
 		\end{equation}
@@ -905,10 +947,13 @@ B_s
 			\includegraphics[]{../figures/base_excitation_force_transmissibility.png}
 			\caption{Force transmissibility for an underdamped 1-DOF system.}
 		\end{figure}
-		Again, note the key location $r=\sqrt{2}$. At $r=\sqrt{2}$ the force transmitted to the system is 2 $\frac{F_\text{T}}{kY}$. However, also note that the normalized force does not necessarily fall off for $r$ values greater than $r=\sqrt{2}$.  
+		Again, note the key location $r=\sqrt{2}$. At $r=\sqrt{2}$ the force transmitted to the system is 2 $\frac{F_\text{T}}{kY}$. However, the normalized force does not necessarily fall off for $r$ values greater than $r=\sqrt{2}$.  
 
 		\begin{vibration_case_study}
-			The Convair F2Y Sea Dart was a prototype seaplane fighter developed by the United States Navy in the early 1950s to enable sea-based jet fighters. One key technical issue with the aircraft's development was the violent forces induced into the plane when the hydro-skis contacted the uneven surfaces of the water. Furthermore, adding damping to the skies proved to be changed as the damping required changed significantly as a function of the hydro-skis contact with the water. Significant work went into the skies and shock-absorbing struts, which helped to improve the situation but it was never fully repaired.
+
+			\textbf{Convair F2Y Sea Dart}
+
+			\noindent The Convair F2Y Sea Dart was a prototype seaplane fighter developed by the United States Navy in the early 1950s to enable sea-based jet fighters. One key technical issue with the aircraft's development was the violent forces induced into the plane when the hydro-skis contacted the uneven surfaces of the water. Furthermore, adding damping to the skies proved to be changed as the damping required changed significantly as a function of the hydro-skis contact with the water. Significant work went into the skies and shock-absorbing struts, which helped to improve the situation but it was never fully repaired.
 			
 			
 			\begin{figure}[H]
@@ -921,8 +966,9 @@ B_s
 		\end{vibration_case_study}
 	
 		\begin{example}
+			\textbf{System Design for Force Transmissibility}
 			
-			For the system given below and excited at the base, should the system be excited above or below the natural frequency if the transmitted force is the design limitation? Consider the under-damped case with $\zeta=0.1$, and the over-damped case with $\zeta=2$ conditions. 
+			\noindent For the system given below and excited at the base, should the system be excited above or below the natural frequency if the transmitted force is the design limitation? Consider the under-damped case with $\zeta=0.1$, and the over-damped case with $\zeta=2$ conditions. 
 
 			\begin{figure}[H]
 				\centering
@@ -932,7 +978,7 @@ B_s
 		
 			\noindent\textbf{Solution:}
 
-			 We can plot the transmissibility of both the force and displacement onto one plot. For $\zeta=0.1$
+			\noindent  We can plot the transmissibility of both the force and displacement onto one plot. For $\zeta=0.1$
 			\begin{figure}[H]
 				\centering
 				\includegraphics[]{../figures/base_excitation_force_and_displacement_transmissibility_1.png}
@@ -951,8 +997,9 @@ B_s
 		
 					
 		\begin{example}
-
-			A single-story building is subjected to a harmonic ground motion, $\ddot{y}(t) = A \text{cos}(\omega_b t)$. a) Find the steady-state solution for the structure.  b) If a damper was added between the base and the floor, and $r=2$, what would be the ideal critical damping coefficient to ensure the safety of the building? (Think of safety as limiting displacement and transmitted force.) 
+			\textbf{Damping in a Single-story Building}
+		
+			\noindent  A single-story building is subjected to a harmonic ground motion, $\ddot{y}(t) = A \text{cos}(\omega_b t)$. a) Find the steady-state solution for the structure.  b) If a damper was added between the base and the floor, and $r=2$, what would be the ideal critical damping coefficient to ensure the safety of the building? (Think of safety as limiting displacement and transmitted force.) 
 			\begin{figure}[H]
 				\centering
 				\includegraphics[width=0.35\textwidth]{../figures/base_excited_structure.png}
@@ -961,7 +1008,7 @@ B_s
 						
 			\noindent\textbf{Solution (a):}
 				
-			For simplicity, we can rearrange the system as what follows:
+			\noindent  For simplicity, we can rearrange the system as what follows:
 			\begin{figure}[H]
 				\centering
 				\includegraphics[width=0.35\textwidth]{../figures/base_excited_structure_simple.png}
@@ -1002,7 +1049,9 @@ B_s
 				Y = -\frac{A}{\omega^2}
 			\end{equation} 			
 			
-			\noindent\textbf{Solution (b):} From the plots we solved for before, we can see that we want a critical damping coefficient that is as low as possible. This means any damping added to the system will decrease its safety. This may seem counter-intuitive, but this is because we are attempting to drive the structure at a frequency higher than its natural frequency, something that does not commonalty happen. Typically excitations for a structure are well below its natural frequency.  			
+			\noindent\textbf{Solution (b):}
+			
+			\noindent From the plots we solved for before, we can see that we want a critical damping coefficient that is as low as possible. This means any damping added to the system will decrease its safety. This may seem counter-intuitive, but this is because we are attempting to drive the structure at a frequency higher than its natural frequency, something that does not commonalty happen. Typically excitations for a structure are well below its natural frequency.  			
 		
 		\end{example}			
 
@@ -1023,12 +1072,12 @@ B_s
 	\end{figure}
 	
 	
-	Using the EOM for the system in figure~\ref{fig:2-DOF-spring_mass_horizontal_3} solve for its temporal response by directly solving the ODE for a system initially at rest with $m=1$~kg, $c=0.2$, $k=2.0$, and $F(t)=1/2 \sin (2 \pi t)$. 
+	\noindent Using the EOM for the system in figure~\ref{fig:2-DOF-spring_mass_horizontal_3} solve for its temporal response by directly solving the ODE for a system initially at rest with $m=1$~kg, $c=0.2$, $k=2.0$, and $F(t)=1/2 \sin (2 \pi t)$. 
 	
 	\noindent \textbf{Solution:} 
 	
 	
-	In MATLAB, {\ttfamily{}ode45} is a versatile ODE solver and is one of the first solvers you should try for most problems. The solver is setup as {\ttfamily{}[t,y] = ode45(odefun,tspan,y0),} where {\ttfamily{}tspan = [t0 tf],} integrates the system of differential equations {\ttfamily{}y'=f(t,y)} from {\ttfamily{}t0} to {\ttfamily{}tf} with initial conditions {\ttfamily{}y0}. Each row in the solution array y corresponds to a value returned in column vector {\ttfamily{}t}. The ODE is re-organized as 
+	\noindent In MATLAB, {\ttfamily{}ode45} is a versatile ODE solver and is one of the first solvers you should try for most problems. The solver is setup as {\ttfamily{}[t,y] = ode45(odefun,tspan,y0),} where {\ttfamily{}tspan = [t0 tf],} integrates the system of differential equations {\ttfamily{}y'=f(t,y)} from {\ttfamily{}t0} to {\ttfamily{}tf} with initial conditions {\ttfamily{}y0}. Each row in the solution array y corresponds to a value returned in column vector {\ttfamily{}t}. The ODE is re-organized as 
 	\begin{equation}
 	\ddot{x} = (f_t - c  \dot{x} - k  x) / m
 	\end{equation}
