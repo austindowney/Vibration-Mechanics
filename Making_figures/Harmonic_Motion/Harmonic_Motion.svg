@@ -7,7 +7,7 @@
    viewBox="0 0 165.1 228.60001"
    version="1.1"
    id="svg8"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
    sodipodi:docname="Harmonic_Motion.svg"
    inkscape:export-filename="Oscillatory_motion.png"
    inkscape:export-xdpi="300"
@@ -19626,16 +19626,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="2"
-     inkscape:cx="311.75"
-     inkscape:cy="622.5"
+     inkscape:zoom="1.5899337"
+     inkscape:cx="278.94244"
+     inkscape:cy="495.30366"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1920"
-     inkscape:window-height="1017"
-     inkscape:window-x="2992"
-     inkscape:window-y="833"
+     inkscape:window-height="1012"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:snap-global="false"
      units="in"
@@ -19650,7 +19650,6 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -19692,18 +19691,18 @@
        d="M 78.011675,173.97234 H 129.32236"
        id="path5944"
        inkscape:connector-curvature="0"
-       inkscape:export-filename="Harmonic_motion.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300" />
+       inkscape:export-filename="harmonic_motion.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.25600001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker7569)"
        d="M 78.007804,186.21216 V 162.21182"
        id="path5942"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
-       inkscape:export-filename="Harmonic_motion.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300" />
+       inkscape:export-filename="harmonic_motion.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275" />
     <path
        inkscape:connector-curvature="0"
        style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.35277778"
@@ -20191,9 +20190,9 @@
        d="m 78.182753,174.02282 1.076236,-4.03338 0.597746,-1.93998 0.478493,-1.2889 0.357783,-0.7788 0.359229,-0.59807 0.238519,-0.29112 0.239965,-0.20164 0.238521,-0.11042 0.11926,-0.0207 0.119259,0.003 0.120701,0.026 0.119258,0.0487 0.238521,0.16695 0.239965,0.257 0.238519,0.34496 0.359224,0.67407 0.35779,0.84792 0.478486,1.3685 0.597748,2.01386 0.836278,3.15586 1.195506,4.48605 0.597744,1.92529 0.478492,1.27366 0.359228,0.76533 0.357785,0.58342 0.239966,0.28093 0.238519,0.19121 0.119258,0.0613 0.119261,0.0385 0.119258,0.0149 0.1207,-0.009 0.11926,-0.0311 0.119259,-0.0545 0.238522,-0.17712 0.239965,-0.26748 0.238519,-0.35484 0.359222,-0.68784 0.357789,-0.86106 0.47849,-1.38257 0.597749,-2.02671 0.956969,-3.6274 1.074812,-4.01094 0.597745,-1.91032 0.478492,-1.2578 0.359226,-0.75217 0.357786,-0.56847 0.239966,-0.27107 0.238521,-0.1807 0.119259,-0.056 0.1207,-0.0332 0.119258,-0.01 0.119261,0.0134 0.119258,0.0368 0.11926,0.0595 0.239966,0.18789 0.238519,0.27765 0.239965,0.36471 0.357797,0.70191 0.359227,0.87334 0.477038,1.39691 0.597762,2.03928 0.956977,3.63457 0.95699,3.58373 0.59774,1.95909 0.47705,1.30925 0.35923,0.79614 0.35779,0.61724 0.23996,0.30457 0.23852,0.21572 0.23996,0.12438 0.11927,0.0279 0.11926,0.004 0.11925,-0.0185 0.11926,-0.0419 0.23996,-0.15289 0.23852,-0.24356 0.23997,-0.33148 0.35778,-0.65525 0.35924,-0.83115 0.47848,-1.34904 0.59775,-1.99591 0.83627,-3.14509 1.1955,-4.50042 0.59774,-1.94473 0.4785,-1.294 0.35779,-0.78328 0.35923,-0.60257 0.23851,-0.29441 0.23997,-0.20525 0.23852,-0.11404 0.11926,-0.0222 0.11926,9.8e-4 0.11926,0.024 0.1207,0.0473 0.23852,0.16338 0.23851,0.25369 0.23997,0.34168 0.35779,0.66929 0.35922,0.84401 0.47849,1.36371 0.59775,2.00937 0.83627,3.15316 1.19551,4.48996 0.59775,1.93008 0.47849,1.27844 0.35779,0.76982 0.35923,0.5882 0.23851,0.28425 0.23997,0.19507 0.23852,0.10328 0.11926,0.0168 0.12069,-0.007 0.11926,-0.0293 0.11926,-0.0527 0.23853,-0.17382 0.23997,-0.26419 0.23852,-0.35155 0.35922,-0.68335 0.35778,-0.85658 0.4785,-1.37808 0.59774,-2.02253 0.95699,-3.62469 1.0748,-4.01484 0.59775,-1.91511"
        id="path3612"
        sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
-       inkscape:export-filename="Harmonic_motion.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300" />
+       inkscape:export-filename="harmonic_motion.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275" />
     <path
        inkscape:connector-curvature="0"
        style="fill:none;stroke:#000000;stroke-width:0.28222221;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
@@ -20220,15 +20219,15 @@
        x="125.94988"
        y="178.01759"
        id="text5222"
-       inkscape:export-filename="Harmonic_motion.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"><tspan
+       inkscape:export-filename="harmonic_motion.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275"><tspan
          sodipodi:role="line"
          id="tspan5220"
          x="125.94988"
          y="178.01759"
          style="font-style:italic;stroke-width:0.264583">ω<tspan
-   style="font-size:65%;baseline-shift:sub"
+   style="font-size:65%;baseline-shift:sub;font-style:normal"
    id="tspan6695">n</tspan>t</tspan></text>
     <text
        xml:space="preserve"
@@ -20236,9 +20235,9 @@
        x="75.308205"
        y="162.15044"
        id="text5226"
-       inkscape:export-filename="Harmonic_motion.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"><tspan
+       inkscape:export-filename="harmonic_motion.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275"><tspan
          sodipodi:role="line"
          id="tspan5224"
          x="75.308205"
@@ -20683,45 +20682,45 @@
        cx="26.096073"
        cy="173.97234"
        r="9.4181175"
-       inkscape:export-filename="Harmonic_motion.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300" />
+       inkscape:export-filename="harmonic_motion.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.25600001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker7569-3)"
        d="m 26.096069,173.97415 v -12.3733"
        id="path5942-1"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
-       inkscape:export-filename="Harmonic_motion.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300" />
+       inkscape:export-filename="harmonic_motion.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.25600001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker7569-8)"
        d="M 26.030012,173.97234 H 39.222125"
        id="path5942-4"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
-       inkscape:export-filename="Harmonic_motion.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300" />
+       inkscape:export-filename="harmonic_motion.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275" />
     <circle
        style="opacity:1;fill:#090e11;fill-opacity:1;stroke:#000000;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path7813"
        cx="26.097591"
        cy="173.96455"
        r="0.30875775"
-       inkscape:export-filename="Harmonic_motion.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300" />
+       inkscape:export-filename="harmonic_motion.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="23.368954"
        y="173.82515"
        id="text7823"
-       inkscape:export-filename="Harmonic_motion.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"><tspan
+       inkscape:export-filename="harmonic_motion.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275"><tspan
          sodipodi:role="line"
          id="tspan7821"
          x="23.368954"
@@ -20732,35 +20731,35 @@
        d="m 26.018874,173.97795 6.986392,-5.78982"
        id="path7825"
        inkscape:connector-curvature="0"
-       inkscape:export-filename="Harmonic_motion.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300" />
+       inkscape:export-filename="harmonic_motion.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275" />
     <circle
        style="opacity:1;fill:#1e75b3;fill-opacity:1;stroke:#1e75b3;stroke-width:0.47037897;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path7813-5"
        cx="33.294765"
        cy="167.93721"
        r="0.48411047"
-       inkscape:export-filename="Harmonic_motion.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300" />
+       inkscape:export-filename="harmonic_motion.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275" />
     <path
        style="fill:none;stroke:#8a8a8a;stroke-width:0.26458332;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.05833327, 0.26458332;stroke-dashoffset:0;stroke-opacity:1"
        d="m 26.167691,164.53528 95.579599,0"
        id="path7842"
        inkscape:connector-curvature="0"
-       inkscape:export-filename="Harmonic_motion.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"
+       inkscape:export-filename="harmonic_motion.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#8a8a8a;stroke-width:0.26458332;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.05833327, 0.26458332;stroke-dashoffset:0;stroke-opacity:1"
        d="m 26.378342,183.50196 95.579598,0"
        id="path7842-9"
        inkscape:connector-curvature="0"
-       inkscape:export-filename="Harmonic_motion.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"
+       inkscape:export-filename="harmonic_motion.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#8a8a8a;stroke-width:0.26458332;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.05833328, 0.26458332;stroke-dashoffset:0;stroke-opacity:1"
@@ -20768,33 +20767,33 @@
        id="path7842-5"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
-       inkscape:export-filename="Harmonic_motion.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300" />
+       inkscape:export-filename="harmonic_motion.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275" />
     <circle
        style="opacity:1;fill:#1e75b3;fill-opacity:1;stroke:#1e75b3;stroke-width:0.47037899;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path7813-5-5"
        cx="124.94302"
        cy="167.93657"
        r="0.48411047"
-       inkscape:export-filename="Harmonic_motion.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300" />
+       inkscape:export-filename="harmonic_motion.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="47.111378"
        y="174.23776"
        id="text7895"
-       inkscape:export-filename="Harmonic_motion.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"><tspan
+       inkscape:export-filename="harmonic_motion.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275"><tspan
          sodipodi:role="line"
          id="tspan7893"
          x="47.111378"
          y="174.23776"
          style="font-style:italic;stroke-width:0.264583">ϕ=ω<tspan
-   style="font-size:65%;baseline-shift:sub"
+   style="font-size:65%;baseline-shift:sub;font-style:normal"
    id="tspan6687">n</tspan>t</tspan></text>
     <text
        xml:space="preserve"
@@ -20802,9 +20801,9 @@
        x="125.7211"
        y="165.14299"
        id="text7899-4"
-       inkscape:export-filename="Harmonic_motion.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"><tspan
+       inkscape:export-filename="harmonic_motion.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275"><tspan
          sodipodi:role="line"
          id="tspan7897-3"
          x="125.7211"
@@ -20812,7 +20811,7 @@
          style="font-style:italic;stroke-width:0.264583">A<tspan
    style="font-style:normal"
    id="tspan7919">sin(</tspan>ω<tspan
-   style="font-size:65%;baseline-shift:sub"
+   style="font-size:65%;baseline-shift:sub;font-style:normal"
    id="tspan6693">n</tspan>t<tspan
    style="font-style:normal"
    id="tspan11907">)</tspan></tspan></text>
@@ -20822,9 +20821,9 @@
        id="path7923"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
-       inkscape:export-filename="Harmonic_motion.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300" />
+       inkscape:export-filename="harmonic_motion.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275" />
     <rect
        style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.18043874;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect8997"
@@ -20834,18 +20833,18 @@
        y="177.09807"
        rx="0.49901474"
        ry="0.40617478"
-       inkscape:export-filename="Harmonic_motion.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300" />
+       inkscape:export-filename="harmonic_motion.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="27.430759"
        y="170.51015"
        id="text7899"
-       inkscape:export-filename="Harmonic_motion.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"><tspan
+       inkscape:export-filename="harmonic_motion.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275"><tspan
          sodipodi:role="line"
          id="tspan7897"
          x="27.430759"
@@ -20857,27 +20856,27 @@
        id="path8999"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
-       inkscape:export-filename="Harmonic_motion.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300" />
+       inkscape:export-filename="harmonic_motion.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Mend)"
        d="M 46.857736,173.17535 34.974822,171.65514"
        id="path10505"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
-       inkscape:export-filename="Harmonic_motion.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300" />
+       inkscape:export-filename="harmonic_motion.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="82.185585"
        y="179.88799"
        id="text7899-1"
-       inkscape:export-filename="Harmonic_motion.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"><tspan
+       inkscape:export-filename="harmonic_motion.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275"><tspan
          sodipodi:role="line"
          id="tspan7897-6"
          x="82.185585"
@@ -20889,9 +20888,9 @@
        x="75.229965"
        y="174.7112"
        id="text7823-1"
-       inkscape:export-filename="Harmonic_motion.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"><tspan
+       inkscape:export-filename="harmonic_motion.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275"><tspan
          sodipodi:role="line"
          id="tspan7821-3"
          x="75.229965"
@@ -20902,34 +20901,34 @@
        d="m 93.166405,173.20805 v 1.48829"
        id="path11927"
        inkscape:connector-curvature="0"
-       inkscape:export-filename="Harmonic_motion.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300" />
+       inkscape:export-filename="harmonic_motion.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 108.23112,173.299 v 1.48829"
        id="path11927-1"
        inkscape:connector-curvature="0"
-       inkscape:export-filename="Harmonic_motion.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300" />
+       inkscape:export-filename="harmonic_motion.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 123.22143,173.23286 v 1.48829"
        id="path11927-13"
        inkscape:connector-curvature="0"
-       inkscape:export-filename="Harmonic_motion.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300" />
+       inkscape:export-filename="harmonic_motion.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.85895px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.116184"
        x="93.487129"
        y="176.07817"
        id="text11952"
-       inkscape:export-filename="Harmonic_motion.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"><tspan
+       inkscape:export-filename="harmonic_motion.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275"><tspan
          sodipodi:role="line"
          id="tspan11950"
          x="93.487129"
@@ -20941,9 +20940,9 @@
        x="108.72932"
        y="175.95955"
        id="text11952-8"
-       inkscape:export-filename="Harmonic_motion.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"><tspan
+       inkscape:export-filename="harmonic_motion.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275"><tspan
          sodipodi:role="line"
          id="tspan11950-2"
          x="108.72932"
@@ -20955,9 +20954,9 @@
        x="123.41578"
        y="175.84261"
        id="text11952-9"
-       inkscape:export-filename="Harmonic_motion.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"><tspan
+       inkscape:export-filename="harmonic_motion.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275"><tspan
          sodipodi:role="line"
          id="tspan11950-0"
          x="123.41578"
@@ -22870,22 +22869,22 @@
        inkscape:export-ydpi="300" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker9009-5)"
-       d="m 34.04334,167.26666 c -0.965737,-1.18309 -2.697615,-2.45353 -4.106577,-2.92235"
+       d="m 34.274003,167.67218 c -0.965737,-1.18309 -2.20182,-2.38413 -3.724786,-2.80886"
        id="path8999-4"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
-       inkscape:export-filename="Harmonic_motion.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300" />
+       inkscape:export-filename="harmonic_motion.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="35.83963"
        y="159.96889"
        id="text14740"
-       inkscape:export-filename="Harmonic_motion.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"><tspan
+       inkscape:export-filename="harmonic_motion.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275"><tspan
          sodipodi:role="line"
          id="tspan14738"
          x="35.83963"
@@ -22893,7 +22892,7 @@
          style="font-size:3.52778px;stroke-width:0.264583">angular frequency <tspan
    style="font-style:italic;font-size:3.52778px"
    id="tspan14744">ω</tspan><tspan
-   style="font-style:italic;font-size:3.52778px;baseline-shift:sub"
+   style="font-style:normal;font-size:3.52778px;baseline-shift:sub"
    id="tspan14742">n</tspan></tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Mend-7)"
@@ -22901,9 +22900,9 @@
        id="path10505-4"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
-       inkscape:export-filename="Harmonic_motion.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300" />
+       inkscape:export-filename="harmonic_motion.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"

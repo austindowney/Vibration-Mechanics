@@ -115,7 +115,7 @@
 			where $f_n$ is the frequency of the oscillations. 
 
 				\begin{note}
-					Radians are considered a dimensionless quantity and as such the units of  $m\omega_\text{n}^2$ become  $\frac{\rm{kg}}{\rm{s}^2}\cdot\frac{\rm{m}}{\rm{m}}$ where the unit value $\frac{\rm{m}}{\rm{m}}$ is added such that the stiffness of the spring can be expressed as $\frac{\rm{kg}\cdot \rm{m}}{\rm{s}^2}\cdot\frac{1}{\rm{m}}$ = $\frac{\rm{N}}{\rm{m}}$.  The International System of Units (SI) defines radians as a derived unit for measuring angles. Interestingly, the topic is still discussed by some  \protect\footnotemark[1]. 
+					Radians are considered a dimensionless quantity and as such the units of  $m\omega_\text{n}^2$ become  $\frac{\rm{kg}}{\rm{s}^2}\cdot\frac{\rm{m}}{\rm{m}}$ where the unit value $\frac{\rm{m}}{\rm{m}}$ is added such that the stiffness of the spring can be expressed as $\frac{\rm{kg}\cdot \rm{m}}{\rm{s}^2}\cdot\frac{1}{\rm{m}}$ = $\frac{\rm{N}}{\rm{m}}$.  The International System of Units (SI) defines radians as a derived unit for measuring angles. Interestingly, the topic is still discussed by some\protect\footnotemark[1]. 
 				\end{note}
 				\footnotetext[1]{Quincey, Paul. ``Angles in the SI: treating the radian as an independent, unhidden unit does not require the redefinition of the term `frequency' or the unit hertz.'' Metrologia 57.5 (2020):053001.}
 					
@@ -216,10 +216,12 @@
 			
 			This step is applied in IEEE floating-point arithmetic (IEEE 754) and results in $\pm \pi/2$ depending on the rounding format used. From the practitioner's side, it becomes important to recognize the situation $v_0=0$ and correct this value as needed. 
 			
+			\vspace{-2ex}
 			\begin{figure}[H]
 				\centering
-				\includegraphics[]{../figures/arctan_plot.png}
-				\caption{Response of tan$^{-1}$ (or arctan) for  $x$=-60 to 60 showing that the tan$^{-1}$ is undefined as $x$ approaches $-\infty$ and $\infty$.}
+				\includegraphics[width=6in]{../figures/arctan_plot}
+				\vspace{-3ex}
+				\caption{Response of tan$^{-1}$ (or arctan) for  $x=-60$ to 60 showing that the tan$^{-1}$ is undefined as $-\pi/2$ or $\pi/2$ as $x$ approaches $-\infty$ or $\infty$, respectively.}
 				\label{fig:arctan_plot}
 			\end{figure}		
 			
@@ -240,14 +242,29 @@
 				
 				\noindent\textbf{Solution:} 
 
-				Considering:
+				\noindent Considering:
 				\begin{equation}
 					\omega_\text{n} = \sqrt{\frac{k}{m}}
 				\end{equation}
 				therefore, $k=m\omega_\text{n}^2=(300$ $\text{kg})(10$ $\text{rad/s})^2=30$ KN/m. 
 	
 			\end{example}
-		
+	
+	
+		\begin{vibration_case_study}
+			
+			\textbf{Suspension on Early Tractors}
+			
+			\noindent The Hart-Parr 20-40 ``Steel King'' was an early gas internal combustion engine built in Charles City Iowa\protect\footnotemark[1] form 1911-1914. Hart-Parr was the inventor of the world's first commercially successful tractor. These large frame tractors were used for sod busting on the prairie and road construction. They were dual cylinders and ran on either gasoline or kerosene and water. Each cylinder has an 8-inch bore and a 12-inch stroke. The Hart-Parr 20-40 used an innovative in-hub suspension setup on the front wheel intended to help smooth out the ride in the tractor when used for road construction. However, without a damper integrated into the suspension the suspension proved to be unhelpful, and future refinements of the tractor dropped this feature.
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=6in]{../figures/Hart-Parr}
+				\caption{Hart-Parr 20-40, showing: (a) the full tractor, and; (b) close up of suspension in the front hub. }
+			\end{figure}		
+			\footnotetext[1]{Austin Downey's hometown.}
+		\end{vibration_case_study}
+	
 		\begin{example}		
 
 			\textbf{Calculating Natural Frequency}
@@ -262,6 +279,7 @@
 	
 				\noindent\textbf{Solution:} 
 
+				\noindent Setting up as solving for the natural frequency results in:
 				\begin{equation}
 					\omega_\text{n} = \sqrt{\frac{k}{m}}= \sqrt{\frac{857.8}{49.2\times10^{-3}}} = 132 \hspace{1ex}\text{rad/sec}
 				\end{equation}	
@@ -277,7 +295,7 @@
 	
 	
 				\begin{equation}
-					A = \frac{\sqrt{\omega_\text{n}^2x_0^2+v_0^2}}{\omega_\text{n}} = \frac{\sqrt{132^2 0.01 ^2+0^2}}{132}=0.01 \hspace{1ex}\text{m}
+					A = \frac{\sqrt{\omega_\text{n}^2x_0^2+v_0^2}}{\omega_\text{n}} = \frac{\sqrt{132^2 \cdot 0.01 ^2+0^2}}{132}=0.01 \hspace{1ex}\text{m}
 				\end{equation}
 	
 			\end{example}
@@ -338,10 +356,10 @@
 			\begin{figure}[H]
 				\centering
 				\includegraphics[width=4in]{../figures/Leonhard_Euler}
-				\caption{A Soviet Union stamp from 1957 with a Portrait of Leonhard Euler who worked in various branches of the Imperial Russian Academy of Sciences and Imperial court during his lifetime \protect\footnotemark[1].}
+				\caption{A Soviet Union stamp from 1957 with a Portrait of Leonhard Euler who worked in various branches of the Imperial Russian Academy of Sciences and Imperial court during his lifetime\protect\footnotemark[1].}
 			\end{figure}
 						
-			Euler's formula is named after the Swiss engineer and mathematician Leonhard Euler (1707-1783), who among other things popularized the use of the Greek letter $\pi$ to denote the ratio of a circle's circumference to its diameter, wast the first to use the expression $f(x)$ to denote a function, and correctly defining the base of the natural logarithm $e$; which is now known as Euler's number. While Euler developed ``Euler's formula'' in 1748, it was not used to describe points in a complex for another 50 years when the Danish-Norwegian mathematician and cartographer Caspar Wessel presented to the Danish Academy in 1797  \protect\footnotemark[2].
+			Euler's formula is named after the Swiss engineer and mathematician Leonhard Euler (1707-1783), who among other things popularized the use of the Greek letter $\pi$ to denote the ratio of a circle's circumference to its diameter, wast the first to use the expression $f(x)$ to denote a function, and correctly defining the base of the natural logarithm $e$; which is now known as Euler's number. While Euler developed ``Euler's formula'' in 1748, it was not used to describe points in a complex for another 50 years when the Danish-Norwegian mathematician and cartographer Caspar Wessel presented to the Danish Academy in 1797\protect\footnotemark[2].
 			
 
 			\footnotetext[1]{Post of the USSR, Public domain, via Wikimedia Commons}  
@@ -628,6 +646,7 @@
 			\begin{equation}
 				m\ddot{x}(t) + c \dot{x}(t) + kx(t) = 0
 			\end{equation}
+		
 			This system is subject to the same initial conditions as before, $x(0) = x_0$ and $\dot{x}(0) = v_0$. Again, choosing to model it this way for convinces, so let's solve it in a similar manner to the EOM without damping. Again, assume the solution:
 			\begin{equation}
 				x(t) = ae^{\lambda t}
@@ -644,7 +663,7 @@
 			\begin{equation}
 				m \lambda^2 ae^{\lambda t}  +c\lambda ae^{\lambda t} + k ae^{\lambda t} = 0
 			\end{equation}
-			Now we divide by $ae^{\lambda t}$ to obtain the \textbf{characteristic equation}:
+			Now we divide by $ae^{\lambda t}$ to obtain the characteristic equation:
 			\begin{equation}
 				m \lambda^2 + c\lambda + k = 0
 			\end{equation}
@@ -659,7 +678,7 @@
 			\item if $c^2-4km=0$, system is critically damped, solutions are equal negative real numbers 
 			\item if $c^2-4km>0$, system is Overdamped, solutions are distinct negative real numbers 
 			\end{itemize}
-			From this, we can see that $c^2-4km=0$ is a special value, let us define a value for $c$ that will give us this critical damping number. We will call it the \textbf{critical damping coefficient} ($c_{\text{cr}}$). So setting the equation as:
+			From this, we can see that $c^2-4km=0$ is a special value, let us define a value for $c$ that will give us this critical damping number. We will call it the critical damping coefficient ($c_{\text{cr}}$). So setting the equation as:
 			\begin{equation}
 				c_{\text{cr}}^2-4km = 0
 			\end{equation}
@@ -671,7 +690,7 @@
 			\begin{equation}
 				c_{\text{cr}} = 2\sqrt{km} = 2\bigg(\frac{\sqrt{m}}{\sqrt{m}}\bigg)\sqrt{km} = 2m\omega_\text{n}
 			\end{equation}			
-			remember that $\omega_\text{n} = \sqrt{\frac{k}{m}}$ for an undamped system. Next, we generate a non-dimensional number ($\zeta$), pronounced `zeta' that will allow us to distinguish between different types of damping. $\zeta$ is called the \textbf{critical damping ratio}.
+			remember that $\omega_\text{n} = \sqrt{\frac{k}{m}}$ for an undamped system. Next, we generate a non-dimensional number ($\zeta$), pronounced `zeta' that will allow us to distinguish between different types of damping. $\zeta$ is called the critical damping ratio.
 			\begin{equation}
 				\zeta = \frac{c}{c_{\text{cr}}} = \frac{c}{2\sqrt{km}} = \frac{c}{2m\omega_\text{n}}
 			\end{equation}				
@@ -933,7 +952,7 @@
 		\begin{figure}[H]
 		\centering
 		\includegraphics[width=6in]{../figures/automotive_epoxy_damping}
-		\caption{Experimental modal analysis of an automotive (Jaguar) body in white, typically done to reduce vehicle noise and vibration harshness.\protect\footnotemark[1]}
+		\caption{Experimental modal analysis of an automotive (Jaguar) body in white, typically done to reduce vehicle noise and vibration harshness\protect\footnotemark[1].}
 			\footnotetext[1]{Cjp24, CC BY-SA 3.0 $<$https://creativecommons.org/licenses/by-sa/3.0$>$, via Wikimedia Commons.}
 	\end{figure}		
 		\end{vibration_case_study}
@@ -1063,13 +1082,13 @@
 			\begin{figure}[H]
 				\centering
 				\includegraphics[width=4in]{../figures/Sayano-Shushenskaya_HPS_-_generator_hall}
-				\caption{Sayano Shushenskaya's turbine hall before the accident where turbine 2 (the turbine that failed) is in the foreground of the image. \protect\footnotemark[1]}
+				\caption{Sayano Shushenskaya's turbine hall before the accident where turbine 2 (the turbine that failed) is in the foreground of the image\protect\footnotemark[1].}
 			\end{figure}
 
 			\begin{figure}[H]
 				\centering
 				\includegraphics[width=4in]{../figures/Sayano-Shushenskaya_HPS_-_generator_hall_post-accident}
-				\caption{Sayano Shushenskaya's turbine hall after the accident. \protect\footnotemark[2] \bl{} }
+				\caption{Sayano Shushenskaya's turbine hall after the accident\protect\footnotemark[2]. \bl{} }
 			\end{figure}
 			
 %			\begin{otherlanguage*}{russian}
