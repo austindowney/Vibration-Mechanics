@@ -11,6 +11,13 @@ An open-source textbook intended to cover the basics of mechanical vibrations. T
 A current PDF version of the text can be found in the releases tab of the GitHub page or by clicking <a href="https://github.com/ARTS-Laboratory/Open_Vibrations/releases">here</a>.
 
 
+## Lectures
+
+Videos of lectures associated with this text are available as a YouTube playlist <a href="https://www.youtube.com/playlist?list=PL-2wJog-EC58uXz1LhpNRmV8nCEvyvoVS">here</a>.
+
+
+
+
 ## License
 
 This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License [cc-by-sa 4.0].

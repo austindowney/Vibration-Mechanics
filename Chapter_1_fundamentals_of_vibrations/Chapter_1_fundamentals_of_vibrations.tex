@@ -423,14 +423,14 @@
 			\begin{figure}[H]
 				\centering
 				\includegraphics[]{../figures/1-DOF-spring_mass_vertical.png}
-				\caption{A 1 DOF spring-mass system with movement in the vertical direction}
+				\caption{A 1 DOF spring-mass system with movement in the vertical direction.}
 			\end{figure}		
 			\noindent \textbf{Step-1}
-			Define the direction of displacement, and draw the FBD for the equilibrium and displaced state.  
+			Define the direction of displacement (if needed, it is given in this problem) and draw the FBD for the equilibrium and displaced state.  
 			\begin{figure}[H]
 				\centering
 				\includegraphics[]{../figures/1-DOF-spring_mass_vertical_FBD.png}\\
-				equilibrium state \hspace{3cm} displaced state
+				equilibrium state \hspace{3.6cm} displaced state
 				\caption{Equivalent forces for a 1 DOF spring-mass system with movement in the vertical direction}
 			\end{figure}		
 			\noindent The equation for the equilibrium state is:
@@ -457,6 +457,46 @@
 			\end{equation}			
 		\end{example}		
 
+
+		\begin{example}	
+			\textbf{Deriving Equation of Motion Considering Torsional Stiffness}
+
+			\noindent Equations of motion can also be developed for systems with torsional stiffness. Considering the system in figure~\ref{fig:torsional_stiffness} where $k$ is the stiffness in the rotational direction and the shaft is perfectly rigid in the vertical direction. Moreover, consider the polar moment of inertia of the disk $(J)$ that spins about the origin defined as point O.
+			\begin{figure}[H]
+				\centering
+				\includegraphics[]{../figures/torsional_stiffness}
+				\caption{A 1 DOF system with a mass-less shaft and a disk where the direction of movement results in a torsional loading of the shaft.}
+				\label{fig:torsional_stiffness}
+			\end{figure}	
+	
+			\noindent \textbf{Step-1}
+			Draw the FBD for the equilibrium and displaced state.  
+			\begin{figure}[H]
+				\centering
+				\includegraphics[]{../figures/torsional_stiffness_FBD}\\\vspace{0.1cm}
+				equilibrium state \hspace{3.6cm} displaced state
+				\caption{Equivalent moments for a 1 DOF torsional system.}
+			\end{figure}		
+			\noindent Considering that $\curveplusclock$, the equation for the equilibrium state is:
+			\begin{equation}
+				\curveplusclock \sum M_\text{O} =  0
+			\end{equation}
+			as there is no initial displacement due to gravity this expression gives no useful information in this case and is ignored in this example. Next, the displaced state is:
+			\begin{equation}
+				\curveplusclock \sum M_\text{O} =  -k \theta
+			\end{equation}	
+			This equation does not equal zero as the FBD does not account for the restoring force that is present where the shaft connects with the fixity.	
+
+			\noindent \textbf{Step-2} Apply Newton's 2nd law given the fact that we were given the moment of inertia of a disk as $J$,
+			\begin{equation}
+				\curveplusclock \sum M_\text{O} = J \ddot{\theta} =  -k \theta
+			\end{equation}
+			
+			\noindent \textbf{Step-3} Derive EOM:
+			\begin{equation}
+				J \ddot{\theta} + k\theta  =0
+			\end{equation}	
+		\end{example}		
 
 		\begin{vibration_case_study}
 			

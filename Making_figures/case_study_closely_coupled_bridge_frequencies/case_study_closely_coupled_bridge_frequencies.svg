@@ -14252,9 +14252,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.2117505"
-     inkscape:cx="134.51614"
-     inkscape:cy="462.14134"
+     inkscape:zoom="1.713674"
+     inkscape:cx="348.66608"
+     inkscape:cy="528.68866"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -14272,7 +14272,10 @@
        y="0"
        width="152.39999"
        height="228.60001"
-       id="page4121" /><inkscape:page
+       id="page4121"
+       inkscape:export-filename="Page 1.jpg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" /><inkscape:page
        x="175.10001"
        y="0"
        width="191.64645"
@@ -19606,9 +19609,9 @@
        id="path8393-2"
        sodipodi:nodetypes="cccc" /><path
        style="fill:none;stroke:#ffffff;stroke-width:0.25;stroke-opacity:1"
-       d="m 113.74569,209.76734 0.035,-2.47851 26.37088,1.21536 0.88002,2.01368"
+       d="m 113.74569,209.76734 0.035,-2.47851 21.31443,0.98377"
        id="path8393-0"
-       sodipodi:nodetypes="cccc" /><text
+       sodipodi:nodetypes="ccc" /><text
        xml:space="preserve"
        style="font-style:italic;font-weight:bold;font-size:3.175px;line-height:2.91042px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman,  Bold Italic';text-align:center;text-anchor:middle;fill:none;stroke:#ffffff;stroke-width:0.25;stroke-opacity:1"
        x="132.11005"

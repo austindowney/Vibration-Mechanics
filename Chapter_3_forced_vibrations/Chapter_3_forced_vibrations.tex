@@ -26,11 +26,11 @@
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=6in]{../figures/Li_pole_vibrations}
-			\caption{Tall mast light pole in the central United States showing: (a) the light mast; (b) the measured temporal response of the light pole, and; (c) the frequency domain response of the light pole. Light pole data provided by Jian li\protect\footnotemark[1] and discussed in detail in Shaheen et al. \protect\footnotemark[2].}
+			\caption{Tall mast light pole in the central United States showing: (a) the light mast; (b) the measured temporal response of the light pole, and; (c) the frequency domain response of the light pole. Light pole data provided by Jian li\protect\footnotemark[1] and discussed in detail in Shaheen et al.\protect\footnotemark[2].}
 			\label{fig:Li_pole_vibrations}
 		\end{figure}
 		\footnotetext[1]{Jian li, CC BY-SA 4.0, Light pole data}  
-		\footnotetext[2]{Shaheen, Mona, et al. ``Wind-induced vibration monitoring of high mast illumination poles.'' Sensors and Smart Structures Technologies for Civil, Mechanical, and Aerospace Systems 2022. Vol. 12046. SPIE, 2022.}  
+		\footnotetext[2]{Shaheen, Mona, et al. ``Wind-Induced Vibration Monitoring of High-Mast Illumination Poles Using Wireless Smart Sensors.'' Sensors 24.8 (2024): 2506.}  
 	\end{vibration_case_study}
 
 
@@ -156,7 +156,7 @@
 			\includegraphics[width=0.5\textwidth]{../figures/1-DOF-spring_mass_horizontal_forced.png}
 			\caption{1-DOF spring-mass system subjected to an external force $F(t)$.}
 		\end{figure}
-		\noindent with $k$ = 10~N/m, $m$ = 2.5~kg, $\omega$ = 4~rad/sec, $F_0$ = 0.1~kN, $x_0$ = 1~mm, and $v_0$ = 0~mm/s plot the temporal responses of the system considering the free-vibration case and the excited case. Plot these on a single plot to compare the responses. 
+		\noindent with $k$ = 10~N/m, $m$ = 2.5~kg, $\omega$ = 4~rad/sec, $F_0$ = 0.1~N, $x_0$ = 1~mm, and $v_0$ = 0~mm/s plot the temporal responses of the system considering the free-vibration case and the excited case. Plot these on a single plot to compare the responses. 
 					
 		\noindent\textbf{Solution:} 
 
@@ -168,11 +168,12 @@
 		\begin{equation}
 			x(t) = \Big(\frac{v_0}{\omega_n}\Big)\text{sin}(\omega_n t) + \Big(x_0-\frac{f_0}{\omega_n^2-\omega^2}\Big)\text{cos}(\omega_n t) + \frac{f_0}{\omega_n^2-\omega^2}\text{cos}(\omega t)
 		\end{equation}	
-		These temporal responses are plotted as (Note that the forcing function uses the axis on the right):
+		These temporal responses are plotted in figure~\ref{fig:free_and_forced_temporal_response}. Note that the forcing function uses the axis on the right.
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.9\textwidth]{../figures/free_and_forced_temporal_response.png}
 			\caption{Comparison of the temporal response for a 1-DOF system; expressing how the forcing function changes the vibrational  temporal response of the system.}
+			\label{fig:free_and_forced_temporal_response}
 		\end{figure}	
 	\end{example}
 	
@@ -207,7 +208,7 @@
 
 	\textbf{Homogeneous and Particular Solution}
 
-	\noindent Compute solutions for the homogeneous and particular solution separately, then compute the total response of a spring-mass system with the following values: $k$ = 1000~N/m, $m$ = 10~kg, subject to a harmonic force of magnitude $F_0$ = 100~N and frequency of 8.162~rad/s, and initial conditions given by $x_0$ = 0 m and $v_0$ = 0 m/s. Plot the response.
+	\noindent Compute solutions for the homogeneous and particular solution separately, then compute the total response of a spring-mass system with the following values: $k$ = 500~N/m, $m$ = 10~kg, subject to a harmonic force of magnitude $F_0$ = 100~N and frequency of 8.162~rad/s, and initial conditions given by $x_0$ = 0 m and $v_0$ = 0 m/s. Plot the response.
 	
 	\begin{figure}[H]
 		\centering
@@ -477,11 +478,14 @@ B_s
 	\begin{equation}
 		\phi =  \tan^{-1} \bigg(\frac{\omega_d \big( x_0 -X \text{cos}(\phi_p)\big)}{v_0 + \big(x_0 - X \text{cos}(\phi_p)\big) \zeta \omega_n - \omega X \text{sin}(\phi_p) }\bigg)
 	\end{equation}			
-	Finally, assembling all the terms:
+
+
+	Assembling all the terms solved results in a unified solution:
 	\begin{equation}
 		x(t) = Ae^{-\zeta \omega_n t}\text{sin}(\omega_d t + \phi) +  X \text{cos}(\omega t - \phi_p)
 		\label{eq:damped_forced_x}
 	\end{equation}
+	Where the parameters are defined as:
 	\begin{equation}
 		A = \frac{x_0 -X \text{cos}(\phi_p)}{\text{sin}(\phi)}
 	\end{equation}			 
@@ -495,6 +499,8 @@ B_s
 		\phi_p = \tan^{-1} \bigg(\frac{2\zeta \omega_n \omega}{\omega_n^2 - \omega^2}\bigg)
 		\label{eq:damped_forced_theta_p}
 	\end{equation}		
+	Note that for a case where damping equals zero, this expression collapses down to that obtained for a undamped system.
+
 	\begin{example}
 	\label{ex:homogeneous_and_particular_solutions_in_resonance}		
 		\textbf{Plotting Steady State and Transient Responses}
@@ -766,7 +772,7 @@ B_s
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=1\textwidth]{../figures/Italy_2016_earthquake_1}
-		\caption{The town center of Amatrice Italy after the August 24\textsuperscript{th} 2016 earthquake that measured 6.2  on the moment magnitude scale; note that the bell tower (lower natural frequency) is still standing while shorter stiffer structures (higher natural frequency) have suffered extensive damage. \protect\footnotemark[1] }
+		\caption{The town center of Amatrice Italy after the August 24\textsuperscript{th} 2016 earthquake that measured 6.2  on the moment magnitude scale; note that the bell tower (lower natural frequency) is still standing while shorter stiffer structures (higher natural frequency) have suffered extensive damage.\protect\footnotemark[1] }
 		\label{fig:Italy_2016_earthquake_1}
 	\end{figure}
 	
@@ -775,7 +781,7 @@ B_s
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=1\textwidth]{../figures/Italy_2016_earthquake_2}
-		\caption{Bell tower at Basilica di San Pietro, showing: (a) the bell tower, (b) a sensor in the bell tower, and (c) data collected during the Central Italy earthquake of August 24, 2016. \protect\footnotemark[3] }
+		\caption{Bell tower at Basilica di San Pietro, showing: (a) the bell tower, (b) a sensor in the bell tower, and (c) data collected during the Central Italy earthquake of August 24, 2016.\protect\footnotemark[3] }
 		\label{fig:Italy_2016_earthquake_2}
 	\end{figure}
 

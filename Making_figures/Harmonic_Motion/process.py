@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Default plotting code for Open_Vibrations that sets the fonts and format.
-
-@author: Austin Downey
-"""
-
-#%% import modules and set default fonts and colors
 
 import IPython as IP
 IP.get_ipython().magic('reset -sf')
 
+#%% import modules and set default fonts and colors
+
+"""
+Default plot formatting code for Austin Downey's series of open source notes/
+books. This common header is used to set the fonts and format.
+
+Header file last updated March 10, 2024
+"""
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 import numpy as np
@@ -22,7 +23,6 @@ import time
 import re
 import json as json
 import pylab
-
 # set default fonts and plot colors
 plt.rcParams.update({'text.usetex': True})
 plt.rcParams.update({'image.cmap': 'viridis'})
@@ -35,10 +35,12 @@ plt.rcParams.update({'font.size': 10})
 plt.rcParams.update({'mathtext.rm': 'serif'})
 plt.rcParams.update({'mathtext.fontset': 'custom'}) # I don't think I need this as its set to 'stixsans' above.
 cc = plt.rcParams['axes.prop_cycle'].by_key()['color']
+## End of plot formatting code
+
 plt.close('all')
 
 #%% Plot the figure
-
+# Last updated March 10, 2024
 
 
 omega = 5

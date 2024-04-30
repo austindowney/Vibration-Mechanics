@@ -8327,7 +8327,7 @@
          inkscape:connector-curvature="0"
          id="path1174-45-3-2-5"
          d="M 0,0 5,-5 -12.5,0 5,5 Z"
-         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
          transform="matrix(-0.8,0,0,-0.8,-10,0)" />
     </marker>
     <marker
@@ -9565,8 +9565,8 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="1.2117505"
-     inkscape:cx="265.73127"
-     inkscape:cy="477.82114"
+     inkscape:cx="141.11816"
+     inkscape:cy="478.64639"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -9609,7 +9609,7 @@
        id="path3728-3-4-1-5-5"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccccccccccccccccccccc"
-       inkscape:export-filename="1_DOF_spring_dashpot_mass_vertical_base_excited_FBD.png"
+       inkscape:export-filename="1_DOF_spring_dashpot_mass_vertical_base_excited.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <rect

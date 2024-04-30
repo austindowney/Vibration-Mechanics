@@ -139,7 +139,7 @@
 		\vec{x}(t) = A_1 \sin (\omega_1 t + \phi_1 )\vec{u}_1 + A_2 \sin (\omega_2 t + \phi_2 )\vec{u}_2 , \hspace{1cm} \omega_1 \text{ or } \omega_2 \neq 0
 		\label{eq:2-DOF_solution}
 	\end{equation}
-	Where the bold text denotes vectors. Therefore, the vectors $\vec{u}_1$ and $\vec{u}_2$ are the mathematical expressions that ``couple'' or tie the equations together. Expanding these vectors shows: 
+	Where the arrow above the variable denotes a vector. Therefore, the vectors $\vec{u}_1$ and $\vec{u}_2$ are the mathematical expressions that ``couple'' or tie the equations together. Expanding these vectors shows: 
 	\begin{eqnarray}
 	 \vec{x}(t)=  \begin{bmatrix} x_1(t) \\  x_2(t) \end{bmatrix}, \hspace{2ex} \vec{u}_1=  \begin{bmatrix} u_{11} \\  u_{21} \end{bmatrix}, \hspace{2ex} \vec{u}_2=  \begin{bmatrix} u_{12} \\  u_{22} \end{bmatrix}\text{, }
 	\end{eqnarray}
@@ -298,7 +298,7 @@
 		\includegraphics[]{../figures/2-DOF-spring_mass_horizontal.png}
 		\caption{2-DOF system with two masses and two independent confidante systems $x_1$ and $x_2$.}
 	\end{figure}
-	Calculate response for the system if $m_1$=9 kg, $m_2$=1 kg, $k_1$ = 24 N/m, and $k_2$ = 3 N/m with the initial conditions $x_{10}=1$ mm, $v_{10}=0$ mm/s, $x_{20}=0$ mm, and $v_{20}=0$ mm/s. \\
+	Calculate response for the system if $m_1$=9~kg, $m_2$=1~kg, $k_1$ = 24~N/m, and $k_2$ = 3~N/m with the initial conditions $x_{10}=1$~mm, $v_{10}=0$~mm/s, $x_{20}=0$~mm, and $v_{20}=0$~mm/s. \\
 	
 	
 	\noindent \textbf{Solution:} 
@@ -345,7 +345,7 @@
 	\end{equation}
 	Taking the dot product of the matrix equation yields:
 	\begin{equation}
-		9u_{11} -3u_{21}=0 \text{, and } -3u_{11} + u_{21}=0
+		9u_{11} -3u_{21}=0 \text{, and } -3u_{12} + u_{22}=0
 	\end{equation}
 	Both of these equations yield the same equation, that is:
 	\begin{equation}
@@ -507,11 +507,11 @@
 	\end{equation}
 	Taking the dot product of the matrix equation yields:
 	\begin{equation}
-		u_{11} - u_{21}=0 \text{, and } - u_{11} + u_{21}=0
+		u_{11} - u_{21}=0 \text{, and } - u_{12} + u_{22}=0
 	\end{equation}
 	Setting $u_{11} = 1$ results in $u_{21} = 1$ . The same processes can be performed for $\vec{u}_2$ to show that if we set $u_{12} = 1$, $u_{22} = -1$. Therefore, the mode shapes can be expressed as:
 	\begin{equation}
-		 \begin{bmatrix} \vec{u}_1 & \vec{u}_2 \end{bmatrix} = \begin{bmatrix}  u_{11} & u_{12} \\ u_{21} & u_{22} \end{bmatrix} = \begin{bmatrix}  1 & 1 \\ 1 & -1 \end{bmatrix}
+		 \vec{u}_1 = \begin{bmatrix} u_{11} \\ u_{21} \end{bmatrix} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}\text{ and } \vec{u}_2 = \begin{bmatrix} u_{12} \\ u_{22} \end{bmatrix}  = \begin{bmatrix} 1 \\ -1 \end{bmatrix} 
 	\end{equation}
 	The displacement of the masses as a function of time and the general mode shape plots are graphically represented in figure \ref{fig:2-DOF_mode_shape}. In the 2-DOF system considered here, the second mode shape has a spot at the center of the middle spring that does not move (i.e. has zero displacement). This point is called a node. Nodes correspond to points in the mode shape where the displacement is always zero. Furthermore, the displacement of the node points remain zero at all times, as diagrammed in the top-right of figure \ref{fig:2-DOF_mode_shape}.
 	
@@ -657,22 +657,19 @@
 		\begin{equation}
 		\textbf{A}\textbf{v} = \lambda\textbf{v}
 		\end{equation}
-		where $\textbf{v}$ is a $n \times 1$ matrix of the eigenvectors. For the matrix $A$, eigenvalues and eigenvectors can be used to decompose the matrix.
+		where $\textbf{v}$ is a $n \times 1$ matrix of the eigenvectors and $\lambda$ is a square matrix with eigenvalues on the diagonal such that:
+		\begin{equation}
+		\lambda = \begin{bmatrix} \lambda_1 & 0 \\  0  & \lambda_2 \end{bmatrix} 
+			\label{eq:lambda_matrix}
+		\end{equation}
+		and if needed a row-wise vector of the diagonal can be formed $\vec{\lambda} = [ \lambda_1, \; \lambda_2]^\text{T}$. For the matrix $A$, eigenvalues and eigenvectors can be used to decompose the matrix.
 
 		\begin{figure}[H]
 			\centering
-			\includegraphics[width=3in]{../figures/eigenvalues_2}
-			\caption{Matrix $\textbf{A}$ acts by stretching the vector $\textbf{v}$, not changing its direction, so $\textbf{v}$ is an eigenvector of $\textbf{A}$.}
+			\includegraphics[width=3in]{../figures/eigenvalues}
+			\caption{Matrix $\textbf{A}$ acts by stretching the vector $\vec{v}$, not changing its direction, so $\vec{v}$ is an eigenvector of $\textbf{A}$.}
 			\label{fig:eigenvalues}
 		\end{figure}
-		
-			
-%		\begin{figure}[H]
-%			\centering
-%			\includegraphics[]{../figures/eigenvalues.png}
-%			\caption{The stretching and shearing of the plane on which a matrix lies where the eigenvectors of the matrix are denoted by the blue lines and are the special directions such that point on the lines will just slide on them.}
-%			\label{fig:eigenvalues}
-%		\end{figure}
 	
 		The generalized eigenvalue problem is an important formulation for the study of vibrations and is written as 
 		\begin{equation}
@@ -828,12 +825,12 @@
 
 	
 	
-	
+	\pagebreak
 	\begin{example}
 
 	\noindent \textbf{Calculating Eigenvalue-based Solutions for System Dynamics}  
 
-	\noindent Consider the system presented in example \ref{ex:2-DOF} and repeated below where $m_1$=9 kg, $m_2$=1 kg, $k_1$ = 24 N/m, and $k_2$ = 3 N/m with the initial conditions $x_{10}=1$ mm, $v_{10}=0$ mm/s, $x_{20}=0$ mm, and $v_{20}=0$ mm/s. Calculate the natural frequencies and the mode shapes using the eigenvalue solution. 
+	\noindent Consider the system presented in example \ref{ex:2-DOF} and repeated below where $m_1$=9~kg, $m_2$=1~kg, $k_1$ = 24~N/m, and $k_2$ = 3~N/m with the initial conditions $x_{10}=1$~mm, $v_{10}=0$~mm/s, $x_{20}=0$~mm, and $v_{20}=0$~mm/s. Calculate the natural frequencies and the mode shapes using the eigenvalue solution. 
 	\begin{figure}[H]
 		\centering
 		\includegraphics[]{../figures/2-DOF-spring_mass_horizontal.png}
@@ -899,7 +896,7 @@
 	\begin{equation}
 	v_{11} - v_{21} = 0 \text{ and } -v_{11} + v_{21} =0
 	\end{equation}
-	That show us that $v_{11} = v_{21}$ or $\vec{v}_1=[1 \hspace{1ex} 1]^\text{T}$. However, $\vec{v}_1$ so let's apply a scalar $\alpha$ to normalize it to a unit vector. Therefore, using $(\alpha \vec{v}_1)^\text{T}(\alpha \vec{v}_1) = 1$ we obtain:
+	That show us that $v_{11} = v_{21}$ or $\vec{v}_1=[1 \hspace{1ex} 1]^\text{T}$. First we find that $\vec{v}_1$ is not a unit norm vector as $\sqrt{v_{21}^2+v_{21}^2}\ne1$. Therefore, let's apply a scalar $\alpha$ to normalize it to a unit vector. Using $(\alpha \vec{v}_1)^\text{T}(\alpha \vec{v}_1) = 1$ we obtain:
 	\begin{equation}
 	\alpha [1 \hspace{1ex} 1]\alpha  \begin{bmatrix} 1 \\  1 \end{bmatrix}  = \alpha^2(2) = 1
 	\end{equation}
@@ -918,7 +915,7 @@
 	\end{eqnarray}
 	and:
 	\begin{eqnarray}
-	\vec{u}_2 =  \begin{bmatrix} \frac{1}{3} & 0  \\  0 & 1 \end{bmatrix}   \begin{bmatrix} -1 \\  1 \end{bmatrix} =  \begin{bmatrix} -0.24 \\  0.71 \end{bmatrix}
+	\vec{u}_2 =  \begin{bmatrix} \frac{1}{3} & 0  \\  0 & 1 \end{bmatrix}   \begin{bmatrix} -0.71 \\  0.71 \end{bmatrix} =  \begin{bmatrix} -0.24 \\  0.71 \end{bmatrix}
 	\end{eqnarray}
 	While these mode shapes are correct, it is common practice to report them normalized with a maximum value of 1, therefore, $\vec{u}_1 = [1/3 \hspace{1ex} 1]$ and $\vec{u}_2 = [-1/3 \hspace{1ex} 1]$. While unit-normalization of the eigenvectors was not required in this example to obtain the right solution, it is good practice. Note that these are the same mode shape vectors as computed in example \ref{ex:2-DOF}.
 	
@@ -937,7 +934,7 @@
 			\label{fig:2-DOF-spring_mass_horizontal_2}
 		\end{figure}
 		
-		\noindent Using the Eigenvalue approach and MATLAB, determine the natural frequencies and mode shapes of the system shown in figure~\ref{fig:2-DOF-spring_mass_horizontal_2}, where $m_1$=9 kg, $m_2$=1 kg, $k_1$ = 24 N/m, and $k_2$ = 3 N/m with the initial conditions $x_{10}=1$ mm, $v_{10}=0$ mm/s, $x_{20}=0$ mm, and $v_{20}=0$ mm/s with the EOM expressed as: 
+		\noindent Using the Eigenvalue approach and MATLAB, determine the natural frequencies and mode shapes of the system shown in figure~\ref{fig:2-DOF-spring_mass_horizontal_2}, where $m_1$=9~kg, $m_2$=1~kg, $k_1$ = 24~N/m, and $k_2$ = 3~N/m with the initial conditions $x_{10}=1$~mm, $v_{10}=0$~mm/s, $x_{20}=0$~mm, and $v_{20}=0$~mm/s with the EOM expressed as: 
 		\begin{eqnarray}
 		  \begin{bmatrix} m_1 & 0  \\  0 & m_2 \end{bmatrix}\begin{bmatrix} \ddot{x_1} \\  \ddot{x_2} \end{bmatrix} + \begin{bmatrix} k_1+k_2 & -k_2  \\  -k_2 & k_2 \end{bmatrix}\begin{bmatrix} x_1 \\  x_2 \end{bmatrix} = \begin{bmatrix} 0 \\  0 \end{bmatrix}
 		\end{eqnarray} \\
@@ -987,7 +984,7 @@ u_2 = M_inv_sqr*v(:,2)
 	\begin{enumerate}
 		\item Take the Laplace transform of both sides of the EOM while treating the time derivatives symbolically.
 		\item Solve for $X(s)$ in the obtained equation.
-		\item Apply the inverse transform $x(t) = \Laplace{X(s)}^{-1}$
+		\item Apply the inverse transform $x(t) = \Laplace{X(s)}^{-1}$.
 	\end{enumerate}
 	
 	
@@ -1033,7 +1030,7 @@ u_2 = M_inv_sqr*v(:,2)
 	x_1(t) = \frac{F_0}{m_1 + m_2} \bigg( t + \frac{m_2}{\omega m_1} \sin (\omega t) \bigg) \\
 	x_2(t) = \frac{F_0}{m_1 + m_2} \bigg( t + \frac{1}{\omega} \sin (\omega t) \bigg) \nonumber
 	\end{eqnarray}
-	Considering a system where $F_0=10$ N, $m_1=1000$ kg, $m_2=1000$ kg, and $k=1500$ N/m the temporal response is annotated in figure~\ref{fig:2_DOF_impact_example}. 
+	Considering a system where $F_0=10$ N, $m_1=1000$~kg, $m_2=1000$~kg, and $k=1500$~N/m the temporal response is annotated in figure~\ref{fig:2_DOF_impact_example}. 
 	
 	
 	\begin{figure}[H]
@@ -1290,7 +1287,7 @@ u_2 = M_inv_sqr*v(:,2)
 	\begin{example}
 	\textbf{Free Vibration Response}
 	
-	\noindent Solve for the free vibration response of the 2-DOF presented in figure~\ref{fig:2-DOF-spring_mass_horizontal_double_wall} using modal analysis. Show the temporal response for the entire system for its first 20 seconds using the full modal reconstruction and the reconstruction truncated to just include the first mode. Also, plot the variations in the modal participation coefficients through time. Apply the parameters, $f_1 = 0$ N, $f_2 = 0$ N, $m_1 = 10$ kg, $m_2 = 1$ kg, $k_1 = 30$ N/m, $k_2 = 5$ N/m, $k_3 = 1$ N/m, $x_1(0) = 1$ mm, $x_2(0) = 0$ mm, $v_1(0) = 0$ mm/s, and $v_2(0) = 0$ mm/s.
+	\noindent Solve for the free vibration response of the 2-DOF presented in figure~\ref{fig:2-DOF-spring_mass_horizontal_double_wall} using modal analysis. Show the temporal response for the entire system for its first 20 seconds using the full modal reconstruction and the reconstruction truncated to just include the first mode. Also, plot the variations in the modal participation coefficients through time. Apply the parameters, $f_1 = 0$ N, $f_2 = 0$ N, $m_1 = 10$~kg, $m_2 = 1$~kg, $k_1 = 30$~N/m, $k_2 = 5$~N/m, $k_3 = 1$~N/m, $x_1(0) = 1$~mm, $x_2(0) = 0$~mm, $v_1(0) = 0$~mm/s, and $v_2(0) = 0$~mm/s.
 	
 	\begin{figure}[H]
 		\centering
@@ -1443,7 +1440,7 @@ u_2 = M_inv_sqr*v(:,2)
 	\begin{example}
 	\textbf{Directly Solving the ODE of the EOM for a 2-DOF system.} \\
 
-	\noindent Consider the system presented in figure~\ref{fig:2-DOF-spring_mass_dashpot_horizontal_forced_ramp_function}(a) where $m_1$=2 kg, $m_2$=1 kg, $k_1$ = 20 N/m, $k_2$ = 10 N/m, $c_1=0.5$ kg/s, and $c_2=1$ kg/s; initially at rest. $m_1$ is subjected to the ramp and hold load shown in figure~\ref{fig:2-DOF-spring_mass_dashpot_horizontal_forced_ramp_function}(b). 	Using MATLAB, solve the EOM for the temporal response 2-DOF system using a numerical ODE solver.
+	\noindent Consider the system presented in figure~\ref{fig:2-DOF-spring_mass_dashpot_horizontal_forced_ramp_function}(a) where $m_1$=2~kg, $m_2$=1~kg, $k_1$ = 20~N/m, $k_2$ = 10~N/m, $c_1=0.5$~kg/s, and $c_2=1$~kg/s; initially at rest. $m_1$ is subjected to the ramp and hold load shown in figure~\ref{fig:2-DOF-spring_mass_dashpot_horizontal_forced_ramp_function}(b). 	Using MATLAB, solve the EOM for the temporal response 2-DOF system using a numerical ODE solver.
 
 			\begin{figure}[H]
 				\centering

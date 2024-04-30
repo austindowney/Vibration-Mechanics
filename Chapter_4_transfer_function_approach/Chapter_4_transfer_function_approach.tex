@@ -318,20 +318,21 @@ Note that the system will settle out around $F_0/k$ where $F_0  \Phi$ is a scali
 
 \begin{example}
 
-		\textbf{Dynamic Loading}
+		\textbf{Displacement under Dynamic Loading}
 
-		\noindent A load of dirt $m$ is dumped into the back of a dump truck. Assuming the dirt not move, the bed of the truck can be modeled as a spring-mass-damper system (of values $k$, $m$, and $c$, respectively). Next, the load of dirt is modeled as a force $F(t) = m g$ that is applied to the spring-mass-damper system, as illustrated in the following figure. The simplification of the system allows for the analysis of the truck bed's vibrations as a simple spring-mass-damper system. First, assume that the truck's damper is broken, how does the maximum dynamic displacement compare to the static displacement? What would happen to the maximum displacement if the damper was repaired on the truck? %Next, using a damping value of $\zeta=0.5$ and $\omega_n=\pi$ what is the maximum displacement. How does this compare to the displacement for the case without the damper?  
+		\noindent A load of dirt $m$ is dumped into the back of a dump truck. The bed of the truck can be modeled as a spring-mass system where the load of dirt is modeled as a force $F(t) = m g$ that is applied to the system, as illustrated in figure~\ref{fig:dump_truck_example}. How does the maximum displacement of the truck bed compare to the steady-state displacement of the truck bed with the dirt in it?
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{../figures/dump_truck_example}
 	\caption{Dump truck being loaded with dirt showing (a) dirt going into the truck bed\protect\footnotemark[1]; and (b) the single-degree-of-freedom vibration model.  }
+	\label{fig:dump_truck_example}
 \end{figure}
 \footnotetext[1]{SGT Marvin Lynchard, A dump truck is filled with dirt, by members of the 459th Civil Engineering Flight, for use in repairing a damaged runway during Exercise Prime Beef '82, Public Domain, via picryl.com} 
 
 \noindent\textbf{Solution:} 
 
-\noindent First, setting the load applied to the truck as 1 unit, it can be seen that this is a unit step loading condition and a broken damper represents an undamped case. To obtain a rough idea about the nature of static and dynamic displacement, the undamped displacement is
+\noindent Setting the load applied to the truck as 1 unit, it can be seen that this is a unit step loading condition with an undamped system. We can obtain a for the transient and steady-state displacement of the truck bed knowing that the undamped displacement is
 
 \begin{equation}
 	x(t) = \frac{1}{k}\big(1-\text{cos}(\omega_n t)\big) = \frac{m g}{k}\big(1-\text{cos}(\omega_n t)\big)
@@ -345,7 +346,7 @@ This can be rearranged for the maximum displacement value $x_\text{max} $ as:
 	x_\text{max} = 2\frac{m g}{k}
 \end{equation} 
 
-Note that the dynamic displacement of the truck bed is twice that of the static displacement. Therefore, if the truck manufacturer designed the truck to only take the static load of dirt (i.e., if the dirt were placed gently into the truck bed), the frame of the truck would be damaged when the dirt were loaded into the truck dynamically. From this, it can be understood that it is important to consider the dynamic responses of a system during the design phase.
+Note that the transient displacement of the truck bed is twice that of the steady-state displacement. Therefore, if the truck manufacturer designed the truck to only take the static load of dirt (i.e. if the dirt were placed gently into the truck bed), the frame of the truck would be damaged when the dirt is dropped into the back of the truck. From this, it can be understood that it is important to consider the transient responses of a system during the design phase.
 
 %\textbf{Example 1 - under damped}
 %For the case where the truck has a damper with a value of $\zeta=0.5$, the displacement $(x)$ can be modeled as:
@@ -614,7 +615,7 @@ rearranging into a standard form yields:
 H(j\omega) = \frac{1}{k-m\omega^2+c\omega j}
 \label{eq:frequency_response_function}
 \end{eqnarray}
-recall that $j^2=-1$. This is the frequency response function of the system. Therefore, it can be seen that the frequency response function of the system is the transfer function of the system evaluated along the imaginary axis $s=j\omega$. However, this expression contains imaginary values (that help to account for the phase in the system) and therefore can be challenging to work with. As the amplitude $|H(j\omega)|$ of the response (the real portion of the equation) is useful to the practitioner, it is prudent to consider the special case of amplitude response while neglecting the phase response. Consider that:
+recall that $j^2=-1$. $H(j\omega)$ is the frequency response function of the system. The frequency response function of the system is the transfer function of the system evaluated in the complex plane. As this expression contains imaginary values to account for the phase in the system it can be challenging to work with. The amplitude $|H(j\omega)|$ of the response (the real portion of the equation) is useful to the practitioner. Therefore, it is prudent to consider the special case of amplitude response while neglecting the phase response. Consider that:
 \begin{equation}
 	H(j\omega) = \text{R}+\text{I}j
 \end{equation}  
@@ -625,7 +626,8 @@ so
 multiplying $H(j\omega)$ by 1 that is represented by its unit complex conjugate yields:
 \begin{align}
 H(j\omega) &= \bigg( \frac{1}{k-m\omega^2+c\omega j} \bigg) \bigg( \frac{k-m\omega^2-c\omega j}{k-m\omega^2-c\omega j}\bigg) \\
-&= \bigg( \frac{k-m\omega^2}{(k-m\omega^2)^2(c\omega)^2} \bigg) \bigg( \frac{-c\omega}{(k-m\omega^2)^2(c\omega)^2}j\bigg) 
+&= \frac{k-m\omega^2-c\omega j}{(k-m\omega^2)^2(c\omega)^2}  \\
+&=  \frac{k-m\omega^2}{(k-m\omega^2)^2(c\omega)^2}  +  \frac{-c\omega}{(k-m\omega^2)^2(c\omega)^2}j 
 \end{align}
 therefore, $\text{R} = \frac{k-m\omega^2}{(k-m\omega^2)^2(c\omega)^2} $ and $\text{I} = \frac{-c\omega}{(k-m\omega^2)^2(c\omega)^2}$. Now, calculating the amplitude of $H(j\omega)$ we get:
 \begin{align}
@@ -897,7 +899,7 @@ E[x^2] = \overline{x^2} =   S_{0} \int_{-\infty}^{\infty} |H(j\omega)|^2 d\omega
 \label{eq:variance_for_S_O}
 \end{equation}
 
-After inspecting the above equation, it becomes clear that to obtain the square of the expected value, a solution for  $\int_{-\infty}^{\infty} |H(j\omega)|^2 d\omega$ must be obtained. For cases where $S_{ff}(\omega) = S_0$ and as such $S_{ff}(\omega)$ can be pulled out of the integral, these integrals have been solved [Random Vibrations, Spectral \& Wavelet Analysis, Newland (1993)]. For example, given $\int_{-\infty}^{\infty} |H(j\omega)|^2 d\omega$:
+After inspecting the above equation, it becomes clear that to obtain the square of the expected value, a solution for  $\int_{-\infty}^{\infty} |H(j\omega)|^2 d\omega$ must be obtained. For cases where $S_{ff}(\omega) = S_0$ and as such $S_{ff}(\omega)$ can be pulled out of the integral, these integrals have been solved\protect\footnotemark[1]. For example, given $\int_{-\infty}^{\infty} |H(j\omega)|^2 d\omega$:
 \begin{equation}
 \int_{-\infty}^{\infty} \bigg|\frac{B_0}{A_0+j \omega A_1} \bigg|^2 d\omega = \frac{\pi B_0^2}{A_0 A_1}
 \end{equation} 
@@ -906,6 +908,8 @@ and
 \int_{-\infty}^{\infty} \bigg|\frac{B_0 + j \omega B_1}{A_0+j \omega A_1 - \omega^2 A_2} \bigg|^2 d\omega = \frac{\pi (A_0 B_1^2 + A_2 B_0^2)}{A_0 A_1 A_2}
 \end{equation} 
 When combined with equation \ref{eq:variance_for_S_O}, these integrals allow for the easy calculation of the expected values. 
+
+\footnotetext[1]{Newland, David E. ``Random vibrations, spectral \& wavelet analysis.'' Longman Scientific \& Technical (1993).} 
 
 \begin{example}
 

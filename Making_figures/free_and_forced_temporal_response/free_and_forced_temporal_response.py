@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Nov 10 09:30:27 2016
-
-@author: downey
-"""
-
-#%% import modules and set default fonts and colors
 
 import IPython as IP
 IP.get_ipython().magic('reset -sf')
+
+#%% import modules and set default fonts and colors
+
+"""
+Default plot formatting code for Austin Downey's series of open source notes/
+books. This common header is used to set the fonts and format.
+
+Last updated March 10, 2024
+"""
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 import numpy as np
@@ -21,10 +23,9 @@ import time
 import re
 import json as json
 import pylab
-
 # set default fonts and plot colors
+plt.rcParams.update({'text.usetex': True})
 plt.rcParams.update({'image.cmap': 'viridis'})
-cc = plt.rcParams['axes.prop_cycle'].by_key()['color']
 plt.rcParams.update({'font.serif':['Times New Roman', 'Times', 'DejaVu Serif',
  'Bitstream Vera Serif', 'Computer Modern Roman', 'New Century Schoolbook',
  'Century Schoolbook L',  'Utopia', 'ITC Bookman', 'Bookman', 
@@ -32,8 +33,12 @@ plt.rcParams.update({'font.serif':['Times New Roman', 'Times', 'DejaVu Serif',
 plt.rcParams.update({'font.family':'serif'})
 plt.rcParams.update({'font.size': 10})
 plt.rcParams.update({'mathtext.rm': 'serif'})
-plt.rcParams.update({'mathtext.fontset': 'custom'})
+plt.rcParams.update({'mathtext.fontset': 'custom'}) # I don't think I need this as its set to 'stixsans' above.
+cc = plt.rcParams['axes.prop_cycle'].by_key()['color']
+## End of plot formatting code
+
 plt.close('all')
+
 
 
 
@@ -45,8 +50,8 @@ tt = np.linspace(0,7,1000)
 k= 10           # N/m
 m = 2.5         # kg
 omega_n = np.sqrt(10/2.5) # rad/sec
-omega = 4 # rad/sec
-F_0 = 0.1 # kN
+omega = 4       # rad/sec
+F_0 = 0.1       # N
 f_0 = F_0/m 
 
 x_0 = 1/1000         # mm
@@ -54,6 +59,7 @@ v_0 = 0/1000     # mm/s
 xx_1 = v_0/omega_n*np.sin(omega_n*tt) + x_0*np.cos(omega_n*tt)
 
 xx_2 = v_0/omega_n*np.sin(omega_n*tt) + (x_0-f_0/(omega_n**2-omega**2))*np.cos(omega_n*tt) + (f_0/(omega_n**2-omega**2))*np.cos(omega*tt)
+
 xx_forcing = F_0*np.cos(omega*tt)
 
 fig, ax1 = plt.subplots(figsize=(5.5,3))
@@ -68,7 +74,7 @@ ax1.set_ylabel('displacement amplitude (mm)')
 
 ax2 = ax1.twinx()
 s2 = np.sin(2 * np.pi * t)
-lns3 = ax2.plot(tt,xx_forcing*1000,':',color=cc[2],label='forcing function',zorder=0)
+lns3 = ax2.plot(tt,xx_forcing,':',color=cc[2],label='forcing function',zorder=0)
 ax2.set_ylabel('applied force (N)', color=cc[2])
 ax2.tick_params('y', colors=cc[2])
 

@@ -76,10 +76,14 @@
 
 
 %%%%%%%		define the symbols for positive directions		%%%%%%
+\usepackage{amssymb}											%%
 \makeatletter													%%	
 																%%					
-\newcommand*\curveplus{% positive counterclockwise				%%
+\newcommand*\curvepluscounterclock{% positive counterclockwise	%%
   \mathbin{\rotatebox[origin=c]{90}{$\m@th\curvearrowleft$}+}}	%%
+																%%
+\newcommand*\curveplusclock{% positive counterclockwise			%%
+  \mathbin{\rotatebox[origin=c]{90}{$\m@th\curvearrowright$}+}} %%
 																%%
 \newcommand*\rightplus{% positive right							%%
   \mathpalette\@rightplus\relax}								%%
