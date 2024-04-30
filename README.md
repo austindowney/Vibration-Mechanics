@@ -28,11 +28,9 @@ This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 Intern
 ## Citation
 
 Cite as  
-@Misc{Downey2021OpenVibrations,  
+@Misc{DowneyOpenVibrations,  
   author = {Austin Downey and Laura Micheli},  
-  month  = may,  
   title  = {Open Vibrations},  
-  year   = {2021},  
   url    = {https://github.com/austindowney/Open-Vibrations},  
 }  
 
