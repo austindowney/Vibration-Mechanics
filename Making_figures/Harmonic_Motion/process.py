@@ -12,17 +12,13 @@ books. This common header is used to set the fonts and format.
 
 Header file last updated March 10, 2024
 """
+
+import numpy as np
+import scipy as sp
 import matplotlib.pyplot as plt
 import matplotlib as mpl
-import numpy as np
-import pandas as PD
-import scipy as sp
-from scipy import interpolate
-import pickle
-import time
-import re
-import json as json
-import pylab
+
+
 # set default fonts and plot colors
 plt.rcParams.update({'text.usetex': True})
 plt.rcParams.update({'image.cmap': 'viridis'})
@@ -38,6 +34,12 @@ cc = plt.rcParams['axes.prop_cycle'].by_key()['color']
 ## End of plot formatting code
 
 plt.close('all')
+
+
+#%% Load the modules needed for this code. 
+
+# No extra modules needed.
+
 
 #%% Plot the figure
 # Last updated March 10, 2024

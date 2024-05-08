@@ -1,31 +1,23 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Spyder Editor
 
-This is a temporary script file.
-"""
-
-# import modules
 import IPython as IP
 IP.get_ipython().magic('reset -sf')
 
-import warnings     # added to ignore the plotting warings about font types in math mode
-warnings.simplefilter("ignore", UserWarning)
+#%% import modules and set default fonts and colors
 
-import matplotlib as mpl
-from matplotlib.patches import Rectangle
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
-from mpl_toolkits.mplot3d import axes3d
-import os as os
+"""
+Default plot formatting code for Austin Downey's series of open source notes/
+books. This common header is used to set the fonts and format.
+
+Header file last updated March 10, 2024
+"""
+
 import numpy as np
 import scipy as sp
-import copy as copy
-from matplotlib import cm
-import time
-#import pykrige as pykrige
-import scipy.io as sio
-tt1 = time.time()
+import matplotlib.pyplot as plt
+import matplotlib as mpl
+
 
 # set default fonts and plot colors
 plt.rcParams.update({'text.usetex': True})
@@ -39,9 +31,20 @@ plt.rcParams.update({'font.size': 10})
 plt.rcParams.update({'mathtext.rm': 'serif'})
 plt.rcParams.update({'mathtext.fontset': 'custom'}) # I don't think I need this as its set to 'stixsans' above.
 cc = plt.rcParams['axes.prop_cycle'].by_key()['color']
+## End of plot formatting code
+
 plt.close('all')
 
 
+#%% Load the modules needed for this code. 
+
+import pandas as PD
+from scipy import interpolate
+import pickle
+import time
+import re
+import json as json
+import pylab
 from scipy.fft import fft, fftfreq
 
 #%% Problem 3
