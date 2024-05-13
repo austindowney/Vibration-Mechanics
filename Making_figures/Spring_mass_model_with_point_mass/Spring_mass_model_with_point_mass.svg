@@ -7,7 +7,7 @@
    viewBox="0 0 165.1 228.60001"
    version="1.1"
    id="svg8"
-   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
    sodipodi:docname="Spring_mass_model_with_point_mass.svg"
    inkscape:export-filename="/home/austin/Documents/Dropbox/Teaching/EMCH-330/Class_notes/class_10/figures/impulse_time_history.png"
    inkscape:export-xdpi="300"
@@ -39,15 +39,15 @@
     <marker
        inkscape:stockid="TriangleInL"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="TriangleInL"
        style="overflow:visible"
        inkscape:isstock="true">
       <path
          id="path8357"
-         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
          transform="scale(-0.8)" />
     </marker>
     <marker
@@ -9531,16 +9531,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.10710462"
-     inkscape:cx="378.13495"
-     inkscape:cy="74.693324"
+     inkscape:zoom="1.7136739"
+     inkscape:cx="290.02017"
+     inkscape:cy="674.57408"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="2880"
-     inkscape:window-height="1526"
-     inkscape:window-x="2869"
-     inkscape:window-y="-11"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1072"
+     inkscape:window-y="835"
      inkscape:window-maximized="1"
      inkscape:snap-global="false"
      units="in"
@@ -9586,18 +9586,18 @@
        transform="rotate(90)" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;line-height:1.25;font-family:Amiri;-inkscape-font-specification:Amiri;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="50.151859"
-       y="263.1507"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Amiri;-inkscape-font-specification:Amiri;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="50.752285"
+       y="262.61554"
        id="text4554-6"
        inkscape:export-filename="spring_mass_model_with_point_mass.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300"><tspan
          sodipodi:role="line"
          id="tspan4552-1"
-         x="50.151859"
-         y="263.1507"
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.264583">m</tspan></text>
+         x="50.752285"
+         y="262.61554"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.264583">m</tspan></text>
     <g
        id="g5060-7"
        transform="rotate(180,81.67371,216.37759)"
@@ -9730,8 +9730,8 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;line-height:1.25;font-family:Amiri;-inkscape-font-specification:Amiri;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="28.257236"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Amiri;-inkscape-font-specification:Amiri;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="28.854897"
        y="269.23972"
        id="text5083-7"
        inkscape:export-filename="spring_mass_model_with_point_mass.png"
@@ -9739,9 +9739,9 @@
        inkscape:export-ydpi="300"><tspan
          sodipodi:role="line"
          id="tspan5081-4"
-         x="28.257236"
+         x="28.854897"
          y="269.23972"
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.264583">k</tspan></text>
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.264583">k</tspan></text>
     <circle
        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26499999;stroke-miterlimit:4;stroke-dasharray:0.52999997, 0.26499998;stroke-dashoffset:0;stroke-opacity:1"
        id="path309"
@@ -9824,9 +9824,9 @@
        inkscape:export-ydpi="300" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="52.546268"
-       y="251.93652"
+       y="252.08829"
        id="text1497"
        inkscape:export-filename="spring_mass_model_with_point_mass.png"
        inkscape:export-xdpi="300"
@@ -9834,8 +9834,8 @@
          sodipodi:role="line"
          id="tspan1495"
          x="52.546268"
-         y="251.93652"
-         style="font-style:italic;stroke-width:0.264583">x</tspan></text>
+         y="252.08829"
+         style="font-style:italic;font-size:4.23333px;stroke-width:0.264583">x</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
