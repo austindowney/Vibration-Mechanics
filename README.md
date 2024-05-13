@@ -15,7 +15,7 @@ A current PDF version of the text can be found in the releases tab of the GitHub
 Videos of lectures associated with this text are available as a YouTube playlist <a href="https://www.youtube.com/playlist?list=PL-2wJog-EC58uXz1LhpNRmV8nCEvyvoVS">here</a>.
 
 <p align="center">
-<a href="https://www.youtube.com/playlist?list=PL-2wJog-EC58uXz1LhpNRmV8nCEvyvoVS""><img src="media/youtube_video_screenshot.jpg" alt="Screenshot of the video lecture" width="500"></a>  
+<a href="https://www.youtube.com/playlist?list=PL-2wJog-EC58uXz1LhpNRmV8nCEvyvoVS""><img src="media/youtube_video_screenshot.jpg" alt="Screenshot of the video lecture" width="450"></a>  
 </p>
 <p align="center"> Screenshot of the video lecture that accompanies this repository which can be found <a href="https://www.youtube.com/playlist?list=PL-2wJog-EC58uXz1LhpNRmV8nCEvyvoVS">here</a>.  </p>
 
