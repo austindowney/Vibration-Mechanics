@@ -5,18 +5,19 @@ An open-source textbook intended to cover the basics of mechanical vibrations. T
 <p align="center">
 <img src="figures/Martin_B-57_Canberra.png" alt="drawing" width="700"/>
 </p>
-<p align="center">
-</p>
+<p align="center"> Cover image for the text.  </p>
 
 A current PDF version of the text can be found in the releases tab of the GitHub page or by clicking <a href="https://github.com/austindowney/Open-Vibrations/blob/main/Open_Vibrations.pdf">here</a>.
 
 
-## Lectures
+## Accompanying Video Lecture
 
 Videos of lectures associated with this text are available as a YouTube playlist <a href="https://www.youtube.com/playlist?list=PL-2wJog-EC58uXz1LhpNRmV8nCEvyvoVS">here</a>.
 
-
-
+<p align="center">
+<a href="https://www.youtube.com/playlist?list=PL-2wJog-EC58uXz1LhpNRmV8nCEvyvoVS""><img src="media/youtube_video_screenshot.jpg" alt="Screenshot of the video lecture" width="500"></a>  
+</p>
+<p align="center"> Screenshot of the video lecture that accompanies this repository which can be found [here](https://www.youtube.com/playlist?list=PL-2wJog-EC58uXz1LhpNRmV8nCEvyvoVS).  </p>
 
 ## License
 
