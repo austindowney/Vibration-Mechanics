@@ -17,7 +17,7 @@ Videos of lectures associated with this text are available as a YouTube playlist
 <p align="center">
 <a href="https://www.youtube.com/playlist?list=PL-2wJog-EC58uXz1LhpNRmV8nCEvyvoVS""><img src="media/youtube_video_screenshot.jpg" alt="Screenshot of the video lecture" width="500"></a>  
 </p>
-<p align="center"> Screenshot of the video lecture that accompanies this repository which can be found [here](https://www.youtube.com/playlist?list=PL-2wJog-EC58uXz1LhpNRmV8nCEvyvoVS).  </p>
+<p align="center"> Screenshot of the video lecture that accompanies this repository which can be found <a href="https://www.youtube.com/playlist?list=PL-2wJog-EC58uXz1LhpNRmV8nCEvyvoVS">here</a>.  </p>
 
 ## License
 
