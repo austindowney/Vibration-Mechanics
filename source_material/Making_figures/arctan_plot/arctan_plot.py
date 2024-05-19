@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import IPython as IP
-IP.get_ipython().magic('reset -sf')
+IP.get_ipython().run_line_magic('reset', '-sf')
 
 #%% import modules and set default fonts and colors
 
