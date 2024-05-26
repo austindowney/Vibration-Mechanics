@@ -73,6 +73,7 @@
 		\item Active Vibration Control	
 	\end{itemize}
 	
+\pagebreak
 	\begin{vibration_case_study}
 		\textbf{Modal Testing}
 		
@@ -105,10 +106,10 @@
 	
 	
 	
-	\subsection{Modeling Undamped Two Degree of Freedom Systems}
+	\subsection{Modeling Undamped Two- Degree-of-Freedom Systems}
 	\label{sec:two_degree_of_freedom}
 	
-	Consider the undamped 2-DOF systems presented in figure \ref{fig:2-DOF-spring_mass_examples}. This system with a single mass capable of moving in two directions. To expand, figure \ref{fig:2-DOF-spring_mass_examples}(a) reports a mass that can move horizontally or vertically in space. However, this mass does not rotate during its movements. Moreover, figure \ref{fig:2-DOF-spring_mass_examples}(b) presents a system that rotates about the spring and displaces vertically. These are examples of 2 DOF systems because each system has two independent coordinate systems that express the movement of the mass. 
+	Consider the undamped 2-DOF systems presented in figure~\ref{fig:2-DOF-spring_mass_examples}. This system with a single mass capable of moving in two directions. To expand, figure~\ref{fig:2-DOF-spring_mass_examples}(a) reports a mass that can move horizontally or vertically in space. However, this mass does not rotate during its movements. Moreover, figure~\ref{fig:2-DOF-spring_mass_examples}(b) presents a system that rotates about the spring and displaces vertically. These are examples of 2 DOF systems because each system has two independent coordinate systems that express the movement of the mass. 
 	
 	\begin{figure}[H]
 		\centering
@@ -117,7 +118,7 @@
 		\label{fig:2-DOF-spring_mass_examples}
 	\end{figure}
 	
-	Another example of a 2-DOF system with two masses, each with their own independent coordinate system, is presented in figure \ref{fig:2-DOF-spring_mass_horizontal}. The two coordinates that describe the system's movements are $x_1$ and $x_2$.
+	Another example of a 2-DOF system with two masses, each with their own independent coordinate system, is presented in figure~\ref{fig:2-DOF-spring_mass_horizontal}. The two coordinates that describe the system's movements are $x_1$ and $x_2$.
 	
 	\begin{figure}[H]
 		\centering
@@ -126,8 +127,8 @@
 		\label{fig:2-DOF-spring_mass_horizontal}
 	\end{figure}
 	
-	\subsubsection{Solution for the Two-Degree-of-Freedom System}
-	Before we derive a model for undamped 2-DOF systems, let us first consider the solution to the system shown in figure \ref{fig:2-DOF-spring_mass_horizontal}. The solution consists of two equations, one for each mass. This solution will be derived in section \ref{sec:2-DOF_derive_solution} and is expressed by the coupled equations:
+	\subsubsection{Solution for Two-Degree-of-Freedom Systems}
+	Before we derive a model for undamped 2-DOF systems, let us first consider the solution to the system shown in figure~\ref{fig:2-DOF-spring_mass_horizontal}. The solution consists of two equations, one for each mass. This solution will be derived in section \ref{sec:2-DOF_derive_solution} and is expressed by the coupled equations:
 	\begin{equation}
 		x_1(t) = A_1 \sin (\omega_1 t + \phi_1 )u_{11}+ A_2 \sin (\omega_2 t + \phi_2 )u_{12} \hspace{3.35cm} 
 	\end{equation}
@@ -151,13 +152,13 @@
 	\item $\vec{u}_1$ and $\vec{u}_2$ are the first and second mode shapes of the system and couple the system together.
 	\end{enumerate}
 	
-	\subsubsection{Deriving the Solution for the Two-Degree-of-Freedom System}
+	\subsubsection{Deriving the Solution for Two-Degree-of-Freedom Systems}
 	\label{sec:2-DOF_derive_solution}
-	To derive this solution for the system under consideration an FBD for figure \ref{fig:2-DOF-spring_mass_horizontal} can be constructed for the forces acting on each mass. First we have to make the assumption that $x_1 < x_2$, this allows us to say that $m_2$ pulls on $m_1$ and results in:
+	To derive this solution for the system under consideration an FBD for figure~\ref{fig:2-DOF-spring_mass_horizontal} can be constructed for the forces acting on each mass. First we have to make the assumption that $x_1 < x_2$, this allows us to say that $m_2$ pulls on $m_1$ and results figure~\ref{fig:2-DOF-spring_mass_horizontal_FBD}.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[]{../figures/2-DOF-spring_mass_horizontal_FBD.png}
-		\caption{Free body diagram for the 2-DOF system presented in figure \ref{fig:2-DOF-spring_mass_horizontal}.}
+		\caption{Free body diagram for the 2-DOF system presented in figure~\ref{fig:2-DOF-spring_mass_horizontal}.}
 		\label{fig:2-DOF-spring_mass_horizontal_FBD}
 	\end{figure}
 	\noindent Applying Newton's second law and summing the forces on each mass in the horizontal direction yields:
@@ -467,7 +468,7 @@
 
 	\textbf{Plotting Mode Shapes}
 
-	\noindent Mode shapes can be better understood through a graphical representation. To do this, consider the 2-DOF system presented in figure \ref{fig:2-DOF-spring_mass_vertical}(a). Assuming that $x_1<x_2$ the FBD for the system is expressed in figure \ref{fig:2-DOF-spring_mass_vertical}(b).
+	\noindent Mode shapes can be better understood through a graphical representation. To do this, consider the 2-DOF system presented in figure~\ref{fig:2-DOF-spring_mass_vertical}(a). Assuming that $x_1<x_2$ the FBD for the system is expressed in figure~\ref{fig:2-DOF-spring_mass_vertical}(b).
 	
 	\begin{figure}[H]
 		\centering
@@ -513,12 +514,12 @@
 	\begin{equation}
 		 \vec{u}_1 = \begin{bmatrix} u_{11} \\ u_{21} \end{bmatrix} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}\text{ and } \vec{u}_2 = \begin{bmatrix} u_{12} \\ u_{22} \end{bmatrix}  = \begin{bmatrix} 1 \\ -1 \end{bmatrix} 
 	\end{equation}
-	The displacement of the masses as a function of time and the general mode shape plots are graphically represented in figure \ref{fig:2-DOF_mode_shape}. In the 2-DOF system considered here, the second mode shape has a spot at the center of the middle spring that does not move (i.e. has zero displacement). This point is called a node. Nodes correspond to points in the mode shape where the displacement is always zero. Furthermore, the displacement of the node points remain zero at all times, as diagrammed in the top-right of figure \ref{fig:2-DOF_mode_shape}.
+	The displacement of the masses as a function of time and the general mode shape plots are graphically represented in figure~\ref{fig:2-DOF_mode_shape}. In the 2-DOF system considered here, the second mode shape has a spot at the center of the middle spring that does not move (i.e. has zero displacement). This point is called a node. Nodes correspond to points in the mode shape where the displacement is always zero. Furthermore, the displacement of the node points remain zero at all times, as diagrammed in the top-right of figure~\ref{fig:2-DOF_mode_shape}.
 	
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=\linewidth]{../figures/2-DOF_mode_shape.png}
-		\caption{Modes of vibration for the system shown in figure \ref{fig:2-DOF-spring_mass_vertical} showing the: (a) first mode; and (b) second mode.}
+		\caption{Modes of vibration for the system shown in figure~\ref{fig:2-DOF-spring_mass_vertical} showing the: (a) first mode; and (b) second mode.}
 		\label{fig:2-DOF_mode_shape}
 	\end{figure}
 	\end{example}
@@ -528,12 +529,7 @@
 	\subsection{Explicit method for Solving 2-DOF Systems}
 	
 	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[]{../figures/2-DOF-spring_mass_dashpot_horizontal_forced_double_wall.png}
-		\caption{Forced 2-DOF damped system showing: (a) system, and; (b) FBD.}
-		\label{fig:2-DOF-spring_mass_dashpot_horizontal_double_wall}
-	\end{figure}
+
 	
 	
 	As before, we can use explicit methods for solving multiple degree of freedom problems. 
@@ -569,6 +565,13 @@
 	\right| \\
 	= [m_2 s^2 X_2(s) + (c_2 + c_3)s +(k_2+k_3)]F_1(s) + (c_2s+k_2)F_2(s)  \nonumber
 	\end{eqnarray}
+
+	\begin{figure}[tp]
+		\centering
+		\includegraphics[]{../figures/2-DOF-spring_mass_dashpot_horizontal_forced_double_wall.png}
+		\caption{Forced 2-DOF damped system showing: (a) system, and; (b) FBD.}
+		\label{fig:2-DOF-spring_mass_dashpot_horizontal_double_wall}
+	\end{figure}
 	
 	\begin{eqnarray}
 	D_2 = \left|
@@ -1429,6 +1432,7 @@ u_2 = M_inv_sqr*v(:,2)
 	
 	\end{example}
 	
+\pagebreak
 		\subsection{Numerical Methods}
 		
 			Numerical methods can be used to solve the response of multi-degree of freedom system subjected to forced vibrations. While not the most computationally efficient method, the EOM is an ODE that can be solved directly while considering the initial directions to obtain the response of the system. 

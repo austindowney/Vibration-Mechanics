@@ -598,6 +598,10 @@
 			\label{fig:rubber_engine_mount}
 		\end{figure}
 
+		\pagebreak
+
+		\subsubsection{Damping Cases}
+
 		Depending on the amount of damping present in a system, the temporal response of the system will represent itself in various ways, as represented in figure \ref{fig:damping_cases}. To reiterate, an undamped case will oscillate around the equilibrium and does not decay. If a limited amount of damping is present in a system it will oscillate around the equilibrium and slowly decay with time to the equilibrium position, this is termed underdamped. If an excessive amount of damping is present, the system will not oscillate but decay directly to the equilibrium position, this is termed the overdamped case. Lastly, there exists a special case that results in the system converging as quickly as possible to the equilibrium position without oscillations; this case is termed the critically damped case. Furthermore, the amount of damping required to obtain a critically damped system is the damping value between the underdamped and overdamped cases for a specific system. To recap, the key types of damping are:
 		
 		\begin{itemize}
@@ -629,7 +633,7 @@
 		\end{figure}		
 		\end{vibration_case_study}
 			
-		\subsubsection{Modeling Vibrating Systems with Damping}
+		\subsubsection{Modeling Systems with Damping}
 				
 			The spring-mass system of Chapter 1 can be expanded to a spring-dashpot-mass system that considers the damping component of the system. A mathematical model of the spring-dashpot-mass system can be developed for the case present in figure \ref{fig:1-DOF-mass_horizontal_damping_FBD}. Using the FBD for the system, it can conclude that the EOM for this system:
 			\begin{figure}[H]
@@ -881,6 +885,8 @@
 			As $0<\zeta<1$ the system is underdamped. 			
 		\end{example}
 
+		\pagebreak
+
 		\begin{example}
 
 			\noindent \textbf{Off Orthogonal Stiffness} 
@@ -942,6 +948,8 @@
 			\end{equation*}
 		\end{example}	
 
+		\pagebreak
+
 	
 		\begin{vibration_case_study}
 			
@@ -976,7 +984,7 @@
 				a_1 &= \frac{-v_0+\Big(-\zeta+\sqrt{\zeta^2-1}\Big)\omega_\text{n} x_0}{2\omega_\text{n}\sqrt{\zeta^2-1}} \\ 
 				a_2 &= \frac{v_0+\Big(\zeta+\sqrt{\zeta^2-1}\Big)\omega_\text{n} x_0}{2\omega_\text{n}\sqrt{\zeta^2-1}}
 			\end{align}				
-			Typical responses for an overdamped system with various initial conditions are shown below in figure~\ref{fig:Over_damped_various_initial_conditions}.
+			Typical responses for an overdamped system with various initial conditions are shown in figure~\ref{fig:Over_damped_various_initial_conditions}.
 			\begin{figure}[H]
 				\centering
 				\includegraphics[]{../figures/Over_damped_various_initial_conditions.png}
@@ -1008,6 +1016,7 @@
 				a_2 &= v_0+\omega_\text{n}x_0
 			\end{align}				
 
+		\pagebreak
 
 		\subsubsection{Standard Form of the EOM}
 			
@@ -1110,14 +1119,14 @@
 			\begin{equation}
 				\zeta = \frac{c}{c_{\text{cr}}} = \frac{c}{2\sqrt{km}} = \frac{c}{2m\omega_\text{n}}
 			\end{equation}				
-			if we calculate $\zeta$, we can obtain $c$ for the system of interest. This is made possible because $c_\text{cr}$ can be calculated from $k$ and $m$. Observing the temporal response for the underdamped system, 
+			if we calculate $\zeta$, we can obtain $c$ for the system of interest. This is made possible because $c_\text{cr}$ can be calculated from $k$ and $m$.  
 			\begin{figure}[H]
 				\centering
 				\includegraphics[]{../figures/Logarithmic_decrement.png}
 				\caption{Measuring the peak displacement points in an experimental system with decay caused by damping.}
 			\end{figure}
 			
-			\noindent we mark three points of maximum amplitude, $x_1$, $x_2$, and $x_3$ that happen at $t_1$, $t_2$, and $t_3$, respectively. Considering displacement values for the first two points $x_1$ and $x_2$, separated by a complete period ($T$).  Knowing that one cycle is $2 \pi$, the time period for this complete cycle is given by:
+			Observing the temporal response for the underdamped system, we mark three points of maximum amplitude, $x_1$, $x_2$, and $x_3$ that happen at $t_1$, $t_2$, and $t_3$, respectively. Considering displacement values for the first two points $x_1$ and $x_2$, separated by a complete period ($T$).  Knowing that one cycle is $2 \pi$, the time period for this complete cycle is given by:
 			\begin{equation}
 				t_2-t_1 = \frac{2\pi}{\omega_\text{d}} = \frac{2\pi}{\omega_\text{n}\sqrt{1-\zeta^2}}
 			\end{equation}				
@@ -1125,6 +1134,9 @@
 			\begin{equation}
 				x_{\text{peaks}} = Ae^{-\zeta\omega_\text{n}t} 
 			\end{equation} 		
+
+			\pagebreak
+			
 			Knowing that the system is underdamped, $A$ can be solved for using the initial conditions $x_0$ and $v_0$, therefore: 
 			\begin{equation}
 				A = \frac{\sqrt{(v_0+\zeta\omega_\text{n}x_0)^2 + (x_0\omega_\text{d})^2}}{\omega_\text{d}}
@@ -1149,6 +1161,7 @@
 			\begin{equation}
 				\delta = \text{ln}\bigg(\frac{x_{\text{1}}}{x_{\text{2}}}\bigg) = \text{ln}\bigg(\frac{x(t_{\text{1}})}{x(t_{\text{1}}+T)}\bigg) = \frac{2 \pi \zeta}{\sqrt{1-\zeta^2}}
 			\end{equation}				
+			
 			This shows us that the ratio of any two successive amplitudes for an underdamped system, vibrating freely, is constant and is a function of the damping only. Sometimes, in experiments, it is more convenient/accurate to measure the amplitudes after say ``$n$'' peaks rather than two successive peaks (because if the damping is very small, the difference between the successive
 			peaks may not be significant). The logarithmic decrement can then be given by the equation
 			\begin{equation}
@@ -1166,6 +1179,8 @@
 			\begin{equation}
 				c = \zeta 2\sqrt{km}
 			\end{equation}					
+
+		\pagebreak
 
 			\begin{example}
 			\textbf{Experimentally Measuring System Damping}
@@ -1196,7 +1211,7 @@
 
 			\end{example}
 
-	
+		\pagebreak	
 			\begin{example}
 			
 			\textbf{Calculating Damping Coefficient}
