@@ -5,7 +5,6 @@ An open-source textbook intended to cover the basics of mechanical vibrations. T
 <p align="center">
 <img src="source_material/figures/Martin_B-57_Canberra.png" alt="drawing" width="700"/>
 </p>
-<p align="center"> Cover image for the text.  </p>
 
 A current PDF version of the text can be found in the releases tab of the GitHub page or by clicking <a href="https://github.com/austindowney/Open-Vibrations/blob/main/Open_Vibrations.pdf">here</a>.
 
