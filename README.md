@@ -3,7 +3,7 @@ An open-source textbook intended to cover the basics of mechanical vibrations. T
 
 
 <p align="center">
-<img src="figures/Martin_B-57_Canberra.png" alt="drawing" width="700"/>
+<img src="source_material/figures/Martin_B-57_Canberra.png" alt="drawing" width="700"/>
 </p>
 <p align="center"> Cover image for the text.  </p>
 
