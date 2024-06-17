@@ -1,14 +1,22 @@
-# Machine Learning for Engineering Problem Solving
-A free text focused on introducing classical machine learning techniques using the scikit-learn library designed for engineers with limited to no programming experience.
+# Open Vibrations
+An open-source textbook intended to cover the basics of mechanical vibrations. This text is intended to function as the only text required for a college (undergraduate) class on vibrations. 
 
 
 <p align="center">
-<img src="source_material/figures/x_y_plot_linear_classifier.png" alt="drawing" width="300"/>
+<img src="source_material/figures/Martin_B-57_Canberra.png" alt="drawing" width="700"/>
 </p>
 
 A current PDF version of the text can be found in the releases tab of the GitHub page or by clicking <a href="https://github.com/austindowney/Open-Vibrations/blob/main/Open_Vibrations.pdf">here</a>.
 
 
+## Accompanying Video Lectures
+
+Videos of lectures associated with this text are available as a YouTube playlist <a href="https://www.youtube.com/playlist?list=PL-2wJog-EC58uXz1LhpNRmV8nCEvyvoVS">here</a>.
+
+<p align="center">
+<a href="https://www.youtube.com/playlist?list=PL-2wJog-EC58uXz1LhpNRmV8nCEvyvoVS""><img src="media/youtube_video_screenshot.jpg" alt="Screenshot of the video lecture" width="450"></a>  
+</p>
+<p align="center"> Screenshot of the video lecture that accompanies this repository which can be found <a href="https://www.youtube.com/playlist?list=PL-2wJog-EC58uXz1LhpNRmV8nCEvyvoVS">here</a>.  </p>
 
 ## License
 
@@ -20,10 +28,10 @@ This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 Intern
 ## Citation
 
 Cite as  
-@Misc{DowneyMachineLearningEngineering,  
-  author = {Austin Downey},  
-  title  = {Machine Learning for Engineering Problem Solving},  
-  url    = {https://github.com/austindowney/Machine-Learning-for-Engineering-Problem-Solving},  
+@Misc{DowneyOpenVibrations,  
+  author = {Austin Downey and Laura Micheli},  
+  title  = {Open Vibrations},  
+  url    = {https://github.com/austindowney/Open-Vibrations},  
 }  
 
 
