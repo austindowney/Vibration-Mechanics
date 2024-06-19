@@ -80,7 +80,7 @@
 	\begin{equation}
 		x(t) = A\text{sin}(\omega_n t + \phi) + X\text{cos}(\omega t) 
 	\end{equation}				
-	This approach, of assuming that $x_p=X\text{cos}(\omega t)$, in order to determine the particular solution is called the \textbf{method of undetermined coefficients}. To calculate $X$, first we take the equations for $x_p$ and $\ddot{x}_p $:
+	This approach, of assuming that $x_p=X\text{cos}(\omega t)$, in order to determine the particular solution is called the \emph{method of undetermined coefficients}. To calculate $X$, first we take the equations for $x_p$ and $\ddot{x}_p $:
 	\begin{equation}
 		x_p = X\text{cos}(\omega t)
 	\end{equation}	
@@ -204,6 +204,7 @@
 		\caption{Temporal response of a system in resonance showing the enveloped maximum amplitude of displacement.}
 	\end{figure}				
 
+\pagebreak
 \begin{example}
 
 	\textbf{Homogeneous and Particular Solution}
@@ -467,6 +468,7 @@ B_s
 		x(t) = Ae^{-\zeta \omega_n t}\text{sin}(\omega_d t + \phi) +  X \text{cos}(\omega t - \phi_p)
 	\end{equation}				
 	
+	\pagebreak
 	\begin{note}
 	For larger values of $t$, the homogeneous solution approaches zero resulting in the particular solution becoming the total solution. Therefore, the particular solution is sometimes called the steady-state response, and the homogeneous solution is called the transient response. 
 	\end{note}
@@ -650,7 +652,7 @@ B_s
 	\noindent \textbf{Solution:}
 
 	\noindent 
-	From before, we know the solution for the displacement of the particular solution for $\omega$=132~rad/sec is:
+	From before, we know the solution for the system's displacement of the particular solution for $\omega$=132~rad/sec is:
 	\begin{equation}
 		X = \frac{f_0}{\sqrt{(\omega_n^2 - \omega^2)^2 +  (2\zeta \omega_n \omega)^2}} = \frac{10}{2(0.0085)(132)^2} = 0.034 \text{ m}
 	\end{equation}							
@@ -771,7 +773,7 @@ B_s
 				
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=1\textwidth]{../figures/Italy_2016_earthquake_1}
+		\includegraphics[width=5.7in]{../figures/Italy_2016_earthquake_1}
 		\caption{The town center of Amatrice Italy after the August 24\textsuperscript{th} 2016 earthquake that measured 6.2  on the moment magnitude scale; note that the bell tower (lower natural frequency) is still standing while shorter stiffer structures (higher natural frequency) have suffered extensive damage.\protect\footnotemark[1] }
 		\label{fig:Italy_2016_earthquake_1}
 	\end{figure}
@@ -791,7 +793,7 @@ B_s
 	\footnotetext[3]{Austin R.J. Downey, CC BY-SA 3.0 <https://creativecommons.org/licenses/by/3.0>} 		
 										
 \end{vibration_case_study}
-
+\pagebreak
 
 	\subsubsection{Displacement Transmissibility Solution for Base Excitation}
 		The steady-state solution is often more important than the transient solution when designing systems for continuous use. The particular solution for the base excited system annotated in figure \ref{fig:1_DOF_spring_dashpot_mass_vertical_base_excited_FBD} with the EOM presented in equation \ref{eq:standard_form_base_excitation_CD} can be expressed as $	x_p(t)$. To solve for this expression we will use the linearity of the system and solve for a solution that is the sum of two particular solutions. Resulting in:
@@ -860,7 +862,7 @@ B_s
 		Plotting this for several critical damping ratios:
 		\begin{figure}[H]
 			\centering
-			\includegraphics[]{../figures/base_excitation_displacement_transmissibility}
+			\includegraphics[width=6.2in]{../figures/base_excitation_displacement_transmissibility}
 			\caption{Displacement transmissibility for an underdamped 1-DOF system.}
 		\end{figure}
 		Around resonance, the maximum amount of displacement is transmitted to the mass. Additionally,  the above plot shows that at $r=\sqrt{2}$ the displacement transmissibility $X/Y$ is 1. Note the ``flip'' where overdamped systems have a greater response to excitations after $r=\sqrt{2}$ than do underdamped systems.
@@ -987,13 +989,15 @@ B_s
 			\noindent  We can plot the transmissibility of both the force and displacement onto one plot. For $\zeta=0.1$
 			\begin{figure}[H]
 				\centering
-				\includegraphics[]{../figures/base_excitation_force_and_displacement_transmissibility_1.png}
+				\includegraphics[width=5.8in]{../figures/base_excitation_force_and_displacement_transmissibility_1.png}
+				\vspace{-1.5ex}
 				\caption{Force and displacement transmissibility for the considered base excited system with $\zeta=0.1$.}
 			\end{figure}
 			\noindent it is clear that to minimize the force, the system should be driven with a frequency below the natural frequency. Next for  $\zeta=2$:
 			\begin{figure}[H]
 				\centering
-				\includegraphics[]{../figures/base_excitation_force_and_displacement_transmissibility_2.png}
+				\includegraphics[width=5.8in]{../figures/base_excitation_force_and_displacement_transmissibility_2.png}
+				\vspace{-1.5ex}
 				\caption{Force and displacement transmissibility for the considered base excited system with $\zeta=2$.}
 			\end{figure}
 			\noindent it can be seen that the same rationale applies. Therefore, for both $\zeta=0.1$ and $\zeta=2$ the system should be excited below the natural frequency.

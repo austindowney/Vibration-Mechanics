@@ -180,7 +180,7 @@
 		
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=2.71in]{../figures/Pierre-Simon_de_Laplace.jpg}
+		\includegraphics[width=2.61in]{../figures/Pierre-Simon_de_Laplace.jpg}
 		\caption{Portrait of Pierre-Simon Laplace by Johann Ernst Heinsius (1775).\protect\footnotemark[1] }
 		\label{fig:fragility_curve}
 	\end{figure}
@@ -235,7 +235,9 @@ x(t) = \frac{1}{m \omega_n}\text{sin}(\omega_n t)
 Below is a typical response for both an undamped and underdamped 1-DOF system subject to an impulse response at $t=0$ seconds. 
 \begin{figure}[H]
 	\centering
-	\includegraphics[]{../figures/response_impulse.png}
+	\vspace{-2ex}
+	\includegraphics[width=5.8in]{../figures/response_impulse.png}
+	\vspace{-3ex}
 	\caption{Temporal responses from underdamped and undamped 1-DOF systems to an impulse response function.}
 \end{figure}
 
@@ -382,7 +384,7 @@ Note that the transient displacement of the truck bed is twice that of the stead
 
 \label{sec:impulse_inputs}
 
-The time-domain response of a system to an arbitrary input force in time can be calculated using a series of impulses as shown in figure \ref{fig:Arbitary_excitation_forces}. This method allows the practitioner to easily calculate the response of an arbitrary input to a system using a single expression executed in a ``for loop''. This type of analysis is often more efficient in terms of programming than more direct methods. 
+The time-domain response of a system to an arbitrary input force in time can be calculated using a series of impulses as shown in figure~\ref{fig:Arbitary_excitation_forces}. This method allows the practitioner to easily calculate the response of an arbitrary input to a system using a single expression executed in a ``for loop''. This type of analysis is often more efficient in terms of programming than more direct methods. 
 
 \begin{figure}[H]
 	\centering
@@ -398,7 +400,7 @@ g(t) = x(t) =\frac{1}{m \omega_d} e^{-\zeta \omega_n t} \text{sin}(\omega_dt)
 \end{equation}
 be re-defining $x(t)$ as $g(t)$ we reserve the use of $x(t)$ for the final solution.
 
-From figure \ref{fig:Arbitary_excitation_forces}, we can assume that at time $\tau$ a force defined as $F(\tau)$ acts on the system for a time $\Delta \tau$. Therefore, the impulse acting at time $t$ is $F(\tau) \Delta \tau$.
+From figure~\ref{fig:Arbitary_excitation_forces}, we can assume that at time $\tau$ a force defined as $F(\tau)$ acts on the system for a time $\Delta \tau$. Therefore, the impulse acting at time $t$ is $F(\tau) \Delta \tau$.
 At any time in the future after the impulse that is applied at time $\tau$, the time elapsed is $t - \tau$. Therefore, the response at any time $t$ of the impulse event is found using equation~\ref{eq:g_impulse_load_damped} and is written as $g(t-\tau$). As the impulse for this special case happens at $t=\tau$ instead of the traditional $t=0$, the unit impulse response at any time $t-\tau$ can be expressed as
 \begin{equation}
 g(t-\tau) = \frac{1}{m \omega_d} e^{-\zeta \omega_n (t-\tau)} \text{sin}\big(\omega_d (t-\tau)\big), \;  t \ge \tau
@@ -424,7 +426,7 @@ The integral in equation~\ref{eq:Duhamel_1} is called a convolutional integral w
 \end{equation}
 Again, this represents the total system response (without initial conditions) for an arbitrary excitation $F(t)$.  These equations are called the \textit{Duhamel} integral. In many cases, the function $F(t)$ allows for explicit integration of equations~\ref{eq:Duhamel_1} and \ref{eq:Duhamel_2}. However, numerical evaluation using a piece-wise equation made up of equation~\ref{eq:g_of_t_minus_tau} is always possible and many times easier given the simplicity of coding. 
 
-
+\pagebreak
 
 \begin{example}
 \label{example:Double_Hammer_Impact}
@@ -645,7 +647,7 @@ where $H(\omega)$ represents only the amplitude of the frequency response functi
 
 %This has been a point of major debate for myself. My current stance is Inman drops the j term for convenience as he has it with and without in his text, and I can't seem to fully understand why it's dropped. 
 
-% Inman 2nd example 5.5.1 has the frequency response function as just $H(\omega)$ I don't know if $H(\omega)$ is standard, as Inman seems to just jump around. }
+% Inman 2nd example 5.5.1 has the frequency response function as just $H(\omega)$ I don't know if $H(\omega)$ is standard, as Inman seems to jump around. }
 
 % Rao 5th in equation 3.55 expresses the "H(i\omega) as the complex frequency response of the system. The absolute value of H(i\omega) given by |H(i\omega)|". As a side note, I like Rao's Figure 3.13. That is super cool!
 
@@ -655,6 +657,8 @@ where $H(\omega)$ represents only the amplitude of the frequency response functi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagebreak
 
 \begin{review}
 	
@@ -673,7 +677,7 @@ where $H(\omega)$ represents only the amplitude of the frequency response functi
 	H(\omega) = |H(j\omega)| = \frac{1}{\sqrt{(k-m\omega^2)^2+c^2\omega^2}}
 	\end{eqnarray}
 \end{review}
-
+			\vspace{-2ex}
 \begin{example}
 
 
@@ -683,11 +687,12 @@ where $H(\omega)$ represents only the amplitude of the frequency response functi
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.4\textwidth]{../figures/1-DOF-spring_dashpot_mass_horizontal_forced.png}
+		\vspace{-2ex}
 		\caption{A spring-dashpot-mass model of a 1-DOF system with external excitation.}
 		\label{fig:1-DOF-spring_dashpot_mass_horizontal_forced}
 	\end{figure}
 
-	
+			\vspace{-2ex}	
 	\noindent\textbf{Solution:}
 
 	\noindent The equation of motion for the system is:
@@ -721,6 +726,7 @@ where $H(\omega)$ represents only the amplitude of the frequency response functi
 	This is identical to the solution obtained using $F_0 \cos(\omega t)$ as would be expected because the transfer function is related to the system and not to the input. 
 \end{example}  
 
+	\vspace{-2ex}
 
 \begin{review}
 	\label{sec:TimeFrequencySpectrum}
@@ -731,13 +737,16 @@ where $H(\omega)$ represents only the amplitude of the frequency response functi
 
 		\begin{figure}[H]
 			\centering
-			\includegraphics[width=6in]{../figures/3D_time_frequency_analysis}
+			\vspace{-1ex}
+			\includegraphics[width=6.0in]{../figures/3D_time_frequency_analysis}
+			\vspace{-2ex}
 			\caption{3D visualization of time and frequency domains where a temporal signal is decomposed into constituent sinusoidal signals.}
 			\label{fig:3D_time_frequency_analysis}
 		\end{figure}
 
 \end{review}
 
+\pagebreak
 \subsubsection{Response to Random Inputs}
 The transfer and frequency response functions can be very useful for determining the system's response to random inputs. Up to this point, we have solved for deterministic input. 
 
@@ -750,7 +759,7 @@ To expand, a random signal is a signal with no obvious pattern. For these types 
 
 Randomness in vibration analysis can be thought of as the result of a series of results obtained from testing a system's repeatability for various inputs under varying conditions. In these cases, one record or time history is not enough to describe the system. Rather, an ensemble of various tests are used to describe how the system will respond to the various inputs. 
 
-First, let us consider two inputs, a deterministic input (typical sin wave), and a random input (white noise). These inputs are shown in figure \ref{fig:Response_to_random_input_inputs}. 
+First, let us consider two inputs, a deterministic input (typical sin wave), and a random input (white noise). These inputs are shown in figure~\ref{fig:Response_to_random_input_inputs}. 
 
 \begin{figure}[H]
 	\centering
@@ -787,12 +796,15 @@ Considering a nonstationary signal, an important measure of interest is how fast
 R_{xx}(\tau) = \lim\limits_{T \rightarrow \infty} \frac{1}{T} \int_{0}^{T}x(t)x(t+\tau)dt
 \end{equation}
 The subscript $xx$ denotes that this is a measure of the response for the variable $xx$. $\tau$ is the time difference between the values at which the signal $x(t)$ is sampled and is different than the $\tau$ defined in section~\ref{sec:impulse_inputs}. The autocorrelation for the two inputs considered above is shown in figure~\ref{fig:Response_to_random_input_autocorrelation}.
+			\vspace{-1ex}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=6.5in]{../figures/Response_to_random_input_autocorrelation}
-	\caption{Responses from the autocorrelation function for the inputs shown in figure \ref{fig:Response_to_random_input_inputs} showing: (a) a sinusoidal; and (b) uniform random noise.}
+\vspace{-3ex}
+	\caption{Responses from the autocorrelation function for the inputs shown in figure~\ref{fig:Response_to_random_input_inputs} showing: (a) a sinusoidal; and (b) uniform random noise.}
 	\label{fig:Response_to_random_input_autocorrelation}
 \end{figure} 
+\vspace{-2ex}
 
 \begin{note}
  The value of $\tau$ selected in the autocorrelation function greatly affects its response for the sinusoidal input. This is because the values for the sinusoidal are highly correlated. To expand, the value at any time $t$ is greatly affected by the values immediately before and after it. This is not the case for the random input where the signal is not correlated and therefore there is little difference in changing the value of $\tau$ on the response of the autocorrelation function.  
@@ -807,11 +819,11 @@ where the integral of $R_{xx}(\tau)$ changes the real number $\tau$ into the fre
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=6.5in]{../figures/Response_to_random_input_PSD}
-	\caption{Power spectral density plots for the inputs shown in figure \ref{fig:Response_to_random_input_inputs} showing: (a) a sinusoidal; and (b) uniform random noise.}
+	\caption{Power spectral density plots for the inputs shown in figure~\ref{fig:Response_to_random_input_inputs} showing: (a) a sinusoidal; and (b) uniform random noise.}
 	\label{fig:Response_to_random_input_PSD}
 \end{figure}
 
-The frequency spectrum for the two input cases considered are plotted in figure~\ref{fig:Response_to_random_input_PSD}. where the flat frequency response for the random input denotes that the random input is white noise input.  This flat frequency response in the frequency domain can be denoted $S_0$, such that $S_{ff}(\omega) = S_0$ or $S_{xx}(\omega) = S_0$, depending on whether the frequency spectrum of the input $(ff)$ or output  $(xx)$ is being considered. While a true white noise input would be perfectly flat, white noise is really just a theoretical concept as all real-world data will have some variation in the frequency domain as diagrammed in figure \ref{fig:Response_to_random_input_PSD}(b). 
+The frequency spectrum for the two input cases considered are plotted in figure~\ref{fig:Response_to_random_input_PSD}. where the flat frequency response for the random input denotes that the random input is white noise input.  This flat frequency response in the frequency domain can be denoted $S_0$, such that $S_{ff}(\omega) = S_0$ or $S_{xx}(\omega) = S_0$, depending on whether the frequency spectrum of the input $(ff)$ or output  $(xx)$ is being considered. While a true white noise input would be perfectly flat, white noise is really just a theoretical concept as all real-world data will have some variation in the frequency domain as diagrammed in figure~\ref{fig:Response_to_random_input_PSD}(b). 
 
 
 Recall that $S_{xx}$ is the spectrum of the response of the system. For the one-DOF system considered here, we can express the arbitrary input as a series of impulse inputs as discussed in section \ref{sec:impulse_inputs}. This knowledge, along with the frequency response function can be used to relate the spectrum of the input $S_{ff}(\omega)$ to the output through the transfer function as: 
@@ -881,6 +893,7 @@ where $R_{ff}$ denotes the autocorrelation function of $F(t)$ and $S_{ff}$ denot
 	\begin{equation}
 	S_{xx}(\omega) =  |H(j\omega)|^2 S_{0}= \frac{1}{(k-m\omega^2)^2+c^2\omega^2}S_0 = \frac{S_0}{(k-m\omega^2)^2+c^2\omega^2}
 	\end{equation}
+	\pagebreak
 	Using various values for the elements in the system, the PSD for the system considered looks like:
 	\begin{figure}[H]
 		\centering
@@ -893,7 +906,7 @@ Another useful quantity to consider is the expected output, in terms of its mean
 \begin{equation}
 E[x^2] = \overline{x^2} =   \int_{-\infty}^{\infty} |H(j\omega)|^2 S_{ff}(\omega) d\omega
 \end{equation}
-For a constant input $S_0$, as diagrammed in figure \ref{fig:Response_to_random_input_PSD}(b), the mean-square value can be expressed as:
+For a constant input $S_0$, as diagrammed in figure~\ref{fig:Response_to_random_input_PSD}(b), the mean-square value can be expressed as:
 \begin{equation}
 E[x^2] = \overline{x^2} =   S_{0} \int_{-\infty}^{\infty} |H(j\omega)|^2 d\omega
 \label{eq:variance_for_S_O}
@@ -910,6 +923,8 @@ and
 When combined with equation \ref{eq:variance_for_S_O}, these integrals allow for the easy calculation of the expected values. 
 
 \footnotetext[1]{Newland, David E. ``Random vibrations, spectral \& wavelet analysis.'' Longman Scientific \& Technical (1993).} 
+
+\pagebreak		
 
 \begin{example}
 
@@ -951,7 +966,9 @@ When combined with equation \ref{eq:variance_for_S_O}, these integrals allow for
 %	\begin{vibration_case_study}
 %		Discuss the design process using transfer functions
 %	\end{vibration_case_study}
-					
+
+
+			
 \pagebreak			
 			\pagestyle{empty}
 			\newgeometry{top=0.5in, bottom=0.5in,left=0.5in, right=0.5in}

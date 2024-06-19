@@ -40,12 +40,16 @@
 \usepackage[textsize=tiny]{todonotes}
 \usepackage[OT2, T1]{fontenc}			% added for Russian names in Cyrillic text
 \usepackage[russian, english]{babel}	% added for Russian names in Cyrillic text
-\usepackage{enumitem}					% added to reduce the space in an itemized list
-
 \usepackage{setspace}
 \usepackage[colorlinks=true]{hyperref}
 \usepackage{textcomp} 
 \usepackage{multicol} 
+
+% added to reduce the space in an itemized list a
+\usepackage{enumitem}					
+\setlist[itemize]{topsep=0ex, itemsep=0ex}
+\setlist[enumerate]{topsep=0ex, itemsep=0ex}
+\setlist[description]{topsep=0ex, itemsep=0ex}
 
 % added for MATLAB code
 \usepackage[framed]{matlab-prettifier}

@@ -26,15 +26,21 @@
 		
 			\textbf{TSR-2 and the Resonance of the Human Eye}
 
-		\noindent Why study vibrations? One day, it could save your life! The British Aircraft Corporation (BAC) TSR-2 was a strike and reconnaissance aircraft developed during the Cold War by BAC, for the Royal Air Force (RAF). 
-		
-		During the second flight test of air-frame XR219, vibration from one of the plane's fuel pumps caused vibration at the resonant frequency of the human eyeball. As you may expect, a human eye experiencing high levels of vibrations will distort, causing blindness. Test pilot Roland Beamont was blinded by the vibrations that originated in the fuel pump and transmitted to his head. Roland just happened to be an expert in vibrations and had the knowledge to throttle back one engine. This led to a reduction in the vibrations and a restoration of his full vision. 
-
+		\noindent Why study vibrations? One day, it could save your life! The British Aircraft Corporation (BAC) TSR-2 (figure~\ref{fig:TSR_2}) was a strike and reconnaissance aircraft developed during the Cold War by BAC, for the Royal Air Force (RAF).  During the second flight test of air-frame XR219, vibration from one of the plane's fuel pumps caused vibration at the resonant frequency of the human eyeball. As you may expect, a human eye experiencing high levels of vibrations will distort, causing blindness. Test pilot Roland Beamont was blinded by the vibrations that originated in the fuel pump and transmitted to his head. Roland just happened to be an expert in vibrations and had the knowledge to throttle back one engine. This led to a reduction in the vibrations and a restoration of his full vision. 
+	
 		\begin{figure}[H]
+			\vspace{-2ex}
 			\centering
-			\includegraphics[width=4in]{../figures/TSR_2.jpg}
+			\includegraphics[width=5.0in]{../figures/TSR_2.jpg}
+			\vspace{-1ex}
 			\caption{The only BAC TSR-2 prototype to fly, picture taken in 1966 at what is now BAE Warton Lancashire.\protect\footnotemark[1]}
+			\label{fig:TSR_2}
+			\vspace{-2ex}
 		\end{figure}
+	
+		
+
+
 				
 		Roland gained his expertise in vibrations during WW II. During this time he led the vibration program of the Hawker Typhoon. He fit vibrographs to airplanes to determine the effectiveness of propeller balancing. He also led the testing testing of seats with vibration isolators to limit vibrations transmitted from the airframe into the pilot. 
 
@@ -64,12 +70,8 @@
 			\item throttle (gas pedal)
 		\end{itemize}
 				
-		Variables often used for describing 1-DOF systems are $x(t)$,  $y(t)$,  $z(t)$, and  $\theta(t)$.  Examples of 1-DOF systems are presented in figure~\ref{fig:Examples_of_1DOF_systems} where the assumption of small displacements is made. 
 
-		\pagebreak
-		\begin{note}
-			We will often drop the ``$(t)$'' for simplicity in this text, such that $x$,  $y$,  $z$, and  $\theta$ become the notation for the variables of interests
-		\end{note}
+		Variables often used for describing 1-DOF systems are $x(t)$,  $y(t)$,  $z(t)$, and  $\theta(t)$.  Examples of 1-DOF systems are presented in figure~\ref{fig:Examples_of_1DOF_systems} where the assumption of small displacements is made. 
 
 		\begin{figure}[H]
 			\centering
@@ -78,13 +80,16 @@
 			\label{fig:Examples_of_1DOF_systems}
 		\end{figure}
 
-		\begin{review}
-			
-			\textbf{Assumption of Small Displacements}
 
-		\noindent The assumption of small displacements states that any displacement in a system is considerably smaller the the initial geometry of the system. This means that any 2\textsuperscript{nd}-order effects caused by displacements within the system are ignored. These 2\textsuperscript{nd}-order effects could be loads or angles at the point of linkage/spring connections. 
-		\end{review}
-	
+		\begin{note}
+			We will often drop the ``$(t)$'' for simplicity in this text, such that $x$,  $y$,  $z$, and  $\theta$ become the notation for the variables of interests
+		\end{note}
+
+
+
+
+
+
 		\subsubsection{Spring-Mass Model}
 
 
@@ -98,7 +103,14 @@
 				\label{fig:spring_mass_model_with_point_mass}
 			\end{figure}	
 
+		\begin{review}
+			
+			\textbf{Assumption of Small Displacements}
 
+		\noindent The assumption of small displacements states that any displacement in a system is considerably smaller the the initial geometry of the system. This means that any 2\textsuperscript{nd}-order effects caused by displacements within the system are ignored. These 2\textsuperscript{nd}-order effects could be loads or angles at the point of linkage/spring connections. 
+		\end{review}
+
+\pagebreak
 					
 		\subsubsection{Linear Springs}
 	
@@ -170,6 +182,7 @@
 			since the direction of the restoring force is opposite the spring displacement.
 		\end{review}
 	
+\pagebreak
 		\subsubsection{Equivalent Stiffness of Structural Systems}	
 		
             For a rod with a uniform cross-section, a direct representation of the system can be developed as expressed in figure \ref{fig:spring_and_bar_mass_vertical} where the vibration along the axis of the rod is to be considered. The stiffness of the rod, $k$, is a measure of the resistance offered by an elastic body to deformation. 
@@ -198,12 +211,14 @@
 			\begin{equation}
 				 k = \frac{EA}{l}
 			\end{equation}				
-		
-			In a similar fashion, we can also solve the equivalent system for a mass at the end of a cantilever beam.
+	
+			\pagebreak	
+			In a similar fashion, we can also solve the equivalent system for a mass at the end of a cantilever beam (figure~\ref{spring_and_bar_mass_cantilever_beam}).
 			\begin{figure}[H]
 				\centering
 				\includegraphics[]{../figures/spring_and_bar_mass_cantilever_beam.png}
 				\caption{Equivalency between a cantilever beam and a spring mass system.}
+				\label{fig:spring_and_bar_mass_cantilever_beam}
 			\end{figure}			
 			From engineering mechanics, we can compute the deflection at the point of a beam $\delta$ with a point load $P$. This expression is typically expressed as:
 			\begin{equation}
@@ -227,6 +242,7 @@
 		 			\caption{Compressed cantilever rod. }
 		 		\end{figure}	   
        
+				\pagebreak
 			    \noindent \textbf{Solution:}
 
 				 The rod shortens by a distance $x$ under the axial force $F$, this can be related to the equation of a linear spring $F=kx$ by recalling from solid mechanics that the elongation (or shortening) of a rod is expressed as 
@@ -253,7 +269,9 @@
 				\includegraphics[]{../figures/equivalent_stiffness.png}
 				\caption{Equations for calculating the equivalent stiffness of two springs ($k_1$ and $k_2$); (a) in series; and (b) in parallel.}
 			\end{figure}	
-			These are derived considering the displacement $\delta$ of the systems. For two springs in series:
+
+			\pagebreak
+			\noindent These are derived considering the displacement $\delta$ of the systems. For two springs in series:
 			\begin{figure}[H]
 				\centering
 				\includegraphics[]{../figures/equivalent_stiffness_series.png}
@@ -296,7 +314,7 @@
 			\end{equation}
 			
 
-
+			\pagebreak
 			\begin{example}
 
 			\textbf{Springs in Parallel and Series Configurations}
@@ -304,7 +322,7 @@
 			\noindent Calculate the equivalent stiffness of the following system:
 				\begin{figure}[H]
 					\centering
-					\includegraphics[]{../figures/equivalent_mass_and_spring_system_1}
+					\includegraphics[width=5.3in]{../figures/equivalent_mass_and_spring_system_1}
 					\caption{Equivalent stiffness for springs in series and parallel.}
 				\end{figure}	
 				The springs are combined as shown, using the equations defined before.  Now, considering that the displacement ($\delta$) of the top spring, and the bottom spring are the same we can state the total stiffness $k$, which is the summation of the two. Therefore,    
@@ -338,8 +356,7 @@
 			\caption{A spring-mass model of a 1-DOF system showing: (a) a schematic of the system; (b) a free-body diagram of the system at its initial position.}
 			\label{fig:EOM_1-DOF-mass_horizontal}
 		\end{figure}			
-		
-		\pagebreak
+
 		Considering that positive displacements are to the right, the standard form of the equation of motion for an undamped system without any excitation is expressed as:  
 		\begin{equation}
 			s_1 \ddot{x} + s_2 x = 0
@@ -355,6 +372,8 @@
 		\begin{equation}
 			m \ddot{x} + k x = 0
 		\end{equation}
+
+\pagebreak
 
 		\begin{review}
 
@@ -413,7 +432,23 @@
 			\end{equation}		
 		\end{example}			
 
-		\pagebreak
+
+		\begin{vibration_case_study}
+			
+			\textbf{Design Considerations in Vibrations}
+
+			\noindent Why study vibrations? One day, it could save your job! For a project to be successful it needs to be completed on time and within budget. 
+			
+			Consider the Ling-Temco-Vought (LTV) XC-142  which was a tilt-wing experimental aircraft developed in the 1960s for the US military and later turned over to NASA. During testing, the cross-linked driveshaft produced excessive vibration and noise which resulted in a high pilot workload. In general, the aircraft's cross-linked driveshaft was the main technical issue that caused the military to lose interest in the project. 
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=4in]{../figures/Ling_Temco_Vought_XC_142A.jpg}
+				\caption{A Ling-Temco-Vought XC-142A tested at the NASA Langley Research Center in 1969. \protect\footnotemark[1]}
+			\end{figure}
+			\footnotetext[1]{NASA,  Photograph published in Winds of Change, 75th Anniversary NASA publication, by James Schultz, Public domain, via Wikimedia Commons}	
+		\end{vibration_case_study}
+
 		\begin{example}	
 
 			\textbf{Deriving Equation of Motion Considering Initial Displacement}
@@ -457,6 +492,8 @@
 		\end{example}		
 
 
+
+
 		\begin{example}	
 			\textbf{Deriving Equation of Motion Considering Torsional Stiffness}
 
@@ -497,21 +534,7 @@
 			\end{equation}	
 		\end{example}		
 
-		\begin{vibration_case_study}
-			
-			\textbf{Design Considerations in Vibrations}
 
-			\noindent Why study vibrations? One day, it could save your job! For a project to be successful it needs to be completed on time and within budget. 
-			
-			Consider the Ling-Temco-Vought (LTV) XC-142  which was a tilt-wing experimental aircraft developed in the 1960s for the US military and later turned over to NASA. During testing, the cross-linked driveshaft produced excessive vibration and noise which resulted in a high pilot workload. In general, the aircraft's cross-linked driveshaft was the main technical issue that caused the military to lose interest in the project. 
-			
-			\begin{figure}[H]
-				\centering
-				\includegraphics[width=4in]{../figures/Ling_Temco_Vought_XC_142A.jpg}
-				\caption{A Ling-Temco-Vought XC-142A tested at the NASA Langley Research Center in 1969. \protect\footnotemark[1]}
-			\end{figure}
-			\footnotetext[1]{NASA,  Photograph published in Winds of Change, 75th Anniversary NASA publication, by James Schultz, Public domain, via Wikimedia Commons}	
-		\end{vibration_case_study}
 
 
 

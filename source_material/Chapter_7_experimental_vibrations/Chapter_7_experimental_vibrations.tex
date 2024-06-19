@@ -88,7 +88,7 @@ Transverse Sensitivity & $\le$5\% & $\le$5\% & $\le$5\% & $\le$5 \% &  \\ \botto
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=3.5in]{../figures/frequency_rolloff}
+	\includegraphics[width=4.5in]{../figures/frequency_rolloff}
 	\caption{Graph of a generic frequency roll-off where the cutoff frequency is at -3.01 dB\protect\footnotemark[1].}
 	\label{fig:frequency_rolloff}
 \end{figure}
@@ -178,10 +178,11 @@ The process of digitization involves two main steps: sampling and quantization a
 \begin{figure}[H]
     \centering
     \includegraphics[width=6.5in]{../figures/signal_digitization.png}
-    \caption{Digitization of two continuous time-series signals sampled at 5 S/s.}
+    \caption{Digitization of two continuous time-series signals sampled at 5~S/s.}
     \label{fig:signal_digitization}
 \end{figure}
 
+\pagebreak
 
 	\begin{review}
 	\label{sec:Harry_Nyquist}
@@ -192,14 +193,14 @@ The process of digitization involves two main steps: sampling and quantization a
 
 		\begin{figure}[H]
 			\centering
-			\includegraphics[width=2.71in]{../figures/Harry_Nyquist.jpg}
+			\includegraphics[width=2.5in]{../figures/Harry_Nyquist.jpg}
 			\caption{Picture of Harry Nyquist from the American Institute of Physics.\protect\footnotemark[1]}
 			\label{fig:Harry_Nyquist}
 		\end{figure}
 		\footnotetext[1]{Fair use, via Wikimedia Commons}
 	\end{review}
 	
-	
+\pagebreak
 \subsubsection{Aliasing}
 
 
@@ -211,11 +212,11 @@ In signal processing, aliasing is an effect that causes different signals to bec
 \begin{figure}[H]
     \centering
     \includegraphics[width=6.5in]{../figures/aliasing.png}
-    \caption{Aliasing of a 3 Hz signal that is sampled at 5 S/s where the 3 Hz signal folds back on itself to create a 2 Hz signal.}
+    \caption{Aliasing of a 3 Hz signal that is sampled at 5~S/s where the 3 Hz signal folds back on itself to create a 2 Hz signal.}
     \label{fig:aliasing}
 \end{figure}
 
-The Nyquist-Shannon sampling theorem is a theorem in the field of signal processing that defines the sample rate that permits a discrete sequence of samples to sample a continuous-time signal of finite bandwidth. It states that a signal must be sampled at a rate at least twice its highest frequency component to be accurately the frequency domain of the signal; this is known as the Nyquist limit. Otherwise, the higher-frequency components of the signal will ``fold'' back into the lower-frequency range, resulting in a distorted representation of the signal. Moreover, the signal must be sampled at twice its highest frequency component with one additional sample to accurately reproduce the temporal domain of the signal. For example, suppose a sine wave with a frequency of 3~Hz is sampled at a rate of 5 S/s; as diagrammed in figure~\ref{fig:aliasing}. According to the Nyquist-Shannon sampling theorem, the signal should be sampled at a rate of at least 6~S/s plus one sample to rebuild the signal in the temporal domain. Because the sampling rate is lower than the Nyquist rate, the higher-frequency component of the signal (3 Hz) will be aliased to a lower frequency (2 Hz), resulting in the distorted representation of the signal shown by the dashed orange line in figure~\ref{fig:aliasing}.
+The Nyquist-Shannon sampling theorem is a theorem in the field of signal processing that defines the sample rate that permits a discrete sequence of samples to sample a continuous-time signal of finite bandwidth. It states that a signal must be sampled at a rate at least twice its highest frequency component to be accurately the frequency domain of the signal; this is known as the Nyquist limit. Otherwise, the higher-frequency components of the signal will ``fold'' back into the lower-frequency range, resulting in a distorted representation of the signal. Moreover, the signal must be sampled at twice its highest frequency component with one additional sample to accurately reproduce the temporal domain of the signal. For example, suppose a sine wave with a frequency of 3~Hz is sampled at a rate of 5~S/s; as diagrammed in figure~\ref{fig:aliasing}. According to the Nyquist-Shannon sampling theorem, the signal should be sampled at a rate of at least 6~S/s plus one sample to rebuild the signal in the temporal domain. Because the sampling rate is lower than the Nyquist rate, the higher-frequency component of the signal (3 Hz) will be aliased to a lower frequency (2 Hz), resulting in the distorted representation of the signal shown by the dashed orange line in figure~\ref{fig:aliasing}.
 
 Rebuilding discretely sampled continuous signals requires much more than just sampling at the Nyquist limit of 2$\times$ the desired frequency content of the signal plus one additional data point. This is because the Nyquist limit only applies to rebuilding perfect sinusoidal signals and real-world signals are complex. A good rule of thumb is that a signal must be sampled at least 10 times per cycle to accurately rebuilt the temporal response of the signal.
 

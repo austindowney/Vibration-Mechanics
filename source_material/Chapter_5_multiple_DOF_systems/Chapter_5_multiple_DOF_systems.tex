@@ -61,8 +61,9 @@
 	
 	
 	\end{review}
-	
+			\vspace{-2ex}	
 	\subsection{General Discussion on Mode Shapes}
+			\vspace{-1ex}
 	
 	Studying and characterizing the natural frequencies of a system allows for the detailed investigation of the system response. Modern vibration analysis relies heavily on the concepts of mode shapes for various engineering tasks. Practical applications of the study of mode shapes (often called experimental modal analysis) include
 	\begin{itemize}
@@ -72,15 +73,17 @@
 		\item Forced Response Prediction			
 		\item Active Vibration Control	
 	\end{itemize}
-	
-\pagebreak
+
+
 	\begin{vibration_case_study}
 		\textbf{Modal Testing}
 		
 		\noindent In automotive engineering, the requirements for safe and comfortable vehicles necessitate the need for a thorough understanding of the vehicle's dynamic properties and how any design changes affect its dynamics. Experimental modal analysis is an important troubleshooting and model-updating tool in the study of vehicle noise and vibration harshness (NVH). Oftentimes, experimental modal analysis is performed on a ``body in white'' or a sub-frame structure to develop a better understanding of the dynamics of the structure. Overall, experimental modal analysis is an important tool used in improving a vehicle's NVH performance.
+		\vspace{-3ex}
 		\begin{figure}[H]
 			\centering
-			\includegraphics[width=6in]{../figures/modal_testing}
+			\includegraphics[width=5.1in]{../figures/modal_testing}
+			\vspace{-1ex}
 			\caption{Experimental modal analysis of an automotive (Jaguar) body in white, typically done to reduce vehicle noise and vibration harshness \protect\footnotemark[1].}
 		\end{figure}
 		\footnotetext[1]{Cjp24, CC BY-SA 3.0 $<$https://creativecommons.org/licenses/by-sa/3.0$>$, via Wikimedia Commons} 	
@@ -102,9 +105,7 @@
 		\label{fig:general_mode_shapes}
 	\end{figure}
 	
-	
-	
-	
+
 	
 	\subsection{Modeling Undamped Two- Degree-of-Freedom Systems}
 	\label{sec:two_degree_of_freedom}
@@ -142,9 +143,11 @@
 	\end{equation}
 	Where the arrow above the variable denotes a vector. Therefore, the vectors $\vec{u}_1$ and $\vec{u}_2$ are the mathematical expressions that ``couple'' or tie the equations together. Expanding these vectors shows: 
 	\begin{eqnarray}
-	 \vec{x}(t)=  \begin{bmatrix} x_1(t) \\  x_2(t) \end{bmatrix}, \hspace{2ex} \vec{u}_1=  \begin{bmatrix} u_{11} \\  u_{21} \end{bmatrix}, \hspace{2ex} \vec{u}_2=  \begin{bmatrix} u_{12} \\  u_{22} \end{bmatrix}\text{, }
+	 \vec{x}(t)=  \begin{bmatrix} x_1(t) \\  x_2(t) \end{bmatrix}, \hspace{2ex} \vec{u}_1=  \begin{bmatrix} u_{11} \\  u_{21} \end{bmatrix}, \hspace{2ex} \vec{u}_2=  \begin{bmatrix} u_{12} \\  u_{22} \end{bmatrix}
 	\end{eqnarray}
-	The four key components of the solution expressed in equation \ref{eq:2-DOF_solution} are:
+
+	\pagebreak
+	\noindent The four key components of the solution expressed in equation \ref{eq:2-DOF_solution} are:
 	\begin{enumerate}
 	\item $\omega_1$ and $\omega_2$ are the natural frequencies of the system. They are not the frequencies of the masses. The solution states that each of the masses oscillates at the two frequencies $\omega_1$ and $\omega_2$. Moreover, consider the special case where the initial conditions are selected to force $A_2 = 0$, in this case, each mass would only oscillate at only one frequency, $\omega_1$.
 	\item $A_1$ and $A_2$ are the constants of integration and determine the amplitude of the system.
@@ -460,7 +463,7 @@
 	\end{figure}
 	\end{example}
 	
-	
+	\pagebreak
 	
 	
 	
@@ -551,11 +554,14 @@
 	[m_2 s^2 + (c_2 + c_3)s + (k_2+k_3)]X_2(s) - [c_2s+k_2]X_1(s) = F_2(s) \nonumber
 	\end{equation}
 	These equations show two linear equations in terms of $X_1$ and $X_2$ that can be solved for using Cramer's rule, resulting in the expression:
+			\vspace{-1ex}	
 	\begin{eqnarray}
 	X_1(s) = \frac{D_1(s)}{D(s)} \\
 	X_2(s) = \frac{D_2(s)}{D(s)} \nonumber
 	\end{eqnarray}
+		\vspace{-1ex}	
 	where:
+		\vspace{-1ex}	
 	\begin{eqnarray}
 	D_1 = \left|
 	\begin{array}{cc}
@@ -568,12 +574,14 @@
 
 	\begin{figure}[tp]
 		\centering
-		\includegraphics[]{../figures/2-DOF-spring_mass_dashpot_horizontal_forced_double_wall.png}
+		\includegraphics[width=4.7in]{../figures/2-DOF-spring_mass_dashpot_horizontal_forced_double_wall.png}
+		\vspace{-2ex}
 		\caption{Forced 2-DOF damped system showing: (a) system, and; (b) FBD.}
 		\label{fig:2-DOF-spring_mass_dashpot_horizontal_double_wall}
-	\end{figure}
-	
+		\vspace{-1ex}
+	\end{figure}	
 	\begin{eqnarray}
+			\vspace{-1ex}
 	D_2 = \left|
 	\begin{array}{cc}
 	m_1 s^2 + (c_1 + c_2)s + (k_1+k_2)  & F_1(s) \\
@@ -582,8 +590,8 @@
 	\right| \\
 	= [m_1 s^2 + (c_1 + c_2)s + (k_1+k_2)]F_2(s) + (c_2s+k_2)F_1(s)  \nonumber
 	\end{eqnarray}
-	
 	\begin{eqnarray}
+				\vspace{-1ex}
 	D = \left|
 	\begin{array}{cc}
 	m_1 s^2 + (c_1 + c_2)s + (k_1+k_2) & m_2 s^2 + (c_2 + c_3)s + (k_2+k_3) \\
@@ -594,8 +602,9 @@
 	+ [m_2(k_1+k_2)+m_1(k_2+k_3)+c_1c_2+c_2c_3+c_3c_1]s^2 \\  \nonumber
 	+ [(k_1+k_2)(c_2+c_3)+c_1k_2+c_1k_3-c_2k_2+c_2k_3]s \\  \nonumber
 	+ (k_1k_2 + k_2k_3 + k_3k_1) \\  \nonumber
+			\vspace{-1ex}
 	\end{eqnarray}
-	
+		
 	The denominator, $D(s)$ is a 4$^{\text{th}}$ polynomial in $s$ and is the characteristic polynomial of the system. The system is considered a 4$^{\text{th}}$ order system because the characteristic polynomial of the system is of order 4. 
 	
 	%\begin{example}
@@ -737,6 +746,7 @@
 	\end{equation}
 	where $\widetilde{K}=M^{-1/2}KM^{-1/2}$ is equivalent to the expression $k/m$ from the 1-DOF system as the are both mass-normalized stiffness values. 
 	
+\pagebreak
 	As before, a solution is found by assuming a solution, taking the derivatives of the solution, and substituting it into the EOM. Following these steps and assuming a solution of:
 	\begin{equation}
 	\vec{q} = \textbf{v}e^{j\omega t}
