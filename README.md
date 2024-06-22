@@ -6,7 +6,7 @@ An open-source textbook intended to cover the basics of mechanical vibrations. T
 <img src="source_material/figures/Martin_B-57_Canberra.png" alt="drawing" width="700"/>
 </p>
 
-A current PDF version of the text can be found in the releases tab of the GitHub page or by clicking <a href="https://github.com/austindowney/Vibration-Mechanics/blob/main/Vibration-Mechanics.pdf">here</a>.
+A current PDF version of the text can be found in the releases tab of the GitHub page or by clicking <a href="https://github.com/austindowney/Vibration-Mechanics/blob/main/Vibration_Mechanics.pdf">here</a>.
 
 
 ## Accompanying Video Lectures
@@ -30,7 +30,7 @@ This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 Intern
 Cite as  
 @Misc{DowneyVibrationMechanics,  
   author = {Austin Downey and Laura Micheli},  
-  title  = {VibrationMechanics},  
+  title  = {Vibration Mechanics},  
   url    = {https://github.com/austindowney/Vibration-Mechanics},  
 }  
 
