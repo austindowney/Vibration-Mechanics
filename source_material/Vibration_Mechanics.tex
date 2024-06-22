@@ -1,0 +1,207 @@
+\documentclass[12pt,letter]{article}
+\usepackage{downey_format}
+
+% These packages are added for / required to compile the entire document
+\usepackage{standalone} 
+\usepackage{chapterbib}   
+
+%%%%%%%%%%%%%		Notes on compiling Document		%%%%%%%%%%%%%
+% Notes on compiling Document
+%
+% 1. Each chapter can be compiled on its own.
+% 2. I set the document up with a common figures folder to allow for the reuse of figures and generally to keep the document clean. 
+% 3. When compiling the main document, you must include the \graphicspath{{xx}} for the first chapter, to set it in Chapter 1. From here on, it will think it is in the chapter one folder but the <../figures> in each folder will work with this. 
+% 4. I (Austin Downey) have gotten this to compile on Windows with MikTeX and Linux with TeXLive. Your results may vary. For Linux, I:
+% 	i.	added the extra {} in \graphicspath
+% 	ii.	removed the .tex extension from the file names except for Chapter 1. 
+% 5. The common bibliography is an issue that has yet to be sorted out. Currently citing sources in footnotes.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\begin{document}
+\thispagestyle{empty}	
+
+\begin{center}
+	{\fontsize{50}{60}\selectfont Vibration Mechanics}
+	
+	\vspace{2cm}
+
+
+	
+	\begin{center}
+	\begin{minipage}{0.75\textwidth}
+		\centering
+%		{\fontsize{15}{15}\selectfont A Practical Introduction for Mechanical
+%and Civil Engineers} %Understanding Vibrations in Mechanical, Civil, and Aerospace Engineering}
+    	\setstretch{1.5} % Set the desired line spacing (1.5 in this case)
+       	{\LARGE{} A Practical Introduction for Mechanical, Civil, and Aerospace Engineers}
+	\end{minipage}
+	\end{center}
+
+	\vspace{2cm}
+	
+	\begin{figure}[H]
+		\includegraphics[width=6.5in]{figures/Martin_B-57_Canberra.png}
+		\label{fig:title_figure}
+	\end{figure} 
+	
+	\vspace{3cm}
+	
+	\textbf{Austin R.J. Downey}\\ Department of Mechanical Engineering \\ Department of Civil and Environmental Engineering \\ University of South Carolina, Columbia SC, USA 
+	
+	\vspace{1cm}
+	
+	\textbf{Laura Micheli}\\ Department of Civil and Environmental Engineering \\ University of South Carolina, Columbia SC, USA 
+	
+
+
+
+	\vspace*{\fill}
+	
+	\today
+
+
+\end{center}
+
+\pagebreak
+
+\pagebreak
+\setcounter{page}{1}
+\pagenumbering{roman}
+\tableofcontents
+
+\pagebreak
+
+\setcounter{secnumdepth}{0} % Set the section depth to 0 so this is an un-umbered section in the table of contents.
+
+\section{Preface}
+This open-source text is designed to offer a complete introduction to the field of vibrations, specifically tailored for undergraduate students. It covers the fundamental principles of vibrations, including single and multi-degree of freedom systems, transfer function approaches, and vibration control, along with measurement and instrumentation. Each chapter includes examples and case studies to reinforce the concepts presented. With its simple and clear explanations and practical approach, this textbook serves as an essential resource for undergraduate students studying vibrations in engineering disciplines.
+
+
+%continuous systems, 
+
+
+% random vibrations, 
+% vibrations of structures, and mathematical and numerical methods for vibration analysis. 
+
+
+
+
+
+\subsection{Cover Art}
+The B-57 Canberra is an American-built copy of the British English Electric Canberra which first flew in 1949. During initial high-speed flight testing, excessive vibrations were measured on the canopy and a small fairing was added behind the canopy to reduce the aerodynamic load on the canopy and thereby reduce the vibrations. Overall, airframe flight testing is said to have gone very smoothly. 
+
+The B-57 was initially a twin-engined tactical bomber and reconnaissance aircraft but over the years, various versions were produced or modified from the original stock. These include the WB-57F, a specialized strategic reconnaissance version developed for the U.S. Air Force that is still flown by NASA for scientific missions. Of note, in 2011 NASA determined that they needed a third WB-57F to support their mission, and an additional WB-57 (s/n 63-13298) was removed from the Air Forces Boneyard in Tucson Arizona after 40 years of storage and returned to operational status. As of 2022, three airframes are still flying for NASA.
+
+The airframe on the cover is the SN 52-1516 and is an EB-57B ``Night Intruder'' which is an electronic countermeasure (ECM) version of the B-57 and is on static display at the Air Force Armament Museum at Eglin Air Force Base, Florida. 
+
+\pagebreak
+
+\subsection{License}
+This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0) International License. More information on the CC BY-SA 4.0 license can be found at  \url{https://creativecommons.org/licenses/by-sa/4.0/}. Unless otherwise denoted, all text, figures, diagrams, and photos used in this work are the sole property of the authors and are released under CC BY-SA 4.0 both in part or in whole. Reworks and redistributions of this work that fall within the CC BY-SA 4.0 licenses are encouraged.
+
+\subsection{Source Code}
+Source material is available at \url{https://github.com/austindowney/Vibration-Mechanics}.
+
+
+
+
+
+
+
+% \pagebreak
+
+\setcounter{secnumdepth}{3} % reset the section depth
+\setcounter{page}{1}
+\pagenumbering{arabic} 
+
+
+\part{Foundational Concepts}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=6.5in]{figures/Arthur_Ravenel_Jr_Bridge_dampers} \\
+	The Arthur Ravenel Jr. Bridge spans the Cooper River outside of Charleston South Carolina (USA) with a main span of 471 m (1,546 feet) and uses dampers on the center cables to mitigate wind and traffic-induced vibrations in the structure. It is the third longest among cable-stayed bridges in the Western Hemisphere (2023).
+%It is the third longest among cable-stayed bridges in the Western Hemisphere (2023).
+\end{figure}
+
+
+
+\pagebreak
+
+% Chapter 1 Fundamentals of vibrations
+\graphicspath{{Chapter_1_fundamentals_of_vibrations/}} 
+\input{Chapter_1_fundamentals_of_vibrations/Chapter_1_fundamentals_of_vibrations}
+
+% Chapter 2 Free Vibrations
+\include{Chapter_2_free_vibrations/Chapter_2_free_vibrations}
+
+% Chapter 3 Forced Vibrations
+\include{Chapter_3_forced_vibrations/Chapter_3_forced_vibrations}
+
+% Chapter 4 Transfer Function
+\include{Chapter_4_transfer_function_approach/Chapter_4_transfer_function_approach}
+
+% Chapter 5 Multiple DOF Systems
+\include{Chapter_5_multiple_DOF_systems/Chapter_5_multiple_DOF_systems}
+
+\part{Applied Topics}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=6.5in]{figures/Taipei_101_Tuned_Mass_Damper_picture} \\
+	The tuned mass damper inside Taipei 101.  The largest damper ball in the world, weights 660-metric-tons and consists of 41 circular steel plates that are 125 mm (4.92 in) thick.  \protect\footnotemark[1]
+\end{figure}
+
+\footnotetext[1]{Armand du Plessis, CC BY 3.0 $<$https://creativecommons.org/licenses/by/3.0$>$, via Wikimedia Commons} 	
+
+
+
+
+
+
+
+
+
+
+% Chapter 6 Vibration Control
+\include{Chapter_6_vibration_control/Chapter_6_vibration_control}
+
+% Chapter 7 Experimental Vibrations
+\include{Chapter_7_experimental_vibrations/Chapter_7_experimental_vibrations}
+
+% Chapter 8 Structural Dynamics
+\include{Chapter_8_structural_dynamics/Chapter_8_structural_dynamics}
+
+%% Chapter 8 Continuous Systems
+%\include{Chapter_8_continuous_systems/Chapter_8_continuous_systems}
+
+
+\pagebreak
+\renewcommand{\thepage}{}
+\renewcommand\refname{References Cited}
+\pagestyle{plain}
+\bibliographystyle{Downey_NSF}
+\bibliography{Chapter_1_Basic_Concepts}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+

@@ -1,4 +1,4 @@
-# Open Vibrations
+# Vibration Mechanics: A Practical Introduction for Mechanical, Civil, and Aerospace Engineers
 An open-source textbook intended to cover the basics of mechanical vibrations. This text is intended to function as the only text required for a college (undergraduate) class on vibrations. 
 
 
@@ -6,7 +6,7 @@ An open-source textbook intended to cover the basics of mechanical vibrations. T
 <img src="source_material/figures/Martin_B-57_Canberra.png" alt="drawing" width="700"/>
 </p>
 
-A current PDF version of the text can be found in the releases tab of the GitHub page or by clicking <a href="https://github.com/austindowney/Open-Vibrations/blob/main/Open_Vibrations.pdf">here</a>.
+A current PDF version of the text can be found in the releases tab of the GitHub page or by clicking <a href="https://github.com/austindowney/Vibration-Mechanics/blob/main/Vibration-Mechanics.pdf">here</a>.
 
 
 ## Accompanying Video Lectures
@@ -28,10 +28,10 @@ This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 Intern
 ## Citation
 
 Cite as  
-@Misc{DowneyOpenVibrations,  
+@Misc{DowneyVibrationMechanics,  
   author = {Austin Downey and Laura Micheli},  
-  title  = {Open Vibrations},  
-  url    = {https://github.com/austindowney/Open-Vibrations},  
+  title  = {VibrationMechanics},  
+  url    = {https://github.com/austindowney/Vibration-Mechanics},  
 }  
 
 
