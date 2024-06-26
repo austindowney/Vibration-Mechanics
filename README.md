@@ -9,6 +9,11 @@ An open-source textbook intended to cover the basics of mechanical vibrations. T
 A current PDF version of the text can be found in the releases tab of the GitHub page or by clicking <a href="https://github.com/austindowney/Vibration-Mechanics/blob/main/Vibration_Mechanics.pdf">here</a>.
 
 
+## Published Version 
+The most recent published version can be found on Zenodo <a href="https://doi.org/10.5281/zenodo.12539014">here</a>.
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.12539014.svg)](https://doi.org/10.5281/zenodo.12539014)
+
 ## Accompanying Video Lectures
 
 Videos of lectures associated with this text are available as a YouTube playlist <a href="https://www.youtube.com/playlist?list=PL-2wJog-EC58uXz1LhpNRmV8nCEvyvoVS">here</a>.
