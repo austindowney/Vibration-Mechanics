@@ -30,8 +30,9 @@ This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 Intern
 Cite as  
 @Misc{DowneyVibrationMechanics,  
   author = {Austin Downey and Laura Micheli},  
-  title  = {Vibration Mechanics},  
-  url    = {https://github.com/austindowney/Vibration-Mechanics},  
+  title  = {Vibration Mechanics: A Practical Introduction for Mechanical, Civil, and Aerospace Engineers},  
+  url    = {https://zenodo.org/records/12539014},  
+  doi    = {https://doi.org/10.5281/zenodo.12539014},   
 }  
 
 
