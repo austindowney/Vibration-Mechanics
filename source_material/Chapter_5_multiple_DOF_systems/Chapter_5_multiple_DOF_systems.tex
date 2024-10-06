@@ -185,7 +185,7 @@
 	
 	To initiate the solution, let us first develop the matrix formulation of the two coupled ODEs:
 	\begin{eqnarray}
-	  \begin{bmatrix} m_1 & 0  \\  0 & m_2 \end{bmatrix}\begin{bmatrix} \ddot{x_1} \\  \ddot{x_2} \end{bmatrix} + \begin{bmatrix} k_1+k_2 & -k_2  \\  -k_2 & k_2 \end{bmatrix}\begin{bmatrix} x_1 \\  x_2 \end{bmatrix} = \begin{bmatrix} 0 \\  0 \end{bmatrix}
+	  \begin{bmatrix} m_1 & 0  \\  0 & m_2 \end{bmatrix}\begin{bmatrix} \ddot{x}_1 \\  \ddot{x}_2 \end{bmatrix} + \begin{bmatrix} k_1+k_2 & -k_2  \\  -k_2 & k_2 \end{bmatrix}\begin{bmatrix} x_1 \\  x_2 \end{bmatrix} = \begin{bmatrix} 0 \\  0 \end{bmatrix}
 	\end{eqnarray}
 	This equation can also be expressed as the vector equation:
 	\begin{equation}
@@ -490,7 +490,7 @@
 	\end{eqnarray}
 	These equations can be written in matrix notation as:
 	\begin{eqnarray}
-		\begin{bmatrix} m & 0  \\  0 & m \end{bmatrix}\begin{bmatrix} \ddot{x_1} \\  \ddot{x_2} \end{bmatrix} + \begin{bmatrix} 2k & -k  \\  -k & 2k \end{bmatrix}\begin{bmatrix} x_1 \\  x_2 \end{bmatrix} = \begin{bmatrix} 0 \\  0 \end{bmatrix}
+		\begin{bmatrix} m & 0  \\  0 & m \end{bmatrix}\begin{bmatrix} \ddot{x}_1 \\  \ddot{x}_2 \end{bmatrix} + \begin{bmatrix} 2k & -k  \\  -k & 2k \end{bmatrix}\begin{bmatrix} x_1 \\  x_2 \end{bmatrix} = \begin{bmatrix} 0 \\  0 \end{bmatrix}
 	\end{eqnarray}
 	Substituting the values of the matrices $M$ and $K$ into this expression $\det(-\omega^2 M  + K) = 0$ yields: 
 	\begin{eqnarray}
@@ -949,7 +949,7 @@
 		
 		\noindent Using the Eigenvalue approach and MATLAB, determine the natural frequencies and mode shapes of the system shown in figure~\ref{fig:2-DOF-spring_mass_horizontal_2}, where $m_1$=9~kg, $m_2$=1~kg, $k_1$ = 24~N/m, and $k_2$ = 3~N/m with the initial conditions $x_{10}=1$~mm, $v_{10}=0$~mm/s, $x_{20}=0$~mm, and $v_{20}=0$~mm/s with the EOM expressed as: 
 		\begin{eqnarray}
-		  \begin{bmatrix} m_1 & 0  \\  0 & m_2 \end{bmatrix}\begin{bmatrix} \ddot{x_1} \\  \ddot{x_2} \end{bmatrix} + \begin{bmatrix} k_1+k_2 & -k_2  \\  -k_2 & k_2 \end{bmatrix}\begin{bmatrix} x_1 \\  x_2 \end{bmatrix} = \begin{bmatrix} 0 \\  0 \end{bmatrix}
+		  \begin{bmatrix} m_1 & 0  \\  0 & m_2 \end{bmatrix}\begin{bmatrix} \ddot{x}_1 \\  \ddot{x}_2 \end{bmatrix} + \begin{bmatrix} k_1+k_2 & -k_2  \\  -k_2 & k_2 \end{bmatrix}\begin{bmatrix} x_1 \\  x_2 \end{bmatrix} = \begin{bmatrix} 0 \\  0 \end{bmatrix}
 		\end{eqnarray} \\
 	
 		\noindent \textbf{Solution:} 
@@ -1469,7 +1469,7 @@ u_2 = M_inv_sqr*v(:,2)
 \noindent Assuming $x_1<x_2$, the matrix form of the system is
 	
 				\begin{eqnarray}
-				  \begin{bmatrix} m_1 & 0  \\  0 & m_2 \end{bmatrix}\begin{bmatrix} \ddot{x_1} \\  \ddot{x_2} \end{bmatrix} + \begin{bmatrix} c_1+c_2 & -c_2  \\  -c_2 & c_2 \end{bmatrix}\begin{bmatrix} \dot{x}_1 \\  \dot{x}_2 \end{bmatrix} + \begin{bmatrix} k_1+k_2 & -k_2  \\  -k_2 & k_2 \end{bmatrix}\begin{bmatrix} x_1 \\  x_2 \end{bmatrix}  = \begin{bmatrix} \ R(t) \\  0 \end{bmatrix}
+				  \begin{bmatrix} m_1 & 0  \\  0 & m_2 \end{bmatrix}\begin{bmatrix} \ddot{x}_1 \\  \ddot{x}_2 \end{bmatrix} + \begin{bmatrix} c_1+c_2 & -c_2  \\  -c_2 & c_2 \end{bmatrix}\begin{bmatrix} \dot{x}_1 \\  \dot{x}_2 \end{bmatrix} + \begin{bmatrix} k_1+k_2 & -k_2  \\  -k_2 & k_2 \end{bmatrix}\begin{bmatrix} x_1 \\  x_2 \end{bmatrix}  = \begin{bmatrix} \ R(t) \\  0 \end{bmatrix}
 				\end{eqnarray} \\
 where $R(t)$ is the piecewise ramp function shown in figure~\ref{fig:2-DOF-spring_mass_dashpot_horizontal_forced_ramp_function}(b). This expression can be re-arranged to:				
 \begin{equation}
