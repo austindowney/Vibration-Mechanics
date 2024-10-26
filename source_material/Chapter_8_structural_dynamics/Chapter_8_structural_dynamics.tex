@@ -371,42 +371,38 @@ $\phi_1$, $\phi_2$, $A_1$, and $A_2$ are constants that can be found based on th
 	\label{fig:two_story_frame_ex}
 \end{figure}
 
-\textbf{Solution}:
+\noindent \textbf{Solution}:
 
 \vspace{1ex}
 	
-Assumption: the frame can be modeled as a shear building with mass lumped at the floor levels. The lateral stiffness at the first floor is:
+\noindent Assumption: the frame can be modeled as a shear building with mass lumped at the floor levels. The lateral stiffness at the first floor is:
 
 \begin{equation}
 k_1 = 2 \frac{12(2EI)}{h^3} = \frac{48EI}{h^3}
 \end{equation}
-
-\noindent The lateral stiffness at the second floor is:
+The lateral stiffness at the second floor is:
 \begin{equation}
 k_2 = 2 \frac{12(EI)}{h^3} = \frac{24EI}{h^3}
 \end{equation}
-
-\noindent Therefore, the stiffness matrix can be written as:
-
+Therefore, the stiffness matrix can be written as:
 \begin{eqnarray}
 K= \begin{bmatrix} \frac{48EI}{h^3} + \frac{24EI}{h^3} & -\frac{24EI}{h^3}  \\  -\frac{24EI}{h^3} & \frac{24EI}{h^3} \end{bmatrix} = \frac{24EI}{h^3} \begin{bmatrix} 3 & -1  \\  -1 & 1 \end{bmatrix}
 \end{eqnarray}		
-
-
 The EOM of the system is:
 
 \begin{eqnarray} 
 \begin{bmatrix} 2m & 0  \\  0 & m \end{bmatrix}\begin{bmatrix} \ddot{x_1} \\  \ddot{x_2} \end{bmatrix} + \frac{24EI}{h^3} \begin{bmatrix} 3 & -1  \\  -1 & 1 \end{bmatrix}\begin{bmatrix} x_1 \\  x_2 \end{bmatrix}  = \begin{bmatrix} p_1 \\  p_2 \end{bmatrix}
 \end{eqnarray}
 
-In order to determine the natural frequency of vibration and the mode shapes of the system, we need to solve the characteristic equation:
+\pagebreak
 
+In order to determine the natural frequency of vibration and the mode shapes of the system, we need to solve the characteristic equation:
 \begin{equation}
 \det(-\omega^2 M  + K) = 0
 \end{equation}
 leading to:
 \begin{equation}
-2m^2 \omega^4 + 5 k m \omega^2 + 2 k = 0
+2m^2 \omega^4 - 5 k m \omega^2 + 2 k^2 = 0
 \end{equation}
 This equation has two solutions:
 \begin{eqnarray}
