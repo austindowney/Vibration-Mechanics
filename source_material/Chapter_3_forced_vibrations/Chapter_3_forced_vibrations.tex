@@ -12,30 +12,12 @@
 
 \section{Forced Vibrations}
 
-
-
-
 	Mechanical systems are subjected to external loading. For example, a piston in an engine when forced up and down by a crankshaft or a seat in an airplane may vibrate due to the movement of the jet engines transmitted through the aircraft structure.  In real-world situations, structures are subjected to complex loading that are hard to measure or not fully understood. 
 
 
 
-	\begin{vibration_case_study}
-			\textbf{Wind Induced Loading}
 
-	\noindent Tall mast light poles are excited by a wind excitation and respond across their entire frequency domain. Consider the light pole located in the state of Kansas in the United States shown figure~\ref{fig:Li_pole_vibrations}. The structure responds more at some frequencies than other frequencies, as dictated by the structure's geometry and material properties. Studying how structures responded to forced inputs allows for a better design of the structure.  
-		\begin{figure}[H]
-			\centering
-			\includegraphics[width=6in]{../figures/Li_pole_vibrations}
-			\caption{Tall mast light pole in the central United States showing: (a) the light mast; (b) the measured temporal response of the light pole, and; (c) the frequency domain response of the light pole. Light pole data provided by Jian li\protect\footnotemark[1] and discussed in detail in Shaheen et al.\protect\footnotemark[2].}
-			\label{fig:Li_pole_vibrations}
-		\end{figure}
-		\footnotetext[1]{Jian li, CC BY-SA 4.0, Light pole data}  
-		\footnotetext[2]{Shaheen, Mona, et al. ``Wind-Induced Vibration Monitoring of High-Mast Illumination Poles Using Wireless Smart Sensors.'' Sensors 24.8 (2024): 2506.}  
-	\end{vibration_case_study}
-
-
-\subsection{Harmonic Excitations of Undamped Systems}
-
+\subsection{Harmonic Excitation of Undamped Systems}
 
 	Investigating a single-degree of freedom system for a harmonic input is useful as it can be solved mathematically with straightforward techniques. Consider the system:
 	\begin{figure}[H]
@@ -76,7 +58,7 @@
 	\begin{equation}
 		x_p  =X\text{cos}(\omega t)
 	\end{equation}						
-	where, $x_p$ is the particular solution and $X$ is the amplitude of the forced response. Our total solution for the harmonic excitations of undamped systems now becomes:
+	where, $x_p$ is the particular solution and $X$ is the amplitude of the forced response. Our total solution for the harmonic excitation of undamped systems now becomes:
 	\begin{equation}
 		x(t) = A\text{sin}(\omega_n t + \phi) + X\text{cos}(\omega t) 
 	\end{equation}				
@@ -177,6 +159,21 @@
 		\end{figure}	
 	\end{example}
 	
+	
+	
+	\begin{vibration_case_study}
+		\textbf{Wind Induced Loading}
+		
+		\noindent Tall mast light poles are excited by a wind excitation and respond across their entire frequency domain. Consider the light pole located in the state of Kansas in the United States shown figure~\ref{fig:Li_pole_vibrations}. The structure responds more at some frequencies than other frequencies, as dictated by the structure's geometry and material properties. Studying how structures responded to forced inputs allows for a better design of the structure.  
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=6in]{../figures/Li_pole_vibrations}
+			\caption{Tall mast light pole in the central United States showing: (a) the light mast; (b) the measured temporal response of the light pole, and; (c) the frequency domain response of the light pole. Light pole data provided by Jian li\protect\footnotemark[1] and discussed in detail in Shaheen et al.\protect\footnotemark[2].}
+			\label{fig:Li_pole_vibrations}
+		\end{figure}
+		\footnotetext[1]{Jian li, CC BY-SA 4.0, Light pole data}  
+		\footnotetext[2]{Shaheen, Mona, et al. ``Wind-Induced Vibration Monitoring of High-Mast Illumination Poles Using Wireless Smart Sensors.'' Sensors 24.8 (2024): 2506.}  
+	\end{vibration_case_study}
 	
 \subsection{Harmonic Resonance}			
 	
@@ -338,7 +335,7 @@
 
 
 
-\subsection{Harmonic Excitations of Underdamped Systems}
+\subsection{Harmonic Excitation of Underdamped Systems}
 
 	Consider the system:
 	\begin{figure}[H]
@@ -504,8 +501,8 @@ B_s
 	Note that for a case where damping equals zero, this expression collapses down to that obtained for a undamped system.
 
 	\begin{example}
-	\label{ex:homogeneous_and_particular_solutions_in_resonance}		
 		\textbf{Plotting Steady State and Transient Responses}
+		\label{ex:Plotting_Steady_State}	
 		
 		\noindent Consider the damped 1-DOF system below, and plot the total, steady state, and transient responses for the following system configurations with no initial conditions. For each configuration, comment on the temporal response and how it differs from the response of the previous configuration.    
 		
@@ -558,7 +555,7 @@ B_s
 
 
 \subsection{Frequency Response of Underdamped Systems}						
-	From equations \ref{eq:damped_forced_x} through \ref{eq:damped_forced_theta_p} and the figures in example \ref{ex:homogeneous_and_particular_solutions_in_resonance} we can see that for larger values of $t$ the transient response dies out while only the steady-state response controls the displacement of the total response. This is always true if the system has any significant damping. Therefore, it is often prudent to ignore the transient part and focus only on the steady-state response. Considering the equation for the particular solution: 
+	From equations \ref{eq:damped_forced_x} through \ref{eq:damped_forced_theta_p} and the figures in example \ref{ex:Plotting_Steady_State} we can see that for larger values of $t$ the transient response dies out while only the steady-state response controls the displacement of the total response. This is always true if the system has any significant damping. Therefore, it is often prudent to ignore the transient part and focus only on the steady-state response. Considering the equation for the particular solution: 
 	\begin{equation}
 		x_p(t) = X \text{cos}(\omega t - \phi_p)
 	\end{equation}			 
@@ -865,7 +862,7 @@ B_s
 			\includegraphics[width=6.2in]{../figures/base_excitation_displacement_transmissibility}
 			\caption{Displacement transmissibility for an underdamped 1-DOF system.}
 		\end{figure}
-		Around resonance, the maximum amount of displacement is transmitted to the mass. Additionally,  the above plot shows that at $r=\sqrt{2}$ the displacement transmissibility $X/Y$ is 1. Note the ``flip'' where overdamped systems have a greater response to excitations after $r=\sqrt{2}$ than do underdamped systems.
+		Around resonance, the maximum amount of displacement is transmitted to the mass. Additionally,  the above plot shows that at $r=\sqrt{2}$ the displacement transmissibility $X/Y$ is 1. Note the ``flip'' where overdamped systems have a greater response to excitation after $r=\sqrt{2}$ than do underdamped systems.
 
 		\begin{example}
 			\textbf{Car Traveling over Rough Road}
