@@ -130,7 +130,7 @@
 	
 	\begin{example}
 
-	\textbf{Plotting Free and Forced Vibrations}
+	\textbf{Visualizing Free and Forced Vibrations}
 
 	\noindent For the 1-DOF system:
 		\begin{figure}[H]
@@ -660,6 +660,7 @@ B_s
 	Therefore, a slight change in the driving frequency (about 5\%) results in an 85\% change in the amplitude of the steady-state response. 
 \end{example}
 
+\pagebreak
 \begin{example}
 
 	\textbf{Displacement-limited System Design}
@@ -954,6 +955,7 @@ B_s
 		\end{figure}
 		Again, note the key location $r=\sqrt{2}$. At $r=\sqrt{2}$ the force transmitted to the system is 2 $\frac{F_\text{T}}{kY}$. However, the normalized force does not necessarily fall off for $r$ values greater than $r=\sqrt{2}$.  
 
+\pagebreak
 		\begin{vibration_case_study}
 
 			\textbf{Convair F2Y Sea Dart}
@@ -969,6 +971,8 @@ B_s
 			\footnotetext[1]{Public Domain 	U.S. Navy National Museum of Naval Aviation photo No. 1996.253.7213.010} 
 			\footnotetext[1]{Image from ``The Impossible Takes Longer'',  a film by Convair about Sea Dart development. The copyright of the image is unknown but may be held by the successor entities of Convair. It is believed that the use of this image qualifies as fair use under the copyright law of the United States.}  	
 		\end{vibration_case_study}
+	
+	\pagebreak
 	
 		\begin{example}
 			\textbf{System Design for Force Transmissibility}
@@ -1012,7 +1016,7 @@ B_s
 				\includegraphics[width=0.35\textwidth]{../figures/base_excited_structure.png}
 				\caption{A 1-DOF latterly excited system that represents a 1-story building. }
 			\end{figure}				
-						
+			\pagebreak			
 			\noindent\textbf{Solution (a):}
 				
 			\noindent  For simplicity, we can rearrange the system as what follows:
@@ -1020,9 +1024,8 @@ B_s
 				\centering
 				\includegraphics[width=0.35\textwidth]{../figures/base_excited_structure_simple.png}
 				\caption{A base excited 1-DOF spring-mass system.}
-			\end{figure}			
-
-			solving for the EOM yields:
+			\end{figure}
+			\noindent solving for the EOM yields:
 			\begin{equation}
 				m\ddot{x} + kx = ky
 			\end{equation} 				
@@ -1056,6 +1059,7 @@ B_s
 				Y = -\frac{A}{\omega^2}
 			\end{equation} 			
 			
+			\pagebreak
 			\noindent\textbf{Solution (b):}
 			
 			\noindent From the plots we solved for before, we can see that we want a critical damping coefficient that is as low as possible. This means any damping added to the system will decrease its safety. This may seem counter-intuitive, but this is because we are attempting to drive the structure at a frequency higher than its natural frequency, something that does not commonalty happen. Typically excitations for a structure are well below its natural frequency.  			
