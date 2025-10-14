@@ -1104,7 +1104,7 @@ u_2 = M_inv_sqr*v(:,2)
 	
 	
 	\begin{example}
-	\textbf{Multiple Mode Shapes}
+	\textbf{Mode shapes for a 3-DOF system.}
 	
 	
 	
@@ -1191,6 +1191,67 @@ u_2 = M_inv_sqr*v(:,2)
 	
 	
 	
+	
+	\begin{example}
+	\textbf{Mode shapes for a 5-DOF system.} \\
+
+	\noindent N310GMU \rd{I need to update the math and code here, only the figure is updated. Make this a near pure matlab example}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=6in]{../figures/N310GMU}
+	\caption{Displacement response of the 2-DOF system. \protect\footnotemark[1] \rd{I think I want to add two mass points between the engines and tanks, that wold make it look more like a wing.}}
+	\label{fig:N310GMU}
+\end{figure}
+			
+			
+\noindent \textbf{Solution:} 
+	
+\noindent Assuming $x_1<x_2$, the matrix form of the system is
+	
+				\begin{eqnarray}
+				  \begin{bmatrix} m_1 & 0  \\  0 & m_2 \end{bmatrix}\begin{bmatrix} \ddot{x}_1 \\  \ddot{x}_2 \end{bmatrix} + \begin{bmatrix} c_1+c_2 & -c_2  \\  -c_2 & c_2 \end{bmatrix}\begin{bmatrix} \dot{x}_1 \\  \dot{x}_2 \end{bmatrix} + \begin{bmatrix} k_1+k_2 & -k_2  \\  -k_2 & k_2 \end{bmatrix}\begin{bmatrix} x_1 \\  x_2 \end{bmatrix}  = \begin{bmatrix} \ R(t) \\  0 \end{bmatrix}
+				\end{eqnarray} \\
+where $R(t)$ is the piecewise ramp function shown in figure~\ref{fig:2-DOF-spring_mass_dashpot_horizontal_forced_ramp_function}(b). This expression can be re-arranged to:				
+\begin{equation}
+\ddot{\vec{x}} = M^{-1}(F_t - C \cdot \dot{\vec{x}} -K \cdot \vec{x})
+\end{equation}
+which is the format required by MATLAB's \texttt{ode45} solver. Thereafter, the code in listings~\ref{lst:code} and \ref{lst:functions} can be used to develop the results shown in figure~\ref{fig:ODE_results-2-DOF}. 
+
+
+			
+
+
+	
+
+\lstset{%
+caption={MATLAB code for solving the EOM of the two-degree-of-freedom system.},
+label={lst:code},
+basicstyle=\ttfamily\footnotesize\bfseries,
+frame=tb,
+}
+\begin{lstlisting}
+% Time span for simulation
+tspan = [0, 10]; % Start time and end time
+
+% Initial conditions [x1, x1', x2, x2']
+initial_conditions = [0, 0, 0, 0];
+
+% Use ode45 to solve the system of ODEs
+[t, y] = ode45(@equations_of_motion, tspan, initial_conditions);
+
+% Extract displacements of masses
+x1 = y(:, 1);
+x2 = y(:, 3);
+\end{lstlisting}
+	
+
+\footnotetext[1]{This Cessna 310 (N310GMU) is located at Runway Park at Greenville Downtown Airport (GMU) in South Carolina. Once registered as N310G, it now displaying a unique 7-digit registration number as an advertisement for GMU Airport.}  	
+
+
+				
+\end{example}
+				
 	
 	\subsection{Modal Analysis}
 	
@@ -1562,6 +1623,8 @@ end
 				
 	\end{example}
 				
+
+
 
 \end{document}
 

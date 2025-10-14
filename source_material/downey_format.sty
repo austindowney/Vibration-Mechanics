@@ -76,7 +76,12 @@
 \fancyhead[R]{\rightmark}
 %\fancyfoot{} % clear all footer fields
 
-
+% ---- page style that has no right header -----------------
+\fancypagestyle{noRhead}{%
+	\pagestyle{fancy}
+	\fancyhead[L]{Vibration Mechanics} % keep the left header
+	\fancyhead[R]{} % Make the right header empty
+}
 
 %%%%%%%		define the symbols for positive directions		%%%%%%
 \usepackage{amssymb}											%%
