@@ -357,7 +357,7 @@ and the effective damping ratio of the system
 \end{review}
 
 
-
+\pagebreak
 
 \subsubsection{Proportional-Integral-Derivative (PID) Control}
 
@@ -378,23 +378,14 @@ where $K_\text{p}$, $K_\text{i}$, and $K_\text{d}$ are non-negative coefficients
 \begin{equation}
 	\Laplace{s} = K_\text{p} + \frac{K_\text{i}}{s} + K_\text{d}s
 \end{equation}
-where $s$ is the complex frequency. A temporal response for the 1-DOF shown in figure~\ref{fig:active_vibration_control_FBD} when controlled with a PID controller is reported in figure~\ref{fig:PID_temporal_response_1}.
+where $s$ is the complex frequency. A temporal response for the 1-DOF shown in figure~\ref{fig:active_vibration_control_FBD} when subjected to a step response at 1 second and controlled with a PID controller is reported in figure~\ref{fig:PID_temporal_responses}.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[]{../figures/PID_temporal_response_1.png}
-	\caption{System response for a 1-DOF system controlled with a PID.}
-	\label{fig:PID_temporal_response_1}
+	\includegraphics[]{../figures/PID_temporal_responses.png}
+	\caption{Response for a 1-DOF system controlled with a PID, showing: (a) system response and the step function input, and (b) the controller response imposed on the system to obtain such responses.}
+	\label{fig:PID_temporal_responses}
 \end{figure}
-
-
-
-
-
-%
-%\subsubsection{Linear-Quadratic Regulator (LQR) Control}
-%
-
 
 
 
