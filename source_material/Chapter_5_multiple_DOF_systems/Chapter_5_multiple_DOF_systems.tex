@@ -100,7 +100,7 @@
 	
 	\begin{figure}[H]
 		\centering
-		\includegraphics[]{../figures/general_mode_shapes.png}
+		\includegraphics[width=6.1in]{../figures/general_mode_shapes.png}
 		\caption{Deflection of a vertical cantilever, $\vec{x}$, is a function of the considered mode shapes $u_i$ and their corresponding participation factors $q_i$.}
 		\label{fig:general_mode_shapes}
 	\end{figure}
@@ -146,7 +146,7 @@
 	 \vec{x}(t)=  \begin{bmatrix} x_1(t) \\  x_2(t) \end{bmatrix}, \hspace{2ex} \vec{u}_1=  \begin{bmatrix} u_{11} \\  u_{21} \end{bmatrix}, \hspace{2ex} \vec{u}_2=  \begin{bmatrix} u_{12} \\  u_{22} \end{bmatrix}
 	\end{eqnarray}
 
-	\pagebreak
+
 	\noindent The four key components of the solution expressed in equation \ref{eq:2-DOF_solution} are:
 	\begin{enumerate}
 	\item $\omega_1$ and $\omega_2$ are the natural frequencies of the system. They are not the frequencies of the masses. The solution states that each of the masses oscillates at the two frequencies $\omega_1$ and $\omega_2$. Moreover, consider the special case where the initial conditions are selected to force $A_2 = 0$, in this case, each mass would only oscillate at only one frequency, $\omega_1$.
@@ -209,6 +209,7 @@
 	\end{eqnarray}
 	This simple connection between vibration analysis and matrix analysis allows computers to be used to solve large and complicated vibration problems quickly.
 	
+
 	Recall that the 1-DOF version of the equation of motion was solved by calculating the values of the constants in an assumed harmonic solution. The same approach is applied here in order to solve for the displacement of the two-DOF system. This time, the solution is assumed in the form:
 	
 	\begin{equation}
@@ -685,10 +686,12 @@
 	
 		The generalized eigenvalue problem is an important formulation for the study of vibrations and is written as 
 		\begin{equation}
+			\label{eq:generalized_eigenvalue}
 			\textbf{A}\textbf{v} = \vec{\lambda}\textbf{B}\textbf{v}
 		\end{equation}	
 		where $\textbf{A}$ and $\textbf{B}$ are real matrices. As written, this expression maps a general space $\textbf{A}$ into $\textbf{B}$ using $\vec{\lambda}$ and $\textbf{v}$. In the study of vibrations, the general generalized eigenvalue problem is used to link mass ($M$) and stiffness ($k$) matrices such that 
 		\begin{equation}
+			\label{eq:generalized_eigenvalue_K_M}
 			\textbf{K}\textbf{v} = \vec{\lambda}\textbf{M}\textbf{v}
 		\end{equation}		
 		
@@ -1096,16 +1099,17 @@ u_2 = M_inv_sqr*v(:,2)
 	
 	
 	
+
 	
-	\subsection{Multiple Degrees of Freedom}
+\subsection{Multiple Degrees of Freedom}
+
+This chapter introduces methodologies for solving vibration systems with more than two degrees of freedom. As shown earlier in this chapter, two-degree-of-freedom (2-DOF) systems can be solved analytically by forming and coupling two equations of motion through their modal properties. While this approach is instructive, it becomes increasingly tedious when extended to systems with damping or to models with more than two degrees of freedom. For this reason, we introduce methods based on the generalized eigenvalue approach, in which the mass and stiffness matrices are used to formulate the eigenvalue problem given in Equation~\ref{eq:generalized_eigenvalue_K_M}. Example~\ref{ex:3_DOF-mode-shape} demonstrates how to formulate the equations of motion for a simple multi-degree-of-freedom system, while Example~\ref{ex:9_DOF-mode-shape} shows how numerical tools can be leveraged to efficiently solve the generalized eigenvalue problem and extract the natural frequencies and mode shapes.
 	
-	This chapter introduces methodologies for the solving of systems with more than 2-DOF. As shown in Chapter 5, 2-DOF systems can be solved analytically using 2 EOM coupled through their mode shapes. However, these methods become tedious when extended to systems with damping or even beyond the 2-DOF system.
-	
-	
-	
+	\pagebreak
+
 	\begin{example}
 	\textbf{Mode shapes for a 3-DOF system.}
-	
+	\label{ex:3_DOF-mode-shape}
 	
 	
 	\begin{figure}[H]
@@ -1176,7 +1180,7 @@ u_2 = M_inv_sqr*v(:,2)
 	\lambda_1 = 0, \; \; \lambda_2 = 1.73, \; \; \lambda_3 = 2.23
 	\end{equation}
 	\begin{equation}
-	v_1 = \begin{bmatrix} -0.577 \\    -0.577 \\   -0.577  \end{bmatrix}, \; \; v_2 = \begin{bmatrix} 0.707 \\    0.0 \\    -0.707 \end{bmatrix}, \; \; v_3 = \begin{bmatrix} 0.639 \\    -0.426 \\    0.639 \end{bmatrix}
+	\vec{v}_1 = \begin{bmatrix} -0.577 \\    -0.577 \\   -0.577  \end{bmatrix}, \; \; \vec{v}_2 = \begin{bmatrix} 0.707 \\    0.0 \\    -0.707 \end{bmatrix}, \; \; \vec{v}_3 = \begin{bmatrix} 0.639 \\    -0.426 \\    0.639 \end{bmatrix}
 	\end{equation}
 	Note that the eigenvalues are the same as those solved for using the normalized stiffness matrix approach while the eigenvectors appear to be different (mode 2). software tools and computing languages do not all follow the same standards in terms of returning eigenvectors as the information stored in the eigenvectors is just the direction of the transform. However, mode 2 reported here is still correct as only the shape of the eigenvalue matters.
 	
@@ -1190,69 +1194,149 @@ u_2 = M_inv_sqr*v(:,2)
 	\end{example}
 	
 	
-	
+
+	\pagebreak
 	
 	\begin{example}
-	\textbf{Mode shapes for a 5-DOF system.} \\
+	\textbf{Mode shapes for a 9-DOF system.} \\
+	\label{ex:9_DOF-mode-shape}
 
-	\noindent N310GMU \rd{I need to update the math and code here, only the figure is updated. Make this a near pure matlab example}
+	The aircraft shown in Figure~\ref{fig:N310GMU} is a Cessna 310, a light twin-engine airplane with two tip-tanks that significantly alter the structural dynamics of the aircraft. In this example, the airplane is treated not as a complete aeronautical system, but the wing is investigated as an idealized structure whose primary purpose is to illustrate how multi-degree-of-freedom vibration models can be formulated and solved using ODE solvers.
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=6in]{../figures/N310GMU}
-	\caption{Displacement response of the 2-DOF system. \protect\footnotemark[1] \rd{I think I want to add two mass points between the engines and tanks, that wold make it look more like a wing.}}
-	\label{fig:N310GMU}
-\end{figure}
-			
-			
-\noindent \textbf{Solution:} 
-	
-\noindent Assuming $x_1<x_2$, the matrix form of the system is
-	
-				\begin{eqnarray}
-				  \begin{bmatrix} m_1 & 0  \\  0 & m_2 \end{bmatrix}\begin{bmatrix} \ddot{x}_1 \\  \ddot{x}_2 \end{bmatrix} + \begin{bmatrix} c_1+c_2 & -c_2  \\  -c_2 & c_2 \end{bmatrix}\begin{bmatrix} \dot{x}_1 \\  \dot{x}_2 \end{bmatrix} + \begin{bmatrix} k_1+k_2 & -k_2  \\  -k_2 & k_2 \end{bmatrix}\begin{bmatrix} x_1 \\  x_2 \end{bmatrix}  = \begin{bmatrix} \ R(t) \\  0 \end{bmatrix}
-				\end{eqnarray} \\
-where $R(t)$ is the piecewise ramp function shown in figure~\ref{fig:2-DOF-spring_mass_dashpot_horizontal_forced_ramp_function}(b). This expression can be re-arranged to:				
-\begin{equation}
-\ddot{\vec{x}} = M^{-1}(F_t - C \cdot \dot{\vec{x}} -K \cdot \vec{x})
-\end{equation}
-which is the format required by MATLAB's \texttt{ode45} solver. Thereafter, the code in listings~\ref{lst:code} and \ref{lst:functions} can be used to develop the results shown in figure~\ref{fig:ODE_results-2-DOF}. 
-
-
-			
-
-
-	
-
-\lstset{%
-caption={MATLAB code for solving the EOM of the two-degree-of-freedom system.},
-label={lst:code},
-basicstyle=\ttfamily\footnotesize\bfseries,
-frame=tb,
-}
-\begin{lstlisting}
-% Time span for simulation
-tspan = [0, 10]; % Start time and end time
-
-% Initial conditions [x1, x1', x2, x2']
-initial_conditions = [0, 0, 0, 0];
-
-% Use ode45 to solve the system of ODEs
-[t, y] = ode45(@equations_of_motion, tspan, initial_conditions);
-
-% Extract displacements of masses
-x1 = y(:, 1);
-x2 = y(:, 3);
-\end{lstlisting}
-	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=6in]{../figures/N310GMU}
+		\caption{Cessna 310 gate-guard aircraft\protect\footnotemark[1] and corresponding simplified lumped-parameter wing model.}
+		\label{fig:N310GMU}
+	\end{figure}
+				
 
 \footnotetext[1]{This Cessna 310 (N310GMU) is located at Runway Park at Greenville Downtown Airport (GMU) in South Carolina. Once registered as N310G, it now displaying a unique 7-digit registration number as an advertisement for GMU Airport.}  	
 
+The wing is modeled as a simplified lumped-parameter system, shown schematically in the lower portion of Figure~\ref{fig:N310GMU}. The distributed mass and stiffness of the wing--fuselage structure are approximated using nine discrete masses connected by linear elastic elements. The resulting model has nine degrees of freedom, corresponding to symmetric mass locations along the wing span. All spanwise segments are assumed to have equal length and identical bending stiffness, and the masses are grouped into four classes ($m_1-m_4$) representing the tip tanks, engine and inner-wing sections, intermediate wing sections, and the fuselage. The geometric, material, and mass properties used in this example are shown in Table~\ref{tab:wing_props}.
 
-				
+
+\begin{table}[H]
+\centering
+\caption{Geometric, material, and mass properties used for the simplified nine-degree-of-freedom wing model.}
+\label{tab:wing_props}
+\begin{tabular}{l c c}
+\hline
+parameter & symbol & value \\
+\hline
+spanwise segment length & $l$ & $1.8~\text{m}$ \\[0.5ex]
+young's modulus & $E$ & $70 \times 10^{9}~\text{Pa}$ \\[0.5ex]
+area moment of inertia & $I$ & $8.0 \times 10^{-5}~\text{m}^4$ \\[0.5ex]
+tip tank mass (full) & $m_1$ & $45~\text{kg}$ \\[0.5ex]
+intermediate wing section mass & $m_2$ & $60~\text{kg}$ \\[0.5ex]
+engine and inner-wing mass & $m_3$ & $120~\text{kg}$ \\[0.5ex]
+fuselage mass & $m_4$ & $420~\text{kg}$ \\
+\hline
+\end{tabular}
+\end{table}
+
+\noindent Assuming $x_1 < x_2 < x_3 < \cdots < x_9$, solve for the first five mode shapes using MATLAB's \texttt{eig} solver.
+
+
+			
+\noindent \textbf{Solution:} 
+	
+\noindent The equations of motion for the simplified wing model can be constructed using a small number of intuitive, ``back-of-the-hand'' rules commonly used for lumped-parameter vibration systems. Each degree of freedom corresponds to the vertical translation of a single lumped mass, and the translational inertia associated with each coordinate is represented by placing the appropriate mass directly on the diagonal of the mass matrix. As a result, the mass matrix for this system is diagonal and may be written as
+\begin{equation}
+\mathbf{M} = \mathrm{diag}\left(m_1,\, m_2,\, m_3,\, m_2,\, m_4,\, m_2,\, m_3,\, m_2,\, m_1\right),
+\end{equation}
+where the term order reflects the symmetric distribution of masses along the wing span.
+
+Because all segments are assumed to have equal length and identical bending stiffness, each connection is assigned the same effective stiffness constant \(k\), which for a beam-like wing segment may be estimated as
+\begin{equation}
+k \approx \frac{3EI}{l^3}.
+\end{equation}
+In assembling the global stiffness matrix, each elastic element contributes positive terms to the diagonal entries of the connected coordinates and equal-magnitude negative terms to the corresponding off-diagonal entries. Interior masses therefore receive contributions from two adjacent segments, while the tip masses are connected by only a single elastic element. Applying these assembly rules yields a symmetric, banded stiffness matrix of the form
+\begin{equation}
+\mathbf{K} =
+\begin{bmatrix}
+k & -k & 0 & \cdots & 0 \\
+-k & 2k & -k & \ddots & \vdots \\
+0 & -k & 2k & \ddots & 0 \\
+\vdots & \ddots & \ddots & 2k & -k \\
+0 & \cdots & 0 & -k & k
+\end{bmatrix},
+\end{equation}
+where the pattern reflects the one-dimensional chain of elastic connections along the wing span.
+
+With the mass and stiffness matrices defined, the equations of motion for the nine-degree-of-freedom system may be written in the familiar matrix form
+\begin{equation}
+\mathbf{M}\ddot{\vec{x}} + \mathbf{K}\vec{x} = 0.
+\end{equation}
+To obtain the natural frequencies and mode shapes, a harmonic solution is assumed and substituted into the equations of motion. This substitution reduces the system of differential equations to an equivalent algebraic problem, which can be written as the generalized eigenvalue problem
+\begin{equation}
+\textbf{K}\textbf{v} = \vec{\lambda}\textbf{M}\textbf{v},
+\end{equation}
+which is solved to obtain the natural frequencies and corresponding mode shapes of the system.
+
+
+\lstset{%
+caption={MATLAB code for computing natural frequencies and mode shapes of the nine-degree-of-freedom wing model using the generalized eigenvalue problem.},
+label={lst:wing_modes},
+basicstyle=\ttfamily\footnotesize\bfseries,
+frame=tb,
+}
+
+\begin{lstlisting}
+% Number of degrees of freedom
+n = 9;
+
+% Lumped masses (kg), left tip to right tip
+m = [45,60,120,60,420,60,120,60,45]';
+M = diag(m);                     % mass matrix
+
+% Geometry and material properties
+l = 1.8;  E = 70e9;  I = 8.0e-5;
+k = 3*E*I/l^3;                    % element stiffness
+
+% Assemble global stiffness matrix
+K = zeros(n);
+for i = 1:n-1
+    K(i,i)     = K(i,i)     + k;
+    K(i+1,i+1) = K(i+1,i+1) + k;
+    K(i,i+1)   = K(i,i+1)   - k;
+    K(i+1,i)   = K(i+1,i)   - k;
+end
+
+% Solve generalized eigenvalue problem (K*v = lambda*M*v)
+[V,L] = eig(K,M);
+
+% Sort modes by increasing eigenvalue
+[lambda,idx] = sort(diag(L));
+V = V(:,idx);
+
+% Natural frequencies
+omega = sqrt(lambda);            % rad/s
+f = omega/(2*pi);                % Hz
+
+
+% Mass-normalize mode shapes
+for j = 1:n
+    V(:,j) = V(:,j)/sqrt(V(:,j)'*M*V(:,j));
+end
+\end{lstlisting}
+
+	
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{../figures/N310GMU_mode_shapes.png}
+	\caption{The unit vector normalized displacement of the mode shapes solved for using the generalized eigenvalue approach.}
+	\label{fig:N310GMU_mode_shapes}
+\end{figure}
+			
 \end{example}
 				
-	
+
+
+
+
+
 	\subsection{Modal Analysis}
 	
 	% Inman has S defined as a "modal matrix" and a "matrix of mode shapes", I belive his definition of S = M^(-1/2)P as a "matrix of mode shapes" is correct in the context of how I use it here. 
@@ -1503,7 +1587,7 @@ x2 = y(:, 3);
 	
 	\end{example}
 	
-\pagebreak
+
 		\subsection{Numerical Methods}
 		
 			Numerical methods can be used to solve the response of multi-degree of freedom system subjected to forced vibrations. While not the most computationally efficient method, the EOM is an ODE that can be solved directly while considering the initial directions to obtain the response of the system. 
@@ -1520,6 +1604,7 @@ x2 = y(:, 3);
 			\begin{figure}[H]
 				\centering
 				\includegraphics[width=\linewidth]{../figures/2-DOF-spring_mass_dashpot_horizontal_forced_ramp_function}
+				\vspace{-4ex}
 				\caption{2-DOF system with two masses and two independent confidante systems $x_1$ and $x_2$.}
 				\label{fig:2-DOF-spring_mass_dashpot_horizontal_forced_ramp_function}
 			\end{figure}
@@ -1623,7 +1708,6 @@ end
 				
 	\end{example}
 				
-
 
 
 \end{document}
