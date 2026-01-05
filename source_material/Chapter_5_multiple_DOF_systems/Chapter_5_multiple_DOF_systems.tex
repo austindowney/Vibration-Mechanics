@@ -1110,7 +1110,7 @@ This chapter introduces methodologies for solving vibration systems with more th
 	\pagebreak
 
 	\begin{example}
-	\textbf{Mode shapes for a 3-DOF system.}
+	\textbf{Mode Shapes for a 3-DOF System}
 	\label{ex:3_DOF-mode-shape}
 	
 	
@@ -1200,10 +1200,10 @@ This chapter introduces methodologies for solving vibration systems with more th
 	\pagebreak
 	
 	\begin{example}
-	\textbf{Mode shapes for a 9-DOF system.} \\
+	\textbf{Mode Shapes for a 9-DOF System} 
 	\label{ex:9_DOF-mode-shape}
 
-	\noindent The aircraft shown in Figure~\ref{fig:N310GMU} is a Cessna 310, a light twin-engine airplane with two tip-tanks that significantly alter the structural dynamics of the aircraft. In this example, the airplane is treated not as a complete aeronautical system, but the wing is investigated as an idealized structure whose primary purpose is to illustrate how multi-degree-of-freedom vibration models can be formulated and solved using ODE solvers.
+	\noindent The aircraft shown in Figure~\ref{fig:N310GMU} is a Cessna 310, a light twin-engine airplane with two tip-tanks that significantly alter the structural dynamics of the aircraft. In this example, the airplane is treated not as a complete aeronautical system, but the wing is investigated as an idealized structure to illustrate how multi-degree-of-freedom mode shapes can be formulated and solved for.
 
 	\begin{figure}[H]
 		\centering
@@ -1213,7 +1213,7 @@ This chapter introduces methodologies for solving vibration systems with more th
 	\end{figure}
 				
 
-\footnotetext[1]{This Cessna 310 (N310GMU) is located at Runway Park at Greenville Downtown Airport (GMU) in South Carolina. Once registered as N310G, it now displaying a unique 7-digit registration number as an advertisement for GMU Airport.}  	
+\footnotetext[1]{This Cessna 310 (N310GMU) is located at Runway Park at Greenville Downtown Airport (GMU) in South Carolina. Once registered as N310G, it now displaying a unique 7-digit registration number as an advertisement for the GMU Airport.}  	
 
 The wing is modeled as a simplified lumped-parameter system, shown schematically in the lower portion of Figure~\ref{fig:N310GMU}. The distributed mass and stiffness of the wing--fuselage structure are approximated using nine discrete masses connected by linear elastic elements. The resulting model has nine degrees of freedom, corresponding to symmetric mass locations along the wing span. All spanwise segments are assumed to have equal length and identical bending stiffness, and the masses are grouped into four classes ($m_1-m_4$) representing the tip tanks, engine and inner-wing sections, intermediate wing sections, and the fuselage. The geometric, material, and mass properties used in this example are shown in Table~\ref{tab:wing_props}.
 
