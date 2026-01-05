@@ -493,6 +493,7 @@
 	\begin{eqnarray}
 		\begin{bmatrix} m & 0  \\  0 & m \end{bmatrix}\begin{bmatrix} \ddot{x}_1 \\  \ddot{x}_2 \end{bmatrix} + \begin{bmatrix} 2k & -k  \\  -k & 2k \end{bmatrix}\begin{bmatrix} x_1 \\  x_2 \end{bmatrix} = \begin{bmatrix} 0 \\  0 \end{bmatrix}
 	\end{eqnarray}
+	\pagebreak
 	Substituting the values of the matrices $M$ and $K$ into this expression $\det(-\omega^2 M  + K) = 0$ yields: 
 	\begin{eqnarray}
 	\det\begin{bmatrix} -\omega^2 m + 2k & -k  \\  -k & -\omega^2 m + 2k \end{bmatrix}=0
@@ -1015,6 +1016,7 @@ u_2 = M_inv_sqr*v(:,2)
 		\label{fig:2-DOF-spring_mass_free}
 	\end{figure}
 
+\pagebreak
 \noindent \textbf{Solution:}
 
 	\noindent Assuming that $x_1$ displaces more than $x_2$, the equations of motion are:
@@ -1201,7 +1203,7 @@ This chapter introduces methodologies for solving vibration systems with more th
 	\textbf{Mode shapes for a 9-DOF system.} \\
 	\label{ex:9_DOF-mode-shape}
 
-	The aircraft shown in Figure~\ref{fig:N310GMU} is a Cessna 310, a light twin-engine airplane with two tip-tanks that significantly alter the structural dynamics of the aircraft. In this example, the airplane is treated not as a complete aeronautical system, but the wing is investigated as an idealized structure whose primary purpose is to illustrate how multi-degree-of-freedom vibration models can be formulated and solved using ODE solvers.
+	\noindent The aircraft shown in Figure~\ref{fig:N310GMU} is a Cessna 310, a light twin-engine airplane with two tip-tanks that significantly alter the structural dynamics of the aircraft. In this example, the airplane is treated not as a complete aeronautical system, but the wing is investigated as an idealized structure whose primary purpose is to illustrate how multi-degree-of-freedom vibration models can be formulated and solved using ODE solvers.
 
 	\begin{figure}[H]
 		\centering
@@ -1360,6 +1362,7 @@ end
 	\label{eq:generiq_MDOF_system}
 	\end{equation}
 	
+	\pagebreak
 	For the $n^{\text{th}}$-degree-of-freedom, the generalized eigenvalue problem can be simplified to: 
 	\begin{equation}
 	\omega_i^2 M \vec{v}_i = K  \vec{v}_i

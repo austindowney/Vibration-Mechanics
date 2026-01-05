@@ -128,6 +128,8 @@
 		X = \frac{f_0}{\omega_n^2-\omega^2}
 	\end{equation}				
 	
+
+
 	\begin{example}
 
 	\textbf{Visualizing Free and Forced Vibrations}
@@ -160,7 +162,7 @@
 	\end{example}
 	
 	
-	
+\pagebreak	
 	\begin{vibration_case_study}
 		\textbf{Wind Induced Loading}
 		
@@ -200,6 +202,8 @@
 		\includegraphics[]{../figures/resonance.png}
 		\caption{Temporal response of a system in resonance showing the enveloped maximum amplitude of displacement.}
 	\end{figure}				
+
+\pagebreak
 
 \begin{vibration_case_study}
 \textbf{Resonance and Sound Amplification in Pipe Organs}
@@ -266,6 +270,8 @@
 	\end{figure}			
 
 \end{example}
+
+\pagebreak
 
 \begin{example}
 	\textbf{Forced Undamped System Response}
@@ -338,6 +344,7 @@
 	\end{figure}
 \end{example}
 
+\pagebreak
 
 \begin{vibration_case_study}
 	\textbf{Bio-dynamic Induced Loading}
@@ -357,6 +364,7 @@
 \end{vibration_case_study}
 
 
+\pagebreak
 
 \subsection{Harmonic Excitation of Underdamped Systems}
 
@@ -488,7 +496,7 @@ B_s
 		x(t) = Ae^{-\zeta \omega_n t}\text{sin}(\omega_d t + \phi) +  X \text{cos}(\omega t - \phi_p)
 	\end{equation}				
 	
-	\pagebreak
+
 	\begin{note}
 	For larger values of $t$, the homogeneous solution approaches zero resulting in the particular solution becoming the total solution. Therefore, the particular solution is sometimes called the steady-state response, and the homogeneous solution is called the transient response. 
 	\end{note}
@@ -552,22 +560,30 @@ B_s
 		\begin{figure}[H]
 			\centering
 			\includegraphics[]{../figures/homogeneous_and_particular_solutions_in_resonance_a.png}
+			\vspace{-4ex}
 			\caption{Temporal responses for a underdamped system with $k=100$~N/m, $m=10$~kg,  $c=10$~kg/s, $F_0=1$~N, and $\omega = 8.162$~rad/s.}
+			\vspace{-3ex}
 		\end{figure}			
  
-		\noindent\textbf{Solution b):} Configuration b increases the forcing function $F_0$ to 3 N. This results in a similar response to configuration a but with a linearly scaled amplitude:
+		\noindent\textbf{Solution b):} 
+
+		\noindent Configuration b increases the forcing function $F_0$ to 3 N. This results in a similar response to configuration a but with a linearly scaled amplitude:
+		\vspace{-3ex}
 		\begin{figure}[H]
 			\centering
 			\includegraphics[]{../figures/homogeneous_and_particular_solutions_in_resonance_b.png}
+			\vspace{-3ex}
 			\caption{Temporal responses for a underdamped system with $k=100$~N/m, $m=10$~kg,  $c=10$~kg/s, $F_0=3$~N, and $\omega = 8.162$~rad/s.}
 		\end{figure}			
-		
-		\noindent\textbf{Solution c):}
+		\vspace{-1ex}
+
+		\noindent\textbf{Solution c):} 
 
 		\noindent  Now, using $\omega=3.162$~rad/sec we put the system into resonance as $\omega=\omega_n$. However, unlike the undamped system, the amplitude of the displacement is not unbounded as the damper absorbs energy from the system. Therefore, after about 7 seconds the system enters an equilibrium state where any additional increase in amplitude caused by the system entering into resonance is canceled out by the damping in the system as demonstrated in the plot below:
 		\begin{figure}[H]
 			\centering
 			\includegraphics[]{../figures/homogeneous_and_particular_solutions_in_resonance_c.png}
+			\vspace{-4ex}
 			\caption{Temporal responses for a underdamped system with $k=100$~N/m, $m=10$~kg,  $c=10$~kg/s, $F_0=3$~N, and $\omega = 3.162$.}
 		\end{figure}				
 	\end{example}	
