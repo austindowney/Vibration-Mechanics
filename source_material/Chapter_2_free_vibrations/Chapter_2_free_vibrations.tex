@@ -83,7 +83,7 @@
 
 			\subsubsection{Solve for the Natural Frequency ($\omega_\text{n}$) of the System }
 
-			Often, we with to directly compute the natural frequency of a system from its parameters. Take the derivative to get velocity:
+			Often, we wish to directly compute the natural frequency of a system from its parameters. Take the derivative to get velocity:
 			\begin{equation}
 				\dot{x}(t) = A\omega_\text{n}\text{cos}(\omega_\text{n} t + \phi)
 			\end{equation}
@@ -706,15 +706,17 @@
 			\begin{equation}
 				\lambda_{1,2} = -\zeta\omega_\text{n} \pm \omega_\text{n} \sqrt{\zeta^2-1}
 			\end{equation}
-			From this equation, it becomes clear that $\zeta$ determines whether the roots are complex or real, this, in turn, determines the nature of the response of the structure. Listing the possible responses we get:
+			From this equation, it becomes clear that $\zeta$ determines whether the roots are complex or real, this, in turn, determines the nature of the response of the structure. Table~\ref{table:damping_cases} lists the possible responses we get for various damping cases.
 			\begin{table}[h!]
 				\centering
+				\caption{Aspects of possible damping cases.}
+				\label{table:damping_cases}
 				\begin{tabular}{lccc}
 					\toprule
 					damping case & critical damping ratio & radicand & solutions  \\ \midrule
-					under damped &  $0<\zeta<1$ & $c^2-4km<0$ & complex conjugate pairs \\
+					underdamped &  $0<\zeta<1$ & $c^2-4km<0$ & complex conjugate pairs \\
 					critically damped & $\zeta=1$ & $c^2-4km=0$ & equal negative real numbers \\
-					over damped & $1<\zeta$  & $c^2-4km>0$ & distinct negative real numbers \\ \bottomrule
+					overdamped & $1<\zeta$  & $c^2-4km>0$ & distinct negative real numbers \\ \bottomrule
 				\end{tabular}
 			\end{table}
 			For each damping case, we will have a different solution to the problem. 
@@ -737,7 +739,7 @@
 			\begin{equation}
 				\omega_\text{d} = \omega_\text{n}\sqrt{1-\zeta^2}
 			\end{equation} 	
-			where $\omega_\text{d}$ is the \textbf{damped natural frequency}. Therefore, the equations become:
+			where $\omega_\text{d}$ is the ``damped natural frequency''. Therefore, the equations become:
 			\begin{equation}
 				\lambda_{1} = -\zeta\omega_\text{n} + \omega_\text{d}j
 			\end{equation} 			
@@ -853,7 +855,7 @@
 			\end{equation}	
 			The systems critical damping value:
 			\begin{equation}
-				c_{\text{cr}} = 2\sqrt{km}= 2\sqrt{k = 857.8 \cdot 49.2\times10^{-3}} = 12.993 \hspace{1ex}\text{kg/s}
+				c_{\text{cr}} = 2\sqrt{km}= 2\sqrt{857.8 \cdot 49.2\times10^{-3}} = 12.993 \hspace{1ex}\text{kg/s}
 			\end{equation}		
 			And the critical damping ratio:
 			\begin{equation}
@@ -861,7 +863,7 @@
 			\end{equation}				
 			This can be expressed as 60\% damped, this is an underdamped system, and the system will oscillate. Now we can calculate the damped frequency:
 			\begin{equation}
-				\omega_\text{d} = \omega_\text{n}\sqrt{1-\zeta^2} = \omega_\text{n}\sqrt{1-0.600^2} = 105.6 \hspace{1ex}\text{rad/s}
+				\omega_\text{d} = \omega_\text{n}\sqrt{1-\zeta^2} = 132\sqrt{1-0.600^2} = 105.6 \hspace{1ex}\text{rad/s}
 			\end{equation}		
 			Therefore, the system oscillates at 105.6 rad/sec or 16.81 Hz
 		\end{example}
@@ -1198,8 +1200,8 @@
 			\end{figure}
 			
 			\noindent\textbf{Solution:} 
-						
-			First, from the plot we can determine that $x_1=-9.5$ mm and $x_4=-1.8$ mm where $n=3$. Thereafter, we can solve for $\delta$:  
+
+			\noindent First, from the plot we can determine that $x_1=-9.5$ mm and $x_4=-1.8$ mm where $n=3$. Thereafter, we can solve for $\delta$:  
 			\begin{equation}
 				\delta = \frac{1}{3}\text{ln}\bigg(\frac{x_{\text{1}}}{x_{\text{4}}}\bigg) = \frac{1}{3}\text{ln}\bigg(\frac{-9.5}{-1.8}\bigg) = 0.554
 			\end{equation}						
