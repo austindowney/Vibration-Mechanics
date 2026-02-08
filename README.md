@@ -33,14 +33,13 @@ This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 Intern
 ## Citation
 
 Cite the publication as:
-@Article{Downey2024VibrationMechanicsPractical,    
+@Article{Downey2026VibrationMechanicsPractical,    
   author    = {Downey, Austin and Micheli, Laura},    
   title     = {Vibration Mechanics: A Practical Introduction for Mechanical, Civil, and Aerospace Engineers},    
-  year      = {2024},    
-  copyright = {Creative Commons Attribution Share Alike 4.0 International},    
-  doi       = {10.5281/ZENODO.12539013},    
+  year      = {2026},    
+  doi       = {10.31224/6182},    
   language  = {en},    
-  publisher = {Zenodo},    
+  publisher = {Open Engineering Inc},    
 }
 
 Cite the repository as:
