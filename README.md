@@ -6,11 +6,9 @@ An open-source textbook intended to cover the basics of mechanical vibrations. T
 <img src="source_material/figures/Martin_B-57_Canberra.png" alt="drawing" width="700"/>
 </p>
 
-A current PDF version of the text can be found in the releases tab of the GitHub page or by clicking <a href="https://github.com/austindowney/Vibration-Mechanics/blob/main/Vibration_Mechanics.pdf">here</a>.
-
-
 ## Published Version 
 The most recent published version can be found <a href="https://doi.org/10.31224/6182">here</a>.
+A current PDF version of the text (nightly build) can be found <a href="https://github.com/austindowney/Vibration-Mechanics/blob/main/Vibration_Mechanics.pdf">here</a>.
 
 ## Accompanying Video Lectures
 
