@@ -10,9 +10,7 @@ A current PDF version of the text can be found in the releases tab of the GitHub
 
 
 ## Published Version 
-The most recent published version can be found on Zenodo <a href="https://doi.org/10.5281/zenodo.12539014">here</a>.
-
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.12539014.svg)](https://doi.org/10.5281/zenodo.12539014)
+The most recent published version can be found <a href="https://doi.org/10.31224/6182">here</a>.
 
 ## Accompanying Video Lectures
 
