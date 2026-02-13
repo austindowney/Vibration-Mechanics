@@ -10,24 +10,24 @@
 	\setcounter{equation}{0}   
 	\renewcommand\theequation{\thesection.\arabic{equation}}
 
-	\section{Vibration Control}
+ \section{Vibration Control}
 
-Throughout this text, we have studied various aspects related to analyzing and modeling vibrating systems. Therefore, it becomes prudent to look at methods for reducing or eliminating unwanted vibrations. However, before vibrations in a system can be effectively reduced they must be better understood in terms of their effects on the system under study. For this reason, this chapter first introduces the vibration Nomograph, which is then followed by vibration isolation, absorption, and active suppression.  
+Throughout this text, we have studied various aspects related to analyzing and modeling vibrating systems. Therefore, it becomes prudent to look at methods for reducing or eliminating unwanted vibrations. However, before vibrations in a system can be effectively reduced, they must be better understood in terms of their effects on the system under study. For this reason, this chapter first introduces the vibration Nomograph, which is then followed by vibration isolation, absorption, and active suppression.  
 
-		\begin{vibration_case_study}
+  \begin{vibration_case_study}
 
-		\textbf{Vibration-Induced Loosening in Fasteners}
-	
+  \textbf{Vibration-Induced Loosening in Fasteners}
+ 
 \noindent In aerospace structures, vibration-induced loosening of fasteners highlights how frequency and amplitude interact. While bolt preload maintains the clamping force, high-frequency excitations (particularly when aligned with the resonant modes of the nut-bolt system) can trigger micro-slips at the thread interface, gradually reducing preload and risking self-loosening. To suppress these resonant responses, damping compounds such as epoxy are applied around the nut and washer. The epoxy does not ``hold'' the nut in place; instead, it dissipates vibratory energy and minimizes resonance-driven slip.
 Design standards account for vibration-induced loosening in critical structures, and the Vibration Nomograph discussed in this chapter is a common tool used for considering vibration during design.
 
-		
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=6.0in]{../figures/airbus_bulkhead}
-		\caption{Epoxy applied around nuts on an Airbus pressure-bulkhead assembly where the compound adds local damping and reduces high-frequency nut vibration, thereby limiting micro-slip at the thread interface and mitigating self-loosening.}
-	\end{figure}	
- 	
+  
+ \begin{figure}[H]
+  \centering
+  \includegraphics[width=6.0in]{../figures/airbus_bulkhead}
+  \caption{Epoxy applied around nuts on an Airbus pressure-bulkhead assembly where the compound adds local damping and reduces high-frequency nut vibration, thereby limiting micro-slip at the thread interface and mitigating self-loosening.}
+ \end{figure} 
+  
 \end{vibration_case_study}
 
 
@@ -41,7 +41,7 @@ Design standards account for vibration-induced loosening in critical structures,
 \end{figure}
 
 
-There exist various methods and standards for measuring and describing acceptable levels of vibrations in systems, these include ISO/AWI 2631 for the evaluation of human exposure to whole-body vibrations and ISO 4866 for the measurement and effects of vibrations on structures. A common way to present the acceptable limit of vibration is in a vibration nomograph.  A vibration nomograph is a simplified way to express the acceptable limits on a system while considering the displacement, velocity, acceleration, and frequency of a system. A typical nomograph with various limits is presented in figure \ref{fig:Vibration_nomograph}. 
+There exist various methods and standards for measuring and describing acceptable levels of vibrations in systems; these include ISO/AWI 2631 for the evaluation of human exposure to whole-body vibrations and ISO 4866 for the measurement and effects of vibrations on structures. A common way to present the acceptable limit of vibration is in a vibration nomograph.  A vibration nomograph is a simplified way to express the acceptable limits on a system while considering the displacement, velocity, acceleration, and frequency of a system. A typical nomograph with various limits is presented in Figure \ref{fig:Vibration_nomograph}. 
 
 A vibration nomograph is a logarithmic plot that allows us to easily express the relationships between displacement, velocity, acceleration, and frequency of a system. The vibration nomograph presented in figure \ref{fig:Vibration_nomograph} considers an undamped 1-DOF system with constant amplitude ($A$) experiencing harmonic motion that can be modeled as:
 \begin{equation}
@@ -76,7 +76,7 @@ Thereafter, the maximum values for velocity $v_\text{max}$ and acceleration $a_\
     a_\text{max} = -4\pi^2 f^2 A = -2 \pi f v_\text{max}
     \label{eq:a_max}
 \end{equation}
-by taking the natural log of both sides of equation \ref{eq:v_max} we obtain: 
+By taking the natural log of both sides of equation \ref{eq:v_max}, we obtain: 
 \begin{equation}
     \ln v_\text{max} = \ln(2\pi f) + \ln A
     \label{eq:ln_v_max} 
@@ -90,10 +90,10 @@ It can be seen that both of these expressions are linear.
 
 
 
-The nomograph sets the $x-$axis as frequency in Hz and the $y-$axis as velocity in mm/s. Equation \ref{eq:ln_v_max} tells us that For a constant amplitude of displacement ($A$), $\ln v_\text{max}$ is linearly proportional to $\ln (2 \pi f)$, at a rate of $2 \pi$. As the $x-$axis in a nomograph is frequency, measured in Hz and thereby accounting for the $2 \pi$, $\ln (2 \pi f)$ is a straight line with a positive slope of 1 with respect to the frequency axis (i.e. $x-$axis). Therefore, a line on the nomograph that represents a constant displacement is at a 45$^\circ$ angle from the $x$-axis. 
+The nomograph sets the $x-$axis as frequency in Hz and the $y-$axis as velocity in mm/s. Equation \ref{eq:ln_v_max} tells us that For a constant amplitude of displacement ($A$), $\ln v_\text{max}$ is linearly proportional to $\ln (2 \pi f)$, at a rate of $2 \pi$. As the $x-$axis in a nomograph is frequency, measured in Hz, and thereby accounting for the $2 \pi$, $\ln (2 \pi f)$ is a straight line with a positive slope of 1 with respect to the frequency axis (i.e., $x-$axis). Therefore, a line on the nomograph that represents a constant displacement is at a 45$^\circ$ angle from the $x$-axis. 
 
 
-For a constant value of velocity, ($v_\text{max}$), equation \ref{eq:ln_v_max_2} shows that acceleration ($\ln a_\text{max}$) is linearly proportional to $-\ln (2 \pi f)$, at a rate of $2 \pi$. Again, as the $x-$axis in a nomograph is frequency, measured in Hz, acceleration is represented by a straight line that varies with $- \ln(2\pi f)$, therefore, $\ln a_\text{max}$ is a straight line with the slope of -1. This is also represented by a line of constant acceleration set at a -45$^\circ$ angle from the $x$-axis. These equations are expressed in the vibration nomograph plot of figure \ref{fig:Vibration_nomograph} where each point on the plot represents a specific sinusoidal (harmonic) vibration for a 1-DOF system.  
+For a constant value of velocity, ($v_\text{max}$), equation \ref{eq:ln_v_max_2} shows that acceleration ($\ln a_\text{max}$) is linearly proportional to $-\ln (2 \pi f)$, at a rate of $2 \pi$. Again, as the $x-$axis in a nomograph is frequency, measured in Hz, acceleration is represented by a straight line that varies with $- \ln(2\pi f)$; therefore, $\ln a_\text{max}$ is a straight line with the slope of -1. This is also represented by a line of constant acceleration set at a -45$^\circ$ angle from the $x$-axis. These equations are expressed in the vibration nomograph plot of figure \ref{fig:Vibration_nomograph}, where each point on the plot represents a specific sinusoidal (harmonic) vibration for a 1-DOF system.  
 
 
 \subsection{Vibration Isolation}
@@ -101,12 +101,12 @@ For a constant value of velocity, ($v_\text{max}$), equation \ref{eq:ln_v_max_2}
 % Vibration isolation of electronics. 
 
 
-To mitigate vibrations in a system the ideal approach would be to limit the source of vibrations. However, this is not always applicable to the system you are considering. Therefore, isolating the system from vibrations is the next best step. One approach to this is to design systems around limiting the force and displacement transmissibility discussed prior; where both force and displacement transmissibility are considered \emph{isolation problems}.
+To mitigate vibrations in a system, the ideal approach would be to limit the source of vibrations. However, this is not always applicable to the system you are considering. Therefore, isolating the system from vibrations is the next best step. One approach to this is to design systems around limiting the force and displacement transmissibility discussed prior, where both force and displacement transmissibility are considered \emph{isolation problems}.
 
-One way to do this is to track the \emph{transmissibility ratio} which is denoted as T.R. and defines the ratio of the magnitude of the transmitted $(F_T)$ to applied force $(F_0)$. 
+One way to do this is to track the \emph{transmissibility ratio}, which is denoted as T.R. and defines the ratio of the magnitude of the transmitted $(F_T)$ to applied force $(F_0)$. 
 
 \begin{equation}
-	\text{T.R.} = \frac{F_T}{F_0} = \sqrt{\frac{1+(2 \zeta r )^2}{(1-r^2)^2+(2 \zeta r )^2}}
+ \text{T.R.} = \frac{F_T}{F_0} = \sqrt{\frac{1+(2 \zeta r )^2}{(1-r^2)^2+(2 \zeta r )^2}}
 \end{equation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -115,20 +115,20 @@ One way to do this is to track the \emph{transmissibility ratio} which is denote
 
 
 
-		\begin{vibration_case_study}
+  \begin{vibration_case_study}
 
-		\textbf{Vibration Control Through Better Design}
-	
-	\noindent Vibration mitigation can be achieved through better system-level design. For example, early rubber tires consisted of uniform tread patterns, but as cars became faster the noise, vibration, and harshness (NVH) generated by the tire would be constrained around a single frequency; thereby amplifying NVH felt by the driver and passengers. This challenge led to the development of tires with irregular tread patterns to spread the energy created at the road/tire interface out over a wider bandwidth of excitation; thereby reducing NVH felt and heard by the passengers.   
-		
-	\begin{figure}[H]
-		\vspace{-2ex}
-		\centering
-		\includegraphics[width=6.0in]{../figures/tire_tread_patent.png}
-		\vspace{-3ex}
-		\caption{Illustration for the 1935 US patent which proposed the use of irregular tread patterns to control the pitch of road noise\protect\footnotemark[1].}
-	\end{figure}	
-	\footnotetext[1]{US patent number US2006197A, inventors Elliott S Ewart and Arthur W. Bull; Public Domain} 	
+  \textbf{Vibration Control Through Better Design}
+ 
+ \noindent Vibration mitigation can be achieved through better system-level design. For example, early rubber tires consisted of uniform tread patterns, but as cars became faster, the noise, vibration, and harshness (NVH) generated by the tire would be constrained around a single frequency, thereby amplifying NVH felt by the driver and passengers. This challenge led to the development of tires with irregular tread patterns to spread the energy created at the road/tire interface out over a wider bandwidth of excitation; thereby reducing NVH felt and heard by the passengers.   
+  
+ \begin{figure}[H]
+  \vspace{-2ex}
+  \centering
+  \includegraphics[width=6.0in]{../figures/tire_tread_patent.png}
+  \vspace{-3ex}
+  \caption{Illustration for the 1935 US patent which proposed the use of irregular tread patterns to control the pitch of road noise\protect\footnotemark[1].}
+ \end{figure} 
+ \footnotetext[1]{US patent number US2006197A, inventors Elliott S Ewart and Arthur W. Bull; Public Domain}  
 \end{vibration_case_study}
 
 
@@ -142,13 +142,13 @@ One way to do this is to track the \emph{transmissibility ratio} which is denote
 
 \subsection{Vibration Absorption}
 
-Vibration absorbers, also termed dynamic vibration absorbers, are a class of mechanical devices that seek to reduce unwanted vibrations in a system. In contrast to a traditional dash-pot style damper, these systems seek to ``redirect'' the vibrations from the system to another mass connected to the system. In this way, the main system is protected from the bandwidth of vibrations that the vibration absorbers are tuned for. As the vibration absorbers must be tuned for the system, it is generally limited to devices that operate at a fixed frequency like industrial equipment or cables suspended in the air and subjected to wind loading. Figure~\ref{fig:vibration_absorbers} presents a Stockbridge and a Dogbone damper designed to remove certain bandwidths of excitation from wind-excited systems like cables.
+Vibration absorbers, also termed dynamic vibration absorbers, are a class of mechanical devices that seek to reduce unwanted vibrations in a system. In contrast to a traditional dash-pot style damper, these systems seek to ``redirect'' the vibrations from the system to another mass connected to the system. In this way, the main system is protected from the bandwidth of vibrations that the vibration absorbers are tuned for. As the vibration absorbers must be tuned for the system, it is generally limited to devices that operate at a fixed frequency, like industrial equipment or cables suspended in the air and subjected to wind loading. Figure~\ref{fig:vibration_absorbers} presents a Stockbridge and a Dogbone damper designed to remove certain bandwidths of excitation from wind-excited systems like cables.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=6.5in]{../figures/vibration_absorbers}
-	\vspace{-4ex}
-    \caption{Vibration absorbers deployed on wind excited cables showing: (a) a Stockbridge damper mounted on a rigid bus conductor in an electrical substation, and; (b) a dogbone damper on a suspender cable of a suspension bridge\protect\footnotemark[1].}
+ \vspace{-4ex}
+    \caption{Vibration absorbers deployed on wind-excited cables showing: (a) a Stockbridge damper mounted on a rigid bus conductor in an electrical substation, and (b) a dogbone damper on a suspender cable of a suspension bridge\protect\footnotemark[1].}
     \label{fig:vibration_absorbers}
 \end{figure}
 \footnotetext[1]{``Dogbone dampers on the road-support cables of the Severn Bridge'' by Bassaar  CC BY-SA 4.0}  
@@ -157,19 +157,19 @@ Vibration absorbers, also termed dynamic vibration absorbers, are a class of mec
 \subsubsection{Vibration Absorption for Undamped Systems}
 \label{sec:Vibration_Absorption_for_Undamped_Systems}
 
-Vibration absorbers are most often designed to shift the resonance frequency of the first mode of the system away from the expected excitation frequency. This is done by adding an additional degree-of-freedom in the form of a mass (the vibration absorber) connected to the system with a spring to alter the natural frequency of the combined system away from the original excitation frequency. Dashpots may also be added in parallel to the spring element if additional energy dissipation is needed beyond that provided by the original system. 
+Vibration absorbers are most often designed to shift the resonance frequency of the first mode of the system away from the expected excitation frequency. This is done by adding an additional degree of freedom in the form of a mass (the vibration absorber) connected to the system with a spring to alter the natural frequency of the combined system away from the original excitation frequency. Dashpots may also be added in parallel to the spring element if additional energy dissipation is needed beyond that provided by the original system. 
 
 \begin{figure}[H]
     \centering
-	\vspace{-2ex}
+ \vspace{-2ex}
     \includegraphics[]{../figures/vibration_absorber_spring_mass.png}
-	\vspace{-2ex}
+ \vspace{-2ex}
     \caption{A vibration absorber ($m_2$) for mitigating unwanted dynamics in a device ($m_1$).}
-	\vspace{-2ex}
+ \vspace{-2ex}
     \label{fig:vibration_absorber_spring_mass}
 \end{figure}
 
-The tuning of a 2-DOF system can be done by setting the displacement of the mass to be controlled to zero and solving for the mass and stiffness of the vibration absorber. Consider the system presented in figure~\ref{fig:vibration_absorber_spring_mass}, here $m_1$ and $k_1$ are the mass and stiffness of the system while $m_2$ and $k_2$ are the mass and stiffness of the vibration absorber. A good assumption to make when designing a vibration absorber is that the mass of the vibration absorber should be between 1\% and 5\% of the mass of the system to be damped. Therefore, for this case let $m_1$ = 20 kg, $m_2$ = 1 kg, and $k_1$ = 20 kN. Assuming a sinusoidal input where $F_0 = 1$ kN, the equations of motion are:
+The tuning of a 2-DOF system can be done by setting the displacement of the mass to be controlled to zero and solving for the mass and stiffness of the vibration absorber. Consider the system presented in figure~\ref{fig:vibration_absorber_spring_mass}, where $m_1$ and $k_1$ are the mass and stiffness of the system, while $m_2$ and $k_2$ are the mass and stiffness of the vibration absorber. A good assumption to make when designing a vibration absorber is that the mass of the vibration absorber should be between 1\% and 5\% of the mass of the system to be damped. Therefore, for this case let $m_1$ = 20 kg, $m_2$ = 1 kg, and $k_1$ = 20 kN. Assuming a sinusoidal input where $F_0 = 1$ kN, the equations of motion are:
 \begin{equation}
 m_1\ddot{x_1} + k_1 x_1 + k_2(x_1-x_2)  = F_0 \sin (\omega t)
 \end{equation}
@@ -193,7 +193,7 @@ Next, the natural frequency of $m_1$ ($\omega_1$) can be solved for as $\omega_1
 \begin{equation}
 k_2 = m_2 \omega^2
 \end{equation}
-note that this will force the frequency of the tuned vibration absorber to match that of the system, therefore $\omega_1 = \omega_2 = \sqrt{k_2 / m_2}$. Next, normalizing the input force $F_0$ by the stiffness of the main system $k_1$ yields:
+Note that this will force the frequency of the tuned vibration absorber to match that of the system, therefore $\omega_1 = \omega_2 = \sqrt{k_2 / m_2}$. Next, normalizing the input force $F_0$ by the stiffness of the main system $k_1$ yields:
 \begin{equation}
 \delta_{\text{st}} = \frac{F_0}{k_1}
 \end{equation}
@@ -210,7 +210,7 @@ Figure~\ref{fig:vibration_absorber_undamped_results} reports the normalized disp
 \begin{equation}
 X_2 = -\frac{k_1}{k_2}\delta_{\text{st}} = -\frac{F_0}{k_2}
 \end{equation}
-or 1 m using the given parameters. Therefore, the mass and stiffness values of the vibration absorber should be selected based on the allowable travel of the vibration absorber (i.e. $X_2$), among other factors. Moreover, from this equation it can be seen the force exerted by the second mass operates in the direction opposite the original force ($-F_0 - k_2 X_2$), thereby canceling it. Lastly, note that the addition of the vibration absorber creates two resonate frequencies of the system, termed $\Omega_1$ and $\Omega_2$. These resonate frequencies represent the roots of the system and care should be taken to limit the time the system spends at these frequencies (i.e. on startup). The locations of these roots can be solved analytically by setting the denominators of equation \ref{eq:X1_norm_displacement} to zero.
+or 1 m using the given parameters. Therefore, the mass and stiffness values of the vibration absorber should be selected based on the allowable travel of the vibration absorber (i.e., $X_2$), among other factors. Moreover, from this equation, it can be seen that the force exerted by the second mass operates in the direction opposite the original force ($-F_0 - k_2 X_2$), thereby canceling it. Lastly, note that the addition of the vibration absorber creates two resonant frequencies of the system, termed $\Omega_1$ and $\Omega_2$. These resonant frequencies represent the roots of the system, and care should be taken to limit the time the system spends at these frequencies (i.e., on startup). The locations of these roots can be solved analytically by setting the denominators of equation \ref{eq:X1_norm_displacement} to zero.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  \todo{Add text on the mass and frequency ratios $\mu$ and $\beta$.}
@@ -219,7 +219,7 @@ or 1 m using the given parameters. Therefore, the mass and stiffness values of t
 \begin{figure}[H]
     \centering
     \includegraphics[width=6.0in]{../figures/vibration_absorber_undamped_results.png}
-	\vspace{-4ex}
+ \vspace{-4ex}
     \caption{Frequency response of the undamped system with and without the vibration absorber.}
     \label{fig:vibration_absorber_undamped_results}
 \end{figure}
@@ -228,7 +228,7 @@ or 1 m using the given parameters. Therefore, the mass and stiffness values of t
 
 \subsubsection{Vibration Absorption for Damped Systems}
 
-As shown in section~\ref{sec:Vibration_Absorption_for_Undamped_Systems} and figure~\ref{fig:vibration_absorber_undamped_results} in particular, vibration absorption for undamped systems only shift the resonance response from part of the spectrum to another. However, it is communally desired to limit the resonance response of the system while also absorbing vibration energy at one specific frequency. While not derived here, the frequency response of a damped vibration absorber like that shown in figure~\ref{fig:vibration_absorber_spring_mass} (but with the addition of a damper) can be expressed as the dimensionless amplitude of the response of the primary mass: 
+As shown in section~\ref{sec:Vibration_Absorption_for_Undamped_Systems} and figure~\ref{fig:vibration_absorber_undamped_results} in particular, vibration absorption for undamped systems only shifts the resonance response from one part of the spectrum to another. However, it is commonly desired to limit the resonance response of the system while also absorbing vibration energy at one specific frequency. While not derived here, the frequency response of a damped vibration absorber like that shown in figure~\ref{fig:vibration_absorber_spring_mass} (but with the addition of a damper) can be expressed as the dimensionless amplitude of the response of the primary mass: 
 
 \begin{equation}
 \frac{X_1}{\delta_{\text{st}}} = \sqrt{\frac{(2 \zeta r)^2 + \big(r^2 - \beta^2 \big)^2 }{\big(2 \zeta r \big)^2 \big(r^2 -1 +\mu r^2 \big)^2 + \big(\mu r^2 \beta^2 - (r^2 -1)(r^2 -\beta^2)\big)^2} }
@@ -242,14 +242,14 @@ which leads to a similar expression for the frequency of the vibration absorber 
 \begin{equation}
 \zeta = \frac{c}{2 m_2 \omega_1}
 \end{equation}
-where $c$ is the damping value of the added damper. Again, we define $r=\omega / \omega_1$ to create a variable of the driving frequency to the frequency of the system. Figure~\ref{fig:vibration_absorber_damped_results} shows how the selection of the four design variables $[\mu, \; \beta, \; r, \; \zeta]$ results in different spreads of the response of the primary system mass. As the mixed damping ratio increases, the response of the system converges on that of a system without a vibration absorber as the system mass and vibration absorber are more tightly coupled. 
+where $c$ is the damping value of the added damper. Again, we define $r=\omega / \omega_1$ to create a variable of the driving frequency to the frequency of the system. Figure~\ref{fig:vibration_absorber_damped_results} shows how the selection of the four design variables $[\mu, \; \beta, \; r, \; \zeta]$ results in different spreads of the response of the primary system mass. As the mixed damping ratio increases, the response of the system converges on that of a system without a vibration absorber, as the system mass and vibration absorber are more tightly coupled. 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=6.2in]{../figures/vibration_absorber_damped_results.png}
-	\vspace{-4ex}
+ \vspace{-4ex}
     \caption{Frequency response of a 1-DOF system with various damped vibration absorbers.}
-	\vspace{-4ex}
+ \vspace{-4ex}
     \label{fig:vibration_absorber_damped_results}
 \end{figure}
 
@@ -258,41 +258,41 @@ where $c$ is the damping value of the added damper. Again, we define $r=\omega /
 
 \textbf{Tuned Mass Dampers in Civil Structures}
 
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=5in]{../figures/Taipei_101_with_damper}
-		\caption{Illustration of Taipei 101's main tuned mass damper. \protect\footnotemark[1]}
-	\end{figure}
-	
-	A tuned mass dampers (TMD), also known as a harmonic absorber or seismic damper, are devices that are designed into a structure to mitigate structural vibration. The mass is typically a block of steel or concrete and is mounted on suspended cables to create a pendulum and damped in relation to the structure. By tuning the oscillating frequency of the damping system to be near the same natural frequency of the structure, energy is transferred to the mass and extracted through the dampers. Thereby reducing vibration which prevents discomfort or damage. While discussed here in the context of tall buildings, tuned mass dampers are also frequently found in automobile components and power transmission lines.	
-	
-\footnotetext[1]{Adapted from Someformofhuman, CC BY-SA 4.0 $<$https://creativecommons.org/licenses/by-sa/4.0$>$, via Wikimedia Commons} 	
+ \begin{figure}[H]
+  \centering
+  \includegraphics[width=5in]{../figures/Taipei_101_with_damper}
+  \caption{Illustration of Taipei 101's main tuned mass damper. \protect\footnotemark[1]}
+ \end{figure}
+ 
+ Tuned mass dampers (TMD), also known as a harmonic absorber or seismic damper, are devices that are designed into a structure to mitigate structural vibration. The mass is typically a block of steel or concrete and is mounted on suspended cables to create a pendulum and damped in relation to the structure. By tuning the oscillating frequency of the damping system to be near the same natural frequency of the structure, energy is transferred to the mass and extracted through the dampers. Thereby reducing vibration, which prevents discomfort or damage. While discussed here in the context of tall buildings, tuned mass dampers are also frequently found in automobile components and power transmission lines. 
+ 
+\footnotetext[1]{Adapted from Someformofhuman, CC BY-SA 4.0 $<$https://creativecommons.org/licenses/by-sa/4.0$>$, via Wikimedia Commons}  
 \end{vibration_case_study}
 \vspace{-1ex}
 
 \pagebreak
 \subsection{Active Vibration Suppression}
 
-Vibrations in systems can be mitigated through a number of active systems; typically it's easiest to consider this as an actuator that adds energy to the system at the correct time to cancel out vibrations. 
+Vibrations in systems can be mitigated through a number of active systems; typically, it's easiest to consider this as an actuator that adds energy to the system at the correct time to cancel out vibrations. 
 
 \subsubsection{Metrics for Vibration Control}
 
 
 There are various performance indicators that one can use to judge the performance of an active control scheme. They depend on the system order (1\textsuperscript{st}, 2\textsuperscript{nd}) and the excitation experienced by the system. For simplicity in this introductory text, we will define four performance indicators subjected to a step response, each shown in figure~\ref{fig:2nd_order_performance_indicators}. The performance indicators are:
 \begin{itemize}[itemsep=0.25ex,topsep=0.25ex]
-	%\item rise time $ \rightarrow t_\text{r}$
-	\item peak time  ($t_\text{p}$) is the time to the first peak.
-	\item peak value  ($x_\text{p}$) is the maximum value experiences by the system
-	\item settling time ($t_\text{s}$) is the time it takes the system to get within an error ($\pm \epsilon \%$) of the steady-state displacement ($x_{ss}$) and stay there.
-	% \item delay time  $ \rightarrow t_\text{d}$
-	\item max percentage overshoot ($M_\text{p}$) is defined as $M_p = ( {x_p} / {x_{ss}}-1 ) \cdot 100$.
+ %\item rise time $ \rightarrow t_\text{r}$
+ \item peak time  ($t_\text{p}$) is the time to the first peak.
+ \item peak value  ($x_\text{p}$) is the maximum value experiences by the system
+ \item settling time ($t_\text{s}$) is the time it takes the system to get within an error ($\pm \epsilon \%$) of the steady-state displacement ($x_{ss}$) and stay there.
+ % \item delay time  $ \rightarrow t_\text{d}$
+ \item max percentage overshoot ($M_\text{p}$) is defined as $M_p = ( {x_p} / {x_{ss}}-1 ) \cdot 100$.
 \end{itemize}
 
 \begin{figure}[H]
-	\centering
-	\includegraphics[width=5.2in]{../figures/2nd_order_performance_indicators}
-	\caption{Graphical representation of key 2\textsuperscript{nd} order performance indicators}
-	\label{fig:2nd_order_performance_indicators}
+ \centering
+ \includegraphics[width=5.2in]{../figures/2nd_order_performance_indicators}
+ \caption{Graphical representation of key 2\textsuperscript{nd} order performance indicators}
+ \label{fig:2nd_order_performance_indicators}
 \end{figure}
 
 
@@ -310,9 +310,9 @@ Active vibration control adds energy to the system in order to mitigate the vibr
 
 \begin{figure}[H]
     \centering
-	\vspace{-2ex}
+ \vspace{-2ex}
     \includegraphics[width=5in]{../figures/active_vibration_control_FBD.png}
-	\vspace{-2ex}
+ \vspace{-2ex}
     \caption{Active vibration control system showing: (a) the system with a feedback loop that takes a signal from the sensor, converts it to a control signal, and drives the actuator; and (b) the free body diagram.}
     \label{fig:active_vibration_control_FBD}
 \end{figure}
@@ -322,11 +322,11 @@ Adding the control force to the EOM for the 1-DOF system presented in figure \re
 \begin{equation}
 m \ddot{x} + c \dot{x} + kx = F(t) = f + f_u
 \end{equation}
-A common method for providing control for vibration suppression is called position and derivative control or PD-control. A PD-controller is a state-variable feedback controller as it uses velocity and displacement obtained from the measured acceleration, assuming that the acceleration is properly integrated. PD-control measures the position and velocity of the mass and uses these to compute the control force needed to mitigate the vibration to an acceptable level. A simple way to code a PD-controller is to provide a control force proportional to the displacement velocity (derivative of displacement) of the mass such that:
+A common method for providing control for vibration suppression is called position and derivative control, or PD-control. A PD-controller is a state-variable feedback controller as it uses velocity and displacement obtained from the measured acceleration, assuming that the acceleration is properly integrated. PD-control measures the position and velocity of the mass and uses these to compute the control force needed to mitigate the vibration to an acceptable level. A simple way to code a PD-controller is to provide a control force proportional to the displacement velocity (derivative of displacement) of the mass, such that:
 \begin{equation}
 f_u = -g_1x - g_2 \dot{x}
 \end{equation}
-where $g_1$ and $g_2$ are the proportional gains of the systems. The control gains can be constants determined by the designer or variables updated through time by an algorithm. Here we will consider the gains to be constant, therefore, the EOM for the closed-loop system in figure \ref{fig:active_vibration_control_FBD} becomes:
+where $g_1$ and $g_2$ are the proportional gains of the systems. The control gains can be constants determined by the designer or variables updated through time by an algorithm. Here we will consider the gains to be constant; therefore, the EOM for the closed-loop system in figure \ref{fig:active_vibration_control_FBD} becomes:
 \begin{equation}
 m \ddot{x} + (c + g_2) \dot{x} + (k + g_1)x = F(t) = f 
 \end{equation}
@@ -343,24 +343,24 @@ and the effective damping ratio of the system
 \pagebreak
 
 \begin{review}
-	\label{sec:control_systems_review}
+ \label{sec:control_systems_review}
 
-		\textbf{Nicolas Minorsky and the Need for Better Control}
-	
-		\noindent Continuous control systems have been widely used for centuries. For example, consider that the centrifugal governor which uses spinning weights was used by Christiaan Huygens in the 1600s in the Netherlands to regulate the gap between millstones in windmills or by James Watt who famously linked a stem regulator to a centrifugal governor to control steam turbines. 
+  \textbf{Nicolas Minorsky and the Need for Better Control}
+ 
+  \noindent Continuous control systems have been widely used for centuries. For example, consider that the centrifugal governor, which uses spinning weights, was used by Christiaan Huygens in the 1600s in the Netherlands to regulate the gap between millstones in windmills or by James Watt, who famously linked a stem regulator to a centrifugal governor to control steam turbines. 
 
-		Arguably, the Russian American engineer Nicolas Minorsky was the first to develop the theoretical analysis for the three-term control we now call PID. This was done in 1922 while he was researching and designing automatic ship steering for the US Navy. He based his work on watching how a ship's helmsman responds to wave loading on a ship, with a delayed input to the helm that not only considered the current ship course but also past errors and the desired rate of change for the ship. For a helmsman, the goal is stability, not absolute control, which simplifies how one thinks about the challenge of control.
-		
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=6in]{../figures/PID_Nicolas_Minorsky_and_USS_New_Mexico}
-		\caption{Historical perspective of PID control showing: (a) Portrait of Nicolas Minorsky \protect\footnotemark[1] and (b) the battleship USS New Mexico (BB-40) of the United States Navy which was the first to implement PID control in its steering \protect\footnotemark[2]. }
-		\label{fig:PID_Nicolas_Minorsky_and_USS_New_Mexico}
-	\end{figure}
+  Arguably, the Russian-American engineer Nicolas Minorsky was the first to develop the theoretical analysis for the three-term control we now call PID. This was done in 1922 while he was researching and designing automatic ship steering for the US Navy. He based his work on watching how a ship's helmsman responds to wave loading on a ship, with a delayed input to the helm that not only considered the current ship course but also past errors and the desired rate of change for the ship. For a helmsman, the goal is stability, not absolute control, which simplifies how one thinks about the challenge of control.
+  
+ \begin{figure}[H]
+  \centering
+  \includegraphics[width=6in]{../figures/PID_Nicolas_Minorsky_and_USS_New_Mexico}
+  \caption{Historical perspective of PID control showing: (a) Portrait of Nicolas Minorsky \protect\footnotemark[1] and (b) the battleship USS New Mexico (BB-40) of the United States Navy, which was the first to implement PID control in its steering \protect\footnotemark[2]. }
+  \label{fig:PID_Nicolas_Minorsky_and_USS_New_Mexico}
+ \end{figure}
 
-	\footnotetext[1]{Peter Minorsky, grandson of Nicolas Minorsky, CC BY-SA 1.0 $<$https://creativecommons.org/licenses/by-sa/1.0$>$, via Wikimedia Commons} 
-	\footnotetext[2]{U.S. Navy, Public domain, via Wikimedia Commons} 
-	
+ \footnotetext[1]{Peter Minorsky, grandson of Nicolas Minorsky, CC BY-SA 1.0 $<$https://creativecommons.org/licenses/by-sa/1.0$>$, via Wikimedia Commons} 
+ \footnotetext[2]{U.S. Navy, Public domain, via Wikimedia Commons} 
+ 
 \end{review}
 
 
@@ -368,30 +368,30 @@ and the effective damping ratio of the system
 
 \subsubsection{Proportional-Integral-Derivative (PID) Control}
 
-Proportional-Integral-Derivative (PID) Control is a three-term controller that employs feedback that is widely used in continuous control systems, including for the control of structural systems. A PID controller seeks to minimize the measured error value $e(t)$ between a desired setpoint (SP) and a measured process variable (PV) by applying corrections based on the proportional ($P$), integral ($I$), and derivative ($D$) terms (denoted P, I, and D respectively), from which it gets its name.
+Proportional-Integral-Derivative (PID) Control is a three-term controller that employs feedback and is widely used in continuous control systems, including for the control of structural systems. A PID controller seeks to minimize the measured error value $e(t)$ between a desired setpoint (SP) and a measured process variable (PV) by applying corrections based on the proportional ($P$), integral ($I$), and derivative ($D$) terms (denoted P, I, and D respectively), from which it gets its name.
 
 \begin{figure}[H]
-	\centering
-	\includegraphics[]{../figures/PID_controller.png}
-	\caption{Generalized PID controller for a system with feedback, where $r(t)$ is the desired setpoint (SP) and $y(t)$ is the measured process value (PV).}
-	\label{fig:PID_controller}
+ \centering
+ \includegraphics[]{../figures/PID_controller.png}
+ \caption{Generalized PID controller for a system with feedback, where $r(t)$ is the desired setpoint (SP) and $y(t)$ is the measured process value (PV).}
+ \label{fig:PID_controller}
 \end{figure}
 
 The overall control equation is defined as
 \begin{equation}
-	u(t) = K_\text{p} e(t) + K_\text{i} \int_0^t e(\tau) \,\mathrm{d}\tau + K_\text{d} \frac{\mathrm{d}e(t)}{\mathrm{d}t}
+ u(t) = K_\text{p} e(t) + K_\text{i} \int_0^t e(\tau) \,\mathrm{d}\tau + K_\text{d} \frac{\mathrm{d}e(t)}{\mathrm{d}t}
 \end{equation}
 where $K_\text{p}$, $K_\text{i}$, and $K_\text{d}$ are non-negative coefficients for the proportional, integral, and derivative terms, respectively. The PID controller is diagrammed in figure~\ref{fig:PID_controller} for a system with feedback control, such as that shown in figure~\ref{fig:active_vibration_control_FBD}. Moreover, in the Laplace-derived $s$ domain, the transfer function of the PID controller is defined as
 \begin{equation}
-	\Laplace{s} = K_\text{p} + \frac{K_\text{i}}{s} + K_\text{d}s
+ \Laplace{s} = K_\text{p} + \frac{K_\text{i}}{s} + K_\text{d}s
 \end{equation}
 where $s$ is the complex frequency. A temporal response for the 1-DOF shown in figure~\ref{fig:active_vibration_control_FBD} when subjected to a step response at 1 second and controlled with a PID controller is reported in figure~\ref{fig:PID_temporal_responses}.
 
 \begin{figure}[H]
-	\centering
-	\includegraphics[]{../figures/PID_temporal_responses.png}
-	\caption{Response for a 1-DOF system controlled with a PID, showing: (a) system response and the step function input, and (b) the controller response imposed on the system to obtain such responses.}
-	\label{fig:PID_temporal_responses}
+ \centering
+ \includegraphics[]{../figures/PID_temporal_responses.png}
+ \caption{Response for a 1-DOF system controlled with a PID, showing: (a) system response and the step function input, and (b) the controller response imposed on the system to obtain such responses.}
+ \label{fig:PID_temporal_responses}
 \end{figure}
 
 

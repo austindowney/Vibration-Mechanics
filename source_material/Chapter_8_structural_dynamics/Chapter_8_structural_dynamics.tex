@@ -12,44 +12,43 @@
 	\renewcommand\theequation{\thesection.\arabic{equation}}	
 	
 	\section{Structural Dynamics}	
-
-The dynamic response of civil infrastructures, including buildings, bridges, and towers, can be studied by applying fundamental vibrations concepts studied in the previous chapters. 
-	
-	\subsection{Single-story frame}
-
-Let's start by considering the single-story frame shown in figure~\ref{fig:one_story_frame_example} (a) in free vibration (no external load is applied to the structure). The frame has height $H$ and bay width $L$. As shown in figure~\ref{fig:one_story_frame_example}, the frame consists of two columns with a modulus of elasticity $E$ and moment of inertia (second moment of the cross-sectional area) $I$. The columns are fixed at the base. The frame in figure~\ref{fig:one_story_frame_example} (a) can be modeled as a single-degree of freedom (SDOF) system under the following assumptions:
+The dynamic response of civil infrastructures, including buildings, bridges, and towers, can be studied by applying fundamental vibration concepts studied in the previous chapters. 
+ 
+ \subsection{Single-story frame}
+\label{sec:Single-story frame}
+Let's start by considering the single-story frame shown in figure~\ref{fig:one_story_frame_example} (a) in free vibration (no external load is applied to the structure). The frame has height $H$ and bay width $L$. As shown in figure~\ref{fig:one_story_frame_example}, the frame consists of two columns with a modulus of elasticity $E$ and moment of inertia (second moment of the cross-sectional area) $I$. The columns are fixed at the base. The frame in figure~\ref{fig:one_story_frame_example} (a) can be modeled as a single-degree-of-freedom (SDOF) system under the following assumptions:
 
 \begin{itemize}
-	\item Shear building: flexible columns ($EI \neq 0$), beam infinitely rigid ($EI_b$ = $\infty$), axial deformations of beams and columns negligible ($EA$ = 0);
-	\item Lumped mass system: floor-mass concentrated at the floor level.
+ \item Shear building: flexible columns ($EI \neq 0$), beam infinitely rigid ($EI_b$ = $\infty$), axial deformations of beams and columns negligible ($EA$ = 0);
+ \item Lumped mass system: floor-mass concentrated at the floor level.
 \end{itemize}
 
-Figure~\ref{fig:one_story_frame_example} (b) illustrates a SDOF with mass $m$ and stiffness $k$ that can be used to model the dynamic behavior of the single-story frame considering no damping ($\zeta$ = 0). 
+Figure~\ref{fig:one_story_frame_example} (b) illustrates an SDOF with mass $m$ and stiffness $k$ that can be used to model the dynamic behavior of the single-story frame, considering no damping ($\zeta$ = 0). 
 
 \begin{figure}[H]
-	\centering
-	\includegraphics{../figures/Single_story_frame.png}
-	\caption{(a) Single story frame; (b) undamped single degree of freedom system.}
-	\label{fig:one_story_frame_example}
+ \centering
+ \includegraphics{../figures/Single_story_frame.png}
+ \caption{(a) Single story frame; (b) undamped single degree of freedom system.}
+ \label{fig:one_story_frame_example}
 \end{figure}
 
 %\begin{figure}[H]
-%	\centering
-%	\includegraphics[]{Figures_LM/Single_story_frame.png}
-%	\caption{(a) Single story frame; (b) undamped single degree of freedom system.}
-%	\label{fig:single_a}
+% \centering
+% \includegraphics[]{Figures_LM/Single_story_frame.png}
+% \caption{(a) Single story frame; (b) undamped single degree of freedom system.}
+% \label{fig:single_a}
 %\end{figure}
 %
 %\begin{figure}[H]
 %    \centering
 %    \includegraphics[]{../Figures/accelerometers.png}
-%    \caption{Integrated Electronics Piezo-Electric (IEPE) accelerometers, showing: (a) the cross section of a typical IEPE) accelerometer with key components annotated, and; (b) selection of IEPE accelerometers for various applications.}
+%    \caption{Integrated Electronics Piezo-Electric (IEPE) accelerometers, showing: (a) the cross section of a typical IEPE) accelerometer with key components annotated, and (b) selection of IEPE accelerometers for various applications.}
 %    \label{fig:accelerometersss}
 %\end{figure} 
 
 
 
-The response of a SDOF system can be written in general notation as:
+The response of an SDOF system can be written in general notation as:
 
 \begin{equation}
 x(t) = x_0\text{cos}(\omega_n t) + \frac{v_0}{\omega_n}\text{sin}(\omega_n t)
@@ -60,14 +59,14 @@ where $\omega_n$ is the natural frequency of the frame, $x_0$ and $v_0$ are the 
 The stiffness of the system can be found by applying Hooke's law: $F = k x$. To find $k$, let's imagine applying an arbitrary lateral force $F$ to the frame and analyzing a single column. At the top, the column will be subjected to a force $F$ and to a moment $M_0$, as schematically shown in figure~\ref{fig:columns_draw} (a). Applying the equilibrium equations to the column, it can be found that $M_0 = \frac{F H}{2}$. 
 
 \begin{figure}[H]
-	\centering
-	\includegraphics{../figures/frame_columns.png}
-	\caption{Single column subjected to: (a) force and moment; (b) force only; (c) moment only.}
-	\label{fig:columns_draw}
+ \centering
+ \includegraphics{../figures/frame_columns.png}
+ \caption{Single column subjected to: (a) force and moment; (b) force only; (c) moment only.}
+ \label{fig:columns_draw}
 \end{figure}
 
 
-Since the system is linear, we can calculate the effects of $F$ and $M_0$ separately and then summed them together (superposition principle). The maximum deflection due to $F$ occurs at the top of the column, as shown in figure~\ref{fig:columns_draw} (b), and it is equal to:
+Since the system is linear, we can calculate the effects of $F$ and $M_0$ separately and then sum them together (superposition principle). The maximum deflection due to $F$ occurs at the top of the column, as shown in figure~\ref{fig:columns_draw} (b), and it is equal to:
 
 \begin{equation} \label{Eq_xmax_F}
 x_{\text{max},F} = \frac{FH^3}{3EI}
@@ -101,32 +100,32 @@ Since the frame has two columns, the total stiffness of the SDOF system will be:
 \begin{equation}
 k = \sum_{columns}^{} k_c = \sum_{2}^{} \frac{12EI} {H^3}
 \end{equation}
-where $k$ is also called \emph{lateral stiffness}. Note that the lateral stiffness of the frame is independent on the length of the bay $L$ and it depends only on the properties of the columns ($E$, $I$, and $H$). It is possible at this point to calculate the natural frequency of the frame:
+where $k$ is also called \emph{lateral stiffness}. Note that the lateral stiffness of the frame is independent of the length of the bay $L$, and it depends only on the properties of the columns ($E$, $I$, and $H$). It is possible at this point to calculate the natural frequency of the frame:
 \begin{equation} \label{omega_frame}
 \omega_n = \sqrt{\frac{k}{m}} = \sqrt{\frac{\sum_{2}^{} \frac{12EI} {H^3}}{m}}
 \end{equation}
-If the columns have same properties, equation~\ref{omega_frame} becomes:
+If the columns have the same properties, equation~\ref{omega_frame} becomes:
 \begin{equation}
 \omega_n = \sqrt{\frac{k}{m}} = \sqrt{\frac{24EI}{H^3m}}
 \end{equation}
 Finally, the response of the system to initial conditions $x_0$ and ${v_0}$ can be obtained:
 \begin{equation}
 x(t) = x_0\text{cos}(\omega_n t) + \frac{v_0}{\omega_n}\text{sin}(\omega_n t)
-\end{equation}	
+\end{equation} 
 
 
 
 \begin{example}
 
 \textbf{Single-story Frame}
-	
+ 
 \noindent Let's consider the single-story frame shown in figure~\ref{fig:one_story_frame_example} with mass $m$ = 0.15 kip $s^2$/ft, $L$ = 12 ft, $EI$= 1800 kip $ft^2$. a) Determine the EOM and the natural period of the frame; b) assume that the moment of inertia of the right column is $2I$. Will the EOM change? 
 
 \noindent \textbf{Solution a) :} 
 
 \noindent The frame can be modeled as a single degree of freedom in free vibration. Therefore, the EOM is:
 \begin{equation}
-	m \ddot{x} + k x = 0
+ m \ddot{x} + k x = 0
 \end{equation}
 The lateral stiffness of the system is:
 \begin{equation}
@@ -151,7 +150,7 @@ k = \sum_{columns}^{} k_c = \frac{12EI} {H^3} + \frac{24EI} {H^3} = \frac{36 EI}
 
 
 
-The same principle can be applied to a single-story frame with damping ratio $\zeta \neq$ 0. In this case, the displacement of the frame will be given by:
+The same principle can be applied to a single-story frame with a damping ratio $\zeta \neq$ 0. In this case, the displacement of the frame will be given by:
 
 \begin{equation}
 x(t) = e^{(-\zeta\omega_nt)} \left( \frac{({v_0} + x_0)\omega_n}{\omega_d} \text{cos}(\omega_d t) + x_0 \text{sin}(\omega_dt) \right)
@@ -165,16 +164,16 @@ where $\omega_d$ is the damped natural frequency of the system:
 
 \subsection{Duhamel's Integral}
 
-In Chapter 4, the frequency response method was used to solve the EOM of an SDOF system subjected to an arbitrary force. Here, an alternative method widely employed in structural dynamics to find the solution of the EOM is presented. This method exploits a specif integral, named Duhamel's integral. 
+In Chapter 4, the frequency response method was used to solve the EOM of an SDOF system subjected to an arbitrary force. Here, an alternative method widely employed in structural dynamics to find the solution of the EOM is presented. This method exploits a specific integral, named Duhamel's integral. 
 
 Let's consider an underdamped SDOF system subjected to an arbitrary force $F$($t$). The EOM is:
 
 \begin{equation}
 m \ddot{x} + c \dot{x} + k x = F(t)
 \end{equation}
-Let's assume that the system is at rest: $x$(0) = 0 and $\dot{x}$ = 0. The assumption underlying Duhamel's integral method is that a generic force $F$($t$) can be expressed as a sequence of impulses of very small duration and the response of the system as the sum of the response to individual unit impulses. 
+Let's assume that the system is at rest: $x$(0) = 0 and $\dot{x}$ = 0. The assumption underlying Duhamel's integral method is that a generic force $F$($t$) can be expressed as a sequence of impulses of very small duration, and the response of the system as the sum of the response to individual unit impulses. 
 
-An impulsive force can be defined as a very large force applied in a very short time interval. figure~\ref{fig:impulsive_force} (a) shows an impulsive force $F(t) = \frac{1}{\epsilon}$ applied at time $t = \tau$. Assuming to apply an impulsive force to a generic mass $m$ and applying Netwon's second law:
+An impulsive force can be defined as a very large force applied in a very short time interval. figure~\ref{fig:impulsive_force} (a) shows an impulsive force $F(t) = \frac{1}{\epsilon}$ applied at time $t = \tau$. Assuming to apply an impulsive force to a generic mass $m$ and applying Newton's second law:
 
 \begin{equation}
 m \ddot{x} = F(t)
@@ -186,7 +185,7 @@ and integrating both sides between two generic time instants $t_1$ and $t_2$ yie
 \end{equation}
 where the left-hand side of the equation represents the magnitude of the force and the right-hand side the change in momentum. 
 
-In the limit case in which $\epsilon$ tends to 0, $F(t)$ tends to 1 and the impulsive force is called \emph{unit impulse}. In the case of a unit impulse, $\int_{t_1}^{t_2} F(t) dt = 1$ and $t_1$ tends to $t_2$. Therefore, the velocity of the mass can be found as:
+In the limit case in which $\epsilon$ tends to 0, $F(t)$ tends to 1, and the impulsive force is called \emph{unit impulse}. In the case of a unit impulse, $\int_{t_1}^{t_2} F(t) dt = 1$ and $t_1$ tends to $t_2$. Therefore, the velocity of the mass can be found as:
 
 \begin{equation} \label{Eq_vel}
 \dot{x}(\tau)=\frac{1}{m}
@@ -208,25 +207,25 @@ The Dirac delta function $\delta(t - \tau)$ mathematically defines a unit impuls
 
 
 \begin{figure}[H]
-	\centering
-	\includegraphics{../figures/Structural_Impulse.png}
-	\caption{(a) Impulsive force; (b) arbitrary force decomposed in a series of impulses.}
-	\label{fig:impulsive_force}
+ \centering
+ \includegraphics{../figures/Structural_Impulse.png}
+ \caption{(a) Impulsive force; (b) arbitrary force decomposed in a series of impulses.}
+ \label{fig:impulsive_force}
 \end{figure}
 
-Let's now consider a force $F(t)$ varying arbitrarily with time. As shown in figure~\ref{fig:impulsive_force} (b), $F(t)$ can be represented as a sequence of infinitesimaly short impulses. The response of a linear system to $F(t)$ can be therefore expressed as the response to a series impulses, following:
+Let's now consider a force $F(t)$ varying arbitrarily with time. As shown in figure~\ref{fig:impulsive_force} (b), $F(t)$ can be represented as a sequence of infinitesimally short impulses. The response of a linear system to $F(t)$ can therefore be expressed as the response to a series of impulses, following:
 
 \begin{equation} \label{Eq_impulses}
 x(t) = \int_{0}^{t} p(\tau) h(t - \tau) d\tau
 \end{equation}
-where $h(t - \tau)$ is the response to a unit impulse and $p(\tau)$ is the magnitude of the actual impulse. For the case of an underdamped SDOF system, equation~\ref{Eq_impulses} can be re-written as:
+where $h(t - \tau)$ is the response to a unit impulse and $p(\tau)$ is the magnitude of the actual impulse. For the case of an underdamped SDOF system, equation~\ref{Eq_impulses} can be rewritten as:
 
 \begin{equation} \label{Eq_Duhamel}
 x(t) = \frac{1}{m \omega_d} \int_{0}^{t} p(\tau) e^{-\zeta \omega_n (t - \tau)} sin(\omega_d (t - \tau)) d\tau
 \end{equation}
 equation~\ref{Eq_Duhamel} represents the \emph{Duhamel's integral}.
 
-Similarly, the response of an undamped SDOF system to an arbitrary force can be expressed through the Duhamel's integral as:
+Similarly, the response of an undamped SDOF system to an arbitrary force can be expressed through Duhamel's integral as:
 \begin{equation} \label{Eq_Duhamel_undamped}
 x(t) = \frac{1}{m \omega_n} \int_{0}^{t} p(\tau) sin(\omega_n (t - \tau)) d\tau
 \end{equation}
@@ -238,21 +237,21 @@ If $F(t)$ is characterized by a simple function, Duhamel's integral can be evalu
 
 \begin{example}
 \textbf{Solving for Response due to Step Function Loading} 
-	
+ 
 \noindent
-	
-	Let's consider an undamped SDOF system subjected to a step function force with constant amplitude $F_0$, as schematically represented in figure~\ref{fig:step_force}. Assume that the system is at rest (initial conditions: $x(0) = \dot{x}(0) = 0$) and compute the system response $x(t)$. 
-	
-	\begin{figure}[H]
-		\centering
-		\includegraphics{../figures/structural_step_function_example.png}
-		\caption{(a) Step function force; (b) undamped SDOF system.}
-		\label{fig:step_force}
-	\end{figure} 
+ 
+ Let's consider an undamped SDOF system subjected to a step function force with constant amplitude $F_0$, as schematically represented in figure~\ref{fig:step_force}. Assume that the system is at rest (initial conditions: $x(0) = \dot{x}(0) = 0$) and compute the system response $x(t)$. 
+ 
+ \begin{figure}[H]
+  \centering
+  \includegraphics{../figures/structural_step_function_example.png}
+  \caption{(a) Step function force; (b) undamped SDOF system.}
+  \label{fig:step_force}
+ \end{figure} 
 
 \noindent \textbf{Solution:} 
-	
-\noindent The system is undamped, therefore we can use the Duhamel's integral in equation~\ref{Eq_Duhamel_undamped} to find $x(t)$:
+ 
+\noindent The system is undamped, therefore we can use Duhamel's integral in equation~\ref{Eq_Duhamel_undamped} to find $x(t)$:
 \begin{equation} 
 x(t) = \frac{1}{m \omega_n} \int_{0}^{t} F_0 sin(\omega_n (t - \tau)) d\tau 
 \end{equation}
@@ -264,8 +263,8 @@ Reminding that $\omega_n^2 = k/m$, $x(t)$ becomes:
 \begin{equation}
 x(t) = \frac{F_0}{k} [1 - cos(\omega_n t)]
 \end{equation}
-where $\frac{F_0}{k}$ is the displacement that the system would undergo if the force $F_0$ was applied statically.
-In the case of underdamped SDOF system, the response becomes:
+where $\frac{F_0}{k}$ is the displacement that the system would undergo if the force $F_0$ were applied statically.
+In the case of an underdamped SDOF system, the response becomes:
 \begin{equation} 
 x(t) = \frac{F_0}{k} \left [1 - e^{-\zeta \omega_n t} \left (cos(\omega_d t) + \frac{\zeta}{\sqrt{1 - \zeta^2}} sin(\omega_d t)\right) \right]
 \end{equation}
@@ -278,24 +277,24 @@ x(t) = \frac{F_0}{k} \left [1 - e^{-\zeta \omega_n t} \left (cos(\omega_d t) + \
 
 \subsection{Two-story frame}
 
-The concepts discussed in Sec. 1 can be extended to the 2-story frame represented in figure~\ref{fig:two_story_frame}. In fact, a 2-story frame can be modeled as a 2-DOF system under the following assumptions:
+The concepts discussed in Section~\ref{sec:Single-story frame} can be extended to the 2-story frame represented in Figure~\ref {fig:two_story_frame}. In fact, a 2-story frame can be modeled as a 2-DOF system under the following assumptions:
 
 \begin{itemize}
-	\item shear building: flexible columns ($EI \neq 0$), beam infinitely rigid ($EI_b$ = $\infty$), axial deformations of beams and columns negligible ($EA$ = 0);
-	\item lumped mass system: floor-mass concentrated at the floor level.
+ \item shear building: flexible columns ($EI \neq 0$), beam infinitely rigid ($EI_b$ = $\infty$), axial deformations of beams and columns negligible ($EA$ = 0);
+ \item lumped mass system: floor-mass concentrated at the floor level.
 \end{itemize}
 
 \noindent Under such assumptions and free vibrations, we expect that the building moves following the deformed shape reported in figure~\ref{fig:two_story_frame} (dotted line). Let's call the degrees of freedom of the frame $x_1(t)$ and $x_2(t)$. 
 
 \begin{figure}[H]
-	\centering
-	\includegraphics{../figures/two_story_frame.png}
-	\caption{2-story frame with lumped masses.}
-	\label{fig:two_story_frame}
+ \centering
+ \includegraphics{../figures/two_story_frame.png}
+ \caption{2-story frame with lumped masses.}
+ \label{fig:two_story_frame}
 \end{figure}
 
 
-The forces acting on the 2-DOF system are reported in figure~\ref{fig:twodof}. It follows that the equation of motion of the two masses are:
+The forces acting on the 2-DOF system are reported in figure~\ref{fig:twodof}. It follows that the equations of motion of the two masses are:
 
 \begin{eqnarray}
 m_1\ddot{x}_1 +k_1 x_1 + k_2 (x_2 - x_1) + c_1 \dot{x}_1\ + c_2 (\dot{x}_2 - \dot{x}_1) = 0\\
@@ -303,10 +302,10 @@ m_2\ddot{x}_2 - k_2 (x_2 - x_1) - c_2 (\dot{x}_2 - \dot{x}_1) = 0 \nonumber
 \end{eqnarray}
 
 \begin{figure}[h]
-	\centering
-	\includegraphics{../figures/2DOF_system.png}
-	\caption{(a) 2-DOF system used to model the 2-story frame; (b) free body diagram of the two masses.}
-	\label{fig:twodof}
+ \centering
+ \includegraphics{../figures/2DOF_system.png}
+ \caption{(a) 2-DOF system used to model the 2-story frame; (b) free body diagram of the two masses.}
+ \label{fig:twodof}
 \end{figure}
 
 
@@ -318,21 +317,21 @@ In matrix notation, these two equations become:
 \end{eqnarray}
 
 \noindent where we can define the mass matrix $M$ as:
-		
+  
 \begin{eqnarray}
 M=  \begin{bmatrix} m_1 & 0  \\  0 & m_2 \end{bmatrix}  
 \end{eqnarray}
  the stiffness matrix $K$ as:
 \begin{eqnarray}
 K=  \begin{bmatrix} k_1+k_2 & -k_2  \\  -k_2 & k_2 \end{bmatrix}
-\end{eqnarray}		
+\end{eqnarray}  
 and the damping matrix $C$ as:
 \begin{eqnarray}
 C=  \begin{bmatrix} c_1+c_2 & -c_2  \\  -c_2 & c_2 \end{bmatrix}
 \end{eqnarray}
-		
-		
-While mass and damping of a frame are usually given, the stiffness values $k_1$ and $k_2$ need to be calculated as a function of the columns properties ($EI$) and geometry ($h$). As demonstrated in Sec. 1, the stiffness of a column with clamped ends can be determined as:
+  
+  
+While mass and damping of a frame are usually given, the stiffness values $k_1$ and $k_2$ need to be calculated as a function of the columns' properties ($EI$) and geometry ($h$). As demonstrated in Sec. 1, the stiffness of a column with clamped ends can be determined as:
 \begin{equation}
 k_c = \frac{12EI}{h^3}
 \end{equation}
@@ -357,24 +356,24 @@ $\phi_1$, $\phi_2$, $A_1$, and $A_2$ are constants that can be found based on th
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-		
+  
 \pagebreak
 
 \begin{example}
-\textbf{Finding the Structural Response of a Two Story Building}
+\textbf{Finding the Structural Response of a Two-Story Building}
 
 \noindent Consider the frame in figure~\ref{fig:two_story_frame_ex}. Determine the natural frequency of vibration and mode shapes of the system.
 \begin{figure}[H]
-	\centering
-	\includegraphics{../figures/two_story_frame_example.png}
-	\caption{Example of a 2-story frame with floors with different dynamic properties.}
-	\label{fig:two_story_frame_ex}
+ \centering
+ \includegraphics{../figures/two_story_frame_example.png}
+ \caption{Example of a 2-story frame with floors with different dynamic properties.}
+ \label{fig:two_story_frame_ex}
 \end{figure}
 
 \noindent \textbf{Solution}:
 
 \vspace{1ex}
-	
+ 
 \noindent Assumption: the frame can be modeled as a shear building with mass lumped at the floor levels. The lateral stiffness at the first floor is:
 
 \begin{equation}
@@ -387,7 +386,7 @@ k_2 = 2 \frac{12(EI)}{h^3} = \frac{24EI}{h^3}
 Therefore, the stiffness matrix can be written as:
 \begin{eqnarray}
 K= \begin{bmatrix} \frac{48EI}{h^3} + \frac{24EI}{h^3} & -\frac{24EI}{h^3}  \\  -\frac{24EI}{h^3} & \frac{24EI}{h^3} \end{bmatrix} = \frac{24EI}{h^3} \begin{bmatrix} 3 & -1  \\  -1 & 1 \end{bmatrix}
-\end{eqnarray}		
+\end{eqnarray}  
 The EOM of the system is:
 
 \begin{eqnarray} 
@@ -418,7 +417,7 @@ where $k = \frac{24EI}{h^3}$. The mode shapes of the frame can be found by solvi
 \begin{equation}
 (-\omega_1^2 M  + K)\mathbf{u}_1 =0
 \end{equation}
-Replacing mass and stiffness matrix the equation becomes:
+Replacing the mass and stiffness matrix, the equation becomes:
 \begin{equation}
 \bigg(-\frac{k}{2 m}\begin{bmatrix}  2m & 0 \\   0  & m \end{bmatrix} + k \begin{bmatrix} 3 & -1 \\    -1  & 1 \end{bmatrix}\bigg)\begin{bmatrix} u_{11}\\ u_{21}\end{bmatrix} = \begin{bmatrix} 0\\ 0\end{bmatrix}
 \end{equation}
@@ -445,17 +444,17 @@ Similarly, $\mathbf{u}_2$ can be obtained by solving the following equation:
 \end{equation}
 leading to:
 \begin{equation}
-	\textbf{u}_2 = \begin{bmatrix} -1\\ 1\end{bmatrix}
+ \textbf{u}_2 = \begin{bmatrix} -1\\ 1\end{bmatrix}
 \end{equation}
 Figure~\ref{fig:modeshapes} represents the two-mode shapes of the building. 
 
 
 
 \begin{figure}[H]
-	\centering
-	\includegraphics{../figures/two_story_frame_example_mode_shapes.png}
-	\caption{Mode shapes of the 2-story frame.}
-	\label{fig:modeshapes}
+ \centering
+ \includegraphics{../figures/two_story_frame_example_mode_shapes.png}
+ \caption{Mode shapes of the 2-story frame.}
+ \label{fig:modeshapes}
 \end{figure}
 
 
@@ -471,10 +470,8 @@ where $\mathbf{u} = [\mathbf{u}_1, \mathbf{u}_2]$ is the time invariant part of 
 
 
 \end{example}
-		
+  
 
-		
-		
 		
 \end{document}
 
