@@ -196,6 +196,9 @@
  \begin{equation}
   x(t) = \Big(\frac{v_0}{\omega}\Big)\text{sin}(\omega t) + x_0\text{cos}(\omega t) + \frac{f_0}{2 \omega} t \text{sin}(\omega t)
  \end{equation}   
+ \begin{equation}
+ \frac{- f_0}{2 \omega} t 
+ \end{equation}   
  Where the first two terms account for the oscillations, while the third term accounts for the continued increase of the maximum amplitude. The following plot shows the forced response of a spring-mass system driven harmonically at its natural frequency.
  \begin{figure}[H]
   \centering
@@ -347,7 +350,9 @@
 \pagebreak
 
 \begin{vibration_case_study}
- \textbf{Bio-dynamic Induced Loading}
+\label{cs:vibration_case_study}
+ 
+\textbf{Bio-dynamic Induced Loading}
  
  \noindent The Millennium Bridge is a pedestrian suspension bridge in London over the River Thames. The supporting cables of the bridge are abnormally low and rest below the deck level, giving a very shallow profile. This was required by London's protected Vistas, which necessitate a clear line of view from Alexandra Palace to Saint Paul's Cathedral, as well as behind Saint Paul's Cathedral, where the bridge sits. 
 
@@ -368,14 +373,14 @@
 
 \subsection{Harmonic Excitation of Underdamped Systems}
 
- Consider the system:
+Now that we know a system in resonance without damping will destroy itself, given enough time, its imporatnt to consider the effect of adding damping, as was discussed in Vibration Case Study~\ref{cs:vibration_case_study}. To do this, we will add a damper to the system. 
  \begin{figure}[H]
   \centering
   \includegraphics[]{../figures/1-DOF-spring_dashpot_mass_horizontal_forced_FBD.png}
   \caption{Damped 1-DOF system with an external force ($F(t)$) applied, showing: (a) the system configuration; and (b) the free body diagram}
   \label{fig:1-DOF-spring_dashpot_mass_horizontal_forced_FBD}
  \end{figure} 
- \noindent Again, for simplicity, let us consider a harmonic excitation for $F(t)$ such that:
+ \noindent When developing a solution for the EOM that models the system shown in Figure~\ref{fig:1-DOF-spring_dashpot_mass_horizontal_forced_FBD}, let us again (for simplicity) consider a harmonic excitation for $F(t)$ such that:
  \begin{equation}
   F(t) = F_0\text{cos}(\omega t)
  \end{equation}       
@@ -766,7 +771,6 @@ B_s
  \begin{equation}
  \upplus \sum F_x = k\delta -k(x - y) -mg -c(\dot{x} -\dot{y})
  \end{equation} 
-
  Apply Newton's second law of motion to the sum of forces for the displaced position, we get:
  \begin{equation}
  \upplus \sum F_x = m\ddot{x} = k\delta -kx + ky -mg -c\dot{x} +c\dot{y}
@@ -775,10 +779,10 @@ B_s
  \begin{equation}
  m\ddot{x} + c\dot{x} + kx = c\dot{y} + ky 
  \end{equation}
-
  As before, we assume an input for the base excitation. For simplicity, we assume:
  \begin{equation}
  y(t) = Y\text{sin}(\omega_b t)
+ \label{eq:Ysinomegat}
  \end{equation}
  Taking the derivative of the assumed input yields:
  \begin{equation}
@@ -951,6 +955,51 @@ B_s
    \end{split}
    \end{equation}   
   \end{example} 
+
+
+\begin{example}
+\label{ex:Acceleration_to_Displacement}
+\textbf{Converting Harmonic Base Acceleration to Displacement}
+
+\noindent In many engineering applications, base motion is specified in terms of acceleration rather than displacement. Examples include shaker-table testing of aerospace components, aircraft structures subjected to engine-induced vibration, rotating machinery mounted on flexible supports, and vehicles experiencing base motion from uneven terrain.
+Suppose the base acceleration is given as
+\begin{equation}
+\ddot{y}(t) = A \cos(\omega_b t)
+\end{equation}
+where $A$ is the acceleration amplitude and $\omega_b$ is the excitation frequency. Determine the displacement amplitude $Y$ in terms of the acceleration amplitude $A$.
+
+\noindent\textbf{Solution:} \\
+ The displacement transmissibility solution derived previously requires the base motion in the form
+\begin{equation}
+y(t) = Y \sin(\omega_b t),
+\end{equation}
+as originally presented in Equation~\ref{eq:Ysinomegat}. To obtain the displacement, integrate the acceleration term 
+\begin{equation}
+\ddot{y}(t) = A \cos(\omega_b t)
+\end{equation}
+twice. Integrating once gives the velocity:
+\begin{equation}
+\dot{y}(t) = \frac{A}{\omega_b} \sin(\omega_b t) + C_1.
+\end{equation}
+Integrating a second time gives the displacement:
+\begin{equation}
+y(t) = -\frac{A}{\omega_b^2} \cos(\omega_b t) + C_1 t + C_2.
+\end{equation}
+For steady-state harmonic motion, the constants $C_1$ and $C_2$ are zero, as they represent drift and constant offsets that are not part of the harmonic response. Therefore, the displacement can be written as
+\begin{equation}
+y(t) = -\frac{A}{\omega_b^2} \cos(\omega_b t).
+\end{equation}
+Thus, the displacement amplitude is
+\begin{equation}
+Y = \frac{A}{\omega_b^2}.
+\end{equation}
+This demonstrates an important harmonic relationship: for sinusoidal motion, the acceleration amplitude equals $\omega_b^2$ times the displacement amplitude. Consequently, higher-frequency ground motion produces larger accelerations but smaller displacements for the same amplitude $A$.
+\end{example}
+
+\begin{note}
+In practice, recovering displacement from measured acceleration data by double integration is difficult, as sensor noise and bias are amplified and can produce significant drift. When the motion can be reasonably approximated as harmonic, using $Y = A/\omega_b^2$ as shown in Example~\ref{ex:Acceleration_to_Displacement} provides a simple way to estimate displacement amplitude without performing numerical integration.
+\end{note}
+
    
  \subsubsection{Force Transmissibility Solution for Base Excitation}
  
@@ -991,6 +1040,7 @@ B_s
    \centering
    \includegraphics[]{../figures/base_excitation_force_transmissibility.png}
    \caption{Force transmissibility for an underdamped 1-DOF system.}
+	\label{fig:force_transmissibility}
   \end{figure}
   Again, note the key location $r=\sqrt{2}$. At $r=\sqrt{2}$, the force transmitted to the system is 2 $\frac{F_\text{T}}{kY}$. However, the normalized force does not necessarily fall off for $r$ values greater than $r=\sqrt{2}$.  
 
@@ -1041,67 +1091,51 @@ B_s
     \caption{Force and displacement transmissibility for the considered base excited system with $\zeta=2$.}
    \end{figure}
    \noindent It can be seen that the same rationale applies. Therefore, for both $\zeta=0.1$ and $\zeta=2$, the system should be excited below the natural frequency.
-  
+
   \end{example}
 
-  
      
   \begin{example}
-   \textbf{Damping in a Single-story Building}
-  
-   \noindent  A single-story building is subjected to a harmonic ground motion, $\ddot{y}(t) = A \text{cos}(\omega_b t)$. a) Find the steady-state solution for the structure.  b) If a damper was added between the base and the floor, and $r=2$, what would be the ideal critical damping coefficient to ensure the safety of the building? (Think of safety as limiting displacement and transmitted force.) 
-   \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.35\textwidth]{../figures/base_excited_structure.png}
-    \caption{A 1-DOF laterally excited system that represents a 1-story building. }
-   \end{figure}    
-   \pagebreak   
-   \noindent\textbf{Solution (a):}
-    
-   \noindent  For simplicity, we can rearrange the system as follows:
-   \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.35\textwidth]{../figures/base_excited_structure_simple.png}
-    \caption{A base excited 1-DOF spring-mass system.}
-   \end{figure}
-   \noindent solving for the EOM yields:
-   \begin{equation}
-    m\ddot{x} + kx = ky
-   \end{equation}     
-   Notice that this is the same as the EOM for a damped 1-DOF system if $c=0$. 
-   \begin{equation}
-   m\ddot{x} + c\dot{x} + kx = + c\dot{y} + ky \rightarrow m\ddot{x} + kx = ky
-   \end{equation}
-   Therefore, we can use the solution:
-   \begin{equation}
-    x_p(t) =  \omega_n Y   \sqrt{\frac{\omega_n^2 + (2 \zeta \omega_b)^2 }{(\omega_n^2 - \omega_b^2)^2 +  (2\zeta \omega_n \omega_b)^2} }  \text{cos}(\omega_bt - \phi_1 - \phi_2)
-   \end{equation}
-   where:
-   \begin{equation}
-    \phi_1 = \tan^{-1} \bigg(\frac{2\zeta \omega_n \omega_b}{\omega_n^2 - \omega_b^2}\bigg)
-   \end{equation} 
-   \begin{equation}
-    \phi_2 = \tan^{-1} \bigg(\frac{\omega_n}{2\zeta \omega_b}\bigg)
-   \end{equation}
-   Now we have, or can easily get, values for $\omega_n$, $\omega_b$, and $\zeta$. However, we do not have an expression for $Y$. We can extract the displacement (and therefore the $Y$) from the acceleration as:
-   \begin{equation}
-    \ddot{y}(t) = A \text{cos}(\omega t)
-   \end{equation}     
-   \begin{equation}
-    \dot{y}(t) = \frac{A}{\omega} \text{sin}(\omega t) + C_1
-   \end{equation}      
-   \begin{equation}
-    y(t) = - \frac{A}{\omega^2} \text{cos}(\omega t) + C_1t + C_2
-   \end{equation}      
-   Resulting in 
-   \begin{equation}
-    Y = -\frac{A}{\omega^2}
-   \end{equation}    
-   
-   \pagebreak
-   \noindent\textbf{Solution (b):}
-   
-   \noindent From the plots we solved for before, we can see that we want a critical damping coefficient that is as low as possible. This means any damping added to the system will decrease its safety. This may seem counterintuitive, but this is because we are attempting to drive the structure at a frequency higher than its natural frequency, something that does not commonly happen. Typically, excitations for a structure are well below its natural frequency.     
+   \textbf{Force-Based Design of a Steel Platform}
+
+\noindent A steel platform in an industrial facility is modeled as a rigid deck of mass $m$ supported by steel columns with stiffness $k$ and damping $c$ (5\% damping provided through the columns). The platform is subjected to harmonic excitation from nearby rotating machinery such that $r=2$. During a design review, it was found that the force in a critical bolted connection slightly exceeds its allowable limit. A team member proposes increasing the damping in the columns to reduce the force.
+Based on force considerations alone, do you agree?
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[]{../figures/base_excited_lateral_structure.png}
+\caption{Idealized 1-DOF model of the steel platform and supports.}
+\end{figure}
+
+\noindent\textbf{Solution:} \\
+\noindent First, let us put the steel platform into a form we recognize. The idealized model is shown in Figure~\ref{key:wall_excited_undamped-system}, where the deck displacement $x$ and the ground displacement $y$ act in the same direction. 
+From our work in Chapter 1, we know that this configuration is equivalent to the vertical spring-mass system, except that the support is moving. Therefore, the equation of motion takes the familiar base-excitation form
+\begin{equation}
+m\ddot{x} + c\dot{x} + kx = c\dot{y} + ky,
+\end{equation}
+which is the same expression derived previously for a 1-DOF system subjected to base motion.
+
+\begin{figure}[H]
+\centering
+\includegraphics[]{../figures/wall_excited_damped-system.png}
+\caption{A base excited 1-DOF spring-mass system.}
+\label{key:wall_excited_undamped-system}
+\end{figure}
+
+
+From the force-transmissibility plot (Fig.~\ref{fig:force_transmissibility}), at $r=2$ increasing damping increases the transmitted force. Thus, adding damping to reduce connection force would be counterproductive in this case, and you should politely disagree with your colleague's proposal.
+
+A more effective approach is to reduce the frequency ratio $r$ by increasing the natural frequency, thereby shifting the system to the left in Fig.~\ref{fig:force_transmissibility}.
+\begin{equation}
+\omega_n=\sqrt{\frac{k}{m}},
+\end{equation}
+since $r=\omega_b/\omega_n$. This can be achieved by increasing the stiffness $k$ or decreasing the mass $m$.
+
+
+
+A practical low-cost measure could be to add cross-cables or bracing to the platform to raise the lateral stiffness of the supports (increase effective $k$). This lowers $r$ and thus reduces transmitted force into the bolted connection. Reducing mass is also effective but would be more disruptive to the design of the steel platform.
+
   
   \end{example}   
 
@@ -1111,6 +1145,7 @@ B_s
  
   Numerical methods can be used to solve the response of a system subjected to forced vibrations. While not the most computationally efficient method, the EOM is an ODE that can be solved directly while considering the initial directions to obtain the response of the system. 
 
+\pagebreak
 \begin{example}
  \textbf{Directly Solving the Ordinary Differential Equation}
  
