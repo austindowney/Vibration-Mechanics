@@ -30,7 +30,7 @@
  \begin{equation}
   F(t) = F_0\text{cos}(\omega t)
  \end{equation}       
- note that here, $\omega$ has no subscript and is the frequency in~rad/sec of the driving force. $\omega$ is often called the input frequency, driving frequency, or forcing frequency. $F_0$ represents the magnitude of the applied force.  Building the EOM for the system in figure \ref{fig:1-DOF-spring_mass_horizontal_forced_FBD} yields:
+ note that here, $\omega$ has no subscript and is the frequency in~rad/s of the driving force. $\omega$ is often called the input frequency, driving frequency, or forcing frequency. $F_0$ represents the magnitude of the applied force.  Building the EOM for the system in figure \ref{fig:1-DOF-spring_mass_horizontal_forced_FBD} yields:
  \begin{equation}
   m \ddot{x}(t)+kx(t) = F_0\text{cos}(\omega t)
  \end{equation}   
@@ -140,7 +140,7 @@
    \includegraphics[width=0.5\textwidth]{../figures/1-DOF-spring_mass_horizontal_forced.png}
    \caption{1-DOF spring-mass system subjected to an external force $F(t)$.}
   \end{figure}
-  \noindent with $k$ = 10~N/m, $m$ = 2.5~kg, $\omega$ = 4~rad/sec, $F_0$ = 0.1~N, $x_0$ = 1~mm, and $v_0$ = 0~mm/s, plot the temporal responses of the system considering the free-vibration case and the excited case. Plot these on a single plot to compare the responses. 
+  \noindent with $k$ = 10~N/m, $m$ = 2.5~kg, $\omega$ = 4~rad/s, $F_0$ = 0.1~N, $x_0$ = 1~mm, and $v_0$ = 0~mm/s, plot the temporal responses of the system considering the free-vibration case and the excited case. Plot these on a single plot to compare the responses. 
      
   \noindent\textbf{Solution:} 
 
@@ -244,7 +244,7 @@
  
  \noindent\textbf{Solution:}
 
- \noindent First, make sure that the system is not in resonance. Calculating that $\omega_n = \sqrt{1000/10} = 10$ shows us that $\omega_n \neq \omega$. Next, knowing that $f_0 = F_o/m = 10$, we can find the homogeneous and particular solutions as:
+ \noindent First, make sure that the system is not in resonance. Calculating that $\omega_n = \sqrt{500/10} = 7.07$~rad/s; this shows us that $\omega_n \neq \omega$. Next, knowing that $f_0 = F_o/m = 10$, we can find the homogeneous and particular solutions as:
  \begin{equation}
   x_h(t) = A\text{sin}(\omega_n t + \phi)
  \end{equation}    
@@ -318,7 +318,7 @@
  \end{equation}        
  Also, knowing:
  \begin{equation}
-  \omega_n = \sqrt{\frac{k}{m}} = \sqrt{20} \text{~rad/sec} =  4.472 \text{~rad/sec}
+  \omega_n = \sqrt{\frac{k}{m}} = \sqrt{20} \text{~rad/s} =  4.472 \text{~rad/s}
  \end{equation}    
  and
  \begin{equation}
@@ -584,7 +584,7 @@ B_s
 
   \noindent\textbf{Solution c):} 
 
-  \noindent  Now, using $\omega=3.162$~rad/sec we put the system into resonance as $\omega=\omega_n$. However, unlike the undamped system, the amplitude of the displacement is not unbounded as the damper absorbs energy from the system. Therefore, after about 7 seconds, the system enters an equilibrium state where any additional increase in amplitude caused by the system entering into resonance is canceled out by the damping in the system, as demonstrated in the plot below:
+  \noindent  Now, using $\omega=3.162$~rad/s we put the system into resonance as $\omega=\omega_n$. However, unlike the undamped system, the amplitude of the displacement is not unbounded as the damper absorbs energy from the system. Therefore, after about 7 seconds, the system enters an equilibrium state where any additional increase in amplitude caused by the system entering into resonance is canceled out by the damping in the system, as demonstrated in the plot below:
   \begin{figure}[H]
    \centering
    \includegraphics[]{../figures/homogeneous_and_particular_solutions_in_resonance_c.png}
@@ -688,16 +688,16 @@ B_s
   \includegraphics[]{../figures/1-DOF-spring_dashpot_mass_horizontal_forced.png}
   \caption{Damped 1-DOF spring-mass system subjected to an external force $F(t)$.}
  \end{figure}    
- \noindent where $\omega_n = 132$~rad/sec and $\zeta$ = 0.0085. Calculate the displacements of the steady-state response for $\omega$=132 and 125~rad/sec. In both cases, use $f_0$ = 10 N/kg. 
+ \noindent where $\omega_n = 132$~rad/s and $\zeta$ = 0.0085. Calculate the displacements of the steady-state response for $\omega$=132 and 125~rad/s. In both cases, use $f_0$ = 10 N/kg. 
 
  \noindent \textbf{Solution:}
 
  \noindent 
- From before, we know the solution for the system's displacement of the particular solution for $\omega$=132~rad/sec is:
+ From before, we know the solution for the system's displacement of the particular solution for $\omega$=132~rad/s is:
  \begin{equation}
   X = \frac{f_0}{\sqrt{(\omega_n^2 - \omega^2)^2 +  (2\zeta \omega_n \omega)^2}} = \frac{10}{2(0.0085)(132)^2} = 0.034 \text{ m}
  \end{equation}       
- while for $\omega$=125~rad/sec X is:
+ while for $\omega$=125~rad/s X is:
  \begin{equation}
   X = \frac{f_0}{\sqrt{(\omega_n^2 - \omega^2)^2 +  (2\zeta \omega_n \omega)^2}} = \frac{10}{\sqrt{(1799)^2 +  (280.5)^2}}  = 0.005 \text{ m}
  \end{equation}    
@@ -927,7 +927,7 @@ B_s
     Y = 0.005 \text{ m}
    \end{equation}     
    \begin{equation}
-    v \text{ m/s} = 50 \text{ km/hr}\Bigg(\frac{1000 \text{ m}}{1 \text {km}}\Bigg) \Bigg(\frac{1 \text{ hours}}{3600 \text { s}}\Bigg) = 13.888 \text{ m/sec}
+    v \text{ m/s} = 50 \text{ km/hr}\Bigg(\frac{1000 \text{ m}}{1 \text {km}}\Bigg) \Bigg(\frac{1 \text{ hours}}{3600 \text { s}}\Bigg) = 13.88 \text{ m/s}
    \end{equation}  
    \begin{equation}
     \omega_b = \Bigg(\frac{ 13.88 \text{ m}}{s}\Bigg) \Bigg(\frac{ 1 \text{ cycle}}{3 \text{ m}}\Bigg) \Bigg(\frac{ 2 \pi \text{ rad}}{\text {cycle}}\Bigg) = \text{~rad/s} = 29.08 \text{~rad/s} 
