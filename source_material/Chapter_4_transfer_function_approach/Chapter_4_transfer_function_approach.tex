@@ -24,7 +24,7 @@
 
 
 
-		\subsection{Transfer Function Method (Generic)}
+		\subsection{Transfer Function Method for Generic Systems}
 
 
 			Consider the following system
@@ -38,10 +38,24 @@
 
 			\noindent where $F$ is the input, $H$ is the system, and $X$ is the output from the system. This formulation is called the transfer-function approach and is commonly used for the formulation and solution of dynamic problems in the control literature. It can also be used for solving various forced-vibration problems including those from complex or stochastic inputs. 
 
+\begin{review}
+	\label{sec:Pierre-Simon_Laplace}
+	\textbf{Pierre-Simon Laplace}
 
-
+	\noindent The Laplace transform is named after mathematician and astronomer Pierre-Simon Laplace (23 March 1749 - 5 March 1827 ). Pierre-Simon Laplace was one of the greatest scientists of all time and is often considered the French Newton. He taught Napoleon at the \'Ecole Militaire in 1784, became a count of the empire in 1806, and a marquis in 1817 after the restoration of the monarchy. He is credited with advancements in engineering, mathematics, statistics, physics, astronomy, and philosophy; however, maybe his greatest achievement is not only surviving but benefiting from the change from the Ancien R\'egime $\rightarrow$ Bonaparte $\rightarrow$ Bourbon Restoration. 
+		
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=2.61in]{../figures/Pierre-Simon_de_Laplace.jpg}
+		\caption{Portrait of Pierre-Simon Laplace by Johann Ernst Heinsius (1775).\protect\footnotemark[1] }
+		\label{fig:fragility_curve}
+	\end{figure}
+	
+	\footnotetext[1]{Johann Ernst Heinsius, CC BY-SA 4.0 $<$https://creativecommons.org/licenses/by-sa/4.0$>$, via Wikimedia Commons}  
+\end{review}
 
 \begin{review}
+
 	\label{sec:Laplace_review}
 	
 	\textbf{Laplace Transform}
@@ -123,7 +137,7 @@
 				\item Apply the inverse transform $x(t) = \Laplace{X(s)}^{-1}$
 			\end{enumerate}
 				
-			\subsubsection{Free Vibration for Undamped Systems}
+			\subsubsection{Free Response of an Undamped System}
 			Consider the undamped single-DOF system:
 			\begin{figure}[H]
 				\centering
@@ -167,32 +181,14 @@
 			x(t) = x_0 \text{cos}(\omega_n t) + \frac{v_0}{\omega_n}\text{sin}(\omega_n t)
 			\end{equation}
 			
-			The same procedure can be used to calculate the under-damped and forced responses. However, when calculating these responses the algebraic solution for $X(s)$, $s$ often contains quotients of polynomials. These Polynomial ratios may not be found in simple Laplace tables and must be solved using the method of partial fractions. An example of this procedure can be found in Appendix B of Inman\protect\footnotemark[1]. 
+			The same procedure can be used to calculate the underdamped and forced responses. However, when calculating these responses the algebraic solution for $X(s)$, $s$ often contains quotients of polynomials. These Polynomial ratios may not be found in simple Laplace tables and must be solved using the method of partial fractions. An example of this procedure can be found in Appendix B of Inman\protect\footnotemark[1]. 
 
 			\footnotetext[1]{Inman, Daniel J., and Ramesh Chandra Singh. ``Engineering vibrations''. Vol. 3. Englewood Cliffs, NJ: Prentice Hall, 1994.} 
 
-\begin{review}
-	\label{sec:Pierre-Simon_Laplace}
-	
-	\textbf{Pierre-Simon Laplace}
-
-	\noindent The Laplace transform is named after mathematician and astronomer Pierre-Simon Laplace (23 March 1749 - 5 March 1827 ). Pierre-Simon Laplace was one of the greatest scientists of all time and is often considered the French Newton. He taught Napoleon at the \'Ecole Militaire in 1784, became a count of the empire in 1806, and a marquis in 1817 after the restoration of the monarchy. He is credited with advancements in engineering, mathematics, statistics, physics, astronomy, and philosophy; however, maybe his greatest achievement is not only surviving but benefiting from the change from the Ancien R\'egime $\rightarrow$ Bonaparte $\rightarrow$ Bourbon Restoration. 
-		
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=2.61in]{../figures/Pierre-Simon_de_Laplace.jpg}
-		\caption{Portrait of Pierre-Simon Laplace by Johann Ernst Heinsius (1775).\protect\footnotemark[1] }
-		\label{fig:fragility_curve}
-	\end{figure}
-	
-	\footnotetext[1]{Johann Ernst Heinsius, CC BY-SA 4.0 $<$https://creativecommons.org/licenses/by-sa/4.0$>$, via Wikimedia Commons}  
-	
-
-	
-\end{review}
 
 
-\subsubsection{Impulse Response Function}
+
+\subsubsection{Impulse Response of a Spring-Mass System}
 
 Shock loads on mechanical systems represent a very common source of vibration. These short-duration forces are also called an impulse. An impulse excitation is defined as a force that is applied for a very short, or infinitesimal, length of time. An impulse is a nonperiodic force that is represented by the lower case delta symbol ($\delta$). The response of a system to an impulse load is the same as the system's free response provided that the correct initial conditions are applied. This is illustrated in the following where the applied force $F(t)$ is impulsive (i.e., large magnitude over a very short time).
 
@@ -202,7 +198,7 @@ Shock loads on mechanical systems represent a very common source of vibration. T
 	\caption{An impulse function with the impulse at $t=0$. }
 \end{figure}
 
-The impulse response function can be solved for analytically, however, we will solve it using the transfer function approach. Here we will consider the under-damped spring-mass system. First, assume that the system is at rest (no initial conditions). Next, we write the EOM as:
+The impulse response function can be solved for analytically, however, we will solve it using the transfer function approach. Here we will consider the underdamped spring-mass system. First, assume that the system is at rest (no initial conditions). Next, we write the EOM as:
 \begin{equation}
 m\ddot{x} +c\dot{x} +kx = \delta(t)
 \end{equation}
@@ -243,7 +239,7 @@ Below is a typical response for both an undamped and underdamped 1-DOF system su
 
 
 
-\subsubsection{Unit Step function}
+\subsubsection{Step Response of a Spring-Mass System}
 Now consider a unit step function, denoted with a capital Greek Phi  $\Phi$: 
 
 \begin{figure}[H]
@@ -261,9 +257,7 @@ The Laplace transform of the function, for a unit step function $\Phi$, is:
 \end{equation*}
 This also lines up with Laplace Transform \#3 from the Laplace table. This would be expected as $\Phi$ is used to represent the unit step function (i.e. a step function with a displacement of 1). As we consider linear systems in this class, we can scale the magnitude of the response by the magnitude of the impulse after the transform is performed. 
 
-\subsubsection{Undamped Spring-mass System}
-
-For a spring-mass system subjected to a unit step, assuming both initial conditions are zero, the solution can be obtained using the transform method. First, the EOM is 
+For an undamped spring-mass system subjected to a unit step, assuming both initial conditions are zero, the solution can be obtained using the transform method. First, the EOM is 
 \begin{equation}
 m\ddot{x}(t) + kx(t) = \Phi(t)
 \end{equation}
@@ -282,11 +276,10 @@ This can be rearranged as:
 where $\frac{1}{m}$ will pass through the Laplace function. Therefore, taking the inverse Laplace transform using \#9 of the provided Laplace transforms yields:
 \begin{equation}
 	x(t) = \frac{1}{m} \cdot \frac{1}{\omega_n^2}\big(1-\text{cos}(\omega_n t)\big) = \frac{1}{k}\big(1-\text{cos}(\omega_n t)\big)
+	\label{eq:step_undamped}
 \end{equation}
  
-\subsubsection{Under Damped Spring-mass System}
-
-For a spring-mass-damper system subjected to a unit step, assuming both initial conditions are zero, the solution can be obtained using the transform method. First, the EOM is:
+For a underdamped spring-mass-damper system subjected to a unit step, assuming both initial conditions are zero, the solution can be obtained using the transform method. First, the EOM is:
 \begin{equation}
 m\ddot{x}(t) + c\dot{x}(t) + kx(t) = \Phi(t)
 \end{equation}
@@ -310,7 +303,7 @@ Again, the $\frac{1}{m\omega_n^2}$ will pass through the Laplace function. There
 \begin{equation}
 	x(t) = \frac{1}{m \omega_n^2} \cdot \Big(1 - \frac{\omega_n}{\omega_d}e^{-\zeta \omega_n t}\text{sin}(\omega_dt + \phi)\Big)\text{, where } \phi = \text{cos}^{-1}(\zeta)\text{, where } \zeta<1
 \end{equation}
-After obtaining equations for the undamped and under-damped cases, the responses for the unit step, solved with the transform method, can be plotted as:
+After obtaining equations for the undamped and underdamped cases, the responses for the unit step, solved with the transform method, can be plotted as:
 \begin{figure}[H]
 	\centering
 	\includegraphics[]{../figures/response_unit_step.png}
@@ -319,10 +312,10 @@ After obtaining equations for the undamped and under-damped cases, the responses
 Note that the system will settle out around $F_0/k$ where $F_0  \Phi$ is a scaling factor for the step loading.
 
 \begin{example}
+\label{ex:Displacement_under_Dynamic_Loading}
+\textbf{Displacement under Dynamic Loading}
 
-		\textbf{Displacement under Dynamic Loading}
-
-		\noindent A load of dirt $m$ is dumped into the back of a dump truck. The bed of the truck can be modeled as a spring-mass system where the load of dirt is modeled as a force $F(t) = m g$ that is applied to the system, as illustrated in figure~\ref{fig:dump_truck_example}. How does the maximum displacement of the truck bed compare to the steady-state displacement of the truck bed with the dirt in it?
+\noindent A load of dirt $m$ is dumped into the back of a dump truck. The bed of the truck can be modeled as a spring-mass system where the load of dirt is modeled as a force $F(t) = m g$ that is applied to the system, as illustrated in figure~\ref{fig:dump_truck_example}. How does the maximum displacement of the truck bed compare to the steady-state displacement of the truck bed with the dirt in it?
 
 \begin{figure}[H]
 	\centering
@@ -334,29 +327,35 @@ Note that the system will settle out around $F_0/k$ where $F_0  \Phi$ is a scali
 
 \noindent\textbf{Solution:} 
 
-\noindent Setting the load applied to the truck as 1 unit, it can be seen that this is a unit step loading condition with an undamped system. We can obtain a for the transient and steady-state displacement of the truck bed knowing that the undamped displacement is
-
+\noindent Setting the load applied to the truck as 1 unit, it can be seen that this is a unit step loading condition with an undamped system. 
+From Equation~\ref{eq:step_undamped} we know the expression for the transient and steady-state displacement of the truck bed. Therefore,
 \begin{equation}
-	x(t) = \frac{1}{k}\big(1-\text{cos}(\omega_n t)\big) = \frac{m g}{k}\big(1-\text{cos}(\omega_n t)\big)
+	x(t) = \frac{1}{k}\big(1-\text{cos}(\omega_n t)\big) = \frac{m g}{k}\big(1-\text{cos}(\omega_n t)\big).
 \end{equation}
-This equation has a maximum amplitude when the cos$(\omega_t)=-1$, resulting in:
+This equation has a maximum amplitude when the cos$(\omega_t)=-1$, resulting in
 \begin{equation}
-	x(t) = \frac{m g}{k}\big(1-(-1)\big)
+	x(t) = \frac{m g}{k}\big(1-(-1)\big).
 \end{equation}
-This can be rearranged for the maximum displacement value $x_\text{max} $ as:
+This can be rearranged for the maximum displacement value $x_\text{max} $ as
 \begin{equation}
-	x_\text{max} = 2\frac{m g}{k}
+	x_\text{max} = 2\frac{m g}{k}.
 \end{equation} 
 
-Note that the transient displacement of the truck bed is twice that of the steady-state displacement. Therefore, if the truck manufacturer designed the truck to only take the static load of dirt (i.e. if the dirt were placed gently into the truck bed), the frame of the truck would be damaged when the dirt is dropped into the back of the truck. From this, it can be understood that it is important to consider the transient responses of a system during the design phase.
+Note that the transient displacement of the truck bed is twice that of the steady-state displacement. Therefore, if the truck manufacturer designed the truck to only take the static load of dirt (i.e., if the dirt were placed gently into the truck bed), the frame of the truck would be damaged when the dirt is dropped into the back of the truck. From this, it can be understood that it is important to consider the transient responses of a system during the design phase.
 
-%\textbf{Example 1 - under damped}
+%\textbf{Example 1 - underdamped}
 %For the case where the truck has a damper with a value of $\zeta=0.5$, the displacement $(x)$ can be modeled as:
 %\begin{equation}
 %	x(t) = \frac{m g}{m \omega_n^2} \cdot \Big(1 - \frac{\omega_n}{\omega_d}e^{-\zeta \omega_n t}\text{sin}(\omega_dt + \phi)\Big)\text{, where } \phi = \text{cos}^{-1}(\zeta)
 %\end{equation}
 
 \end{example}
+
+\begin{note}
+	A useful rule of thumb for engineers and designers is that dynamic loading can produce forces up to twice the static load for an undamped step input (and less if damping is applied). As shown in Example~\ref{ex:Displacement_under_Dynamic_Loading}, this follows from linear behavior and Hooke's law ($F = kx$), where a peak displacement twice the static value implies a corresponding doubling of force.
+\end{note}
+
+
 
 
 		\begin{vibration_case_study}
@@ -380,7 +379,7 @@ Note that the transient displacement of the truck bed is twice that of the stead
 
 
 
-\subsection{System Response to Arbitrary Inputs}
+\subsection{Response to Arbitrary Inputs}
 
 \label{sec:impulse_inputs}
 
@@ -521,7 +520,7 @@ Again, this represents the total system response (without initial conditions) fo
 %			Discuss transfer-function-based monitoring of systems. This will include the system identification for SHM and shifts in the system response of structures. 
 %		\end{vibration_case_study}
 
-\subsection{Transfer Function for Response to Random Inputs}
+\subsection{Response to Random Inputs}
 
 			Consider the following system
 			\begin{figure}[H]
@@ -532,7 +531,7 @@ Again, this represents the total system response (without initial conditions) fo
 			\end{figure}
 			\noindent where $F(s)$ is the input, $H(s)$ is the system, and $X(s)$ is the output from the system. This formulation is called the transfer-function approach and is commonly used for the formulation and solution of dynamic problems in the control literature. It can also be used for solving various forced-vibration problems including those from complex or stochastic inputs. 
 	
-\subsubsection{Defining the Transfer Function $\mathbf{H(s)}$}
+\subsubsection{Definition of the Transfer Function $\mathbf{H(s)}$}
 
 Again, consider the generic system represented in figure~\ref{fig:transfer_function_system}. For this system representation, $F(s)$ is the Laplace of the transform of the driving force, and $H(s)$ is the Laplace transform of the response of the system $h(t)$. 
 
@@ -569,15 +568,34 @@ X(s) = H(s)F(s)
 \end{equation}	
 
 
-\subsubsection{Transfer Function Method (Steady-state Solution)}
+\begin{review}
+	\label{sec:TimeFrequencySpectrum}
 
-Considering the forced system:
+	\textbf{Frequency and Time Domains}
+
+	\noindent The frequency domain is a mathematical representation of a signal or data in terms of its frequency components, as opposed to its temporal or time-based representation. The frequency domain provides a different perspective on the signal by decomposing it into its constituent sinusoidal signals at discrete frequencies and their respective magnitudes. A 3D rerensation of this process is shown in figure~\ref{fig:3D_time_frequency_analysis}. The transformation between the time domain and the frequency domain is typically achieved using mathematical techniques such as the Fourier Transform or the Fast Fourier Transform (FFT).
+
+		\begin{figure}[H]
+			\centering
+			\vspace{-1ex}
+			\includegraphics[width=6.0in]{../figures/3D_time_frequency_analysis}
+			\vspace{-2ex}
+			\caption{3D visualization of time and frequency domains where a temporal signal is decomposed into constituent sinusoidal signals.}
+			\label{fig:3D_time_frequency_analysis}
+		\end{figure}
+
+\end{review}
+
+\subsubsection{Frequency Response Function}
+
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.4\textwidth]{../figures/1-DOF-spring_dashpot_mass_horizontal_forced.png}
 	\caption{A spring-dashpot-mass model of a 1-DOF system with external excitation.}
+	\label{fig:1-DOF-spring_dashpot_mass_horizontal_forced-4.4.2}
 \end{figure}
-\noindent that can be expressed as the equation of motion
+Considering the forced system shown in Figure~\ref{fig:1-DOF-spring_dashpot_mass_horizontal_forced-4.4.2} that can be expressed as the equation of motion
 \begin{equation}
 	m\ddot{x}(t) + c\dot{x}(t) +kx(t) = F_0 \cos(\omega t)
 \end{equation}
@@ -617,27 +635,31 @@ rearranging into a standard form yields:
 H(j\omega) = \frac{1}{k-m\omega^2+c\omega j}
 \label{eq:frequency_response_function}
 \end{eqnarray}
-recall that $j^2=-1$. $H(j\omega)$ is the frequency response function of the system. The frequency response function of the system is the transfer function of the system evaluated in the complex plane. As this expression contains imaginary values to account for the phase in the system it can be challenging to work with. The amplitude $|H(j\omega)|$ of the response (the real portion of the equation) is useful to the practitioner. Therefore, it is prudent to consider the special case of amplitude response while neglecting the phase response. Consider that:
+recall that $j^2=-1$. 
+
+
+The frequency response function ($H(j\omega)$) of the system is the transfer function of the system evaluated in the complex plane.
+As this expression contains imaginary values to account for the phase in the system it can be challenging to work with. The amplitude $|H(j\omega)|$ of the response (the real portion of the equation) is useful to the practitioner. Therefore, it is prudent to consider the special case of amplitude response while neglecting the phase response. Consider that
 \begin{equation}
 	H(j\omega) = \text{R}+\text{I}j
 \end{equation}  
 so
 \begin{equation}
-	 |H(j\omega)|=\sqrt{\text{R}^2+\text{I}^2}
+	 |H(j\omega)|=\sqrt{\text{R}^2+\text{I}^2}.
 \end{equation}  
-multiplying $H(j\omega)$ by 1 that is represented by its unit complex conjugate yields:
+Multiplying $H(j\omega)$ by 1 that is represented by its unit complex conjugate yields
 \begin{align}
 H(j\omega) &= \bigg( \frac{1}{k-m\omega^2+c\omega j} \bigg) \bigg( \frac{k-m\omega^2-c\omega j}{k-m\omega^2-c\omega j}\bigg) \\
-&= \frac{k-m\omega^2-c\omega j}{(k-m\omega^2)^2(c\omega)^2}  \\
-&=  \frac{k-m\omega^2}{(k-m\omega^2)^2(c\omega)^2}  +  \frac{-c\omega}{(k-m\omega^2)^2(c\omega)^2}j 
+&= \frac{k-m\omega^2-c\omega j}{(k-m\omega^2)^2 + (c\omega)^2}  \\
+&=  \frac{k-m\omega^2}{(k-m\omega^2)^2 + (c\omega)^2}  +  \frac{-c\omega}{(k-m\omega^2)^2 + (c\omega)^2}j.
 \end{align}
-therefore, $\text{R} = \frac{k-m\omega^2}{(k-m\omega^2)^2(c\omega)^2} $ and $\text{I} = \frac{-c\omega}{(k-m\omega^2)^2(c\omega)^2}$. Now, calculating the amplitude of $H(j\omega)$ we get:
+Therefore, $\text{R} = \frac{k-m\omega^2}{(k-m\omega^2)^2 + (c\omega)^2} $ and $\text{I} = \frac{-c\omega}{(k-m\omega^2)^2 + (c\omega)^2}$. Now, calculating the amplitude of $H(j\omega)$ we get
 \begin{align}
 H(\omega) &= |H(j\omega)| \\
 &=  \sqrt{\text{R}^2+\text{I}^2} \\
 &=  \sqrt{\frac{(k-m\omega)^2+(-c\omega)^2}{\big((k-m\omega^2)^2+(c\omega)^2)\big)^2}} \\
-&=  \sqrt{\frac{1}{(k-m\omega^2)^2+c^2\omega^2}} \\
-&= \frac{1}{\sqrt{(k-m\omega^2)^2+c^2\omega^2}}
+&=  \sqrt{\frac{1}{(k-m\omega^2)^2+(c\omega)^2}} \\
+&= \frac{1}{\sqrt{(k-m\omega^2)^2+(c\omega)^2}}.
 \end{align}
 where $H(\omega)$ represents only the amplitude of the frequency response function and therefore drops the $j$ term from the expression. 
 
@@ -658,7 +680,6 @@ where $H(\omega)$ represents only the amplitude of the frequency response functi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\pagebreak
 
 \begin{review}
 	
@@ -674,7 +695,7 @@ where $H(\omega)$ represents only the amplitude of the frequency response functi
 	\end{eqnarray}
 	While the amplitude of the frequency response is:
 	\begin{eqnarray}
-	H(\omega) = |H(j\omega)| = \frac{1}{\sqrt{(k-m\omega^2)^2+c^2\omega^2}}
+	H(\omega) = |H(j\omega)| = \frac{1}{\sqrt{(k-m\omega^2)^2+(c\omega)^2}}
 	\end{eqnarray}
 \end{review}
 			\vspace{-2ex}
@@ -728,26 +749,9 @@ where $H(\omega)$ represents only the amplitude of the frequency response functi
 
 	\vspace{-2ex}
 
-\begin{review}
-	\label{sec:TimeFrequencySpectrum}
 
-	\textbf{Frequency and Time Domains}
 
-	\noindent The frequency domain is a mathematical representation of a signal or data in terms of its frequency components, as opposed to its temporal or time-based representation. The frequency domain provides a different perspective on the signal by decomposing it into its constituent sinusoidal signals at discrete frequencies and their respective magnitudes. A 3D rerensation of this process is shown in figure~\ref{fig:3D_time_frequency_analysis}. The transformation between the time domain and the frequency domain is typically achieved using mathematical techniques such as the Fourier Transform or the Fast Fourier Transform (FFT).
-
-		\begin{figure}[H]
-			\centering
-			\vspace{-1ex}
-			\includegraphics[width=6.0in]{../figures/3D_time_frequency_analysis}
-			\vspace{-2ex}
-			\caption{3D visualization of time and frequency domains where a temporal signal is decomposed into constituent sinusoidal signals.}
-			\label{fig:3D_time_frequency_analysis}
-		\end{figure}
-
-\end{review}
-
-\pagebreak
-\subsubsection{Response to Random Inputs}
+\subsubsection{Random Vibration Response}
 The transfer and frequency response functions can be very useful for determining the system's response to random inputs. Up to this point, we have solved for deterministic input. 
 
 \begin{itemize}
@@ -807,8 +811,13 @@ The subscript $xx$ denotes that this is a measure of the response for the variab
 \vspace{-2ex}
 
 \begin{note}
- The value of $\tau$ selected in the autocorrelation function greatly affects its response for the sinusoidal input. This is because the values for the sinusoidal are highly correlated. To expand, the value at any time $t$ is greatly affected by the values immediately before and after it. This is not the case for the random input where the signal is not correlated and therefore there is little difference in changing the value of $\tau$ on the response of the autocorrelation function.  
+The autocorrelation function measures how similar a signal is to a time-shifted version of itself. For a sinusoidal input, the signal is highly structured and periodic.  As a result, the autocorrelation remains high and varies smoothly with the time shift $\tau$, as shown in Figure~\ref{fig:Response_to_random_input_autocorrelation}(a).
+
+In contrast, a random (noise) signal has little to no predictable structure. Values at different times are largely independent, so shifting the signal over itself does not preserve similarity. Consequently, the autocorrelation drops to near zero for $\tau \neq 0$, indicating a lack of correlation between past and future values; shown in Figure~\ref{fig:Response_to_random_input_autocorrelation}(b).
+ 
+In practical terms, autocorrelation reveals whether a vibration signal contains repeating patterns (e.g., harmonic motion) or is dominated by random fluctuations.
 \end{note}
+
 
 If we take the Fourier transform of the autocorrelation function we obtain the power spectral density (PSD) defined as:
 \begin{equation}
@@ -856,7 +865,7 @@ where $R_{ff}$ denotes the autocorrelation function of $F(t)$ and $S_{ff}$ denot
 
 \begin{example}
 
-\textbf{Calculating the Power Spectral Density of a Forced System}
+\textbf{Calculating Power Spectral Density}
 
 	\noindent Consider the system in figure~\ref{fig:1-DOF-spring_dashpot_mass_horizontal_forced-2} and calculate the PSD of the response $x(t)$ given that the PSD of the applied force $S_{ff}(\omega)$ is white noise.
 	\begin{figure}[H]
@@ -902,6 +911,7 @@ where $R_{ff}$ denotes the autocorrelation function of $F(t)$ and $S_{ff}$ denot
 	\end{figure}
 \end{example}  
 
+\subsubsection{Statistical System Response Characterization}
 Another useful quantity to consider is the expected output, in terms of its mean and variance, for a given input. Working within the constraint that the system will oscillate about zero, $E[x]=0$, the mean-square value can be directly related to the PSD function as:
 \begin{equation}
 E[x^2] = \overline{x^2} =   \int_{-\infty}^{\infty} |H(j\omega)|^2 S_{ff}(\omega) d\omega

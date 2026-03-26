@@ -1,30 +1,27 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Nov 10 09:30:27 2016
 
-@author: downey
-"""
+import IPython as IP
+IP.get_ipython().run_line_magic('reset', '-sf')
 
 #%% import modules and set default fonts and colors
 
-import IPython as IP
-IP.get_ipython().magic('reset -sf')
+"""
+Default plot formatting code for Austin Downey's series of open source notes/
+books. This common header is used to set the fonts and format.
+
+Header file last updated May 16, 2024
+"""
+
+import numpy as np
+import scipy as sp
 import matplotlib.pyplot as plt
 import matplotlib as mpl
-import numpy as np
-import pandas as PD
-import scipy as sp
-from scipy import interpolate
-import pickle
-import time
-import re
-import json as json
-import pylab
+
 
 # set default fonts and plot colors
+plt.rcParams.update({'text.usetex': True})
 plt.rcParams.update({'image.cmap': 'viridis'})
-cc = plt.rcParams['axes.prop_cycle'].by_key()['color']
 plt.rcParams.update({'font.serif':['Times New Roman', 'Times', 'DejaVu Serif',
  'Bitstream Vera Serif', 'Computer Modern Roman', 'New Century Schoolbook',
  'Century Schoolbook L',  'Utopia', 'ITC Bookman', 'Bookman', 
@@ -32,7 +29,11 @@ plt.rcParams.update({'font.serif':['Times New Roman', 'Times', 'DejaVu Serif',
 plt.rcParams.update({'font.family':'serif'})
 plt.rcParams.update({'font.size': 10})
 plt.rcParams.update({'mathtext.rm': 'serif'})
-plt.rcParams.update({'mathtext.fontset': 'custom'})
+# I don't think I need this next line as its set to 'stixsans' above. 
+plt.rcParams.update({'mathtext.fontset': 'custom'}) 
+cc = plt.rcParams['axes.prop_cycle'].by_key()['color']
+## End of plot formatting code
+
 plt.close('all')
 
 
@@ -50,21 +51,21 @@ plt.figure(figsize=(6.5,2))
 plt.subplot(121)
 plt.plot(tt,xx_sin)
 plt.ylabel('x (mm)')
-plt.xlabel('time (s)')
+plt.xlabel('time (s)\n(a)')
 plt.grid('on')
 plt.xlim(0,10)
 plt.ylim(-1.1,1.1)
 #plt.title('sinusoidal loading')
 
 plt.subplot(122)
-plt.plot(tt,xx_rand,linewidth=0.4)
+plt.plot(tt,xx_rand,'.',markersize=2)
 plt.ylabel('x  (mm)')
-plt.xlabel('time (s)')
+plt.xlabel('time (s)\n(b)')
 plt.grid('on')
 plt.xlim(0,10)
 plt.ylim(-1.1,1.1)
 #plt.title('uniform random noise')
-plt.tight_layout()
+plt.tight_layout(pad=0)
 plt.savefig('response_to_random_input_inputs.jpg',dpi=275)
 
 
@@ -84,6 +85,37 @@ def estimated_autocorrelation(x):
     result = r/(variance*(np.arange(n, 0, -1)))
     return result
 
+
+# def estimated_autocorrelation(x):
+#     """
+#     Computes the autocorrelation that approximates:
+#     R_xx(τ) = lim (T→∞) 1/T ∫ x(t) x(t+τ) dt   from 0 to T
+    
+#     Returns the autocorrelation for positive lags only (τ ≥ 0).
+#     Normalized so that R(0) ≈ 1 for a zero-mean signal.
+#     """
+#     x = np.asarray(x).flatten()
+#     n = len(x)
+    
+#     # Remove mean (important for the definition)
+#     x = x - x.mean()
+    
+#     # Compute raw autocorrelation using full correlation
+#     corr = np.correlate(x, x, mode='full')
+    
+#     # Take only the positive lags (including zero)
+#     corr = corr[n-1:]                     # length = n
+    
+#     # Normalize by the number of overlapping samples (approximates 1/T)
+#     lags = np.arange(n)
+#     result = corr / (n - lags)
+    
+#     # Final normalization so R(0) = 1  (this is common and matches most plots)
+#     result = result / result[0]
+    
+#     return result
+
+
 R_xx_sin = estimated_autocorrelation(xx_sin)   
 R_xx_rand = estimated_autocorrelation(xx_rand)  
 
@@ -91,7 +123,10 @@ plt.figure(figsize=(6.5,2))
 plt.subplot(121)
 plt.plot(tt,R_xx_sin)
 plt.ylabel('$R_{xx}$')
+#plt.xlabel(r'time shift $\tau$ (s)\\    (a)')
 plt.xlabel(r'time shift $\tau$ (s)')
+plt.text(0.54, -0.31, '(a)', transform=plt.gca().transAxes,
+         ha='right', va='top')
 plt.grid('on')
 plt.xlim(0,10)
 plt.ylim(-1.1,1.1)
@@ -102,12 +137,15 @@ plt.plot(tt,R_xx_rand,label='calculated')
 plt.plot(tt[0:2],R_xx_rand[0:2],'-',color=cc[0],linewidth=5)
 plt.plot([0.1,0.1],[0,1],'--',color='red',linewidth=2,label='theoretical')
 plt.ylabel('$R_{xx}$')
+
 plt.xlabel(r'time shift $\tau$ (s)')
+plt.text(0.54, -0.31, '(b)', transform=plt.gca().transAxes,
+         ha='right', va='top')
 plt.grid('on')
 plt.xlim(0,10)
 plt.ylim(-1.1,1.1)
 #plt.title('uniform random noise')
-plt.tight_layout()
+plt.tight_layout(pad=0)
 plt.legend(framealpha=1)
 plt.savefig('response_to_random_input_autocorrelation.jpg',dpi=275)
 
@@ -139,23 +177,23 @@ plt.figure(figsize=(6.5,2))
 plt.subplot(121)
 plt.plot(PSD_xx_sin,PSD_yy_sin)
 plt.ylabel('PSD (mm$^2$)')
-plt.xlabel('frequency (Hz)')
+plt.xlabel('frequency (Hz)\n(a)')
 plt.grid('on')
 plt.xlim(0,1)
 #plt.ylim(-1.1,1.1)
-plt.title('sinusoidal loading')
+#plt.title('sinusoidal loading')
 
 plt.subplot(122)
 plt.plot(PSD_xx_rand,PSD_yy_rand,linewidth=0.4,label='calculated')
 plt.plot([0,1],[np.mean(PSD_yy_rand),np.mean(PSD_yy_rand)],'--',color='red',linewidth=2,label='theoretical')
 plt.ylabel('PSD (mm$^2$)')
-plt.xlabel('frequency (Hz)')
+plt.xlabel('frequency (Hz)\n(b)')
 plt.grid('on')
 plt.xlim(0,1)
 #plt.ylim(-1.1,1.1)
-plt.title('uniform random noise')
-plt.tight_layout()
+#plt.title('uniform random noise')
 plt.legend(framealpha=1)
+plt.tight_layout(pad=0)
 plt.savefig('response_to_random_input_PSD_python.pdf')
 
 
