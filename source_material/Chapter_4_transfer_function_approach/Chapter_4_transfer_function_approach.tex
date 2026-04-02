@@ -150,23 +150,23 @@
 			\end{equation}
 			Here we will leave the ``$(t)$'' for clarity to differentiate the time domain solution from Laplace solution ``$(s)$'' in the $s$-plane, as discussed in review \ref{sec:Laplace_review}. The EOM can be rewritten in standard form as:
 			\begin{equation}
-				\ddot{x}(t) + \omega_n^2x(t) = 0 
+				\ddot{x}(t) + \omega_\text{n}^2x(t) = 0 
 			\end{equation}
 			where the initial conditions at $t=0$ are $x(0)=x_0$ and $\dot{x}(0) = v_0$. Taking the Laplace transforms, in symbplic form using equations \ref{eq:laplace_x} - \ref{eq:laplace_x''}, of both sides of the EOM yields:
 			\begin{equation}
-				\big[s^2X(s) -sx_0 -v_0 \big] + \big[ \omega_n^2X(s) \big] =0
+				\big[s^2X(s) -sx_0 -v_0 \big] + \big[ \omega_\text{n}^2X(s) \big] =0
 			\end{equation}
 			using equations \ref{eq:laplace_x} and \ref{eq:laplace_x''} from section \ref{sec:Laplace_review}. Solving for the output of the system $X(s)$ yields:
 			\begin{equation}
-			X(s) = \frac{sx_0 + v_0}{s^2 + \omega_n^2}
+			X(s) = \frac{sx_0 + v_0}{s^2 + \omega_\text{n}^2}
 			\end{equation}
 			We can expand this form of $X(s)$ to obtain equations listed in our Laplace Transform table:
 			\begin{equation}
-			X(s) = \frac{sx_0}{s^2 + \omega_n^2} + \frac{v_0}{s^2 + \omega_n^2}\cdot \frac{\omega_n}{\omega_n}
+			X(s) = \frac{sx_0}{s^2 + \omega_\text{n}^2} + \frac{v_0}{s^2 + \omega_\text{n}^2}\cdot \frac{\omega_\text{n}}{\omega_\text{n}}
 			\end{equation}
 			This becomes:
 			\begin{equation}
-			X(s) = x_0\frac{s}{s^2 + \omega_n^2} + \bigg(\frac{v_0}{\omega_n}\bigg) \cdot \frac{\omega_n}{s^2 + \omega_n^2}
+			X(s) = x_0\frac{s}{s^2 + \omega_\text{n}^2} + \bigg(\frac{v_0}{\omega_\text{n}}\bigg) \cdot \frac{\omega_\text{n}}{s^2 + \omega_\text{n}^2}
 			\end{equation}
 			
 			Next, using the inverse Laplace transform $x(t) = \Laplace{X(s)}^{-1}]$ and the two following Laplace transforms (\#5 and \#6):
@@ -178,7 +178,7 @@
 			\end{equation}
 			Therefore, we can obtain the solution for the system output $X(s)$ as:
 			\begin{equation}
-			x(t) = x_0 \text{cos}(\omega_n t) + \frac{v_0}{\omega_n}\text{sin}(\omega_n t)
+			x(t) = x_0 \text{cos}(\omega_\text{n} t) + \frac{v_0}{\omega_\text{n}}\text{sin}(\omega_\text{n} t)
 			\end{equation}
 			
 			The same procedure can be used to calculate the underdamped and forced responses. However, when calculating these responses the algebraic solution for $X(s)$, $s$ often contains quotients of polynomials. These Polynomial ratios may not be found in simple Laplace tables and must be solved using the method of partial fractions. An example of this procedure can be found in Appendix B of Inman\protect\footnotemark[1]. 
@@ -217,16 +217,16 @@ or
 
 Solving this equation for $X(s)$:
 \begin{equation}
-X(s) = \frac{1}{m} \cdot \frac{1}{s^2 + 2 \zeta \omega_n s + \omega_n^2}
+X(s) = \frac{1}{m} \cdot \frac{1}{s^2 + 2 \zeta \omega_\text{n} s + \omega_\text{n}^2}
 \end{equation}
 Again, the mass is extracted to develop a formulation that can be found in the Laplace tables. Setting the constraint that $\zeta<1$ and consulting \#10 in the table for Laplace transforms results in:
 \begin{equation}
-x(t) = \frac{1}{m \omega_d} e^{-\zeta \omega_n t} \text{sin}(\omega_dt)
+x(t) = \frac{1}{m \omega_\text{d}} e^{-\zeta \omega_\text{n} t} \text{sin}(\omega_\text{d}t)
 \label{eq:impulse_load_damped}
 \end{equation}
 where this is the general solution for a damped system subjected to an impulse loading function. For the undamped case, a solution can be obtained by setting $\zeta=0$. This results in the following form for the undamped case:
 \begin{equation}
-x(t) = \frac{1}{m \omega_n}\text{sin}(\omega_n t)
+x(t) = \frac{1}{m \omega_\text{n}}\text{sin}(\omega_\text{n} t)
 \end{equation}
 Below is a typical response for both an undamped and underdamped 1-DOF system subject to an impulse response at $t=0$ seconds. 
 \begin{figure}[H]
@@ -271,11 +271,11 @@ Next, this equation is solved for $X(s)$ as:
 \end{equation}
 This can be rearranged as:
 \begin{equation}
-	X(s) = \frac{1}{m} \cdot \frac{1}{s(s^2+\omega_n^2)}
+	X(s) = \frac{1}{m} \cdot \frac{1}{s(s^2+\omega_\text{n}^2)}
 \end{equation}
 where $\frac{1}{m}$ will pass through the Laplace function. Therefore, taking the inverse Laplace transform using \#9 of the provided Laplace transforms yields:
 \begin{equation}
-	x(t) = \frac{1}{m} \cdot \frac{1}{\omega_n^2}\big(1-\text{cos}(\omega_n t)\big) = \frac{1}{k}\big(1-\text{cos}(\omega_n t)\big)
+	x(t) = \frac{1}{m} \cdot \frac{1}{\omega_\text{n}^2}\big(1-\text{cos}(\omega_\text{n} t)\big) = \frac{1}{k}\big(1-\text{cos}(\omega_\text{n} t)\big)
 	\label{eq:step_undamped}
 \end{equation}
  
@@ -285,23 +285,23 @@ m\ddot{x}(t) + c\dot{x}(t) + kx(t) = \Phi(t)
 \end{equation}
 Converting to the standard form results in:
 \begin{equation}
-\ddot{x}(t) + 2  \zeta \omega_n\dot{x}(t) + \omega_n^2x(t) = \frac{1}{m} \cdot \Phi(t)
+\ddot{x}(t) + 2  \zeta \omega_\text{n}\dot{x}(t) + \omega_\text{n}^2x(t) = \frac{1}{m} \cdot \Phi(t)
 \end{equation}
 taking the Laplace transform of both sides and assuming zero initial conditions yields:
 \begin{equation}
-	s^2X(s) + 2  \zeta \omega_n s X(s) + \omega_n^2 X(s)  =\frac{1}{m} \cdot \frac{1}{s}
+	s^2X(s) + 2  \zeta \omega_\text{n} s X(s) + \omega_\text{n}^2 X(s)  =\frac{1}{m} \cdot \frac{1}{s}
 \end{equation}
 Next, this equation is solved for $X(s)$ as:
 \begin{equation}
-	X(s) = \frac{1}{s^2 + 2  \zeta \omega_n s + \omega_n^2} \cdot \frac{1}{m} \cdot \frac{1}{s}
+	X(s) = \frac{1}{s^2 + 2  \zeta \omega_\text{n} s + \omega_\text{n}^2} \cdot \frac{1}{m} \cdot \frac{1}{s}
 \end{equation}
-multiplying the right-hand-side of this equation by  $\frac{\omega_n^2}{\omega_n^2}$ results in:
+multiplying the right-hand-side of this equation by  $\frac{\omega_\text{n}^2}{\omega_\text{n}^2}$ results in:
 \begin{equation}
-	X(s) = \frac{1}{m \omega_n^2} \cdot \frac{\omega_n^2}{s(s^2+2\zeta\omega_n s+\omega_n^2)}
+	X(s) = \frac{1}{m \omega_\text{n}^2} \cdot \frac{\omega_\text{n}^2}{s(s^2+2\zeta\omega_\text{n} s+\omega_\text{n}^2)}
 \end{equation}
-Again, the $\frac{1}{m\omega_n^2}$ will pass through the Laplace function. Therefore, taking the inverse Laplace transform using \#11 on the Laplace transform sheet yields:
+Again, the $\frac{1}{m\omega_\text{n}^2}$ will pass through the Laplace function. Therefore, taking the inverse Laplace transform using \#11 on the Laplace transform sheet yields:
 \begin{equation}
-	x(t) = \frac{1}{m \omega_n^2} \cdot \Big(1 - \frac{\omega_n}{\omega_d}e^{-\zeta \omega_n t}\text{sin}(\omega_dt + \phi)\Big)\text{, where } \phi = \text{cos}^{-1}(\zeta)\text{, where } \zeta<1
+	x(t) = \frac{1}{m \omega_\text{n}^2} \cdot \Big(1 - \frac{\omega_\text{n}}{\omega_\text{d}}e^{-\zeta \omega_\text{n} t}\text{sin}(\omega_\text{d}t + \phi)\Big)\text{, where } \phi = \text{cos}^{-1}(\zeta)\text{, where } \zeta<1
 \end{equation}
 After obtaining equations for the undamped and underdamped cases, the responses for the unit step, solved with the transform method, can be plotted as:
 \begin{figure}[H]
@@ -330,7 +330,7 @@ Note that the system will settle out around $F_0/k$ where $F_0  \Phi$ is a scali
 \noindent Setting the load applied to the truck as 1 unit, it can be seen that this is a unit step loading condition with an undamped system. 
 From Equation~\ref{eq:step_undamped} we know the expression for the transient and steady-state displacement of the truck bed. Therefore,
 \begin{equation}
-	x(t) = \frac{1}{k}\big(1-\text{cos}(\omega_n t)\big) = \frac{m g}{k}\big(1-\text{cos}(\omega_n t)\big).
+	x(t) = \frac{1}{k}\big(1-\text{cos}(\omega_\text{n} t)\big) = \frac{m g}{k}\big(1-\text{cos}(\omega_\text{n} t)\big).
 \end{equation}
 This equation has a maximum amplitude when the cos$(\omega_t)=-1$, resulting in
 \begin{equation}
@@ -346,7 +346,7 @@ Note that the transient displacement of the truck bed is twice that of the stead
 %\textbf{Example 1 - underdamped}
 %For the case where the truck has a damper with a value of $\zeta=0.5$, the displacement $(x)$ can be modeled as:
 %\begin{equation}
-%	x(t) = \frac{m g}{m \omega_n^2} \cdot \Big(1 - \frac{\omega_n}{\omega_d}e^{-\zeta \omega_n t}\text{sin}(\omega_dt + \phi)\Big)\text{, where } \phi = \text{cos}^{-1}(\zeta)
+%	x(t) = \frac{m g}{m \omega_\text{n}^2} \cdot \Big(1 - \frac{\omega_\text{n}}{\omega_\text{d}}e^{-\zeta \omega_\text{n} t}\text{sin}(\omega_\text{d}t + \phi)\Big)\text{, where } \phi = \text{cos}^{-1}(\zeta)
 %\end{equation}
 
 \end{example}
@@ -394,7 +394,7 @@ The time-domain response of a system to an arbitrary input force in time can be 
 
 To solve for a generalized response to arbitrary inputs we will use our knowledge that we are dealing with linear systems and that the sequence of partial sums can be applied to from a solution from several impulse responses. First, we re-define the response of a 1 DOF system to a unit impulse load as 
 \begin{equation}
-g(t) = x(t) =\frac{1}{m \omega_d} e^{-\zeta \omega_n t} \text{sin}(\omega_dt)
+g(t) = x(t) =\frac{1}{m \omega_\text{d}} e^{-\zeta \omega_\text{n} t} \text{sin}(\omega_\text{d}t)
 \label{eq:g_impulse_load_damped}
 \end{equation}
 be re-defining $x(t)$ as $g(t)$ we reserve the use of $x(t)$ for the final solution.
@@ -402,7 +402,7 @@ be re-defining $x(t)$ as $g(t)$ we reserve the use of $x(t)$ for the final solut
 From figure~\ref{fig:Arbitary_excitation_forces}, we can assume that at time $\tau$ a force defined as $F(\tau)$ acts on the system for a time $\Delta \tau$. Therefore, the impulse acting at time $t$ is $F(\tau) \Delta \tau$.
 At any time in the future after the impulse that is applied at time $\tau$, the time elapsed is $t - \tau$. Therefore, the response at any time $t$ of the impulse event is found using equation~\ref{eq:g_impulse_load_damped} and is written as $g(t-\tau$). As the impulse for this special case happens at $t=\tau$ instead of the traditional $t=0$, the unit impulse response at any time $t-\tau$ can be expressed as
 \begin{equation}
-g(t-\tau) = \frac{1}{m \omega_d} e^{-\zeta \omega_n (t-\tau)} \text{sin}\big(\omega_d (t-\tau)\big), \;  t \ge \tau
+g(t-\tau) = \frac{1}{m \omega_\text{d}} e^{-\zeta \omega_\text{n} (t-\tau)} \text{sin}\big(\omega_\text{d} (t-\tau)\big), \;  t \ge \tau
 \label{eq:g_of_t_minus_tau}
 \end{equation}
 Again, using $g$ as the response to a single impulse that makes up the arbitrary signal. To solve for the arbitrary input $F(t)$, a piece-wise expression is used; as demonstrated in example~\ref{example:Double_Hammer_Impact}.
@@ -420,7 +420,7 @@ Letting $\Delta \tau \rightarrow 0$, the summation can be transferred into the c
 \end{equation}
 The integral in equation~\ref{eq:Duhamel_1} is called a convolutional integral which is simply the integral of the produce of two functions where one of the functions is shifted by the variable of integration; in this case $\tau$. Knowing the solution to an impulse load, re-defined as $g(t)$ in equation~\ref{eq:g_impulse_load_damped} we can expand out the expression in equation~\ref{eq:Duhamel_1} such that the response of the total system is
 \begin{equation}
-	x(t) = \frac{1}{m \omega_d} \int_{0}^{t} F(\tau) e^{-\zeta \omega_n (t-\tau)} \text{sin}\big(\omega_d(t-\tau)\big) d \tau
+	x(t) = \frac{1}{m \omega_\text{d}} \int_{0}^{t} F(\tau) e^{-\zeta \omega_\text{n} (t-\tau)} \text{sin}\big(\omega_\text{d}(t-\tau)\big) d \tau
 	\label{eq:Duhamel_2}	
 \end{equation}
 Again, this represents the total system response (without initial conditions) for an arbitrary excitation $F(t)$.  These equations are called the \textit{Duhamel} integral. In many cases, the function $F(t)$ allows for explicit integration of equations~\ref{eq:Duhamel_1} and \ref{eq:Duhamel_2}. However, numerical evaluation using a piece-wise equation made up of equation~\ref{eq:g_of_t_minus_tau} is always possible and many times easier given the simplicity of coding. 
@@ -454,26 +454,26 @@ Again, this represents the total system response (without initial conditions) fo
 	\end{equation}
 	Solving this equation for $X(s)$:
 	\begin{equation}
-		X(s) = \frac{0.2}{m} \cdot \frac{1}{s^2 + 2 \zeta \omega_n s + \omega_n^2}
+		X(s) = \frac{0.2}{m} \cdot \frac{1}{s^2 + 2 \zeta \omega_\text{n} s + \omega_\text{n}^2}
 	\end{equation}
 	Again, consulting \#10 in the table for Laplace transforms results in:
 	\begin{equation}
-		x_1(t) = \frac{0.2}{m \omega_d} e^{-\zeta \omega_n t} \text{sin}(\omega_dt)
+		x_1(t) = \frac{0.2}{m \omega_\text{d}} e^{-\zeta \omega_\text{n} t} \text{sin}(\omega_\text{d}t)
 	\end{equation}
 	where this is the general solution for a damped system subjected to an impulse loading function. The second impact can now be solved for using the same method. However, now the time $(t)$ must be offset by $(\tau)$ to allow the impact to still be located at $t=0$ in terms of the second impact. This results in:
 	\begin{equation}
-		x_1(t) = \frac{0.2}{m \omega_d} e^{-\zeta \omega_n t} \text{sin}(\omega_dt)
+		x_1(t) = \frac{0.2}{m \omega_\text{d}} e^{-\zeta \omega_\text{n} t} \text{sin}(\omega_\text{d}t)
 	\end{equation}
 	\begin{equation}
-		x_2(t) = \frac{0.1}{m \omega_d} e^{-\zeta \omega_n (t-\tau)} \text{sin}\big(\omega_d(t-\tau)\big)
+		x_2(t) = \frac{0.1}{m \omega_\text{d}} e^{-\zeta \omega_\text{n} (t-\tau)} \text{sin}\big(\omega_\text{d}(t-\tau)\big)
 	\end{equation}
 
 	Using the knowledge that the systems are linear and that the Laplace transform of a linear combination of two transforms is the same as the linear transformation of these functions we can build the piecewise function:
 	\begin{equation}
 	x(t) = 
 	\begin{cases}
-		\frac{0.2}{m \omega_d} e^{-\zeta \omega_n t} \text{sin}(\omega_dt) & \text{if } t < \tau \\
-		\frac{0.2}{m \omega_d} e^{-\zeta \omega_n t} \text{sin}(\omega_dt)  + \frac{0.1}{m \omega_d} e^{-\zeta \omega_n (t-\tau)} \text{sin}\big(\omega_d(t-\tau)\big) & \text{if } \tau \leq t 
+		\frac{0.2}{m \omega_\text{d}} e^{-\zeta \omega_\text{n} t} \text{sin}(\omega_\text{d}t) & \text{if } t < \tau \\
+		\frac{0.2}{m \omega_\text{d}} e^{-\zeta \omega_\text{n} t} \text{sin}(\omega_\text{d}t)  + \frac{0.1}{m \omega_\text{d}} e^{-\zeta \omega_\text{n} (t-\tau)} \text{sin}\big(\omega_\text{d}(t-\tau)\big) & \text{if } \tau \leq t 
 	\end{cases}
 	\end{equation}
 	For the mass, damping, and stiffness values given above can be plotted as:
@@ -486,34 +486,35 @@ Again, this represents the total system response (without initial conditions) fo
 
 
 \begin{example}
-	\textbf{Arbitrary Base Excitation}
+	\textbf{Duhamel Integral for Base Excitation}
 
-	\noindent Consider the base exciton as shown below subjected to an arbitrary base excitation. Derive an equation (Duhamel integral) for its displacement $(z)$, when the displacement is expressed at the relative displacement of the mass such that $z = x - y$. 
+	\noindent Building on the impulse response formulation developed in Example~\ref{example:Double_Hammer_Impact}, we now extend this approach to arbitrary inputs using the Duhamel (convolution) integral, which represents the time-domain equivalent of the transfer function method.
+	Consider the base exciton as shown below subjected to an arbitrary base excitation. Derive an equation (Duhamel integral) for its displacement $(z)$, when the displacement is expressed at the relative displacement of the mass such that $z = x - y$. 
 	
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=3in]{../figures/1_DOF_spring_dashpot_mass_horizontal_base_excited.png}
 		\caption{A base excited 1-DOF spring-mass-damper system.}
 	\end{figure}
-	
-	Defining the EOM for the system results in
+
+	Let $y(t)$ denote the prescribed base displacement. For simplicity, we will drop the explicit dependence on $t$ in what follows. The equation of motion for the system is then given by
 	\begin{equation}
-		m\ddot{x} + c\dot{x} + kx = c\dot{y} + ky 
+		m\ddot{x} + c\dot{x} + kx = c\dot{y} + ky.
 	\end{equation} 	
 	Using $z = x - y$, this can be simplified to
 	\begin{equation}
-		m\ddot{z} + c \dot{z} + kz = -m\ddot{y}
+		m\ddot{z} + c \dot{z} + kz = -m\ddot{y}.
 	\end{equation} 	
-	Given that we can replace $-m\ddot{y}$ with $F$, this is the same equation as
+	Given that we can replace $-m\ddot{y}$ with $F$ by applying Newton's second lat, this is the same equation as
 	\begin{equation}
-		m\ddot{z} + c \dot{z} + kz = F
+		m\ddot{z} + c \dot{z} + kz = F,
 	\end{equation} 	
-	meaning that the solutions for an arbitrary force-excited problem can transfer to a base-excited problem if we consider the relative displacement of the mass. Therefore, we can write the equation for the relative displacement of the mass as
-	
+	meaning that the solutions for an arbitrary force-excited problem shown in Equation~\ref{eq:Duhamel_2} can transfer to a base-excited problem if we consider the relative displacement of the mass (here defined as $z$). Therefore, we can write the equation for the relative displacement of the mass as
 	\begin{equation}
-		z(t) = -\frac{1}{m \omega_d} \int_{0}^{t} \ddot{y}(t) e^{-\zeta \omega_n (t-\tau)} \text{sin}\big(\omega_d(t-\tau)\big) d \tau	
-	\end{equation}
-	
+		z(t) = -\frac{1}{\omega_\text{d}} \int_{0}^{t} \ddot{y}(\tau)\, e^{-\zeta \omega_\text{n}(t-\tau)} \sin\!\big(\omega_\text{d}(t-\tau)\big)\, d\tau.
+		\label{eq:Duhamel_base_excitation}
+	\end{equation}	
+Note that substituting $F(\tau) = -m\ddot{y}(\tau)$ into the Duhamel integral (Equation~\ref{eq:Duhamel_2}) results in cancellation of the mass term, which is why $m$ does not appear in Equation~\ref{eq:Duhamel_base_excitation} and the leading navigate sign is added.
 \end{example}
 
 %		\begin{vibration_case_study}
@@ -538,22 +539,22 @@ Again, consider the generic system represented in figure~\ref{fig:transfer_funct
 We need to define the transfer function $H(s)$ for a generic system. To do this let us show the reasoning behind the transfer function. Here we will show that the output of any system ($x(t)$) can be related to the input of the system ($f(t)$) through a series of polynomial coefficients ($a$ and $b$). Consider the general $n^{th}$-order linear, time-invariant differential equation that governs the behavior of the dynamic system.
 
 \begin{equation}
-a_n\frac{d^nx(t)}{dt^n} + a_{n-1}\frac{d^{n-1}x(t)}{dt^{n-1}} + ... + a_0x(t) = b_m\frac{d^mf(t)}{dt^m} + b_{m-1}\frac{d^{m-1}f(t)}{dt^{m-1}} + ... + b_0f(t)
+a_\text{n}\frac{d^nx(t)}{dt^n} + a_{n-1}\frac{d^{n-1}x(t)}{dt^{n-1}} + ... + a_0x(t) = b_m\frac{d^mf(t)}{dt^m} + b_{m-1}\frac{d^{m-1}f(t)}{dt^{m-1}} + ... + b_0f(t)
 \end{equation} 
 where $x(t)$ is the output and $f(t)$ is the input. Note that this is similar to the formulation we have had before for the EOM. Taking the Laplace transform of both sides of the above equation yields
 
 \begin{eqnarray}
-&a_ns^nX(s) + a_{n-1}s^{n-1}X(s) + ... + a_0X(s) + \text{initial condition for } x(t) =   \\
+&a_\text{n}s^nX(s) + a_{n-1}s^{n-1}X(s) + ... + a_0X(s) + \text{initial condition for } x(t) =   \\
 &b_ms^mF(s) + b_{m-1}s^{m-1}F(s) + ... + b_0F(s) + \text{initial condition for } f(t)  \nonumber
 \end{eqnarray}
 It can be seen that this equation is a purely algebraic expression. If we assume the initial conditions to be zero, the equation reduces to the following:
 \begin{eqnarray}
-(a_ns^n + a_{n-1}s^{n-1} + ... + a_0)X(s) =  (b_ms^m + b_{m-1}s^{m-1} + ... + b_0)F(s) 
+(a_\text{n}s^n + a_{n-1}s^{n-1} + ... + a_0)X(s) =  (b_ms^m + b_{m-1}s^{m-1} + ... + b_0)F(s) 
 \label{eq:transfer_algebraic_expression}
 \end{eqnarray}
 if we rearrange equation \ref{eq:transfer_algebraic_expression} to solve for the relationship between the Laplace variables $\big( X(s)$ and $F(s) \big)$ and the algebraic expressions we get:
 \begin{equation}
-\frac{X(s)}{F(s)} = \frac{b_ms^m + b_{m-1}s^{m-1} + ... + b_0}{a_ns^n + a_{n-1}s^{n-1} + ... + a_0}
+\frac{X(s)}{F(s)} = \frac{b_ms^m + b_{m-1}s^{m-1} + ... + b_0}{a_\text{n}s^n + a_{n-1}s^{n-1} + ... + a_0}
 \end{equation}
 this shows that the ratio of the input algebraic expressions over the output algebraic expressions is equal to the ratio of the output Laplace variable over the input Laplace variable. This shows that we can relate the Laplace variables to the algebraic expressions. Therefore, we can define the transfer function $H(s)$ as: 
 \begin{equation}
@@ -1006,8 +1007,8 @@ When combined with equation \ref{eq:variance_for_S_O}, these integrals allow for
 				$\sinh (\omega t) $	\> $\dfrac{\omega}{s^2-\omega^2}$ \>\LTNUM \\ \\
 				$\cosh (\omega t) $	\> $\dfrac{s}{s^2-\omega^2}$ \>\LTNUM \\ \\
 				$\dfrac{1}{\omega^2}\big(1-\cos(\omega t)\big)$ \> $\dfrac{1}{s(s^2+\omega^2)}$ \>\LTNUM \\ \\
-				$\dfrac{1}{\omega_d}e^{-\zeta \omega t}\sin(\omega_d t)$ \> $\dfrac{1}{s^2+2\zeta \omega s+\omega^2}$ \>\LTNUM \\ \\
-				$1-\dfrac{\omega}{\omega_d}e^{-\zeta \omega t}\sin(\omega_d t + \phi)$, $\phi =\cos^{-1}(\zeta) \dots $ \\ \> $\dfrac{\omega^2}{s(s^2+2\zeta \omega s+\omega^2)}$ \>\LTNUM \\ \\
+				$\dfrac{1}{\omega_\text{d}}e^{-\zeta \omega t}\sin(\omega_\text{d} t)$ \> $\dfrac{1}{s^2+2\zeta \omega s+\omega^2}$ \>\LTNUM \\ \\
+				$1-\dfrac{\omega}{\omega_\text{d}}e^{-\zeta \omega t}\sin(\omega_\text{d} t + \phi)$, $\phi =\cos^{-1}(\zeta) \dots $ \\ \> $\dfrac{\omega^2}{s(s^2+2\zeta \omega s+\omega^2)}$ \>\LTNUM \\ \\
 				$\dfrac{t^{n-1}}{(n-1)!}$, $ n=1,2,\dots $ \> $\dfrac{1}{s^n}$ \>\LTNUM \\ \\
 				$t^n $, $n=1,2,\dots$     \> $\dfrac{n!}{s^{n+1}}$    \>\LTNUM \\ \\
 				$t^ne^{\omega t}$, $ n=1,2,\dots $	\> $\dfrac{n!}{(s-\omega)^{n+1}}$	\>\LTNUM \\ \\

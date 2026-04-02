@@ -13,11 +13,11 @@ m2 = 60;    % intermediate wing
 m3 = 120;   % engine / inner-wing
 m4 = 420;   % fuselage center
 
-% mass vector left-tip -> right-tip (9 DOF)
-m_vec = [m1, m2, m3, m2, m4, m2, m3, m2, m1]';
+% mass vector left-tip -> right-tip (11 DOF)
+m_vec = [m1, m2, m2, m3, m2, m4, m2, m3, m2, m2, m1]';
 
 %% ---- Build Mass matrix ----
-n = length(m_vec);        % should be 9
+n = length(m_vec);        % should be 11
 M = diag(m_vec);          % diagonal mass matrix
 
 %% ---- Build global stiffness matrix for 1D chain ----
@@ -81,12 +81,12 @@ plot(nodes, phi1, 'o-', 'LineWidth', 1.4, 'MarkerSize', 4); hold on
 plot(nodes, phi2, 's--', 'LineWidth', 1.4, 'MarkerSize', 4)
 plot(nodes, phi3, 'd-.', 'LineWidth', 1.4, 'MarkerSize', 4)
 plot(nodes, phi4, 'v-', 'LineWidth', 1.4, 'MarkerSize', 4)
-plot(nodes, phi5, 'p--', 'LineWidth', 1.4, 'MarkerSize', 4)
+
 
 hold off
 
 grid on
-xlabel('node index (1 = left tip, 5 = fuselage center, 9 = right tip)')
+xlabel('node index (1 = left tip, 5 = fuselage center, 11 = right tip)')
 ylabel('normalized displacement')
 
 lgd = legend( ...
@@ -95,7 +95,8 @@ lgd = legend( ...
     sprintf('mode 3 (%.2f Hz)', freq_hz(3)), ...
     sprintf('mode 4 (%.2f Hz)', freq_hz(4)), ...
     sprintf('mode 5 (%.2f Hz)', freq_hz(5)), ...
-    'NumColumns',3, ...
+    sprintf('mode 5 (%.2f Hz)', freq_hz(6)), ...
+    'NumColumns',4, ...
     'Orientation','horizontal');
 
 
