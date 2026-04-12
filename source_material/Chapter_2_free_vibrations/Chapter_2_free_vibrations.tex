@@ -1222,29 +1222,39 @@
 
    \end{example}
 
-   \todo{update example 2.10 with a much better example, I don't like that the points are next to each other, and it's too small, I think it's good to have some rotational coordinates like a turbine disk, or something more mechanical.}
    \begin{example}
    
-   \textbf{Calculating Damping Coefficient}
+   \textbf{Rotational Damping of a Shaft System}
    
-   \noindent The free-response of a 1000-kg automobile with stiffness of $k$ = 400,000 N/m is observed to be underdamped. Modeling the automobile as a single-degree-of-freedom oscillation in the vertical direction, as annotated in figure \ref{fig:vehicle_wheel_undamped}, determine the damping coefficient if the displacement at $t_1$ is measured to be 2 cm and 0.22 cm at $t_2$.
+   \noindent A rotating disk mounted on a shaft can be modeled as a single-degree-of-freedom torsional system. The disk has a mass moment of inertia $J = 12$~kgm$^2$, and the shaft has a torsional stiffness of $k_\theta = 800$~Nm/rad.
 
-   \pagebreak
+The system is observed to be underdamped. During free vibration, the angular displacement peaks decrease from $\theta_1 = 0.06$~rad to $\theta_5 = 0.018$~rad over four cycles. Determine the torsional damping coefficient $c_\theta$.
+
    \noindent\textbf{Solution:} 
-     
-   \noindent Knowing $x_1$ = 2 cm and $x_2$ = 0.22 cm and $t_2 = T + t_1$, therefore:
-   \begin{equation}
-    \delta = \text{ln}\frac{x_1}{x_2} = \text{ln}\frac{2}{0.22} = 2.207
-   \end{equation}   
-   and:
-   \begin{equation}
-    \zeta = \bigg(\frac{\delta}{\sqrt{4\pi^2+\delta^2}}\bigg) = \bigg(\frac{2.207}{\sqrt{4\pi^2+2.207^2}}\bigg) = 0.331
-   \end{equation}
-   Therefore, we can obtain the damping coefficient as
-   \begin{equation}
-    c = 2\zeta\sqrt{km}=2(0.331)\sqrt{400,000 \cdot 1,000} = 13,256 \hspace{1ex} 
-    \text{kg/s} 
-   \end{equation} 
+
+Using the logarithmic decrement over $n = 4$ cycles, we obtain
+\begin{equation}
+	\delta = \frac{1}{n} \ln\left(\frac{\theta_1}{\theta_{n+1}}\right)
+	= \frac{1}{4} \ln\left(\frac{0.06}{0.018}\right)
+	= \frac{1}{4} \ln(3.333)
+	= 0.301,
+\end{equation}
+Next, we compute the damping ratio as
+\begin{equation}
+	\zeta = \frac{\delta}{\sqrt{4\pi^2 + \delta^2}}
+	= \frac{0.301}{\sqrt{4\pi^2 + (0.301)^2}}
+	= 0.0479.
+\end{equation}
+The natural frequency of the torsional system is
+\begin{equation}
+	\omega_\text{n} = \sqrt{\frac{k_\theta}{J}} = \sqrt{\frac{800}{12}} = 8.16~\text{rad/s},
+\end{equation}
+Finally, we determine the torsional damping coefficient as
+\begin{equation}
+	c_\theta = 2\zeta J \omega_\text{n}
+	= 2(0.0479)(12)(8.16)
+	= 9.38~\text{N·m·s/rad}.
+\end{equation}
 
 \end{example}
   

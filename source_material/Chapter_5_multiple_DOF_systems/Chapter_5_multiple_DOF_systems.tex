@@ -129,7 +129,7 @@ Another example of a 2-DOF system with two masses, each with its own independent
  \label{fig:2-DOF-spring_mass_horizontal}
 \end{figure}
 
-\subsubsection{General Solution for Two-Degree-of-Freedom Systems}
+\subsection{General Solution for Two-Degree-of-Freedom Systems}
 Before we derive a model for undamped 2-DOF systems, let us first consider the solution to the system shown in figure~\ref{fig:2-DOF-spring_mass_horizontal}. The solution consists of two equations, one for each mass. This solution will be derived in section \ref{sec:2-DOF_derive_solution} and is expressed by the coupled equations:
 \begin{equation}
  x_1(t) = A_1 \sin (\omega_1 t + \phi_1 )u_{11}+ A_2 \sin (\omega_2 t + \phi_2 )u_{12} \hspace{3.35cm} 
@@ -213,7 +213,6 @@ This simple connection between vibration analysis and matrix analysis allows com
 
 
 Recall that the 1-DOF version of the equation of motion was solved by calculating the values of the constants in an assumed harmonic solution. The same approach is applied here in order to solve for the displacement of the two-DOF system. This time, the solution is assumed in the form:
-
 \begin{equation}
  \vec{x}(t) = \vec{u}e^{j\omega t}
 \end{equation}
@@ -236,28 +235,34 @@ or
 \begin{equation}
 (-\omega^2 M  + K)\vec{u}e^{j\omega t} =0
 \end{equation}
-As $e^{j\omega t} \neq 0$ for any value of $t$ and not allowing $\vec{u}$ to be zero, it can be deduced that $(-\omega^2 M  + K)$ must satisfy the vector equation. Therefore,
-\begin{equation}
-(-\omega^2 M  + K)\vec{u} =0, \hspace{1cm} \vec{u}\neq0
-\end{equation}
-This forms a homogeneous set of algebraic equations. To be useful, these equations have a nonzero solution if the system must exist. For this to be true, the inverse of the coefficient matrix $(-\omega^2 M  + K)$ must not exist. To expand, assume that the inverse of $(-\omega^2 M  + K)$ does exist, multiplying both sides of the equation by $(-\omega^2 M  + K)^{-1}$ yields $\vec{u}=0$. This is a trivial solution (it is not useful) as no motion in the system is implied. Therefore, the logical connection can be drawn between the solution of the equation and the inverse of the coefficient matrix $(-\omega^2 M  + K)$.
 
-Applying the singularity condition to the coefficient matrix of equation $(-\omega^2 M  + K)\vec{u} =0, \hspace{1ex} \vec{u}\neq0$ results a nonzero solution of $\vec{u}$. However, for this to exist, the following must be true:
+The next step in completing the solution to the equations of motion using the assumed harmonic form is to eliminate terms that do not affect whether the equation is satisfied. Starting with $(-\omega^2 M + K)\vec{u}e^{j\omega t} = 0$, and noting that $e^{j\omega t} \neq 0$ for all values of $t$, both sides of the equation can be divided by $e^{j\omega t}$. This yields
 \begin{equation}
-\det(-\omega^2 M  + K) = 0
+	(-\omega^2 M + K)\vec{u} = 0, \hspace{1cm} \vec{u} \neq 0
 \end{equation}
-Solving this expression results in one algebraic equation with one unknown ($\omega$). Expanding the above equation to consider the values for the matrices $M$ and $K$ results in:
-\begin{eqnarray}
-\det\begin{bmatrix} -\omega^2 m_1 + k_1 + k_2 & -k_2  \\  -k_2 & -\omega^2 m_2 + k_2 \end{bmatrix}=0
-\end{eqnarray}
-Using the definition of the determinant yields that the unknown quantity $\omega^2$ must satisfy:
+which forms a homogeneous set of algebraic equations. 
+For a nonzero solution $\vec{u}$ to exist, the coefficient matrix $(-\omega^2 M + K)$ must be singular, as $\vec{u} = 0$ would correspond to no motion and therefore no mode shape for the system.
+
+\begin{note}
+	A homogeneous system of equations of the form $A\vec{u} = 0$ has a nontrivial solution ($\vec{u} \neq 0$) only if the coefficient matrix $A$ is singular (i.e., not invertible). Therefore, for the system $A\vec{u} = 0$ to have a nonzero solution, it must satisfy $\det(A) = 0$, otherwise the matrix would be invertible and multiplying both sides by $A^{-1}$ would yield only the trivial solution $\vec{u} = 0$. In this context, $A = (-\omega^2 M + K)$.
+\end{note}
+
+Applying the singularity condition (see Note) to the coefficient matrix $(-\omega^2 M + K)$, the condition for a nonzero (nontrivial) solution $\vec{u}$ becomes
 \begin{equation}
-m_1 m_2 \omega^4 - (m_1 k_2 + m_2 k_1 + m_2 k_2)\omega^2 + k_1 k_2 = 0
+\det(-\omega^2 M  + K) = 0.
+\end{equation}
+Solving this expression results in one algebraic equation with one unknown ($\omega$). Expanding the above equation to consider the values for the matrices $M$ and $K$ results in
+\begin{eqnarray}
+\det\begin{bmatrix} -\omega^2 m_1 + k_1 + k_2 & -k_2  \\  -k_2 & -\omega^2 m_2 + k_2 \end{bmatrix}=0.
+\end{eqnarray}
+Using the definition of the determinant yields that the unknown quantity $\omega^2$ must satisfy
+\begin{equation}
+m_1 m_2 \omega^4 - (m_1 k_2 + m_2 k_1 + m_2 k_2)\omega^2 + k_1 k_2 = 0.
 \label{eq:characteristic_equation}
 \end{equation}
-This expression is called the characteristic equation for the system and is used to determine the constants $\omega_{1,2}$, in the assumed form of the solution given by the assumed solution $\vec{x}(t) = \vec{u}e^{j\omega t}$, once the values of the physical parameters $m_1$, $m_2$, $k_1$, and $k_2$ are known. Note that $\omega_{1,2}$ are not in the characteristic equation; therefore, solving for $\omega_{1,2}$  will be done by factoring the equation above to obtain two solutions $\omega_1$ and $\omega_2$. The characteristic equation is in the form of the quadratic formula if you set $x=\omega^2$, as:
+This expression is called the characteristic equation for the system and is used to determine the constants $\omega_{1,2}$, in the assumed form of the solution given by the assumed solution $\vec{x}(t) = \vec{u}e^{j\omega t}$, once the values of the physical parameters $m_1$, $m_2$, $k_1$, and $k_2$ are known. Note that $\omega_{1,2}$ are not in the characteristic equation; therefore, solving for $\omega_{1,2}$  will be done by factoring the equation above to obtain two solutions $\omega_1$ and $\omega_2$. The characteristic equation is in the form of the quadratic formula if you set $x=\omega^2$, as
 \begin{equation}
-ax^2 + bx +c = 0
+ax^2 + bx +c = 0.
 \end{equation}
 
 After finding the value of $\omega_{1,2}$ using the characteristic equation, the values in $\vec{u}$ can be found using equation $(-\omega^2 M  + K)\vec{u} =0, \hspace{1ex} \vec{u}\neq0$ for each value of $\omega^2$. That is, for both $\omega_1$ and $\omega_2$, there is a vector  $\vec{u}$ that satisfies the equation. These solutions can be written as:
@@ -293,54 +298,62 @@ Another way to write this equation is in the form:
 \end{equation}
 Where the values for $A_1$ and $A_2$ can be obtained by applying the boundary conditions and taking the derivatives of the equations, as done in the 1-DOF problems. 
 
-The final form of the equation provides physical insight into the solution of the system. It states that each mass in the system oscillates at both of the natural frequencies of the system ($\omega_1$ and $\omega_2$). Furthermore, the importance of the initial conditions can be understood. Assume that initial conditions are chosen that result in $A_2=0$; this cancels out the second natural frequency such that each mass oscillates at only one frequency,  $\omega_1$. Moreover, the positions of the masses can be determined by the values of the vector $\vec{u}_1$ at any given time. For this reason,  $\vec{u}_1$ is termed the first mode shape of the system. Likewise, if the opposite initial conditions are chosen such that  $A_1=0$, then both system coordinates (e.g., masses in the systems we have studied) will oscillate at $\omega_2$ and again, the positions can be obtained from the vector $\vec{u}_2$. Where $\vec{u}_2$ is termed the second mode shape. The interactions between mode shapes and natural frequencies are very important and form the basis of several areas in the field of vibrations.
+The final form of the equation provides physical insight into the solution of the system. It states that each mass in the system oscillates at both of the natural frequencies of the system ($\omega_1$ and $\omega_2$). The relative motion of the masses at each frequency is governed by the corresponding mode shape vectors $\vec{u}_1$ and $\vec{u}_2$. For example, if the initial conditions are such that $A_2 = 0$, the response is governed entirely by the first mode, and both masses oscillate at $\omega_1$ with motion described by $\vec{u}_1$. Likewise, if $A_1 = 0$, the response is governed by the second mode.
+
+The amplitudes $A_1$ and $A_2$ and phase angles $\phi_1$ and $\phi_2$ are determined from the initial conditions of the system. These initial conditions control how much each mode contributes to the overall response. The process of determining these constants from the initial conditions is demonstrated in Example~\ref{ex:2-DOF}.
+
+% The final form of the equation provides physical insight into the solution of the system. It states that each mass in the system oscillates at both of the natural frequencies of the system ($\omega_1$ and $\omega_2$). Furthermore, the importance of the initial conditions can be understood. Assume that initial conditions are chosen that result in $A_2=0$; this cancels out the second natural frequency such that each mass oscillates at only one frequency,  $\omega_1$. Moreover, the positions of the masses can be determined by the values of the vector $\vec{u}_1$ at any given time. For this reason,  $\vec{u}_1$ is termed the first mode shape of the system. Likewise, if the opposite initial conditions are chosen such that  $A_1=0$, then both system coordinates (e.g., masses in the systems we have studied) will oscillate at $\omega_2$ and again, the positions can be obtained from the vector $\vec{u}_2$. Where $\vec{u}_2$ is termed the second mode shape. The interactions between mode shapes and natural frequencies are very important and form the basis of several areas in the field of vibrations.
+
+
+
 
 \begin{example}
 \label{ex:2-DOF}
 \textbf{Calculating Response of a two-DOF system}
 
-\noindent Considering the following system:
+\noindent Considering the system shown in Figure~\ref{fig:2-DOF-spring_mass_horizontal_ex_5.1}; calculate response for the system if $m_1$=9~kg, $m_2$=1~kg, $k_1$ = 24~N/m, and $k_2$ = 3~N/m with the initial conditions $x_{10}=1$~mm, $v_{10}=0$~mm/s, $x_{20}=0$~mm, and $v_{20}=0$~mm/s. 
+
 \begin{figure}[H]
  \centering
  \includegraphics[]{../figures/2-DOF-spring_mass_horizontal.png}
  \caption{2-DOF system with two masses and two independent confidante systems $x_1$ and $x_2$.}
+ \label{fig:2-DOF-spring_mass_horizontal_ex_5.1}
 \end{figure}
-Calculate response for the system if $m_1$=9~kg, $m_2$=1~kg, $k_1$ = 24~N/m, and $k_2$ = 3~N/m with the initial conditions $x_{10}=1$~mm, $v_{10}=0$~mm/s, $x_{20}=0$~mm, and $v_{20}=0$~mm/s. \\
+
 
 
 \noindent \textbf{Solution:} 
 
-\noindent  We have already obtained a characteristic equation for this system. This is shown in Equation~\ref{eq:characteristic_equation} and is given as:
+\noindent  We have already obtained a characteristic equation for this system. This is shown in Equation~\ref{eq:characteristic_equation} and is given as
 \begin{equation}
-m_1 m_2 \omega^4 - (m_1 k_2 + m_2 k_1 + m_2 k_2)\omega^2 + k_1 k_2 = 0
+m_1 m_2 \omega^4 - (m_1 k_2 + m_2 k_1 + m_2 k_2)\omega^2 + k_1 k_2 = 0.
 \end{equation}
-Substituting our values into this obtains:
+Substituting our values into this obtains
 \begin{equation}
 9 \cdot 1 \omega^4 - (9 \cdot 3 + 1 \cdot 24 + 1 \cdot 3)\omega^2 + 24 \cdot 3 = 0
 \end{equation}
 or
 \begin{equation}
-\omega^4 - 6\omega^2 + 8 =0
+\omega^4 - 6\omega^2 + 8 =0.
 \end{equation}
-This can then be factored into:
+This can then be factored into
 \begin{equation}
-(\omega^2-2)(\omega^2-4)=0
+(\omega^2-2)(\omega^2-4)=0.
 \end{equation}
-This results in solutions of $\omega^2_1 = 2$ and $\omega^2_2 = 4$. Leading to:
+This results in solutions of $\omega^2_1 = 2$ and $\omega^2_2 = 4$. Leading to
 \begin{equation}
-\omega_1 = \pm \sqrt{2} \text{ rad/s}, \hspace{2ex} \omega_2 = \pm 2 \text{ rad/s}
+\omega_1 = \pm \sqrt{2} \text{ rad/s}, \hspace{2ex} \omega_2 = \pm 2 \text{ rad/s}.
 \end{equation}
 
-We need to obtain solutions for $\vec{u}_1$ and $\vec{u}_2$. Having solved for $\omega_1$ and $\omega_2$, we can obtain this. First, knowing $\vec{u}_1 = [u_{11} u_{21}]^\text{T}$ and using $\omega_1 = \sqrt{2}$ and the following equation:
+We need to obtain solutions for $\vec{u}_1$ and $\vec{u}_2$. Having solved for $\omega_1$ and $\omega_2$, we can obtain this. First, knowing $\vec{u}_1 = [u_{11} u_{21}]^\text{T}$ and using $\omega_1 = \sqrt{2}$ and the following equation
 \begin{equation}
- (-\omega_1^2 M  + K)\vec{u}_1 =0
+ (-\omega_1^2 M  + K)\vec{u}_1 =0,
 \end{equation}
-yields
-simplified to
+yields 
 \begin{equation}
  \bigg(-2\begin{bmatrix} 9 & 0 \\   0  & 1 \end{bmatrix} + \begin{bmatrix} 24+3 & -3 \\    -3  & 3 \end{bmatrix}\bigg)\begin{bmatrix} u_{11}\\ u_{21}\end{bmatrix} = \begin{bmatrix} 0\\ 0\end{bmatrix}
 \end{equation}
-simplified to
+which simplifies to
 \begin{equation}
  \begin{bmatrix} 27-9\cdot 2 & -3 \\    -3  & 3-2 \end{bmatrix} 
  \begin{bmatrix} u_{11}\\ u_{21}\end{bmatrix}=\begin{bmatrix} 0\\ 0\end{bmatrix}
@@ -348,15 +361,15 @@ simplified to
 or
 \begin{equation}
  \begin{bmatrix} 9 & -3 \\    -3  & 1 \end{bmatrix} 
- \begin{bmatrix} u_{11}\\ u_{21}\end{bmatrix}=\begin{bmatrix} 0\\ 0\end{bmatrix}
+ \begin{bmatrix} u_{11}\\ u_{21}\end{bmatrix}=\begin{bmatrix} 0\\ 0\end{bmatrix}.
 \end{equation}
-Taking the dot product of the matrix equation yields:
+Taking the dot product of each row of the coefficient matrix with the modal vector (i.e., performing the matrix-vector multiplication) yields two scalar equations, one from each row
 \begin{equation}
- 9u_{11} -3u_{21}=0 \text{, and } -3u_{12} + u_{22}=0
+ 9u_{11} -3u_{21}=0 \text{, and } -3u_{11} + u_{21}=0.
 \end{equation}
-Both of these equations yield the same equation, that is:
+Both of these equations yield the same equation, that is
 \begin{equation}
- \frac{u_{11}}{u_{21}} =\frac{1}{3}
+ \frac{u_{11}}{u_{21}} =\frac{1}{3}.
 \end{equation}
 As mentioned before, only the ratio of the elements is determined here. To show this is true, it is easily seen that:
 \begin{equation}
@@ -366,83 +379,85 @@ To obtain a numerical value, we arbitrarily assign a value to one of the element
 \begin{equation}
  \vec{u}_1 = \begin{bmatrix} \frac{1}{3}\\ 1\end{bmatrix}
 \end{equation}
-The same processes can be used for obtaining $\vec{u}_2$ using $\omega_2=2$, this results in:
+The same processes can be used for obtaining $\vec{u}_2$ using $\omega_2=2$, this results in
 \begin{equation}
  \begin{bmatrix} -9 & -3 \\    -3  & -1 \end{bmatrix} 
- \begin{bmatrix} u_{12}\\ u_{22}\end{bmatrix}=\begin{bmatrix} 0\\ 0\end{bmatrix}
+ \begin{bmatrix} u_{12}\\ u_{22}\end{bmatrix}=\begin{bmatrix} 0\\ 0\end{bmatrix}.
 \end{equation}
-Taking the dot product of the matrix equation yields:
+Taking the dot product of each row of the matrix with the modal vector yields
 \begin{equation}
- -9u_{12} -3u_{22}=0 \text{, and } -3u_{12} - u_{22}=0
+ -9u_{12} -3u_{22}=0 \text{, and } -3u_{12} - u_{22}=0.
 \end{equation}
-Both of these equations yield the same equation, that is:
+Both of these equations yield the same equation, that is
 \begin{equation}
- \frac{u_{12}}{u_{22}} =-\frac{1}{3}
+ \frac{u_{12}}{u_{22}} =-\frac{1}{3}.
 \end{equation}
-Again, assuming $u_{22}=1$  this can be rearranged into $\vec{u}_2$ as:
+Again, assuming $u_{22}=1$  this can be rearranged into $\vec{u}_2$ as
 \begin{equation}
- \vec{u}_2 = \begin{bmatrix} -\frac{1}{3}\\ 1\end{bmatrix}
+ \vec{u}_2 = \begin{bmatrix} -\frac{1}{3}\\ 1\end{bmatrix}.
 \end{equation}
 Where $\vec{u}_1$ and $\vec{u}_2$ represent only the directions and shape of the mode shapes and not the magnitude of the mode shapes. 
 
-Now that we have the mode shapes, we can solve for the initial conditions $A_1$ and $A_2$. To do this, let us use the following formulation of the solution:
+Now that we have the mode shapes, we can solve for the initial conditions $A_1$ and $A_2$. To do this, let us use the following formulation of the solution
 \begin{equation}
  \begin{bmatrix} x_1(t) \\  x_2(t) \end{bmatrix} =  \begin{bmatrix} \vec{u}_1 & \vec{u}_2 \end{bmatrix}
- \begin{bmatrix} A_1 \sin (\omega_1 t + \phi_1 )\\ A_2 \sin (\omega_2 t + \phi_2 )\end{bmatrix}, \hspace{1cm} \omega_1 \text{ or } \omega_2 \neq 0
+ \begin{bmatrix} A_1 \sin (\omega_1 t + \phi_1 )\\ A_2 \sin (\omega_2 t + \phi_2 )\end{bmatrix}, \hspace{1cm} \omega_1 \text{ or } \omega_2 \neq 0.
 \end{equation}
-Adding our values for the problem at $t=0$, this becomes:
+Adding our values for the problem at $t=0$, this becomes
 \begin{equation}
  \begin{bmatrix} 1 \\  0 \end{bmatrix} =  \begin{bmatrix} \frac{1}{3} & -\frac{1}{3} \\ 1 & 1 \end{bmatrix}
  \begin{bmatrix} A_1 \sin (\phi_1)\\ A_2 \sin (\phi_2)\end{bmatrix}
 \end{equation}
-and after applying the dot product:
+and after applying the dot product
 \begin{equation}
- \begin{bmatrix} 1 \\  0 \end{bmatrix} =  \begin{bmatrix} \frac{1}{3}A_1 \sin (\phi_1 ) -\frac{1}{3}A_2 \sin (\phi_2)\\ A_1 \sin (\phi_1 )+A_2 \sin (\phi_2 )\end{bmatrix}
+ \begin{bmatrix} 1 \\  0 \end{bmatrix} =  \begin{bmatrix} \frac{1}{3}A_1 \sin (\phi_1 ) -\frac{1}{3}A_2 \sin (\phi_2)\\ A_1 \sin (\phi_1 )+A_2 \sin (\phi_2 )\end{bmatrix}.
 \end{equation}
-Next, we can differentiate the equation for $x(t)$ to obtain the velocity solution. Adding our values for the problem at $t=0$ obtains:
+Next, we can differentiate the equation for $x(t)$ to obtain the velocity solution. Adding our values for the problem at $t=0$ obtains
 \begin{equation}
- \begin{bmatrix} \dot{x}_1(0) \\  \dot{x}_2(0) \end{bmatrix}  = \begin{bmatrix} v_{10} \\  v_{20} \end{bmatrix} = \begin{bmatrix} 0 \\  0 \end{bmatrix} =   \begin{bmatrix} \frac{\sqrt{2}}{3}A_1 \cos (\phi_1 ) -\frac{2}{3}A_2 \cos (\phi_2)\\ \sqrt{2}A_1 \cos (\phi_1 )+2 A_2 \cos (\phi_2 )\end{bmatrix}
+ \begin{bmatrix} \dot{x}_1(0) \\  \dot{x}_2(0) \end{bmatrix}  = \begin{bmatrix} v_{10} \\  v_{20} \end{bmatrix} = \begin{bmatrix} 0 \\  0 \end{bmatrix} =   \begin{bmatrix} \frac{\sqrt{2}}{3}A_1 \cos (\phi_1 ) -\frac{2}{3}A_2 \cos (\phi_2)\\ \sqrt{2}A_1 \cos (\phi_1 )+2 A_2 \cos (\phi_2 )\end{bmatrix}.
 \end{equation}
 Now that we have 4 equations for 4 unknowns, we can use these equations to solve for $A_1$,  $A_2$, $\phi_1$,  and $\phi_2$. The 4 equations are:
 \begin{equation}
-3= A_1 \sin (\phi_1 ) - A_2 \sin (\phi_2)
+3= A_1 \sin (\phi_1 ) - A_2 \sin (\phi_2),
 \end{equation}
 \begin{equation}
-0= A_1 \sin (\phi_1 ) + A_2 \sin (\phi_2)
+0= A_1 \sin (\phi_1 ) + A_2 \sin (\phi_2),
 \end{equation}
 \begin{equation}
-0= \sqrt{2}A_1 \cos (\phi_1 ) - 2A_2 \cos (\phi_2)
+0= \sqrt{2}A_1 \cos (\phi_1 ) - 2A_2 \cos (\phi_2),
 \end{equation}
+and
 \begin{equation}
-0= \sqrt{2}A_1 \cos (\phi_1 ) + 2A_2 \cos (\phi_2)
+0= \sqrt{2}A_1 \cos (\phi_1 ) + 2A_2 \cos (\phi_2).
 \end{equation}
-Setting these last two equations equal to each other yields:
+Setting these last two equations equal to each other yields
 \begin{equation}
 0= \sqrt{2}A_1 \cos (\phi_1 ) + 2A_2 \cos (\phi_2) = \sqrt{2}A_1 \cos (\phi_1 ) - 2A_2 \cos (\phi_2)
 \end{equation}
-or:
+or
 \begin{equation}
-0= - 4A_2 \cos (\phi_2)
+0= - 4A_2 \cos (\phi_2).
 \end{equation}
-For this equation to be true, $\phi_2=\frac{\pi}{2}$. Therefore, applying this to $0= \sqrt{2}A_1 \cos (\phi_1 ) + 2A_2 \cos (\phi_2)$ results in:
+For this equation to be true, $\phi_2=\frac{\pi}{2}$. Therefore, applying this to $0= \sqrt{2}A_1 \cos (\phi_1 ) + 2A_2 \cos (\phi_2)$ results in
 \begin{equation}
 0= \sqrt{2}A_1 \cos (\phi_1 )
 \end{equation}
-where again, for this equation to be true, $\phi_1=\frac{\pi}{2}$. Now the first two equations become:
+where again, for this equation to be true, $\phi_1=\frac{\pi}{2}$. Now the first two equations become
 \begin{equation}
 3= A_1 - A_2 
 \end{equation}
+and
 \begin{equation}
-0= A_1 + A_2 
+0= A_1 + A_2.
 \end{equation}
 Where this shows us that $A_1 = \frac{3}{2}$ and $A_2 = -\frac{3}{2}$. 
 
-Now that we have the initial conditions, we can find a solution for the temporal response of each mass. Using the equations from before:
+Now that we have the initial conditions, we can find a solution for the temporal response of each mass. Using the equations from before
 \begin{equation}
  x_1(t) = A_1 \sin (\omega_1 t + \phi_1 )u_{11} + A_2 \sin (\omega_2 t + \phi_2 )u_{12}
 \end{equation}
 \begin{equation}
- x_2(t) = A_1 \sin (\omega_1 t + \phi_1 )u_{21} + A_2 \sin (\omega_2 t + \phi_2 )u_{22}
+ x_2(t) = A_1 \sin (\omega_1 t + \phi_1 )u_{21} + A_2 \sin (\omega_2 t + \phi_2 )u_{22}.
 \end{equation}
 And applying our obtained values
 \begin{equation}
@@ -451,18 +466,19 @@ And applying our obtained values
 \begin{equation}
  x_2(t) = \frac{3}{2} \sin (\sqrt{2} t + \frac{\pi}{2} ) + \bigg(-\frac{3}{2}\bigg) \sin (2 t + \frac{\pi}{2} )
 \end{equation}
-results in:
+results in
 \begin{equation}
  x_1(t) = \frac{1}{2} \bigg(  \sin (\sqrt{2} t + \frac{\pi}{2} ) + \sin (2 t + \frac{\pi}{2} ) \bigg)
 \end{equation}
 \begin{equation}
- x_2(t) = \frac{3}{2}  \bigg( \sin (\sqrt{2} t + \frac{\pi}{2} ) -\sin (2 t + \frac{\pi}{2} ) \bigg)
+ x_2(t) = \frac{3}{2}  \bigg( \sin (\sqrt{2} t + \frac{\pi}{2} ) -\sin (2 t + \frac{\pi}{2} ) \bigg).
 \end{equation}
-These results can be plotted as:
+These results can be plotted in Figure \ref{fig:2-DOF_response}.
 \begin{figure}[H]
  \centering
  \includegraphics[width=0.9\textwidth]{../figures/2-DOF_response.png}
  \caption{Temporal response for each of the rigid bodies in the 2-DOF system.}
+ \label{fig:2-DOF_response}
 \end{figure}
 \end{example}
 
