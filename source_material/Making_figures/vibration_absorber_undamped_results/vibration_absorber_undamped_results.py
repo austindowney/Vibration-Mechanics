@@ -1,32 +1,22 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Code for plotting plot
 
-Austin Downey
-"""
-
-#%% import modules
 import IPython as IP
-IP.get_ipython().magic('reset -sf')
-import matplotlib.pyplot as plt
-import matplotlib as mpl
-from mpl_toolkits.mplot3d import Axes3D
-import os as os
+IP.get_ipython().run_line_magic('reset', '-sf')
+
+#%% import modules and set default fonts and colors
+
+"""
+Default plot formatting code for Austin Downey's series of open source notes/
+books. This common header is used to set the fonts and format.
+
+Header file last updated May 16, 2024
+"""
+
 import numpy as np
 import scipy as sp
-from scipy.interpolate import griddata
-from matplotlib import cm
-import time
-import subprocess
-import pickle
-import scipy.io as sio
-import sympy as sym
-from matplotlib import cm
-import re as re
-from scipy import signal
-import json as json
-from mpl_toolkits import mplot3d
-import mpl_toolkits.mplot3d as mp3d
+import matplotlib.pyplot as plt
+import matplotlib as mpl
 
 
 # set default fonts and plot colors
@@ -39,14 +29,16 @@ plt.rcParams.update({'font.serif':['Times New Roman', 'Times', 'DejaVu Serif',
 plt.rcParams.update({'font.family':'serif'})
 plt.rcParams.update({'font.size': 10})
 plt.rcParams.update({'mathtext.rm': 'serif'})
-plt.rcParams.update({'mathtext.fontset': 'custom'}) # I don't think I need this as its set to 'stixsans' above.
-
+# I don't think I need this next line as its set to 'stixsans' above. 
+plt.rcParams.update({'mathtext.fontset': 'custom'}) 
 cc = plt.rcParams['axes.prop_cycle'].by_key()['color']
-
+## End of plot formatting code
 
 plt.close('all')
 
 #%% Plot the figure
+
+
 
 
 # omega is the frequency of the entire system, and the one we will sweep over.
@@ -78,13 +70,20 @@ absorber_without = np.abs(absorber_without)
 plt.figure(figsize=(6.5,2.5))
 plt.plot(omega/omega_1,absorber_with,label='with vibration absorber')
 plt.plot(omega/omega_1,absorber_without,'--',label='without vibration absorber')
-plt.ylim([0,17])
+plt.ylim([0,17.5])
 plt.xlim([0.5,1.5])
 plt.legend(framealpha=1)
 plt.grid(True)
 plt.xlabel(r'$\omega $ / $ \omega_1$')
 plt.ylabel(r'$X_1 $ / $\delta_\textnormal{st}$')
-plt.tight_layout()
+plt.xticks([0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5])
+
+plt.tight_layout(
+    pad=0.2,      # overall padding
+    w_pad=0.5,    # width padding (between subplots)
+    h_pad=0.5,    # height padding (between subplots)
+    rect=(0.013, 0, 1, 0.99)  # (left, bottom, right, top)
+)
 plt.savefig('vibration_absorber_undamped_results',dpi=300)
 
 

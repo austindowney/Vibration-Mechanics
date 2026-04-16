@@ -1,13 +1,23 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Spyder Editor
 
-This is a temporary script file.
-"""
-
-#%% import modules
 import IPython as IP
-IP.get_ipython().magic('reset -sf')
+IP.get_ipython().run_line_magic('reset', '-sf')
+
+#%% import modules and set default fonts and colors
+
+"""
+Default plot formatting code for Austin Downey's series of open source notes/
+books. This common header is used to set the fonts and format.
+
+Header file last updated May 16, 2024
+"""
+
+import numpy as np
+import scipy as sp
+import matplotlib.pyplot as plt
+import matplotlib as mpl
+
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 from mpl_toolkits.mplot3d import Axes3D
@@ -40,10 +50,10 @@ plt.rcParams.update({'font.serif':['Times New Roman', 'Times', 'DejaVu Serif',
 plt.rcParams.update({'font.family':'serif'})
 plt.rcParams.update({'font.size': 10})
 plt.rcParams.update({'mathtext.rm': 'serif'})
-plt.rcParams.update({'mathtext.fontset': 'custom'}) # I don't think I need this as its set to 'stixsans' above.
-
+# I don't think I need this next line as its set to 'stixsans' above. 
+plt.rcParams.update({'mathtext.fontset': 'custom'}) 
 cc = plt.rcParams['axes.prop_cycle'].by_key()['color']
-
+## End of plot formatting code
 
 plt.close('all')
 
@@ -80,7 +90,7 @@ plt.ylabel('frequency (Hz)')
 plt.xlabel('time (s)')
 plt.ylim([0,12])
 plt.xlim([0,10])
-plt.tight_layout()
+plt.tight_layout(pad=0)
 plt.savefig('spectrogram',dpi=300)
 
 

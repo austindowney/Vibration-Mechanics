@@ -125,7 +125,7 @@ plt.ylabel("control force $u$ (N)")
 plt.grid(True, alpha=0.35)
 
 
-plt.tight_layout()
+plt.tight_layout(pad=0)
 plt.savefig('PID_temporal_responses.png',dpi=300)
     
     

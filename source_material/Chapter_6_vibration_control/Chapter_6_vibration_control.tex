@@ -14,34 +14,20 @@
 
 Throughout this text, we have studied various aspects related to analyzing and modeling vibrating systems. Therefore, it becomes prudent to look at methods for reducing or eliminating unwanted vibrations. However, before vibrations in a system can be effectively reduced, they must be better understood in terms of their effects on the system under study. For this reason, this chapter first introduces the vibration Nomograph, which is then followed by vibration isolation, absorption, and active suppression.  
 
-  \begin{vibration_case_study}
-
-  \textbf{Vibration-Induced Loosening in Fasteners}
- 
-\noindent In aerospace structures, vibration-induced loosening of fasteners highlights how frequency and amplitude interact. While bolt preload maintains the clamping force, high-frequency excitations (particularly when aligned with the resonant modes of the nut-bolt system) can trigger micro-slips at the thread interface, gradually reducing preload and risking self-loosening. To suppress these resonant responses, damping compounds such as epoxy are applied around the nut and washer. The epoxy does not ``hold'' the nut in place; instead, it dissipates vibratory energy and minimizes resonance-driven slip.
-Design standards account for vibration-induced loosening in critical structures, and the Vibration Nomograph discussed in this chapter is a common tool used for considering vibration during design.
-
-  
- \begin{figure}[H]
-  \centering
-  \includegraphics[width=6.0in]{../figures/airbus_bulkhead}
-  \caption{Epoxy applied around nuts on an Airbus pressure-bulkhead assembly where the compound adds local damping and reduces high-frequency nut vibration, thereby limiting micro-slip at the thread interface and mitigating self-loosening.}
- \end{figure} 
-  
-\end{vibration_case_study}
-
 
 \subsection{Vibration Nomograph}
 
-\begin{figure}[tp!]
-    \centering
-    \includegraphics[width=6.5in]{../figures/Vibration_nomograph}
-    \caption{Vibration nomograph showing a unified representation of the acceptable limits of vibration for various applications.}
-    \label{fig:Vibration_nomograph}
-\end{figure}
+
 
 
 There exist various methods and standards for measuring and describing acceptable levels of vibrations in systems; these include ISO/AWI 2631 for the evaluation of human exposure to whole-body vibrations and ISO 4866 for the measurement and effects of vibrations on structures. A common way to present the acceptable limit of vibration is in a vibration nomograph.  A vibration nomograph is a simplified way to express the acceptable limits on a system while considering the displacement, velocity, acceleration, and frequency of a system. A typical nomograph with various limits is presented in Figure \ref{fig:Vibration_nomograph}. 
+
+\begin{figure}[tp]
+	\centering
+	\includegraphics[width=6.5in]{../figures/Vibration_nomograph}
+	\caption{Vibration nomograph showing a unified representation of the acceptable limits of vibration for various applications.}
+	\label{fig:Vibration_nomograph}
+\end{figure}
 
 A vibration nomograph is a logarithmic plot that allows us to easily express the relationships between displacement, velocity, acceleration, and frequency of a system. The vibration nomograph presented in figure \ref{fig:Vibration_nomograph} considers an undamped 1-DOF system with constant amplitude ($A$) experiencing harmonic motion that can be modeled as:
 \begin{equation}
@@ -96,6 +82,24 @@ The nomograph sets the $x-$axis as frequency in Hz and the $y-$axis as velocity 
 For a constant value of velocity, ($v_\text{max}$), equation \ref{eq:ln_v_max_2} shows that acceleration ($\ln a_\text{max}$) is linearly proportional to $-\ln (2 \pi f)$, at a rate of $2 \pi$. Again, as the $x-$axis in a nomograph is frequency, measured in Hz, acceleration is represented by a straight line that varies with $- \ln(2\pi f)$; therefore, $\ln a_\text{max}$ is a straight line with the slope of -1. This is also represented by a line of constant acceleration set at a -45$^\circ$ angle from the $x$-axis. These equations are expressed in the vibration nomograph plot of figure \ref{fig:Vibration_nomograph}, where each point on the plot represents a specific sinusoidal (harmonic) vibration for a 1-DOF system.  
 
 
+
+\begin{vibration_case_study}
+	
+	\textbf{Vibration-Induced Loosening in Fasteners}
+	
+	\noindent In aerospace structures, vibration-induced loosening of fasteners highlights how frequency and amplitude interact. While bolt preload maintains the clamping force, high-frequency excitations (particularly when aligned with the resonant modes of the nut-bolt system) can trigger micro-slips at the thread interface, gradually reducing preload and risking self-loosening. To suppress these resonant responses, damping compounds such as epoxy are applied around the nut and washer. The epoxy does not ``hold'' the nut in place; instead, it dissipates vibratory energy and minimizes resonance-driven slip.
+	Design standards account for vibration-induced loosening in critical structures, and the Vibration Nomograph discussed in this chapter is a common tool used for considering vibration during design.
+	
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=3.90in]{../figures/airbus_bulkhead}
+		\caption{Epoxy applied around nuts on an Airbus pressure-bulkhead assembly where the compound adds local damping and reduces high-frequency nut vibration, thereby limiting micro-slip at the thread interface and mitigating self-loosening.}
+	\end{figure} 
+	
+\end{vibration_case_study}
+
+
 \subsection{Vibration Isolation}
 
 % Vibration isolation of electronics. 
@@ -139,19 +143,15 @@ One way to do this is to track the \emph{transmissibility ratio}, which is denot
 
 
 
+\pagebreak
 
 \subsection{Vibration Absorption}
 
-Vibration absorbers, also termed dynamic vibration absorbers, are a class of mechanical devices that seek to reduce unwanted vibrations in a system. In contrast to a traditional dash-pot style damper, these systems seek to ``redirect'' the vibrations from the system to another mass connected to the system. In this way, the main system is protected from the bandwidth of vibrations that the vibration absorbers are tuned for. As the vibration absorbers must be tuned for the system, it is generally limited to devices that operate at a fixed frequency, like industrial equipment or cables suspended in the air and subjected to wind loading. Figure~\ref{fig:vibration_absorbers} presents a Stockbridge and a Dogbone damper designed to remove certain bandwidths of excitation from wind-excited systems like cables.
+Vibration absorbers, also termed dynamic vibration absorbers, are a class of mechanical devices that seek to reduce unwanted vibrations in a system. In contrast to a traditional dash-pot style damper, these systems seek to ``redirect'' the vibrations from the system to another mass connected to the system. In this way, the main system is protected from the bandwidth of vibrations that the vibration absorbers are tuned for. As the vibration absorbers must be tuned for the system, it is generally limited to devices that operate at a fixed frequency, like industrial equipment or cables suspended in the air and subjected to wind loading. 
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=6.5in]{../figures/vibration_absorbers}
- \vspace{-4ex}
-    \caption{Vibration absorbers deployed on wind-excited cables showing: (a) a Stockbridge damper mounted on a rigid bus conductor in an electrical substation, and (b) a dogbone damper on a suspender cable of a suspension bridge\protect\footnotemark[1].}
-    \label{fig:vibration_absorbers}
-\end{figure}
-\footnotetext[1]{``Dogbone dampers on the road-support cables of the Severn Bridge'' by Bassaar  CC BY-SA 4.0}  
+
+
+
 
 
 \subsubsection{Vibration Absorption for Undamped Systems}
@@ -218,7 +218,7 @@ or 1 m using the given parameters. Therefore, the mass and stiffness values of t
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=6.0in]{../figures/vibration_absorber_undamped_results.png}
+    \includegraphics[width=6.5in]{../figures/vibration_absorber_undamped_results.png}
  \vspace{-4ex}
     \caption{Frequency response of the undamped system with and without the vibration absorber.}
     \label{fig:vibration_absorber_undamped_results}
@@ -226,6 +226,25 @@ or 1 m using the given parameters. Therefore, the mass and stiffness values of t
 
 
 
+\begin{vibration_case_study}
+	
+	\textbf{Tuned Devices for Vibration Absorption}
+	Figure~\ref{fig:vibration_absorbers} shows tuned devices used for vibration absorption in wind-excited structures. In Figure~\ref{fig:vibration_absorbers}(a), a Stockbridge damper on a rigid bus conductor at a University of South Carolina (USC) substation demonstrates a common power system application. In Figure~\ref{fig:vibration_absorbers}(b), a dogbone damper attached to a suspension bridge cable mitigates vibrations in a flexible structural member. Both devices act as tuned absorbers, dissipating energy at specific frequencies to reduce vibration amplitudes and limit fatigue damage.
+	
+	
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=6.0in]{../figures/vibration_absorbers}
+		\vspace{-0ex}
+		\caption{Vibration absorbers deployed on wind-excited cables showing: (a) a Stockbridge damper mounted on a rigid bus conductor in an electrical substation, and (b) a dogbone damper on a suspender cable of a suspension bridge\protect\footnotemark[1].}
+		\label{fig:vibration_absorbers}
+	\end{figure}
+	\footnotetext[1]{``Dogbone dampers on the road-support cables of the Severn Bridge'' by Bassaar  CC BY-SA 4.0}  
+\end{vibration_case_study}
+
+
+\pagebreak
 \subsubsection{Vibration Absorption for Damped Systems}
 
 As shown in section~\ref{sec:Vibration_Absorption_for_Undamped_Systems} and figure~\ref{fig:vibration_absorber_undamped_results} in particular, vibration absorption for undamped systems only shifts the resonance response from one part of the spectrum to another. However, it is commonly desired to limit the resonance response of the system while also absorbing vibration energy at one specific frequency. While not derived here, the frequency response of a damped vibration absorber like that shown in figure~\ref{fig:vibration_absorber_spring_mass} (but with the addition of a damper) can be expressed as the dimensionless amplitude of the response of the primary mass: 
@@ -247,7 +266,6 @@ where $c$ is the damping value of the added damper. Again, we define $r=\omega /
 \begin{figure}[H]
     \centering
     \includegraphics[width=6.2in]{../figures/vibration_absorber_damped_results.png}
- \vspace{-4ex}
     \caption{Frequency response of a 1-DOF system with various damped vibration absorbers.}
  \vspace{-4ex}
     \label{fig:vibration_absorber_damped_results}
@@ -274,26 +292,6 @@ where $c$ is the damping value of the added damper. Again, we define $r=\omega /
 \subsection{Active Vibration Suppression}
 
 Vibrations in systems can be mitigated through a number of active systems; typically, it's easiest to consider this as an actuator that adds energy to the system at the correct time to cancel out vibrations. 
-
-\subsubsection{Metrics for Vibration Control}
-
-
-There are various performance indicators that one can use to judge the performance of an active control scheme. They depend on the system order (1\textsuperscript{st}, 2\textsuperscript{nd}) and the excitation experienced by the system. For simplicity in this introductory text, we will define four performance indicators subjected to a step response, each shown in figure~\ref{fig:2nd_order_performance_indicators}. The performance indicators are:
-\begin{itemize}[itemsep=0.25ex,topsep=0.25ex]
- %\item rise time $ \rightarrow t_\text{r}$
- \item peak time  ($t_\text{p}$) is the time to the first peak.
- \item peak value  ($x_\text{p}$) is the maximum value experiences by the system
- \item settling time ($t_\text{s}$) is the time it takes the system to get within an error ($\pm \epsilon \%$) of the steady-state displacement ($x_{ss}$) and stay there.
- % \item delay time  $ \rightarrow t_\text{d}$
- \item max percentage overshoot ($M_\text{p}$) is defined as $M_p = ( {x_p} / {x_{ss}}-1 ) \cdot 100$.
-\end{itemize}
-
-\begin{figure}[H]
- \centering
- \includegraphics[width=5.2in]{../figures/2nd_order_performance_indicators}
- \caption{Graphical representation of key 2\textsuperscript{nd} order performance indicators}
- \label{fig:2nd_order_performance_indicators}
-\end{figure}
 
 
 
@@ -340,29 +338,26 @@ and the effective damping ratio of the system
 \end{equation}
 
 
-\pagebreak
 
-\begin{review}
- \label{sec:control_systems_review}
+\subsubsection{Metrics for Vibration Control}
 
-  \textbf{Nicolas Minorsky and the Need for Better Control}
- 
-  \noindent Continuous control systems have been widely used for centuries. For example, consider that the centrifugal governor, which uses spinning weights, was used by Christiaan Huygens in the 1600s in the Netherlands to regulate the gap between millstones in windmills or by James Watt, who famously linked a stem regulator to a centrifugal governor to control steam turbines. 
 
-  Arguably, the Russian-American engineer Nicolas Minorsky was the first to develop the theoretical analysis for the three-term control we now call PID. This was done in 1922 while he was researching and designing automatic ship steering for the US Navy. He based his work on watching how a ship's helmsman responds to wave loading on a ship, with a delayed input to the helm that not only considered the current ship course but also past errors and the desired rate of change for the ship. For a helmsman, the goal is stability, not absolute control, which simplifies how one thinks about the challenge of control.
-  
- \begin{figure}[H]
-  \centering
-  \includegraphics[width=6in]{../figures/PID_Nicolas_Minorsky_and_USS_New_Mexico}
-  \caption{Historical perspective of PID control showing: (a) Portrait of Nicolas Minorsky \protect\footnotemark[1] and (b) the battleship USS New Mexico (BB-40) of the United States Navy, which was the first to implement PID control in its steering \protect\footnotemark[2]. }
-  \label{fig:PID_Nicolas_Minorsky_and_USS_New_Mexico}
- \end{figure}
+There are various performance indicators that one can use to judge the performance of an active control scheme. They depend on the system order (1\textsuperscript{st}, 2\textsuperscript{nd}) and the excitation experienced by the system. For simplicity in this introductory text, we will define four performance indicators subjected to a step response, each shown in figure~\ref{fig:2nd_order_performance_indicators}. The performance indicators are:
+\begin{itemize}[itemsep=0.25ex,topsep=0.25ex]
+	%\item rise time $ \rightarrow t_\text{r}$
+	\item peak time  ($t_\text{p}$) is the time to the first peak.
+	\item peak value  ($x_\text{p}$) is the maximum value experiences by the system
+	\item settling time ($t_\text{s}$) is the time it takes the system to get within an error ($\pm \epsilon \%$) of the steady-state displacement ($x_{ss}$) and stay there.
+	% \item delay time  $ \rightarrow t_\text{d}$
+	\item max percentage overshoot ($M_\text{p}$) is defined as $M_p = ( {x_p} / {x_{ss}}-1 ) \cdot 100$.
+\end{itemize}
 
- \footnotetext[1]{Peter Minorsky, grandson of Nicolas Minorsky, CC BY-SA 1.0 $<$https://creativecommons.org/licenses/by-sa/1.0$>$, via Wikimedia Commons} 
- \footnotetext[2]{U.S. Navy, Public domain, via Wikimedia Commons} 
- 
-\end{review}
-
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=5.2in]{../figures/2nd_order_performance_indicators}
+	\caption{Graphical representation of key 2\textsuperscript{nd} order performance indicators}
+	\label{fig:2nd_order_performance_indicators}
+\end{figure}
 
 \pagebreak
 
@@ -390,6 +385,7 @@ where $s$ is the complex frequency. A temporal response for the 1-DOF shown in f
 \begin{figure}[H]
  \centering
  \includegraphics[]{../figures/PID_temporal_responses.png}
+ \vspace{-3ex}
  \caption{Response for a 1-DOF system controlled with a PID, showing: (a) system response and the step function input, and (b) the controller response imposed on the system to obtain such responses.}
  \label{fig:PID_temporal_responses}
 \end{figure}
@@ -397,6 +393,27 @@ where $s$ is the complex frequency. A temporal response for the 1-DOF shown in f
 
 
 
+
+\begin{review}
+	\label{sec:control_systems_review}
+	
+	\textbf{Nicolas Minorsky and the Need for Better Control}
+	
+	\noindent Continuous control systems have been widely used for centuries. For example, consider that the centrifugal governor, which uses spinning weights, was used by Christiaan Huygens in the 1600s in the Netherlands to regulate the gap between millstones in windmills or by James Watt, who famously linked a stem regulator to a centrifugal governor to control steam turbines. 
+	
+	Arguably, the Russian-American engineer Nicolas Minorsky was the first to develop the theoretical analysis for the three-term control we now call PID. This was done in 1922 while he was researching and designing automatic ship steering for the US Navy. He based his work on watching how a ship's helmsman responds to wave loading on a ship, with a delayed input to the helm that not only considered the current ship course but also past errors and the desired rate of change for the ship. For a helmsman, the goal is stability, not absolute control, which simplifies how one thinks about the challenge of control.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=6in]{../figures/PID_Nicolas_Minorsky_and_USS_New_Mexico}
+		\caption{Historical perspective of PID control showing: (a) Portrait of Nicolas Minorsky \protect\footnotemark[1] and (b) the battleship USS New Mexico (BB-40) of the United States Navy, which was the first to implement PID control in its steering \protect\footnotemark[2]. }
+		\label{fig:PID_Nicolas_Minorsky_and_USS_New_Mexico}
+	\end{figure}
+	
+	\footnotetext[1]{Peter Minorsky, grandson of Nicolas Minorsky, CC BY-SA 1.0 $<$https://creativecommons.org/licenses/by-sa/1.0$>$, via Wikimedia Commons} 
+	\footnotetext[2]{U.S. Navy, Public domain, via Wikimedia Commons} 
+	
+\end{review}
 
 
 
