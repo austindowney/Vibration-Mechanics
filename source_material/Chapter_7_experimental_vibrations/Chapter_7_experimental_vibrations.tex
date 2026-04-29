@@ -177,8 +177,17 @@ A modal hammer is an instrumented hammer used to impart a measured impact force 
 
 \subsubsection{Electrodynamic Shakers}
 
-An electrodynamic shaker can generate a wide range of frequencies and amplitudes that simulate different vibration environments to simulate real-world vibration environments. This is in contrast to a modal hammer that only subjects the measured item to an impulse force. An electrodynamic shaker is shown in Figure \ref{fig:vibration_testing}. It consists of a strong electromagnet that generates a magnetic field and a moving coil. When an alternating electrical current is passed through the coil, it generates a magnetic field that interacts with the magnet, causing the instrumented system to vibrate. The vibration produced by the electrodynamic shaker can be controlled by adjusting the frequency, amplitude, and waveform of the electrical signal applied to the coil through an amplifier.
+An electrodynamic shaker can generate a wide range of frequencies and amplitudes that simulate different vibration environments to simulate real-world vibration environments. This is in contrast to a modal hammer that only subjects the measured item to an impulse force. An electrodynamic shaker is shown in Figure \ref{fig:shakers}(a). It consists of a strong electromagnet that generates a magnetic field and a moving coil. When an alternating electrical current is passed through the coil, it generates a magnetic field that interacts with the magnet, causing the instrumented system to vibrate. The vibration produced by the electrodynamic shaker can be controlled by adjusting the frequency, amplitude, and waveform of the electrical signal applied to the coil through an amplifier. The power amplifier shown in Figure \ref{fig:shakers}(b) increases the current of the input signal, allowing a low-power function generator or similar source to drive the electrodynamic shaker effectively.
 
+\begin{figure}[H]
+ \centering
+ \vspace{-1ex}
+ \includegraphics[width=6.5in]{../figures/shakers}
+ \vspace{-3ex}
+ \caption{Electrodynamic shaker setup, showing: (a) two sizes of shaker assemblies and specimen interfaces, and (b) power amplifier for used to excite the shakers.}
+ \vspace{-2ex}
+ \label{fig:shakers}
+\end{figure} 
 
 
 \subsection{Digital Signal Processing}
@@ -194,7 +203,7 @@ The process of digitization involves two main steps: sampling and quantization, 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=6.3in]{../figures/signal_digitization.png}
+    \includegraphics[width=6.5in]{../figures/signal_digitization.png}
  \vspace{-3ex}
     \caption{Digitization of two continuous time-series signals sampled at 5~S/s.}
  \vspace{-2ex}

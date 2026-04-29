@@ -242,6 +242,8 @@
   \caption{1-DOF spring-mass system subjected to an external force $F(t)$.}
  \end{figure}
  
+\pagebreak
+
  \noindent\textbf{Solution:}
 
  \noindent First, make sure that the system is not in resonance. Calculating that $\omega_n = \sqrt{500/10} = 7.07$~rad/s; this shows us that $\omega_n \neq \omega$. Next, knowing that $f_0 = F_o/m = 10$, we can find the homogeneous and particular solutions as:
@@ -558,7 +560,7 @@ B_s
 
   \noindent The total response for the damped 1-DOF system subjected to an external force is modeled using equations \ref{eq:damped_forced_x} through \ref{eq:damped_forced_theta_p} while the transient response consists of the first half of equation \ref{eq:damped_forced_x} and the steady state response consists of the second half of equation \ref{eq:damped_forced_x}.  
   
-  
+  \pagebreak
   \noindent\textbf{Solution a):} 
   
   \noindent Therefore, plotting the temporal responses for the configuration yields:
@@ -582,6 +584,7 @@ B_s
   \end{figure}   
   \vspace{-1ex}
 
+\pagebreak
   \noindent\textbf{Solution c):} 
 
   \noindent  Now, using $\omega=3.162$~rad/s we put the system into resonance as $\omega=\omega_n$. However, unlike the undamped system, the amplitude of the displacement is not unbounded as the damper absorbs energy from the system. Therefore, after about 7 seconds, the system enters an equilibrium state where any additional increase in amplitude caused by the system entering into resonance is canceled out by the damping in the system, as demonstrated in the plot below:
@@ -1139,13 +1142,13 @@ A practical low-cost measure could be to add cross-cables or bracing to the plat
   
   \end{example}   
 
-
+\pagebreak
 
  \subsection{Numerical Methods}
  
   Numerical methods can be used to solve the response of a system subjected to forced vibrations. While not the most computationally efficient method, the EOM is an ODE that can be solved directly while considering the initial directions to obtain the response of the system. 
 
-\pagebreak
+
 \begin{example}
  \textbf{Directly Solving the Ordinary Differential Equation}
  
@@ -1223,6 +1226,7 @@ x_dot = y(:, 2);
 
 The code in listing~\ref{lst:code} needs to be combined with the functions in listing~\ref{lst:functions} and plotting code to obtain the results shown in figure~\ref{fig:ODE_results}.
 
+\pagebreak
 
 \lstset{caption={Functions called from the main code in listing~\ref{lst:code}.},
  label={lst:functions},

@@ -325,6 +325,7 @@ Note that the system will settle out around $F_0/k$ where $F_0  \Phi$ is a scali
 \end{figure}
 \footnotetext[1]{SGT Marvin Lynchard, A dump truck is filled with dirt, by members of the 459th Civil Engineering Flight, for use in repairing a damaged runway during Exercise Prime Beef '82, Public Domain, via picryl.com} 
 
+\pagebreak
 \noindent\textbf{Solution:} 
 
 \noindent Setting the load applied to the truck as 1 unit, it can be seen that this is a unit step loading condition with an undamped system. 
@@ -366,6 +367,7 @@ Note that the transient displacement of the truck bed is twice that of the stead
 			
 		\footnotetext[1]{Wang, Lei, and Xing-yan Fan. ``Failure cases of high chimneys: A review.'' Engineering failure analysis 105 (2019): 1107-1117.	} 
 			
+		\pagebreak5
 		Sadly, engineers understanding of vortex shedding and structural dynamics lagged behind the development of these structures; leading to multiple wind-induced collapses of smokestacks during the industrial revolution.  The use of the transfer function approach gives the practitioner the ability to easily model the complex response of smokestack excited with a wide bandwidth of excitation. 
 			
 			\begin{figure}[H]
@@ -425,7 +427,7 @@ The integral in equation~\ref{eq:Duhamel_1} is called a convolutional integral w
 \end{equation}
 Again, this represents the total system response (without initial conditions) for an arbitrary excitation $F(t)$.  These equations are called the \textit{Duhamel} integral. In many cases, the function $F(t)$ allows for explicit integration of equations~\ref{eq:Duhamel_1} and \ref{eq:Duhamel_2}. However, numerical evaluation using a piece-wise equation made up of equation~\ref{eq:g_of_t_minus_tau} is always possible and many times easier given the simplicity of coding. 
 
-\pagebreak
+
 
 \begin{example}
 \label{example:Double_Hammer_Impact}
@@ -801,21 +803,23 @@ Considering a nonstationary signal, an important measure of interest is how fast
 R_{xx}(\tau) = \lim\limits_{T \rightarrow \infty} \frac{1}{T} \int_{0}^{T}x(t)x(t+\tau)dt
 \end{equation}
 The subscript $xx$ denotes that this is a measure of the response for the variable $xx$. $\tau$ is the time difference between the values at which the signal $x(t)$ is sampled and is different than the $\tau$ defined in section~\ref{sec:impulse_inputs}. The autocorrelation for the two inputs considered above is shown in figure~\ref{fig:Response_to_random_input_autocorrelation}.
-			\vspace{-1ex}
+			
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=6.5in]{../figures/Response_to_random_input_autocorrelation}
-\vspace{-3ex}
+\vspace{-2ex}
 	\caption{Responses from the autocorrelation function for the inputs shown in figure~\ref{fig:Response_to_random_input_inputs} showing: (a) a sinusoidal; and (b) uniform random noise.}
 	\label{fig:Response_to_random_input_autocorrelation}
 \end{figure} 
 \vspace{-2ex}
 
+\pagebreak
 \begin{note}
 The autocorrelation function measures how similar a signal is to a time-shifted version of itself. For a sinusoidal input, the signal is highly structured and periodic.  As a result, the autocorrelation remains high and varies smoothly with the time shift $\tau$, as shown in Figure~\ref{fig:Response_to_random_input_autocorrelation}(a).
 
-In contrast, a random (noise) signal has little to no predictable structure. Values at different times are largely independent, so shifting the signal over itself does not preserve similarity. Consequently, the autocorrelation drops to near zero for $\tau \neq 0$, indicating a lack of correlation between past and future values; shown in Figure~\ref{fig:Response_to_random_input_autocorrelation}(b).
+In contrast, a random signal has no predictable structure. Values at different times are independent, so shifting the signal over itself does not preserve similarity. Consequently, the autocorrelation drops to near zero for $\tau \neq 0$, indicating a lack of correlation between past and future values; shown in Figure~\ref{fig:Response_to_random_input_autocorrelation}(b).
  
+\pagebreak
 In practical terms, autocorrelation reveals whether a vibration signal contains repeating patterns (e.g., harmonic motion) or is dominated by random fluctuations.
 \end{note}
 
@@ -829,7 +833,9 @@ where the integral of $R_{xx}(\tau)$ changes the real number $\tau$ into the fre
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=6.5in]{../figures/Response_to_random_input_PSD}
+	\vspace{-2ex}
 	\caption{Power spectral density plots for the inputs shown in figure~\ref{fig:Response_to_random_input_inputs} showing: (a) a sinusoidal; and (b) uniform random noise.}
+	\vspace{-2ex}
 	\label{fig:Response_to_random_input_PSD}
 \end{figure}
 
@@ -912,6 +918,7 @@ where $R_{ff}$ denotes the autocorrelation function of $F(t)$ and $S_{ff}$ denot
 	\end{figure}
 \end{example}  
 
+\pagebreak
 \subsubsection{Statistical System Response Characterization}
 Another useful quantity to consider is the expected output, in terms of its mean and variance, for a given input. Working within the constraint that the system will oscillate about zero, $E[x]=0$, the mean-square value can be directly related to the PSD function as:
 \begin{equation}
@@ -935,7 +942,7 @@ When combined with equation \ref{eq:variance_for_S_O}, these integrals allow for
 
 \footnotetext[1]{Newland, David E. ``Random vibrations, spectral \& wavelet analysis.'' Longman Scientific \& Technical (1993).} 
 
-\pagebreak		
+	
 
 \begin{example}
 

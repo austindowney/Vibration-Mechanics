@@ -15,7 +15,7 @@
 Throughout this text, we have studied various aspects related to analyzing and modeling vibrating systems. Therefore, it becomes prudent to look at methods for reducing or eliminating unwanted vibrations. However, before vibrations in a system can be effectively reduced, they must be better understood in terms of their effects on the system under study. For this reason, this chapter first introduces the vibration Nomograph, which is then followed by vibration isolation, absorption, and active suppression.  
 
 
-\subsection{Vibration Nomograph}
+\subsection{Vibration Severity and Acceptable Limits}
 
 
 
@@ -303,7 +303,9 @@ Vibrations in systems can be mitigated through a number of active systems; typic
 
 
 
-\subsubsection{Position-Derivative (PD) Control}
+\subsubsection{Position-Derivative Control}
+\label{sec:Position-Derivative}
+
 Active vibration control adds energy to the system in order to mitigate the vibrations in the system. As depicted in figure \ref{fig:active_vibration_control_FBD}(a), an active vibration control system requires a sensor to acquire data from the system, control hardware, and algorithms to process this data, and an actuator to exert physical control on the system. These systems together are called a feedback loop, as a movement in the mass results in a controlled force $(f_u)$ being exerted on the system. This control force is diagrammed in figure \ref{fig:active_vibration_control_FBD}(b). 
 
 \begin{figure}[H]
@@ -320,7 +322,7 @@ Adding the control force to the EOM for the 1-DOF system presented in figure \re
 \begin{equation}
 m \ddot{x} + c \dot{x} + kx = F(t) = f + f_u
 \end{equation}
-A common method for providing control for vibration suppression is called position and derivative control, or PD-control. A PD-controller is a state-variable feedback controller as it uses velocity and displacement obtained from the measured acceleration, assuming that the acceleration is properly integrated. PD-control measures the position and velocity of the mass and uses these to compute the control force needed to mitigate the vibration to an acceptable level. A simple way to code a PD-controller is to provide a control force proportional to the displacement velocity (derivative of displacement) of the mass, such that:
+A common method for providing control for vibration suppression is called position-derivative control. A PD-controller is a state-variable feedback controller as it uses velocity and displacement obtained from the measured acceleration, assuming that the acceleration is properly integrated. Position-derivative control measures the position and velocity of the mass and uses these to compute the control force needed to mitigate the vibration to an acceptable level. A simple way to code a position-derivative controller is to provide a control force proportional to the displacement velocity (derivative of displacement) of the mass, such that:
 \begin{equation}
 f_u = -g_1x - g_2 \dot{x}
 \end{equation}
@@ -361,7 +363,12 @@ There are various performance indicators that one can use to judge the performan
 
 \pagebreak
 
+
+\begin{note}
+In this text, position-derivative control (Section~\ref{sec:Position-Derivative}) refers to a control law based on displacement and velocity and is distinct from proportional--derivative control used in standard control theory. Because ``PD'' commonly denotes proportional-derivative control, which is a subset of the proportional-integral-derivative (PID) control discussed in Section~\ref{sec:PID}, the abbreviation PD'' is not used here for position-derivative control.
+\end{note}	
 \subsubsection{Proportional-Integral-Derivative (PID) Control}
+\label{sec:PID}
 
 Proportional-Integral-Derivative (PID) Control is a three-term controller that employs feedback and is widely used in continuous control systems, including for the control of structural systems. A PID controller seeks to minimize the measured error value $e(t)$ between a desired setpoint (SP) and a measured process variable (PV) by applying corrections based on the proportional ($P$), integral ($I$), and derivative ($D$) terms (denoted P, I, and D respectively), from which it gets its name.
 
