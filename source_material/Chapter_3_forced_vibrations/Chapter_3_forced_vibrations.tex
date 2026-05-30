@@ -36,7 +36,7 @@
  \end{equation}   
  For convenience, we drop the ``$(t)$'' to make the writing easier. Then, we convert the EOM to the standard form by dividing the equation by $m$:     
  \begin{equation}
-  \ddot{x}+\omega_n^2x = f_0\text{cos}(\omega t)
+  \ddot{x}+\omega_\text{n}^2x = f_0\text{cos}(\omega t)
  \end{equation}     
  where:
  \begin{equation}
@@ -44,88 +44,88 @@
  \end{equation} 
  The EOM in this form is a second-order, linear, nonhomogeneous differential equation. It is nonhomogeneous because there are no terms related to $x$ on the right-hand side of the equation. One way to solve such an ODE is to recall that the solution for a nonhomogeneous equation is the sum of the homogeneous and particular solutions. 
  \begin{equation}
-  x = x_h + x_p
+  x = x_\text{h} + x_\text{p}
  \end{equation} 
  again, noting that this is a temporal solution where ``$(t)$'' is implied. First, knowing that the solution is the sum of two parts: 1) oscillations caused by the spring/mass system; and 2) vibrations caused by the forcing function. The oscillations caused by the spring/mass system will form the homogeneous while the vibrations caused by the forcing function will form the particular solution. As we know, the solution for oscillations caused by the spring/mass system from our prior investigation of unforced systems, we set the equation for the homogeneous solution to be:
  \begin{equation}
-  x_h = A\text{sin}(\omega_n t + \phi)
+  x_\text{h} = A\text{sin}(\omega_\text{n} t + \phi)
  \end{equation}   
- Next, we will denote the particular solution as $x_p$. $x_p$ can be determined by assuming that it is in the form of the forcing function, therefore:
+ Next, we will denote the particular solution as $x_\text{p}$. $x_\text{p}$ can be determined by assuming that it is in the form of the forcing function, therefore:
  \begin{equation}
   f_0\text{cos}(\omega t)
  \end{equation} 
  becomes:
  \begin{equation}
-  x_p  =X\text{cos}(\omega t)
+  x_\text{p}  =X\text{cos}(\omega t)
  \end{equation}      
- where, $x_p$ is the particular solution and $X$ is the amplitude of the forced response. Our total solution for the harmonic excitation of undamped systems now becomes:
+ where, $x_\text{p}$ is the particular solution and $X$ is the amplitude of the forced response. Our total solution for the harmonic excitation of undamped systems now becomes:
  \begin{equation}
-  x(t) = A\text{sin}(\omega_n t + \phi) + X\text{cos}(\omega t) 
+  x(t) = A\text{sin}(\omega_\text{n} t + \phi) + X\text{cos}(\omega t) 
  \end{equation}    
- This approach, of assuming that $x_p=X\text{cos}(\omega t)$, in order to determine the particular solution, is called the \emph{method of undetermined coefficients}. To calculate $X$, first we take the equations for $x_p$ and $\ddot{x}_p $:
+ This approach, of assuming that $x_\text{p}=X\text{cos}(\omega t)$, in order to determine the particular solution, is called the \emph{method of undetermined coefficients}. To calculate $X$, first we take the equations for $x_\text{p}$ and $\ddot{x}_\text{p} $:
  \begin{equation}
-  x_p = X\text{cos}(\omega t)
+  x_\text{p} = X\text{cos}(\omega t)
  \end{equation} 
  \begin{equation}
-  \ddot{x}_p = -\omega^2X\text{cos}(\omega t)
+  \ddot{x}_\text{p} = -\omega^2X\text{cos}(\omega t)
  \end{equation}    
  and substituting these into the equation of motion in standard form yields:
  \begin{equation}
-  -\omega^2X\text{cos}(\omega t)+\omega_n^2X\text{cos}(\omega t) = f_0\text{cos}(\omega t)
+  -\omega^2X\text{cos}(\omega t)+\omega_\text{n}^2X\text{cos}(\omega t) = f_0\text{cos}(\omega t)
  \end{equation}  
  As long as  $\text{cos}(\omega t) \neq  0$, solving for X yields:
  \begin{equation}
-  X = \frac{f_0}{\omega_n^2-\omega^2}
+  X = \frac{f_0}{\omega_\text{n}^2-\omega^2}
   \label{eq:X}
  \end{equation}  
- Therefore, as long as $\omega_n \neq \omega$, the particular solution can take the form:
+ Therefore, as long as $\omega_\text{n} \neq \omega$, the particular solution can take the form:
  \begin{equation}
-  x_p = \frac{f_0}{\omega_n^2-\omega^2}\text{cos}(\omega t)
+  x_\text{p} = \frac{f_0}{\omega_\text{n}^2-\omega^2}\text{cos}(\omega t)
  \end{equation}      
  This then expands to the total form:
  \begin{equation}
-  x(t) = A\text{sin}(\omega_n t + \phi) + \frac{f_0}{\omega_n^2-\omega^2}\text{cos}(\omega t)
+  x(t) = A\text{sin}(\omega_\text{n} t + \phi) + \frac{f_0}{\omega_\text{n}^2-\omega^2}\text{cos}(\omega t)
  \end{equation}    
  Expanding this to the general form for the homogeneous solution obtains the equation:
  \begin{equation}
-  x(t) = A_1\text{sin}(\omega_n t) + A_2\text{cos}(\omega_n t) + \frac{f_0}{\omega_n^2-\omega^2}\text{cos}(\omega t)
+  x(t) = A_1\text{sin}(\omega_\text{n} t) + A_2\text{cos}(\omega_\text{n} t) + \frac{f_0}{\omega_\text{n}^2-\omega^2}\text{cos}(\omega t)
  \end{equation}    
  As before, we need to determine the values for the coefficients $A_1$ and $A_2$ by enforcing the initial conditions $x_0$ and $v_0$. Setting the time to zero ($t=0$) and solving the initial displacement leads to:
  \begin{equation}
-  x(0) = x_0 = A_2 + \frac{f_0}{\omega_n^2-\omega^2}
+  x(0) = x_0 = A_2 + \frac{f_0}{\omega_\text{n}^2-\omega^2}
  \end{equation}    
  or:
  \begin{equation}
-  A_2 = x_0-\frac{f_0}{\omega_n^2-\omega^2}
+  A_2 = x_0-\frac{f_0}{\omega_\text{n}^2-\omega^2}
  \end{equation} 
  again, solving the equation in terms of velocity:
  \begin{equation}
-  \dot{x}(t) = A_1\omega_n\text{cos}(\omega_n t) - A_2 \omega_n \text{sin}(\omega_n t) - \omega \frac{f_0}{\omega_n^2-\omega^2}\text{sin}(\omega t)
+  \dot{x}(t) = A_1\omega_\text{n}\text{cos}(\omega_\text{n} t) - A_2 \omega_\text{n} \text{sin}(\omega_\text{n} t) - \omega \frac{f_0}{\omega_\text{n}^2-\omega^2}\text{sin}(\omega t)
  \end{equation} 
  and solving for the initial velocity at $t=0$:
  \begin{equation}
-  \dot{x}(0) = v_0 =  A_1 \omega_n
+  \dot{x}(0) = v_0 =  A_1 \omega_\text{n}
  \end{equation}    
  or:
  \begin{equation}
-  A_1 = \frac{v_0}{\omega_n}
+  A_1 = \frac{v_0}{\omega_\text{n}}
  \end{equation}    
  Therefore, combining the equations, we get:
  \begin{equation}
-  x(t) = \Big(\frac{v_0}{\omega_n}\Big)\text{sin}(\omega_n t) + \Big(x_0-\frac{f_0}{\omega_n^2-\omega^2}\Big)\text{cos}(\omega_n t) + \frac{f_0}{\omega_n^2-\omega^2}\text{cos}(\omega t)
+  x(t) = \Big(\frac{v_0}{\omega_\text{n}}\Big)\text{sin}(\omega_\text{n} t) + \Big(x_0-\frac{f_0}{\omega_\text{n}^2-\omega^2}\Big)\text{cos}(\omega_\text{n} t) + \frac{f_0}{\omega_\text{n}^2-\omega^2}\text{cos}(\omega t)
  \end{equation} 
  As before, we can relate $A_1$ and $A_2$ to each other through the basic trigonometric identities. This yields, 
  \begin{equation}
-  x(t) = A\text{sin}(\omega_n t + \phi) + X\text{cos}(\omega t) 
+  x(t) = A\text{sin}(\omega_\text{n} t + \phi) + X\text{cos}(\omega t) 
  \end{equation}    
  \begin{equation}
-  A = \sqrt{\bigg(\frac{v_0}{\omega_n}\bigg)^2+(x_0-X)^2}
+  A = \sqrt{\bigg(\frac{v_0}{\omega_\text{n}}\bigg)^2+(x_0-X)^2}
  \end{equation}    
  \begin{equation}
-  \phi = \text{tan}^{-1}\bigg(\frac{\omega_n(x_0-X)}{v_0}\bigg)
+  \phi = \text{tan}^{-1}\bigg(\frac{\omega_\text{n}(x_0-X)}{v_0}\bigg)
  \end{equation}    
  \begin{equation}
-  X = \frac{f_0}{\omega_n^2-\omega^2}
+  X = \frac{f_0}{\omega_\text{n}^2-\omega^2}
  \end{equation}    
  
 
@@ -146,11 +146,11 @@
 
   \noindent  The free-vibration response can be plotted using the expression:
   \begin{equation}
-   x(t) = x_0\text{cos}(\omega_n t) + \frac{v_0}{\omega_n}\text{sin}(\omega_n t)
+   x(t) = x_0\text{cos}(\omega_\text{n} t) + \frac{v_0}{\omega_\text{n}}\text{sin}(\omega_\text{n} t)
   \end{equation}    
   while the force vibration is expressed using:
   \begin{equation}
-   x(t) = \Big(\frac{v_0}{\omega_n}\Big)\text{sin}(\omega_n t) + \Big(x_0-\frac{f_0}{\omega_n^2-\omega^2}\Big)\text{cos}(\omega_n t) + \frac{f_0}{\omega_n^2-\omega^2}\text{cos}(\omega t)
+   x(t) = \Big(\frac{v_0}{\omega_\text{n}}\Big)\text{sin}(\omega_\text{n} t) + \Big(x_0-\frac{f_0}{\omega_\text{n}^2-\omega^2}\Big)\text{cos}(\omega_\text{n} t) + \frac{f_0}{\omega_\text{n}^2-\omega^2}\text{cos}(\omega t)
   \end{equation} 
   These temporal responses are plotted in figure~\ref{fig:free_and_forced_temporal_response}. Note that the forcing function uses the axis on the right.
   \begin{figure}[H]
@@ -179,20 +179,20 @@
  
 \subsection{Harmonic Resonance}   
  
- Recall that our solution from before assumed that $\omega_n \neq \omega$; however, if $\omega_n = \omega$ then the system will develop the phenomenon of resonance. Mathematically, this means the amplitude of the vibrations becomes unbounded. The prior choice of $X\text{cos}(\omega t)$ for the particular solution fails as it is also a solution for a homogeneous equation. Therefore, a new particular solution is needed for the case where $\omega_n = \omega$. This particular solution can be written as:
+ Recall that our solution from before assumed that $\omega_\text{n} \neq \omega$; however, if $\omega_\text{n} = \omega$ then the system will develop the phenomenon of resonance. Mathematically, this means the amplitude of the vibrations becomes unbounded. The prior choice of $X\text{cos}(\omega t)$ for the particular solution fails as it is also a solution for a homogeneous equation. Therefore, a new particular solution is needed for the case where $\omega_\text{n} = \omega$. This particular solution can be written as:
  \begin{equation}
-  x_p(t) = t X\text{sin}(\omega t)
+  x_\text{p}(t) = t X\text{sin}(\omega t)
  \end{equation}    
  Substituting this into the EOM of the system in standard form equation\footnotemark[1] and solving for X yields:
  \footnotetext[1]{Boyce, William E., Richard C. DiPrima, and Douglas B. Meade. Elementary differential equations and boundary value problems. John Wiley \& Sons, 2021.}  
  \begin{equation}
-  x_p(t) = \frac{f_0}{2 \omega} t \text{sin}(\omega t)
+  x_\text{p}(t) = \frac{f_0}{2 \omega} t \text{sin}(\omega t)
  \end{equation} 
  Thus, the total solution can now be written as:
  \begin{equation}
   x(t) = A_1\text{sin}(\omega t) + A_2\text{cos}(\omega t) + \frac{f_0}{2 \omega} t \text{sin}(\omega t)
  \end{equation}   
- Note that $\omega_n=\omega$; therefore, the frequencies are all in terms of the driving frequency $\omega$. Again, evaluating the solution at $t=0$ for the initial conditions $x_0$ and $v_0$ yields:
+ Note that $\omega_\text{n}=\omega$; therefore, the frequencies are all in terms of the driving frequency $\omega$. Again, evaluating the solution at $t=0$ for the initial conditions $x_0$ and $v_0$ yields:
  \begin{equation}
   x(t) = \Big(\frac{v_0}{\omega}\Big)\text{sin}(\omega t) + x_0\text{cos}(\omega t) + \frac{f_0}{2 \omega} t \text{sin}(\omega t)
  \end{equation}   
@@ -246,26 +246,26 @@
 
  \noindent\textbf{Solution:}
 
- \noindent First, make sure that the system is not in resonance. Calculating that $\omega_n = \sqrt{500/10} = 7.07$~rad/s; this shows us that $\omega_n \neq \omega$. Next, knowing that $f_0 = F_o/m = 10$, we can find the homogeneous and particular solutions as:
+ \noindent First, make sure that the system is not in resonance. Calculating that $\omega_\text{n} = \sqrt{500/10} = 7.07$~rad/s; this shows us that $\omega_\text{n} \neq \omega$. Next, knowing that $f_0 = F_o/m = 10$, we can find the homogeneous and particular solutions as:
  \begin{equation}
-  x_h(t) = A\text{sin}(\omega_n t + \phi)
+  x_\text{h}(t) = A\text{sin}(\omega_\text{n} t + \phi)
  \end{equation}    
  \begin{equation}
-  x_p(t) = X\text{cos}(\omega t) 
+  x_\text{p}(t) = X\text{cos}(\omega t) 
  \end{equation} 
  also:   
  \begin{equation}
-  x(t) = x_h(t) + x_p(t)
+  x(t) = x_\text{h}(t) + x_\text{p}(t)
  \end{equation} 
  where:   
  \begin{equation}
-  A = \sqrt{\bigg(\frac{v_0}{\omega_n}\bigg)^2+(x_0-X)^2} = 
+  A = \sqrt{\bigg(\frac{v_0}{\omega_\text{n}}\bigg)^2+(x_0-X)^2} = 
  \end{equation}    
  \begin{equation}
-  \phi = \text{tan}^{-1}\bigg(\frac{\omega_n(x_0-X)}{v_0}\bigg)
+  \phi = \text{tan}^{-1}\bigg(\frac{\omega_\text{n}(x_0-X)}{v_0}\bigg)
  \end{equation}    
  \begin{equation}
-  X = \frac{f_0}{\omega_n^2-\omega^2}
+  X = \frac{f_0}{\omega_\text{n}^2-\omega^2}
  \end{equation}   
  This leads to the following results. 
  \begin{figure}[H]
@@ -296,11 +296,11 @@
  \end{equation}
  or in standard form:
  \begin{equation}
-  \ddot{x}+\omega_n^2x=f_0\text{sin}(\omega t)
+  \ddot{x}+\omega_\text{n}^2x=f_0\text{sin}(\omega t)
  \end{equation}       
- Note that the forcing function is in terms of sin, not cos as before, so we will have to resolve for the constants $A_1$ and $A_2$. Again, setting the particular solution to $x_p=X\text{sin}(\omega t)$ and solving for $X$ as before yields:
+ Note that the forcing function is in terms of sin, not cos as before, so we will have to resolve for the constants $A_1$ and $A_2$. Again, setting the particular solution to $x_\text{p}=X\text{sin}(\omega t)$ and solving for $X$ as before yields:
  \begin{equation}
-  x(t) = A_1\text{sin}(\omega_n t) + A_2\text{cos}(\omega_n t) + \frac{f_0}{\omega_n^2-\omega^2}\text{sin}(\omega t)
+  x(t) = A_1\text{sin}(\omega_\text{n} t) + A_2\text{cos}(\omega_\text{n} t) + \frac{f_0}{\omega_\text{n}^2-\omega^2}\text{sin}(\omega t)
  \end{equation} 
  Now we can solve for $A_1$ and $A_2$ by setting the initial conditions $x_0$ and $v_0$ to $t=0$. First, setting $t=0$ in the equation for $x(t)$ yields:
  \begin{equation}
@@ -308,19 +308,19 @@
  \end{equation} 
  Then, a function for the velocity of the system is obtained: 
  \begin{equation}
-  \dot{x}(t) = v_0 = A_1\omega_n\text{cos}(\omega_n t) - A_2\omega_n\text{sin}(\omega_n t) + \omega\frac{f_0}{\omega_n^2-\omega^2}\text{cos}(\omega t)
+  \dot{x}(t) = v_0 = A_1\omega_\text{n}\text{cos}(\omega_\text{n} t) - A_2\omega_\text{n}\text{sin}(\omega_\text{n} t) + \omega\frac{f_0}{\omega_\text{n}^2-\omega^2}\text{cos}(\omega t)
  \end{equation}    
  This allows us to obtain:
  \begin{equation}
-  A_1 = \frac{v_0}{\omega_n}-\frac{\omega}{\omega_n}\cdot \frac{f_0}{\omega_n^2-\omega^2}
+  A_1 = \frac{v_0}{\omega_\text{n}}-\frac{\omega}{\omega_\text{n}}\cdot \frac{f_0}{\omega_\text{n}^2-\omega^2}
  \end{equation} 
  at $t=0$. These lead to the full equation for the general solution:
  \begin{equation}
-  x(t) = \Big(\frac{v_0}{\omega_n}-\frac{\omega}{\omega_n}\cdot \frac{f_0}{\omega_n^2-\omega^2}\Big)\text{sin}(\omega_n t) + x_0\text{cos}(\omega_n t) + \frac{f_0}{\omega_n^2-\omega^2}\text{sin}(\omega t)
+  x(t) = \Big(\frac{v_0}{\omega_\text{n}}-\frac{\omega}{\omega_\text{n}}\cdot \frac{f_0}{\omega_\text{n}^2-\omega^2}\Big)\text{sin}(\omega_\text{n} t) + x_0\text{cos}(\omega_\text{n} t) + \frac{f_0}{\omega_\text{n}^2-\omega^2}\text{sin}(\omega t)
  \end{equation}        
  Also, knowing:
  \begin{equation}
-  \omega_n = \sqrt{\frac{k}{m}} = \sqrt{20} \text{~rad/s} =  4.472 \text{~rad/s}
+  \omega_\text{n} = \sqrt{\frac{k}{m}} = \sqrt{20} \text{~rad/s} =  4.472 \text{~rad/s}
  \end{equation}    
  and
  \begin{equation}
@@ -392,7 +392,7 @@ Now that we know a system in resonance without damping will destroy itself, give
  \end{equation}   
  For convenience, we can convert this to the standard form:     
  \begin{equation}
-  \ddot{x}(t)+2 \zeta \omega_n \dot{x}(t) +\omega_n^2x(t) = f_0\text{cos}(\omega t)
+  \ddot{x}(t)+2 \zeta \omega_\text{n} \dot{x}(t) +\omega_\text{n}^2x(t) = f_0\text{cos}(\omega t)
  \end{equation}     
  again, where:
  \begin{equation}
@@ -400,107 +400,107 @@ Now that we know a system in resonance without damping will destroy itself, give
  \end{equation} 
  Recall that one way to solve such an equation is to obtain the sum of the homogeneous and particular solutions. 
  \begin{equation}
-  x(t) = x_h(t) + x_p(t)
+  x(t) = x_\text{h}(t) + x_\text{p}(t)
  \end{equation} 
  However, now that we have a damping force to consider, our particular solution will have to consider this damping. Therefore:
  \begin{equation}
   \label{eq:x_p(t)}
-  x_p(t) = X \text{cos}(\omega t - \phi_p)
+  x_\text{p}(t) = X \text{cos}(\omega t - \phi_\text{p})
  \end{equation}
- where $\phi_p$ represents the phase shift. 
+ where $\phi_\text{p}$ represents the phase shift. 
 
  \begin{note}
-  $\phi_p$ is represented in other texts as $\theta$, $\theta_p$, or even just $\phi$ but we will use $\phi_p$ throughout the remainder of this text. 
+  $\phi_\text{p}$ is represented in other texts as $\theta$, $\theta_\text{p}$, or even just $\phi$ but we will use $\phi_\text{p}$ throughout the remainder of this text. 
  \end{note}
 
  Again, the phase shift is expected because of the effect of the damping force. Now, our total equation is:
  \begin{equation}
-  x(t) = Ae^{-\zeta \omega_n t}\text{sin}(\omega_d t + \phi) +  X \text{cos}(\omega t - \phi_p)
+  x(t) = Ae^{-\zeta \omega_\text{n} t}\text{sin}(\omega_\text{d} t + \phi) +  X \text{cos}(\omega t - \phi_\text{p})
  \end{equation}   
- We can use the method of undetermined coefficients to obtain $X$ and $\phi_p$ for the particular solution. First, considering that we write the particular solution in the equivalent form:
+ We can use the method of undetermined coefficients to obtain $X$ and $\phi_\text{p}$ for the particular solution. First, considering that we write the particular solution in the equivalent form:
  \begin{equation}
-  x_p(t) = X \text{cos}(\omega t - \phi_p) = A_s \text{cos}(\omega t) + B_s  \text{sin}(\omega t)
+  x_\text{p}(t) = X \text{cos}(\omega t - \phi_\text{p}) = A_\text{s} \text{cos}(\omega t) + B_\text{s}  \text{sin}(\omega t)
  \end{equation}    
  Taking the derivative of the assumed forms of the particular solution yields:
  \begin{equation}
-  x_p(t) = A_s \text{cos}(\omega t) + B_s  \text{sin}(\omega t)
+  x_\text{p}(t) = A_\text{s} \text{cos}(\omega t) + B_\text{s}  \text{sin}(\omega t)
  \end{equation} 
  \begin{equation}
-  \dot{x}_p(t) = -\omega A_s \text{sin}(\omega t) + \omega B_s  \text{cos}(\omega t)
+  \dot{x}_\text{p}(t) = -\omega A_\text{s} \text{sin}(\omega t) + \omega B_\text{s}  \text{cos}(\omega t)
  \end{equation}     
  \begin{equation}
-  \ddot{x}_p(t) = -\omega^2 A_s \text{cos}(\omega t) - \omega^2 B_s  \text{sin}(\omega t)
+  \ddot{x}_\text{p}(t) = -\omega^2 A_\text{s} \text{cos}(\omega t) - \omega^2 B_\text{s}  \text{sin}(\omega t)
  \end{equation}    
- Recall that the homogeneous and particular solutions are each solutions on their own; therefore, the EOM can be used to describe just the particular solution. Substituting $x_p$. $\dot{x}_p$, and $\ddot{x}_p$ for $x$. $\dot{x}$, and $\ddot{x}$ in the EOM in standard form:
+ Recall that the homogeneous and particular solutions are each solutions on their own; therefore, the EOM can be used to describe just the particular solution. Substituting $x_\text{p}$. $\dot{x}_\text{p}$, and $\ddot{x}_\text{p}$ for $x$. $\dot{x}$, and $\ddot{x}$ in the EOM in standard form:
  \begin{equation}
-   \ddot{x}+2 \zeta \omega_n \dot{x} +\omega_n^2x = f_0\text{cos}(\omega t)
+   \ddot{x}+2 \zeta \omega_\text{n} \dot{x} +\omega_\text{n}^2x = f_0\text{cos}(\omega t)
  \end{equation}
  yields:
  \begin{equation}
-   \big( -\omega^2 A_s \text{cos}(\omega t) - \omega^2 B_s  \text{sin}(\omega t) \big)+2 \zeta \omega_n  \big( -\omega A_s \text{sin}(\omega t) + \omega B_s  \text{cos}(\omega t)  \big) +
+   \big( -\omega^2 A_\text{s} \text{cos}(\omega t) - \omega^2 B_\text{s}  \text{sin}(\omega t) \big)+2 \zeta \omega_\text{n}  \big( -\omega A_\text{s} \text{sin}(\omega t) + \omega B_\text{s}  \text{cos}(\omega t)  \big) +
  \end{equation}
  \begin{equation*}
-  \omega_n^2 \big( A_s \text{cos}(\omega t) + B_s  \text{sin}(\omega t) \big) = f_0\text{cos}(\omega t)
+  \omega_\text{n}^2 \big( A_\text{s} \text{cos}(\omega t) + B_\text{s}  \text{sin}(\omega t) \big) = f_0\text{cos}(\omega t)
  \end{equation*}    
  and rearranging in terms of sin($\omega t$) and cos($\omega t$) yields: 
  \begin{equation}
-  (-\omega^2 A_s + 2 \zeta \omega_n \omega B_s + \omega_n^2 A_s -f_0) \text{cos}(\omega t) + 
+  (-\omega^2 A_\text{s} + 2 \zeta \omega_\text{n} \omega B_\text{s} + \omega_\text{n}^2 A_\text{s} -f_0) \text{cos}(\omega t) + 
  \end{equation}
  \begin{equation*}
-  (-\omega^2 B_s - 2 \zeta \omega_n \omega A_s + \omega_n^2 B_s)\text{sin}(\omega t) =0
+  (-\omega^2 B_\text{s} - 2 \zeta \omega_\text{n} \omega A_\text{s} + \omega_\text{n}^2 B_\text{s})\text{sin}(\omega t) =0
  \end{equation*} 
  From this expression, it is clear that there are two special moments in time where cos($\omega t$) and sin($\omega t$) equal zero. First, considering that $t=\pi/(2\omega)$ results in cos($\omega t$)=0, sin($\omega t$)=1 and the equation simplifies to:
  \begin{equation}
-  (-2\zeta \omega_n \omega)A_s + (\omega_n^2 - \omega^2)B_s = 0
+  (-2\zeta \omega_\text{n} \omega)A_\text{s} + (\omega_\text{n}^2 - \omega^2)B_\text{s} = 0
  \end{equation} 
  Additionally, at $t=0$, sin($\omega t$)=0 and cos($\omega t$)=1. Therefore, the equation yields  
  \begin{equation}
-  (\omega_n^2 - \omega^2)A_s + (2\zeta \omega_n \omega)B_s = f_0
+  (\omega_\text{n}^2 - \omega^2)A_\text{s} + (2\zeta \omega_\text{n} \omega)B_\text{s} = f_0
  \end{equation}    
  We can solve two equations for two unknowns. Writing the two linear equations as the singular matrix equation yields:
  \begin{gather}
 \begin{bmatrix}
-\omega_n^2 - \omega^2 & 2\zeta \omega_n \omega \\
-- 2\zeta \omega_n \omega &  \omega_n^2 - \omega^2
+\omega_\text{n}^2 - \omega^2 & 2\zeta \omega_\text{n} \omega \\
+- 2\zeta \omega_\text{n} \omega &  \omega_\text{n}^2 - \omega^2
 \end{bmatrix}
 \begin{bmatrix}
-A_s \\
-B_s
+A_\text{s} \\
+B_\text{s}
 \end{bmatrix}
 = \begin{bmatrix} f_0 \\ 0
 \end{bmatrix}
  \end{gather}
  This can be solved by computing this system of equations for $\begin{bmatrix}
-  A_s \\
-  B_s
+  A_\text{s} \\
+  B_\text{s}
  \end{bmatrix}$. This gives us:
  \begin{equation}
-  A_s = \frac{(\omega_n^2 - \omega^2)f_0}{(\omega_n^2 - \omega^2)^2 +  (2\zeta \omega_n \omega)^2}
+  A_\text{s} = \frac{(\omega_\text{n}^2 - \omega^2)f_0}{(\omega_\text{n}^2 - \omega^2)^2 +  (2\zeta \omega_\text{n} \omega)^2}
  \end{equation} 
  \begin{equation}
-  B_s = \frac{2\zeta \omega_n \omega f_0}{(\omega_n^2 - \omega^2)^2 +  (2\zeta \omega_n \omega)^2}
+  B_\text{s} = \frac{2\zeta \omega_\text{n} \omega f_0}{(\omega_\text{n}^2 - \omega^2)^2 +  (2\zeta \omega_\text{n} \omega)^2}
  \end{equation} 
  From trigonometric relationships, we can see that, 
  \begin{equation}
-  X = \sqrt{A_s^2 + B_s^2}
+  X = \sqrt{A_\text{s}^2 + B_\text{s}^2}
  \end{equation} 
  \begin{equation}
-  \phi_p = \tan^{-1}\bigg(\frac{B_s}{A_s}\bigg)
+  \phi_\text{p} = \tan^{-1}\bigg(\frac{B_\text{s}}{A_\text{s}}\bigg)
  \end{equation} 
- We can now derive values for our particular solution $x_p$:
+ We can now derive values for our particular solution $x_\text{p}$:
  \begin{equation}
-  X = \frac{f_0}{\sqrt{(\omega_n^2 - \omega^2)^2 +  (2\zeta \omega_n \omega)^2}} 
+  X = \frac{f_0}{\sqrt{(\omega_\text{n}^2 - \omega^2)^2 +  (2\zeta \omega_\text{n} \omega)^2}} 
   \label{eq:X_damped}
  \end{equation} 
  \begin{equation}
-  \phi_p = \tan^{-1} \bigg(\frac{2\zeta \omega_n \omega}{\omega_n^2 - \omega^2}\bigg)
+  \phi_\text{p} = \tan^{-1} \bigg(\frac{2\zeta \omega_\text{n} \omega}{\omega_\text{n}^2 - \omega^2}\bigg)
  \end{equation}    
- Now we can build a solution for the particular equation ($x_p$), therefore, the total solution becomes:
+ Now we can build a solution for the particular equation ($x_\text{p}$), therefore, the total solution becomes:
  \begin{equation}
-  x(t) = x_h(t) + x_p(t)
+  x(t) = x_\text{h}(t) + x_\text{p}(t)
  \end{equation}
  \begin{equation}
-  x(t) = Ae^{-\zeta \omega_n t}\text{sin}(\omega_d t + \phi) +  X \text{cos}(\omega t - \phi_p)
+  x(t) = Ae^{-\zeta \omega_\text{n} t}\text{sin}(\omega_\text{d} t + \phi) +  X \text{cos}(\omega t - \phi_\text{p})
  \end{equation}    
  
 
@@ -510,30 +510,30 @@ B_s
 
  Solving for the constants $A$ and $\phi$ using boundary conditions ($x_0=0$ and $v_0=0$) results in a total solution expressed as:
  \begin{equation}
-  A = \frac{x_0 -X \text{cos}(\phi_p)}{\text{sin}(\phi)}
+  A = \frac{x_0 -X \text{cos}(\phi_\text{p})}{\text{sin}(\phi)}
  \end{equation}    
  \begin{equation}
-  \phi =  \tan^{-1} \bigg(\frac{\omega_d \big( x_0 -X \text{cos}(\phi_p)\big)}{v_0 + \big(x_0 - X \text{cos}(\phi_p)\big) \zeta \omega_n - \omega X \text{sin}(\phi_p) }\bigg)
+  \phi =  \tan^{-1} \bigg(\frac{\omega_\text{d} \big( x_0 -X \text{cos}(\phi_\text{p})\big)}{v_0 + \big(x_0 - X \text{cos}(\phi_\text{p})\big) \zeta \omega_\text{n} - \omega X \text{sin}(\phi_\text{p}) }\bigg)
  \end{equation}   
 
 
  Assembling all the terms solved results in a unified solution:
  \begin{equation}
-  x(t) = Ae^{-\zeta \omega_n t}\text{sin}(\omega_d t + \phi) +  X \text{cos}(\omega t - \phi_p)
+  x(t) = Ae^{-\zeta \omega_\text{n} t}\text{sin}(\omega_\text{d} t + \phi) +  X \text{cos}(\omega t - \phi_\text{p})
   \label{eq:damped_forced_x}
  \end{equation}
  Where the parameters are defined as:
  \begin{equation}
-  A = \frac{x_0 -X \text{cos}(\phi_p)}{\text{sin}(\phi)}
+  A = \frac{x_0 -X \text{cos}(\phi_\text{p})}{\text{sin}(\phi)}
  \end{equation}    
  \begin{equation}
-  \phi =  \text{tan}^{-1}\bigg(\frac{\omega_d ( x_0 -X \text{cos}(\phi_p))}{v_0 + (x_0 - X \text{cos}(\phi_p)) \zeta \omega_n - \omega X \text{sin}(\phi_p) }\bigg)
+  \phi =  \text{tan}^{-1}\bigg(\frac{\omega_\text{d} ( x_0 -X \text{cos}(\phi_\text{p}))}{v_0 + (x_0 - X \text{cos}(\phi_\text{p})) \zeta \omega_\text{n} - \omega X \text{sin}(\phi_\text{p}) }\bigg)
  \end{equation} 
  \begin{equation}
-  X = \frac{f_0}{\sqrt{(\omega_n^2 - \omega^2)^2 +  (2\zeta \omega_n \omega)^2}} 
+  X = \frac{f_0}{\sqrt{(\omega_\text{n}^2 - \omega^2)^2 +  (2\zeta \omega_\text{n} \omega)^2}} 
  \end{equation} 
  \begin{equation}
-  \phi_p = \tan^{-1} \bigg(\frac{2\zeta \omega_n \omega}{\omega_n^2 - \omega^2}\bigg)
+  \phi_\text{p} = \tan^{-1} \bigg(\frac{2\zeta \omega_\text{n} \omega}{\omega_\text{n}^2 - \omega^2}\bigg)
   \label{eq:damped_forced_theta_p}
  \end{equation}  
  Note that for a case where damping equals zero, this expression collapses down to that obtained for an undamped system.
@@ -587,7 +587,7 @@ B_s
 \pagebreak
   \noindent\textbf{Solution c):} 
 
-  \noindent  Now, using $\omega=3.162$~rad/s we put the system into resonance as $\omega=\omega_n$. However, unlike the undamped system, the amplitude of the displacement is not unbounded as the damper absorbs energy from the system. Therefore, after about 7 seconds, the system enters an equilibrium state where any additional increase in amplitude caused by the system entering into resonance is canceled out by the damping in the system, as demonstrated in the plot below:
+  \noindent  Now, using $\omega=3.162$~rad/s we put the system into resonance as $\omega=\omega_\text{n}$. However, unlike the undamped system, the amplitude of the displacement is not unbounded as the damper absorbs energy from the system. Therefore, after about 7 seconds, the system enters an equilibrium state where any additional increase in amplitude caused by the system entering into resonance is canceled out by the damping in the system, as demonstrated in the plot below:
   \begin{figure}[H]
    \centering
    \includegraphics[]{../figures/homogeneous_and_particular_solutions_in_resonance_c.png}
@@ -604,34 +604,34 @@ B_s
 \subsection{Frequency Response of Underdamped Systems}      
  From equations \ref{eq:damped_forced_x} through \ref{eq:damped_forced_theta_p} and the figures in example \ref{ex:Plotting_Steady_State}, we can see that for larger values of $t$, the transient response dies out while only the steady-state response controls the displacement of the total response. This is always true if the system has any significant damping. Therefore, it is often prudent to ignore the transient part and focus only on the steady-state response. Considering the equation for the particular solution: 
  \begin{equation}
-  x_p(t) = X \text{cos}(\omega t - \phi_p)
+  x_\text{p}(t) = X \text{cos}(\omega t - \phi_\text{p})
  \end{equation}    
- and knowing the values for $X$ and $\phi_p$: 
+ and knowing the values for $X$ and $\phi_\text{p}$: 
  \begin{equation}
-  X = \frac{f_0}{\sqrt{(\omega_n^2 - \omega^2)^2 +  (2\zeta \omega_n \omega)^2}} 
+  X = \frac{f_0}{\sqrt{(\omega_\text{n}^2 - \omega^2)^2 +  (2\zeta \omega_\text{n} \omega)^2}} 
  \end{equation} 
  \begin{equation}
-  \phi_p = \tan^{-1} \bigg(\frac{2\zeta \omega_n \omega}{\omega_n^2 - \omega^2}\bigg)
+  \phi_\text{p} = \tan^{-1} \bigg(\frac{2\zeta \omega_\text{n} \omega}{\omega_\text{n}^2 - \omega^2}\bigg)
  \end{equation} 
  We want to find a way to plot the responses of the system only in terms of the system's natural and driving frequencies, and its damping. First, we define a frequency ratio as the dimensionless quantity 
  \begin{equation}
-  r = \frac{\omega}{\omega_n}
+  r = \frac{\omega}{\omega_\text{n}}
  \end{equation}
  Another common way to express $r$ is $\beta$. Next, Recall that:
  \begin{equation}
-  X = \frac{f_0}{\sqrt{(\omega_n^2 - \omega^2)^2 +  (2\zeta \omega_n \omega)^2}}  = \frac{\frac{F_0}{m}}{\sqrt{(\omega_n^2 - \omega^2)^2 +  (2\zeta \omega_n \omega)^2}} 
+  X = \frac{f_0}{\sqrt{(\omega_\text{n}^2 - \omega^2)^2 +  (2\zeta \omega_\text{n} \omega)^2}}  = \frac{\frac{F_0}{m}}{\sqrt{(\omega_\text{n}^2 - \omega^2)^2 +  (2\zeta \omega_\text{n} \omega)^2}} 
  \end{equation}    
- If we factor out $\omega_n^2$ from the denominator and substitute in $\omega_n^2 = k/m$ and $r = \omega/\omega_n$, we get:
+ If we factor out $\omega_\text{n}^2$ from the denominator and substitute in $\omega_\text{n}^2 = k/m$ and $r = \omega/\omega_\text{n}$, we get:
  \begin{equation}
-  X = \frac{\frac{F_0}{m}}{\omega_n^2 \sqrt{\big(1 - (\frac{\omega}{\omega_n})^2\big)^2 +  (2\zeta \frac{\omega}{\omega_n})^2}} =  \frac{\frac{F_0}{k}}{\sqrt{(1-r^2)^2+(2\zeta r)^2}}
+  X = \frac{\frac{F_0}{m}}{\omega_\text{n}^2 \sqrt{\big(1 - (\frac{\omega}{\omega_\text{n}})^2\big)^2 +  (2\zeta \frac{\omega}{\omega_\text{n}})^2}} =  \frac{\frac{F_0}{k}}{\sqrt{(1-r^2)^2+(2\zeta r)^2}}
  \end{equation}    
  this becomes:
  \begin{equation}
-  \frac{Xk}{F_0} = \frac{X \omega_n^2}{f_0} = \frac{1}{\sqrt{(1-r^2)^2+(2\zeta r)^2}}
+  \frac{Xk}{F_0} = \frac{X \omega_\text{n}^2}{f_0} = \frac{1}{\sqrt{(1-r^2)^2+(2\zeta r)^2}}
  \end{equation}    
- In a similar fashion, if we manipulate the equation for $\phi_p$, we can get $\phi_p$ in terms of $r$:
+ In a similar fashion, if we manipulate the equation for $\phi_\text{p}$, we can get $\phi_\text{p}$ in terms of $r$:
  \begin{equation}
-  \phi_p = \tan^{-1} \bigg(\frac{2 \zeta r}{1-r^2}\bigg)
+  \phi_\text{p} = \tan^{-1} \bigg(\frac{2 \zeta r}{1-r^2}\bigg)
  \end{equation} 
  If we solve for a few key values of $r$, we can get the following data points. On the board, we can solve for a few different frequency responses for a few different damping coefficients. 
  \begin{table}[H]
@@ -651,7 +651,7 @@ B_s
  \begin{figure}[H]
   \centering
   \includegraphics[]{../figures/underdamped_frequency_response_amplitude.png}
-  \caption{Normalized amplitude response for frequency ratio ($r$= ($\omega/\omega_n$)) from 0 to 2 for a variety of critical damping ratios.}
+  \caption{Normalized amplitude response for frequency ratio ($r$= ($\omega/\omega_\text{n}$)) from 0 to 2 for a variety of critical damping ratios.}
   \label{fig:underdamped_frequency_response_amplitude}
  \end{figure}
  % I have seen expressions that you take k out of the units on the y-axis, the base is 1/k. However, I don't see the value of it.   
@@ -663,7 +663,7 @@ B_s
   \caption{Phase response for frequency ratio ($r$) from 0 to 2 for a variety of critical damping ratios.}
   \label{fig:underdamped_frequency_response_phase}
  \end{figure}    
- \noindent Note that the dashed black line is there because the phase values after $\pi/2$ need to be adjusted to obtain a continuous plot. An astute observer would notice that the maximum amplitude is not at $\omega = \omega_n$. While resonance is defined as $\omega = \omega_n$, this does not define the point of maximum displacement of the steady-state response. Let us solve for the frequency ratio with the maximum displacement. This will happen when
+ \noindent Note that the dashed black line is there because the phase values after $\pi/2$ need to be adjusted to obtain a continuous plot. An astute observer would notice that the maximum amplitude is not at $\omega = \omega_\text{n}$. While resonance is defined as $\omega = \omega_\text{n}$, this does not define the point of maximum displacement of the steady-state response. Let us solve for the frequency ratio with the maximum displacement. This will happen when
  \begin{equation}
   \frac{d}{dr}\Bigg(\frac{Xk}{F_0} \Bigg)= 0
  \end{equation}    
@@ -673,11 +673,11 @@ B_s
  \end{equation} 
  when 
  \begin{equation}
- r_{\text{peak}} = \sqrt{1-2 \zeta^2}= \frac{\omega_p}{\omega_n}, \hspace{1cm} \zeta<1/\sqrt{2} 
+ r_{\text{peak}} = \sqrt{1-2 \zeta^2}= \frac{\omega_\text{p}}{\omega_\text{n}}, \hspace{1cm} \zeta<1/\sqrt{2} 
  \end{equation}    
- However, this is only true for underdamped systems in which $\zeta<1/\sqrt{2}$. If $\zeta \ge 1/\sqrt{2}$ then the value is imaginary and the peak value is at $r=0$. In these cases, the maximum displacement is a function of only $\omega_n$. $\omega_p$ represents the driving frequency that corresponds to the maximum amplitude ($\frac{Xk}{F_0}$) and is called the peak frequency, and can be calculated as:
+ However, this is only true for underdamped systems in which $\zeta<1/\sqrt{2}$. If $\zeta \ge 1/\sqrt{2}$ then the value is imaginary and the peak value is at $r=0$. In these cases, the maximum displacement is a function of only $\omega_\text{n}$. $\omega_\text{p}$ represents the driving frequency that corresponds to the maximum amplitude ($\frac{Xk}{F_0}$) and is called the peak frequency, and can be calculated as:
  \begin{equation}
- \omega_p = \omega_n r_{\text{peak}} = \omega_n \sqrt{1-2 \zeta^2}, \hspace{1cm} \zeta<1/\sqrt{2} 
+ \omega_\text{p} = \omega_\text{n} r_{\text{peak}} = \omega_\text{n} \sqrt{1-2 \zeta^2}, \hspace{1cm} \zeta<1/\sqrt{2} 
  \end{equation}    
  
  
@@ -691,18 +691,18 @@ B_s
   \includegraphics[]{../figures/1-DOF-spring_dashpot_mass_horizontal_forced.png}
   \caption{Damped 1-DOF spring-mass system subjected to an external force $F(t)$.}
  \end{figure}    
- \noindent where $\omega_n = 132$~rad/s and $\zeta$ = 0.0085. Calculate the displacements of the steady-state response for $\omega$=132 and 125~rad/s. In both cases, use $f_0$ = 10 N/kg. 
+ \noindent where $\omega_\text{n} = 132$~rad/s and $\zeta$ = 0.0085. Calculate the displacements of the steady-state response for $\omega$=132 and 125~rad/s. In both cases, use $f_0$ = 10 N/kg. 
 
  \noindent \textbf{Solution:}
 
  \noindent 
  From before, we know the solution for the system's displacement of the particular solution for $\omega$=132~rad/s is:
  \begin{equation}
-  X = \frac{f_0}{\sqrt{(\omega_n^2 - \omega^2)^2 +  (2\zeta \omega_n \omega)^2}} = \frac{10}{2(0.0085)(132)^2} = 0.034 \text{ m}
+  X = \frac{f_0}{\sqrt{(\omega_\text{n}^2 - \omega^2)^2 +  (2\zeta \omega_\text{n} \omega)^2}} = \frac{10}{2(0.0085)(132)^2} = 0.034 \text{ m}
  \end{equation}       
  while for $\omega$=125~rad/s X is:
  \begin{equation}
-  X = \frac{f_0}{\sqrt{(\omega_n^2 - \omega^2)^2 +  (2\zeta \omega_n \omega)^2}} = \frac{10}{\sqrt{(1799)^2 +  (280.5)^2}}  = 0.005 \text{ m}
+  X = \frac{f_0}{\sqrt{(\omega_\text{n}^2 - \omega^2)^2 +  (2\zeta \omega_\text{n} \omega)^2}} = \frac{10}{\sqrt{(1799)^2 +  (280.5)^2}}  = 0.005 \text{ m}
  \end{equation}    
  Therefore, a slight change in the driving frequency (about 5\%) results in an 85\% change in the amplitude of the steady-state response. 
 \end{example}
@@ -725,19 +725,19 @@ B_s
  \noindent 
   The steady state solution is:
  \begin{equation}
-  x_p(t) = X \text{cos}(\omega t - \phi_p)
+  x_\text{p}(t) = X \text{cos}(\omega t - \phi_\text{p})
  \end{equation}    
  knowing the amplitude is controlled by $X$: 
  \begin{equation}
-  X = \frac{f_0}{\sqrt{(\omega_n^2 - \omega^2)^2 +  (2\zeta \omega_n \omega)^2}} 
+  X = \frac{f_0}{\sqrt{(\omega_\text{n}^2 - \omega^2)^2 +  (2\zeta \omega_\text{n} \omega)^2}} 
  \end{equation} 
- and recalling from the EOM in standard form that $2\zeta \omega_n = c/m$ we can obtain:
+ and recalling from the EOM in standard form that $2\zeta \omega_\text{n} = c/m$ we can obtain:
  \begin{equation}
-  X = \frac{f_0}{\sqrt{(\omega_n^2 - \omega^2)^2 +  (\frac{c}{m} \omega)^2}} 
+  X = \frac{f_0}{\sqrt{(\omega_\text{n}^2 - \omega^2)^2 +  (\frac{c}{m} \omega)^2}} 
  \end{equation}  
  rearranging for $c$ gives:  
  \begin{equation}
-  c = m\sqrt{\frac{f_0^2}{\omega^2 X^2}-\frac{\big(\omega_n^2-\omega^2\big)^2}{\omega^2}} = \sqrt{\frac{F_0^2}{\omega^2 X^2}-m^2\frac{\big(\omega_n^2-\omega^2\big)^2}{\omega^2}} 
+  c = m\sqrt{\frac{f_0^2}{\omega^2 X^2}-\frac{\big(\omega_\text{n}^2-\omega^2\big)^2}{\omega^2}} = \sqrt{\frac{F_0^2}{\omega^2 X^2}-m^2\frac{\big(\omega_\text{n}^2-\omega^2\big)^2}{\omega^2}} 
  \end{equation}
  Therefore, if we set $X=0.01$ m, we can solve the above equation to yield $c$ = 55.7~kg/s.
  
@@ -784,25 +784,25 @@ B_s
  \end{equation}
  As before, we assume an input for the base excitation. For simplicity, we assume:
  \begin{equation}
- y(t) = Y\text{sin}(\omega_b t)
+ y(t) = Y\text{sin}(\omega_\text{b} t)
  \label{eq:Ysinomegat}
  \end{equation}
  Taking the derivative of the assumed input yields:
  \begin{equation}
- \dot{y}(t) = Y \omega_b \text{cos}(\omega_b t)
+ \dot{y}(t) = Y \omega_\text{b} \text{cos}(\omega_\text{b} t)
  \end{equation}
- where $Y$ is the amplitude and $\omega_b$ is the frequency of the base excitation. Adding these terms to our EOM yields:
+ where $Y$ is the amplitude and $\omega_\text{b}$ is the frequency of the base excitation. Adding these terms to our EOM yields:
  \begin{equation}
- m\ddot{x} + c\dot{x} + kx = c Y \omega_b \text{cos}(\omega_b t)  + k Y\text{sin}(\omega_b t)  
+ m\ddot{x} + c\dot{x} + kx = c Y \omega_\text{b} \text{cos}(\omega_\text{b} t)  + k Y\text{sin}(\omega_\text{b} t)  
  \end{equation}
  We can get this in standard form if we divide by $m$ and apply the equations for the critical damping ratio and natural frequency:
  \begin{equation}
- \ddot{x} + 2 \zeta \omega_n \dot{x} + \omega_n^2x = 2 \zeta \omega_n \omega_b Y \text{cos}(\omega_b t)  + \omega_n^2 Y\text{sin}(\omega_b t)
+ \ddot{x} + 2 \zeta \omega_\text{n} \dot{x} + \omega_\text{n}^2x = 2 \zeta \omega_\text{n} \omega_\text{b} Y \text{cos}(\omega_\text{b} t)  + \omega_\text{n}^2 Y\text{sin}(\omega_\text{b} t)
  \label{eq:standard_form_base_excitation}  
  \end{equation}
  This equation can be related to a spring-mass-damper system with two harmonic inputs, one cos and one sin, as shown below:
  \begin{equation}
- \ddot{x} + 2 \zeta \omega_n \dot{x} + \omega_n^2x = C \text{cos}(\omega_b t)  + D \text{sin}(\omega_b t)  
+ \ddot{x} + 2 \zeta \omega_\text{n} \dot{x} + \omega_\text{n}^2x = C \text{cos}(\omega_\text{b} t)  + D \text{sin}(\omega_\text{b} t)  
  \label{eq:standard_form_base_excitation_CD}
  \end{equation}
  where C and D are arbitrary coefficients. 
@@ -840,60 +840,59 @@ B_s
 \pagebreak
 
  \subsubsection{Displacement Transmissibility Solution for Base Excitation}
-  The steady-state solution is often more important than the transient solution when designing systems for continuous use. The particular solution for the base excited system annotated in figure \ref{fig:1_DOF_spring_dashpot_mass_vertical_base_excited_FBD} with the EOM presented in equation \ref{eq:standard_form_base_excitation_CD} can be expressed as $ x_p(t)$. To solve for this expression, we will use the linearity of the system and solve for a solution that is the sum of two particular solutions. Resulting in:
+  The steady-state solution is often more important than the transient solution when designing systems for continuous use. The particular solution for the base excited system annotated in figure \ref{fig:1_DOF_spring_dashpot_mass_vertical_base_excited_FBD} with the EOM presented in equation \ref{eq:standard_form_base_excitation_CD} can be expressed as $ x_\text{p}(t)$. To solve for this expression, we will use the linearity of the system and solve for a solution that is the sum of two particular solutions. Resulting in:
   \begin{equation}
- x_p(t) =  x_p^{(1)}(t) +  x_p^{(2)}(t)  
+ x_\text{p}(t) =  x_\text{p}^{(1)}(t) +  x_\text{p}^{(2)}(t)  
   \end{equation}
-  
- Recall that the steady state solution for a harmonically excited spring-mass-damper can be expressed as $x_p(t) = X\text{cos}(\omega t - \phi_p)$, as denoted in equation~\ref{eq:x_p(t)}. For the base excitation problem, we will convert this expression to $x_p(t) = X\text{cos}(\omega_b t - \phi_1)$. Therefore, for a base-excited problem, the forcing function can be expressed as the sum of particular solutions:
+ Recall that the steady state solution for a harmonically excited spring-mass-damper can be expressed as $x_\text{p}(t) = X\text{cos}(\omega t - \phi_\text{p})$, as denoted in equation~\ref{eq:x_p(t)}. For the base excitation problem, we will convert this expression to $x_\text{p}(t) = X\text{cos}(\omega_\text{b} t - \phi_1)$. Therefore, for a base-excited problem, the forcing function can be expressed as the sum of particular solutions:
   \begin{equation}
-   C \text{cos}(\omega_b t)  + D \text{sin}(\omega_b t)   = x_p =  x_p^{(1)} +  x_p^{(2)} 
+   C \text{cos}(\omega_\text{b} t)  + D \text{sin}(\omega_\text{b} t)   = x_\text{p} =  x_\text{p}^{(1)} +  x_\text{p}^{(2)} 
   \end{equation}
   where we dropped the $(t)$ term from the expression for simplicity. We can then write:
   \begin{equation}
-   x_p^{(1)} = X^{(1)}\text{cos}(\omega_b t - \phi_1)
+   x_\text{p}^{(1)} = X^{(1)}\text{cos}(\omega_\text{b} t - \phi_1)
   \end{equation}
   \begin{equation}
-   x_p^{(2)} = X^{(2)} \text{sin}(\omega_b t - \phi_1)
+   x_\text{p}^{(2)} = X^{(2)} \text{sin}(\omega_\text{b} t - \phi_1)
   \end{equation}
  
   \begin{note}
-  $x_p^{(1)}$ uses a cos term while $x_p^{(2)}$ uses a sin term. Both solutions use $\phi_1$ as the damping term, as the phase angle is independent of the excitation amplitude, and the sin and cos terms account for the difference in phase. 
+  $x_\text{p}^{(1)}$ uses a cos term while $x_\text{p}^{(2)}$ uses a sin term. Both solutions use $\phi_1$ as the damping term, as the phase angle is independent of the excitation amplitude, and the sin and cos terms account for the difference in phase. 
   \end{note}
 
-  For $x_p^{(1)}$, we again use the method of undetermined coefficients to obtain a solution for $x_p^{(1)} = X^{(1)}\text{cos}(\omega_b t - \phi_1)$. This can be as simple as setting $2 \zeta \omega_n \omega_b Y$ equal to $f_0$ from equation \ref{eq:X_damped} that defines $X$ for underdamped systems. Again, $2 \zeta \omega_n \omega_b Y$  comes from the EOM in standard form as presented in the equation  
+  For $x_\text{p}^{(1)}$, we again use the method of undetermined coefficients to obtain a solution for $x_\text{p}^{(1)} = X^{(1)}\text{cos}(\omega_\text{b} t - \phi_1)$. This can be as simple as setting $2 \zeta \omega_\text{n} \omega_\text{b} Y$ equal to $f_0$ from equation \ref{eq:X_damped} that defines $X$ for underdamped systems. Again, $2 \zeta \omega_\text{n} \omega_\text{b} Y$  comes from the EOM in standard form as presented in the equation  
   \ref{eq:standard_form_base_excitation}. We can do this because both terms can be considered a ``driving force''. This results in the equation:
   \begin{equation}
-   x_p^{(1)} = \frac{2 \zeta \omega_n \omega_b Y}{\sqrt{(\omega_n^2 - \omega_b^2)^2 +  (2\zeta \omega_n \omega_b)^2}}  \text{cos}(\omega_b t - \phi_1)
+   x_\text{p}^{(1)} = \frac{2 \zeta \omega_\text{n} \omega_\text{b} Y}{\sqrt{(\omega_\text{n}^2 - \omega_\text{b}^2)^2 +  (2\zeta \omega_\text{n} \omega_\text{b})^2}}  \text{cos}(\omega_\text{b} t - \phi_1)
    \label{eq:xp_1}
   \end{equation}
   where:
   \begin{equation}
-   \phi_1 = \tan^{-1} \bigg(\frac{2\zeta \omega_n \omega_b}{\omega_n^2 - \omega_b^2}\bigg)
+   \phi_1 = \tan^{-1} \bigg(\frac{2\zeta \omega_\text{n} \omega_\text{b}}{\omega_\text{n}^2 - \omega_\text{b}^2}\bigg)
   \end{equation}
   
-  Next, the particular solution associated with $x_p^{(2)} = X^{(2)} \text{sin}(\omega_b t - \phi_1)$ can be obtained using the same method of undetermined coefficients and setting $f_0$ from equation \ref{eq:X_damped} to the driving force for $x_p^{(2)}$ in equation  \ref{eq:standard_form_base_excitation}, $\omega_n^2$. This results in:
+  Next, the particular solution associated with $x_\text{p}^{(2)} = X^{(2)} \text{sin}(\omega_\text{b} t - \phi_1)$ can be obtained using the same method of undetermined coefficients and setting $f_0$ from equation \ref{eq:X_damped} to the driving force for $x_\text{p}^{(2)}$ in equation  \ref{eq:standard_form_base_excitation}, $\omega_\text{n}^2$. This results in:
   \begin{equation}
-   x_p^{(2)} = \frac{\omega_n^2 Y}{\sqrt{(\omega_n^2 - \omega_b^2)^2 +  (2\zeta \omega_n \omega_b)^2}}  \text{sin}(\omega_b t - \phi_1)
+   x_\text{p}^{(2)} = \frac{\omega_\text{n}^2 Y}{\sqrt{(\omega_\text{n}^2 - \omega_\text{b}^2)^2 +  (2\zeta \omega_\text{n} \omega_\text{b})^2}}  \text{sin}(\omega_\text{b} t - \phi_1)
    \label{eq:xp_2}
   \end{equation}
-  As both equation \ref{eq:xp_1} and \ref{eq:xp_2}  have the same argument $(\omega_b t - \phi_1)$, these can be added as:
+  As both equation \ref{eq:xp_1} and \ref{eq:xp_2}  have the same argument $(\omega_\text{b} t - \phi_1)$, these can be added as:
   \begin{equation}
-   x_p =  x_p^{(1)} + x_p^{(2)}
+   x_\text{p} =  x_\text{p}^{(1)} + x_\text{p}^{(2)}
   \end{equation}
   to obtain:
   \begin{equation}
-   x_p =  \omega_n Y   \sqrt{\frac{\omega_n^2 + (2 \zeta \omega_b)^2 }{(\omega_n^2 - \omega_b^2)^2 +  (2\zeta \omega_n \omega_b)^2} }  \text{cos}(\omega_bt - \phi_1 - \phi_2)
+   x_\text{p} =  \omega_\text{n} Y   \sqrt{\frac{\omega_\text{n}^2 + (2 \zeta \omega_\text{b})^2 }{(\omega_\text{n}^2 - \omega_\text{b}^2)^2 +  (2\zeta \omega_\text{n} \omega_\text{b})^2} }  \text{cos}(\omega_\text{b}t - \phi_1 - \phi_2)
   \end{equation}
   and:
   \begin{equation}
-   \phi_2 = \tan^{-1} \bigg(\frac{\omega_n}{2\zeta \omega_b}\bigg)
+   \phi_2 = \tan^{-1} \bigg(\frac{\omega_\text{n}}{2\zeta \omega_\text{b}}\bigg)
   \end{equation}
   where $\phi_2$ is added to account for the cos and sin terms being combined. Again, the $(t)$ has been dropped for simplicity. 
   
   As before, if we want to investigate how a frequency input will affect the response (frequency response), we can substitute 
   \begin{equation}
-  r=\frac{\omega_b}{\omega_n}
+  r=\frac{\omega_\text{b}}{\omega_\text{n}}
   \end{equation} 
   into the temporal response to obtain:
   \begin{equation}
@@ -933,7 +932,7 @@ B_s
     v \text{ m/s} = 50 \text{ km/hr}\Bigg(\frac{1000 \text{ m}}{1 \text {km}}\Bigg) \Bigg(\frac{1 \text{ hours}}{3600 \text { s}}\Bigg) = 13.88 \text{ m/s}
    \end{equation}  
    \begin{equation}
-    \omega_b = \Bigg(\frac{ 13.88 \text{ m}}{s}\Bigg) \Bigg(\frac{ 1 \text{ cycle}}{3 \text{ m}}\Bigg) \Bigg(\frac{ 2 \pi \text{ rad}}{\text {cycle}}\Bigg) = \text{~rad/s} = 29.08 \text{~rad/s} 
+    \omega_\text{b} = \Bigg(\frac{ 13.88 \text{ m}}{s}\Bigg) \Bigg(\frac{ 1 \text{ cycle}}{3 \text{ m}}\Bigg) \Bigg(\frac{ 2 \pi \text{ rad}}{\text {cycle}}\Bigg) = \text{~rad/s} = 29.08 \text{~rad/s} 
    \end{equation}  
    Therefore, the sinusoidal for the base excitation is then:
    \begin{equation}
@@ -941,11 +940,11 @@ B_s
    \end{equation}  
    Next, we can calculate the natural frequency:
    \begin{equation}
-    \omega_n = \sqrt{\frac{k}{m}} = \sqrt{\frac{300,000}{1600}} = 13.69 \text{~rad/s}
+    \omega_\text{n} = \sqrt{\frac{k}{m}} = \sqrt{\frac{300,000}{1600}} = 13.69 \text{~rad/s}
    \end{equation}    
    Therefore:
    \begin{equation}
-   r=\frac{\omega_b}{\omega_n}  = 2.124
+   r=\frac{\omega_\text{b}}{\omega_\text{n}}  = 2.124
    \end{equation}   
    and:
    \begin{equation}
@@ -967,40 +966,40 @@ B_s
 \noindent In many engineering applications, base motion is specified in terms of acceleration rather than displacement. Examples include shaker-table testing of aerospace components, aircraft structures subjected to engine-induced vibration, rotating machinery mounted on flexible supports, and vehicles experiencing base motion from uneven terrain.
 Suppose the base acceleration is given as
 \begin{equation}
-\ddot{y}(t) = A \cos(\omega_b t)
+\ddot{y}(t) = A \cos(\omega_\text{b} t)
 \end{equation}
-where $A$ is the acceleration amplitude and $\omega_b$ is the excitation frequency. Determine the displacement amplitude $Y$ in terms of the acceleration amplitude $A$.
+where $A$ is the acceleration amplitude and $\omega_\text{b}$ is the excitation frequency. Determine the displacement amplitude $Y$ in terms of the acceleration amplitude $A$.
 
 \noindent\textbf{Solution:} \\
  The displacement transmissibility solution derived previously requires the base motion in the form
 \begin{equation}
-y(t) = Y \sin(\omega_b t),
+y(t) = Y \sin(\omega_\text{b} t),
 \end{equation}
 as originally presented in Equation~\ref{eq:Ysinomegat}. To obtain the displacement, integrate the acceleration term 
 \begin{equation}
-\ddot{y}(t) = A \cos(\omega_b t)
+\ddot{y}(t) = A \cos(\omega_\text{b} t)
 \end{equation}
 twice. Integrating once gives the velocity:
 \begin{equation}
-\dot{y}(t) = \frac{A}{\omega_b} \sin(\omega_b t) + C_1.
+\dot{y}(t) = \frac{A}{\omega_\text{b}} \sin(\omega_\text{b} t) + C_1.
 \end{equation}
 Integrating a second time gives the displacement:
 \begin{equation}
-y(t) = -\frac{A}{\omega_b^2} \cos(\omega_b t) + C_1 t + C_2.
+y(t) = -\frac{A}{\omega_\text{b}^2} \cos(\omega_\text{b} t) + C_1 t + C_2.
 \end{equation}
 For steady-state harmonic motion, the constants $C_1$ and $C_2$ are zero, as they represent drift and constant offsets that are not part of the harmonic response. Therefore, the displacement can be written as
 \begin{equation}
-y(t) = -\frac{A}{\omega_b^2} \cos(\omega_b t).
+y(t) = -\frac{A}{\omega_\text{b}^2} \cos(\omega_\text{b} t).
 \end{equation}
 Thus, the displacement amplitude is
 \begin{equation}
-Y = \frac{A}{\omega_b^2}.
+Y = \frac{A}{\omega_\text{b}^2}.
 \end{equation}
-This demonstrates an important harmonic relationship: for sinusoidal motion, the acceleration amplitude equals $\omega_b^2$ times the displacement amplitude. Consequently, higher-frequency ground motion produces larger accelerations but smaller displacements for the same amplitude $A$.
+This demonstrates an important harmonic relationship: for sinusoidal motion, the acceleration amplitude equals $\omega_\text{b}^2$ times the displacement amplitude. Consequently, higher-frequency ground motion produces larger accelerations but smaller displacements for the same amplitude $A$.
 \end{example}
 
 \begin{note}
-In practice, recovering displacement from measured acceleration data by double integration is difficult, as sensor noise and bias are amplified and can produce significant drift. When the motion can be reasonably approximated as harmonic, using $Y = A/\omega_b^2$ as shown in Example~\ref{ex:Acceleration_to_Displacement} provides a simple way to estimate displacement amplitude without performing numerical integration.
+In practice, recovering displacement from measured acceleration data by double integration is difficult, as sensor noise and bias are amplified and can produce significant drift. When the motion can be reasonably approximated as harmonic, using $Y = A/\omega_\text{b}^2$ as shown in Example~\ref{ex:Acceleration_to_Displacement} provides a simple way to estimate displacement amplitude without performing numerical integration.
 \end{note}
 
    
@@ -1016,19 +1015,19 @@ In practice, recovering displacement from measured acceleration data by double i
   \end{equation}
   Only considering the steady state, we found that 
   \begin{equation}
-   x_p(t) =  \omega_n Y   \sqrt{\frac{\omega_n^2 + (2 \zeta \omega_b)^2 }{(\omega_n^2 - \omega_b^2)^2 +  (2\zeta \omega_n \omega_b)^2} }  \text{cos}(\omega_bt - \phi_1 - \phi_2)
+   x_\text{p}(t) =  \omega_\text{n} Y   \sqrt{\frac{\omega_\text{n}^2 + (2 \zeta \omega_\text{b})^2 }{(\omega_\text{n}^2 - \omega_\text{b}^2)^2 +  (2\zeta \omega_\text{n} \omega_\text{b})^2} }  \text{cos}(\omega_\text{b}t - \phi_1 - \phi_2)
   \end{equation} 
   if we differentiate this twice, to obtain $\ddot{x}(t)$ and combine this with $F(t) = -m\ddot{x}(t)$ we get:
   \begin{equation}
-   F(t) =  m \omega_b^2 \omega_n Y   \sqrt{\frac{\omega_n^2 + (2 \zeta \omega_b)^2 }{(\omega_n^2 - \omega_b^2)^2 +  (2\zeta \omega_n \omega_b)^2} }  \text{cos}(\omega_bt - \phi_1 - \phi_2)
+   F(t) =  m \omega_\text{b}^2 \omega_\text{n} Y   \sqrt{\frac{\omega_\text{n}^2 + (2 \zeta \omega_\text{b})^2 }{(\omega_\text{n}^2 - \omega_\text{b}^2)^2 +  (2\zeta \omega_\text{n} \omega_\text{b})^2} }  \text{cos}(\omega_\text{b}t - \phi_1 - \phi_2)
   \end{equation} 
   where the negative sign $F(t) = -m\ddot{x}(t)$ as the force transmitted to the mass is both positive and negative, and we are solving for the amplitude of the transmitted force. Again applying:
   \begin{equation}
-   r=\frac{\omega_b}{\omega_n}
+   r=\frac{\omega_\text{b}}{\omega_\text{n}}
   \end{equation} 
   this becomes:
   \begin{equation}
-   F(t) =  F_\text{T} \text{cos}(\omega_bt - \phi_1 - \phi_2)
+   F(t) =  F_\text{T} \text{cos}(\omega_\text{b}t - \phi_1 - \phi_2)
   \end{equation} 
   where $F_T$ is the magnitude of the transmitted force and is 
   \begin{equation}
@@ -1131,9 +1130,9 @@ From the force-transmissibility plot (Fig.~\ref{fig:force_transmissibility}), at
 
 A more effective approach is to reduce the frequency ratio $r$ by increasing the natural frequency, thereby shifting the system to the left in Fig.~\ref{fig:force_transmissibility}.
 \begin{equation}
-\omega_n=\sqrt{\frac{k}{m}},
+\omega_\text{n}=\sqrt{\frac{k}{m}},
 \end{equation}
-since $r=\omega_b/\omega_n$. This can be achieved by increasing the stiffness $k$ or decreasing the mass $m$.
+since $r=\omega_\text{b}/\omega_\text{n}$. This can be achieved by increasing the stiffness $k$ or decreasing the mass $m$.
 
 
 
@@ -1198,7 +1197,7 @@ x_dot = y(:, 2);
 %
 %
 %
-% %\lstinputlisting[caption = {Sample code from Matlab}]{code/matlab_eigenvalue_problem.m}
+% %\lstinputlisting[caption = {Sample code from Matlab}]{code/matlab_eigenvalue_\text{p}roblem.m}
 % \lstset{linewidth=5.8in}
 % \begin{minipage}{1\textwidth}
 %  \begin{center}
