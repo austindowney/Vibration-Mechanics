@@ -1029,7 +1029,7 @@ In practice, recovering displacement from measured acceleration data by double i
   \begin{equation}
    F(t) =  F_\text{T} \text{cos}(\omega_\text{b}t - \phi_1 - \phi_2)
   \end{equation} 
-  where $F_T$ is the magnitude of the transmitted force and is 
+  where $F_\text{T}$ is the magnitude of the transmitted force and is 
   \begin{equation}
    F_\text{T} = kYr^2 \sqrt{\frac{1+(2 \zeta r)^2}{(1-r^2)^2 + (2 \zeta r )^2}} 
   \end{equation}
@@ -1166,7 +1166,7 @@ A practical low-cost measure could be to add cross-cables or bracing to the plat
  
  \noindent In MATLAB, {\ttfamily{}ode45} is a versatile ODE solver and is one of the first solvers you should try for most problems. The solver is setup as {\ttfamily{}[t,y] = ode45(odefun,tspan,y0),} where {\ttfamily{}tspan = [t0 tf],} integrates the system of differential equations {\ttfamily{}y'=f(t,y)} from {\ttfamily{}t0} to {\ttfamily{}tf} with initial conditions {\ttfamily{}y0}. Each row in the solution array y corresponds to a value returned in column vector {\ttfamily{}t}. The ODE is reorganized as 
  \begin{equation}
- \ddot{x} = (f_t - c  \dot{x} - k  x) / m
+ \ddot{x} = (F - c  \dot{x} - k  x) / m
  \end{equation}
  for the {\ttfamily{}ode45} solver. Listing~\ref{lst:code} reports the code needed to solve the time response of the system shown in figure~\ref{fig:2-DOF-spring_mass_horizontal_3}.
 
