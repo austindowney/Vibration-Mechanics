@@ -3,12 +3,12 @@
 
 <svg
    width="6.5in"
-   height="2.6301908in"
-   viewBox="0 0 165.1 66.80685"
+   height="2.7in"
+   viewBox="0 0 165.1 68.580004"
    version="1.1"
    id="svg8"
    inkscape:version="1.4 (86a8ad7, 2024-10-11)"
-   sodipodi:docname="active_vibration_control.svg"
+   sodipodi:docname="active_vibration_control_FBD.svg"
    inkscape:export-filename="active_vibration_control_FBD.png"
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300"
@@ -9658,8 +9658,8 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4142136"
-     inkscape:cx="352.13917"
-     inkscape:cy="237.23432"
+     inkscape:cx="371.93816"
+     inkscape:cy="127.63277"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -9720,7 +9720,7 @@
          id="flowPara18034" /></flowRoot>
     <path
        style="fill:none;stroke:#878787;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 54.124229,169.83497 V 157.91042"
+       d="M 54.124229,169.86804 V 157.94349"
        id="path8866"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
@@ -9729,7 +9729,7 @@
        inkscape:export-ydpi="300" />
     <path
        style="fill:none;stroke:#878787;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 70.586855,157.87617 v 6.43117"
+       d="m 70.586855,157.90924 v 6.43117"
        id="path8868"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
@@ -9742,7 +9742,7 @@
        width="30.883417"
        height="5.1066947"
        x="44.144001"
-       y="147.67432"
+       y="147.70738"
        inkscape:export-filename="active_vibration_control_FBD.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
@@ -9752,13 +9752,13 @@
        width="30.883415"
        height="5.1066947"
        x="44.144001"
-       y="152.78128"
+       y="152.81435"
        inkscape:export-filename="active_vibration_control_FBD.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 58.820179,193.03745 h -9.95579 v 3.81422 h 9.95579"
+       d="m 58.820179,193.07052 h -9.95579 v 3.81422 h 9.95579"
        id="path1050-9"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc"
@@ -9767,7 +9767,7 @@
        inkscape:export-ydpi="300" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 39.289999,194.94456 h 9.6392"
+       d="m 39.289999,194.97763 h 9.6392"
        id="path1052-5"
        inkscape:connector-curvature="0"
        inkscape:export-filename="active_vibration_control_FBD.png"
@@ -9776,7 +9776,7 @@
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 54.504349,193.3796 v 3.12992"
+       d="m 54.504349,193.41267 v 3.12992"
        id="path1054-8"
        inkscape:connector-curvature="0"
        inkscape:export-filename="active_vibration_control_FBD.png"
@@ -9784,7 +9784,7 @@
        inkscape:export-ydpi="300" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 54.504349,194.94456 h 13.6127"
+       d="m 54.504349,194.97763 h 13.6127"
        id="path1056-0"
        inkscape:connector-curvature="0"
        inkscape:export-filename="active_vibration_control_FBD.png"
@@ -9793,7 +9793,7 @@
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 67.951539,185.91898 h -7.79576 l -0.61775,1.44694 -0.61776,-1.44694 -0.61775,-1.44694 -0.61776,1.44694 -0.61775,1.44694 -0.61776,-1.44694 -0.61775,-1.44694 -0.61775,1.44694 -0.61776,1.44694 -0.61775,-1.44694 -0.61776,-1.44694 -0.61775,1.44694 -0.61776,1.44694 -0.61775,-1.44694 -0.61776,-1.44694 -0.61775,1.44694 -0.61775,1.44694 -0.61776,-1.44694 -0.61775,-1.44694 -0.61776,1.44694 h -8.52809"
+       d="m 67.951539,185.95205 h -7.79576 l -0.61775,1.44694 -0.61776,-1.44694 -0.61775,-1.44694 -0.61776,1.44694 -0.61775,1.44694 -0.61776,-1.44694 -0.61775,-1.44694 -0.61775,1.44694 -0.61776,1.44694 -0.61775,-1.44694 -0.61776,-1.44694 -0.61775,1.44694 -0.61776,1.44694 -0.61775,-1.44694 -0.61776,-1.44694 -0.61775,1.44694 -0.61775,1.44694 -0.61776,-1.44694 -0.61775,-1.44694 -0.61776,1.44694 h -8.52809"
        id="path3728-3-4-5-7"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccccccccccccccccccccc"
@@ -9802,9 +9802,9 @@
        inkscape:export-ydpi="300" />
     <rect
        id="rect3745-0-4-7"
-       width="32.620388"
+       width="35.23315"
        height="15.635269"
-       x="166.92941"
+       x="166.96248"
        y="-83.746727"
        style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-opacity:1"
        inkscape:export-filename="active_vibration_control_FBD.png"
@@ -9813,9 +9813,9 @@
        transform="rotate(90)" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777778px;line-height:1.25;font-family:Amiri;-inkscape-font-specification:Amiri;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:Amiri;-inkscape-font-specification:Amiri;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="74.210854"
-       y="182.48289"
+       y="182.51596"
        id="text4554-6-3-0"
        inkscape:export-filename="active_vibration_control_FBD.png"
        inkscape:export-xdpi="300"
@@ -9823,83 +9823,17 @@
          sodipodi:role="line"
          id="tspan4552-1-9-5"
          x="74.210854"
-         y="182.48289"
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.264583;font-size:3.52777778px">m</tspan></text>
-    <g
-       id="g5060-7-4-7"
-       transform="rotate(180,93.525699,181.39118)"
-       inkscape:export-filename="active_vibration_control_FBD.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300">
-      <path
-         inkscape:connector-curvature="0"
-         id="path4556-1-6-9"
-         d="M 99.029761,161.87351 H 124.82664"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-11-6-3"
-         d="m 124.71559,161.89329 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-6-20-6-7"
-         d="m 122.44114,161.89329 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-7-9-1-6"
-         d="m 120.16669,161.89329 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-5-2-6-0"
-         d="m 117.89226,161.89329 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-3-9-7-9"
-         d="m 115.6178,161.89329 -2.53907,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-56-66-9-4"
-         d="m 113.34334,161.89329 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-2-8-8-5"
-         d="m 111.06889,161.89329 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-9-4-5-4"
-         d="m 106.51999,161.89329 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-1-8-2-6"
-         d="m 104.24555,161.89329 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-27-6-7-3"
-         d="m 101.9711,161.89329 -2.539056,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-0-9-0-5"
-         d="m 99.696656,161.89329 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4558-93-9-4-4"
-         d="m 108.79444,161.89329 -2.53906,-3.14042"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-    </g>
+         y="182.51596"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.264583">m</tspan></text>
+    <path
+       inkscape:connector-curvature="0"
+       id="path4556-1-6-9"
+       d="M 39.118223,203.70148 H 90.645831"
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 39.252636,203.7468 V 163.90693"
+       d="M 39.252636,203.77987 V 163.94"
        id="path4556-6-9-7-4-9"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
@@ -9908,7 +9842,7 @@
        inkscape:export-ydpi="300" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 39.272588,177.81203 -3.167763,2.56118"
+       d="m 39.272588,177.8451 -3.167763,2.56118"
        id="path4558-06-2-6-2-1"
        inkscape:connector-curvature="0"
        inkscape:export-filename="active_vibration_control_FBD.png"
@@ -9916,7 +9850,7 @@
        inkscape:export-ydpi="300" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 39.272588,180.10859 -3.167763,2.56116"
+       d="m 39.272588,180.14166 -3.167763,2.56116"
        id="path4558-6-2-2-4-0-6"
        inkscape:connector-curvature="0"
        inkscape:export-filename="active_vibration_control_FBD.png"
@@ -9924,7 +9858,7 @@
        inkscape:export-ydpi="300" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 39.272588,182.40514 -3.167763,2.56117"
+       d="m 39.272588,182.43821 -3.167763,2.56117"
        id="path4558-7-6-8-1-89-6"
        inkscape:connector-curvature="0"
        inkscape:export-filename="active_vibration_control_FBD.png"
@@ -9932,7 +9866,7 @@
        inkscape:export-ydpi="300" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 39.272588,184.70169 -3.167763,2.56117"
+       d="m 39.272588,184.73476 -3.167763,2.56117"
        id="path4558-5-1-9-4-2-4"
        inkscape:connector-curvature="0"
        inkscape:export-filename="active_vibration_control_FBD.png"
@@ -9940,7 +9874,7 @@
        inkscape:export-ydpi="300" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 39.272588,186.99825 -3.167763,2.56116"
+       d="m 39.272588,187.03132 -3.167763,2.56116"
        id="path4558-3-8-7-7-96-2"
        inkscape:connector-curvature="0"
        inkscape:export-filename="active_vibration_control_FBD.png"
@@ -9948,7 +9882,7 @@
        inkscape:export-ydpi="300" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 39.272588,189.29479 -3.167763,2.56117"
+       d="m 39.272588,189.32786 -3.167763,2.56117"
        id="path4558-56-7-3-8-7-3"
        inkscape:connector-curvature="0"
        inkscape:export-filename="active_vibration_control_FBD.png"
@@ -9956,7 +9890,7 @@
        inkscape:export-ydpi="300" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 39.272588,191.59134 -3.167763,2.56117"
+       d="m 39.272588,191.62441 -3.167763,2.56117"
        id="path4558-2-9-6-8-7-7"
        inkscape:connector-curvature="0"
        inkscape:export-filename="active_vibration_control_FBD.png"
@@ -9964,7 +9898,7 @@
        inkscape:export-ydpi="300" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 39.272588,196.18444 -3.167763,2.56117"
+       d="m 39.272588,196.21751 -3.167763,2.56117"
        id="path4558-9-2-1-5-2-7"
        inkscape:connector-curvature="0"
        inkscape:export-filename="active_vibration_control_FBD.png"
@@ -9972,7 +9906,7 @@
        inkscape:export-ydpi="300" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 39.272588,198.481 -3.167763,2.56117"
+       d="m 39.272588,198.51407 -3.167763,2.56117"
        id="path4558-1-0-2-8-0-0"
        inkscape:connector-curvature="0"
        inkscape:export-filename="active_vibration_control_FBD.png"
@@ -9980,7 +9914,7 @@
        inkscape:export-ydpi="300" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 39.272588,200.77755 -3.167763,2.56117"
+       d="m 39.272588,200.81062 -3.167763,2.56117"
        id="path4558-27-2-9-7-7-3"
        inkscape:connector-curvature="0"
        inkscape:export-filename="active_vibration_control_FBD.png"
@@ -9988,7 +9922,7 @@
        inkscape:export-ydpi="300" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 39.272588,203.0741 -3.167763,2.56116"
+       d="m 39.272588,203.10717 -3.167763,2.56116"
        id="path4558-0-3-3-5-9-7"
        inkscape:connector-curvature="0"
        inkscape:export-filename="active_vibration_control_FBD.png"
@@ -9996,7 +9930,143 @@
        inkscape:export-ydpi="300" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 39.272588,193.8879 -3.167763,2.56116"
+       d="m 41.474117,203.70068 -3.167763,2.56116"
+       id="path4558-0-3-3-5-9-7-0"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="active_vibration_control_FBD.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 44.280386,203.70068 -3.167763,2.56116"
+       id="path4558-0-3-3-5-9-7-0-9"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="active_vibration_control_FBD.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 47.086654,203.70068 -3.167763,2.56116"
+       id="path4558-0-3-3-5-9-7-0-4"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="active_vibration_control_FBD.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 49.892923,203.70068 -3.167763,2.56116"
+       id="path4558-0-3-3-5-9-7-0-8"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="active_vibration_control_FBD.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 52.699192,203.70068 -3.167763,2.56116"
+       id="path4558-0-3-3-5-9-7-0-82"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="active_vibration_control_FBD.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 58.311729,203.70068 -3.167763,2.56116"
+       id="path4558-0-3-3-5-9-7-0-45"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="active_vibration_control_FBD.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 61.117998,203.70068 -3.167763,2.56116"
+       id="path4558-0-3-3-5-9-7-0-5"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="active_vibration_control_FBD.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 63.924267,203.70068 -3.167763,2.56116"
+       id="path4558-0-3-3-5-9-7-0-1"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="active_vibration_control_FBD.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 55.505461,203.70068 -3.167763,2.56116"
+       id="path4558-0-3-3-5-9-7-0-7"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="active_vibration_control_FBD.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 66.753863,203.68962 63.5861,206.25078"
+       id="path4558-0-3-3-5-9-7-0-9-1"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="active_vibration_control_FBD.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 69.560131,203.68962 -3.167763,2.56116"
+       id="path4558-0-3-3-5-9-7-0-4-1"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="active_vibration_control_FBD.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 72.3664,203.68962 -3.167763,2.56116"
+       id="path4558-0-3-3-5-9-7-0-8-5"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="active_vibration_control_FBD.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 75.172669,203.68962 -3.167763,2.56116"
+       id="path4558-0-3-3-5-9-7-0-82-2"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="active_vibration_control_FBD.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 80.785206,203.68962 -3.167763,2.56116"
+       id="path4558-0-3-3-5-9-7-0-45-7"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="active_vibration_control_FBD.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 83.591475,203.68962 -3.167763,2.56116"
+       id="path4558-0-3-3-5-9-7-0-5-6"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="active_vibration_control_FBD.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 86.397744,203.68962 -3.167763,2.56116"
+       id="path4558-0-3-3-5-9-7-0-1-1"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="active_vibration_control_FBD.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 77.978938,203.68962 -3.167763,2.56116"
+       id="path4558-0-3-3-5-9-7-0-7-4"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="active_vibration_control_FBD.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 39.272588,193.92097 -3.167763,2.56116"
        id="path4558-93-7-1-2-0-5"
        inkscape:connector-curvature="0"
        inkscape:export-filename="active_vibration_control_FBD.png"
@@ -10006,7 +10076,7 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:Amiri;-inkscape-font-specification:Amiri;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="52.895535"
-       y="182.95493"
+       y="182.98799"
        id="text5083-7-1-7"
        inkscape:export-filename="active_vibration_control_FBD.png"
        inkscape:export-xdpi="300"
@@ -10014,13 +10084,13 @@
          sodipodi:role="line"
          id="tspan5081-4-4-2"
          x="52.895535"
-         y="182.95493"
+         y="182.98799"
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.264583">k</tspan></text>
     <circle
        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.265;stroke-miterlimit:4;stroke-dasharray:0.53, 0.265;stroke-dashoffset:0;stroke-opacity:1"
        id="path309-1-3"
        cx="69.029259"
-       cy="200.2347"
+       cy="202.94667"
        r="0.60135639"
        inkscape:export-filename="active_vibration_control_FBD.png"
        inkscape:export-xdpi="300"
@@ -10029,7 +10099,7 @@
        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.265;stroke-miterlimit:4;stroke-dasharray:0.53, 0.265;stroke-dashoffset:0;stroke-opacity:1"
        id="path309-7-7-5"
        cx="71.312157"
-       cy="200.2347"
+       cy="202.94667"
        r="0.60135639"
        inkscape:export-filename="active_vibration_control_FBD.png"
        inkscape:export-xdpi="300"
@@ -10038,7 +10108,7 @@
        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.265;stroke-miterlimit:4;stroke-dasharray:0.53, 0.265;stroke-dashoffset:0;stroke-opacity:1"
        id="path309-3-8-8"
        cx="73.595116"
-       cy="200.2347"
+       cy="202.94667"
        r="0.60135639"
        inkscape:export-filename="active_vibration_control_FBD.png"
        inkscape:export-xdpi="300"
@@ -10047,7 +10117,7 @@
        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.265;stroke-miterlimit:4;stroke-dasharray:0.53, 0.265;stroke-dashoffset:0;stroke-opacity:1"
        id="path309-6-4-9"
        cx="75.878075"
-       cy="200.2347"
+       cy="202.94667"
        r="0.60135639"
        inkscape:export-filename="active_vibration_control_FBD.png"
        inkscape:export-xdpi="300"
@@ -10056,7 +10126,7 @@
        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.265;stroke-miterlimit:4;stroke-dasharray:0.53, 0.265;stroke-dashoffset:0;stroke-opacity:1"
        id="path309-8-7-9"
        cx="78.160973"
-       cy="200.2347"
+       cy="202.94667"
        r="0.60135639"
        inkscape:export-filename="active_vibration_control_FBD.png"
        inkscape:export-xdpi="300"
@@ -10065,7 +10135,7 @@
        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.265;stroke-miterlimit:4;stroke-dasharray:0.53, 0.265;stroke-dashoffset:0;stroke-opacity:1"
        id="path309-79-3-4"
        cx="80.443932"
-       cy="200.2347"
+       cy="202.94667"
        r="0.60135639"
        inkscape:export-filename="active_vibration_control_FBD.png"
        inkscape:export-xdpi="300"
@@ -10074,14 +10144,14 @@
        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.265;stroke-miterlimit:4;stroke-dasharray:0.53, 0.265;stroke-dashoffset:0;stroke-opacity:1"
        id="path309-5-0-7"
        cx="82.72683"
-       cy="200.2347"
+       cy="202.94667"
        r="0.60135639"
        inkscape:export-filename="active_vibration_control_FBD.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 83.772237,162.10523 v 4.016"
+       d="m 83.772237,162.1383 v 4.016"
        id="path1167-4-2"
        inkscape:connector-curvature="0"
        inkscape:export-filename="active_vibration_control_FBD.png"
@@ -10089,7 +10159,7 @@
        inkscape:export-ydpi="300" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend-3-3)"
-       d="m 83.819487,164.11323 h 6.71227"
+       d="m 83.819487,164.1463 h 6.71227"
        id="path1169-4-5"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
@@ -10098,9 +10168,9 @@
        inkscape:export-ydpi="300" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="91.917427"
-       y="164.87201"
+       y="164.90508"
        id="text1497-9-4"
        inkscape:export-filename="active_vibration_control_FBD.png"
        inkscape:export-xdpi="300"
@@ -10108,13 +10178,13 @@
          sodipodi:role="line"
          id="tspan1495-4-19"
          x="91.917427"
-         y="164.87201"
-         style="font-style:italic;stroke-width:0.264583;font-size:3.52777778px">x</tspan></text>
+         y="164.90508"
+         style="font-style:italic;font-size:3.52778px;stroke-width:0.264583">x</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="52.990932"
-       y="192.14777"
+       y="192.18083"
        id="text2821-28"
        inkscape:export-filename="active_vibration_control_FBD.png"
        inkscape:export-xdpi="300"
@@ -10122,11 +10192,11 @@
          sodipodi:role="line"
          id="tspan2819-3"
          x="52.990932"
-         y="192.14777"
-         style="font-style:italic;stroke-width:0.264583;font-size:3.52777778px">c</tspan></text>
+         y="192.18083"
+         style="font-style:italic;font-size:3.52778px;stroke-width:0.264583">c</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 39.272588,164.03273 -3.167763,2.56117"
+       d="m 39.272588,164.0658 -3.167763,2.56117"
        id="path4558-2-9-6-8-7-7-1"
        inkscape:connector-curvature="0"
        inkscape:export-filename="active_vibration_control_FBD.png"
@@ -10134,7 +10204,7 @@
        inkscape:export-ydpi="300" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 39.272588,168.62583 36.104825,171.187"
+       d="m 39.272588,168.6589 -3.167763,2.56117"
        id="path4558-9-2-1-5-2-7-11"
        inkscape:connector-curvature="0"
        inkscape:export-filename="active_vibration_control_FBD.png"
@@ -10142,7 +10212,7 @@
        inkscape:export-ydpi="300" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 39.272588,170.92238 -3.167763,2.56117"
+       d="m 39.272588,170.95545 -3.167763,2.56117"
        id="path4558-1-0-2-8-0-0-5"
        inkscape:connector-curvature="0"
        inkscape:export-filename="active_vibration_control_FBD.png"
@@ -10150,7 +10220,7 @@
        inkscape:export-ydpi="300" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 39.272588,173.21893 -3.167763,2.56117"
+       d="m 39.272588,173.252 -3.167763,2.56117"
        id="path4558-27-2-9-7-7-3-50"
        inkscape:connector-curvature="0"
        inkscape:export-filename="active_vibration_control_FBD.png"
@@ -10158,7 +10228,7 @@
        inkscape:export-ydpi="300" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 39.272588,175.51549 -3.167763,2.56116"
+       d="m 39.272588,175.54856 -3.167763,2.56116"
        id="path4558-0-3-3-5-9-7-6"
        inkscape:connector-curvature="0"
        inkscape:export-filename="active_vibration_control_FBD.png"
@@ -10166,7 +10236,7 @@
        inkscape:export-ydpi="300" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.266887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 39.272588,166.32929 -3.167763,2.56116"
+       d="m 39.272588,166.36236 -3.167763,2.56116"
        id="path4558-93-7-1-2-0-5-7"
        inkscape:connector-curvature="0"
        inkscape:export-filename="active_vibration_control_FBD.png"
@@ -10177,22 +10247,22 @@
        id="path7478"
        sodipodi:type="arc"
        sodipodi:cx="54.124229"
-       sodipodi:cy="172.90469"
+       sodipodi:cy="172.93776"
        sodipodi:rx="2.972111"
        sodipodi:ry="2.972111"
        sodipodi:start="0.00021429153"
        sodipodi:end="0"
        sodipodi:open="true"
-       d="m 57.09634,172.90533 a 2.972111,2.972111 0 0 1 -2.972588,2.97147 2.972111,2.972111 0 0 1 -2.971634,-2.97242 2.972111,2.972111 0 0 1 2.972271,-2.9718 2.972111,2.972111 0 0 1 2.971951,2.97211"
+       d="m 57.09634,172.9384 a 2.972111,2.972111 0 0 1 -2.972588,2.97147 2.972111,2.972111 0 0 1 -2.971634,-2.97243 2.972111,2.972111 0 0 1 2.972271,-2.97179 2.972111,2.972111 0 0 1 2.971951,2.97211"
        inkscape:export-filename="active_vibration_control_FBD.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300"
        sodipodi:arc-type="arc" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="56.672195"
-       y="170.08698"
+       y="170.12004"
        id="text7482"
        inkscape:export-filename="active_vibration_control_FBD.png"
        inkscape:export-xdpi="300"
@@ -10200,11 +10270,11 @@
          sodipodi:role="line"
          id="tspan7480"
          x="56.672195"
-         y="170.08698"
-         style="font-style:italic;stroke-width:0.264583;font-size:3.52777778px">u</tspan></text>
+         y="170.12004"
+         style="font-style:italic;font-size:3.52778px;stroke-width:0.264583">u</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 51.113957,172.90469 H 39.323165"
+       d="M 51.113957,172.93776 H 39.323165"
        id="path7484"
        inkscape:connector-curvature="0"
        inkscape:export-filename="active_vibration_control_FBD.png"
@@ -10212,7 +10282,7 @@
        inkscape:export-ydpi="300" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 57.227703,172.90469 H 68.035929"
+       d="M 57.227703,172.93776 H 68.035929"
        id="path7486"
        inkscape:connector-curvature="0"
        inkscape:export-filename="active_vibration_control_FBD.png"
@@ -10222,7 +10292,7 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="41.282372"
-       y="166.97272"
+       y="167.00578"
        id="text7490"
        inkscape:export-filename="active_vibration_control_FBD.png"
        inkscape:export-xdpi="300"
@@ -10230,11 +10300,11 @@
          sodipodi:role="line"
          id="tspan7488"
          x="41.282372"
-         y="166.97272"
+         y="167.00578"
          style="stroke-width:0.264583">actuator</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker7502)"
-       d="m 46.845143,167.61255 4.054247,3.19827"
+       d="m 46.845143,167.64562 4.054247,3.19827"
        id="path7492"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
@@ -10247,7 +10317,7 @@
        width="20.225794"
        height="20.997774"
        x="44.370281"
-       y="178.19275"
+       y="178.22581"
        rx="1.6983491"
        ry="1.6983491"
        inkscape:export-filename="active_vibration_control_FBD.png"
@@ -10257,7 +10327,7 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#001eff;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="39.970013"
-       y="202.51001"
+       y="202.54308"
        id="text8654"
        inkscape:export-filename="active_vibration_control_FBD.png"
        inkscape:export-xdpi="300"
@@ -10265,7 +10335,7 @@
          sodipodi:role="line"
          id="tspan8652"
          x="39.970013"
-         y="202.51001"
+         y="202.54308"
          style="fill:#001eff;fill-opacity:1;stroke-width:0.264583">passive system</tspan></text>
     <rect
        style="fill:none;fill-opacity:1;stroke:#ff0b00;stroke-width:0.265;stroke-miterlimit:4;stroke-dasharray:0.53, 0.53;stroke-dashoffset:0;stroke-opacity:1"
@@ -10273,7 +10343,7 @@
        width="39.210163"
        height="29.731674"
        x="40.412521"
-       y="147.19505"
+       y="147.22812"
        rx="1.6983491"
        ry="1.6983491"
        inkscape:export-filename="active_vibration_control_FBD.png"
@@ -10283,7 +10353,7 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff0b00;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="40.470325"
-       y="145.58601"
+       y="145.61908"
        id="text8654-8"
        inkscape:export-filename="active_vibration_control_FBD.png"
        inkscape:export-xdpi="300"
@@ -10291,7 +10361,7 @@
          sodipodi:role="line"
          id="tspan8652-7"
          x="40.470325"
-         y="145.58601"
+         y="145.61908"
          style="fill:#ff0b00;fill-opacity:1;stroke-width:0.264583">active system</tspan></text>
     <rect
        style="fill:#ff0b00;fill-opacity:1;stroke:none;stroke-width:0.265;stroke-miterlimit:4;stroke-dasharray:0.53, 0.53;stroke-dashoffset:0;stroke-opacity:1"
@@ -10299,7 +10369,7 @@
        width="4.6318626"
        height="2.721221"
        x="68.27092"
-       y="164.07162"
+       y="164.10469"
        inkscape:export-filename="active_vibration_control_FBD.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
@@ -10307,7 +10377,7 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="46.608898"
-       y="151.07172"
+       y="151.10478"
        id="text8830"
        inkscape:export-filename="active_vibration_control_FBD.png"
        inkscape:export-xdpi="300"
@@ -10315,13 +10385,13 @@
          sodipodi:role="line"
          id="tspan8828"
          x="46.608898"
-         y="151.07172"
+         y="151.10478"
          style="stroke-width:0.264583">control algorithms</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="47.575245"
-       y="156.53525"
+       y="156.56831"
        id="text8834"
        inkscape:export-filename="active_vibration_control_FBD.png"
        inkscape:export-xdpi="300"
@@ -10329,7 +10399,7 @@
          sodipodi:role="line"
          id="tspan8832"
          x="47.575245"
-         y="156.53525"
+         y="156.56831"
          style="stroke-width:0.264583">control hardware</tspan></text>
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.178685;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -10337,7 +10407,7 @@
        width="15.523628"
        height="2.9466465"
        x="62.448727"
-       y="158.5076"
+       y="158.54066"
        inkscape:export-filename="active_vibration_control_FBD.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
@@ -10345,7 +10415,7 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="63.220551"
-       y="160.67642"
+       y="160.70949"
        id="text8878"
        inkscape:export-filename="active_vibration_control_FBD.png"
        inkscape:export-xdpi="300"
@@ -10353,7 +10423,7 @@
          sodipodi:role="line"
          id="tspan8876"
          x="63.220551"
-         y="160.67642"
+         y="160.70949"
          style="font-size:2.82222px;stroke-width:0.264583">sensor signal</tspan></text>
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.178685;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -10361,7 +10431,7 @@
        width="15.523628"
        height="2.9466465"
        x="46.630775"
-       y="160.09306"
+       y="160.12613"
        inkscape:export-filename="active_vibration_control_FBD.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
@@ -10369,7 +10439,7 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="46.655594"
-       y="162.37392"
+       y="162.40698"
        id="text8878-9"
        inkscape:export-filename="active_vibration_control_FBD.png"
        inkscape:export-xdpi="300"
@@ -10377,11 +10447,11 @@
          sodipodi:role="line"
          id="tspan8876-2"
          x="46.655594"
-         y="162.37392"
+         y="162.40698"
          style="font-size:2.82222px;stroke-width:0.264583">control signal</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker3141-96-8)"
-       d="M 135.76783,183.23961 H 122.82214"
+       d="M 135.76783,178.0342 H 122.82214"
        id="path2876-3-51"
        inkscape:connector-curvature="0"
        inkscape:export-filename="active_vibration_control_FBD.png"
@@ -10389,7 +10459,7 @@
        inkscape:export-ydpi="300" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker3141-0-6-7)"
-       d="M 135.76783,194.75575 H 122.82214"
+       d="M 135.76783,189.55034 H 122.82214"
        id="path2876-8-6-5"
        inkscape:connector-curvature="0"
        inkscape:export-filename="active_vibration_control_FBD.png"
@@ -10397,7 +10467,7 @@
        inkscape:export-ydpi="300" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker3141-1-48-39)"
-       d="m 143.57303,205.10927 v -4.58296"
+       d="M 143.57303,199.90386 V 195.3209"
        id="path2876-0-0-24"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
@@ -10406,7 +10476,7 @@
        inkscape:export-ydpi="300" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker3141-9-2-13)"
-       d="m 143.57303,193.91004 v 4.67745"
+       d="m 143.57303,188.70463 v 4.67745"
        id="path2876-4-0-2"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
@@ -10415,9 +10485,9 @@
        inkscape:export-ydpi="300" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="145.59"
-       y="204.12842"
+       y="198.923"
        id="text4050-6-5"
        inkscape:export-filename="active_vibration_control_FBD.png"
        inkscape:export-xdpi="300"
@@ -10425,13 +10495,13 @@
          sodipodi:role="line"
          id="tspan4048-9-6"
          x="145.59"
-         y="204.12842"
-         style="font-style:italic;stroke-width:0.264583;font-size:3.52777778px">N</tspan></text>
+         y="198.923"
+         style="font-style:italic;font-size:3.52778px;stroke-width:0.264583">N</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="141.34932"
-       y="191.2887"
+       y="186.08328"
        id="text4054-8-2"
        inkscape:export-filename="active_vibration_control_FBD.png"
        inkscape:export-xdpi="300"
@@ -10439,13 +10509,13 @@
          sodipodi:role="line"
          id="tspan4052-0-99"
          x="141.34932"
-         y="191.2887"
-         style="font-style:italic;stroke-width:0.264583;font-size:3.52777778px">mg</tspan></text>
+         y="186.08328"
+         style="font-style:italic;font-size:3.52778px;stroke-width:0.264583">mg</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="128.36449"
-       y="192.35562"
+       y="187.15021"
        id="text4609-9-2"
        inkscape:export-filename="active_vibration_control_FBD.png"
        inkscape:export-xdpi="300"
@@ -10453,7 +10523,7 @@
          sodipodi:role="line"
          id="tspan4607-6-1"
          x="128.36449"
-         y="192.35562"
+         y="187.15021"
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman,  Italic';stroke-width:0.264583">f<tspan
    style="font-size:2.29306px;baseline-shift:sub;stroke-width:0.264583"
    id="tspan4611-9-7">c</tspan></tspan></text>
@@ -10461,7 +10531,7 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="128.29337"
-       y="181.48077"
+       y="176.27536"
        id="text4615-5-0"
        inkscape:export-filename="active_vibration_control_FBD.png"
        inkscape:export-xdpi="300"
@@ -10469,7 +10539,7 @@
          sodipodi:role="line"
          id="tspan4613-2-30"
          x="128.29337"
-         y="181.48077"
+         y="176.27536"
          style="font-style:italic;stroke-width:0.264583">f<tspan
    style="font-style:italic;font-size:2.29306px;baseline-shift:sub;stroke-width:0.264583"
    id="tspan4617-3-75">k</tspan></tspan></text>
@@ -10477,7 +10547,7 @@
        id="rect3745-0-4-7-9"
        width="32.620388"
        height="15.63527"
-       x="166.92941"
+       x="161.724"
        y="-151.3748"
        style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-opacity:1"
        inkscape:export-filename="active_vibration_control_FBD.png"
@@ -10486,7 +10556,7 @@
        transform="rotate(90)" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker3141-96-8-8)"
-       d="m 151.35941,169.85664 h 12.9457"
+       d="m 151.35941,164.65123 h 12.9457"
        id="path2876-3-51-6"
        inkscape:connector-curvature="0"
        inkscape:export-filename="active_vibration_control_FBD.png"
@@ -10496,7 +10566,7 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="157.35205"
-       y="167.02182"
+       y="161.81641"
        id="text4615-5-0-1"
        inkscape:export-filename="active_vibration_control_FBD.png"
        inkscape:export-xdpi="300"
@@ -10504,7 +10574,7 @@
          sodipodi:role="line"
          id="tspan4613-2-30-6"
          x="157.35205"
-         y="167.02182"
+         y="161.81641"
          style="font-style:italic;stroke-width:0.264583">f<tspan
    style="font-size:65%;baseline-shift:sub"
    id="tspan12090">u</tspan></tspan></text>
@@ -10512,7 +10582,7 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="58.982857"
-       y="209.18892"
+       y="210.2803"
        id="text12094"
        inkscape:export-filename="active_vibration_control_FBD.png"
        inkscape:export-xdpi="300"
@@ -10520,13 +10590,13 @@
          sodipodi:role="line"
          id="tspan12092"
          x="58.982857"
-         y="209.18892"
+         y="210.2803"
          style="stroke-width:0.264583">(a)</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="141.48895"
-       y="209.18892"
+       y="210.2803"
        id="text12098"
        inkscape:export-filename="active_vibration_control_FBD.png"
        inkscape:export-xdpi="300"
@@ -10534,11 +10604,11 @@
          sodipodi:role="line"
          id="tspan12096"
          x="141.48895"
-         y="209.18892"
+         y="210.2803"
          style="stroke-width:0.264583">(b)</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker3141-96-0-2-6-0)"
-       d="m 83.672206,183.23961 h 12.94567"
+       d="m 83.672206,183.27268 h 12.94567"
        id="path2876-3-4-2-1-0"
        inkscape:connector-curvature="0"
        inkscape:export-filename="active_vibration_control_FBD.png"
@@ -10548,7 +10618,7 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="97.982597"
-       y="184.0871"
+       y="184.12016"
        id="text4615-5-8-1-1-1"
        inkscape:export-filename="active_vibration_control_FBD.png"
        inkscape:export-xdpi="300"
@@ -10556,11 +10626,11 @@
          sodipodi:role="line"
          id="tspan4613-2-4-6-6-6"
          x="97.982597"
-         y="184.0871"
+         y="184.12016"
          style="font-style:italic;stroke-width:0.264583">f</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker3141-96-0-2-6-0-5)"
-       d="m 151.37246,183.23961 h 12.94568"
+       d="m 151.37246,178.0342 h 12.94568"
        id="path2876-3-4-2-1-0-5"
        inkscape:connector-curvature="0"
        inkscape:export-filename="active_vibration_control_FBD.png"
@@ -10570,7 +10640,7 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="165.68286"
-       y="184.0105"
+       y="178.80508"
        id="text4615-5-8-1-1-1-9"
        inkscape:export-filename="active_vibration_control_FBD.png"
        inkscape:export-xdpi="300"
@@ -10578,13 +10648,13 @@
          sodipodi:role="line"
          id="tspan4613-2-4-6-6-6-3"
          x="165.68286"
-         y="184.0105"
+         y="178.80508"
          style="font-style:italic;stroke-width:0.264583">f</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="69.359627"
-       y="173.81717"
+       y="173.85023"
        id="text15552"
        inkscape:export-filename="active_vibration_control_FBD.png"
        inkscape:export-xdpi="300"
@@ -10592,11 +10662,11 @@
          sodipodi:role="line"
          id="tspan15550"
          x="69.359627"
-         y="173.81717"
+         y="173.85023"
          style="stroke-width:0.264583">sensor</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker7502-2)"
-       d="m 73.820826,171.35626 -2.924139,-3.81318"
+       d="m 73.820826,171.38933 -2.924139,-3.81318"
        id="path7492-9"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
